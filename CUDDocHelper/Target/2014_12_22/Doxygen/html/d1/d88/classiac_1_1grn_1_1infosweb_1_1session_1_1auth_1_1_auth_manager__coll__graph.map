@@ -1,0 +1,4 @@
+<map id="iac.grn.infosweb.session.auth.AuthManager" name="iac.grn.infosweb.session.auth.AuthManager">
+<area shape="rect" id="node2" href="$d2/d10/interfaceiac_1_1grn_1_1infosweb_1_1session_1_1auth_1_1_auth_manager_local.html" title="iac.grn.infosweb.session.auth.\lAuthManagerLocal" alt="" coords="5,5,203,47"/>
+<area shape="rect" id="node3" href="$d6/d4d/interfaceiac_1_1grn_1_1infosweb_1_1session_1_1auth_1_1_auth_manager_remote.html" title="iac.grn.infosweb.session.auth.\lAuthManagerRemote" alt="" coords="5,71,203,112"/>
+</map>

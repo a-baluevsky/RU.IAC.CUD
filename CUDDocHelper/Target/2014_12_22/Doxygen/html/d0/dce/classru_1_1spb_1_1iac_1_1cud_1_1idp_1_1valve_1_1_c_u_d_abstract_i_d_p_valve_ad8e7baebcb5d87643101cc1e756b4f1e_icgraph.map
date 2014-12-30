@@ -1,0 +1,6 @@
+<map id="ru.spb.iac.cud.idp.valve.CUDAbstractIDPValve.cleanUpSessionNote" name="ru.spb.iac.cud.idp.valve.CUDAbstractIDPValve.cleanUpSessionNote">
+<area shape="rect" id="node2" href="$d0/dce/classru_1_1spb_1_1iac_1_1cud_1_1idp_1_1valve_1_1_c_u_d_abstract_i_d_p_valve.html#a8c999a46d907fa056863ae1d38febeca" title="ru.spb.iac.cud.idp.valve.\lCUDAbstractIDPValve.invoke" alt="" coords="1000,7,1191,49"/>
+<area shape="rect" id="node3" href="$d0/dce/classru_1_1spb_1_1iac_1_1cud_1_1idp_1_1valve_1_1_c_u_d_abstract_i_d_p_valve.html#af8f35904f942f1991f43924cb050cf83" title="ru.spb.iac.cud.idp.valve.\lCUDAbstractIDPValve.processSAMLRequest\lMessage" alt="" coords="333,32,617,88"/>
+<area shape="rect" id="node5" href="$d0/dce/classru_1_1spb_1_1iac_1_1cud_1_1idp_1_1valve_1_1_c_u_d_abstract_i_d_p_valve.html#abcfdec3070c4edb6348297dae4303e7d" title="ru.spb.iac.cud.idp.valve.\lCUDAbstractIDPValve.processSAMLResponse\lMessage" alt="" coords="328,112,623,168"/>
+<area shape="rect" id="node4" href="$d0/dce/classru_1_1spb_1_1iac_1_1cud_1_1idp_1_1valve_1_1_c_u_d_abstract_i_d_p_valve.html#abaccecdaea8869cad3398f61f7d547de" title="ru.spb.iac.cud.idp.valve.\lCUDAbstractIDPValve.handleSAMLMessage" alt="" coords="671,39,952,81"/>
+</map>

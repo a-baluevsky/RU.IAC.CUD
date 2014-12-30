@@ -1,0 +1,6 @@
+<map id="ru.spb.iac.cud.uarm.ws.TokenInstall.load" name="ru.spb.iac.cud.uarm.ws.TokenInstall.load">
+<area shape="rect" id="node2" href="$d0/d2c/classru_1_1spb_1_1iac_1_1cud_1_1uarm_1_1ws_1_1_token_install.html#a8d2dff4097a24944ded746bad0431e7b" title="ru.spb.iac.cud.uarm.ws.Token\lInstall.get_assertion" alt="" coords="249,5,445,47"/>
+<area shape="rect" id="node3" href="$d8/df1/classru_1_1spb_1_1iac_1_1cud_1_1uarm_1_1ws_1_1_audit_service_client.html#a460f65632960775d013d93df91babb14" title="ru.spb.iac.cud.uarm.ws.Audit\lServiceClient.audit" alt="" coords="493,5,684,47"/>
+<area shape="rect" id="node4" href="$d2/d72/classru_1_1spb_1_1iac_1_1cud_1_1uarm_1_1session_1_1_session_listener.html#aed6c04111fbae4531187c99fa71c50a9" title="ru.spb.iac.cud.uarm.session.\lSessionListener.auditExport" alt="" coords="732,5,923,47"/>
+<area shape="rect" id="node5" href="$d2/d72/classru_1_1spb_1_1iac_1_1cud_1_1uarm_1_1session_1_1_session_listener.html#a86f68caf470a46dfb0a8bfd01156165a" title="ru.spb.iac.cud.uarm.session.\lSessionListener.sessionDestroyed" alt="" coords="971,5,1193,47"/>
+</map>
