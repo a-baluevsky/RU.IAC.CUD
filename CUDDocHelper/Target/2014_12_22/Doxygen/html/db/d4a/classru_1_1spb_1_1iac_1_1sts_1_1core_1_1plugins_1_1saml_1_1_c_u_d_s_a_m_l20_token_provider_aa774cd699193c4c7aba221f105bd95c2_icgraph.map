@@ -1,0 +1,5 @@
+<map id="ru.spb.iac.sts.core.plugins.saml.CUDSAML20TokenProvider.isAssertion" name="ru.spb.iac.sts.core.plugins.saml.CUDSAML20TokenProvider.isAssertion">
+<area shape="rect" id="node2" href="$db/d4a/classru_1_1spb_1_1iac_1_1sts_1_1core_1_1plugins_1_1saml_1_1_c_u_d_s_a_m_l20_token_provider.html#ade5c20c9b1d8f6f7adfc95be56cff67f" title="ru.spb.iac.sts.core.plugins.saml.\lCUDSAML20TokenProvider.cancelToken" alt="" coords="305,5,563,47"/>
+<area shape="rect" id="node3" href="$db/d4a/classru_1_1spb_1_1iac_1_1sts_1_1core_1_1plugins_1_1saml_1_1_c_u_d_s_a_m_l20_token_provider.html#a54a88306d84c02eb2287b98a18ebcf96" title="ru.spb.iac.sts.core.plugins.saml.\lCUDSAML20TokenProvider.renewToken" alt="" coords="307,71,561,112"/>
+<area shape="rect" id="node4" href="$db/d4a/classru_1_1spb_1_1iac_1_1sts_1_1core_1_1plugins_1_1saml_1_1_c_u_d_s_a_m_l20_token_provider.html#a42e42757fb500c884ad0d668a020ab98" title="ru.spb.iac.sts.core.plugins.saml.\lCUDSAML20TokenProvider.validateToken" alt="" coords="303,136,565,177"/>
+</map>

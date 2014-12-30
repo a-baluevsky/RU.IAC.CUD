@@ -1,0 +1,5 @@
+<map id="iac.cud.infosweb.session.binding.IHBindingBase.run" name="iac.cud.infosweb.session.binding.IHBindingBase.run">
+<area shape="rect" id="node2" href="$db/dbf/classiac_1_1cud_1_1infosweb_1_1session_1_1binding_1_1_i_h_binding_base.html#a6cc19703b7022028451bed12760372b9" title="iac.cud.infosweb.session.binding.\lIHBindingBase.process_start" alt="" coords="269,5,485,47"/>
+<area shape="rect" id="node3" href="$db/dbf/classiac_1_1cud_1_1infosweb_1_1session_1_1binding_1_1_i_h_binding_base.html#a752649745dbd1be50e04b487e09500ab" title="iac.cud.infosweb.session.binding.\lIHBindingBase.process_stop" alt="" coords="269,71,485,112"/>
+<area shape="rect" id="node4" href="$db/dbf/classiac_1_1cud_1_1infosweb_1_1session_1_1binding_1_1_i_h_binding_base.html#a4718bd7e6abc8d89deb93f2c39d43fae" title="iac.cud.infosweb.session.binding.\lIHBindingBase.task_run" alt="" coords="269,136,485,177"/>
+</map>

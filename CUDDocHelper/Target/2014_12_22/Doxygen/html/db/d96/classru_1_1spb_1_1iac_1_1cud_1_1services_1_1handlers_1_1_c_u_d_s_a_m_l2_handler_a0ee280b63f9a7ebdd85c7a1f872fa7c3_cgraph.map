@@ -1,0 +1,7 @@
+<map id="ru.spb.iac.cud.services.handlers.CUDSAML2Handler.handleInbound" name="ru.spb.iac.cud.services.handlers.CUDSAML2Handler.handleInbound">
+<area shape="rect" id="node2" href="$db/d96/classru_1_1spb_1_1iac_1_1cud_1_1services_1_1handlers_1_1_c_u_d_s_a_m_l2_handler.html#a25665af871a0abf6a7e35a2a734792ce" title="ru.spb.iac.cud.services.handlers.\lCUDSAML2Handler.createSecurityContext" alt="" coords="276,37,545,79"/>
+<area shape="rect" id="node5" href="$dc/de4/classru_1_1spb_1_1iac_1_1cud_1_1services_1_1handlers_1_1_security_actions.html#a4b06e53d8ae2eaac387618311dcc9dcd" title="ru.spb.iac.cud.services.handlers.\lSecurityActions.getSystemProperty" alt="" coords="295,103,526,144"/>
+<area shape="rect" id="node6" href="$dc/de4/classru_1_1spb_1_1iac_1_1cud_1_1services_1_1handlers_1_1_security_actions.html#ac57df01b7536c465d8499847abb9fddf" title="ru.spb.iac.cud.services.handlers.\lSecurityActions.group" alt="" coords="305,168,517,209"/>
+<area shape="rect" id="node3" href="$dc/de4/classru_1_1spb_1_1iac_1_1cud_1_1services_1_1handlers_1_1_security_actions.html#ab4c5c4f52a8ae1510b0ac750e5c888ff" title="ru.spb.iac.cud.services.handlers.\lSecurityActions.createSecurityContext" alt="" coords="593,5,840,47"/>
+<area shape="rect" id="node4" href="$dc/de4/classru_1_1spb_1_1iac_1_1cud_1_1services_1_1handlers_1_1_security_actions.html#ac4988da40110e779e6d95cc8f766b907" title="ru.spb.iac.cud.services.handlers.\lSecurityActions.setSecurityContext" alt="" coords="602,71,831,112"/>
+</map>
