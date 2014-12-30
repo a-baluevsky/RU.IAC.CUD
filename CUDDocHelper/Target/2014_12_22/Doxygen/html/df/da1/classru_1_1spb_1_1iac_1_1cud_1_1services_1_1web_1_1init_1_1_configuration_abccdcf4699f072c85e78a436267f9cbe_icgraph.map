@@ -1,0 +1,6 @@
+<map id="ru.spb.iac.cud.services.web.init.Configuration.isSignRequired" name="ru.spb.iac.cud.services.web.init.Configuration.isSignRequired">
+<area shape="rect" id="node2" href="$d3/d0d/classru_1_1spb_1_1iac_1_1cud_1_1idp_1_1web_1_1handlers_1_1_g_o_s_t_s_a_m_l2_signature_generation_handler.html#a9c93adc80dedb3bcf627479545217f2a" title="ru.spb.iac.cud.idp.web.handlers.\lGOSTSAML2SignatureGenerationHandler.handle\lRequestType" alt="" coords="260,5,565,61"/>
+<area shape="rect" id="node3" href="$da/d10/classru_1_1spb_1_1iac_1_1cud_1_1idp_1_1web_1_1handlers_1_1_g_o_s_t_s_a_m_l2_signature_validation_handler.html#a6256b42dd9ae29e98921672eeb43e106" title="ru.spb.iac.cud.idp.web.handlers.\lGOSTSAML2SignatureValidationHandler.handle\lRequestType" alt="" coords="263,85,562,141"/>
+<area shape="rect" id="node4" href="$da/d5a/classru_1_1spb_1_1iac_1_1cud_1_1sts_1_1core_1_1handlers_1_1_server_s_o_a_p_handler.html#a921963f1bae58ad1ed1292126551864c" title="ru.spb.iac.cud.sts.core.handlers.\lServerSOAPHandler.handleMessage" alt="" coords="295,166,530,207"/>
+<area shape="rect" id="node5" href="$d7/dfe/classru_1_1spb_1_1iac_1_1cud_1_1services_1_1handlers_1_1_sign_validate_s_o_a_p_handler.html#a41366f8db67835eccac25731b470bc2b" title="ru.spb.iac.cud.services.handlers.\lSignValidateSOAPHandler.handleMessage" alt="" coords="277,231,548,273"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="mypackage.Configuration.getStorePath" name="mypackage.Configuration.getStorePath">
+<area shape="rect" id="node2" href="$d8/df1/classru_1_1spb_1_1iac_1_1cud_1_1uarm_1_1ws_1_1_audit_service_client.html#a460f65632960775d013d93df91babb14" title="ru.spb.iac.cud.uarm.ws.Audit\lServiceClient.audit" alt="" coords="275,5,466,47"/>
+<area shape="rect" id="node5" href="$d4/da6/classiac_1_1cud_1_1infosweb_1_1ws_1_1_s_t_s_service_client.html#a39f471e3bba8461531bbfafa90a7a338" title="iac.cud.infosweb.ws.STSService\lClient.sign_verify_soap_transform_2sign" alt="" coords="244,71,497,112"/>
+<area shape="rect" id="node6" href="$dc/d7d/classru_1_1spb_1_1iac_1_1cud_1_1uarm_1_1ws_1_1_s_t_s_service_client.html#ab931be07692ca74c8582004760ee4e25" title="ru.spb.iac.cud.uarm.ws.STSService\lClient.sign_verify_soap_transform_2sign" alt="" coords="244,136,497,177"/>
+<area shape="rect" id="node3" href="$d2/d72/classru_1_1spb_1_1iac_1_1cud_1_1uarm_1_1session_1_1_session_listener.html#aed6c04111fbae4531187c99fa71c50a9" title="ru.spb.iac.cud.uarm.session.\lSessionListener.auditExport" alt="" coords="545,5,736,47"/>
+<area shape="rect" id="node4" href="$d2/d72/classru_1_1spb_1_1iac_1_1cud_1_1uarm_1_1session_1_1_session_listener.html#a86f68caf470a46dfb0a8bfd01156165a" title="ru.spb.iac.cud.uarm.session.\lSessionListener.sessionDestroyed" alt="" coords="784,5,1007,47"/>
+</map>

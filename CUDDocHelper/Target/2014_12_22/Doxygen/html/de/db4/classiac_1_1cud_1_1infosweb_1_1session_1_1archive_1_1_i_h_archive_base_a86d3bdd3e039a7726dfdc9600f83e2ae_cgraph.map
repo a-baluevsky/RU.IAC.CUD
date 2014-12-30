@@ -1,0 +1,5 @@
+<map id="iac.cud.infosweb.session.archive.IHArchiveBase.run" name="iac.cud.infosweb.session.archive.IHArchiveBase.run">
+<area shape="rect" id="node2" href="$de/db4/classiac_1_1cud_1_1infosweb_1_1session_1_1archive_1_1_i_h_archive_base.html#aced19219e183c87ef0b531a4532773e4" title="iac.cud.infosweb.session.archive.\lIHArchiveBase.process_start" alt="" coords="268,5,483,47"/>
+<area shape="rect" id="node3" href="$de/db4/classiac_1_1cud_1_1infosweb_1_1session_1_1archive_1_1_i_h_archive_base.html#aeb76e451e795f82f520520a1b2863338" title="iac.cud.infosweb.session.archive.\lIHArchiveBase.process_stop" alt="" coords="268,71,483,112"/>
+<area shape="rect" id="node4" href="$de/db4/classiac_1_1cud_1_1infosweb_1_1session_1_1archive_1_1_i_h_archive_base.html#a83fcbc86658bf8e4b737b6625017dfbe" title="iac.cud.infosweb.session.archive.\lIHArchiveBase.task_run" alt="" coords="268,136,483,177"/>
+</map>

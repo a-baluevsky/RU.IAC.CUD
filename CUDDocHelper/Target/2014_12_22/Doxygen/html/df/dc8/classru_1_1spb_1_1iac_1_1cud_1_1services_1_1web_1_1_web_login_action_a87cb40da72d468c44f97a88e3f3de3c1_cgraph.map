@@ -1,0 +1,6 @@
+<map id="ru.spb.iac.cud.services.web.WebLoginAction.service" name="ru.spb.iac.cud.services.web.WebLoginAction.service">
+<area shape="rect" id="node2" href="$df/dc8/classru_1_1spb_1_1iac_1_1cud_1_1services_1_1web_1_1_web_login_action.html#a01df13bb9d993977a183c5b92897225c" title="ru.spb.iac.cud.services.web.\lWebLoginAction.getIPAddress" alt="" coords="248,5,447,47"/>
+<area shape="rect" id="node3" href="$df/dc8/classru_1_1spb_1_1iac_1_1cud_1_1services_1_1web_1_1_web_login_action.html#ab3975caaf3d81e602602175b4c289ee7" title="ru.spb.iac.cud.services.web.\lWebLoginAction.getCodeSystem" alt="" coords="240,71,455,112"/>
+<area shape="rect" id="node5" href="$df/dc8/classru_1_1spb_1_1iac_1_1cud_1_1services_1_1web_1_1_web_login_action.html#aaebffe45509fd0cbb6223275cdce6d21" title="ru.spb.iac.cud.services.web.\lWebLoginAction.common" alt="" coords="254,136,441,177"/>
+<area shape="rect" id="node4" href="$df/dc8/classru_1_1spb_1_1iac_1_1cud_1_1services_1_1web_1_1_web_login_action.html#a3c1db79f4195b872e02700111bf4c6fb" title="ru.spb.iac.cud.services.web.\lWebLoginAction.getSAMLDocumentHolder" alt="" coords="503,71,773,112"/>
+</map>
