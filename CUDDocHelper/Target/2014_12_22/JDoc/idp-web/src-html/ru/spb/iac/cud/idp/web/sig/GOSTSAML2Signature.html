@@ -1,0 +1,427 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ru">
+<head>
+<title>Source code</title>
+<link rel="stylesheet" type="text/css" href="../../../../../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<div class="sourceContainer">
+<pre><span class="sourceLineNo">001</span>package ru.spb.iac.cud.idp.web.sig;<a name="line.1"></a>
+<span class="sourceLineNo">002</span><a name="line.2"></a>
+<span class="sourceLineNo">003</span>import java.io.IOException;<a name="line.3"></a>
+<span class="sourceLineNo">004</span>import java.security.GeneralSecurityException;<a name="line.4"></a>
+<span class="sourceLineNo">005</span>import java.security.KeyPair;<a name="line.5"></a>
+<span class="sourceLineNo">006</span>import java.security.PublicKey;<a name="line.6"></a>
+<span class="sourceLineNo">007</span>import java.security.cert.X509Certificate;<a name="line.7"></a>
+<span class="sourceLineNo">008</span><a name="line.8"></a>
+<span class="sourceLineNo">009</span>import javax.xml.crypto.MarshalException;<a name="line.9"></a>
+<span class="sourceLineNo">010</span>import javax.xml.crypto.dsig.DigestMethod;<a name="line.10"></a>
+<span class="sourceLineNo">011</span>import javax.xml.crypto.dsig.SignatureMethod;<a name="line.11"></a>
+<span class="sourceLineNo">012</span>import javax.xml.crypto.dsig.XMLSignatureException;<a name="line.12"></a>
+<span class="sourceLineNo">013</span>import javax.xml.parsers.ParserConfigurationException;<a name="line.13"></a>
+<span class="sourceLineNo">014</span>import javax.xml.transform.TransformerException;<a name="line.14"></a>
+<span class="sourceLineNo">015</span>import javax.xml.transform.TransformerFactoryConfigurationError;<a name="line.15"></a>
+<span class="sourceLineNo">016</span>import javax.xml.xpath.XPathException;<a name="line.16"></a>
+<span class="sourceLineNo">017</span><a name="line.17"></a>
+<span class="sourceLineNo">018</span>import org.picketlink.common.PicketLinkLogger;<a name="line.18"></a>
+<span class="sourceLineNo">019</span>import org.picketlink.common.PicketLinkLoggerFactory;<a name="line.19"></a>
+<span class="sourceLineNo">020</span>import org.picketlink.common.constants.JBossSAMLConstants;<a name="line.20"></a>
+<span class="sourceLineNo">021</span>import org.picketlink.common.constants.JBossSAMLURIConstants;<a name="line.21"></a>
+<span class="sourceLineNo">022</span>import org.picketlink.common.exceptions.ProcessingException;<a name="line.22"></a>
+<span class="sourceLineNo">023</span>import org.picketlink.identity.federation.api.saml.v2.request.SAML2Request;<a name="line.23"></a>
+<span class="sourceLineNo">024</span>import org.picketlink.identity.federation.api.saml.v2.response.SAML2Response;<a name="line.24"></a>
+<span class="sourceLineNo">025</span>import org.picketlink.identity.federation.api.saml.v2.sig.SAML2Signature;<a name="line.25"></a>
+<span class="sourceLineNo">026</span>import org.picketlink.identity.federation.core.util.SignatureUtilTransferObject;<a name="line.26"></a>
+<span class="sourceLineNo">027</span>import org.picketlink.identity.federation.saml.v2.protocol.RequestAbstractType;<a name="line.27"></a>
+<span class="sourceLineNo">028</span>import org.picketlink.identity.federation.saml.v2.protocol.ResponseType;<a name="line.28"></a>
+<span class="sourceLineNo">029</span>import org.w3c.dom.Document;<a name="line.29"></a>
+<span class="sourceLineNo">030</span>import org.w3c.dom.Element;<a name="line.30"></a>
+<span class="sourceLineNo">031</span>import org.w3c.dom.Node;<a name="line.31"></a>
+<span class="sourceLineNo">032</span>import org.w3c.dom.NodeList;<a name="line.32"></a>
+<span class="sourceLineNo">033</span>import org.xml.sax.SAXException;<a name="line.33"></a>
+<span class="sourceLineNo">034</span><a name="line.34"></a>
+<span class="sourceLineNo">035</span>import ru.spb.iac.cud.idp.web.util.GOSTXMLSignatureUtil;<a name="line.35"></a>
+<span class="sourceLineNo">036</span><a name="line.36"></a>
+<span class="sourceLineNo">037</span> public class GOSTSAML2Signature extends SAML2Signature {<a name="line.37"></a>
+<span class="sourceLineNo">038</span><a name="line.38"></a>
+<span class="sourceLineNo">039</span>        private static final PicketLinkLogger LOGGER = PicketLinkLoggerFactory<a name="line.39"></a>
+<span class="sourceLineNo">040</span>                        .getLogger();<a name="line.40"></a>
+<span class="sourceLineNo">041</span><a name="line.41"></a>
+<span class="sourceLineNo">042</span>        private static final String ID_ATTRIBUTE_NAME = "ID";<a name="line.42"></a>
+<span class="sourceLineNo">043</span><a name="line.43"></a>
+<span class="sourceLineNo">044</span>        private String signatureMethod = SignatureMethod.RSA_SHA1;<a name="line.44"></a>
+<span class="sourceLineNo">045</span><a name="line.45"></a>
+<span class="sourceLineNo">046</span>        private String digestMethod = DigestMethod.SHA1;<a name="line.46"></a>
+<span class="sourceLineNo">047</span><a name="line.47"></a>
+<span class="sourceLineNo">048</span>        private Node sibling;<a name="line.48"></a>
+<span class="sourceLineNo">049</span><a name="line.49"></a>
+<span class="sourceLineNo">050</span>        /**<a name="line.50"></a>
+<span class="sourceLineNo">051</span>         * Set the X509Certificate if X509Data is needed in signed info<a name="line.51"></a>
+<span class="sourceLineNo">052</span>         */<a name="line.52"></a>
+<span class="sourceLineNo">053</span>        private X509Certificate x509Certificate;<a name="line.53"></a>
+<span class="sourceLineNo">054</span><a name="line.54"></a>
+<span class="sourceLineNo">055</span>        public String getSignatureMethod() {<a name="line.55"></a>
+<span class="sourceLineNo">056</span>                return signatureMethod;<a name="line.56"></a>
+<span class="sourceLineNo">057</span>        }<a name="line.57"></a>
+<span class="sourceLineNo">058</span><a name="line.58"></a>
+<span class="sourceLineNo">059</span>        public void setSignatureMethod(String signatureMethod) {<a name="line.59"></a>
+<span class="sourceLineNo">060</span>                this.signatureMethod = signatureMethod;<a name="line.60"></a>
+<span class="sourceLineNo">061</span>        }<a name="line.61"></a>
+<span class="sourceLineNo">062</span><a name="line.62"></a>
+<span class="sourceLineNo">063</span>        public String getDigestMethod() {<a name="line.63"></a>
+<span class="sourceLineNo">064</span>                return digestMethod;<a name="line.64"></a>
+<span class="sourceLineNo">065</span>        }<a name="line.65"></a>
+<span class="sourceLineNo">066</span><a name="line.66"></a>
+<span class="sourceLineNo">067</span>        public void setDigestMethod(String digestMethod) {<a name="line.67"></a>
+<span class="sourceLineNo">068</span>                this.digestMethod = digestMethod;<a name="line.68"></a>
+<span class="sourceLineNo">069</span>        }<a name="line.69"></a>
+<span class="sourceLineNo">070</span><a name="line.70"></a>
+<span class="sourceLineNo">071</span>        public void setNextSibling(Node sibling) {<a name="line.71"></a>
+<span class="sourceLineNo">072</span>                this.sibling = sibling;<a name="line.72"></a>
+<span class="sourceLineNo">073</span>        }<a name="line.73"></a>
+<span class="sourceLineNo">074</span><a name="line.74"></a>
+<span class="sourceLineNo">075</span>        /**<a name="line.75"></a>
+<span class="sourceLineNo">076</span>         * Set to false, if you do not want to include keyinfo in the signature<a name="line.76"></a>
+<span class="sourceLineNo">077</span>         * <a name="line.77"></a>
+<span class="sourceLineNo">078</span>         * @param val<a name="line.78"></a>
+<span class="sourceLineNo">079</span>         * @since v2.0.1<a name="line.79"></a>
+<span class="sourceLineNo">080</span>         */<a name="line.80"></a>
+<span class="sourceLineNo">081</span>        public void setSignatureIncludeKeyInfo(boolean val) {<a name="line.81"></a>
+<span class="sourceLineNo">082</span>                if (!val) {<a name="line.82"></a>
+<span class="sourceLineNo">083</span>                        // XMLSignatureUtil.setIncludeKeyInfoInSignature(false);<a name="line.83"></a>
+<span class="sourceLineNo">084</span>                        GOSTXMLSignatureUtil.setIncludeKeyInfoInSignature(false);<a name="line.84"></a>
+<span class="sourceLineNo">085</span>                }<a name="line.85"></a>
+<span class="sourceLineNo">086</span>        }<a name="line.86"></a>
+<span class="sourceLineNo">087</span><a name="line.87"></a>
+<span class="sourceLineNo">088</span>        /**<a name="line.88"></a>
+<span class="sourceLineNo">089</span>         * Set the {@link X509Certificate} if you desire to have the SignedInfo have<a name="line.89"></a>
+<span class="sourceLineNo">090</span>         * X509 Data<a name="line.90"></a>
+<span class="sourceLineNo">091</span>         * <a name="line.91"></a>
+<span class="sourceLineNo">092</span>         * This method needs to be called before any of the sign methods.<a name="line.92"></a>
+<span class="sourceLineNo">093</span>         * <a name="line.93"></a>
+<span class="sourceLineNo">094</span>         * @param x509Certificate<a name="line.94"></a>
+<span class="sourceLineNo">095</span>         * @since v2.5.0<a name="line.95"></a>
+<span class="sourceLineNo">096</span>         */<a name="line.96"></a>
+<span class="sourceLineNo">097</span>        public void setX509Certificate(X509Certificate x509Certificate) {<a name="line.97"></a>
+<span class="sourceLineNo">098</span>                this.x509Certificate = x509Certificate;<a name="line.98"></a>
+<span class="sourceLineNo">099</span>        }<a name="line.99"></a>
+<span class="sourceLineNo">100</span><a name="line.100"></a>
+<span class="sourceLineNo">101</span>        /**<a name="line.101"></a>
+<span class="sourceLineNo">102</span>         * Sign an RequestType at the root<a name="line.102"></a>
+<span class="sourceLineNo">103</span>         * <a name="line.103"></a>
+<span class="sourceLineNo">104</span>         * @param request<a name="line.104"></a>
+<span class="sourceLineNo">105</span>         * @param keypair<a name="line.105"></a>
+<span class="sourceLineNo">106</span>         *            Key Pair<a name="line.106"></a>
+<span class="sourceLineNo">107</span>         * @param digestMethod<a name="line.107"></a>
+<span class="sourceLineNo">108</span>         *            (Example: DigestMethod.SHA1)<a name="line.108"></a>
+<span class="sourceLineNo">109</span>         * @param signatureMethod<a name="line.109"></a>
+<span class="sourceLineNo">110</span>         *            (Example: SignatureMethod.DSA_SHA1)<a name="line.110"></a>
+<span class="sourceLineNo">111</span>         * @return<a name="line.111"></a>
+<span class="sourceLineNo">112</span>         * @throws ParserConfigurationException<a name="line.112"></a>
+<span class="sourceLineNo">113</span>         * @throws IOException<a name="line.113"></a>
+<span class="sourceLineNo">114</span>         * @throws SAXException<a name="line.114"></a>
+<span class="sourceLineNo">115</span>         * @throws XMLSignatureException<a name="line.115"></a>
+<span class="sourceLineNo">116</span>         * @throws MarshalException<a name="line.116"></a>
+<span class="sourceLineNo">117</span>         * @throws GeneralSecurityException<a name="line.117"></a>
+<span class="sourceLineNo">118</span>         */<a name="line.118"></a>
+<span class="sourceLineNo">119</span>        public Document sign(RequestAbstractType request, KeyPair keypair)<a name="line.119"></a>
+<span class="sourceLineNo">120</span>                        throws SAXException, IOException, ParserConfigurationException,<a name="line.120"></a>
+<span class="sourceLineNo">121</span>                        GeneralSecurityException, MarshalException, XMLSignatureException {<a name="line.121"></a>
+<span class="sourceLineNo">122</span>                SAML2Request saml2Request = new SAML2Request();<a name="line.122"></a>
+<span class="sourceLineNo">123</span>                Document doc = saml2Request.convert(request);<a name="line.123"></a>
+<span class="sourceLineNo">124</span>                doc.normalize();<a name="line.124"></a>
+<span class="sourceLineNo">125</span><a name="line.125"></a>
+<span class="sourceLineNo">126</span>                Node theSibling = getNextSiblingOfIssuer(doc);<a name="line.126"></a>
+<span class="sourceLineNo">127</span>                if (theSibling != null) {<a name="line.127"></a>
+<span class="sourceLineNo">128</span>                        this.sibling = theSibling;<a name="line.128"></a>
+<span class="sourceLineNo">129</span>                }<a name="line.129"></a>
+<span class="sourceLineNo">130</span><a name="line.130"></a>
+<span class="sourceLineNo">131</span>                return sign(doc, request.getID(), keypair);<a name="line.131"></a>
+<span class="sourceLineNo">132</span>        }<a name="line.132"></a>
+<span class="sourceLineNo">133</span><a name="line.133"></a>
+<span class="sourceLineNo">134</span>        /**<a name="line.134"></a>
+<span class="sourceLineNo">135</span>         * Sign an ResponseType at the root<a name="line.135"></a>
+<span class="sourceLineNo">136</span>         * <a name="line.136"></a>
+<span class="sourceLineNo">137</span>         * @param response<a name="line.137"></a>
+<span class="sourceLineNo">138</span>         * @param keypair<a name="line.138"></a>
+<span class="sourceLineNo">139</span>         *            Key Pair<a name="line.139"></a>
+<span class="sourceLineNo">140</span>         * @param digestMethod<a name="line.140"></a>
+<span class="sourceLineNo">141</span>         *            (Example: DigestMethod.SHA1)<a name="line.141"></a>
+<span class="sourceLineNo">142</span>         * @param signatureMethod<a name="line.142"></a>
+<span class="sourceLineNo">143</span>         *            (Example: SignatureMethod.DSA_SHA1)<a name="line.143"></a>
+<span class="sourceLineNo">144</span>         * @return<a name="line.144"></a>
+<span class="sourceLineNo">145</span>         * @throws ParserConfigurationException<a name="line.145"></a>
+<span class="sourceLineNo">146</span>         * @throws XMLSignatureException<a name="line.146"></a>
+<span class="sourceLineNo">147</span>         * @throws MarshalException<a name="line.147"></a>
+<span class="sourceLineNo">148</span>         * @throws GeneralSecurityException<a name="line.148"></a>
+<span class="sourceLineNo">149</span>         */<a name="line.149"></a>
+<span class="sourceLineNo">150</span>        public Document sign(ResponseType response, KeyPair keypair)<a name="line.150"></a>
+<span class="sourceLineNo">151</span>                        throws ParserConfigurationException, GeneralSecurityException,<a name="line.151"></a>
+<span class="sourceLineNo">152</span>                        MarshalException, XMLSignatureException {<a name="line.152"></a>
+<span class="sourceLineNo">153</span>                SAML2Response saml2Request = new SAML2Response();<a name="line.153"></a>
+<span class="sourceLineNo">154</span>                Document doc = saml2Request.convert(response);<a name="line.154"></a>
+<span class="sourceLineNo">155</span>                doc.normalize();<a name="line.155"></a>
+<span class="sourceLineNo">156</span><a name="line.156"></a>
+<span class="sourceLineNo">157</span>                Node theSibling = getNextSiblingOfIssuer(doc);<a name="line.157"></a>
+<span class="sourceLineNo">158</span>                if (theSibling != null) {<a name="line.158"></a>
+<span class="sourceLineNo">159</span>                        this.sibling = theSibling;<a name="line.159"></a>
+<span class="sourceLineNo">160</span>                }<a name="line.160"></a>
+<span class="sourceLineNo">161</span><a name="line.161"></a>
+<span class="sourceLineNo">162</span>                return sign(doc, response.getID(), keypair);<a name="line.162"></a>
+<span class="sourceLineNo">163</span>        }<a name="line.163"></a>
+<span class="sourceLineNo">164</span><a name="line.164"></a>
+<span class="sourceLineNo">165</span>        /**<a name="line.165"></a>
+<span class="sourceLineNo">166</span>         * Sign an Document at the root<a name="line.166"></a>
+<span class="sourceLineNo">167</span>         * <a name="line.167"></a>
+<span class="sourceLineNo">168</span>         * @param response<a name="line.168"></a>
+<span class="sourceLineNo">169</span>         * @param keyPair<a name="line.169"></a>
+<span class="sourceLineNo">170</span>         *            Key Pair<a name="line.170"></a>
+<span class="sourceLineNo">171</span>         * @param digestMethod<a name="line.171"></a>
+<span class="sourceLineNo">172</span>         *            (Example: DigestMethod.SHA1)<a name="line.172"></a>
+<span class="sourceLineNo">173</span>         * @param signatureMethod<a name="line.173"></a>
+<span class="sourceLineNo">174</span>         *            (Example: SignatureMethod.DSA_SHA1)<a name="line.174"></a>
+<span class="sourceLineNo">175</span>         * @return<a name="line.175"></a>
+<span class="sourceLineNo">176</span>         * @throws ParserConfigurationException<a name="line.176"></a>
+<span class="sourceLineNo">177</span>         * @throws XMLSignatureException<a name="line.177"></a>
+<span class="sourceLineNo">178</span>         * @throws MarshalException<a name="line.178"></a>
+<span class="sourceLineNo">179</span>         * @throws GeneralSecurityException<a name="line.179"></a>
+<span class="sourceLineNo">180</span>         */<a name="line.180"></a>
+<span class="sourceLineNo">181</span>        public Document sign(Document doc, String referenceID, KeyPair keyPair)<a name="line.181"></a>
+<span class="sourceLineNo">182</span>                        throws ParserConfigurationException, GeneralSecurityException,<a name="line.182"></a>
+<span class="sourceLineNo">183</span>                        MarshalException, XMLSignatureException {<a name="line.183"></a>
+<span class="sourceLineNo">184</span>                String referenceURI = "#" + referenceID;<a name="line.184"></a>
+<span class="sourceLineNo">185</span><a name="line.185"></a>
+<span class="sourceLineNo">186</span>                configureIdAttribute(doc);<a name="line.186"></a>
+<span class="sourceLineNo">187</span><a name="line.187"></a>
+<span class="sourceLineNo">188</span>                if (sibling != null) {<a name="line.188"></a>
+<span class="sourceLineNo">189</span>                        SignatureUtilTransferObject dto = new SignatureUtilTransferObject();<a name="line.189"></a>
+<span class="sourceLineNo">190</span>                        dto.setDocumentToBeSigned(doc);<a name="line.190"></a>
+<span class="sourceLineNo">191</span>                        dto.setKeyPair(keyPair);<a name="line.191"></a>
+<span class="sourceLineNo">192</span>                        dto.setDigestMethod(digestMethod);<a name="line.192"></a>
+<span class="sourceLineNo">193</span>                        dto.setSignatureMethod(signatureMethod);<a name="line.193"></a>
+<span class="sourceLineNo">194</span>                        dto.setReferenceURI(referenceURI);<a name="line.194"></a>
+<span class="sourceLineNo">195</span>                        dto.setNextSibling(sibling);<a name="line.195"></a>
+<span class="sourceLineNo">196</span><a name="line.196"></a>
+<span class="sourceLineNo">197</span>                        if (x509Certificate != null) {<a name="line.197"></a>
+<span class="sourceLineNo">198</span>                                dto.setX509Certificate(x509Certificate);<a name="line.198"></a>
+<span class="sourceLineNo">199</span>                        }<a name="line.199"></a>
+<span class="sourceLineNo">200</span><a name="line.200"></a>
+<span class="sourceLineNo">201</span>                        // return /XMLSignatureUtil/.sign(dto);<a name="line.201"></a>
+<span class="sourceLineNo">202</span>                        return GOSTXMLSignatureUtil.sign(dto);<a name="line.202"></a>
+<span class="sourceLineNo">203</span>                }<a name="line.203"></a>
+<span class="sourceLineNo">204</span>                // return /XMLSignatureUtil/.sign(doc, keyPair, /digestMethod,<a name="line.204"></a>
+<span class="sourceLineNo">205</span>                // signatureMethod/, referenceURI);<a name="line.205"></a>
+<span class="sourceLineNo">206</span>                return GOSTXMLSignatureUtil.sign(doc, keyPair, digestMethod,<a name="line.206"></a>
+<span class="sourceLineNo">207</span>                                signatureMethod, referenceURI);<a name="line.207"></a>
+<span class="sourceLineNo">208</span><a name="line.208"></a>
+<span class="sourceLineNo">209</span>        }<a name="line.209"></a>
+<span class="sourceLineNo">210</span><a name="line.210"></a>
+<span class="sourceLineNo">211</span>        /**<a name="line.211"></a>
+<span class="sourceLineNo">212</span>         * Sign an assertion whose id value is provided in the response type<a name="line.212"></a>
+<span class="sourceLineNo">213</span>         * <a name="line.213"></a>
+<span class="sourceLineNo">214</span>         * @param response<a name="line.214"></a>
+<span class="sourceLineNo">215</span>         * @param idValueOfAssertion<a name="line.215"></a>
+<span class="sourceLineNo">216</span>         * @param keypair<a name="line.216"></a>
+<span class="sourceLineNo">217</span>         * @param referenceURI<a name="line.217"></a>
+<span class="sourceLineNo">218</span>         * @return<a name="line.218"></a>
+<span class="sourceLineNo">219</span>         * @throws ParserConfigurationException<a name="line.219"></a>
+<span class="sourceLineNo">220</span>         * @throws TransformerException<a name="line.220"></a>
+<span class="sourceLineNo">221</span>         * @throws TransformerFactoryConfigurationError<a name="line.221"></a>
+<span class="sourceLineNo">222</span>         * @throws XPathException<a name="line.222"></a>
+<span class="sourceLineNo">223</span>         * @throws XMLSignatureException<a name="line.223"></a>
+<span class="sourceLineNo">224</span>         * @throws MarshalException<a name="line.224"></a>
+<span class="sourceLineNo">225</span>         * @throws GeneralSecurityException<a name="line.225"></a>
+<span class="sourceLineNo">226</span>         */<a name="line.226"></a>
+<span class="sourceLineNo">227</span>        public Document sign(ResponseType response, String idValueOfAssertion,<a name="line.227"></a>
+<span class="sourceLineNo">228</span>                        KeyPair keypair, String referenceURI)<a name="line.228"></a>
+<span class="sourceLineNo">229</span>                        throws ParserConfigurationException, XPathException,<a name="line.229"></a>
+<span class="sourceLineNo">230</span>                        TransformerFactoryConfigurationError, TransformerException,<a name="line.230"></a>
+<span class="sourceLineNo">231</span>                        GeneralSecurityException, MarshalException, XMLSignatureException {<a name="line.231"></a>
+<span class="sourceLineNo">232</span>                SAML2Response saml2Response = new SAML2Response();<a name="line.232"></a>
+<span class="sourceLineNo">233</span>                Document doc = saml2Response.convert(response);<a name="line.233"></a>
+<span class="sourceLineNo">234</span>                doc.normalize();<a name="line.234"></a>
+<span class="sourceLineNo">235</span><a name="line.235"></a>
+<span class="sourceLineNo">236</span>                Node theSibling = getNextSiblingOfIssuer(doc);<a name="line.236"></a>
+<span class="sourceLineNo">237</span>                if (theSibling != null) {<a name="line.237"></a>
+<span class="sourceLineNo">238</span>                        this.sibling = theSibling;<a name="line.238"></a>
+<span class="sourceLineNo">239</span>                }<a name="line.239"></a>
+<span class="sourceLineNo">240</span><a name="line.240"></a>
+<span class="sourceLineNo">241</span>                return sign(doc, idValueOfAssertion, keypair, referenceURI);<a name="line.241"></a>
+<span class="sourceLineNo">242</span>        }<a name="line.242"></a>
+<span class="sourceLineNo">243</span><a name="line.243"></a>
+<span class="sourceLineNo">244</span>        /**<a name="line.244"></a>
+<span class="sourceLineNo">245</span>         * Sign a document<a name="line.245"></a>
+<span class="sourceLineNo">246</span>         * <a name="line.246"></a>
+<span class="sourceLineNo">247</span>         * @param doc<a name="line.247"></a>
+<span class="sourceLineNo">248</span>         * @param idValueOfAssertion<a name="line.248"></a>
+<span class="sourceLineNo">249</span>         * @param keypair<a name="line.249"></a>
+<span class="sourceLineNo">250</span>         * @param referenceURI<a name="line.250"></a>
+<span class="sourceLineNo">251</span>         * @return<a name="line.251"></a>
+<span class="sourceLineNo">252</span>         * @throws ParserConfigurationException<a name="line.252"></a>
+<span class="sourceLineNo">253</span>         * @throws XPathException<a name="line.253"></a>
+<span class="sourceLineNo">254</span>         * @throws TransformerFactoryConfigurationError<a name="line.254"></a>
+<span class="sourceLineNo">255</span>         * @throws TransformerException<a name="line.255"></a>
+<span class="sourceLineNo">256</span>         * @throws GeneralSecurityException<a name="line.256"></a>
+<span class="sourceLineNo">257</span>         * @throws MarshalException<a name="line.257"></a>
+<span class="sourceLineNo">258</span>         * @throws XMLSignatureException<a name="line.258"></a>
+<span class="sourceLineNo">259</span>         */<a name="line.259"></a>
+<span class="sourceLineNo">260</span>        public Document sign(Document doc, String idValueOfAssertion,<a name="line.260"></a>
+<span class="sourceLineNo">261</span>                        KeyPair keypair, String referenceURI)<a name="line.261"></a>
+<span class="sourceLineNo">262</span>                        throws ParserConfigurationException, XPathException,<a name="line.262"></a>
+<span class="sourceLineNo">263</span>                        TransformerFactoryConfigurationError, TransformerException,<a name="line.263"></a>
+<span class="sourceLineNo">264</span>                        GeneralSecurityException, MarshalException, XMLSignatureException {<a name="line.264"></a>
+<span class="sourceLineNo">265</span>                return sign(doc, idValueOfAssertion, keypair);<a name="line.265"></a>
+<span class="sourceLineNo">266</span>        }<a name="line.266"></a>
+<span class="sourceLineNo">267</span><a name="line.267"></a>
+<span class="sourceLineNo">268</span>        /**<a name="line.268"></a>
+<span class="sourceLineNo">269</span>         * Sign a SAML Document<a name="line.269"></a>
+<span class="sourceLineNo">270</span>         * <a name="line.270"></a>
+<span class="sourceLineNo">271</span>         * @param samlDocument<a name="line.271"></a>
+<span class="sourceLineNo">272</span>         * @param keypair<a name="line.272"></a>
+<span class="sourceLineNo">273</span>         * @throws ProcessingException<a name="line.273"></a>
+<span class="sourceLineNo">274</span>         */<a name="line.274"></a>
+<span class="sourceLineNo">275</span>        public void signSAMLDocument(Document samlDocument, KeyPair keypair)<a name="line.275"></a>
+<span class="sourceLineNo">276</span>                        throws ProcessingException {<a name="line.276"></a>
+<span class="sourceLineNo">277</span>                // Get the ID from the root<a name="line.277"></a>
+<span class="sourceLineNo">278</span>                String id = samlDocument.getDocumentElement().getAttribute(<a name="line.278"></a>
+<span class="sourceLineNo">279</span>                                ID_ATTRIBUTE_NAME);<a name="line.279"></a>
+<span class="sourceLineNo">280</span>                try {<a name="line.280"></a>
+<span class="sourceLineNo">281</span>                        sign(samlDocument, id, keypair);<a name="line.281"></a>
+<span class="sourceLineNo">282</span>                } catch (Exception e) {<a name="line.282"></a>
+<span class="sourceLineNo">283</span>                        throw new ProcessingException(LOGGER.signatureError(e));<a name="line.283"></a>
+<span class="sourceLineNo">284</span>                }<a name="line.284"></a>
+<span class="sourceLineNo">285</span>        }<a name="line.285"></a>
+<span class="sourceLineNo">286</span><a name="line.286"></a>
+<span class="sourceLineNo">287</span>        /**<a name="line.287"></a>
+<span class="sourceLineNo">288</span>         * Validate the SAML2 Document<a name="line.288"></a>
+<span class="sourceLineNo">289</span>         * <a name="line.289"></a>
+<span class="sourceLineNo">290</span>         * @param signedDocument<a name="line.290"></a>
+<span class="sourceLineNo">291</span>         * @param publicKey<a name="line.291"></a>
+<span class="sourceLineNo">292</span>         * @return<a name="line.292"></a>
+<span class="sourceLineNo">293</span>         * @throws ProcessingException<a name="line.293"></a>
+<span class="sourceLineNo">294</span>         */<a name="line.294"></a>
+<span class="sourceLineNo">295</span>        public boolean validate(Document signedDocument, PublicKey publicKey)<a name="line.295"></a>
+<span class="sourceLineNo">296</span>                        throws ProcessingException {<a name="line.296"></a>
+<span class="sourceLineNo">297</span>                try {<a name="line.297"></a>
+<span class="sourceLineNo">298</span>                        configureIdAttribute(signedDocument);<a name="line.298"></a>
+<span class="sourceLineNo">299</span>                        // return /XMLSignatureUtil/.validate(/signedDocument, publicKey);<a name="line.299"></a>
+<span class="sourceLineNo">300</span>                        return GOSTXMLSignatureUtil.validate(signedDocument, publicKey);<a name="line.300"></a>
+<span class="sourceLineNo">301</span><a name="line.301"></a>
+<span class="sourceLineNo">302</span>                } catch (MarshalException me) {<a name="line.302"></a>
+<span class="sourceLineNo">303</span>                        throw new ProcessingException(LOGGER.signatureError(me));<a name="line.303"></a>
+<span class="sourceLineNo">304</span>                } catch (XMLSignatureException xse) {<a name="line.304"></a>
+<span class="sourceLineNo">305</span>                        throw new ProcessingException(LOGGER.signatureError(xse));<a name="line.305"></a>
+<span class="sourceLineNo">306</span>                }<a name="line.306"></a>
+<span class="sourceLineNo">307</span>        }<a name="line.307"></a>
+<span class="sourceLineNo">308</span><a name="line.308"></a>
+<span class="sourceLineNo">309</span>        /**<a name="line.309"></a>
+<span class="sourceLineNo">310</span>         * Given a {@link Document}, find the {@link Node} which is the sibling of<a name="line.310"></a>
+<span class="sourceLineNo">311</span>         * the Issuer element<a name="line.311"></a>
+<span class="sourceLineNo">312</span>         * <a name="line.312"></a>
+<span class="sourceLineNo">313</span>         * @param doc<a name="line.313"></a>
+<span class="sourceLineNo">314</span>         * @return<a name="line.314"></a>
+<span class="sourceLineNo">315</span>         */<a name="line.315"></a>
+<span class="sourceLineNo">316</span>        public Node getNextSiblingOfIssuer(Document doc) {<a name="line.316"></a>
+<span class="sourceLineNo">317</span>                // Find the sibling of Issuer<a name="line.317"></a>
+<span class="sourceLineNo">318</span>                NodeList nl = doc.getElementsByTagNameNS(<a name="line.318"></a>
+<span class="sourceLineNo">319</span>                                JBossSAMLURIConstants.ASSERTION_NSURI.get(),<a name="line.319"></a>
+<span class="sourceLineNo">320</span>                                JBossSAMLConstants.ISSUER.get());<a name="line.320"></a>
+<span class="sourceLineNo">321</span>                if (nl.getLength() &gt; 0) {<a name="line.321"></a>
+<span class="sourceLineNo">322</span>                        Node issuer = nl.item(0);<a name="line.322"></a>
+<span class="sourceLineNo">323</span><a name="line.323"></a>
+<span class="sourceLineNo">324</span>                        return issuer.getNextSibling();<a name="line.324"></a>
+<span class="sourceLineNo">325</span>                }<a name="line.325"></a>
+<span class="sourceLineNo">326</span>                return null;<a name="line.326"></a>
+<span class="sourceLineNo">327</span>        }<a name="line.327"></a>
+<span class="sourceLineNo">328</span><a name="line.328"></a>
+<span class="sourceLineNo">329</span>        /**<a name="line.329"></a>
+<span class="sourceLineNo">330</span>         * &lt;p&gt;<a name="line.330"></a>
+<span class="sourceLineNo">331</span>         * Sets the IDness of the ID attribute. Santuario 1.5.1 does not assumes<a name="line.331"></a>
+<span class="sourceLineNo">332</span>         * IDness based on attribute names anymore. This method should be called<a name="line.332"></a>
+<span class="sourceLineNo">333</span>         * before signing/validating a saml document.<a name="line.333"></a>
+<span class="sourceLineNo">334</span>         * &lt;/p&gt;<a name="line.334"></a>
+<span class="sourceLineNo">335</span>         * <a name="line.335"></a>
+<span class="sourceLineNo">336</span>         * @param document<a name="line.336"></a>
+<span class="sourceLineNo">337</span>         *            SAML document to have its ID attribute configured.<a name="line.337"></a>
+<span class="sourceLineNo">338</span>         */<a name="line.338"></a>
+<span class="sourceLineNo">339</span>        private void configureIdAttribute(Document document) {<a name="line.339"></a>
+<span class="sourceLineNo">340</span>                // Estabilish the IDness of the ID attribute.<a name="line.340"></a>
+<span class="sourceLineNo">341</span>                document.getDocumentElement().setIdAttribute(ID_ATTRIBUTE_NAME, true);<a name="line.341"></a>
+<span class="sourceLineNo">342</span><a name="line.342"></a>
+<span class="sourceLineNo">343</span>                NodeList nodes = document.getElementsByTagNameNS(<a name="line.343"></a>
+<span class="sourceLineNo">344</span>                                JBossSAMLURIConstants.ASSERTION_NSURI.get(),<a name="line.344"></a>
+<span class="sourceLineNo">345</span>                                JBossSAMLConstants.ASSERTION.get());<a name="line.345"></a>
+<span class="sourceLineNo">346</span><a name="line.346"></a>
+<span class="sourceLineNo">347</span>                for (int i = 0; i &lt; nodes.getLength(); i++) {<a name="line.347"></a>
+<span class="sourceLineNo">348</span>                        Node n = nodes.item(i);<a name="line.348"></a>
+<span class="sourceLineNo">349</span>                        if (n instanceof Element) {<a name="line.349"></a>
+<span class="sourceLineNo">350</span>                                ((Element) n).setIdAttribute(ID_ATTRIBUTE_NAME, true);<a name="line.350"></a>
+<span class="sourceLineNo">351</span>                        }<a name="line.351"></a>
+<span class="sourceLineNo">352</span>                }<a name="line.352"></a>
+<span class="sourceLineNo">353</span>        }<a name="line.353"></a>
+<span class="sourceLineNo">354</span><a name="line.354"></a>
+<span class="sourceLineNo">355</span>}<a name="line.355"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</div>
+</body>
+</html>

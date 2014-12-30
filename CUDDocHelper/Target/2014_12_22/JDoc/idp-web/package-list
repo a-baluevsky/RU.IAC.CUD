@@ -1,0 +1,11 @@
+ru.spb.iac.cud.context
+ru.spb.iac.cud.idp.core
+ru.spb.iac.cud.idp.saml
+ru.spb.iac.cud.idp.web.handlers
+ru.spb.iac.cud.idp.web.sig
+ru.spb.iac.cud.idp.web.util
+ru.spb.iac.cud.infosweb.web.init
+ru.spb.iac.cud.services.web
+ru.spb.iac.cud.services.web.init
+ru.spb.iac.idp.web.filter
+ru.spb.iac.pl.sp.key

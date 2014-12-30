@@ -1,0 +1,2272 @@
+Loading source files for package ru.spb.iac.cud.infosweb.web.init...
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java]]
+[parsing completed 30ms]
+Loading source files for package ru.spb.iac.cud.core...
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\SyncManager.java]]
+[parsing completed 60ms]
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\AccessManager.java]]
+[parsing completed 20ms]
+Loading source files for package ru.spb.iac.cud.core.app...
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationResultManager.java]]
+[parsing completed 10ms]
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java]]
+[parsing completed 10ms]
+Loading source files for package ru.spb.iac.cud.core.eis...
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisUtilManager.java]]
+[parsing completed 10ms]
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisAdminManager.java]]
+[parsing completed 0ms]
+Loading source files for package ru.spb.iac.cud.idp.core.access...
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\idp\core\access\IDPAccessManager.java]]
+[parsing completed 0ms]
+Loading source files for package ru.spb.iac.cud.idp.core.util...
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\idp\core\util\IDPUtilManager.java]]
+[parsing completed 0ms]
+Loading source files for package ru.spb.iac.cud.util...
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\util\TIDEncode.java]]
+[parsing completed 0ms]
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\util\CommonUtil.java]]
+[parsing completed 0ms]
+Constructing Javadoc information...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:3: error: package javax.servlet does not exist
+import javax.servlet.ServletConfig;
+                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:4: error: package javax.servlet does not exist
+import javax.servlet.ServletContext;
+                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:5: error: package javax.servlet does not exist
+import javax.servlet.ServletException;
+                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:6: error: package javax.servlet.http does not exist
+import javax.servlet.http.HttpServlet;
+                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:8: error: package mypackage does not exist
+import mypackage.Configuration;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:10: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:11: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:18: error: cannot find symbol
+ public class StartupServlet extends HttpServlet {
+                                     ^
+  symbol: class HttpServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:20: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(StartupServlet.class);
+	                     ^
+  symbol:   class Logger
+  location: class StartupServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:35: error: cannot find symbol
+	public void init(ServletConfig config) throws ServletException {
+	                 ^
+  symbol:   class ServletConfig
+  location: class StartupServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:35: error: cannot find symbol
+	public void init(ServletConfig config) throws ServletException {
+	                                              ^
+  symbol:   class ServletException
+  location: class StartupServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\SyncManager.java:9: error: package javax.ejb does not exist
+import javax.ejb.Stateless;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\SyncManager.java:10: error: package javax.ejb does not exist
+import javax.ejb.TransactionAttribute;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\SyncManager.java:11: error: package javax.ejb does not exist
+import javax.ejb.TransactionAttributeType;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\SyncManager.java:12: error: package javax.ejb does not exist
+import javax.ejb.TransactionManagement;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\SyncManager.java:13: error: package javax.ejb does not exist
+import javax.ejb.TransactionManagementType;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\SyncManager.java:14: error: package javax.persistence does not exist
+import javax.persistence.EntityManager;
+                        ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\SyncManager.java:15: error: package javax.persistence does not exist
+import javax.persistence.NoResultException;
+                        ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\SyncManager.java:16: error: package javax.persistence does not exist
+import javax.persistence.PersistenceContext;
+                        ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\SyncManager.java:17: error: cannot find symbol
+import javax.transaction.UserTransaction;
+                        ^
+  symbol:   class UserTransaction
+  location: package javax.transaction
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\SyncManager.java:19: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\SyncManager.java:20: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\SyncManager.java:22: error: package ru.spb.iac.cud.core.util does not exist
+import ru.spb.iac.cud.core.util.CUDConstants;
+                               ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\SyncManager.java:23: error: package ru.spb.iac.cud.exceptions does not exist
+import ru.spb.iac.cud.exceptions.GeneralFailure;
+                                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\SyncManager.java:24: error: package ru.spb.iac.cud.items does not exist
+import ru.spb.iac.cud.items.Function;
+                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\SyncManager.java:25: error: package ru.spb.iac.cud.items does not exist
+import ru.spb.iac.cud.items.Group;
+                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\SyncManager.java:26: error: package ru.spb.iac.cud.items does not exist
+import ru.spb.iac.cud.items.Resource;
+                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\SyncManager.java:27: error: package ru.spb.iac.cud.items does not exist
+import ru.spb.iac.cud.items.Role;
+                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\SyncManager.java:37: error: cannot find symbol
+ public class SyncManager implements SyncManagerLocal, SyncManagerRemote {
+                                     ^
+  symbol: class SyncManagerLocal
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\SyncManager.java:37: error: cannot find symbol
+ public class SyncManager implements SyncManagerLocal, SyncManagerRemote {
+                                                       ^
+  symbol: class SyncManagerRemote
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\SyncManager.java:34: error: cannot find symbol
+@Stateless
+ ^
+  symbol: class Stateless
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\SyncManager.java:35: error: cannot find symbol
+@TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+ ^
+  symbol: class TransactionAttribute
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\SyncManager.java:36: error: cannot find symbol
+@TransactionManagement(TransactionManagementType.BEAN)
+ ^
+  symbol: class TransactionManagement
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\SyncManager.java:40: error: cannot find symbol
+	EntityManager em;
+	^
+  symbol:   class EntityManager
+  location: class SyncManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\SyncManager.java:43: error: cannot find symbol
+	UserTransaction utx;
+	^
+  symbol:   class UserTransaction
+  location: class SyncManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\SyncManager.java:45: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(SyncManager.class);
+	                     ^
+  symbol:   class Logger
+  location: class SyncManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\SyncManager.java:53: error: cannot find symbol
+	public void sync_roles(String idIS, List<Role> roles, String modeExec,
+	                                         ^
+  symbol:   class Role
+  location: class SyncManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\SyncManager.java:54: error: cannot find symbol
+			Long idUserAuth, String IPAddress) throws GeneralFailure {
+			                                          ^
+  symbol:   class GeneralFailure
+  location: class SyncManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\SyncManager.java:306: error: cannot find symbol
+	public void sync_functions(String idIS, List<Function> functions,
+	                                             ^
+  symbol:   class Function
+  location: class SyncManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\SyncManager.java:308: error: cannot find symbol
+			throws GeneralFailure {
+			       ^
+  symbol:   class GeneralFailure
+  location: class SyncManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\SyncManager.java:567: error: cannot find symbol
+	public List<Role> is_roles(String idIS, Long idUserAuth, String IPAddress)
+	            ^
+  symbol:   class Role
+  location: class SyncManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\SyncManager.java:568: error: cannot find symbol
+			throws GeneralFailure {
+			       ^
+  symbol:   class GeneralFailure
+  location: class SyncManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\SyncManager.java:673: error: cannot find symbol
+	public List<Function> is_functions(String idIS, Long idUserAuth,
+	            ^
+  symbol:   class Function
+  location: class SyncManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\SyncManager.java:674: error: cannot find symbol
+			String IPAddress) throws GeneralFailure {
+			                         ^
+  symbol:   class GeneralFailure
+  location: class SyncManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\SyncManager.java:780: error: cannot find symbol
+	public void sync_groups(String idIS, List<Group> groups, String modeExec,
+	                                          ^
+  symbol:   class Group
+  location: class SyncManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\SyncManager.java:781: error: cannot find symbol
+			Long idUserAuth, String IPAddress) throws GeneralFailure {
+			                                          ^
+  symbol:   class GeneralFailure
+  location: class SyncManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\SyncManager.java:1089: error: cannot find symbol
+			String IPAddress) throws GeneralFailure {
+			                         ^
+  symbol:   class GeneralFailure
+  location: class SyncManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\SyncManager.java:1338: error: cannot find symbol
+			 List<Resource> resources,
+			      ^
+  symbol:   class Resource
+  location: class SyncManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\SyncManager.java:1341: error: cannot find symbol
+			 String IPAddress) throws GeneralFailure{
+			                          ^
+  symbol:   class GeneralFailure
+  location: class SyncManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\SyncManager.java:1550: error: cannot find symbol
+			String IPAddress) throws GeneralFailure {
+			                         ^
+  symbol:   class GeneralFailure
+  location: class SyncManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\SyncManager.java:1810: error: cannot find symbol
+	public void is_exist(String idIS) throws GeneralFailure {
+	                                         ^
+  symbol:   class GeneralFailure
+  location: class SyncManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\SyncManager.java:1833: error: cannot find symbol
+	private String get_code_is(String codeSys) throws GeneralFailure {
+	                                                  ^
+  symbol:   class GeneralFailure
+  location: class SyncManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\AccessManager.java:15: error: package javax.ejb does not exist
+import javax.ejb.Stateless;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\AccessManager.java:16: error: package javax.persistence does not exist
+import javax.persistence.EntityManager;
+                        ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\AccessManager.java:17: error: package javax.persistence does not exist
+import javax.persistence.NoResultException;
+                        ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\AccessManager.java:18: error: package javax.persistence does not exist
+import javax.persistence.PersistenceContext;
+                        ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\AccessManager.java:19: error: package javax.persistence does not exist
+import javax.persistence.TemporalType;
+                        ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\AccessManager.java:21: error: package ru.spb.iac.cud.core.util does not exist
+import ru.spb.iac.cud.core.util.CUDConstants;
+                               ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\AccessManager.java:22: error: package ru.spb.iac.cud.core.util does not exist
+import ru.spb.iac.cud.core.util.HashPassword;
+                               ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\AccessManager.java:23: error: package ru.spb.iac.cud.exceptions does not exist
+import ru.spb.iac.cud.exceptions.GeneralFailure;
+                                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\AccessManager.java:24: error: package ru.spb.iac.cud.exceptions does not exist
+import ru.spb.iac.cud.exceptions.InvalidCredentials;
+                                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\AccessManager.java:25: error: package ru.spb.iac.cud.exceptions does not exist
+import ru.spb.iac.cud.exceptions.RevokedCertificate;
+                                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\AccessManager.java:26: error: package ru.spb.iac.cud.items does not exist
+import ru.spb.iac.cud.items.AuditFunction;
+                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\AccessManager.java:27: error: package ru.spb.iac.cud.items does not exist
+import ru.spb.iac.cud.items.AuthMode;
+                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\AccessManager.java:29: error: package javax.ejb does not exist
+import javax.ejb.TransactionAttribute;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\AccessManager.java:30: error: package javax.ejb does not exist
+import javax.ejb.TransactionAttributeType;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\AccessManager.java:32: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\AccessManager.java:33: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\AccessManager.java:43: error: cannot find symbol
+ public class AccessManager implements AccessManagerLocal, AccessManagerRemote {
+                                       ^
+  symbol: class AccessManagerLocal
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\AccessManager.java:43: error: cannot find symbol
+ public class AccessManager implements AccessManagerLocal, AccessManagerRemote {
+                                                           ^
+  symbol: class AccessManagerRemote
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\AccessManager.java:41: error: cannot find symbol
+@Stateless
+ ^
+  symbol: class Stateless
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\AccessManager.java:42: error: cannot find symbol
+@TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+ ^
+  symbol: class TransactionAttribute
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\AccessManager.java:46: error: cannot find symbol
+	EntityManager em;
+	^
+  symbol:   class EntityManager
+  location: class AccessManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\AccessManager.java:50: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(AccessManager.class);
+	                     ^
+  symbol:   class Logger
+  location: class AccessManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\AccessManager.java:64: error: cannot find symbol
+			AuthMode authMode, String IPAddress, String codeSys)
+			^
+  symbol:   class AuthMode
+  location: class AccessManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\AccessManager.java:65: error: cannot find symbol
+			throws GeneralFailure, InvalidCredentials {
+			       ^
+  symbol:   class GeneralFailure
+  location: class AccessManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\AccessManager.java:65: error: cannot find symbol
+			throws GeneralFailure, InvalidCredentials {
+			                       ^
+  symbol:   class InvalidCredentials
+  location: class AccessManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\AccessManager.java:164: error: cannot find symbol
+	public Long authenticate_login_obo(String login, AuthMode authMode,
+	                                                 ^
+  symbol:   class AuthMode
+  location: class AccessManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\AccessManager.java:165: error: cannot find symbol
+			String IPAddress, String codeSys) throws GeneralFailure {
+			                                         ^
+  symbol:   class GeneralFailure
+  location: class AccessManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\AccessManager.java:225: error: cannot find symbol
+	public String authenticate_uid_obo(String uid, AuthMode authMode,
+	                                               ^
+  symbol:   class AuthMode
+  location: class AccessManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\AccessManager.java:226: error: cannot find symbol
+			String IPAddress, String codeSys) throws GeneralFailure {
+			                                         ^
+  symbol:   class GeneralFailure
+  location: class AccessManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\AccessManager.java:284: error: cannot find symbol
+	public String authenticate_cert_sn(String sn, AuthMode authMode,
+	                                              ^
+  symbol:   class AuthMode
+  location: class AccessManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\AccessManager.java:285: error: cannot find symbol
+			String IPAddress, String codeSys) throws GeneralFailure,
+			                                         ^
+  symbol:   class GeneralFailure
+  location: class AccessManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\AccessManager.java:286: error: cannot find symbol
+			InvalidCredentials, RevokedCertificate {
+			^
+  symbol:   class InvalidCredentials
+  location: class AccessManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\AccessManager.java:286: error: cannot find symbol
+			InvalidCredentials, RevokedCertificate {
+			                    ^
+  symbol:   class RevokedCertificate
+  location: class AccessManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\AccessManager.java:378: error: cannot find symbol
+			List<AuditFunction> userFunctions, Long idUserAuth, String IPAddress)
+			     ^
+  symbol:   class AuditFunction
+  location: class AccessManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\AccessManager.java:379: error: cannot find symbol
+			throws GeneralFailure {
+			       ^
+  symbol:   class GeneralFailure
+  location: class AccessManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\AccessManager.java:525: error: cannot find symbol
+			String new_password, String IPAddress) throws GeneralFailure,
+			                                              ^
+  symbol:   class GeneralFailure
+  location: class AccessManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\AccessManager.java:526: error: cannot find symbol
+			InvalidCredentials {
+			^
+  symbol:   class InvalidCredentials
+  location: class AccessManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\AccessManager.java:591: error: cannot find symbol
+	public void is_exist(String idIS) throws GeneralFailure {
+	                                         ^
+  symbol:   class GeneralFailure
+  location: class AccessManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\AccessManager.java:825: error: cannot find symbol
+	private Long get_id_is(String codeSys) throws GeneralFailure {
+	                                              ^
+  symbol:   class GeneralFailure
+  location: class AccessManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\AccessManager.java:854: error: cannot find symbol
+	private Long get_id_user(String login) throws GeneralFailure {
+	                                              ^
+  symbol:   class GeneralFailure
+  location: class AccessManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationResultManager.java:5: error: package javax.ejb does not exist
+import javax.ejb.Stateless;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationResultManager.java:6: error: package javax.persistence does not exist
+import javax.persistence.EntityManager;
+                        ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationResultManager.java:7: error: package javax.persistence does not exist
+import javax.persistence.NoResultException;
+                        ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationResultManager.java:8: error: package javax.persistence does not exist
+import javax.persistence.PersistenceContext;
+                        ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationResultManager.java:10: error: package ru.spb.iac.cud.exceptions does not exist
+import ru.spb.iac.cud.exceptions.GeneralFailure;
+                                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationResultManager.java:11: error: package ru.spb.iac.cud.items.app does not exist
+import ru.spb.iac.cud.items.app.AppAttribute;
+                               ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationResultManager.java:12: error: package ru.spb.iac.cud.items.app does not exist
+import ru.spb.iac.cud.items.app.AppAttributesClassif;
+                               ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationResultManager.java:13: error: package ru.spb.iac.cud.items.app does not exist
+import ru.spb.iac.cud.items.app.AppResult;
+                               ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationResultManager.java:14: error: package ru.spb.iac.cud.items.app does not exist
+import ru.spb.iac.cud.items.app.AppResultRequest;
+                               ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationResultManager.java:15: error: package ru.spb.iac.cud.items.app does not exist
+import ru.spb.iac.cud.items.app.AppStatusClassif;
+                               ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationResultManager.java:16: error: package ru.spb.iac.cud.items.app does not exist
+import ru.spb.iac.cud.items.app.AppSystemAttributesClassif;
+                               ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationResultManager.java:17: error: package ru.spb.iac.cud.items.app does not exist
+import ru.spb.iac.cud.items.app.AppTypeClassif;
+                               ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationResultManager.java:18: error: package ru.spb.iac.cud.items.app does not exist
+import ru.spb.iac.cud.items.app.AppUserAttributesClassif;
+                               ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationResultManager.java:19: error: package javax.ejb does not exist
+import javax.ejb.TransactionAttribute;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationResultManager.java:20: error: package javax.ejb does not exist
+import javax.ejb.TransactionAttributeType;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationResultManager.java:21: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationResultManager.java:22: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationResultManager.java:31: error: cannot find symbol
+ public class ApplicationResultManager implements ApplicationResultManagerLocal,
+                                                  ^
+  symbol: class ApplicationResultManagerLocal
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationResultManager.java:32: error: cannot find symbol
+		ApplicationResultManagerRemote {
+		^
+  symbol: class ApplicationResultManagerRemote
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationResultManager.java:29: error: cannot find symbol
+@Stateless
+ ^
+  symbol: class Stateless
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationResultManager.java:30: error: cannot find symbol
+@TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+ ^
+  symbol: class TransactionAttribute
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationResultManager.java:35: error: cannot find symbol
+	EntityManager em;
+	^
+  symbol:   class EntityManager
+  location: class ApplicationResultManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationResultManager.java:39: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(ApplicationResultManager.class);
+	                     ^
+  symbol:   class Logger
+  location: class ApplicationResultManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationResultManager.java:52: error: cannot find symbol
+			List<AppResultRequest> request_list, Long idUserAuth,
+			     ^
+  symbol:   class AppResultRequest
+  location: class ApplicationResultManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationResultManager.java:50: error: cannot find symbol
+	public List<AppResult> result(
+	            ^
+  symbol:   class AppResult
+  location: class ApplicationResultManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationResultManager.java:53: error: cannot find symbol
+			String IPAddress) throws GeneralFailure {
+			                         ^
+  symbol:   class GeneralFailure
+  location: class ApplicationResultManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationResultManager.java:135: error: cannot find symbol
+	private AppResult system_registration_result(String number, String secret,
+	        ^
+  symbol:   class AppResult
+  location: class ApplicationResultManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationResultManager.java:136: error: cannot find symbol
+			Long idUserAuth, String IPAddress) throws GeneralFailure {
+			                                          ^
+  symbol:   class GeneralFailure
+  location: class ApplicationResultManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationResultManager.java:188: error: cannot find symbol
+	private AppResult user_registration_result(String number, String secret,
+	        ^
+  symbol:   class AppResult
+  location: class ApplicationResultManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationResultManager.java:189: error: cannot find symbol
+			Long idUserAuth, String IPAddress) throws GeneralFailure {
+			                                          ^
+  symbol:   class GeneralFailure
+  location: class ApplicationResultManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationResultManager.java:255: error: cannot find symbol
+	private AppResult user_access_roles_result(String number, String secret,
+	        ^
+  symbol:   class AppResult
+  location: class ApplicationResultManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationResultManager.java:256: error: cannot find symbol
+			Long idUserAuth, String IPAddress) throws GeneralFailure {
+			                                          ^
+  symbol:   class GeneralFailure
+  location: class ApplicationResultManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationResultManager.java:299: error: cannot find symbol
+	private AppResult user_access_groups_result(String number, String secret,
+	        ^
+  symbol:   class AppResult
+  location: class ApplicationResultManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationResultManager.java:300: error: cannot find symbol
+			Long idUserAuth, String IPAddress) throws GeneralFailure {
+			                                          ^
+  symbol:   class GeneralFailure
+  location: class ApplicationResultManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationResultManager.java:343: error: cannot find symbol
+	private AppResult user_block_result(String number, String secret,
+	        ^
+  symbol:   class AppResult
+  location: class ApplicationResultManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationResultManager.java:344: error: cannot find symbol
+			Long idUserAuth, String IPAddress) throws GeneralFailure {
+			                                          ^
+  symbol:   class GeneralFailure
+  location: class ApplicationResultManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationResultManager.java:387: error: cannot find symbol
+	private AppResult system_modification_result(String number, String secret,
+	        ^
+  symbol:   class AppResult
+  location: class ApplicationResultManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationResultManager.java:388: error: cannot find symbol
+			Long idUserAuth, String IPAddress) throws GeneralFailure {
+			                                          ^
+  symbol:   class GeneralFailure
+  location: class ApplicationResultManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationResultManager.java:431: error: cannot find symbol
+	private AppResult user_modification_result(String number, String secret,
+	        ^
+  symbol:   class AppResult
+  location: class ApplicationResultManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationResultManager.java:432: error: cannot find symbol
+			Long idUserAuth, String IPAddress) throws GeneralFailure {
+			                                          ^
+  symbol:   class GeneralFailure
+  location: class ApplicationResultManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationResultManager.java:475: error: cannot find symbol
+	private AppResult user_modification_acc_result(String number,
+	        ^
+  symbol:   class AppResult
+  location: class ApplicationResultManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationResultManager.java:477: error: cannot find symbol
+			throws GeneralFailure {
+			       ^
+  symbol:   class GeneralFailure
+  location: class ApplicationResultManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationResultManager.java:517: error: cannot find symbol
+	private AppResult user_modification_cert_result(String number,
+	        ^
+  symbol:   class AppResult
+  location: class ApplicationResultManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationResultManager.java:519: error: cannot find symbol
+			throws GeneralFailure {
+			       ^
+  symbol:   class GeneralFailure
+  location: class ApplicationResultManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationResultManager.java:561: error: cannot find symbol
+			throws GeneralFailure {
+			       ^
+  symbol:   class GeneralFailure
+  location: class ApplicationResultManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationResultManager.java:624: error: cannot find symbol
+	public Long principal_exist(String principal) throws GeneralFailure {
+	                                                     ^
+  symbol:   class GeneralFailure
+  location: class ApplicationResultManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:13: error: package javax.ejb does not exist
+import javax.ejb.Stateless;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:14: error: package javax.ejb does not exist
+import javax.ejb.TransactionAttribute;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:15: error: package javax.ejb does not exist
+import javax.ejb.TransactionAttributeType;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:16: error: package javax.ejb does not exist
+import javax.ejb.TransactionManagement;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:17: error: package javax.ejb does not exist
+import javax.ejb.TransactionManagementType;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:18: error: package javax.persistence does not exist
+import javax.persistence.EntityManager;
+                        ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:19: error: package javax.persistence does not exist
+import javax.persistence.NoResultException;
+                        ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:20: error: package javax.persistence does not exist
+import javax.persistence.PersistenceContext;
+                        ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:21: error: cannot find symbol
+import javax.transaction.UserTransaction;
+                        ^
+  symbol:   class UserTransaction
+  location: package javax.transaction
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:24: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:25: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:27: error: package ru.spb.iac.cud.core.util does not exist
+import ru.spb.iac.cud.core.util.CUDConstants;
+                               ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:28: error: package ru.spb.iac.cud.exceptions does not exist
+import ru.spb.iac.cud.exceptions.GeneralFailure;
+                                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:29: error: package ru.spb.iac.cud.items.app does not exist
+import ru.spb.iac.cud.items.app.AppAccept;
+                               ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:30: error: package ru.spb.iac.cud.items.app does not exist
+import ru.spb.iac.cud.items.app.AppAttribute;
+                               ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:31: error: package ru.spb.iac.cud.items.app does not exist
+import ru.spb.iac.cud.items.app.AppSystemAttributesClassif;
+                               ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:32: error: package ru.spb.iac.cud.items.app does not exist
+import ru.spb.iac.cud.items.app.AppUserAttributesClassif;
+                               ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:43: error: cannot find symbol
+ public class ApplicationManager implements ApplicationManagerLocal,
+                                            ^
+  symbol: class ApplicationManagerLocal
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:44: error: cannot find symbol
+		ApplicationManagerRemote {
+		^
+  symbol: class ApplicationManagerRemote
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:40: error: cannot find symbol
+@Stateless
+ ^
+  symbol: class Stateless
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:41: error: cannot find symbol
+@TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+ ^
+  symbol: class TransactionAttribute
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:42: error: cannot find symbol
+@TransactionManagement(TransactionManagementType.BEAN)
+ ^
+  symbol: class TransactionManagement
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:47: error: cannot find symbol
+	EntityManager em;
+	^
+  symbol:   class EntityManager
+  location: class ApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:50: error: cannot find symbol
+	UserTransaction utx;
+	^
+  symbol:   class UserTransaction
+  location: class ApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:56: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(ApplicationManager.class);
+	                     ^
+  symbol:   class Logger
+  location: class ApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:64: error: cannot find symbol
+	private AppAccept system_registration(String fullNameSystem,
+	        ^
+  symbol:   class AppAccept
+  location: class ApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:66: error: cannot find symbol
+			Long idUser, String IPAddress) throws GeneralFailure {
+			                                      ^
+  symbol:   class GeneralFailure
+  location: class ApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:139: error: cannot find symbol
+	private AppAccept user_registration(String surnameUser, String nameUser,
+	        ^
+  symbol:   class AppAccept
+  location: class ApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:144: error: cannot find symbol
+			throws GeneralFailure {
+			       ^
+  symbol:   class GeneralFailure
+  location: class ApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:233: error: cannot find symbol
+	public AppAccept system_registration(List<AppAttribute> attributes,
+	                                          ^
+  symbol:   class AppAttribute
+  location: class ApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:233: error: cannot find symbol
+	public AppAccept system_registration(List<AppAttribute> attributes,
+	       ^
+  symbol:   class AppAccept
+  location: class ApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:235: error: cannot find symbol
+			throws GeneralFailure {
+			       ^
+  symbol:   class GeneralFailure
+  location: class ApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:276: error: cannot find symbol
+	public AppAccept user_registration(List<AppAttribute> attributes,
+	                                        ^
+  symbol:   class AppAttribute
+  location: class ApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:276: error: cannot find symbol
+	public AppAccept user_registration(List<AppAttribute> attributes,
+	       ^
+  symbol:   class AppAccept
+  location: class ApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:278: error: cannot find symbol
+			throws GeneralFailure {
+			       ^
+  symbol:   class GeneralFailure
+  location: class ApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:327: error: cannot find symbol
+	public AppAccept access_roles(String modeExec, String loginUser,
+	       ^
+  symbol:   class AppAccept
+  location: class ApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:329: error: cannot find symbol
+			Long idUser, String IPAddress) throws GeneralFailure {
+			                                      ^
+  symbol:   class GeneralFailure
+  location: class ApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:435: error: cannot find symbol
+	public AppAccept access_groups(String modeExec, String loginUser,
+	       ^
+  symbol:   class AppAccept
+  location: class ApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:437: error: cannot find symbol
+			Long idUser, String IPAddress) throws GeneralFailure {
+			                                      ^
+  symbol:   class GeneralFailure
+  location: class ApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:541: error: cannot find symbol
+	public AppAccept block(String modeExec, String loginUser,
+	       ^
+  symbol:   class AppAccept
+  location: class ApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:543: error: cannot find symbol
+			throws GeneralFailure {
+			       ^
+  symbol:   class GeneralFailure
+  location: class ApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:634: error: cannot find symbol
+			List<AppAttribute> attributes, String principal, Long idUser,
+			     ^
+  symbol:   class AppAttribute
+  location: class ApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:633: error: cannot find symbol
+	public AppAccept system_modification(String codeSystem,
+	       ^
+  symbol:   class AppAccept
+  location: class ApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:635: error: cannot find symbol
+			String IPAddress) throws GeneralFailure {
+			                         ^
+  symbol:   class GeneralFailure
+  location: class ApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:737: error: cannot find symbol
+			List<AppAttribute> attributes, String principal, Long idUser,
+			     ^
+  symbol:   class AppAttribute
+  location: class ApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:736: error: cannot find symbol
+	public AppAccept user_modification(String loginUser,
+	       ^
+  symbol:   class AppAccept
+  location: class ApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:738: error: cannot find symbol
+			String IPAddress) throws GeneralFailure {
+			                         ^
+  symbol:   class GeneralFailure
+  location: class ApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:1029: error: cannot find symbol
+	public AppAccept user_identity_modification(String loginUser, String login,
+	       ^
+  symbol:   class AppAccept
+  location: class ApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:1031: error: cannot find symbol
+			throws GeneralFailure {
+			       ^
+  symbol:   class GeneralFailure
+  location: class ApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:1103: error: cannot find symbol
+	public AppAccept user_cert_modification(String modeExec, String loginUser,
+	       ^
+  symbol:   class AppAccept
+  location: class ApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:1105: error: cannot find symbol
+			throws GeneralFailure {
+			       ^
+  symbol:   class GeneralFailure
+  location: class ApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:1205: error: cannot find symbol
+			List<AppAttribute> attributes, String principal, Long idUser,
+			     ^
+  symbol:   class AppAttribute
+  location: class ApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:1204: error: cannot find symbol
+	public AppAccept user_dep_modification(String loginUser,
+	       ^
+  symbol:   class AppAccept
+  location: class ApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:1206: error: cannot find symbol
+			String IPAddress) throws GeneralFailure {
+			                         ^
+  symbol:   class GeneralFailure
+  location: class ApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:1300: error: cannot find symbol
+	public Long principal_exist(String principal) throws GeneralFailure {
+	                                                     ^
+  symbol:   class GeneralFailure
+  location: class ApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:1338: error: cannot find symbol
+	private Long system_exist(String codeSystem) throws GeneralFailure {
+	                                                    ^
+  symbol:   class GeneralFailure
+  location: class ApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:1366: error: cannot find symbol
+	private Long user_exist(String idUser) throws GeneralFailure {
+	                                              ^
+  symbol:   class GeneralFailure
+  location: class ApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:1395: error: cannot find symbol
+			throws GeneralFailure {
+			       ^
+  symbol:   class GeneralFailure
+  location: class ApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:1427: error: cannot find symbol
+			throws GeneralFailure {
+			       ^
+  symbol:   class GeneralFailure
+  location: class ApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisUtilManager.java:9: error: package javax.ejb does not exist
+import javax.ejb.Stateless;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisUtilManager.java:10: error: package javax.ejb does not exist
+import javax.ejb.TransactionAttribute;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisUtilManager.java:11: error: package javax.ejb does not exist
+import javax.ejb.TransactionAttributeType;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisUtilManager.java:12: error: package javax.persistence does not exist
+import javax.persistence.EntityManager;
+                        ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisUtilManager.java:13: error: package javax.persistence does not exist
+import javax.persistence.NoResultException;
+                        ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisUtilManager.java:14: error: package javax.persistence does not exist
+import javax.persistence.PersistenceContext;
+                        ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisUtilManager.java:16: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisUtilManager.java:17: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisUtilManager.java:19: error: cannot find symbol
+import ru.spb.iac.cud.core.UtilManagerLocal;
+                          ^
+  symbol:   class UtilManagerLocal
+  location: package ru.spb.iac.cud.core
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisUtilManager.java:20: error: cannot find symbol
+import ru.spb.iac.cud.core.UtilManagerRemote;
+                          ^
+  symbol:   class UtilManagerRemote
+  location: package ru.spb.iac.cud.core
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisUtilManager.java:21: error: package ru.spb.iac.cud.core.util does not exist
+import ru.spb.iac.cud.core.util.CUDConstants;
+                               ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisUtilManager.java:22: error: package ru.spb.iac.cud.exceptions does not exist
+import ru.spb.iac.cud.exceptions.GeneralFailure;
+                                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisUtilManager.java:23: error: package ru.spb.iac.cud.items does not exist
+import ru.spb.iac.cud.items.Group;
+                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisUtilManager.java:24: error: package ru.spb.iac.cud.items does not exist
+import ru.spb.iac.cud.items.GroupsData;
+                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisUtilManager.java:25: error: package ru.spb.iac.cud.items does not exist
+import ru.spb.iac.cud.items.ISOrganisations;
+                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisUtilManager.java:26: error: package ru.spb.iac.cud.items does not exist
+import ru.spb.iac.cud.items.Resource;
+                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisUtilManager.java:27: error: package ru.spb.iac.cud.items does not exist
+import ru.spb.iac.cud.items.ResourceNU;
+                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisUtilManager.java:28: error: package ru.spb.iac.cud.items does not exist
+import ru.spb.iac.cud.items.ResourcesData;
+                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisUtilManager.java:29: error: package ru.spb.iac.cud.items does not exist
+import ru.spb.iac.cud.items.Role;
+                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisUtilManager.java:30: error: package ru.spb.iac.cud.items does not exist
+import ru.spb.iac.cud.items.User;
+                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisUtilManager.java:31: error: package ru.spb.iac.cud.items does not exist
+import ru.spb.iac.cud.items.UsersData;
+                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisUtilManager.java:41: error: cannot find symbol
+ public class EisUtilManager implements UtilManagerLocal, UtilManagerRemote {
+                                        ^
+  symbol: class UtilManagerLocal
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisUtilManager.java:41: error: cannot find symbol
+ public class EisUtilManager implements UtilManagerLocal, UtilManagerRemote {
+                                                          ^
+  symbol: class UtilManagerRemote
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisUtilManager.java:39: error: cannot find symbol
+@Stateless
+ ^
+  symbol: class Stateless
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisUtilManager.java:40: error: cannot find symbol
+@TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+ ^
+  symbol: class TransactionAttribute
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisUtilManager.java:44: error: cannot find symbol
+	EntityManager em;
+	^
+  symbol:   class EntityManager
+  location: class EisUtilManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisUtilManager.java:56: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(EisUtilManager.class);
+	                     ^
+  symbol:   class Logger
+  location: class EisUtilManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisUtilManager.java:87: error: cannot find symbol
+	public UsersData users_data(String idIS, List<String> uidsUsers,
+	       ^
+  symbol:   class UsersData
+  location: class EisUtilManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisUtilManager.java:90: error: cannot find symbol
+			Long idUserAuth, String IPAddress) throws GeneralFailure {
+			                                          ^
+  symbol:   class GeneralFailure
+  location: class EisUtilManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisUtilManager.java:957: error: cannot find symbol
+	public GroupsData groups_data(String idIS, List<String> groupsCodes,
+	       ^
+  symbol:   class GroupsData
+  location: class EisUtilManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisUtilManager.java:960: error: cannot find symbol
+			String IPAddress) throws GeneralFailure {
+			                         ^
+  symbol:   class GeneralFailure
+  location: class EisUtilManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisUtilManager.java:1545: error: cannot find symbol
+	public ResourcesData resources_data(String idIS,
+	       ^
+  symbol:   class ResourcesData
+  location: class EisUtilManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisUtilManager.java:1549: error: cannot find symbol
+			throws GeneralFailure {
+			       ^
+  symbol:   class GeneralFailure
+  location: class EisUtilManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisUtilManager.java:1924: error: cannot find symbol
+	public List<Resource> resources_data_subsys(String idIS,
+	            ^
+  symbol:   class Resource
+  location: class EisUtilManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisUtilManager.java:1926: error: cannot find symbol
+	String category, Long idUserAuth, String IPAddress) throws GeneralFailure {
+	                                                           ^
+  symbol:   class GeneralFailure
+  location: class EisUtilManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisUtilManager.java:2120: error: cannot find symbol
+	public List<Role> roles_data(String idIS, String category,
+	            ^
+  symbol:   class Role
+  location: class EisUtilManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisUtilManager.java:2121: error: cannot find symbol
+			Long idUserAuth, String IPAddress) throws GeneralFailure{
+			                                          ^
+  symbol:   class GeneralFailure
+  location: class EisUtilManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisUtilManager.java:2373: error: cannot find symbol
+	public ISOrganisations is_organisations(
+	       ^
+  symbol:   class ISOrganisations
+  location: class EisUtilManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisUtilManager.java:2375: error: cannot find symbol
+	    Long idUserAuth, String IPAddress) throws GeneralFailure {
+	                                              ^
+  symbol:   class GeneralFailure
+  location: class EisUtilManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisUtilManager.java:2385: error: cannot find symbol
+	public void is_exist(String idIS) throws GeneralFailure {
+	                                         ^
+  symbol:   class GeneralFailure
+  location: class EisUtilManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisUtilManager.java:2443: error: cannot find symbol
+	private String getCodeIs(String codeSys) throws GeneralFailure {
+	                                                ^
+  symbol:   class GeneralFailure
+  location: class EisUtilManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisUtilManager.java:2478: error: cannot find symbol
+	private Map<String,String> getSettingsMap(List<String> settings) throws GeneralFailure {
+	                                                                        ^
+  symbol:   class GeneralFailure
+  location: class EisUtilManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisAdminManager.java:8: error: package javax.ejb does not exist
+import javax.ejb.Stateless;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisAdminManager.java:9: error: package javax.persistence does not exist
+import javax.persistence.EntityManager;
+                        ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisAdminManager.java:10: error: package javax.persistence does not exist
+import javax.persistence.NoResultException;
+                        ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisAdminManager.java:11: error: package javax.persistence does not exist
+import javax.persistence.PersistenceContext;
+                        ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisAdminManager.java:13: error: package ru.spb.iac.cud.exceptions does not exist
+import ru.spb.iac.cud.exceptions.GeneralFailure;
+                                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisAdminManager.java:14: error: package javax.ejb does not exist
+import javax.ejb.TransactionAttribute;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisAdminManager.java:15: error: package javax.ejb does not exist
+import javax.ejb.TransactionAttributeType;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisAdminManager.java:16: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisAdminManager.java:17: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisAdminManager.java:26: error: cannot find symbol
+ public class EisAdminManager implements AdminManagerLocal, AdminManagerRemote {
+                                         ^
+  symbol: class AdminManagerLocal
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisAdminManager.java:26: error: cannot find symbol
+ public class EisAdminManager implements AdminManagerLocal, AdminManagerRemote {
+                                                            ^
+  symbol: class AdminManagerRemote
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisAdminManager.java:24: error: cannot find symbol
+@Stateless
+ ^
+  symbol: class Stateless
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisAdminManager.java:25: error: cannot find symbol
+@TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+ ^
+  symbol: class TransactionAttribute
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisAdminManager.java:29: error: cannot find symbol
+	EntityManager em;
+	^
+  symbol:   class EntityManager
+  location: class EisAdminManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisAdminManager.java:33: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(EisAdminManager.class);
+	                     ^
+  symbol:   class Logger
+  location: class EisAdminManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisAdminManager.java:43: error: cannot find symbol
+			String IPAddress) throws GeneralFailure {
+			                         ^
+  symbol:   class GeneralFailure
+  location: class EisAdminManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisAdminManager.java:218: error: cannot find symbol
+			String IPAddress) throws GeneralFailure {
+			                         ^
+  symbol:   class GeneralFailure
+  location: class EisAdminManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisAdminManager.java:378: error: cannot find symbol
+			String IPAddress) throws GeneralFailure {
+			                         ^
+  symbol:   class GeneralFailure
+  location: class EisAdminManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisAdminManager.java:466: error: cannot find symbol
+	private Long get_id_is(String codeSys) throws GeneralFailure {
+	                                              ^
+  symbol:   class GeneralFailure
+  location: class EisAdminManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisAdminManager.java:498: error: cannot find symbol
+			throws GeneralFailure {
+			       ^
+  symbol:   class GeneralFailure
+  location: class EisAdminManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisAdminManager.java:529: error: cannot find symbol
+	private Long group_exist(String codeGroup) throws GeneralFailure {
+	                                                  ^
+  symbol:   class GeneralFailure
+  location: class EisAdminManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\idp\core\access\IDPAccessManager.java:8: error: package javax.ejb does not exist
+import javax.ejb.Stateless;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\idp\core\access\IDPAccessManager.java:9: error: package javax.persistence does not exist
+import javax.persistence.EntityManager;
+                        ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\idp\core\access\IDPAccessManager.java:10: error: package javax.persistence does not exist
+import javax.persistence.PersistenceContext;
+                        ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\idp\core\access\IDPAccessManager.java:11: error: package javax.persistence does not exist
+import javax.persistence.Query;
+                        ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\idp\core\access\IDPAccessManager.java:13: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\idp\core\access\IDPAccessManager.java:14: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\idp\core\access\IDPAccessManager.java:16: error: package ru.spb.iac.cud.core.util does not exist
+import ru.spb.iac.cud.core.util.CUDConstants;
+                               ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\idp\core\access\IDPAccessManager.java:26: error: cannot find symbol
+ public class IDPAccessManager implements IDPAccessManagerLocal,
+                                          ^
+  symbol: class IDPAccessManagerLocal
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\idp\core\access\IDPAccessManager.java:27: error: cannot find symbol
+		IDPAccessManagerRemote {
+		^
+  symbol: class IDPAccessManagerRemote
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\idp\core\access\IDPAccessManager.java:25: error: cannot find symbol
+@Stateless
+ ^
+  symbol: class Stateless
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\idp\core\access\IDPAccessManager.java:30: error: cannot find symbol
+	EntityManager em;
+	^
+  symbol:   class EntityManager
+  location: class IDPAccessManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\idp\core\access\IDPAccessManager.java:32: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(IDPAccessManager.class);
+	                     ^
+  symbol:   class Logger
+  location: class IDPAccessManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\idp\core\util\IDPUtilManager.java:7: error: package javax.ejb does not exist
+import javax.ejb.Stateless;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\idp\core\util\IDPUtilManager.java:8: error: package javax.persistence does not exist
+import javax.persistence.EntityManager;
+                        ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\idp\core\util\IDPUtilManager.java:9: error: package javax.persistence does not exist
+import javax.persistence.PersistenceContext;
+                        ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\idp\core\util\IDPUtilManager.java:12: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\idp\core\util\IDPUtilManager.java:13: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\idp\core\util\IDPUtilManager.java:15: error: package ru.spb.iac.cud.core.util does not exist
+import ru.spb.iac.cud.core.util.CUDConstants;
+                               ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\idp\core\util\IDPUtilManager.java:24: error: cannot find symbol
+ public class IDPUtilManager implements IDPUtilManagerLocal,
+                                        ^
+  symbol: class IDPUtilManagerLocal
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\idp\core\util\IDPUtilManager.java:25: error: cannot find symbol
+		IDPUtilManagerRemote {
+		^
+  symbol: class IDPUtilManagerRemote
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\idp\core\util\IDPUtilManager.java:23: error: cannot find symbol
+@Stateless
+ ^
+  symbol: class Stateless
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\idp\core\util\IDPUtilManager.java:28: error: cannot find symbol
+	EntityManager em;
+	^
+  symbol:   class EntityManager
+  location: class IDPUtilManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\idp\core\util\IDPUtilManager.java:30: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(IDPUtilManager.class);
+	                     ^
+  symbol:   class Logger
+  location: class IDPUtilManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\util\CommonUtil.java:7: error: package ru.spb.iac.cud.items does not exist
+import ru.spb.iac.cud.items.Attribute;
+                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\util\CommonUtil.java:8: error: package ru.spb.iac.cud.items does not exist
+import ru.spb.iac.cud.items.User;
+                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\util\CommonUtil.java:29: error: cannot find symbol
+	public static String createAttributes (List<Object[]> lo, List<User> result, Map<String, User> resultIds){
+	                                                               ^
+  symbol:   class User
+  location: class CommonUtil
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\util\CommonUtil.java:29: error: cannot find symbol
+	public static String createAttributes (List<Object[]> lo, List<User> result, Map<String, User> resultIds){
+	                                                                                         ^
+  symbol:   class User
+  location: class CommonUtil
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\SyncManager.java:39: error: cannot find symbol
+	@PersistenceContext(unitName = "AuthServices")
+	 ^
+  symbol:   class PersistenceContext
+  location: class SyncManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\AccessManager.java:45: error: cannot find symbol
+	@PersistenceContext(unitName = "AuthServices")
+	 ^
+  symbol:   class PersistenceContext
+  location: class AccessManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationResultManager.java:34: error: cannot find symbol
+	@PersistenceContext(unitName = "AuthServices")
+	 ^
+  symbol:   class PersistenceContext
+  location: class ApplicationResultManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:46: error: cannot find symbol
+	@PersistenceContext(unitName = "AuthServices")
+	 ^
+  symbol:   class PersistenceContext
+  location: class ApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisUtilManager.java:43: error: cannot find symbol
+	@PersistenceContext(unitName = "AuthServices")
+	 ^
+  symbol:   class PersistenceContext
+  location: class EisUtilManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisAdminManager.java:28: error: cannot find symbol
+	@PersistenceContext(unitName = "AuthServices")
+	 ^
+  symbol:   class PersistenceContext
+  location: class EisAdminManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\idp\core\access\IDPAccessManager.java:29: error: cannot find symbol
+	@PersistenceContext(unitName = "AuthServices")
+	 ^
+  symbol:   class PersistenceContext
+  location: class IDPAccessManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\idp\core\util\IDPUtilManager.java:27: error: cannot find symbol
+	@PersistenceContext(unitName = "AuthServices")
+	 ^
+  symbol:   class PersistenceContext
+  location: class IDPUtilManager
+[search path for source files: C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java,C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java]
+[search path for class files: C:\Program Files\Java\jdk1.7.0_07\jre\lib\resources.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\rt.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\sunrsasign.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\jsse.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\jce.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\charsets.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\jfr.jar,C:\Program Files\Java\jdk1.7.0_07\jre\classes,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\access-bridge.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\ASN1P.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\asn1rt.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\commons-logging.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\cpSSL.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\dnsns.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\forms_rt.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\jaccess.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCP.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCPinst.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCPRequest.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCPRevCheck.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCPRevTools.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCPxml.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCryptoP.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\localedata.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\sunec.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\sunjce_provider.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\sunmscapi.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\sunpkcs11.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\XMLDSigRI.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\xmlsec-1.5.1.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\zipfs.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/math/BigDecimal.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/ArrayList.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/HashMap.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/List.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/Map.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Object.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/String.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Long.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/io/File.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/io/FileInputStream.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/io/InputStream.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/math/BigInteger.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/security/cert/CertificateFactory.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/security/cert/X509CRL.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/security/cert/X509CRLEntry.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/Collection.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/Properties.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Integer.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/io/ByteArrayInputStream.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/security/cert/X509Certificate.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/Date.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/annotation/Resource.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\xmlsec-1.5.1.jar(org/apache/xml/security/utils/Base64.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/Arrays.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Exception.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/Random.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/annotation/Annotation.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/annotation/Target.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/annotation/ElementType.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/annotation/Retention.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/annotation/RetentionPolicy.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/annotation/Resource$AuthenticationType.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/SuppressWarnings.class)]]
+Standard Doclet version 1.7.0_07
+Building tree for all the packages and classes...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\ejb-services\ru\spb\iac\cud\infosweb\web\init\StartupServlet.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:20: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(StartupServlet.class);
+	                                     ^
+  symbol:   variable LoggerFactory
+  location: class StartupServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:27: warning - Tag @see: reference not found: HttpServlet#HttpServlet()
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:35: warning - Tag @see: reference not found: Servlet#init(ServletConfig)
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Class.class)]]
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\ejb-services\ru\spb\iac\cud\core\AccessManager.html...
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class PersistenceContext not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class PersistenceContext not found.
+javadoc: warning - Class PersistenceContext not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\AccessManager.java:50: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(AccessManager.class);
+	                                     ^
+  symbol:   variable LoggerFactory
+  location: class AccessManager
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/io/Serializable.class)]]
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\ejb-services\ru\spb\iac\cud\core\SyncManager.html...
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class PersistenceContext not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class PersistenceContext not found.
+javadoc: warning - Class PersistenceContext not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\SyncManager.java:45: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(SyncManager.class);
+	                                     ^
+  symbol:   variable LoggerFactory
+  location: class SyncManager
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\ejb-services\ru\spb\iac\cud\core\app\ApplicationManager.html...
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class PersistenceContext not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class PersistenceContext not found.
+javadoc: warning - Class PersistenceContext not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationManager.java:56: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(ApplicationManager.class);
+	                                     ^
+  symbol:   variable LoggerFactory
+  location: class ApplicationManager
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\ejb-services\ru\spb\iac\cud\core\app\ApplicationResultManager.html...
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class PersistenceContext not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class PersistenceContext not found.
+javadoc: warning - Class PersistenceContext not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\app\ApplicationResultManager.java:39: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(ApplicationResultManager.class);
+	                                     ^
+  symbol:   variable LoggerFactory
+  location: class ApplicationResultManager
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\ejb-services\ru\spb\iac\cud\core\eis\EisAdminManager.html...
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class PersistenceContext not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class PersistenceContext not found.
+javadoc: warning - Class PersistenceContext not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisAdminManager.java:33: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(EisAdminManager.class);
+	                                     ^
+  symbol:   variable LoggerFactory
+  location: class EisAdminManager
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\ejb-services\ru\spb\iac\cud\core\eis\EisUtilManager.html...
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class PersistenceContext not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class PersistenceContext not found.
+javadoc: warning - Class PersistenceContext not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\core\eis\EisUtilManager.java:56: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(EisUtilManager.class);
+	                                     ^
+  symbol:   variable LoggerFactory
+  location: class EisUtilManager
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Number.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Byte.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Character.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Short.class)]]
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\ejb-services\ru\spb\iac\cud\idp\core\access\IDPAccessManager.html...
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class PersistenceContext not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class PersistenceContext not found.
+javadoc: warning - Class PersistenceContext not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class Stateless not found.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\idp\core\access\IDPAccessManager.java:32: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(IDPAccessManager.class);
+	                                     ^
+  symbol:   variable LoggerFactory
+  location: class IDPAccessManager
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class Stateless not found.
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\ejb-services\ru\spb\iac\cud\idp\core\util\IDPUtilManager.html...
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class PersistenceContext not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class PersistenceContext not found.
+javadoc: warning - Class PersistenceContext not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class Stateless not found.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\ejb-services\src\main\java\ru\spb\iac\cud\idp\core\util\IDPUtilManager.java:30: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(IDPUtilManager.class);
+	                                     ^
+  symbol:   variable LoggerFactory
+  location: class IDPUtilManager
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class Stateless not found.
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\ejb-services\ru\spb\iac\cud\util\CommonUtil.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\ejb-services\ru\spb\iac\cud\util\TIDEncode.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\ejb-services\overview-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\ejb-services\ru\spb\iac\cud\core\package-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\ejb-services\ru\spb\iac\cud\core\package-summary.html...
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\ejb-services\ru\spb\iac\cud\core\package-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\ejb-services\ru\spb\iac\cud\core\app\package-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\ejb-services\ru\spb\iac\cud\core\app\package-summary.html...
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\ejb-services\ru\spb\iac\cud\core\app\package-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\ejb-services\ru\spb\iac\cud\core\eis\package-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\ejb-services\ru\spb\iac\cud\core\eis\package-summary.html...
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\ejb-services\ru\spb\iac\cud\core\eis\package-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\ejb-services\ru\spb\iac\cud\idp\core\access\package-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\ejb-services\ru\spb\iac\cud\idp\core\access\package-summary.html...
+javadoc: warning - Class Stateless not found.
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\ejb-services\ru\spb\iac\cud\idp\core\access\package-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\ejb-services\ru\spb\iac\cud\idp\core\util\package-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\ejb-services\ru\spb\iac\cud\idp\core\util\package-summary.html...
+javadoc: warning - Class Stateless not found.
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\ejb-services\ru\spb\iac\cud\idp\core\util\package-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\ejb-services\ru\spb\iac\cud\infosweb\web\init\package-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\ejb-services\ru\spb\iac\cud\infosweb\web\init\package-summary.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\ejb-services\ru\spb\iac\cud\infosweb\web\init\package-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\ejb-services\ru\spb\iac\cud\util\package-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\ejb-services\ru\spb\iac\cud\util\package-summary.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\ejb-services\ru\spb\iac\cud\util\package-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\ejb-services\constant-values.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\ejb-services\src-html\ru\spb\iac\cud\infosweb\web\init\StartupServlet.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\ejb-services\src-html\ru\spb\iac\cud\core\SyncManager.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\ejb-services\src-html\ru\spb\iac\cud\core\AccessManager.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\ejb-services\src-html\ru\spb\iac\cud\core\app\ApplicationResultManager.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\ejb-services\src-html\ru\spb\iac\cud\core\app\ApplicationManager.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\ejb-services\src-html\ru\spb\iac\cud\core\eis\EisUtilManager.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\ejb-services\src-html\ru\spb\iac\cud\core\eis\EisAdminManager.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\ejb-services\src-html\ru\spb\iac\cud\idp\core\access\IDPAccessManager.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\ejb-services\src-html\ru\spb\iac\cud\idp\core\util\IDPUtilManager.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\ejb-services\src-html\ru\spb\iac\cud\util\TIDEncode.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\ejb-services\src-html\ru\spb\iac\cud\util\CommonUtil.html...
+Building index for all the packages and classes...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\ejb-services\overview-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\ejb-services\index-all.html...
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class PersistenceContext not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class PersistenceContext not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class PersistenceContext not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class PersistenceContext not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class PersistenceContext not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class PersistenceContext not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class PersistenceContext not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class PersistenceContext not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\ejb-services\deprecated-list.html...
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class PersistenceContext not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class PersistenceContext not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class PersistenceContext not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class TransactionManagement not found.
+javadoc: warning - Class PersistenceContext not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class PersistenceContext not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class PersistenceContext not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class PersistenceContext not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class PersistenceContext not found.
+Building index for all classes...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\ejb-services\allclasses-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\ejb-services\allclasses-noframe.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\ejb-services\index.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\ejb-services\overview-summary.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\ejb-services\help-doc.html...
+[done in 2373 ms]
+9 errors
+1179 warnings

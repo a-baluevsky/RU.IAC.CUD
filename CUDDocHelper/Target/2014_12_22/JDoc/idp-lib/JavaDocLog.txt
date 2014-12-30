@@ -1,0 +1,1279 @@
+Loading source files for package ru.spb.iac.cud.infosweb.web.init...
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java]]
+[parsing completed 20ms]
+Loading source files for package ru.spb.iac.cud.idp.items...
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\items\CUDRoleGenerator.java]]
+[parsing completed 10ms]
+Loading source files for package ru.spb.iac.cud.idp.valve...
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\SecurityActions.java]]
+[parsing completed 30ms]
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\LocalWebUtil.java]]
+[parsing completed 0ms]
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDIDPWebBrowserSSOValve.java]]
+[parsing completed 0ms]
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java]]
+[parsing completed 40ms]
+Loading source files for package ru.spb.iac.cud.idp.web.sig...
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\SecurityActions.java]]
+[parsing completed 0ms]
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTXMLSignatureUtil.java]]
+[parsing completed 10ms]
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java]]
+[parsing completed 0ms]
+Loading source files for package ru.spb.iac.cud.idp.web.util...
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\util\CUDIDPWebRequestUtil.java]]
+[parsing completed 0ms]
+Constructing Javadoc information...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:3: error: package javax.servlet does not exist
+import javax.servlet.ServletConfig;
+                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:4: error: package javax.servlet does not exist
+import javax.servlet.ServletContext;
+                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:5: error: package javax.servlet does not exist
+import javax.servlet.ServletException;
+                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:6: error: package javax.servlet.http does not exist
+import javax.servlet.http.HttpServlet;
+                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:8: error: package mypackage does not exist
+import mypackage.Configuration;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:10: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:11: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:18: error: cannot find symbol
+ public class StartupServlet extends HttpServlet {
+                                     ^
+  symbol: class HttpServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:20: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(StartupServlet.class);
+	                     ^
+  symbol:   class Logger
+  location: class StartupServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:35: error: cannot find symbol
+	public void init(ServletConfig config) throws ServletException {
+	                 ^
+  symbol:   class ServletConfig
+  location: class StartupServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:35: error: cannot find symbol
+	public void init(ServletConfig config) throws ServletException {
+	                                              ^
+  symbol:   class ServletException
+  location: class StartupServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\items\CUDRoleGenerator.java:6: error: package org.picketlink.identity.federation.core.interfaces does not exist
+import org.picketlink.identity.federation.core.interfaces.RoleGenerator;
+                                                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\items\CUDRoleGenerator.java:8: error: cannot find symbol
+public interface CUDRoleGenerator extends RoleGenerator {
+                                          ^
+  symbol: class RoleGenerator
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDIDPWebBrowserSSOValve.java:3: error: package org.apache.catalina does not exist
+import org.apache.catalina.Lifecycle;
+                          ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDIDPWebBrowserSSOValve.java:4: error: package org.apache.catalina does not exist
+import org.apache.catalina.LifecycleException;
+                          ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDIDPWebBrowserSSOValve.java:5: error: package org.apache.catalina does not exist
+import org.apache.catalina.LifecycleListener;
+                          ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDIDPWebBrowserSSOValve.java:6: error: package org.apache.catalina.util does not exist
+import org.apache.catalina.util.LifecycleSupport;
+                               ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDIDPWebBrowserSSOValve.java:7: error: package org.picketlink.common does not exist
+import org.picketlink.common.ErrorCodes;
+                            ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:3: error: package org.picketlink.common.constants does not exist
+import static org.picketlink.common.constants.GeneralConstants.CONFIG_FILE_LOCATION;
+                                             ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:3: error: static import only from classes and interfaces
+import static org.picketlink.common.constants.GeneralConstants.CONFIG_FILE_LOCATION;
+^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:4: error: package org.picketlink.common.constants does not exist
+import static org.picketlink.common.constants.GeneralConstants.DEPRECATED_CONFIG_FILE_LOCATION;
+                                             ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:4: error: static import only from classes and interfaces
+import static org.picketlink.common.constants.GeneralConstants.DEPRECATED_CONFIG_FILE_LOCATION;
+^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:5: error: package org.picketlink.common.util does not exist
+import static org.picketlink.common.util.StringUtil.isNotNull;
+                                        ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:5: error: static import only from classes and interfaces
+import static org.picketlink.common.util.StringUtil.isNotNull;
+^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:6: error: package org.picketlink.common.util does not exist
+import static org.picketlink.common.util.StringUtil.isNullOrEmpty;
+                                        ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:6: error: static import only from classes and interfaces
+import static org.picketlink.common.util.StringUtil.isNullOrEmpty;
+^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:34: error: package javax.servlet does not exist
+import javax.servlet.RequestDispatcher;
+                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:35: error: package javax.servlet does not exist
+import javax.servlet.ServletException;
+                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:36: error: package javax.servlet does not exist
+import javax.servlet.ServletRequest;
+                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:37: error: package javax.servlet.http does not exist
+import javax.servlet.http.HttpServletResponse;
+                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:39: error: package org.apache.catalina does not exist
+import org.apache.catalina.Context;
+                          ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:40: error: package org.apache.catalina does not exist
+import org.apache.catalina.Globals;
+                          ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:41: error: package org.apache.catalina does not exist
+import org.apache.catalina.LifecycleException;
+                          ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:42: error: package org.apache.catalina does not exist
+import org.apache.catalina.Session;
+                          ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:43: error: package org.apache.catalina does not exist
+import org.apache.catalina.Valve;
+                          ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:44: error: package org.apache.catalina.authenticator does not exist
+import org.apache.catalina.authenticator.SSLAuthenticator;
+                                        ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:45: error: package org.apache.catalina.connector does not exist
+import org.apache.catalina.connector.Request;
+                                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:46: error: package org.apache.catalina.connector does not exist
+import org.apache.catalina.connector.Response;
+                                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:47: error: package org.apache.catalina.deploy does not exist
+import org.apache.catalina.deploy.LoginConfig;
+                                 ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:48: error: package org.apache.catalina.realm does not exist
+import org.apache.catalina.realm.GenericPrincipal;
+                                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:49: error: package org.apache.catalina.valves does not exist
+import org.apache.catalina.valves.ValveBase;
+                                 ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:50: error: package org.apache.coyote does not exist
+import org.apache.coyote.ActionCode;
+                        ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:51: error: package org.jboss.security.audit does not exist
+import org.jboss.security.audit.AuditLevel;
+                               ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:52: error: package org.picketlink.common does not exist
+import org.picketlink.common.PicketLinkLogger;
+                            ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:53: error: package org.picketlink.common does not exist
+import org.picketlink.common.PicketLinkLoggerFactory;
+                            ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:54: error: package org.picketlink.common.constants does not exist
+import org.picketlink.common.constants.GeneralConstants;
+                                      ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:55: error: package org.picketlink.common.constants does not exist
+import org.picketlink.common.constants.JBossSAMLURIConstants;
+                                      ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:56: error: package org.picketlink.common.exceptions does not exist
+import org.picketlink.common.exceptions.ConfigurationException;
+                                       ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:57: error: package org.picketlink.common.exceptions does not exist
+import org.picketlink.common.exceptions.ParsingException;
+                                       ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:58: error: package org.picketlink.common.exceptions does not exist
+import org.picketlink.common.exceptions.ProcessingException;
+                                       ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:59: error: package org.picketlink.common.exceptions.fed does not exist
+import org.picketlink.common.exceptions.fed.IssuerNotTrustedException;
+                                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:60: error: package org.picketlink.common.util does not exist
+import org.picketlink.common.util.StaxUtil;
+                                 ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:61: error: package org.picketlink.common.util does not exist
+import org.picketlink.common.util.StringUtil;
+                                 ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:62: error: package org.picketlink.common.util does not exist
+import org.picketlink.common.util.SystemPropertiesUtil;
+                                 ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:63: error: package org.picketlink.config.federation does not exist
+import org.picketlink.config.federation.AuthPropertyType;
+                                       ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:64: error: package org.picketlink.config.federation does not exist
+import org.picketlink.config.federation.IDPType;
+                                       ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:65: error: package org.picketlink.config.federation does not exist
+import org.picketlink.config.federation.KeyProviderType;
+                                       ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:66: error: package org.picketlink.config.federation does not exist
+import org.picketlink.config.federation.PicketLinkType;
+                                       ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:67: error: package org.picketlink.config.federation.handler does not exist
+import org.picketlink.config.federation.handler.Handlers;
+                                               ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:68: error: package org.picketlink.identity.federation.api.saml.v2.request does not exist
+import org.picketlink.identity.federation.api.saml.v2.request.SAML2Request;
+                                                             ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:69: error: package org.picketlink.identity.federation.api.saml.v2.response does not exist
+import org.picketlink.identity.federation.api.saml.v2.response.SAML2Response;
+                                                              ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:70: error: package org.picketlink.identity.federation.api.saml.v2.sig does not exist
+import org.picketlink.identity.federation.api.saml.v2.sig.SAML2Signature;
+                                                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:71: error: package org.picketlink.identity.federation.bindings.tomcat does not exist
+import org.picketlink.identity.federation.bindings.tomcat.TomcatRoleGenerator;
+                                                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:72: error: package org.picketlink.identity.federation.core.audit does not exist
+import org.picketlink.identity.federation.core.audit.PicketLinkAuditEvent;
+                                                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:73: error: package org.picketlink.identity.federation.core.audit does not exist
+import org.picketlink.identity.federation.core.audit.PicketLinkAuditEventType;
+                                                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:74: error: package org.picketlink.identity.federation.core.audit does not exist
+import org.picketlink.identity.federation.core.audit.PicketLinkAuditHelper;
+                                                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:75: error: package org.picketlink.identity.federation.core.impl does not exist
+import org.picketlink.identity.federation.core.impl.DelegatedAttributeManager;
+                                                   ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:76: error: package org.picketlink.identity.federation.core.interfaces does not exist
+import org.picketlink.identity.federation.core.interfaces.AttributeManager;
+                                                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:77: error: package org.picketlink.identity.federation.core.interfaces does not exist
+import org.picketlink.identity.federation.core.interfaces.ProtocolContext;
+                                                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:78: error: package org.picketlink.identity.federation.core.interfaces does not exist
+import org.picketlink.identity.federation.core.interfaces.RoleGenerator;
+                                                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:79: error: package org.picketlink.identity.federation.core.interfaces does not exist
+import org.picketlink.identity.federation.core.interfaces.TrustKeyManager;
+                                                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:80: error: package org.picketlink.identity.federation.core.saml.v1 does not exist
+import org.picketlink.identity.federation.core.saml.v1.SAML11Constants;
+                                                      ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:81: error: package org.picketlink.identity.federation.core.saml.v1 does not exist
+import org.picketlink.identity.federation.core.saml.v1.SAML11ProtocolContext;
+                                                      ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:82: error: package org.picketlink.identity.federation.core.saml.v1.writers does not exist
+import org.picketlink.identity.federation.core.saml.v1.writers.SAML11ResponseWriter;
+                                                              ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:83: error: package org.picketlink.identity.federation.core.saml.v2.common does not exist
+import org.picketlink.identity.federation.core.saml.v2.common.IDGenerator;
+                                                             ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:84: error: package org.picketlink.identity.federation.core.saml.v2.common does not exist
+import org.picketlink.identity.federation.core.saml.v2.common.SAMLDocumentHolder;
+                                                             ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:85: error: package org.picketlink.identity.federation.core.saml.v2.factories does not exist
+import org.picketlink.identity.federation.core.saml.v2.factories.SAML2HandlerChainFactory;
+                                                                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:86: error: package org.picketlink.identity.federation.core.saml.v2.holders does not exist
+import org.picketlink.identity.federation.core.saml.v2.holders.IssuerInfoHolder;
+                                                              ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:87: error: package org.picketlink.identity.federation.core.saml.v2.impl does not exist
+import org.picketlink.identity.federation.core.saml.v2.impl.DefaultSAML2HandlerChainConfig;
+                                                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:88: error: package org.picketlink.identity.federation.core.saml.v2.impl does not exist
+import org.picketlink.identity.federation.core.saml.v2.impl.DefaultSAML2HandlerRequest;
+                                                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:89: error: package org.picketlink.identity.federation.core.saml.v2.impl does not exist
+import org.picketlink.identity.federation.core.saml.v2.impl.DefaultSAML2HandlerResponse;
+                                                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:90: error: package org.picketlink.identity.federation.core.saml.v2.interfaces does not exist
+import org.picketlink.identity.federation.core.saml.v2.interfaces.SAML2Handler;
+                                                                 ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:91: error: package org.picketlink.identity.federation.core.saml.v2.interfaces.SAML2Handler does not exist
+import org.picketlink.identity.federation.core.saml.v2.interfaces.SAML2Handler.HANDLER_TYPE;
+                                                                              ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:92: error: package org.picketlink.identity.federation.core.saml.v2.interfaces does not exist
+import org.picketlink.identity.federation.core.saml.v2.interfaces.SAML2HandlerChain;
+                                                                 ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:93: error: package org.picketlink.identity.federation.core.saml.v2.interfaces does not exist
+import org.picketlink.identity.federation.core.saml.v2.interfaces.SAML2HandlerChainConfig;
+                                                                 ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:94: error: package org.picketlink.identity.federation.core.saml.v2.interfaces does not exist
+import org.picketlink.identity.federation.core.saml.v2.interfaces.SAML2HandlerRequest;
+                                                                 ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:95: error: package org.picketlink.identity.federation.core.saml.v2.interfaces does not exist
+import org.picketlink.identity.federation.core.saml.v2.interfaces.SAML2HandlerResponse;
+                                                                 ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:96: error: package org.picketlink.identity.federation.core.saml.v2.util does not exist
+import org.picketlink.identity.federation.core.saml.v2.util.AssertionUtil;
+                                                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:97: error: package org.picketlink.identity.federation.core.saml.v2.util does not exist
+import org.picketlink.identity.federation.core.saml.v2.util.HandlerUtil;
+                                                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:98: error: package org.picketlink.identity.federation.core.saml.v2.util does not exist
+import org.picketlink.identity.federation.core.saml.v2.util.XMLTimeUtil;
+                                                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:99: error: package org.picketlink.identity.federation.core.sts does not exist
+import org.picketlink.identity.federation.core.sts.PicketLinkCoreSTS;
+                                                  ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:100: error: package org.picketlink.identity.federation.core.util does not exist
+import org.picketlink.identity.federation.core.util.CoreConfigUtil;
+                                                   ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:101: error: package org.picketlink.identity.federation.core.util does not exist
+import org.picketlink.identity.federation.core.util.XMLSignatureUtil;
+                                                   ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:102: error: package org.picketlink.identity.federation.core.wstrust does not exist
+import org.picketlink.identity.federation.core.wstrust.PicketLinkSTSConfiguration;
+                                                      ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:103: error: package org.picketlink.identity.federation.saml.v1.assertion does not exist
+import org.picketlink.identity.federation.saml.v1.assertion.SAML11AssertionType;
+                                                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:104: error: package org.picketlink.identity.federation.saml.v1.assertion does not exist
+import org.picketlink.identity.federation.saml.v1.assertion.SAML11AttributeStatementType;
+                                                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:105: error: package org.picketlink.identity.federation.saml.v1.assertion does not exist
+import org.picketlink.identity.federation.saml.v1.assertion.SAML11AttributeType;
+                                                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:106: error: package org.picketlink.identity.federation.saml.v1.assertion does not exist
+import org.picketlink.identity.federation.saml.v1.assertion.SAML11NameIdentifierType;
+                                                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:107: error: package org.picketlink.identity.federation.saml.v1.assertion does not exist
+import org.picketlink.identity.federation.saml.v1.assertion.SAML11SubjectType;
+                                                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:108: error: package org.picketlink.identity.federation.saml.v1.assertion.SAML11SubjectType does not exist
+import org.picketlink.identity.federation.saml.v1.assertion.SAML11SubjectType.SAML11SubjectTypeChoice;
+                                                                             ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:109: error: package org.picketlink.identity.federation.saml.v1.protocol does not exist
+import org.picketlink.identity.federation.saml.v1.protocol.SAML11ResponseType;
+                                                          ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:110: error: package org.picketlink.identity.federation.saml.v1.protocol does not exist
+import org.picketlink.identity.federation.saml.v1.protocol.SAML11StatusType;
+                                                          ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:111: error: package org.picketlink.identity.federation.saml.v2 does not exist
+import org.picketlink.identity.federation.saml.v2.SAML2Object;
+                                                 ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:112: error: package org.picketlink.identity.federation.saml.v2.metadata does not exist
+import org.picketlink.identity.federation.saml.v2.metadata.EntityDescriptorType;
+                                                          ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:113: error: package org.picketlink.identity.federation.saml.v2.metadata does not exist
+import org.picketlink.identity.federation.saml.v2.metadata.SPSSODescriptorType;
+                                                          ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:114: error: package org.picketlink.identity.federation.saml.v2.protocol does not exist
+import org.picketlink.identity.federation.saml.v2.protocol.AuthnRequestType;
+                                                          ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:115: error: package org.picketlink.identity.federation.saml.v2.protocol does not exist
+import org.picketlink.identity.federation.saml.v2.protocol.LogoutRequestType;
+                                                          ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:116: error: package org.picketlink.identity.federation.saml.v2.protocol does not exist
+import org.picketlink.identity.federation.saml.v2.protocol.RequestAbstractType;
+                                                          ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:117: error: package org.picketlink.identity.federation.saml.v2.protocol does not exist
+import org.picketlink.identity.federation.saml.v2.protocol.StatusCodeType;
+                                                          ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:118: error: package org.picketlink.identity.federation.saml.v2.protocol does not exist
+import org.picketlink.identity.federation.saml.v2.protocol.StatusResponseType;
+                                                          ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:119: error: package org.picketlink.identity.federation.saml.v2.protocol does not exist
+import org.picketlink.identity.federation.saml.v2.protocol.StatusType;
+                                                          ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:120: error: package org.picketlink.identity.federation.web.config does not exist
+import org.picketlink.identity.federation.web.config.AbstractSAMLConfigurationProvider;
+                                                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:121: error: package org.picketlink.identity.federation.web.core does not exist
+import org.picketlink.identity.federation.web.core.HTTPContext;
+                                                  ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:122: error: package org.picketlink.identity.federation.web.core does not exist
+import org.picketlink.identity.federation.web.core.IdentityParticipantStack;
+                                                  ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:123: error: package org.picketlink.identity.federation.web.core does not exist
+import org.picketlink.identity.federation.web.core.IdentityServer;
+                                                  ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:124: error: package org.picketlink.identity.federation.web.util does not exist
+import org.picketlink.identity.federation.web.util.ConfigurationUtil;
+                                                  ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:125: error: package org.picketlink.identity.federation.web.util does not exist
+import org.picketlink.identity.federation.web.util.IDPWebRequestUtil;
+                                                  ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:126: error: package org.picketlink.identity.federation.web.util.IDPWebRequestUtil does not exist
+import org.picketlink.identity.federation.web.util.IDPWebRequestUtil.WebRequestUtilHolder;
+                                                                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:127: error: package org.picketlink.identity.federation.web.util does not exist
+import org.picketlink.identity.federation.web.util.PostBindingUtil;
+                                                  ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:128: error: package org.picketlink.identity.federation.web.util does not exist
+import org.picketlink.identity.federation.web.util.RedirectBindingUtil;
+                                                  ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:129: error: package org.picketlink.identity.federation.web.util does not exist
+import org.picketlink.identity.federation.web.util.SAMLConfigurationProvider;
+                                                  ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:130: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:131: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:139: error: cannot find symbol
+public abstract class CUDAbstractIDPValve extends ValveBase {
+                                                  ^
+  symbol: class ValveBase
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDIDPWebBrowserSSOValve.java:10: error: cannot find symbol
+		Lifecycle {
+		^
+  symbol: class Lifecycle
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDIDPWebBrowserSSOValve.java:16: error: cannot find symbol
+	protected LifecycleSupport lifecycle = new LifecycleSupport(this);
+	          ^
+  symbol:   class LifecycleSupport
+  location: class CUDIDPWebBrowserSSOValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDIDPWebBrowserSSOValve.java:29: error: cannot find symbol
+	public void addLifecycleListener(LifecycleListener listener) {
+	                                 ^
+  symbol:   class LifecycleListener
+  location: class CUDIDPWebBrowserSSOValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDIDPWebBrowserSSOValve.java:37: error: cannot find symbol
+	public LifecycleListener[] findLifecycleListeners() {
+	       ^
+  symbol:   class LifecycleListener
+  location: class CUDIDPWebBrowserSSOValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDIDPWebBrowserSSOValve.java:47: error: cannot find symbol
+	public void removeLifecycleListener(LifecycleListener listener) {
+	                                    ^
+  symbol:   class LifecycleListener
+  location: class CUDIDPWebBrowserSSOValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDIDPWebBrowserSSOValve.java:60: error: cannot find symbol
+	public void start() throws LifecycleException {
+	                           ^
+  symbol:   class LifecycleException
+  location: class CUDIDPWebBrowserSSOValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDIDPWebBrowserSSOValve.java:81: error: cannot find symbol
+	public void stop() throws LifecycleException {
+	                          ^
+  symbol:   class LifecycleException
+  location: class CUDIDPWebBrowserSSOValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:141: error: cannot find symbol
+	private static final PicketLinkLogger LOGGER = PicketLinkLoggerFactory
+	                     ^
+  symbol:   class PicketLinkLogger
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:144: error: cannot find symbol
+	private static final Logger LOGGERSLF4J = LoggerFactory
+	                     ^
+  symbol:   class Logger
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:149: error: cannot find symbol
+	protected PicketLinkAuditHelper auditHelper = null;
+	          ^
+  symbol:   class PicketLinkAuditHelper
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:151: error: cannot find symbol
+	protected IDPType idpConfiguration = null;
+	          ^
+  symbol:   class IDPType
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:153: error: cannot find symbol
+	protected PicketLinkType picketLinkConfiguration = null;
+	          ^
+  symbol:   class PicketLinkType
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:155: error: cannot find symbol
+	private RoleGenerator roleGenerator = new TomcatRoleGenerator();
+	        ^
+  symbol:   class RoleGenerator
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:157: error: cannot find symbol
+	private TrustKeyManager keyManager;
+	        ^
+  symbol:   class TrustKeyManager
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:159: error: cannot find symbol
+	private transient DelegatedAttributeManager attribManager = new DelegatedAttributeManager();
+	                  ^
+  symbol:   class DelegatedAttributeManager
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:163: error: cannot find symbol
+	private transient SAML2HandlerChain chain = null;
+	                  ^
+  symbol:   class SAML2HandlerChain
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:169: error: cannot find symbol
+	protected SAMLConfigurationProvider configProvider = null;
+	          ^
+  symbol:   class SAMLConfigurationProvider
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:187: error: cannot find symbol
+	private Map<String, SPSSODescriptorType> spSSOMetadataMap = new HashMap<String, SPSSODescriptorType>();
+	                    ^
+  symbol:   class SPSSODescriptorType
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:188: error: cannot find symbol
+	private SSLAuthenticator sslAuthenticator;
+	        ^
+  symbol:   class SSLAuthenticator
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:189: error: cannot find symbol
+	private Handlers handlers;
+	        ^
+  symbol:   class Handlers
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:230: error: cannot find symbol
+			SAMLConfigurationProvider configurationProvider) {
+			^
+  symbol:   class SAMLConfigurationProvider
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:325: error: cannot find symbol
+	public PicketLinkType getConfiguration() {
+	       ^
+  symbol:   class PicketLinkType
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:329: error: cannot find symbol
+	public TrustKeyManager getKeyManager() {
+	       ^
+  symbol:   class TrustKeyManager
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:334: error: cannot find symbol
+	public void invoke(Request request, Response response) throws IOException,
+	                   ^
+  symbol:   class Request
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:334: error: cannot find symbol
+	public void invoke(Request request, Response response) throws IOException,
+	                                    ^
+  symbol:   class Response
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:335: error: cannot find symbol
+			ServletException {
+			^
+  symbol:   class ServletException
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:416: error: cannot find symbol
+	private void handleSAMLMessage(Request request, Response response)
+	                               ^
+  symbol:   class Request
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:416: error: cannot find symbol
+	private void handleSAMLMessage(Request request, Response response)
+	                                                ^
+  symbol:   class Response
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:417: error: cannot find symbol
+			throws IOException, ServletException {
+			                    ^
+  symbol:   class ServletException
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:478: error: cannot find symbol
+	private boolean hasSAML11Target(Request request) {
+	                                ^
+  symbol:   class Request
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:482: error: cannot find symbol
+	private void forwardHosted(Request request, Response response)
+	                           ^
+  symbol:   class Request
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:482: error: cannot find symbol
+	private void forwardHosted(Request request, Response response)
+	                                            ^
+  symbol:   class Response
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:483: error: cannot find symbol
+			throws ServletException, IOException {
+			       ^
+  symbol:   class ServletException
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:512: error: cannot find symbol
+	private void includeResource(ServletRequest request, Response response,
+	                             ^
+  symbol:   class ServletRequest
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:512: error: cannot find symbol
+	private void includeResource(ServletRequest request, Response response,
+	                                                     ^
+  symbol:   class Response
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:513: error: cannot find symbol
+			RequestDispatcher dispatch) throws ServletException, IOException {
+			^
+  symbol:   class RequestDispatcher
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:513: error: cannot find symbol
+			RequestDispatcher dispatch) throws ServletException, IOException {
+			                                   ^
+  symbol:   class ServletException
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:534: error: cannot find symbol
+	private void populateSessionWithSAMLParameters(Request request)
+	                                               ^
+  symbol:   class Request
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:590: error: cannot find symbol
+	private void handleUnauthorizedResponse(Request request, Response response)
+	                                        ^
+  symbol:   class Request
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:590: error: cannot find symbol
+	private void handleUnauthorizedResponse(Request request, Response response)
+	                                                         ^
+  symbol:   class Response
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:591: error: cannot find symbol
+			throws IOException, ServletException {
+			                    ^
+  symbol:   class ServletException
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:630: error: cannot find symbol
+	private void handleIsPassiveFailedResponse(Request request,
+	                                           ^
+  symbol:   class Request
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:631: error: cannot find symbol
+			Response response) throws IOException, ServletException {
+			^
+  symbol:   class Response
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:631: error: cannot find symbol
+			Response response) throws IOException, ServletException {
+			                                       ^
+  symbol:   class ServletException
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:700: error: cannot find symbol
+	private void handleLogout(Request request, Response response)
+	                          ^
+  symbol:   class Request
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:700: error: cannot find symbol
+	private void handleLogout(Request request, Response response)
+	                                           ^
+  symbol:   class Response
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:701: error: cannot find symbol
+			throws IOException, ServletException {
+			                    ^
+  symbol:   class ServletException
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:821: error: cannot find symbol
+	private boolean isUnauthorized(Response response) {
+	                               ^
+  symbol:   class Response
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:825: error: cannot find symbol
+	private boolean isIsPassiveFailed(Request request) {
+	                                  ^
+  symbol:   class Request
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:830: error: cannot find symbol
+	private void resetIsPassiveFailed(Request request) {
+	                                  ^
+  symbol:   class Request
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:834: error: cannot find symbol
+	private boolean isLogout(Request request) {
+	                         ^
+  symbol:   class Request
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:890: error: cannot find symbol
+	private Principal getUserPrincipal(Request request, Response response)
+	                                   ^
+  symbol:   class Request
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:890: error: cannot find symbol
+	private Principal getUserPrincipal(Request request, Response response)
+	                                                    ^
+  symbol:   class Response
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:891: error: cannot find symbol
+			throws IOException, ServletException {
+			                    ^
+  symbol:   class ServletException
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:920: error: cannot find symbol
+	public Principal authenticateSSL(Request request, Response response)
+	                                 ^
+  symbol:   class Request
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:920: error: cannot find symbol
+	public Principal authenticateSSL(Request request, Response response)
+	                                                  ^
+  symbol:   class Response
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:961: error: cannot find symbol
+	protected void handleSAML11(Request request, Response response)
+	                            ^
+  symbol:   class Request
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:961: error: cannot find symbol
+	protected void handleSAML11(Request request, Response response)
+	                                             ^
+  symbol:   class Response
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:962: error: cannot find symbol
+			throws ServletException, IOException {
+			       ^
+  symbol:   class ServletException
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:1042: error: cannot find symbol
+	protected void processSAMLRequestMessage(Request request, Response response)
+	                                         ^
+  symbol:   class Request
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:1042: error: cannot find symbol
+	protected void processSAMLRequestMessage(Request request, Response response)
+	                                                          ^
+  symbol:   class Response
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:1321: error: cannot find symbol
+	private PublicKey getIssuerPublicKey(Request request, String issuer)
+	                                     ^
+  symbol:   class Request
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:1322: error: cannot find symbol
+			throws ConfigurationException, ProcessingException {
+			       ^
+  symbol:   class ConfigurationException
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:1322: error: cannot find symbol
+			throws ConfigurationException, ProcessingException {
+			                               ^
+  symbol:   class ProcessingException
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:1359: error: cannot find symbol
+			throws ConfigurationException, ProcessingException {
+			       ^
+  symbol:   class ConfigurationException
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:1359: error: cannot find symbol
+			throws ConfigurationException, ProcessingException {
+			                               ^
+  symbol:   class ProcessingException
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:1378: error: cannot find symbol
+	protected void processSAMLResponseMessage(Request request, Response response)
+	                                          ^
+  symbol:   class Request
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:1378: error: cannot find symbol
+	protected void processSAMLResponseMessage(Request request, Response response)
+	                                                           ^
+  symbol:   class Response
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:1379: error: cannot find symbol
+			throws ServletException, IOException {
+			       ^
+  symbol:   class ServletException
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:1547: error: cannot find symbol
+	protected void cleanUpSessionNote(Request request) {
+	                                  ^
+  symbol:   class Request
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:1598: error: cannot find symbol
+	protected void sendErrorResponseToSP(String referrer, Response response,
+	                                                      ^
+  symbol:   class Response
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:1599: error: cannot find symbol
+			String relayState, IDPWebRequestUtil webRequestUtil)
+			                   ^
+  symbol:   class IDPWebRequestUtil
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:1600: error: cannot find symbol
+			throws ServletException, IOException, ConfigurationException {
+			       ^
+  symbol:   class ServletException
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:1600: error: cannot find symbol
+			throws ServletException, IOException, ConfigurationException {
+			                                      ^
+  symbol:   class ConfigurationException
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:1684: error: cannot find symbol
+	protected void initHandlersChain() throws LifecycleException {
+	                                          ^
+  symbol:   class LifecycleException
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:1736: error: cannot find symbol
+	protected void initKeyManager() throws LifecycleException {
+	                                       ^
+  symbol:   class LifecycleException
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:1961: error: cannot find symbol
+	protected Context getContext() {
+	          ^
+  symbol:   class Context
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:1967: error: cannot find symbol
+	protected void recycle(Response response) {
+	                       ^
+  symbol:   class Response
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:1997: error: cannot find symbol
+	protected void startPicketLink() throws LifecycleException {
+	                                        ^
+  symbol:   class LifecycleException
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:2045: error: cannot find symbol
+	private SAML11AttributeStatementType createAttributeStatement(
+	        ^
+  symbol:   class SAML11AttributeStatementType
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:2060: error: cannot find symbol
+	public void setAuditHelper(PicketLinkAuditHelper auditHelper) {
+	                           ^
+  symbol:   class PicketLinkAuditHelper
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:2102: error: cannot find symbol
+	private SSLAuthenticator getSSLAuthenticator() {
+	        ^
+  symbol:   class SSLAuthenticator
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:2130: error: cannot find symbol
+	public SAMLDocumentHolder getSAMLDocumentHolder(String samlMessage,
+	       ^
+  symbol:   class SAMLDocumentHolder
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTXMLSignatureUtil.java:44: error: package org.picketlink.common does not exist
+import org.picketlink.common.PicketLinkLogger;
+                            ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTXMLSignatureUtil.java:45: error: package org.picketlink.common does not exist
+import org.picketlink.common.PicketLinkLoggerFactory;
+                            ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTXMLSignatureUtil.java:46: error: package org.picketlink.common.constants does not exist
+import org.picketlink.common.constants.JBossSAMLURIConstants;
+                                      ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTXMLSignatureUtil.java:47: error: package org.picketlink.common.constants does not exist
+import org.picketlink.common.constants.WSTrustConstants;
+                                      ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTXMLSignatureUtil.java:48: error: package org.picketlink.common.exceptions does not exist
+import org.picketlink.common.exceptions.ProcessingException;
+                                       ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTXMLSignatureUtil.java:49: error: package org.picketlink.common.util does not exist
+import org.picketlink.common.util.DocumentUtil;
+                                 ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTXMLSignatureUtil.java:50: error: package org.picketlink.common.util does not exist
+import org.picketlink.common.util.StringUtil;
+                                 ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTXMLSignatureUtil.java:51: error: package org.picketlink.common.util does not exist
+import org.picketlink.common.util.SystemPropertiesUtil;
+                                 ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTXMLSignatureUtil.java:52: error: package org.picketlink.common.util does not exist
+import org.picketlink.common.util.TransformerUtil;
+                                 ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTXMLSignatureUtil.java:53: error: package org.picketlink.identity.federation.core.util does not exist
+import org.picketlink.identity.federation.core.util.ProvidersUtil;
+                                                   ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTXMLSignatureUtil.java:54: error: package org.picketlink.identity.federation.core.util does not exist
+import org.picketlink.identity.federation.core.util.SignatureUtilTransferObject;
+                                                   ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTXMLSignatureUtil.java:55: error: package org.picketlink.identity.xmlsec.w3.xmldsig does not exist
+import org.picketlink.identity.xmlsec.w3.xmldsig.SignatureType;
+                                                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTXMLSignatureUtil.java:56: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTXMLSignatureUtil.java:57: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTXMLSignatureUtil.java:77: error: cannot find symbol
+	private static final PicketLinkLogger LOGGER = PicketLinkLoggerFactory
+	                     ^
+  symbol:   class PicketLinkLogger
+  location: class GOSTXMLSignatureUtil
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTXMLSignatureUtil.java:80: error: cannot find symbol
+	private static final Logger LOGGERSLF4J = LoggerFactory
+	                     ^
+  symbol:   class Logger
+  location: class GOSTXMLSignatureUtil
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTXMLSignatureUtil.java:494: error: cannot find symbol
+	public static Document sign(SignatureUtilTransferObject dto)
+	                            ^
+  symbol:   class SignatureUtilTransferObject
+  location: class GOSTXMLSignatureUtil
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTXMLSignatureUtil.java:584: error: cannot find symbol
+	public static void marshall(SignatureType signature, OutputStream os)
+	                            ^
+  symbol:   class SignatureType
+  location: class GOSTXMLSignatureUtil
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTXMLSignatureUtil.java:614: error: cannot find symbol
+			String certificateString) throws ProcessingException {
+			                                 ^
+  symbol:   class ProcessingException
+  location: class GOSTXMLSignatureUtil
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:18: error: package org.picketlink.common does not exist
+import org.picketlink.common.PicketLinkLogger;
+                            ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:19: error: package org.picketlink.common does not exist
+import org.picketlink.common.PicketLinkLoggerFactory;
+                            ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:20: error: package org.picketlink.common.constants does not exist
+import org.picketlink.common.constants.JBossSAMLConstants;
+                                      ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:21: error: package org.picketlink.common.constants does not exist
+import org.picketlink.common.constants.JBossSAMLURIConstants;
+                                      ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:22: error: package org.picketlink.common.exceptions does not exist
+import org.picketlink.common.exceptions.ProcessingException;
+                                       ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:23: error: package org.picketlink.identity.federation.api.saml.v2.request does not exist
+import org.picketlink.identity.federation.api.saml.v2.request.SAML2Request;
+                                                             ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:24: error: package org.picketlink.identity.federation.api.saml.v2.response does not exist
+import org.picketlink.identity.federation.api.saml.v2.response.SAML2Response;
+                                                              ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:25: error: package org.picketlink.identity.federation.api.saml.v2.sig does not exist
+import org.picketlink.identity.federation.api.saml.v2.sig.SAML2Signature;
+                                                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:26: error: package org.picketlink.identity.federation.core.util does not exist
+import org.picketlink.identity.federation.core.util.SignatureUtilTransferObject;
+                                                   ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:27: error: package org.picketlink.identity.federation.saml.v2.protocol does not exist
+import org.picketlink.identity.federation.saml.v2.protocol.RequestAbstractType;
+                                                          ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:28: error: package org.picketlink.identity.federation.saml.v2.protocol does not exist
+import org.picketlink.identity.federation.saml.v2.protocol.ResponseType;
+                                                          ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:35: error: cannot find symbol
+ public class GOSTSAML2Signature extends SAML2Signature {
+                                         ^
+  symbol: class SAML2Signature
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:37: error: cannot find symbol
+	private static final PicketLinkLogger LOGGER = PicketLinkLoggerFactory
+	                     ^
+  symbol:   class PicketLinkLogger
+  location: class GOSTSAML2Signature
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:117: error: cannot find symbol
+	public Document sign(RequestAbstractType request, KeyPair keypair)
+	                     ^
+  symbol:   class RequestAbstractType
+  location: class GOSTSAML2Signature
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:148: error: cannot find symbol
+	public Document sign(ResponseType response, KeyPair keypair)
+	                     ^
+  symbol:   class ResponseType
+  location: class GOSTSAML2Signature
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:224: error: cannot find symbol
+	public Document sign(ResponseType response, String idValueOfAssertion,
+	                     ^
+  symbol:   class ResponseType
+  location: class GOSTSAML2Signature
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:273: error: cannot find symbol
+			throws ProcessingException {
+			       ^
+  symbol:   class ProcessingException
+  location: class GOSTSAML2Signature
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:293: error: cannot find symbol
+			throws ProcessingException {
+			       ^
+  symbol:   class ProcessingException
+  location: class GOSTSAML2Signature
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\util\CUDIDPWebRequestUtil.java:3: error: package org.picketlink.common does not exist
+import org.picketlink.common.PicketLinkLogger;
+                            ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\util\CUDIDPWebRequestUtil.java:4: error: package org.picketlink.common does not exist
+import org.picketlink.common.PicketLinkLoggerFactory;
+                            ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\util\CUDIDPWebRequestUtil.java:5: error: package org.picketlink.common.constants does not exist
+import org.picketlink.common.constants.JBossSAMLURIConstants;
+                                      ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\util\CUDIDPWebRequestUtil.java:6: error: package org.picketlink.common.exceptions does not exist
+import org.picketlink.common.exceptions.ConfigurationException;
+                                       ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\util\CUDIDPWebRequestUtil.java:7: error: package org.picketlink.common.exceptions does not exist
+import org.picketlink.common.exceptions.ProcessingException;
+                                       ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\util\CUDIDPWebRequestUtil.java:8: error: package org.picketlink.config.federation does not exist
+import org.picketlink.config.federation.IDPType;
+                                       ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\util\CUDIDPWebRequestUtil.java:9: error: package org.picketlink.identity.federation.api.saml.v2.response does not exist
+import org.picketlink.identity.federation.api.saml.v2.response.SAML2Response;
+                                                              ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\util\CUDIDPWebRequestUtil.java:10: error: package org.picketlink.identity.federation.api.saml.v2.sig does not exist
+import org.picketlink.identity.federation.api.saml.v2.sig.SAML2Signature;
+                                                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\util\CUDIDPWebRequestUtil.java:11: error: package org.picketlink.identity.federation.core.interfaces does not exist
+import org.picketlink.identity.federation.core.interfaces.TrustKeyManager;
+                                                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\util\CUDIDPWebRequestUtil.java:12: error: package org.picketlink.identity.federation.core.saml.v2.common does not exist
+import org.picketlink.identity.federation.core.saml.v2.common.IDGenerator;
+                                                             ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\util\CUDIDPWebRequestUtil.java:13: error: package org.picketlink.identity.federation.core.saml.v2.factories does not exist
+import org.picketlink.identity.federation.core.saml.v2.factories.JBossSAMLAuthnResponseFactory;
+                                                                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\util\CUDIDPWebRequestUtil.java:14: error: package org.picketlink.identity.federation.core.saml.v2.holders does not exist
+import org.picketlink.identity.federation.core.saml.v2.holders.IDPInfoHolder;
+                                                              ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\util\CUDIDPWebRequestUtil.java:15: error: package org.picketlink.identity.federation.core.saml.v2.holders does not exist
+import org.picketlink.identity.federation.core.saml.v2.holders.IssuerInfoHolder;
+                                                              ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\util\CUDIDPWebRequestUtil.java:16: error: package org.picketlink.identity.federation.core.saml.v2.holders does not exist
+import org.picketlink.identity.federation.core.saml.v2.holders.SPInfoHolder;
+                                                              ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\util\CUDIDPWebRequestUtil.java:17: error: package org.picketlink.identity.federation.saml.v2.protocol does not exist
+import org.picketlink.identity.federation.saml.v2.protocol.ResponseType;
+                                                          ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\util\CUDIDPWebRequestUtil.java:18: error: package org.picketlink.identity.federation.web.util does not exist
+import org.picketlink.identity.federation.web.util.IDPWebRequestUtil;
+                                                  ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\util\CUDIDPWebRequestUtil.java:23: error: package javax.servlet.http does not exist
+import javax.servlet.http.HttpServletRequest;
+                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\util\CUDIDPWebRequestUtil.java:32: error: cannot find symbol
+ public class CUDIDPWebRequestUtil extends IDPWebRequestUtil {
+                                           ^
+  symbol: class IDPWebRequestUtil
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\util\CUDIDPWebRequestUtil.java:38: error: cannot find symbol
+	private static final PicketLinkLogger LOGGER = PicketLinkLoggerFactory
+	                     ^
+  symbol:   class PicketLinkLogger
+  location: class CUDIDPWebRequestUtil
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\util\CUDIDPWebRequestUtil.java:41: error: cannot find symbol
+	private final TrustKeyManager keyManager;
+	              ^
+  symbol:   class TrustKeyManager
+  location: class CUDIDPWebRequestUtil
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\util\CUDIDPWebRequestUtil.java:43: error: cannot find symbol
+	public CUDIDPWebRequestUtil(HttpServletRequest request, IDPType idp,
+	                            ^
+  symbol:   class HttpServletRequest
+  location: class CUDIDPWebRequestUtil
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\util\CUDIDPWebRequestUtil.java:43: error: cannot find symbol
+	public CUDIDPWebRequestUtil(HttpServletRequest request, IDPType idp,
+	                                                        ^
+  symbol:   class IDPType
+  location: class CUDIDPWebRequestUtil
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\util\CUDIDPWebRequestUtil.java:44: error: cannot find symbol
+			TrustKeyManager keym) {
+			^
+  symbol:   class TrustKeyManager
+  location: class CUDIDPWebRequestUtil
+[search path for source files: C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java,C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java]
+[search path for class files: C:\Program Files\Java\jdk1.7.0_07\jre\lib\resources.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\rt.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\sunrsasign.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\jsse.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\jce.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\charsets.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\jfr.jar,C:\Program Files\Java\jdk1.7.0_07\jre\classes,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\access-bridge.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\ASN1P.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\asn1rt.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\commons-logging.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\cpSSL.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\dnsns.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\forms_rt.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\jaccess.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCP.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCPinst.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCPRequest.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCPRevCheck.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCPRevTools.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCPxml.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCryptoP.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\localedata.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\sunec.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\sunjce_provider.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\sunmscapi.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\sunpkcs11.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\XMLDSigRI.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\xmlsec-1.5.1.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\zipfs.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/security/Principal.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/List.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Object.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/String.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/security/AccessController.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/security/PrivilegedAction.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Class.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/ClassLoader.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/io/ByteArrayInputStream.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/io/ByteArrayOutputStream.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/io/File.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/io/FileInputStream.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/io/FileNotFoundException.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/io/IOException.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/io/InputStream.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/net/MalformedURLException.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/net/URI.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/net/URL.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/net/URLDecoder.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/security/GeneralSecurityException.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/security/PublicKey.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/security/cert/X509Certificate.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/ArrayList.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/Arrays.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/HashMap.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/Map.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/Set.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/Timer.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/TimerTask.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/concurrent/locks/Lock.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/concurrent/locks/ReentrantLock.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/org/w3c/dom/Document.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/org/w3c/dom/Node.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Boolean.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Exception.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/io/OutputStream.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/security/Key.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/security/KeyException.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/security/KeyPair.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/security/PrivateKey.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/security/Provider.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/security/cert/CertificateFactory.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/Collections.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/bind/JAXBException.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/crypto/MarshalException.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/crypto/dsig/CanonicalizationMethod.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/crypto/dsig/DigestMethod.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/crypto/dsig/Reference.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/crypto/dsig/SignatureMethod.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/crypto/dsig/SignedInfo.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/crypto/dsig/Transform.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/crypto/dsig/XMLSignature.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/crypto/dsig/XMLSignatureException.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/crypto/dsig/XMLSignatureFactory.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/crypto/dsig/dom/DOMSignContext.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/crypto/dsig/dom/DOMValidateContext.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/crypto/dsig/keyinfo/KeyInfo.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/crypto/dsig/keyinfo/KeyInfoFactory.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/crypto/dsig/keyinfo/KeyValue.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/crypto/dsig/keyinfo/X509Data.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/crypto/dsig/spec/C14NMethodParameterSpec.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/crypto/dsig/spec/TransformParameterSpec.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/namespace/QName.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/parsers/ParserConfigurationException.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/transform/Transformer.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/transform/TransformerException.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/transform/TransformerFactory.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/transform/stream/StreamResult.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/org/w3c/dom/Attr.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/org/w3c/dom/Element.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/org/w3c/dom/NamedNodeMap.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/org/w3c/dom/NodeList.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/org/xml/sax/SAXException.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/transform/TransformerFactoryConfigurationError.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/xpath/XPathException.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/io/StringWriter.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Override.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/annotation/Annotation.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Deprecated.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/SuppressWarnings.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/annotation/Target.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/annotation/ElementType.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/annotation/Retention.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/annotation/RetentionPolicy.class)]]
+Standard Doclet version 1.7.0_07
+Building tree for all the packages and classes...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTXMLSignatureUtil.java:75: warning - @author tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTXMLSignatureUtil.java:75: warning - @author tag has no arguments.
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\idp-lib\ru\spb\iac\cud\infosweb\web\init\StartupServlet.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:20: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(StartupServlet.class);
+	                                     ^
+  symbol:   variable LoggerFactory
+  location: class StartupServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:27: warning - Tag @see: reference not found: HttpServlet#HttpServlet()
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:35: warning - Tag @see: reference not found: Servlet#init(ServletConfig)
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\idp-lib\ru\spb\iac\cud\idp\items\CUDRoleGenerator.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\idp-lib\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:478: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:534: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:890: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:1321: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:2045: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:169: warning - Tag @link: reference not found: SAMLConfigurationProvider
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:478: warning - Tag @link: reference not found: Request
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:1653: warning - Tag @link: reference not found: IdentityServer
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:141: error: cannot find symbol
+	private static final PicketLinkLogger LOGGER = PicketLinkLoggerFactory
+	                                               ^
+  symbol:   variable PicketLinkLoggerFactory
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:144: error: cannot find symbol
+	private static final Logger LOGGERSLF4J = LoggerFactory
+	                                          ^
+  symbol:   variable LoggerFactory
+  location: class CUDAbstractIDPValve
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:169: warning - Tag @link: reference not found: SAMLConfigurationProvider
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:478: warning - Tag @link: reference not found: Request
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:534: warning - @return tag cannot be used in method with void return type.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:890: warning - Tag @link: reference not found: Request
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:1653: warning - Tag @link: reference not found: IdentityServer
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/annotation/Documented.class)]]
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\idp-lib\ru\spb\iac\cud\idp\valve\CUDIDPWebBrowserSSOValve.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\idp-lib\ru\spb\iac\cud\idp\valve\LocalWebUtil.html...
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/io/Serializable.class)]]
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\idp-lib\ru\spb\iac\cud\idp\valve\SecurityActions.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\idp-lib\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:117: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:148: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:179: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:224: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:292: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:313: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:37: error: cannot find symbol
+	private static final PicketLinkLogger LOGGER = PicketLinkLoggerFactory
+	                                               ^
+  symbol:   variable PicketLinkLoggerFactory
+  location: class GOSTSAML2Signature
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:117: warning - @param argument "digestMethod" is not a parameter name.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:117: warning - @param argument "signatureMethod" is not a parameter name.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:148: warning - @param argument "digestMethod" is not a parameter name.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:148: warning - @param argument "signatureMethod" is not a parameter name.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:179: warning - @param argument "response" is not a parameter name.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:179: warning - @param argument "digestMethod" is not a parameter name.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:179: warning - @param argument "signatureMethod" is not a parameter name.
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Throwable.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Error.class)]]
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\idp-lib\ru\spb\iac\cud\idp\web\sig\GOSTXMLSignatureUtil.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTXMLSignatureUtil.java:156: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTXMLSignatureUtil.java:210: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTXMLSignatureUtil.java:287: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTXMLSignatureUtil.java:440: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTXMLSignatureUtil.java:463: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTXMLSignatureUtil.java:494: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTXMLSignatureUtil.java:530: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTXMLSignatureUtil.java:613: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTXMLSignatureUtil.java:77: error: cannot find symbol
+	private static final PicketLinkLogger LOGGER = PicketLinkLoggerFactory
+	                                               ^
+  symbol:   variable PicketLinkLoggerFactory
+  location: class GOSTXMLSignatureUtil
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTXMLSignatureUtil.java:81: error: cannot find symbol
+			.getLogger(PicketLinkLogger.class);
+			           ^
+  symbol:   class PicketLinkLogger
+  location: class GOSTXMLSignatureUtil
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTXMLSignatureUtil.java:80: error: cannot find symbol
+	private static final Logger LOGGERSLF4J = LoggerFactory
+	                                          ^
+  symbol:   variable LoggerFactory
+  location: class GOSTXMLSignatureUtil
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTXMLSignatureUtil.java:210: warning - @param argument "publicKey" is not a parameter name.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTXMLSignatureUtil.java:287: warning - @param argument "publicKey" is not a parameter name.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTXMLSignatureUtil.java:414: warning - @param argument "destDocElement" is not a parameter name.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTXMLSignatureUtil.java:440: warning - @param argument "signingKey" is not a parameter name.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTXMLSignatureUtil.java:440: warning - @param argument "publicKey" is not a parameter name.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTXMLSignatureUtil.java:463: warning - @param argument "signingKey" is not a parameter name.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTXMLSignatureUtil.java:463: warning - @param argument "publicKey" is not a parameter name.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTXMLSignatureUtil.java:494: warning - @param argument "doc" is not a parameter name.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTXMLSignatureUtil.java:494: warning - @param argument "signingKey" is not a parameter name.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTXMLSignatureUtil.java:494: warning - @param argument "publicKey" is not a parameter name.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTXMLSignatureUtil.java:494: warning - @param argument "digestMethod" is not a parameter name.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTXMLSignatureUtil.java:494: warning - @param argument "signatureMethod" is not a parameter name.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTXMLSignatureUtil.java:494: warning - @param argument "referenceURI" is not a parameter name.
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\idp-lib\ru\spb\iac\cud\idp\web\sig\SecurityActions.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\SecurityActions.java:52: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\SecurityActions.java:84: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\SecurityActions.java:124: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\SecurityActions.java:149: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\SecurityActions.java:169: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\SecurityActions.java:124: warning - @param argument "defaultValue" is not a parameter name.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\sig\SecurityActions.java:124: warning - @return tag cannot be used in method with void return type.
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\idp-lib\ru\spb\iac\cud\idp\web\util\CUDIDPWebRequestUtil.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\util\CUDIDPWebRequestUtil.java:60: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\web\util\CUDIDPWebRequestUtil.java:38: error: cannot find symbol
+	private static final PicketLinkLogger LOGGER = PicketLinkLoggerFactory
+	                                               ^
+  symbol:   variable PicketLinkLoggerFactory
+  location: class CUDIDPWebRequestUtil
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\idp-lib\overview-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\idp-lib\ru\spb\iac\cud\idp\items\package-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\idp-lib\ru\spb\iac\cud\idp\items\package-summary.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\idp-lib\ru\spb\iac\cud\idp\items\package-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\idp-lib\ru\spb\iac\cud\idp\valve\package-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\idp-lib\ru\spb\iac\cud\idp\valve\package-summary.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\idp-lib\ru\spb\iac\cud\idp\valve\package-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\idp-lib\ru\spb\iac\cud\idp\web\sig\package-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\idp-lib\ru\spb\iac\cud\idp\web\sig\package-summary.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\idp-lib\ru\spb\iac\cud\idp\web\sig\package-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\idp-lib\ru\spb\iac\cud\idp\web\util\package-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\idp-lib\ru\spb\iac\cud\idp\web\util\package-summary.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\idp-lib\ru\spb\iac\cud\idp\web\util\package-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\idp-lib\ru\spb\iac\cud\infosweb\web\init\package-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\idp-lib\ru\spb\iac\cud\infosweb\web\init\package-summary.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\idp-lib\ru\spb\iac\cud\infosweb\web\init\package-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\idp-lib\constant-values.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\idp-lib\src-html\ru\spb\iac\cud\infosweb\web\init\StartupServlet.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\idp-lib\src-html\ru\spb\iac\cud\idp\items\CUDRoleGenerator.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\idp-lib\src-html\ru\spb\iac\cud\idp\valve\SecurityActions.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\idp-lib\src-html\ru\spb\iac\cud\idp\valve\LocalWebUtil.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\idp-lib\src-html\ru\spb\iac\cud\idp\valve\CUDIDPWebBrowserSSOValve.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\idp-lib\src-html\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\idp-lib\src-html\ru\spb\iac\cud\idp\web\sig\SecurityActions.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\idp-lib\src-html\ru\spb\iac\cud\idp\web\sig\GOSTXMLSignatureUtil.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\idp-lib\src-html\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\idp-lib\src-html\ru\spb\iac\cud\idp\web\util\CUDIDPWebRequestUtil.html...
+Building index for all the packages and classes...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\idp-lib\overview-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\idp-lib\index-all.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:169: warning - Tag @link: reference not found: SAMLConfigurationProvider
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:478: warning - Tag @link: reference not found: Request
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\idp-lib\src\main\java\ru\spb\iac\cud\idp\valve\CUDAbstractIDPValve.java:1653: warning - Tag @link: reference not found: IdentityServer
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\idp-lib\deprecated-list.html...
+Building index for all classes...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\idp-lib\allclasses-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\idp-lib\allclasses-noframe.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\idp-lib\index.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\idp-lib\overview-summary.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\idp-lib\help-doc.html...
+[done in 2443 ms]
+8 errors
+329 warnings
