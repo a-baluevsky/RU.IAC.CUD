@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pages login-view-id="/welcome.xhtml" no-conversation-view-id="/main.xhtml"
+	xmlns="http://jboss.com/products/seam/pages" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://jboss.com/products/seam/pages http://jboss.com/products/seam/pages-2.2.xsd">
+	<!--page view-id="*"> <navigation> <rule if-outcome="home"> <redirect view-id="/home.xhtml"/> 
+		</rule> </navigation> </page -->
+	<!--page view-id="/welcome.xhtml"> <param name="returnUrl" value="#{externalAuthenticator.returnUrl}" 
+		/> </page -->
+
+	<page view-id="*">
+		<!--navigation from-action="#{authenticator.localLogout}"> <redirect view-id="/welcome.xhtml"/> 
+			</navigation -->
+	</page>
+
+	<page login-required="true" view-id="/context_pro/*" />
+	<page login-required="true" view-id="/main.xhtml" />
+	<page login-required="true" view-id="/notFound.xhtml" />
+	<!--page login-required="true" view-id="/context_pro/audit/ufms/ufms_pre_list.xhtml"> 
+		<restrict>#{authenticator.access('006')}</restrict> </page -->
+	<page login-required="true" view-id="/context_pro/audit/ufms/ufms_list.xhtml">
+		<restrict>#{authenticator.access('006')}</restrict>
+		<action execute="#{auditDataModel.filterAction}" />
+	</page>
+	<page login-required="true" view-id="/context_pro/audit/ufms/ufms_search.xhtml">
+		<restrict>#{authenticator.access('0062')}</restrict>
+		<action execute="#{auditSearchDataModel.filterAction}" />
+	</page>
+	<page login-required="true" view-id="/context_pro/audit/ufms/reports.xhtml">
+		<restrict>#{authenticator.access('0063')}</restrict>
+	</page>
+	<page login-required="true" view-id="/context_pro/audit/zags/list.xhtml">
+		<restrict>#{authenticator.access('007')}</restrict>
+		<action execute="#{auditZagsDataModel.filterAction}" />
+	</page>
+	<page login-required="true" view-id="/context_pro/audit/zags/search.xhtml">
+		<restrict>#{authenticator.access('0072')}</restrict>
+		<action execute="#{auditZagsSearchDataModel.filterAction}" />
+	</page>
+	<page login-required="true" view-id="/context_pro/audit/zags/reports.xhtml">
+		<restrict>#{authenticator.access('0073')}</restrict>
+	</page>
+	<page login-required="true" view-id="/error_perm.xhtml" />
+	<page view-id="/error.xhtml" />
+
+	<!--page view-id="/context_pro/mc/org/org_list.xhtml"> <restrict>#{authenticator.access2(param['actSectIdRes'])}</restrict> 
+		</page> <page view-id="/context_pro/mc/usr/usr_list.xhtml"> <restrict>#{authenticator.access2(param['actSectIdRes'])}</restrict> 
+		</page -->
+
+	<!--page view-id="/context_pro/mc/org/org_list.xhtml"> <restrict>#{authenticator.access('001')}</restrict> 
+		<action execute="#{orgDataModel.filterAction}"/> </page -->
+	<page view-id="/context_pro/mc/clorg/clorg_list.xhtml">
+		<restrict>#{authenticator.access('001')}</restrict>
+		<action execute="#{clOrgDataModel.filterAction}" />
+	</page>
+	<page view-id="/context_pro/mc/usr/usr_list.xhtml">
+		<restrict>#{authenticator.access('002')}</restrict>
+		<action execute="#{usrDataModel.filterAction}" />
+	</page>
+	<page view-id="/context_pro/mc/clusr/clusr_list.xhtml">
+		<restrict>#{authenticator.access('0022')}</restrict>
+		<action execute="#{clUsrDataModel.filterAction}" />
+	</page>
+	<page view-id="/context_pro/mc/res/res_list.xhtml">
+		<restrict>#{authenticator.access('003') and
+			currentUser.idUser==linksMap.superUserCode}
+		</restrict>
+	</page>
+	<page view-id="/context_pro/mc/arm/arm_list.xhtml">
+		<restrict>#{authenticator.access('004')}</restrict>
+		<action execute="#{armDataModel.filterAction}" />
+		<action execute="#{armUsrDataModel.filterAction}" />
+	</page>
+	<page view-id="/context_pro/mc/armsub/list.xhtml">
+		<restrict>#{authenticator.access('urn_access_subsystems')}</restrict>
+		<action execute="#{armSubDataModel.filterAction}" />
+	</page>
+	<page view-id="/context_pro/mc/armgroup/list.xhtml">
+		<restrict>#{authenticator.access('urn_armgroup')}</restrict>
+		<action execute="#{armGroupDataModel.filterAction}" />
+	</page>
+	<page view-id="/context_pro/mc/rol/rol_list.xhtml">
+		<restrict>#{authenticator.access('005')}</restrict>
+		<action execute="#{rolDataModel.filterAction}" />
+		<action execute="#{rolUsrDataModel.filterAction}" />
+	</page>
+	<page view-id="/context_pro/mc/perm/perm_list.xhtml">
+		<restrict>#{authenticator.access('011')}</restrict>
+		<action execute="#{permDataModel.filterAction}" />
+	</page>
+	<page view-id="/context_pro/mc/audit/func/func_list.xhtml">
+		<restrict>#{authenticator.access('urn_part_audit_func')}</restrict>
+		<action execute="#{aFuncDataModel.filterAction}" />
+	</page>
+	<page view-id="/context_pro/mc/audit/sys/sys_list.xhtml">
+		<restrict>#{authenticator.access('urn_part_audit_sys')}</restrict>
+		<action execute="#{aSysDataModel.filterAction}" />
+	</page>
+	<page view-id="/context_pro/mc/audit/report/list.xhtml">
+		<restrict>#{authenticator.access('urn_part_audit_report')}</restrict>
+	</page>
+	<page view-id="/context_pro/mc/cpar/cpar_list.xhtml">
+		<restrict>#{authenticator.access('urn_conf_param')}</restrict>
+		<action execute="#{cparDataModel.filterAction}" />
+	</page>
+	<page view-id="/context_pro/mc/ugroup/ugroup_list.xhtml">
+		<restrict>#{authenticator.access('urn_ugroup')}</restrict>
+		<action execute="#{ugroupDataModel.filterAction}" />
+		<action execute="#{ugroupUsrDataModel.filterAction}" />
+	</page>
+
+	<page login-required="true" view-id="/context_pro/proc/archASys.xhtml">
+		<action execute="#{procArchASysSettingsManager.init}" />
+		<restrict>#{authenticator.access('urn_proc_audit_sys')}</restrict>
+	</page>
+	<page login-required="true" view-id="/context_pro/proc/archAFunc.xhtml">
+		<action execute="#{procArchAFuncSettingsManager.init}" />
+		<restrict>#{authenticator.access('urn_proc_audit_func')}</restrict>
+	</page>
+	<page login-required="true" view-id="/context_pro/proc/archToken.xhtml">
+		<action execute="#{procArchTokenSettingsManager.init}" />
+		<restrict>#{authenticator.access('urn_proc_token')}</restrict>
+	</page>
+	<page login-required="true" view-id="/context_pro/proc/bindUnBind.xhtml">
+		<action execute="#{procBindUnBindSettingsManager.init}" />
+		<restrict>#{authenticator.access('urn_proc_bind_unbind')}</restrict>
+	</page>
+	<page login-required="true" view-id="/context_pro/proc/bindNoAct.xhtml">
+		<action execute="#{procBindNoActSettingsManager.init}" />
+		<restrict>#{authenticator.access('urn_proc_bind_noact')}</restrict>
+	</page>
+
+	<page login-required="true"
+		view-id="/context_pro/services/binding/usr_list.xhtml">
+		<restrict>#{authenticator.access('urn_services_binding_OGK')}</restrict>
+		<action execute="#{bindDataModel.filterAction}" />
+	</page>
+	<page login-required="true" view-id="/context_pro/services/rebinding/list.xhtml">
+		<restrict>#{authenticator.access('urn_services_rebinding_OGK')}</restrict>
+		<action execute="#{rebindDataModel.filterAction}" />
+	</page>
+
+	<page login-required="true" view-id="/context_pro/app/system/list.xhtml">
+		<restrict>#{authenticator.access('urn_app_system')}</restrict>
+		<action execute="#{appSystemDataModel.filterAction}" />
+	</page>
+	<page login-required="true" view-id="/context_pro/app/user/list.xhtml">
+		<restrict>#{authenticator.access('urn_app_user')}</restrict>
+		<action execute="#{appUserDataModel.filterAction}" />
+	</page>
+	<page login-required="true" view-id="/context_pro/app/access/list.xhtml">
+		<restrict>#{authenticator.access('urn_app_access')}</restrict>
+		<action execute="#{appAccessDataModel.filterAction}" />
+	</page>
+	<page login-required="true" view-id="/context_pro/app/block/list.xhtml">
+		<restrict>#{authenticator.access('urn_app_block')}</restrict>
+		<action execute="#{appBlockDataModel.filterAction}" />
+	</page>
+	<page login-required="true" view-id="/context_pro/app/system_modify/list.xhtml">
+		<restrict>#{authenticator.access('urn_app_system_modify')}</restrict>
+		<action execute="#{appSystemModifyDataModel.filterAction}" />
+	</page>
+	<page login-required="true" view-id="/context_pro/app/user_modify/list.xhtml">
+		<restrict>#{authenticator.access('urn_app_user_modify')}</restrict>
+		<action execute="#{appUserModifyDataModel.filterAction}" />
+	</page>
+	<page login-required="true" view-id="/context_pro/app/user_acc_modify/list.xhtml">
+		<restrict>#{authenticator.access('urn_app_user_acc_modify')}</restrict>
+		<action execute="#{appUserAccModifyDataModel.filterAction}" />
+	</page>
+	<page login-required="true"
+		view-id="/context_pro/app/user_cert_modify/list.xhtml">
+		<restrict>#{authenticator.access('urn_app_user_cert_modify')}</restrict>
+		<action execute="#{appUserCertModifyDataModel.filterAction}" />
+	</page>
+	<page login-required="true" view-id="/context_pro/app/user_dep_modify/list.xhtml">
+		<restrict>#{authenticator.access('urn_app_user_dep_modify')}</restrict>
+		<action execute="#{appUserDepModifyDataModel.filterAction}" />
+	</page>
+	<page login-required="true" view-id="/context_pro/app/admin_sys/list.xhtml">
+		<restrict>#{authenticator.access('urn_app_admin_sys')}</restrict>
+		<action execute="#{appAdminSysDataModel.filterAction}" />
+	</page>
+	<page login-required="true" view-id="/context_pro/app/org_man/list.xhtml">
+		<restrict>#{authenticator.access('urn_app_org_man')}</restrict>
+		<action execute="#{appOrgManDataModel.filterAction}" />
+	</page>
+
+	<page login-required="true" view-id="/context_pro/appmy/system/list.xhtml">
+		<!--restrict>#{authenticator.access('urn_appmy_system')}</restrict -->
+		<action execute="#{appMySystemDataModel.filterAction}" />
+	</page>
+	<page login-required="true" view-id="/context_pro/appmy/user/list.xhtml">
+		<!--restrict>#{authenticator.access('urn_appmy_user')}</restrict -->
+		<action execute="#{appMyUserDataModel.filterAction}" />
+	</page>
+	<page login-required="true" view-id="/context_pro/appmy/block/list.xhtml">
+		<!--restrict>#{authenticator.access('urn_appmy_block')}</restrict -->
+		<action execute="#{appMyBlockDataModel.filterAction}" />
+	</page>
+	<page login-required="true" view-id="/context_pro/appmy/user_modify/list.xhtml">
+		<!--restrict>#{authenticator.access('urn_appmy_user_modify')}</restrict -->
+		<action execute="#{appMyUserModifyDataModel.filterAction}" />
+	</page>
+	<page login-required="true"
+		view-id="/context_pro/appmy/user_acc_modify/list.xhtml">
+		<!--restrict>#{authenticator.access('urn_appmy_user_acc_modify')}</restrict -->
+		<action execute="#{appMyUserAccModifyDataModel.filterAction}" />
+	</page>
+	<page login-required="true"
+		view-id="/context_pro/appmy/user_cert_modify/list.xhtml">
+		<!--restrict>#{authenticator.access('urn_appmy_user_cert_modify')}</restrict -->
+		<action execute="#{appMyUserCertModifyDataModel.filterAction}" />
+	</page>
+
+	<!--page login-required="true" view-id="/context_pro/repos/instr.xhtml"> 
+		<restrict>#{authenticator.access('008')}</restrict> <action execute="#{reposDataModel.filterAction}"/> 
+		</page> <page login-required="true" view-id="/context_pro/repos/law.xhtml"> 
+		<restrict>#{authenticator.access('0082')}</restrict> <action execute="#{reposDataModel.filterAction}"/> 
+		</page> <page login-required="true" view-id="/context_pro/repos/regl.xhtml"> 
+		<restrict>#{authenticator.access('0083')}</restrict> <action execute="#{reposDataModel.filterAction}"/> 
+		</page> <page login-required="true" view-id="/context_pro/repos/met.xhtml"> 
+		<restrict>#{authenticator.access('0084')}</restrict> <action execute="#{reposDataModel.filterAction}"/> 
+		</page -->
+	<page login-required="true" view-id="/context_pro/repos/repos.xhtml">
+		<restrict>#{authenticator.access(param['actSectItem'])}</restrict>
+		<action execute="#{reposDataModel.filterAction}" />
+	</page>
+
+	<page login-required="true" view-id="/context_pro/conf/hosts.xhtml">
+		<restrict>#{authenticator.access('0033')}</restrict>
+		<action execute="#{hostsDataModel.filterAction}" />
+	</page>
+
+	<page view-id="/public.xhtml">
+		<action execute="#{identity.login}" />
+		<navigation from-action="#{identity.login}">
+			<rule if="#{identity.loggedIn}">
+				<redirect view-id="/main.xhtml" />
+				<!--redirect view-id="/context_pro/mc/usr/usr_list.seam?actSect=3&amp;actSectItem=002" /-->
+			</rule>
+			<rule if="#{!identity.loggedIn}">
+				<redirect view-id="/welcome.xhtml" />
+			</rule>
+		</navigation>
+	</page>
+
+	<page view-id="/login_obo.xhtml">
+		<action execute="#{authenticator.cudAuthOBO}" />
+		<action execute="#{identity.login}" />
+		<navigation from-action="#{identity.login}">
+			<!--navigation from-action="#{authenticator.cudAuthOBO}" -->
+			<rule if="#{identity.loggedIn}">
+				<redirect view-id="/main.xhtml" />
+			</rule>
+			<rule if="#{!identity.loggedIn}">
+				<redirect view-id="/welcome.xhtml" />
+			</rule>
+		</navigation>
+		<!--navigation from-action="#{authenticator.cudAuthOBO}"> <rule if="#{authenticator.resultAuthOBO}"> 
+			<redirect view-id="/main.xhtml"/> </rule> <rule if="#{!authenticator.resultAuthOBO}"> 
+			<redirect view-id="/welcome.xhtml"/> </rule> </navigation -->
+	</page>
+
+    <page view-id="/login_direct.xhtml">
+		<action execute="#{authenticator.cudAuth}" />
+		
+	</page>
+	
+	<exception class="org.jboss.seam.framework.EntityNotFoundException">
+		<redirect view-id="/error.xhtml">
+			<message severity="warn">Record not found</message>
+		</redirect>
+	</exception>
+	<exception class="javax.persistence.EntityNotFoundException">
+		<redirect view-id="/error.xhtml">
+			<message severity="warn">Record not found</message>
+		</redirect>
+	</exception>
+	<exception class="javax.persistence.EntityExistsException">
+		<redirect view-id="/error.xhtml">
+			<message severity="warn">Duplicate record</message>
+		</redirect>
+	</exception>
+	<exception class="javax.persistence.OptimisticLockException">
+		<end-conversation />
+		<redirect view-id="/error.xhtml">
+			<message severity="warn">Another user changed the same data, please try again</message>
+		</redirect>
+	</exception>
+	<exception class="org.jboss.seam.security.AuthorizationException">
+		<redirect view-id="#{linksMap.getLink('_errorPerm_')}">
+			<message severity="error">You don't have permission to access this resource</message>
+		</redirect>
+	</exception>
+	<exception class="org.jboss.seam.security.NotLoggedInException">
+		<redirect view-id="/welcome.xhtml">
+			<message severity="warn">#{messages['org.jboss.seam.NotLoggedIn']}</message>
+		</redirect>
+	</exception>
+	<exception class="javax.faces.application.ViewExpiredException">
+		<redirect view-id="/welcome.xhtml">
+			<message severity="warn">Сессия завершена по таймауту</message>
+		</redirect>
+	</exception>
+	<exception class="org.jboss.seam.ConcurrentRequestTimeoutException"
+		log-level="trace">
+		<http-error error-code="503" />
+	</exception>
+	<exception>
+		<redirect view-id="/error.xhtml">
+			<message severity="error">Ошибка</message>
+		</redirect>
+	</exception>
+</pages>

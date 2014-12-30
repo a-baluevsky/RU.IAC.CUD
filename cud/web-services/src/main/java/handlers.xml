@@ -1,0 +1,23 @@
+<handler-chains xmlns="http://java.sun.com/xml/ns/javaee">
+	<handler-chain>
+
+		<handler>
+			<handler-name>WSAuthenticationHandler</handler-name>
+			<handler-class>org.picketlink.trust.jbossws.handler.WSAuthenticationHandler</handler-class>
+		</handler>
+		<!--handler> <handler-name>SAML2Handler</handler-name> <handler-class>org.picketlink.trust.jbossws.handler.SAML2Handler</handler-class> 
+			</handler -->
+		<handler>
+			<handler-name>CUDSAML2Handler</handler-name>
+			<handler-class>ru.spb.iac.cud.services.handlers.CUDSAML2Handler</handler-class>
+		</handler>
+		<handler>
+			<handler-name>AppSOAPHandler</handler-name>
+			<handler-class>ru.spb.iac.cud.services.handlers.AppSOAPHandler</handler-class>
+		</handler>
+		<handler>
+			<handler-name>SignValidateSOAPHandler</handler-name>
+			<handler-class>ru.spb.iac.cud.services.handlers.SignValidateSOAPHandler</handler-class>
+		</handler>
+	</handler-chain>
+</handler-chains>

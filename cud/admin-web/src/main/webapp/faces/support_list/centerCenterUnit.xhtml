@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='windows-1251' ?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:s="http://jboss.com/products/seam/taglib"
+	xmlns:c="http://java.sun.com/jstl/core">
+
+	<h3 class="ui-widget-header">Сообщения в службу поддержки</h3>
+
+	<div class="ui-layout-content">
+
+		<a4j:outputPanel id="outCenterCenter">
+
+			<rich:dataTable id="supp_dt" style="width:100%" var="it"
+				value="#{supportManager.supportUserList}"
+				rows="#{profile.rowsCountSupport}">
+				<rich:column>
+					<f:facet name="header">
+						<h:outputText value="Дата сообщения" />
+					</f:facet>
+					<h:outputText value="#{it.created}">
+						<s:convertDateTime pattern="dd.MM.yy HH:mm" />
+					</h:outputText>
+				</rich:column>
+				<rich:column>
+					<f:facet name="header">
+						<h:panelGroup>
+							<h:outputText value="Автор:" />
+							<h:selectOneMenu
+								value="#{supportStateHolder.getColumnFilterValues('supportList')['author']}"
+								style="margin-left:10px;width:170px;">
+								<f:selectItem itemLabel="Все" itemValue="#-1#" />
+								<f:selectItem itemLabel="#{currentUser.fio}"
+									itemValue="#{currentUser.idUser}" />
+								<a4j:support action="#{supportManager.filterAction}"
+									event="onchange" ajaxSingle="true" ignoreDupResponses="true"
+									reRender="outCenterCenter, outCenterCenterFooter" />
+							</h:selectOneMenu>
+						</h:panelGroup>
+					</f:facet>
+					<h:outputText value="#{it.crtUser.fio}" />
+				</rich:column>
+				<rich:column>
+					<f:facet name="header">
+						<h:outputText value="Сообщение" />
+					</f:facet>
+					<h:outputText value="#{it.message}" />
+				</rich:column>
+				<rich:column>
+					<f:facet name="header">
+						<h:outputText value="Дата выполнения" />
+					</f:facet>
+					<h:outputText value="#{it.doneDate}">
+						<s:convertDateTime pattern="dd.MM.yy HH:mm" />
+					</h:outputText>
+				</rich:column>
+				<rich:column>
+					<f:facet name="header">
+						<h:outputText value="Признак выполнения" />
+					</f:facet>
+
+					<h:selectBooleanCheckbox value="#{it.isDoneValue}"
+						style="vertical-align:middle;"
+						onchange="support_status(#{it.idHelp});"
+						disabled="#{it.creator!=currentUser.idUser}" />
+				</rich:column>
+			</rich:dataTable>
+		</a4j:outputPanel>
+
+	</div>
+
+	<div class="ui-widget-footer" style="background: #E6E6E6;">
+
+		<a4j:outputPanel id="outCenterCenterFooter">
+
+			<table>
+				<tr>
+					<td>
+						<table style="width: 95%" border="0">
+							<tr>
+								<td width="40px;"><h:outputText value="Строк:" /></td>
+								<td width="50px;"><rich:inputNumberSpinner
+										value="#{profile.rowsCountSupport}" inputSize="1" id="rowCId"
+										minValue="5" enableManualInput="false"
+										oninputkeypress="return false;" /></td>
+								<td width="20px;"><a4j:commandLink
+										reRender="outCenterCenter,outCenterCenterFooter"
+										ajaxSingle="true" process="rowCId">
+										<h:graphicImage url="/img/icons/Da.gif"
+											styleClass="img-in-link" height="14" width="14" />
+									</a4j:commandLink></td>
+								<td><rich:datascroller align="center" for="supp_dt"
+										maxPages="5" stepControls="hide" id="doc_dt_dscr"
+										immediate="true" renderIfSinglePage="false"
+										reRender="outCenterCenter" ajaxSingle="true">
+									</rich:datascroller></td>
+							</tr>
+						</table>
+
+					</td>
+					<td height="25px;"><h:outputText value="&amp;nbsp;"
+							escape="false" /></td>
+				</tr>
+			</table>
+		</a4j:outputPanel>
+	</div>
+	<SCRIPT type="text/javascript">
+ //<![CDATA[
+   //]]>
+ </SCRIPT>
+</ui:composition>

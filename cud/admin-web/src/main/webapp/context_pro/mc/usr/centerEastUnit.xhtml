@@ -1,0 +1,336 @@
+<?xml version='1.0' encoding='windows-1251' ?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:s="http://jboss.com/products/seam/taglib"
+	xmlns:c="http://java.sun.com/jstl/core">
+
+	<h3 class="ui-widget-header">Каталог долговременного хранения</h3>
+
+	<div class="ui-widget-header" style="background: #E6E6E6;">
+
+		<a4j:outputPanel id="outCenterEastHeader">
+
+			<!--s:div rendered="#{param['remoteAudit']!=null}"-->
+
+
+			<a4j:jsFunction name="invokeToWork"
+				reRender="outCenterCenter, outCenterEastHeader,outCenterCenterHeader"
+				action="#{servCatalogManager.toWork}" ajaxSingle="true"
+				oncomplete="numFiles='';">
+				<f:param name="idDir" />
+				<f:param name="numFiles" />
+				<f:param name="idRai" value="#{param['idRai']}" />
+				<f:param name="remoteAudit" value="toWorkFact" />
+			</a4j:jsFunction>
+			<a4j:jsFunction name="invokeDeleteArchive"
+				reRender="outCenterEastHeader, outCenterEast"
+				action="#{servCatalogManager.deleteArchive}" ajaxSingle="true"
+				oncomplete="numFiles='';">
+				<f:param name="idDir" />
+				<f:param name="numFiles" />
+				<f:param name="idRai" value="#{param['idRai']}" />
+				<f:param name="remoteAudit" value="deleteArchiveFact" />
+			</a4j:jsFunction>
+			<table style="width: 100%" border="0">
+				<tr align="center">
+					<td style="width: 99%"><s:div
+							rendered="#{param['remoteAudit']!=null}">
+							<!--h:form-->
+							<table style="width: 200px" border="0">
+								<tr>
+									<td width="100px"><a4j:commandButton style="width:80px;"
+											value="Копировать" styleClass="but_class"
+											onclick="before_submit(); if(#{not empty servCatalogManager.listWork}) {alert ('В рабочем каталоге уже содержатся файлы!');}else{ if(idDir==-1||numFiles==''){alert('Файлы не выбраны!');}else{ invokeToWork(idDir, numFiles);}} return false;"
+											disabled="#{1==0}">
+										</a4j:commandButton></td>
+									<td width="100px"><a4j:commandButton style="width:80px;"
+											value="Удалить" styleClass="but_class"
+											onclick="before_submit_delete(); return false;"
+											disabled="#{1==0}">
+										</a4j:commandButton></td>
+								</tr>
+							</table>
+							<!--/h:form-->
+						</s:div></td>
+					<td height="25px;" style="width: 1px"><h:outputText
+							value="&amp;nbsp;" escape="false" /></td>
+				</tr>
+			</table>
+
+			<!--/s:div-->
+
+		</a4j:outputPanel>
+	</div>
+
+	<div class="ui-layout-content">
+
+		<!--div style="padding:0px 10px 10px 10px;"-->
+		<a4j:outputPanel id="outCenterEast">
+
+			<s:div rendered="#{servCatalogManager.evaluteForListArchive}">
+
+				<!--s:div rendered="#{servCatalogDataModel.rowCount==0}">
+          <h:outputText value=" Записи отсутствуют!"/>
+      </s:div-->
+
+
+
+				<table id="oCETableId" style="width: 100%; font-size: 13px;"
+					border="0">
+					<tr style="background-color: #ECF4FE" height="20px">
+						<td colspan="2">
+							<div style="padding-left: 10px;">
+								<h:outputText value="Название" />
+							</div>
+						</td>
+						<td width="20%" style="border-left: 1px solid black">
+							<div style="padding-left: 10px;">
+								<h:outputText value="Сеанс" />
+							</div>
+						</td>
+					</tr>
+					<a4j:repeat id="rep1" var="it"
+						value="#{servCatalogManager.listArchive}" rowKeyVar="rkv">
+						<!--c:forEach items="#{servCatalogManager.listArchive}" var="it"-->
+						<tr>
+							<td colspan="2">
+								<div style="margin-top: 10px; padding-left: 10px;">
+									<input type="radio" name="rest" value="#{it.dirName}"
+										style="vertical-align: middle; margin-bottom: 2px;"
+										onchange="dir_select(this.value, #{rkv});/*dir_select(this.value);*/" />
+									<!--a4j:commandLink onclick="return false;"-->
+									<h:graphicImage value="/img/icons/iconFolder.gif"
+										style="margin-bottom:3px;" styleClass="pic" alt="create_doc" />
+									<h:outputText value="#{it.dirDate}" style="color:#0090FF" />
+									<!--/a4j:commandLink-->
+								</div>
+							</td>
+							<td>
+								<div style="margin-top: 10px;">
+									<h:outputText value="#{it.numSess}" style="color:#0090FF" />
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td width="50px" />
+
+							<td id="#{it.dirName}"><a4j:repeat id="rep2" var="it2"
+									value="#{it.dirFilesName}" rowKeyVar="rkv2">
+									<!--c:forEach items="#{it.dirFilesName}" var="it2"-->
+									<!--tr id="">
+            <td width="50px" height="10px" >
+             </td>
+            <td-->
+									<!--a4j:commandLink-->
+									<h:selectBooleanCheckbox id="file_check"
+										style="vertical-align: middle;" disabled="true"
+										tabindex="#{rkv2}" />
+									<h:graphicImage value="/img/icons/iconLeaf.gif"
+										styleClass="pic" alt="create_doc" />
+									<h:outputText value="#{it2.fileName}" />
+
+									<h:outputText value=" [#{it2.fileSize}Кб]"
+										style="color:#bbbbbb;" />
+									<!--/a4j:commandLink-->
+									<br />
+									<!--/td>
+          </tr-->
+									<!--/c:forEach-->
+								</a4j:repeat></td>
+							<td width="20%" />
+						</tr>
+						<!--/c:forEach>
+          </a4j:repeat-->
+					</a4j:repeat>
+				</table>
+
+				<s:div rendered="#{servCatalogManager.connectError!=0}">
+					<h:messages style="color:red" globalOnly="true" />
+				</s:div>
+			</s:div>
+		</a4j:outputPanel>
+
+		<!--/div-->
+	</div>
+
+	<div class="ui-widget-footer" style="background: #E6E6E6;">
+		<a4j:outputPanel id="outCenterEastFooter">
+
+			<!--s:div rendered="#{param['remoteAudit']!=null}"-->
+
+
+			<a4j:jsFunction name="invokeToTechTable"
+				action="#{servCatalogManager.toTechTable}" ajaxSingle="true"
+				reRender="outCenterEastMPFooter"
+				oncomplete="numFiles=''; #{rich:component('CEMpLoadMess')}.show(); /*alert('#{servCatalogManager.ttResultValue}')*/">
+				<f:param name="idDir" />
+				<f:param name="numFiles" />
+				<f:param name="tableName" />
+				<f:param name="idRai" value="#{param['idRai']}" />
+				<f:param name="remoteAudit" value="toTechTableFact" />
+			</a4j:jsFunction>
+
+			<a4j:jsFunction name="invokeReportTechTable"
+				action="#{servCatalogManager.reportTechTable}" ajaxSingle="true"
+				reRender="outCenterEastMPFooter"
+				oncomplete="numFiles=''; #{rich:component('CEMpLoadMess')}.show(); /*alert('#{servCatalogManager.ttReportValue}')*/">
+				<f:param name="tableName" />
+				<f:param name="idRai" value="#{param['idRai']}" />
+				<f:param name="remoteAudit" value="reportTechTableFact" />
+			</a4j:jsFunction>
+
+			<table style="width: 99%" border="0">
+				<tr>
+					<td style="width: 140px;"><h:outputText value="Текущий срез: " />
+					</td>
+					<td style="width: 160px;"><s:div
+							rendered="#{param['remoteAudit']!=null}">
+							<!--h:form>
+            <table style="width:80px" border="0">
+             <tr>
+              <td width="80px"-->
+							<a4j:commandButton style="width:70px;" value="Загрузить"
+								styleClass="but_class"
+								onclick="before_submit(); if(idDir==-1||numFiles==''){alert('Файлы не выбраны!');}else{ invokeToTechTable(idDir, numFiles, 'table1');} return false;"
+								disabled="#{1==0}">
+							</a4j:commandButton>
+							<a4j:commandButton style="width:70px; margin-left:20px"
+								value="Результат" styleClass="but_class"
+								onclick="invokeReportTechTable('table1'); return false;"
+								disabled="#{1==0}">
+							</a4j:commandButton>
+							<!--/td>
+        
+             </tr>
+            </tabl> 
+           </h:forme-->
+						</s:div></td>
+					<td height="25px;" style="width: *;"></td>
+				</tr>
+				<tr>
+					<td style="width: 140px;"><h:outputText
+							value="Предыдущий срез: " /></td>
+					<td style="width: 160px;"><s:div
+							rendered="#{param['remoteAudit']!=null}">
+							<!--h:form>
+            <table style="width:80px" border="0">
+             <tr>
+              <td width="80px"-->
+							<a4j:commandButton style="width:70px;" value="Загрузить"
+								styleClass="but_class"
+								onclick="before_submit(); if(idDir==-1||numFiles==''){alert('Файлы не выбраны!');}else{ invokeToTechTable(idDir, numFiles, 'table2');} return false;"
+								disabled="#{1==0}">
+							</a4j:commandButton>
+							<a4j:commandButton style="width:70px; margin-left:20px"
+								value="Результат" styleClass="but_class"
+								onclick="invokeReportTechTable('table2'); return false;"
+								disabled="#{1==0}">
+							</a4j:commandButton>
+							<!--/td>
+        
+             </tr>
+            </tabl> 
+           </h:forme-->
+						</s:div></td>
+					<td height="25px;" style="width: *;"></td>
+				</tr>
+			</table>
+
+			<!--/s:div-->
+
+		</a4j:outputPanel>
+		<a4j:outputPanel id="outCenterEastMPFooter">
+			<rich:modalPanel id="CEMpLoadMess" width="250" autosized="true">
+				<f:facet name="header">
+					<h:panelGroup>
+						<h:outputText value="Cообщение" />
+					</h:panelGroup>
+				</f:facet>
+				<f:facet name="controls">
+					<h:panelGroup>
+						<h:graphicImage
+							onclick="#{rich:component('CEMpLoadMess')}.hide();"
+							value="/img/icons/close.gif" />
+					</h:panelGroup>
+				</f:facet>
+				<div style="margin: 5px;">
+					<c:if test="#{param['remoteAudit']=='toTechTableFact'}">
+						<h:outputText value="#{servCatalogManager.ttResultValue}"
+							escape="false" />
+					</c:if>
+					<c:if test="#{param['remoteAudit']=='reportTechTableFact'}">
+						<h:outputText value="#{servCatalogManager.ttReportValue}"
+							escape="false" />
+					</c:if>
+				</div>
+				<div
+					style="white-space: nowrap; text-align: center; margin-top: 5px;">
+					<a4j:commandButton value="Закрыть"
+						onclick="#{rich:component('CEMpLoadMess')}.hide();return false;"
+						styleClass="but_class" />
+				</div>
+			</rich:modalPanel>
+		</a4j:outputPanel>
+	</div>
+	<script>
+  //<![CDATA[
+   var idDir=-1;
+   var numFiles="";
+   var emptyDir=-1;
+   
+   function dir_select(tval, tind){
+
+	   idDir=tind; 
+	  
+	   jQuery("table[id='oCETableId'] td > input").attr('disabled','true');
+	   jQuery("table[id='oCETableId'] td > input").removeAttr('checked');
+	  
+	   jQuery("table[id='oCETableId'] td[id='"+tval+"'] > input").removeAttr('disabled');
+	   jQuery("table[id='oCETableId'] td[id='"+tval+"'] > input").attr('checked','true');
+
+	   var n= jQuery("table[id='oCETableId'] td[id='"+tval+"'] > input").length;
+	   if (n==0) {
+		   emptyDir=1;
+	   }else{
+		   emptyDir=-1;
+	   }	
+	};
+
+   function before_submit(){
+	   var sign = 0;
+	    jQuery("table[id='oCETableId'] td > input[type=checkbox]:checked").each(
+	 	    function() { 
+		 	    if(numFiles==""){
+		 	      numFiles=jQuery(this).attr('tabindex');	
+			 	}else{
+	 	    	  numFiles=numFiles+"_"+jQuery(this).attr('tabindex');	
+			 	}
+	 	    } 
+	    );
+   };
+   function before_submit_delete(){
+	   var sign = 0;
+	    jQuery("table[id='oCETableId'] td > input[type=checkbox]:checked").each(
+	 	    function() { 
+		 	    if(numFiles==""){
+		 	      numFiles=jQuery(this).attr('tabindex');	
+			 	}else{
+	 	    	  numFiles=numFiles+"_"+jQuery(this).attr('tabindex');	
+			 	}
+	 	    } 
+	    );
+
+	    if((emptyDir==-1) && (idDir==-1||numFiles=='')){
+		    alert('Файлы не выбраны!');
+		}else{ 
+			invokeDeleteArchive(idDir, numFiles);
+		}
+		
+   };
+ //]]> 
+ </script>
+</ui:composition>

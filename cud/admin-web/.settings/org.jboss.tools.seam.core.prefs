@@ -1,0 +1,15 @@
+action.package=org.domain.adminweb.session
+action.sources=/admin-web/src/main/java
+eclipse.preferences.version=1
+model.package=org.domain.adminweb.entity
+model.sources=/admin-web/src/main/java
+seam.ear.project=admin-web
+seam.ejb.project=admin-web
+seam.project.connection.profile=DefaultDS
+seam.project.deployment.type=ear
+seam.project.settings.version=1.1
+seam.project.web.root.folder=/admin-web/src/main/webapp
+seam.test.creating=false
+seam.test.project=admin-web
+test.package=org.domain.adminweb.test
+test.sources=/admin-web/src/main/java

@@ -1,0 +1,824 @@
+<?xml version='1.0' encoding='windows-1251' ?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:s="http://jboss.com/products/seam/taglib"
+	xmlns:c="http://java.sun.com/jstl/core">
+
+	<h3 class="ui-widget-header">Подробно</h3>
+	<div class="ui-layout-content">
+
+		<style>
+input {
+	margin: 0px;
+}
+</style>
+
+		<a4j:outputPanel id="outCenterBottom">
+
+			<table style="width: 100%;" border="0">
+				<tr>
+					<td width="90%">
+
+						<div style="margin: 5px;">
+
+							<c:if test="#{ugroupManager.evaluteForBean}">
+
+								<h:form>
+
+									<h:messages style="color:red" globalOnly="false" />
+
+									<table style="width: 100%; font-size: 12px;" border="0">
+										<c:forEach items="#{ugroupManager.auditItemsListContext}"
+											var="field">
+											<tr>
+												<td width="150px" height="25px" class="table_left_header">
+													<h:outputText value="#{field.itemLabel}" />
+												</td>
+												<td><c:choose>
+														<c:when test="#{field.itemField=='dateAction'}">
+															<h:outputText value="#{ugroupBean[field.itemField]}">
+																<s:convertDateTime pattern="dd.MM.yy HH:mm" />
+															</h:outputText>
+														</c:when>
+														<c:otherwise>
+															<h:outputText value="#{ugroupBean[field.itemField]}" />
+														</c:otherwise>
+													</c:choose></td>
+											</tr>
+										</c:forEach>
+										<tr>
+											<td width="150px" height="25px" class="table_left_header"
+												style="padding-top: 10px;" valign="top"><h:outputText
+													value="Пользователи" /></td>
+											<td style="padding-top: 10px;" valign="top">
+												<table style="width: 100%; margin-bottom: 10px;">
+													<c:forEach items="#{ugroupManager.usrSelectListForView}"
+														var="uit">
+														<tr>
+															<td height="15"><h:outputText
+																	value=" #{uit.fio}  [#{uit.login}]" /></td>
+														</tr>
+													</c:forEach>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td width="150px" height="25px" class="table_left_header"
+												style="padding-top: 10px;" valign="top"><h:outputText
+													value="Роли" /></td>
+											<td style="padding-top: 10px;" valign="top">
+												<table style="width: 100%;" border="0">
+													<!--c:forEach items="#{ugroupManager.listGroupArmForView}" var="vrecord"-->
+													<a4j:repeat var="vrecord"
+														value="#{ugroupManager.listGroupArmForView}">
+														<tr>
+															<td height="15" style="font-weight: bold;"><h:outputText
+																	value=" #{vrecord.name}:" /></td>
+														</tr>
+														<tr>
+															<td>
+																<table style="width: 100%; margin-bottom: 10px;">
+																	<!--c:forEach items="#{vrecord.rolList}" var="vit"-->
+																	<ui:repeat var="vit" value="#{vrecord.rolList}">
+																		<tr>
+																			<td height="15" style="padding-left: 30px;"><h:outputText
+																					value=" #{vit.roleTitle}" /></td>
+																		</tr>
+																	</ui:repeat>
+																	<!--/c:forEach-->
+																</table>
+															</td>
+														</tr>
+													</a4j:repeat>
+													<!--/c:forEach-->
+												</table>
+											</td>
+										</tr>
+										<!--tr>
+            <td width="150px" height="25px" class="table_left_header">
+              <h:outputText value="Создал"/>
+            </td>
+            <td>
+               <h:outputText value="#{armBean.crtUserName}"/>
+            </td>
+          </tr>
+          <tr>
+            <td width="150px" height="25px" class="table_left_header">
+              <h:outputText value="Дата создания"/>
+            </td>
+            <td>
+               <h:outputText value="#{armBean.created}">
+                  <s:convertDateTime pattern="dd.MM.yy HH:mm:ss"/>
+               </h:outputText>   
+            </td>
+          </tr>
+          <tr>
+            <td width="150px" height="25px" class="table_left_header">
+              <h:outputText value="Редактировал"/>
+            </td>
+            <td>
+               <h:outputText value="#{armBean.updUserName}"/>
+            </td>
+          </tr>
+          <tr>
+            <td width="150px" height="25px" class="table_left_header">
+              <h:outputText value="Дата редактирования"/>
+            </td>
+            <td>
+               <h:outputText value="#{armBean.modified}">
+                  <s:convertDateTime pattern="dd.MM.yy HH:mm:ss"/>
+               </h:outputText>
+            </td>
+          </tr-->
+									</table>
+								</h:form>
+							</c:if>
+						</div>
+					</td>
+					<td width="90px" valign="top">
+						<!--rich:panel style="margin:5px 5px 0 0;">
+   <f:facet name="header">
+    Действия:
+   </f:facet>
+   <a4j:form>
+     <a4j:commandButton style="width:60px;" value="Создать"
+       reRender="outCBmpCrt" ajaxSingle="true"
+       oncomplete="#{rich:component('CBmpCrt')}.show();"
+       rendered="#{authenticator.accessPerm('004','2')}"
+       styleClass="but_class">
+          <f:param name="onCreate" value="1"/>
+      </a4j:commandButton>
+    
+     <s:div rendered="#{param['idArm']!=null}">
+     
+      <a4j:commandButton style="margin-top:5px;width:60px;"
+         ajaxSingle="true" reRender="outCBmpUpd"
+         value="Изменить" action="#{armManager.forView}"
+         oncomplete="#{rich:component('CBmpUpd')}.show();"
+         rendered="#{authenticator.accessPerm('004','3')}"
+         styleClass="but_class">
+         <f:param name="onUpdate" value="1"/>
+         <f:param name="idArm" value="#{param['idArm']}"/>
+       </a4j:commandButton>
+     
+      <a4j:commandButton 
+         reRender="outCBmpDel"
+         value="Удалить" 
+         action="#{armManager.forViewDel}"
+         oncomplete="#{rich:component('CBmpDel')}.show();"
+         style="margin-top:5px;width:60px;" 
+         rendered="#{authenticator.accessPerm('004','4')}"
+         styleClass="but_class">
+         <f:param name="onDelete" value="1"/>
+         <f:param name="idArm" value="#{param['idArm']}"/>
+       </a4j:commandButton>
+     </s:div>
+    </a4j:form>
+   </rich:panel-->
+					</td>
+				</tr>
+			</table>
+
+		</a4j:outputPanel>
+	</div>
+
+	<div class="ui-widget-footer" style="background: #E6E6E6;">
+
+		<a4j:outputPanel id="outCBmpCrt">
+			<rich:modalPanel id="CBmpCrt" rendered="#{param['onCreate']!=null}"
+				width="400" autosized="true"
+				onbeforeshow="/*setHDiv('CBmpCrtUsrHDiv');sListHeight('CBformCrt', 'grus_crt');*/">
+				<f:facet name="header">
+					<h:panelGroup>
+						<h:outputText value="Группа пользователей"></h:outputText>
+					</h:panelGroup>
+				</f:facet>
+				<f:facet name="controls">
+					<h:panelGroup>
+						<h:graphicImage onclick="#{rich:component('CBmpCrt')}.hide();"
+							value="/img/icons/close.gif" />
+					</h:panelGroup>
+				</f:facet>
+				<h:form id="CBformCrt">
+					<div id="CBmpCrtUsrHDiv" style="width: 100%; overflow: auto;">
+
+						<table style="width: 95%;">
+							<tr>
+								<td width="100px" height="25px"><h:outputText
+										value="Название" /></td>
+								<td><h:inputText value="#{ugroupBeanCrt.full}" id="name"
+										maxlength="100" size="45" /></td>
+							</tr>
+							<tr>
+								<td width="100px" height="25px"><h:outputText
+										value="Описание" /></td>
+								<td><h:inputTextarea value="#{ugroupBeanCrt.description}"
+										id="descr" cols="41" rows="3" /></td>
+							</tr>
+							<!--tr>
+            <td width="100px" height="25px" valign="top">
+             <h:outputText value="Пользователи"/></td>
+            <td>
+            
+              <h:selectManyCheckbox value="#{ugroupManager.usrSelectList}" layout="pageDirection" 
+                                    id="grus_crt" style="line-height:50%;">
+                <s:selectItems value="#{ugroupManager.usrList}" 
+	                      var="n" 
+                          label="#{n.fio}  [#{n.login}]"
+                          itemValue="#{n.idUser}"/> 
+              </h:selectManyCheckbox>
+              
+            </td>
+           </tr-->
+						</table>
+					</div>
+					<table style="width: 95%;">
+						<tr>
+							<td colspan="2" align="center" height="35px"><a4j:commandButton
+									value="Отмена"
+									onclick="#{rich:component('CBmpCrt')}.hide();return false;"
+									styleClass="but_class" /> <a4j:commandButton value="Сохранить"
+									action="#{ugroupManager.addUgroup()}"
+									reRender="outCenterCenter, outCenterCenterFooter"
+									oncomplete=" #{rich:component('CBmpCrt')}.hide();"
+									onclick="if(check('CBformCrt')){return false;}"
+									styleClass="but_class">
+									<f:param name="onCreate" value="1" />
+									<f:param name="remoteAudit" value="CrtFact" />
+									<f:param
+										name="#{param['sessionId']!=null ? 'sessionId' : 'xxx1'}"
+										value="#{param['sessionId']}" />
+								</a4j:commandButton></td>
+						</tr>
+					</table>
+				</h:form>
+			</rich:modalPanel>
+		</a4j:outputPanel>
+		<a4j:outputPanel id="outCBmpUpd">
+			<rich:modalPanel id="CBmpUpd" rendered="#{param['onUpdate']!=null}"
+				width="400" autosized="true"
+				onbeforeshow="/*setHDiv('CBmpUpdUsrHDiv');sListHeight('CBformUpd', 'grus_upd');*/">
+				<f:facet name="header">
+					<h:panelGroup>
+						<h:outputText value="Группа пользователей" />
+					</h:panelGroup>
+				</f:facet>
+				<f:facet name="controls">
+					<h:panelGroup>
+						<h:graphicImage onclick="#{rich:component('CBmpUpd')}.hide();"
+							value="/img/icons/close.gif" />
+					</h:panelGroup>
+				</f:facet>
+				<h:form id="CBformUpd">
+
+					<div id="CBmpUpdUsrHDiv" style="width: 100%; overflow: auto;">
+
+						<table style="width: 95%;">
+							<tr>
+								<td width="100px" height="25px"><h:outputText
+										value="Название" /></td>
+								<td><h:inputText value="#{ugroupBean.full}" id="name"
+										maxlength="100" size="45" /></td>
+							</tr>
+							<tr>
+								<td width="100px" height="25px"><h:outputText
+										value="Описание" /></td>
+								<td><h:inputTextarea value="#{ugroupBean.description}"
+										id="descr" cols="41" rows="3" /></td>
+							</tr>
+							<!--tr>
+            <td width="100px" height="25px" valign="top">
+             <h:outputText value="Пользователи"/></td>
+             <td>
+            
+              <h:selectManyCheckbox value="#{ugroupManager.usrSelectEditList}" layout="pageDirection"
+                                    id="grus_upd" style="line-height:50%;">
+                <s:selectItems value="#{ugroupManager.usrList}" 
+	                      var="n" 
+                          label="#{n.fio}  [#{n.login}]"
+                          itemValue="#{n.idUser}"/> 
+              </h:selectManyCheckbox>
+              
+            </td>
+            </tr-->
+						</table>
+					</div>
+					<table style="width: 95%;">
+						<tr>
+							<td colspan="2" align="center" height="35px"><a4j:commandButton
+									value="Отмена"
+									onclick="#{rich:component('CBmpUpd')}.hide();return false;"
+									styleClass="but_class" /> <a4j:commandButton value="Сохранить"
+									action="#{ugroupManager.updUgroup}"
+									reRender="outCenterCenter, outCenterBottom"
+									oncomplete=" #{rich:component('CBmpUpd')}.hide();"
+									onclick="if(check('CBformUpd')){return false;}"
+									styleClass="but_class">
+									<f:param name="onUpdate" value="1" />
+									<f:param name="remoteAudit" value="UpdFact" />
+									<f:param name="sessionId" value="#{param['sessionId']}" />
+								</a4j:commandButton></td>
+						</tr>
+					</table>
+				</h:form>
+
+			</rich:modalPanel>
+		</a4j:outputPanel>
+
+		<a4j:outputPanel id="outCBmpUpdRole">
+			<rich:modalPanel id="CBmpUpdRole"
+				rendered="#{param['onUpdateRole']!=null}" width="700"
+				autosized="true"
+				onbeforeshow="document.getElementById('CBformUpdRole:appl').value='-1'">
+				<f:facet name="header">
+					<h:panelGroup>
+						<h:outputText value="Группа пользователей"></h:outputText>
+					</h:panelGroup>
+				</f:facet>
+				<f:facet name="controls">
+					<h:panelGroup>
+						<h:graphicImage onclick="#{rich:component('CBmpUpdRole')}.hide();"
+							value="/img/icons/close.gif" />
+					</h:panelGroup>
+				</f:facet>
+				<div id="CBmpUpdRoleHDiv" style="width: 100%; overflow: auto;">
+					<h:form id="CBformUpdRole">
+
+						<!--h:inputHidden id ="uorgid" value="#{usrBean.acClOrganization}"/>
+        <h:inputHidden id ="ucluid" value="#{usrBean.acClUser}"/-->
+
+						<table style="width: 90%;">
+
+							<tr>
+								<td width="100px" valign="top" height="25px"><h:outputText
+										value="ИС" /></td>
+								<td style="padding-top: 5px; padding-bottom: 5px;"><h:selectOneMenu
+										style="width:300px;" id="appl" value="-1" immediate="true"
+										onchange="invokeArmSelect(this.value)">
+										<f:selectItem itemLabel="-------" itemValue="-1" />
+										<s:selectItems value="#{rolManager.listArmUgroup}" var="n"
+											label="#{n.name}" itemValue="#{n.idArm}" />
+									</h:selectOneMenu></td>
+							</tr>
+							<tr>
+								<td width="100px" valign="top"><h:outputText value="Роли:" />
+								</td>
+								<td><a4j:outputPanel id="outCBmpUpdRoleList" layout="block">
+										<rich:dataTable id="CBdtUpdArmRole" style="width:100%"
+											rowKeyVar="rkv" var="it_rl" value="#{ugroupManager.roleList}"
+											rows="15">
+											<f:facet name="header">
+												<rich:columnGroup>
+													<rich:column>
+														<h:outputText value="" />
+													</rich:column>
+													<rich:column>
+														<h:outputText value="Название" />
+														<br />
+														<h:inputText
+															value="#{ugroupRoleStateHolder.columnFilterValues['o.roleTitle']}"
+															immediate="true" id="iaf_r_name"
+															onkeypress="if(event.keyCode==13){
+		                            	  if(document.getElementById('CBformUpdRole:appl').value=='-1'){return false;}
+			                              invokeMyStart_ugroupRole();}">
+														</h:inputText>
+													</rich:column>
+													<rich:column>
+														<h:outputText value="Код" />
+														<br />
+														<h:inputText
+															value="#{ugroupRoleStateHolder.columnFilterValues['o.sign']}"
+															immediate="true" id="iaf_r_code"
+															onkeypress="if(event.keyCode==13){
+		                            	  if(document.getElementById('CBformUpdRole:appl').value=='-1'){return false;}
+			                              invokeMyStart_ugroupRole();}">
+														</h:inputText>
+													</rich:column>
+												</rich:columnGroup>
+											</f:facet>
+
+											<rich:column>
+												<!--h:selectBooleanCheckbox value="#{it_rl.usrChecked}" id="CBsdtchbUpd"
+                           disabled="#{param['remoteAudit']!='UpdFact' and ( 
+                                      !(param['idArm']!=linksMap.appCode or it_rl.sign!='role:urn:sys_admin_cud' or currentUser.idUser==linksMap.superUserCode)
+                                      or (currentUser.isSysAdmin!=1 and param['idArm']==linksMap.appCode))}"/-->
+												<h:selectBooleanCheckbox value="#{it_rl.usrChecked}"
+													id="CBsdtchbUpd" />
+											</rich:column>
+											<rich:column>
+												<h:outputText value=" #{it_rl.roleTitle}" />
+											</rich:column>
+											<rich:column>
+												<h:outputText value=" #{it_rl.sign}" />
+											</rich:column>
+										</rich:dataTable>
+
+
+										<rich:datascroller align="center" for="CBdtUpdArmRole"
+											maxPages="5" stepControls="hide" id="CBdtUpdArmRole_dscr"
+											immediate="true" renderIfSinglePage="false" ajaxSingle="true"
+											style="padding: 10px 100px 0 0;"
+											page="#{ugroupStateHolder.pageNumber}"
+											oncomplete="setHDiv_min_proSoft_top_rmp('CBmpUpdRoleHDiv', 'CBmpUpdRoleCDiv', 25);">
+											<f:param name="sessionId" value="#{param['sessionId']}" />
+											<f:param name="remoteAudit" value="dScrollFact" />
+											<f:param name="onUpdateRole" value="1" />
+											<f:param name="idArm" value="#{param['idArm']}" />
+										</rich:datascroller>
+
+										<a4j:jsFunction name="invokeMyStart_ugroupRole"
+											reRender="outCBmpUpdRoleList"
+											oncomplete="setHDiv_min_proSoft_top_rmp('CBmpUpdRoleHDiv', 'CBmpUpdRoleCDiv', 25); setCaretToEnd(event);"
+											action="#{ugroupManager.ugroupRoleReset}">
+											<f:param name="sessionId" value="#{param['sessionId']}" />
+											<f:param name="remoteAudit" value="dScrollFact" />
+											<f:param name="onUpdateRole" value="1" />
+											<f:param name="idArm" value="#{param['idArm']}" />
+										</a4j:jsFunction>
+
+									</a4j:outputPanel></td>
+							</tr>
+
+							<tr>
+								<td colspan="2" align="center" height="35px"><a4j:commandButton
+										value="Закрыть"
+										onclick="#{rich:component('CBmpUpdRole')}.hide();return false;"
+										styleClass="but_class" /> <a4j:outputPanel
+										id="outCBmpUpdRoleButton">
+
+										<a4j:commandButton value="Сохранить"
+											action="#{ugroupManager.updUgroupRole}"
+											reRender="outCenterBottom, outCBmpUpdRoleList"
+											oncomplete="/*#{rich:component('CBmpUpdRole')}.hide();*/"
+											onclick="/*enableCHBox('CBformUpdRole')*/"
+											styleClass="but_class"
+											rendered="#{param['idArm']!=null and param['idArm']!='-1'}">
+											<f:param name="idArm" value="#{param['idArm']}" />
+											<f:param name="onUpdateRole" value="1" />
+											<f:param name="remoteAudit" value="UpdFact" />
+											<f:param name="sessionId" value="#{param['sessionId']}" />
+											<f:param name="saveEditFlag" value="1" />
+											<!--f:param name="shortData" 
+                    value="#{(currentUser.idUser!=linksMap.superUserCode or usrBean.idUser!=linksMap.superUserCode ? '1' : ())}"/-->
+										</a4j:commandButton>
+
+
+									</a4j:outputPanel></td>
+							</tr>
+						</table>
+					</h:form>
+				</div>
+			</rich:modalPanel>
+		</a4j:outputPanel>
+
+		<a4j:outputPanel id="outCBmpUpdUserAlf">
+			<rich:modalPanel id="CBmpUpdUserAlf"
+				rendered="#{param['onUpdateUserAlf']!=null}" width="700"
+				autosized="true"
+				onbeforeshow="document.getElementById('CBformUpdUserAlf:alf').value='1';/*setHDiv('CBmpUpdUsrAlfHDiv');*/"
+				onshow="setHDiv_min_proSoft_top('CBmpUpdUsrAlfHDiv', 'CBmpUpdUserAlfCDiv', 10);">
+				<f:facet name="header">
+					<h:panelGroup>
+						<h:outputText value="Группа пользователей"></h:outputText>
+					</h:panelGroup>
+				</f:facet>
+				<f:facet name="controls">
+					<h:panelGroup>
+						<h:graphicImage
+							onclick="#{rich:component('CBmpUpdUserAlf')}.hide();"
+							value="/img/icons/close.gif" />
+					</h:panelGroup>
+				</f:facet>
+				<div id="CBmpUpdUsrAlfHDiv" style="width: 100%; overflow: auto;">
+					<h:form id="CBformUpdUserAlf">
+
+
+						<table style="width: 90%;">
+
+							<!--tr>
+             <td width="100px" valign="top" height="25px">
+            <h:outputText value="ФИО"/></td>
+            <td style="padding-top:5px;padding-bottom:5px;">
+             <h:selectOneMenu style="width:300px;" 
+                              id="alf" 
+                              value="-1" 
+                              immediate="true" onchange="invokeAlfSelect(this.value)">
+                <f:selectItem itemLabel="А-Ё" itemValue="1"/> 
+                <f:selectItem itemLabel="Ж-Л" itemValue="2"/> 
+                <f:selectItem itemLabel="М-Т" itemValue="3"/> 
+                <f:selectItem itemLabel="У-Ш" itemValue="4"/>  
+                <f:selectItem itemLabel="Щ-Я" itemValue="5"/>               
+	  	       </h:selectOneMenu>
+             </td>
+            </tr-->
+							<tr>
+								<td width="100px" valign="top"><h:outputText
+										value="Пользователи:" /> <br /> <br /> <h:outputText
+										value="Выделить все " style="font-style:italic;" /> <h:selectBooleanCheckbox
+										id="CBsdtchbUpdManager" onchange="selectAllCHBox(this)"
+										style="vertical-align:bottom;" /></td>
+								<td><a4j:outputPanel id="outCBmpUpdUserAlfList"
+										layout="block">
+										<!--rich:dataTable id="CBdtUpdUserAlf" style="width:100%" 
+                               rowKeyVar="rkv" var="it_usr"
+                               value="#{ugroupManager.usrAlfList}">
+                      <f:facet name="header">
+                        <rich:columnGroup>
+                         <rich:column>
+                              <h:outputText value="" />
+                          </rich:column>
+                          <rich:column>
+                              <h:outputText value="Название" />
+                          </rich:column>
+                           <rich:column>
+                              <h:outputText value="Логин" />
+                          </rich:column>
+                        </rich:columnGroup>
+                     </f:facet>
+ 
+                     <rich:column>
+                        <h:selectBooleanCheckbox value="#{it_usr.usrChecked}" id="CBsdtchbUpd"/>                 
+                    </rich:column>
+                    <rich:column>
+                         <h:outputText value=" #{it_usr.fio}" />
+                    </rich:column>
+                    <rich:column>
+                         <h:outputText value=" #{it_usr.login}" />
+                    </rich:column>
+                </rich:dataTable-->
+
+										<rich:dataTable id="ugroupUsr_dt" style="width:100%" var="it"
+											value="#{ugroupUsrDataModel}" rows="15"
+											reRender="ugroupUsr_dscr">
+
+											<rich:columns
+												value="#{ugroupUsrManager.auditItemsListSelect}" var="field"
+												index="index" id="column#{index}"
+												styleClass="#{it.baseId==param['sessionId'] ? 'audit_record_active' : ''}"
+												style="#{it.selected=='true' ? 'background-color: yellow;' : ''} #{it.status==2 ? 'color: #9c0606;' : ''} cursor:pointer;">
+												<f:facet name="header">
+
+													<h:panelGroup>
+														<h:outputText value="#{field.itemLabel}" />
+														<!--a4j:commandLink onclick="invokeSort(
+		                 '#{param['sessionId']}',
+	                     'filterFieldFact',
+	                     '#{field.itemSortField}'); return false;">
+	            <h:graphicImage url="/img/icons/sort_#{usrStateHolder.sortOrders[field.itemSortField]}.gif" styleClass="img-in-link" height="14" width="14"/>
+             </a4j:commandLink-->
+														<br />
+														<c:choose>
+															<!--c:when test="#{field.itemField=='usrChecked'}" >
+                <h:selectBooleanCheckbox id="CBsdtchbUpdManager" 
+                onchange="selectAllCHBox(this)"/>                 
+               </c:when-->
+															<c:when test="#{field.itemField=='statusValue'}">
+																<h:selectOneMenu
+																	value="#{ugroupUsrStateHolder.columnFilterValues[field.itemSortField]}"
+																	id="som#{index}" style="width:100px;"
+																	onchange="invokeMyStart();">
+																	<f:selectItem itemLabel="Все" itemValue="#-1#" />
+																	<f:selectItem itemLabel="Активен" itemValue="1" />
+																	<f:selectItem itemLabel="Заблокирован" itemValue="2" />
+																</h:selectOneMenu>
+															</c:when>
+															<c:when test="#{field.itemField=='usrChecked'}">
+															</c:when>
+															<c:otherwise>
+
+																<h:inputText
+																	value="#{ugroupUsrStateHolder.columnFilterValues[field.itemSortField]}"
+																	immediate="true" id="iaf#{index}"
+																	onkeypress="if(event.keyCode==13){invokeMyStartUgroupUsr();}">
+																</h:inputText>
+															</c:otherwise>
+														</c:choose>
+													</h:panelGroup>
+												</f:facet>
+
+												<c:choose>
+													<c:when test="#{field.itemField=='usrChecked'}">
+														<h:selectBooleanCheckbox value="#{it[field.itemField]}"
+															id="CBsdtchbUpd" />
+													</c:when>
+													<c:otherwise>
+														<h:outputText value="#{it[field.itemField]}" />
+													</c:otherwise>
+												</c:choose>
+
+											</rich:columns>
+
+											<!--f:param name="#{param['sessionId']!=null ? 'sessionId' : 'xxx1'}" value="#{param['sessionId']}"/-->
+											<f:param name="sessionId" value="#{param['sessionId']}" />
+											<f:param name="remoteAudit" value="1" />
+											<f:param name="onUpdateUserAlf" value="1" />
+
+										</rich:dataTable>
+										<a4j:jsFunction name="invokeMyStartUgroupUsr"
+											reRender="outCBmpUpdUserAlfList"
+											oncomplete="setHDiv_min_proSoft_top_rmp('CBmpUpdUsrAlfHDiv', 'CBmpUpdUserAlfCDiv', 10); setCaretToEnd(event);">
+											<!--f:param name="#{param['sessionId']!=null ? 'sessionId' : 'xxx1'}" value="#{param['sessionId']}"/-->
+											<f:param name="sessionId" value="#{param['sessionId']}" />
+											<f:param name="remoteAudit" value="filterFieldFact" />
+											<f:param name="onUpdateUserAlf" value="1" />
+										</a4j:jsFunction>
+
+										<a4j:outputPanel id="outCenterCenterFooterDscr">
+											<rich:datascroller align="center" for="ugroupUsr_dt"
+												maxPages="5" stepControls="hide" id="ugroupUsr_dscr"
+												immediate="true" renderIfSinglePage="false"
+												reRender="outCBmpUpdUserAlfList" ajaxSingle="true"
+												style="padding-right:30px;"
+												oncomplete="setHDiv_min_proSoft_top_rmp('CBmpUpdUsrAlfHDiv', 'CBmpUpdUserAlfCDiv', 10);"
+												page="#{ugroupStateHolder.pageNumber}">
+												<f:param name="auditListCount"
+													value="#{ugroupUsrDataModel.rowCount2}" />
+												<!--f:param name="#{param['sessionId']!=null ? 'sessionId' : 'xxx1'}" value="#{param['sessionId']}"/-->
+												<f:param name="sessionId" value="#{param['sessionId']}" />
+												<f:param name="remoteAudit" value="dScrollFact" />
+												<f:param name="onUpdateUserAlf" value="1" />
+											</rich:datascroller>
+										</a4j:outputPanel>
+
+									</a4j:outputPanel></td>
+							</tr>
+
+							<tr>
+								<td colspan="2" align="center" height="35px"><a4j:commandButton
+										value="Закрыть"
+										onclick="#{rich:component('CBmpUpdUserAlf')}.hide();return false;"
+										styleClass="but_class" /> <a4j:outputPanel
+										id="outCBmpUpdUserAlfButton">
+
+										<a4j:commandButton value="Сохранить"
+											action="#{ugroupUsrManager.updUgroupUserAlf}"
+											reRender="outCenterBottom, outCBmpUpdUserAlfList"
+											oncomplete="/*#{rich:component('CBmpUpdUserAlf')}.hide();*/"
+											onclick="/*enableCHBox('CBformUpdUserAlf')*/"
+											styleClass="but_class">
+											<f:param name="#{param['idAlf']!=null ? 'idAlf' : 'xxx1'}"
+												value="#{param['idAlf']}" />
+											<f:param name="onUpdateUserAlf" value="1" />
+											<f:param name="remoteAudit" value="UpdFact" />
+											<f:param name="sessionId" value="#{param['sessionId']}" />
+											<f:param name="saveEditFlag" value="1" />
+											<!--f:param name="shortData" 
+                    value="#{(currentUser.idUser!=linksMap.superUserCode or usrBean.idUser!=linksMap.superUserCode ? '1' : ())}"/-->
+										</a4j:commandButton>
+
+
+									</a4j:outputPanel></td>
+							</tr>
+						</table>
+					</h:form>
+				</div>
+			</rich:modalPanel>
+		</a4j:outputPanel>
+
+		<a4j:outputPanel id="outCBmpDel">
+			<rich:modalPanel id="CBmpDel" rendered="#{param['onDelete']!=null}"
+				width="300" autosized="true">
+				<f:facet name="header">
+					<h:panelGroup>
+						<h:outputText value="Группа пользователей" />
+					</h:panelGroup>
+				</f:facet>
+				<f:facet name="controls">
+					<h:panelGroup>
+						<h:graphicImage onclick="#{rich:component('CBmpDel')}.hide();"
+							value="/img/icons/close.gif" />
+					</h:panelGroup>
+				</f:facet>
+				<h:form>
+					<h:inputHidden value="#{ugroupBean.idSrv}" />
+
+					<h:outputText style="color:red;display:block;margin-bottom:7px;"
+						value="#{ugroupManager.dellMessage}" />
+
+					<h:outputText style="display:block;margin-bottom:7px;"
+						value="Удалить #{ugroupBean.full}?" />
+
+					<div style="white-space: nowrap; text-align: center;">
+						<a4j:commandButton value="Отмена"
+							onclick="#{rich:component('CBmpDel')}.hide();return false;"
+							styleClass="but_class" />
+						<a4j:commandButton value="Удалить"
+							action="#{ugroupManager.delUgroup}"
+							reRender="outCenterCenter, outCenterCenterFooter, outCenterBottom, outCenterCenterHeader"
+							oncomplete=" #{rich:component('CBmpDel')}.hide();"
+							styleClass="but_class">
+							<f:param name="onDelete" value="1" />
+							<f:param name="remoteAudit" value="DelFact" />
+						</a4j:commandButton>
+					</div>
+				</h:form>
+			</rich:modalPanel>
+		</a4j:outputPanel>
+	</div>
+
+	<script>
+//<![CDATA[
+
+function check(tform){
+ var msg="";
+ if (jQuery.trim(document.getElementById(tform+":name").value)==""){
+	  msg+="Нет Наименования !\n";
+  }
+ if (jQuery.trim(document.getElementById(tform+":descr").value)==""){
+	// msg+="Нет Описания !\n";
+ }else{
+	 if(jQuery.trim(document.getElementById(tform+":descr").value).length>500){
+		    msg+="Превышена длина поля Описание!\n";
+	 }
+  }
+		 
+ 
+ if(msg!=""){
+  alert(msg);
+  return true;
+ }else{
+  return false;
+}
+}
+
+function setHDiv(hdiv){
+	jQuery('#'+hdiv).height(Math.floor(jQuery(window).height()*(2/3)));
+}
+
+function setMPTop(){
+	jQuery('#CBmpUpdRoleCDiv').css('top',Math.floor(jQuery(window).height()*(1/6)))
+}
+
+function setMPTop_user(){
+	jQuery('#CBmpUpdUserAlfCDiv').css('top',Math.floor(jQuery(window).height()*(1/6)))
+}
+
+function setHDiv_min_proSoft_top_rmp(hdiv, cdiv, size){
+
+	//!!! reset to small
+	resetHDiv_min(hdiv);
+
+   	if(jQuery('#'+hdiv).height()>Math.floor(jQuery(window).height()*(3/4)-size)){
+	   jQuery('#'+hdiv).height(Math.floor(jQuery(window).height()*(3/4)-size));
+	} 
+ 	
+    //!!! set top always
+	jQuery('#'+cdiv).css('top',Math.floor(jQuery(window).height()*(1/2)-jQuery('#'+hdiv).height()*(1/2)));
+ 	
+}
+
+function resetHDiv_min(hdiv){
+	   jQuery('#'+hdiv).height('auto');
+	}
+
+function setHDiv_min_proSoft_top(hdiv, cdiv, size){
+
+	//alert("1:"+jQuery('#'+hdiv).height());
+	//alert("2:"+Math.floor(jQuery(window).height()*(3/4)-size));
+	
+   	if(jQuery('#'+hdiv).height()>Math.floor(jQuery(window).height()*(3/4)-size)){
+	   jQuery('#'+hdiv).height(Math.floor(jQuery(window).height()*(3/4)-size));
+
+	   //alert("2:"+Math.floor(jQuery(window).height()*(1/2)-jQuery('#'+hdiv).height()*(1/2)));
+	   
+	   //!!! set top only haight>
+       jQuery('#'+cdiv).css('top', Math.floor(jQuery(window).height()*(1/2)-jQuery('#'+hdiv).height()*(1/2)));
+	} 
+}
+
+function setHDiv_min_pro(hdiv){
+
+	if(jQuery('#'+hdiv).height()>Math.floor(jQuery(window).height()*(2/3)-100)){
+	   jQuery('#'+hdiv).height(Math.floor(jQuery(window).height()*(2/3)-100));
+	} 
+}
+
+
+function enableCHBox(tform){
+
+	jQuery("input[name^='"+tform+":CBdtUpd'][type=checkbox]:disabled").removeAttr('disabled');
+}
+
+function sListHeight(tform, tsel){
+	//jQuery("table[id='"+tform+":grus_crt']").attr({cellpadding:'0', cellspacing: '0'});
+	//jQuery("table[id='"+tform+":grus_crt']>tbody>tr").attr();
+	
+	jQuery("input[name^='"+tform+":"+tsel+"'][type=checkbox]").css('height', '13px');
+}
+
+function selectAllCHBox(elt){
+    if(jQuery(elt).attr('checked')==true){
+    	jQuery("input[name$=':CBsdtchbUpd'][type=checkbox]").attr('checked', true);
+    }else{
+    	jQuery("input[name$=':CBsdtchbUpd'][type=checkbox]").removeAttr('checked');
+    }
+}
+
+
+//]]>
+</script>
+</ui:composition>

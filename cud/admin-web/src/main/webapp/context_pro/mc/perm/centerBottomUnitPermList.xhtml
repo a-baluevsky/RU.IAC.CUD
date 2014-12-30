@@ -1,0 +1,303 @@
+<?xml version='1.0' encoding='windows-1251' ?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:s="http://jboss.com/products/seam/taglib"
+	xmlns:c="http://java.sun.com/jstl/core">
+
+	<h3 class="ui-widget-header">Подробно</h3>
+	<div class="ui-layout-content">
+		<a4j:outputPanel id="outCenterBottom">
+
+			<table style="width: 100%;" border="0">
+				<tr>
+					<td width="90%">
+
+						<div style="margin: 5px;">
+
+							<c:if test="#{permManager.evaluteForBean}">
+
+								<h:form>
+
+									<h:messages style="color:red" globalOnly="false" />
+
+									<table style="width: 100%; font-size: 12px;" border="0">
+										<c:forEach items="#{permManager.auditItemsListContext}"
+											var="field">
+											<tr>
+												<td width="150px" height="25px" class="table_left_header">
+													<h:outputText value="#{field.itemLabel}" />
+												</td>
+												<td><h:outputText value="#{permBean[field.itemField]}" />
+												</td>
+											</tr>
+										</c:forEach>
+										<!--tr>
+            <td width="150px" height="25px" class="table_left_header">
+              <h:outputText value="Создал"/>
+            </td>
+            <td>
+               <h:outputText value="#{armBean.crtUserName}"/>
+            </td>
+          </tr>
+          <tr>
+            <td width="150px" height="25px" class="table_left_header">
+              <h:outputText value="Дата создания"/>
+            </td>
+            <td>
+               <h:outputText value="#{armBean.created}">
+                  <s:convertDateTime pattern="dd.MM.yy HH:mm:ss"/>
+               </h:outputText>   
+            </td>
+          </tr>
+          <tr>
+            <td width="150px" height="25px" class="table_left_header">
+              <h:outputText value="Редактировал"/>
+            </td>
+            <td>
+               <h:outputText value="#{armBean.updUserName}"/>
+            </td>
+          </tr>
+          <tr>
+            <td width="150px" height="25px" class="table_left_header">
+              <h:outputText value="Дата редактирования"/>
+            </td>
+            <td>
+               <h:outputText value="#{armBean.modified}">
+                  <s:convertDateTime pattern="dd.MM.yy HH:mm:ss"/>
+               </h:outputText>
+            </td>
+          </tr-->
+									</table>
+								</h:form>
+							</c:if>
+						</div>
+					</td>
+					<td width="90px" valign="top">
+						<!--rich:panel style="margin:5px 5px 0 0;">
+   <f:facet name="header">
+    Действия:
+   </f:facet>
+   <a4j:form>
+     <a4j:commandButton style="width:60px;" value="Создать"
+       reRender="outCBmpCrt" ajaxSingle="true"
+       oncomplete="#{rich:component('CBmpCrt')}.show();"
+       rendered="#{authenticator.accessPerm('004','2')}"
+       styleClass="but_class">
+          <f:param name="onCreate" value="1"/>
+      </a4j:commandButton>
+    
+     <s:div rendered="#{param['idArm']!=null}">
+     
+      <a4j:commandButton style="margin-top:5px;width:60px;"
+         ajaxSingle="true" reRender="outCBmpUpd"
+         value="Изменить" action="#{armManager.forView}"
+         oncomplete="#{rich:component('CBmpUpd')}.show();"
+         rendered="#{authenticator.accessPerm('004','3')}"
+         styleClass="but_class">
+         <f:param name="onUpdate" value="1"/>
+         <f:param name="idArm" value="#{param['idArm']}"/>
+       </a4j:commandButton>
+     
+      <a4j:commandButton 
+         reRender="outCBmpDel"
+         value="Удалить" 
+         action="#{armManager.forViewDel}"
+         oncomplete="#{rich:component('CBmpDel')}.show();"
+         style="margin-top:5px;width:60px;" 
+         rendered="#{authenticator.accessPerm('004','4')}"
+         styleClass="but_class">
+         <f:param name="onDelete" value="1"/>
+         <f:param name="idArm" value="#{param['idArm']}"/>
+       </a4j:commandButton>
+     </s:div>
+    </a4j:form>
+   </rich:panel-->
+					</td>
+				</tr>
+			</table>
+
+		</a4j:outputPanel>
+	</div>
+
+	<div class="ui-widget-footer" style="background: #E6E6E6;">
+		<a4j:outputPanel id="outCBmpCrt">
+			<rich:modalPanel id="CBmpCrt" rendered="#{param['onCreate']!=null}"
+				width="400" height="170">
+				<f:facet name="header">
+					<h:panelGroup>
+						<h:outputText value="Разрешение"></h:outputText>
+					</h:panelGroup>
+				</f:facet>
+				<f:facet name="controls">
+					<h:panelGroup>
+						<h:graphicImage onclick="#{rich:component('CBmpCrt')}.hide();"
+							value="/img/icons/close.gif" />
+					</h:panelGroup>
+				</f:facet>
+				<h:form id="CBformCrt">
+					<table style="width: 100%;">
+						<tr>
+							<td width="100px" height="25px"><h:outputText
+									value="Название" /></td>
+							<td><h:inputText value="#{permBeanCrt.permName}" id="name"
+									maxlength="100" size="45" /></td>
+						</tr>
+						<tr>
+							<td width="100px" height="25px"><h:outputText
+									value="Описание" /></td>
+							<td><h:inputTextarea value="#{permBeanCrt.permDescr}"
+									id="descr" cols="41" rows="3" /></td>
+						</tr>
+						<tr>
+							<td width="100px" height="25px"><h:outputText
+									value="Сортировка" /></td>
+							<td><h:inputText value="#{permBeanCrt.orderNum}"
+									id="sort_num" size="1" maxlength="3" /></td>
+						</tr>
+						<tr>
+							<td colspan="2" align="center" height="35px"><a4j:commandButton
+									value="Отмена"
+									onclick="#{rich:component('CBmpCrt')}.hide();return false;"
+									styleClass="but_class" /> <a4j:commandButton value="Сохранить"
+									action="#{permManager.addPerm}"
+									reRender="outCenterCenter, outCenterCenterFooter"
+									oncomplete=" #{rich:component('CBmpCrt')}.hide();"
+									onclick="if(check('CBformCrt')){return false;}"
+									styleClass="but_class">
+									<f:param name="onCreate" value="1" />
+									<f:param name="remoteAudit" value="CrtFact" />
+									<f:param
+										name="#{param['sessionId']!=null ? 'sessionId' : 'xxx1'}"
+										value="#{param['sessionId']}" />
+
+								</a4j:commandButton></td>
+						</tr>
+					</table>
+				</h:form>
+			</rich:modalPanel>
+		</a4j:outputPanel>
+		<a4j:outputPanel id="outCBmpUpd">
+			<rich:modalPanel id="CBmpUpd" rendered="#{param['onUpdate']!=null}"
+				width="400" height="170">
+				<f:facet name="header">
+					<h:panelGroup>
+						<h:outputText value="Разрешение" />
+					</h:panelGroup>
+				</f:facet>
+				<f:facet name="controls">
+					<h:panelGroup>
+						<h:graphicImage onclick="#{rich:component('CBmpUpd')}.hide();"
+							value="/img/icons/close.gif" />
+					</h:panelGroup>
+				</f:facet>
+				<h:form id="CBformUpd">
+					<!--h:inputHidden value="#{armBean.idArm}"/-->
+					<table style="width: 100%;">
+						<tr>
+							<td width="100px" height="25px"><h:outputText
+									value="Название" /></td>
+							<td><h:inputText value="#{permBean.permName}" id="name"
+									maxlength="100" size="45" /></td>
+						</tr>
+						<tr>
+							<td width="100px" height="25px"><h:outputText
+									value="Описание" /></td>
+							<td><h:inputTextarea value="#{permBean.permDescr}"
+									id="descr" cols="41" rows="3" /></td>
+						</tr>
+						<tr>
+							<td width="100px" height="25px"><h:outputText
+									value="Сортировка" /></td>
+							<td><h:inputText value="#{permBean.orderNum}" id="sort_num"
+									size="1" maxlength="3" /></td>
+						</tr>
+						<tr>
+							<td colspan="2" align="center" height="35px"><a4j:commandButton
+									value="Отмена"
+									onclick="#{rich:component('CBmpUpd')}.hide();return false;"
+									styleClass="but_class" /> <a4j:commandButton value="Сохранить"
+									action="#{permManager.updPerm}"
+									reRender="outCenterCenter, outCenterBottom"
+									oncomplete=" #{rich:component('CBmpUpd')}.hide();"
+									onclick="if(check('CBformUpd')){return false;}"
+									styleClass="but_class">
+									<f:param name="onUpdate" value="1" />
+									<f:param name="remoteAudit" value="UpdFact" />
+									<f:param name="sessionId" value="#{param['sessionId']}" />
+								</a4j:commandButton></td>
+						</tr>
+					</table>
+				</h:form>
+			</rich:modalPanel>
+		</a4j:outputPanel>
+		<a4j:outputPanel id="outCBmpDel">
+			<rich:modalPanel id="CBmpDel" rendered="#{param['onDelete']!=null}"
+				width="300" autosized="true">
+				<f:facet name="header">
+					<h:panelGroup>
+						<h:outputText value="Разрешение" />
+					</h:panelGroup>
+				</f:facet>
+				<f:facet name="controls">
+					<h:panelGroup>
+						<h:graphicImage onclick="#{rich:component('CBmpDel')}.hide();"
+							value="/img/icons/close.gif" />
+					</h:panelGroup>
+				</f:facet>
+				<h:form>
+					<h:inputHidden value="#{permBean.idPerm}" />
+
+					<h:outputText style="color:red;display:block;margin-bottom:7px;"
+						value="#{permManager.dellMessage}" />
+
+					<h:outputText style="display:block;margin-bottom:7px;"
+						value="Удалить #{permBean.permName}?" />
+
+					<div style="white-space: nowrap; text-align: center;">
+						<a4j:commandButton value="Отмена"
+							onclick="#{rich:component('CBmpDel')}.hide();return false;"
+							styleClass="but_class" />
+						<a4j:commandButton value="Удалить" action="#{permManager.delPerm}"
+							reRender="outCenterCenter, outCenterCenterFooter, outCenterBottom, outCenterCenterHeader"
+							oncomplete=" #{rich:component('CBmpDel')}.hide();"
+							styleClass="but_class">
+							<f:param name="onDelete" value="1" />
+							<f:param name="remoteAudit" value="DelFact" />
+						</a4j:commandButton>
+					</div>
+				</h:form>
+			</rich:modalPanel>
+		</a4j:outputPanel>
+	</div>
+
+	<script>
+//<![CDATA[
+
+function check(tform){
+ var msg="";
+ if (document.getElementById(tform+":name").value==""){
+	  msg+="Нет Наименования !\n";
+  }
+ if (document.getElementById(tform+":descr").value==""){
+	//  msg+="Нет Описания !\n";
+ }else{
+	 if(document.getElementById(tform+":descr").value.length>500){
+		    msg+="Превышена длина поля Описание!\n";
+	 }
+  }
+		 
+ 
+ if(msg!=""){
+  alert(msg);
+  return true;
+ }else{
+  return false;
+}
+}
+//]]>
+</script>
+</ui:composition>

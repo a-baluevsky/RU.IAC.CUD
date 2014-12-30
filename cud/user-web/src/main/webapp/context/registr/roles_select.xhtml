@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich" xmlns:r="http://richfaces.org">
+
+<f:metadata>
+	<!--f:viewParam name="id" value="#{personPage.id}"/-->
+	<f:viewAction action="#{userManagerBean.resetSumRoles()}" />
+</f:metadata>
+
+<h:head>
+	<title>roles select</title>
+</h:head>
+<h:body>
+
+	<h3>Выберите ИС:</h3>
+
+	<h:button value="Выбрать ИС" onclick="armSelectMPOpen();return false;" />
+	<br />
+
+	<h:form>
+
+		<r:outputPanel id="outRolesPanel">
+
+			<h:panelGroup rendered="#{param['idArm']!=null}">
+				<h:outputText value="Выбранная ИС: #{param['idArm']}" />
+
+				<h3>Выберите роли:</h3>
+
+
+				<table>
+					<tr>
+						<td valign="top"><r:outputPanel id="outCenterCenter">
+
+								<h:panelGroup rendered="#{userManagerBean.renderedRolesTable}">
+
+									<rich:dataTable width="700" var="record"
+										value="#{userManagerBean.listRolesFromArm}" id="role_dt"
+										rows="10">
+										<f:facet name="header">
+											<rich:columnGroup>
+												<rich:column>
+													<h:outputText value="Название " />
+												</rich:column>
+												<rich:column>
+													<h:outputText value="Код" />
+												</rich:column>
+												<rich:column>
+													<h:outputText value="Действия " />
+												</rich:column>
+											</rich:columnGroup>
+										</f:facet>
+										<rich:column>
+											<h:outputText value="#{record.full}" />
+										</rich:column>
+										<rich:column>
+											<h:outputText value="#{record.signObject}" />
+										</rich:column>
+										<rich:column>
+											<h:selectBooleanCheckbox value="#{record.checked}"
+												onclick="rolesSum('#{record.idSrv}', '#{record.full}', '#{param['idArm']}')">
+												<!--f:ajax event="click" listener="#{userManagerBean.addRole777}"  />
+              <f:ajax execute="@form" render="@form" /-->
+											</h:selectBooleanCheckbox>
+										</rich:column>
+									</rich:dataTable>
+
+									<rich:dataScroller for="role_dt" maxPages="5" ajaxSingle="true">
+										<f:param name="idArm" value="#{param['idArm']}" />
+										<f:param name="requestType" value="rolesScroll" />
+									</rich:dataScroller>
+
+								</h:panelGroup>
+							</r:outputPanel></td>
+						<td valign="top"><rich:panel id="rolesPanel">
+								<f:facet name="header">
+									<h:outputText value="Выбранные роли" />
+								</f:facet>
+								<r:repeat value="#{userManagerBean.sumRoles}" var="item"
+									rowKeyVar="rkv">
+									<h:outputText value="#{rkv+1}) " />
+									<h:outputText value="#{item}" />
+									<br />
+								</r:repeat>
+							</rich:panel></td>
+					</tr>
+				</table>
+
+			</h:panelGroup>
+
+		</r:outputPanel>
+
+	</h:form>
+
+	<h:form>
+
+		<h:outputText value="Основание" />
+		<h:inputTextarea value="#{userAccessBean.reason}" />
+
+		<br />
+		<br />
+		<r:outputPanel id="outSaveButton">
+			<h:commandButton value="Отправить" action="#{userAccessBean.action}">
+				<f:param name="idArm" value="#{param['idArm']}" />
+			</h:commandButton>
+		</r:outputPanel>
+	</h:form>
+
+	<r:outputPanel id="outMPArmSelectPanel">
+
+		<r:popupPanel id="popup" modal="true"
+			onmaskclick="#{r:component('popup')}.hide();"
+			rendered="#{param['onArmSelectOpen']!=null}" autosized="true"
+			width="500">
+			<f:facet name="header">
+				<h:outputText value="Simple popup panel" />
+			</f:facet>
+			<f:facet name="controls">
+				<h:outputLink value="#"
+					onclick="#{r:component('popup')}.hide(); return false;">
+                X
+            </h:outputLink>
+			</f:facet>
+			<r:dataTable width="700" var="record"
+				value="#{userManagerBean.listArmFull}" id="arm_dt" rows="10">
+				<f:facet name="header">
+					<r:columnGroup>
+						<r:column>
+							<h:outputText value="Название ИС " />
+						</r:column>
+						<r:column>
+							<h:outputText value="Код ИС " />
+						</r:column>
+						<r:column>
+							<h:outputText value="Действия " />
+						</r:column>
+					</r:columnGroup>
+				</f:facet>
+				<r:column>
+					<h:outputText value="#{record.full}" />
+				</r:column>
+				<r:column>
+					<h:outputText value="#{record.signObject}" />
+				</r:column>
+				<r:column>
+					<h:button value=">>"
+						onclick="armSelect('#{record.idSrv}');return false;" />
+				</r:column>
+			</r:dataTable>
+
+			<r:dataScroller for="arm_dt" maxPages="5">
+				<f:param name="onArmSelectOpen" value="1" />
+			</r:dataScroller>
+
+		</r:popupPanel>
+	</r:outputPanel>
+
+	<h:form>
+		<r:jsFunction name="rolesSum" render="rolesPanel"
+			action="#{userManagerBean.addRole}">
+			<f:param name="idRole" />
+			<f:param name="nameRole" />
+			<f:param name="idArm" />
+			<f:param name="requestType" value="rolesSum" />
+
+		</r:jsFunction>
+		<r:jsFunction name="armSelectMPOpen" render="outMPArmSelectPanel"
+			oncomplete="#{r:component('popup')}.show();">
+			<f:param name="requestType" value="armSelectView" />
+			<f:param name="onArmSelectOpen" value="1" />
+		</r:jsFunction>
+		<r:jsFunction name="armSelect" render="outRolesPanel, outSaveButton"
+			oncomplete="#{r:component('popup')}.hide();"
+			action="#{userManagerBean.resetSumRoles()}">
+			<f:param name="idArm" />
+			<f:param name="requestType" value="armSelect" />
+		</r:jsFunction>
+	</h:form>
+</h:body>
+</html>

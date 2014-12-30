@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://audit.services.cud.iac.spb.ru/"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http"
+	name="AuditServiceImplService" targetNamespace="http://audit.services.cud.iac.spb.ru/">
+	<wsdl:types>
+		<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:tns="http://audit.services.cud.iac.spb.ru/"
+			attributeFormDefault="unqualified" elementFormDefault="qualified"
+			targetNamespace="http://audit.services.cud.iac.spb.ru/">
+			<xs:element name="audit" type="tns:audit" />
+			<xs:element name="auditResponse" type="tns:auditResponse" />
+			<xs:element name="sync_functions" type="tns:sync_functions" />
+			<xs:element name="sync_functionsResponse" type="tns:sync_functionsResponse" />
+			<xs:complexType name="audit">
+				<xs:sequence>
+					<xs:element minOccurs="0" name="login" type="xs:string" />
+					<xs:element maxOccurs="unbounded" minOccurs="0"
+						name="userFunctions" type="tns:userFunctions" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="userFunctions">
+				<xs:sequence>
+					<xs:element name="idFunction" type="xs:string" />
+					<xs:element name="dateFunction" type="xs:dateTime" />
+					<xs:element minOccurs="0" name="detailsFunction" type="xs:string" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="auditResponse">
+				<xs:sequence />
+			</xs:complexType>
+			<xs:complexType name="sync_functions">
+				<xs:sequence>
+					<xs:element maxOccurs="unbounded" minOccurs="0" name="functions"
+						type="tns:functions" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="functions">
+				<xs:sequence>
+					<xs:element name="idFunction" type="xs:string" />
+					<xs:element name="name" type="xs:string" />
+					<xs:element minOccurs="0" name="description" type="xs:string" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="sync_functionsResponse">
+				<xs:sequence />
+			</xs:complexType>
+			<xs:element name="generalFailure" type="tns:generalFailure" />
+			<xs:complexType name="generalFailure">
+				<xs:sequence />
+			</xs:complexType>
+		</xs:schema>
+	</wsdl:types>
+	<wsdl:message name="GeneralFailure">
+		<wsdl:part element="tns:generalFailure" name="GeneralFailure">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="audit">
+		<wsdl:part element="tns:audit" name="parameters">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="sync_functions">
+		<wsdl:part element="tns:sync_functions" name="parameters">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="auditResponse">
+		<wsdl:part element="tns:auditResponse" name="parameters">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="sync_functionsResponse">
+		<wsdl:part element="tns:sync_functionsResponse" name="parameters">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:portType name="AuditService">
+		<wsdl:operation name="audit">
+			<wsdl:input message="tns:audit" name="audit">
+			</wsdl:input>
+			<wsdl:output message="tns:auditResponse" name="auditResponse">
+			</wsdl:output>
+			<wsdl:fault message="tns:GeneralFailure" name="GeneralFailure">
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="sync_functions">
+			<wsdl:input message="tns:sync_functions" name="sync_functions">
+			</wsdl:input>
+			<wsdl:output message="tns:sync_functionsResponse" name="sync_functionsResponse">
+			</wsdl:output>
+			<wsdl:fault message="tns:GeneralFailure" name="GeneralFailure">
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="AuditServiceImplServiceSoapBinding"
+		type="tns:AuditService">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="audit">
+			<soap:operation soapAction="" style="document" />
+			<wsdl:input name="audit">
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output name="auditResponse">
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="GeneralFailure">
+				<soap:fault name="GeneralFailure" use="literal" />
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="sync_functions">
+			<soap:operation soapAction="" style="document" />
+			<wsdl:input name="sync_functions">
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output name="sync_functionsResponse">
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="GeneralFailure">
+				<soap:fault name="GeneralFailure" use="literal" />
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="AuditServiceImplService">
+		<wsdl:port binding="tns:AuditServiceImplServiceSoapBinding"
+			name="AuditServiceImplPort">
+			<!--soap:address location="http://cudvm:8080/CudServicesPro/AuditService"/ -->
+			<soap:address location="https://cudvm:8443/CudServicesPro/AuditService" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

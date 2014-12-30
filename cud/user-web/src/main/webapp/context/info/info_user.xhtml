@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich">
+
+<h:head>
+	<title>info user</title>
+</h:head>
+<h:body>
+	<h3>Сведения по пользователю</h3>
+
+	<h:panelGrid columns="2">
+
+		<h:outputText value="Организация" />
+		<h:outputText value="#{userManagerBean.user.userItem.orgName}" />
+
+		<h:outputText value="Подразделение" />
+		<h:outputText value="#{userManagerBean.user.userItem.department}" />
+
+		<h:outputText value="Должность" />
+		<h:outputText value="#{userManagerBean.user.userItem.position}" />
+
+		<h:outputText value="ФИО" />
+		<h:outputText value="#{userManagerBean.user.userItem.fio}" />
+
+		<h:outputText value="Телефон" />
+		<h:outputText value="#{userManagerBean.user.userItem.phone}" />
+
+		<h:outputText value="Email" />
+		<h:outputText value="#{userManagerBean.user.userItem.email}" />
+
+		<h:outputText value="Логин" />
+		<h:outputText value="#{userManagerBean.user.userItem.login}" />
+
+	</h:panelGrid>
+
+
+	<h:link value="Назад" outcome="/context/roles_pages/role_user.xhtml" />
+
+
+</h:body>
+</html>

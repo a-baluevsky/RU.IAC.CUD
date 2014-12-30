@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:tns="http://ws.iac.spb.ru/ClassifierZip" xmlns:comm="http://ws.iac.spb.ru/Common" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ws.iac.spb.ru/ClassifierZip" version="1.0">
+	
+<xs:import namespace="http://ws.iac.spb.ru/Common" schemaLocation="ClassifierZip.xsd6.xsd"/>
+	
+<xs:element name="getClassifierByClassifierName" type="tns:getClassifierByClassifierName"/>
+	
+<xs:element name="getClassifierByClassifierNameResponse" type="tns:getClassifierByClassifierNameResponse"/>
+	
+<xs:complexType name="responseElement52">
+		
+<xs:sequence>
+			
+<xs:element name="MessageInfo" type="comm:MessageInfo" minOccurs="0">
+				
+<xs:annotation>
+					
+<xs:documentation>Блок служебной информации</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			
+<xs:element name="Item" type="tns:Item52" nillable="true" minOccurs="0" maxOccurs="unbounded">
+				
+<xs:annotation>
+					
+<xs:documentation>Блок с записями</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+<xs:complexType name="getClassifierByClassifierName">
+		
+<xs:sequence>
+			
+<xs:element name="login" type="xs:string">
+				
+<xs:annotation>
+					
+<xs:documentation>Логин</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			
+<xs:element name="pass" type="xs:string">
+				
+<xs:annotation>
+					
+<xs:documentation>Пароль</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			
+<xs:element name="Fullname" type="xs:string">
+				
+<xs:annotation>
+					
+<xs:documentation>Полное наименование классификатора</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			
+<xs:element name="ActualDoc" type="xs:int">
+				
+<xs:annotation>
+					
+<xs:documentation>Номер изменения</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+<xs:complexType name="getClassifierByClassifierNameResponse">
+		
+<xs:sequence>
+			
+<xs:element name="return" type="tns:responseElement52" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+<xs:complexType name="Item52">
+		
+<xs:sequence>
+			
+<xs:element name="FileName" type="xs:string">
+				
+<xs:annotation>
+					
+<xs:documentation>Имя файла</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			
+<xs:element name="FileContent" type="xs:base64Binary">
+				
+<xs:annotation>
+					
+<xs:documentation>Бинарные данные</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

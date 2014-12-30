@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jboss-deployment-structure>
+	<deployment>
+
+		<exclusions>
+			<module name="org.slf4j" />
+		</exclusions>
+
+		<dependencies>
+			<module name="ru.spb.iac.cud" export="true" />
+			<module name="org.apache.santuario.xmlsec" />
+
+			<module name="ch.qos.logback" />
+			<module name="org.slf4j" slot="1.6.1" />
+
+
+			<system export="true">
+				<paths>
+					<path name="com/sun/org/apache/xml/internal/security/utils" />
+				</paths>
+			</system>
+
+
+		</dependencies>
+	</deployment>
+</jboss-deployment-structure>

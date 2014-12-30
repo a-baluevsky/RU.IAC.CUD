@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='windows-1251' ?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:s="http://jboss.com/products/seam/taglib">
+<ui:composition>
+	<f:view contentType="application/msword" />
+
+	<head>
+<style>
+.prot_trows {
+	border: 0;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+}
+
+.prot_thead {
+	font-weight: bold;
+}
+</style>
+	</head>
+	<body>
+
+		<table style="width: 100%;">
+			<tr>
+				<td class="prot_thead" style="font-size: 20px;"><h:outputText
+						value="Аудит сервисов" /></td>
+			</tr>
+			<tr>
+				<td class="prot_thead" style="font-style: italic"><h:outputText
+						value="Период: " /> <h:outputText value="c #{param['date1']} " />
+					<h:outputText value="по #{param['date2']}" /></td>
+			</tr>
+			<tr>
+				<td>
+					<table
+						style="width: 100%; border: 0; border-left: 1px solid black; border-top: 1px solid black;">
+						<tr>
+							<td height="25px" class="prot_trows" style="font-weight: bold;">
+								<h:outputText value="Дата и время обращения" />
+							</td>
+							<td height="25px" class="prot_trows" style="font-weight: bold;">
+								<h:outputText value="Сервис" />
+							</td>
+							<td height="25px" class="prot_trows" style="font-weight: bold;">
+								<h:outputText value="IP-адрес" />
+							</td>
+							<td height="25px" class="prot_trows" style="font-weight: bold;">
+								<h:outputText value="Пользователь" />
+							</td>
+						</tr>
+						<a4j:repeat var="it" value="#{aSysManager.auditReportList}"
+							rowKeyVar="rkv">
+							<tr>
+								<td height="20px" class="prot_trows"><h:outputText
+										value="#{it.dateAction}">
+										<s:convertDateTime pattern="dd.MM.yy HH:mm:ss" />
+									</h:outputText></td>
+								<td height="20px" class="prot_trows"><h:outputText
+										value="#{it.servName}" /></td>
+								<td height="20px" class="prot_trows"><h:outputText
+										value="#{it.ipAddress}" /></td>
+								<td height="20px" class="prot_trows"><h:outputText
+										value="#{it.userFio}" /></td>
+							</tr>
+						</a4j:repeat>
+					</table>
+				</td>
+			</tr>
+		</table>
+
+	</body>
+</ui:composition>
+</html>

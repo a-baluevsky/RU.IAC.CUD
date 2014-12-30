@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='windows-1251' ?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:s="http://jboss.com/products/seam/taglib"
+	xmlns:c="http://java.sun.com/jstl/core">
+	<div id="accordion1" class="acc_class">
+		<!--s:cache region="leftUnitFragment" key="treeNavigation"-->
+		<ui:repeat var="it" value="#{navigManager.listNavigMenu}">
+			<!--c:forEach items="#{navigManager.listMenu}" var="it"-->
+			<h3 id="topnav_#{it.idRes}">
+				<!--a href="#"-->
+				<s:link value="#{it.pageName}" styleClass="head"
+					view="#{linksMap.getLink(it.pageCode)}">
+					<!--f:param name="newView" value="1"/-->
+					<f:param name="#{param['idRai']!=null ? 'idRai' : '_x'}"
+						value="#{param['idRai']}" />
+					<f:param name="actSect" value="#{it.idRes}" />
+					<f:param name="actSectItem" value="#{it.pageCode}" />
+				</s:link>
+				<!--/a-->
+			</h3>
+			<div>
+				<table style="width: 100%;" border="0">
+					<ui:repeat var="iit" value="#{it.children}">
+						<tr id="link_#{iit.pageCode}_#{empty iit.children}">
+							<td height="25" style="padding-left: 15px"><s:link
+									value="#{iit.pageName}"
+									view="#{linksMap.getLink(iit.pageCode)}">
+									<f:param name="#{param['idRai']!=null ? 'idRai' : '_x'}"
+										value="#{param['idRai']}" />
+									<f:param name="actSect" value="#{it.idRes}" />
+									<f:param name="actSectItem" value="#{iit.pageCode}" />
+								</s:link></td>
+						</tr>
+						<ui:repeat var="iiit" value="#{iit.children}">
+							<tr id="link_#{iiit.pageCode}_true">
+								<td height="20" style="padding-left: 30px"><s:link
+										value="#{iiit.pageName}"
+										view="#{linksMap.getLink(iiit.pageCode)}">
+										<f:param name="#{param['idRai']!=null ? 'idRai' : '_x'}"
+											value="#{param['idRai']}" />
+										<f:param name="actSect" value="#{it.idRes}" />
+										<f:param name="actSectItem" value="#{iiit.pageCode}" />
+									</s:link></td>
+							</tr>
+						</ui:repeat>
+					</ui:repeat>
+				</table>
+			</div>
+		</ui:repeat>
+		<!--/c:forEach-->
+		<!--/s:cache-->
+	</div>
+</ui:composition>

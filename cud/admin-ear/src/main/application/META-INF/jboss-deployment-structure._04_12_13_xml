@@ -1,0 +1,48 @@
+<jboss-deployment-structure xmlns="urn:jboss:deployment-structure:1.0">
+
+ <!--ear-subdeployments-isolated>false</ear-subdeployments-isolated-->
+ 
+  <deployment>
+  
+       <exclusions>
+           <module name="org.apache.log4j"/>
+        </exclusions>
+  
+       <dependencies>
+          <module name="javax.faces.api" slot="1.2" export="true"/>
+          <module name="org.apache.commons.logging" export="true"/>
+          <module name="org.dom4j" export="true"/>
+          <module name="org.apache.commons.collections" export="true"/>
+          <module name="ru.spb.iac.cud" export="true"/>
+          <!--module name="org.apache.log4j" export="true"/-->
+          
+           
+         <!--1.1  -->
+         
+         
+         <!--1.2  -->
+          
+        </dependencies>
+  </deployment>
+  <sub-deployment name="InfoS-web.war">
+       <exclusions>
+          <module name="javax.faces.api" slot="main"/>
+          <module name="org.apache.log4j"/>
+        </exclusions>
+        <dependencies>
+          <module name="javax.faces.api" slot="1.2"/>
+           <!--module name="org.apache.log4j" export="true"/-->
+        </dependencies>
+  </sub-deployment>
+ <sub-deployment name="InfoS-ejb.jar">
+      <!--exclusions>
+           <module name="org.apache.log4j"/>
+        </exclusions-->
+        <dependencies>
+         <module name="ru.spb.iac.cud" export="true"/>
+          <module name="org.apache.log4j" export="true"/>
+          
+        </dependencies>
+  </sub-deployment>
+
+</jboss-deployment-structure>

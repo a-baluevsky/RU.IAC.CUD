@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich">
+
+<h:head>
+	<title>role user reg</title>
+</h:head>
+<h:body>
+	<h3>Запрос на предоставление роли пользователя</h3>
+	<h:form>
+		<h:panelGrid columns="2">
+
+			<h:outputText value="Причина" />
+			<h:inputTextarea value="#{userRegBean.orgName}" />
+
+		</h:panelGrid>
+
+
+
+		<rich:dataTable width="700" var="record"
+			value="#{userManagerBean.listArmFull}">
+			<f:facet name="header">
+				<rich:column>
+					<h:outputText value="Название ИС / роли" />
+				</rich:column>
+			</f:facet>
+			<rich:column>
+				<rich:collapsibleSubTableToggler for="sbtbl" />
+				<h:outputText value="#{record.full}" />
+			</rich:column>
+			<rich:collapsibleSubTable var="expense"
+				value="#{record.acRolesBssTs}" id="sbtbl" expandMode="client"
+				expanded="'#{false}">
+				<rich:column style="padding-left:30px;">
+					<h:outputText value="#{expense.full}"></h:outputText>
+				</rich:column>
+
+			</rich:collapsibleSubTable>
+
+		</rich:dataTable>
+
+		<h:commandButton value="Отправить" action="#{userRegBean.action}" />
+	</h:form>
+
+</h:body>
+</html>

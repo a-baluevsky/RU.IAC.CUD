@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='windows-1251' ?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich">
+
+	<h3 class="ui-widget-header">Календарь</h3>
+	<!--h3 class="ui-widget-header">Календарь-планировщик</h3-->
+	<div class="ui-layout-content">
+		<table border="0" style="width: 100%; height: 70%">
+			<tr>
+				<td align="center" valign="center"><h:form id="form">
+						<!--rich:messages/-->
+						<!--a4j:jsFunction name="ajaxSubmit" oncomplete="#{rich:component('panel')}.show()" reRender="editContent" /-->
+						<rich:calendar popup="false" showApplyButton="false"
+							cellWidth="50px" cellHeight="50px" boundaryDatesMode="none"
+							showWeeksBar="false" dataModel="#{calendarDataModel}"
+							id="organizer" showFooter="false" locale="RU">
+							<!--f:facet name="header">
+                <h:panelGroup>
+                    <h:outputText value="Current Month" styleClass="header"/>
+                </h:panelGroup>
+            </f:facet>
+            <a4j:outputPanel layout="block" id="cell" 
+            onclick="#{rich:component('organizer')}.resetSelectedDate()" 
+            style="height: 100%;" styleClass="organizer-cell">
+                <div>
+                    <h:outputText value="{day}" style="align:center"/>
+                </div>
+                <div>&#xA0;</div>
+                <div>
+                    <h:outputText value="{data.shortDescription.escapeHTML()}" />
+                </div>
+                <div>
+                    <h:outputText value="{data.description.escapeHTML()}"/>
+                </div>
+            </a4j:outputPanel-->
+						</rich:calendar>
+					</h:form></td>
+			</tr>
+			<!--tr>
+     <td align="center" height="35px">
+      <h:outputText value="В ближайшее время у вас нет запланированных работ"/>
+      </td>
+    </tr>
+    <tr>
+     <td align="center" height="25px">
+      <a4j:commandButton styleClass="but_class" 
+                         value="Добавить работу" 
+                         onclick="return false;" /> 
+      </td>
+    </tr-->
+		</table>
+	</div>
+</ui:composition>

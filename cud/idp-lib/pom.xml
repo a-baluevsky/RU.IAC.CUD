@@ -1,0 +1,56 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>ru.spb.iac</groupId>
+		<artifactId>cud</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>idp-lib</artifactId>
+	<build>
+		<finalName>CudIDPLibPro</finalName>
+	</build>
+	<dependencies>
+		<dependency>
+			<groupId>org.picketlink</groupId>
+			<artifactId>picketlink-federation</artifactId>
+			<version>2.5.2.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jboss.web</groupId>
+			<artifactId>jbossweb</artifactId>
+			<version>7.0.17.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>org.picketlink</groupId>
+			<artifactId>picketlink-tomcat-common</artifactId>
+			<version>2.5.2.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>ru.crypto</groupId>
+			<artifactId>XMLDSigRI</artifactId>
+			<version>2.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.6.1</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-core</artifactId>
+			<version>1.1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.1.2</version>
+		</dependency>
+	</dependencies>
+</project>

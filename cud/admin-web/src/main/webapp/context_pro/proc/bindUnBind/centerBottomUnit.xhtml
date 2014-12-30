@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='windows-1251' ?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:s="http://jboss.com/products/seam/taglib"
+	xmlns:c="http://java.sun.com/jstl/core">
+
+	<h3 class="ui-widget-header">Информация о последнем запуске
+		процесса</h3>
+	<div class="ui-layout-content">
+
+		<a4j:outputPanel id="outCenterBottom">
+
+			<table style="width: 100%; font-size: 13px;" border="0">
+				<tr>
+					<td width="90%"><s:div style="margin:10px;"
+							rendered="#{procBUBInfoBean!=null}">
+
+							<table style="width: 100%; font-size: 13px;">
+								<!--tr>
+         <td colspan="2" height="25px">
+          <h:outputText value="Результат последнего запуска:"/>
+        </td>
+        </tr-->
+								<tr>
+									<td width="150px" height="25px" class="table_left_header">
+										<h:outputText value="Дата и время последнего запуска" />
+									</td>
+									<td><h:outputText value="#{procBUBInfoBean.execDate}">
+											<s:convertDateTime pattern="dd.MM.yy HH:mm:ss" />
+										</h:outputText></td>
+								</tr>
+								<tr>
+									<td width="150px" height="25px" class="table_left_header">
+										<h:outputText value="Результат" />
+									</td>
+									<td><h:outputText value="#{procBUBInfoBean.execHit}" /></td>
+								</tr>
+								<!--c:if test="#{procBUBBean.status=='passive'}">
+        <tr>
+         <td colspan="2" height="25px">
+         </td>
+        </tr>
+        <tr>
+         <td colspan="2" height="25px">
+           <h:outputText value="Конфигурация последнего запуска:"/>
+         </td>
+        </tr>
+        <tr>
+         <td width="150px" height="25px" class="table_left_header">
+          <h:outputText value="Старт процесса"/>
+        </td>
+        <td>
+          <h:outputText value="#{procBUBInfoBean.confDate}">
+             <s:convertDateTime pattern="dd.MM.yy HH:mm"/>
+          </h:outputText>   
+        </td>
+       </tr>
+        <tr>
+         <td width="150px" height="25px" class="table_left_header">
+          <h:outputText value="Период запуска(дней)"/>
+        </td>
+        <td>
+          <h:outputText value="#{procBUBInfoBean.confPeriod}"/>
+        </td>
+       </tr>
+       </c:if-->
+							</table>
+
+						</s:div></td>
+					<td width="110px" valign="top"></td>
+				</tr>
+			</table>
+
+		</a4j:outputPanel>
+	</div>
+
+	<div class="ui-widget-footer" style="background: #E6E6E6;">
+		<a4j:outputPanel id="outCenterBottomFooter">
+
+			<table>
+				<tr>
+					<td>
+						<!--s:div rendered="#{param['sessionId']!=null and param['reposType']!=null 
+                           and param['remoteAudit']!=null}"--> <a4j:form>
+							<table style="width: 300px" border="0">
+								<tr>
+									<td width="100px"><a4j:commandButton style="width:75px;"
+											ajaxSingle="true"
+											reRender="outCenterTop, outCenterTopFooter, outCenterBottom"
+											value="Обновить" styleClass="but_class">
+											<f:param name="remoteAudit" value="procInfo" />
+										</a4j:commandButton></td>
+								</tr>
+							</table>
+						</a4j:form> <!--/s:div-->
+					</td>
+					<td height="25px;"><h:outputText value="&amp;nbsp;"
+							escape="false" /></td>
+				</tr>
+			</table>
+		</a4j:outputPanel>
+	</div>
+	<script>
+//<![CDATA[
+
+//]]>
+</script>
+</ui:composition>

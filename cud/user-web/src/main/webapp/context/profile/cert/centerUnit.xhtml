@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='windows-1251' ?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich">
+
+
+	<h:outputText value="Сертификаты" />
+
+	<rich:dataTable id="CBdtUserCert"
+		style="width:100%; background-color:#fffacd;" var="it_user_cert"
+		value="#{userManagerBean.userCertList}"
+		columnsWidth="190px, 190px, 190px, 190px, *"
+		noDataLabel="Нет сертификатов">
+
+		<f:facet name="header">
+			<rich:columnGroup>
+				<rich:column>
+					<h:outputText value="ФИО" />
+				</rich:column>
+				<rich:column>
+					<h:outputText value="Организация" />
+				</rich:column>
+				<rich:column>
+					<h:outputText value="Подразделение" />
+				</rich:column>
+				<rich:column>
+					<h:outputText value="Сертификат" />
+				</rich:column>
+				<rich:column>
+					<!--h:outputText value="Действие" /-->
+					<h:outputText value="Дополнительно" />
+				</rich:column>
+			</rich:columnGroup>
+		</f:facet>
+
+		<rich:column>
+			<h:outputText value=" #{it_user_cert.usrFio}" />
+		</rich:column>
+		<rich:column>
+			<h:outputText value=" #{it_user_cert.orgName}" />
+		</rich:column>
+		<rich:column>
+			<h:outputText value=" #{it_user_cert.usrPosition}" />
+		</rich:column>
+		<rich:column>
+			<h:outputText value=" #{it_user_cert.certNum}" />
+
+		</rich:column>
+		<rich:column>
+			<table width="99%" border="0">
+				<tr>
+					<td align="center">
+						<table border="0">
+							<tr>
+								<td width="20px;" align="center"><h:link id="add_info_link"
+										title="Дополнительная информация" onclick="return false;">
+										<h:graphicImage value="/img/icons/info_icon.gif"
+											styleClass="pic_tbar" style="border:0;vertical-align:middle;" />
+									</h:link> <!--rich:tooltip mode="client" 
+                                 showEvent="click"
+                                 style="background-color:white; padding:3; margin:0;"
+                                 layout="block" for="add_info_link"--> 
+                              
+                                
+                                
+                                
+                                 <rich:tooltip
+										mode="client"
+										style="background-color:white; padding:3; margin:0;"
+										layout="block" for="add_info_link">
+										<table style="">
+											<tr>
+												<td width="50px;" style="padding: 3px;"><h:outputText
+														value="Действует до" /></td>
+												<td style="padding: 3px;"><h:outputText
+														value="#{it_user_cert.certDate}" /></td>
+											</tr>
+										</table>
+
+									</rich:tooltip></td>
+								<td width="20px;" align="center"><h:link title="Удалить"
+										onclick="if (confirm('#{(not empty currentUser.allowedSys or currentUser.isAccOrgManagerValue) and !currentUser.isAllowedReestr('002', '3') ? 'Отправить заявку на удаление \\n сертификата' : ' Удалить \\n сертификат'} 
+                                          \\n#{it_user_cert.certNum} ?')){/*set_id_activ_span('#{it_user_cert.baseId}');*/invokeUCCertRemove('#{it_user_cert.baseId}', '#{(param['sessionId']!=null ? param['sessionId'] : param['sessionId_crack'])}');} return false;">
+										<h:graphicImage value="/img/error.gif" styleClass="pic_tbar"
+											style="border:0;vertical-align:middle;" />
+									</h:link></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</rich:column>
+	</rich:dataTable>
+
+      <h:button value="Добавить сертификат"
+			outcome="/context/profile/cert/create/list.xhtml">
+			<f:param name="pageItem" value="profile_cert" />
+		</h:button>
+		
+	<SCRIPT type="text/javascript">
+ //<![CDATA[
+   
+  //]]>
+ </SCRIPT>
+</ui:composition>

@@ -1,0 +1,247 @@
+<?xml version='1.0' encoding='windows-1251' ?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:s="http://jboss.com/products/seam/taglib">
+
+
+	<style>
+.barsearch {
+	height: 14px;
+	width: 100px;
+}
+
+.barsearchbutton {
+	border-width: 1px;
+	background-color: #{
+	a4jSkin.generalBackgroundColor
+}
+
+;
+}
+.rf-ddm-lst {
+	min-width: 70px !important;
+}
+
+.logout_mi,.logout_mis {
+	padding-right: 7px;
+}
+</style>
+
+	<!--s:cache key="#{currentUser.idUser}" region="topUnitFragment"-->
+	<!--s:cache region="topUnitFragment" key="topKey"-->
+	<!--h:form-->
+	<rich:toolBar itemSeparator="disc"
+		style="background:transparent !important;/*background:#f2f2f2 !important*/border:0px solid red;"
+		height="40">
+		<rich:toolBarGroup>
+			<h:graphicImage value="/img/icons/create_folder.gif"
+				styleClass="pic_tbar" alt="create_doc" />
+			<!--h:outputText style="width:300px; font-size:12px;" value="Консоль администрирования " /-->
+			<h:outputText style="font-size:12px;"
+				value="#{currentUser.isAccOrgManager == 1 ? 'Кабинет организации ' : 'Кабинет администратора' } " />
+
+
+		</rich:toolBarGroup>
+		<rich:toolBarGroup location="right">
+			<!--a href="/">
+             <img style="border:0;vertical-align:middle;" src="#{request.contextPath}/img/icons/screen.gif"/>
+              Оболочка
+            </a-->
+			<s:link view="/main.xhtml">
+				<h:graphicImage value="/img/icons/fav.gif" styleClass="pic_tbar"
+					style="border:0;vertical-align:middle;" />
+				<h:outputText value="На главную" />
+				<f:param name="actSect" value="0" />
+			</s:link>
+		</rich:toolBarGroup>
+		<!--rich:toolBarGroup location="right">
+           
+           <h:outputLink value="http://grnmb/grnhelp/infos/" target="#">
+             <h:graphicImage value="/img/icons/save_as.gif" styleClass="pic_tbar" alt="save"  style="border:0;vertical-align:middle;"/>
+             <h:outputText value="Руководство Пользователя"/>
+            </h:outputLink>
+
+         </rich:toolBarGroup-->
+		<!--rich:toolBarGroup location="right">
+         
+          <rich:dropDownMenu submitMode="none"  
+                             itemClass="logout_mi" 
+                             selectItemClass="logout_mis">
+                <f:facet name="label">
+                    <h:panelGroup>
+                        <h:graphicImage value="/img/icons/save_as.gif" styleClass="pic_tbar" alt="save"  style="border:0;vertical-align:middle;"/>
+                        <h:outputText value="Служба Поддержки" style="color:#0090FF"/>
+                    </h:panelGroup>
+                </f:facet>
+                <rich:menuItem >
+                  <f:facet name="icon">
+                     <h:graphicImage value="/img/icons/group-by.gif" style="border:0;vertical-align:middle;" styleClass="pic"/> 
+                  </f:facet>   
+                  <s:link onclick="#{rich:component('help_mp')}.show(); return false;">
+                     <h:outputText value="Написать сообщение" style="color:#0090FF"/>
+                   </s:link>
+                </rich:menuItem-->
+		<!--rich:menuItem>
+                   <f:facet name="icon">
+                     <h:graphicImage value="/img/icons/group-by.gif" style="border:0;vertical-align:middle;" styleClass="pic"/> 
+                   </f:facet>
+                    <s:link view="/faces/support_list.xhtml" >
+                      <h:outputText value="Список сообщений" style="color:#0090FF"/>
+                    </s:link>
+                 </rich:menuItem-->
+		<!--/rich:dropDownMenu>
+        
+         </rich:toolBarGroup-->
+		<rich:toolBarGroup location="right">
+			<h:graphicImage id="help_org" value="/img/icons/personal.gif"
+				styleClass="pic_tbar" alt="account" />
+		</rich:toolBarGroup>
+		<rich:toolBarGroup location="right">
+			<s:link action="#{authenticator.localLogout}" view="/welcome.xhtml">
+				<h:graphicImage url="/img/icons/logout.gif"
+					style="border:0;vertical-align:middle;" />
+				<h:outputText value="Выйти" />
+			</s:link>
+			<!--s:link action="#{authenticator.localLogout}">
+            <h:graphicImage url="/img/icons/logout.gif" style="border:0;vertical-align:middle;"/>
+            <h:outputText value="Выйти"/>
+          </s:link-->
+			<!--s:link action="#{identity.logout}">
+            <h:graphicImage url="/img/icons/logout.gif" style="border:0;vertical-align:middle;"/>
+            <h:outputText value="Выйти"/>
+          </s:link-->
+			<!--h:form>
+           <h:commandLink action="#{externalAuthenticator.singleLogout}"
+				value="Global logout2" />
+			</h:form-->
+		</rich:toolBarGroup>
+	</rich:toolBar>
+	<!--/h:form-->
+	<rich:modalPanel id="help_mp" width="400" autosized="true">
+		<f:facet name="header">
+			<h:panelGroup>
+				<h:outputText value="Служба Поддержки" />
+			</h:panelGroup>
+		</f:facet>
+		<f:facet name="controls">
+			<h:panelGroup>
+				<h:graphicImage onclick="#{rich:component('help_mp')}.hide();"
+					value="/img/icons/close.gif" />
+			</h:panelGroup>
+		</f:facet>
+		<form action="#{request.contextPath}/servlet/support" method="post"
+			target="#">
+			<!--h:form id="help_form" target="#"-->
+			<table style="width: 100%;">
+				<tr>
+					<td width="80px" height="25px"><h:outputText value="ФИО" /></td>
+					<td>
+						<!--input type="text" id ="help_fio"/--> <h:inputText
+							id="help_fio" value="" />
+					</td>
+				</tr>
+				<tr>
+					<td width="80px" height="25px"><h:outputText value="Должность" />
+					</td>
+					<td><h:inputText id="help_post" value="" /></td>
+				</tr>
+				<tr>
+					<td width="80px" height="25px"><h:outputText value="Телефон" />
+					</td>
+					<td>
+						<!--input type="text" id ="help_mail"/--> <h:inputText
+							id="help_tel" value="" />
+					</td>
+				</tr>
+				<tr>
+					<td width="80px" height="25px"><h:outputText value="E-mail" />
+					</td>
+					<td>
+						<!--input type="text" id ="help_mail"/--> <h:inputText
+							id="help_mail" value="" />
+					</td>
+				</tr>
+				<tr>
+					<td width="80px" height="25px"><h:outputText value="Сообщение" />
+					</td>
+					<td>
+						<!--textarea id="help_text" cols="45" rows="3"></textarea--> <h:inputTextarea
+							value="" id="help_text" cols="45" rows="3" />
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center" height="35px"><a4j:commandButton
+							value="Отмена"
+							onclick="#{rich:component('help_mp')}.hide();return false;"
+							styleClass="but_class" /> <!--a4j:commandButton value="Отправить" 
+                    action="#{supportManager.send()}"
+                    onclick="return false;" 
+                    styleClass="but_class"/--> <input id="help_button"
+						type="submit" value="Отправить"
+						onclick="#{rich:component('help_mp')}.hide(); return false;" /></td>
+				</tr>
+			</table>
+			<!--/h:form-->
+		</form>
+
+	</rich:modalPanel>
+
+	<!--/s:cache-->
+	<rich:toolTip direction="bottom-right" for="help_org">
+		<table style="width: 300px;">
+			<tr>
+				<td><h:outputText value="#{currentUser.fio}" escape="false" />
+				</td>
+			</tr>
+			<tr>
+				<td><h:outputText value="#{currentUser.orgName}" escape="false" />
+				</td>
+			</tr>
+			<tr>
+				<td><ui:repeat value="#{currentUser.rolesInfoList}"
+						var="rinfol">
+						<h:outputText value="#{rinfol}" />
+						<br />
+					</ui:repeat></td>
+			</tr>
+		</table>
+	</rich:toolTip>
+
+
+</ui:composition>
+
+<!--s:link view="/welcome.xhtml" action="#{identity.logout}" value="Выйти" /-->
+<!--h:inputText styleClass="barsearch" />
+            <h:commandButton styleClass="barsearchbutton" onclick="return false;"
+                value="Поиск" /-->
+<!--h:graphicImage value="/img/icons/logout.gif" styleClass="pic_tbar" alt="save" />
+              <h:link value="Выйти" outcome="/welcome.xhtml"/-->
+
+<!--rich:dropDownMenu mode="client"  
+                                 itemClass="logout_mi" 
+                                 selectItemClass="logout_mis" >
+                <f:facet name="label">
+                    <h:panelGroup>
+                        <h:graphicImage value="/img/icons/logout.gif" style="border:0;vertical-align:middle;" styleClass="pic_tbar"/>
+                        <h:outputText value="  Выйти" />
+                    </h:panelGroup>
+                </f:facet>
+                <rich:menuItem>
+                 <f:facet name="icon">
+                     <h:graphicImage value="/img/icons/group-by.gif" style="border:0;vertical-align:middle;" styleClass="pic_tbar"/> 
+                </f:facet>   
+                     <h:link value="Из АРМ" outcome="/select_arm.xhtml"/>
+                     
+                </rich:menuItem>
+                 <rich:menuItem>
+                   <f:facet name="icon">
+                     <h:graphicImage value="/img/icons/group-by.gif" style="border:0;vertical-align:middle;" styleClass="pic_tbar"/> 
+                   </f:facet>
+                     <h:commandLink action="#{authenticator.logout}"
+                     value="Из Системы" />
+                </rich:menuItem>
+                </rich:dropDownMenu-->

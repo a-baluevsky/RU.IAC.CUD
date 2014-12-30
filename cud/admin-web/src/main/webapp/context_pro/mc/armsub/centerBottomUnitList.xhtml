@@ -1,0 +1,438 @@
+<?xml version='1.0' encoding='windows-1251' ?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:s="http://jboss.com/products/seam/taglib"
+	xmlns:c="http://java.sun.com/jstl/core">
+
+	<h3 class="ui-widget-header">Подробно</h3>
+	<div class="ui-layout-content">
+		<a4j:outputPanel id="outCenterBottom">
+
+			<table style="width: 100%;" border="0">
+				<tr>
+					<td width="90%">
+
+						<div style="margin: 5px;">
+
+							<!--c:if test="#{armManager.evaluteForBean}"-->
+							<s:div rendered="#{armSubManager.evaluteForBean}">
+
+								<h:form>
+
+									<a4j:outputPanel id="outCenterBottom_onlyFields">
+
+										<h:messages style="color:red" globalOnly="false" />
+
+										<table style="width: 100%; font-size: 12px;" border="0">
+											<c:forEach items="#{armSubManager.auditItemsListContext}"
+												var="field">
+												<tr>
+													<td width="150px" height="25px" class="table_left_header">
+														<h:outputText value="#{field.itemLabel}" />
+													</td>
+													<td><h:outputText
+															value="#{armSubBean[field.itemField]}" /></td>
+												</tr>
+											</c:forEach>
+											<!--tr>
+            <td width="150px" height="25px" class="table_left_header">
+              <h:outputText value="Создал"/>
+            </td>
+            <td>
+               <h:outputText value="#{armSubBean.crtUserName}"/>
+            </td>
+          </tr>
+          <tr>
+            <td width="150px" height="25px" class="table_left_header">
+              <h:outputText value="Дата создания"/>
+            </td>
+            <td>
+               <h:outputText value="#{armSubBean.created}">
+                  <s:convertDateTime pattern="dd.MM.yy HH:mm:ss"/>
+               </h:outputText>   
+            </td>
+          </tr>
+          <tr>
+            <td width="150px" height="25px" class="table_left_header">
+              <h:outputText value="Редактировал"/>
+            </td>
+            <td>
+               <h:outputText value="#{armSubBean.updUserName}"/>
+            </td>
+          </tr>
+          <tr>
+            <td width="150px" height="25px" class="table_left_header">
+              <h:outputText value="Дата редактирования"/>
+            </td>
+            <td>
+               <h:outputText value="#{armSubBean.modified}">
+                  <s:convertDateTime pattern="dd.MM.yy HH:mm:ss"/>
+               </h:outputText>
+            </td>
+          </tr-->
+										</table>
+									</a4j:outputPanel>
+
+									<a4j:outputPanel id="outCenterBottom_onlyCert">
+
+										<table style="width: 100%; font-size: 12px;" border="0">
+											<tr>
+												<td height="25px" colspan="2"><h:outputText
+														value="Сертификат:" style="font-style:italic;" /></td>
+											</tr>
+											<tr>
+												<td width="150px" height="25px" class="table_left_header">
+													<h:outputText value="срок действия" />
+												</td>
+												<td><h:outputText
+														value="#{systemCertBean.date1} - #{systemCertBean.date2}" />
+												</td>
+											</tr>
+											<tr>
+												<td width="150px" height="25px" class="table_left_header">
+													<h:outputText value="номер" />
+												</td>
+												<td><h:outputText value="#{systemCertBean.serial}" /></td>
+											</tr>
+											<tr valign="top">
+												<td width="150px" height="25px" class="table_left_header"
+													style="padding-top: 7px;"><h:outputText
+														value="субъект" /></td>
+												<td style="padding-top: 10px;"><h:outputText
+														value="#{systemCertBean.name}" /></td>
+											</tr>
+
+										</table>
+									</a4j:outputPanel>
+
+								</h:form>
+
+							</s:div>
+							<!--/c:if-->
+
+						</div>
+					</td>
+					<td width="90px" valign="top"></td>
+				</tr>
+			</table>
+
+		</a4j:outputPanel>
+	</div>
+
+	<div class="ui-widget-footer" style="background: #E6E6E6;">
+		<a4j:outputPanel id="outCBmpCrt">
+			<rich:modalPanel id="CBmpCrt" rendered="#{param['onCreate']!=null}"
+				width="400" height="180">
+				<f:facet name="header">
+					<h:panelGroup>
+						<h:outputText value="Подсистема"></h:outputText>
+					</h:panelGroup>
+				</f:facet>
+				<f:facet name="controls">
+					<h:panelGroup>
+						<h:graphicImage onclick="#{rich:component('CBmpCrt')}.hide();"
+							value="/img/icons/close.gif" />
+					</h:panelGroup>
+				</f:facet>
+				<h:form id="CBformCrt">
+					<table style="width: 100%;">
+						<tr>
+							<td width="100px" height="25px"><h:outputText
+									value="Название" /></td>
+							<td><h:inputText value="#{armSubBeanCrt.subsystemName}"
+									id="name" maxlength="100" size="45" /></td>
+						</tr>
+						<tr>
+							<td width="100px" height="25px"><h:outputText value="Код" /></td>
+							<td><h:inputText value="#{armSubBeanCrt.subsystemCode}"
+									id="code" maxlength="240" size="45" /></td>
+						</tr>
+						<tr>
+							<td width="100px" valign="top" height="25px"><h:outputText
+									value="ИС" /></td>
+							<td style="padding-top: 5px; padding-bottom: 5px;"><h:selectOneMenu
+									style="width:300px;" id="appl"
+									value="#{armSubBeanCrt.acIsBssTLong}" immediate="true">
+									<f:selectItem itemLabel="-------" itemValue="-1" />
+									<s:selectItems value="#{rolManager.listArm}" var="n"
+										label="#{n.name}" itemValue="#{n.idArm}" />
+								</h:selectOneMenu></td>
+						</tr>
+						<tr>
+							<td colspan="2" align="center" height="35px"><a4j:commandButton
+									value="Отмена"
+									onclick="#{rich:component('CBmpCrt')}.hide();return false;"
+									styleClass="but_class" /> <a4j:commandButton value="Сохранить"
+									action="#{armSubManager.addArmSub}"
+									reRender="outCenterCenter, outCenterCenterFooter"
+									oncomplete="#{armSubManager.armSubCodeExist ? 'alert(\'Такой код уже существует!\')' : 'hideMPCrt();' }"
+									onclick="if(check('CBformCrt')){return false;}"
+									styleClass="but_class">
+									<f:param name="onCreate" value="1" />
+									<f:param name="remoteAudit" value="CrtFact" />
+									<f:param
+										name="#{param['sessionId']!=null ? 'sessionId' : 'xxx1'}"
+										value="#{param['sessionId']}" />
+								</a4j:commandButton></td>
+						</tr>
+					</table>
+				</h:form>
+			</rich:modalPanel>
+		</a4j:outputPanel>
+		<a4j:outputPanel id="outCBmpUpd">
+			<rich:modalPanel id="CBmpUpd" rendered="#{param['onUpdate']!=null}"
+				width="400" height="180">
+				<f:facet name="header">
+					<h:panelGroup>
+						<h:outputText value="Подсистема" />
+					</h:panelGroup>
+				</f:facet>
+				<f:facet name="controls">
+					<h:panelGroup>
+						<h:graphicImage onclick="#{rich:component('CBmpUpd')}.hide();"
+							value="/img/icons/close.gif" />
+					</h:panelGroup>
+				</f:facet>
+				<h:form id="CBformUpd">
+					<!--h:inputHidden value="#{armSubBean.baseId}"/-->
+					<table style="width: 100%;">
+						<tr>
+							<td width="100px" height="25px"><h:outputText
+									value="Название" /></td>
+							<td><h:inputText value="#{armSubBean.subsystemName}"
+									id="name" maxlength="100" size="45" /></td>
+						</tr>
+						<tr>
+							<td width="100px" height="25px"><h:outputText value="Код" /></td>
+							<td><h:inputText value="#{armSubBean.subsystemCode}"
+									id="code" maxlength="240" size="45" /></td>
+						</tr>
+						<tr>
+							<td width="100px" valign="top" height="25px"><h:outputText
+									value="ИС" /></td>
+							<td style="padding-top: 5px; padding-bottom: 5px;"><h:selectOneMenu
+									style="width:300px;" id="appl"
+									value="#{armSubBean.acIsBssTLong}" immediate="true">
+									<f:selectItem itemLabel="-------" itemValue="-1" />
+									<s:selectItems value="#{rolManager.listArm}" var="n"
+										label="#{n.name}" itemValue="#{n.idArm}" />
+								</h:selectOneMenu></td>
+						</tr>
+						<tr>
+							<td colspan="2" align="center" height="35px"><a4j:commandButton
+									value="Отмена"
+									onclick="#{rich:component('CBmpUpd')}.hide();return false;"
+									styleClass="but_class" /> <a4j:commandButton value="Сохранить"
+									action="#{armSubManager.updArmSub}"
+									reRender="outCenterCenter, outCenterBottom_onlyFields"
+									oncomplete="#{armSubManager.armSubCodeExist ? 'alert(\'Такой код уже существует!\')' : 'hideMPUpd();' }"
+									onclick="if(check('CBformUpd')){return false;}"
+									styleClass="but_class">
+									<f:param name="onUpdate" value="1" />
+									<f:param name="remoteAudit" value="UpdFact" />
+									<f:param name="sessionId" value="#{param['sessionId']}" />
+								</a4j:commandButton></td>
+						</tr>
+					</table>
+				</h:form>
+			</rich:modalPanel>
+		</a4j:outputPanel>
+		<a4j:outputPanel id="outCBmpDel">
+			<rich:modalPanel id="CBmpDel" rendered="#{param['onDelete']!=null}"
+				width="300" autosized="true">
+				<f:facet name="header">
+					<h:panelGroup>
+						<h:outputText value="ИС" />
+					</h:panelGroup>
+				</f:facet>
+				<f:facet name="controls">
+					<h:panelGroup>
+						<h:graphicImage onclick="#{rich:component('CBmpDel')}.hide();"
+							value="/img/icons/close.gif" />
+					</h:panelGroup>
+				</f:facet>
+				<h:form>
+					<h:inputHidden value="#{armSubBean.idSrv}" />
+
+					<h:outputText style="color:red;display:block;margin-bottom:7px;"
+						value="#{armSubManager.dellMessage}" escape="false" />
+
+					<c:if test="#{armSubManager.delNot==0}">
+						<h:outputText style="display:block;margin-bottom:7px;"
+							value="Удалить #{armSubBean.subsystemName}?" />
+					</c:if>
+
+					<div style="white-space: nowrap; text-align: center;">
+						<a4j:commandButton value="Отмена"
+							onclick="#{rich:component('CBmpDel')}.hide();return false;"
+							styleClass="but_class" />
+						<c:if test="#{armSubManager.delNot==0}">
+							<a4j:commandButton value="Удалить"
+								action="#{armSubManager.delArmSub}"
+								reRender="outCenterCenter, outCenterCenterFooter, outCenterBottom, outCenterCenterHeader"
+								oncomplete=" #{rich:component('CBmpDel')}.hide();"
+								styleClass="but_class">
+								<f:param name="onDelete" value="1" />
+								<f:param name="remoteAudit" value="DelFact" />
+							</a4j:commandButton>
+						</c:if>
+					</div>
+				</h:form>
+			</rich:modalPanel>
+		</a4j:outputPanel>
+
+		<a4j:outputPanel id="outCBmpCert">
+			<rich:modalPanel id="CBmpCert" rendered="#{param['onCert']!=null}"
+				width="400" autosized="true">
+				<f:facet name="header">
+					<h:panelGroup>
+						<h:outputText value="Сертификаты" />
+					</h:panelGroup>
+				</f:facet>
+				<f:facet name="controls">
+					<h:panelGroup>
+						<h:graphicImage onclick="#{rich:component('CBmpCert')}.hide();"
+							value="/img/icons/close.gif" />
+					</h:panelGroup>
+				</f:facet>
+
+				<h:outputText style="display:block;margin-bottom:7px;"
+					value="Сертификат:" />
+
+				<c:if test="#{systemCertBean.serial!=null}">
+					<table width="99%" border="1"
+						style="border-color: silver; margin-bottom: 7px;">
+						<tr valign="top">
+							<td width="70"
+								style="font-style: italic; padding: 5px; border-color: silver;">
+								<h:outputText value="Срок действия:" />
+							</td>
+							<td style="padding: 5px; border-color: silver;"><h:outputText
+									value=" #{systemCertBean.date1} - #{systemCertBean.date2}" /></td>
+						</tr>
+						<tr valign="top">
+							<td width="70"
+								style="font-style: italic; padding: 5px; border-color: silver;">
+								<h:outputText value="Номер:" />
+							</td>
+							<td style="padding: 5px; border-color: silver;"><h:outputText
+									value=" #{systemCertBean.serial}" /></td>
+						</tr>
+						<tr valign="top">
+							<td width="70"
+								style="font-style: italic; padding: 5px; border-color: silver;">
+								<h:outputText value="Субъект:" />
+							</td>
+							<td style="padding: 5px; border-color: silver;"><h:outputText
+									value="#{systemCertBean.name}" /></td>
+						</tr>
+
+					</table>
+				</c:if>
+				<c:if test="#{systemCertBean.serial==null}">
+					<h:outputText value="Сертификат отсутствует"
+						style="color:red; display:block; margin-bottom:7px;" />
+				</c:if>
+				<form target="frame"
+					action="/infoscud/servlet/fileupload?sessionId=#{param['sessionId']}&amp;typeSystem=subsystem"
+					method="post" enctype="multipart/form-data">
+
+					<!--INPUT TYPE="HIDDEN" NAME="sessionId" VALUE="#{param['sessionId']}"/-->
+
+					<input name="cert_file" type="file" id="cert_file" />
+
+					<!--h:commandButton value=">1>" action="#{proba.action()}" /-->
+
+
+
+					<div
+						style="white-space: nowrap; text-align: center; margin-top: 15px;">
+						<a4j:commandButton value="Отмена"
+							onclick="#{rich:component('CBmpCert')}.hide();return false;"
+							styleClass="but_class" />
+						<h:commandButton value="Загрузить"
+							onclick="if(check_cert()){return false;}else{iframeLoadFlag=1;}" />
+
+						<c:if test="#{systemCertBean.serial!=null}">
+							<a4j:commandButton value="Удалить"
+								onclick="if(confirm('Удалить сертификат?')){invokeCertRemove(#{param['sessionId']});} return false;"
+								styleClass="but_class" />
+
+						</c:if>
+					</div>
+
+				</form>
+
+				<iframe name="frame" style="display: none;"
+					onload="load_iframe(#{param['sessionId']})" />
+
+			</rich:modalPanel>
+		</a4j:outputPanel>
+	</div>
+
+	<script>
+//<![CDATA[
+
+var iframeLoadFlag=0;
+           
+function check(tform){
+ var msg="";
+ if (jQuery.trim(document.getElementById(tform+":name").value)==""){
+	  msg+="Нет Наименования !\n";
+ }
+ if (jQuery.trim(document.getElementById(tform+":code").value)==""){
+	  msg+="Нет Кода !\n";
+ }else{
+	 if( jQuery.trim(document.getElementById(tform+":code").value).search(new RegExp(/[А-яёЁ]/g)) !=-1){
+		 msg+="В Коде недопустима кириллица !\n";
+     }
+ }
+ if (document.getElementById(tform+":appl").value=="-1"){
+     msg+="Не выбрана ИС!\n";
+ }
+		 
+ 
+ if(msg!=""){
+  alert(msg);
+  return true;
+ }else{
+  return false;
+}
+}
+
+function check_cert(){
+	 var msg="";
+	 if (jQuery.trim(document.getElementById("cert_file").value)==""){
+		  msg+="Файл не выбран!\n";
+	 }
+
+	 
+	 if(msg!=""){
+	  alert(msg);
+	  return true;
+	 }else{
+	  return false;
+	}
+}
+
+function hideMPCrt(){
+	#{rich:component('CBmpCrt')}.hide();
+}
+function hideMPUpd(){
+	#{rich:component('CBmpUpd')}.hide();
+}
+
+
+function load_iframe(sessionId){
+	//alert(iframeLoadFlag);
+	if(iframeLoadFlag==1){
+		invokeCertRefresh(sessionId);
+	}
+}
+//]]>
+</script>
+</ui:composition>

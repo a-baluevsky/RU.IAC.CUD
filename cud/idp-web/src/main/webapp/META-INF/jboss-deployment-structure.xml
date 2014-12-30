@@ -1,0 +1,37 @@
+<jboss-deployment-structure>
+
+	<deployment>
+
+		<exclusions>
+			<module name="org.slf4j" />
+		</exclusions>
+
+		<dependencies>
+			<system export="true">
+				<paths>
+					<path name="ru/CryptoPro/JCP" />
+					<path name="ru/CryptoPro/JCP/tools" />
+					<path name="ru/CryptoPro/JCP/params" />
+					<path name="ru/CryptoPro/JCP/ASN/CryptographicMessageSyntax" />
+					<path name="com/objsys/asn1j/runtime" />
+
+					<path name="ru/CryptoPro/JCPxml/dsig/internal/dom" />
+
+				</paths>
+			</system>
+			<module name="org.picketlink" />
+			<module name="ru.spb.iac.cud" />
+			<module name="ru.spb.iac.cud.idp" />
+
+			<!-- ??? -->
+			<module name="org.apache.santuario.xmlsec" />
+			<!--module name="ru.cryptopro" / -->
+
+			<module name="ch.qos.logback" />
+			<module name="org.slf4j" slot="1.6.1" />
+
+
+		</dependencies>
+	</deployment>
+</jboss-deployment-structure>
+

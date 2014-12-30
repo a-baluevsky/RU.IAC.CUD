@@ -1,0 +1,1299 @@
+<?xml version='1.0' encoding='windows-1251' ?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:s="http://jboss.com/products/seam/taglib"
+	xmlns:c="http://java.sun.com/jstl/core">
+
+	<h3 class="ui-widget-header">Подробно</h3>
+
+	<!--div class="ui-widget-header" style="background:#E6E6E6;">
+  <a4j:outputPanel id="outCenterBottomHeader">
+   <table>
+      <tr>
+       <td>
+        <s:div rendered="#{param['remoteAudit']!=null}">
+        <table style="width:500px" border="0">
+         <tr>
+         <td>
+           <s:div rendered="#{param['sessionId']!=null}">
+            
+            <h:outputText value="Искать соответсвия по : "/>
+            
+            <a4j:commandButton style="width:50px;" 
+                value="ФИО"
+                reRender="outCBmpCrt" ajaxSingle="true"
+                action="#{bindManager.forViewCrt}"
+                oncomplete="#{rich:component('CBmpCrt')}.show();"
+                rendered="#{authenticator.accessPerm('002','2')}"
+                styleClass="but_class">
+            <f:param name="onCreate" value="1"/>
+            <f:param name="remoteAudit" value="OpenCrtFact"/>
+            <f:param name="#{param['sessionId']!=null ? 'sessionId' : 'xxx1'}" value="#{param['sessionId']}"/>
+          </a4j:commandButton>
+            
+            <a4j:commandButton style="width:50px;margin-left:10px;"
+                ajaxSingle="true" reRender="outCBmpUpd"
+                value="ФИ" action="#{bindManager.forViewUpdDel}"
+                oncomplete="#{rich:component('CBmpUpd')}.show();"
+                rendered="#{authenticator.accessPerm('002','3') and 
+                (currentUser.idUser!=param['sessionId'] or currentUser.idUser==linksMap.superUserCode)
+                and (bindBeanView.idUser!=linksMap.superUserCode or currentUser.idUser==linksMap.superUserCode) and 
+                (bindBeanView.isSysAdmin!=1 or currentUser.idUser==linksMap.superUserCode)}"
+                styleClass="but_class">
+              <f:param name="onUpdate" value="1"/>
+              <f:param name="remoteAudit" value="OpenUpdFact"/>
+              <f:param name="sessionId" value="#{param['sessionId']}"/>
+            </a4j:commandButton>
+            
+            <a4j:commandButton style="width:50px;margin-left:10px;"
+                ajaxSingle="true" reRender="outCBmpUpdRole"
+                value="ФО" action="#{bindManager.forViewUpdDel}"
+                oncomplete="#{rich:component('CBmpUpdRole')}.show();"
+                rendered="#{authenticator.accessPerm('002','3') and 
+                (currentUser.idUser!=param['sessionId'] or currentUser.idUser==linksMap.superUserCode)
+                and (bindBeanView.idUser!=linksMap.superUserCode or currentUser.idUser==linksMap.superUserCode) and 
+                (bindBeanView.isSysAdmin!=1 or currentUser.idUser==linksMap.superUserCode)}"
+                styleClass="but_class">
+              <f:param name="onUpdateRole" value="1"/>
+              <f:param name="remoteAudit" value="OpenUpdFact"/>
+              <f:param name="sessionId" value="#{param['sessionId']}"/>
+            </a4j:commandButton>
+            
+             <a4j:commandButton style="width:50px;margin-left:10px;"
+                ajaxSingle="true" reRender="outCBmpUpdGroup"
+                value="Ф" action="#{bindManager.forViewUpdDel}"
+                oncomplete="#{rich:component('CBmpUpdGroup')}.show();"
+                rendered="#{authenticator.accessPerm('002','3') and 
+                (currentUser.idUser!=param['sessionId'] or currentUser.idUser==linksMap.superUserCode)
+                and (bindBeanView.idUser!=linksMap.superUserCode or currentUser.idUser==linksMap.superUserCode) and 
+                (bindBeanView.isSysAdmin!=1 or currentUser.idUser==linksMap.superUserCode)}"
+                styleClass="but_class">
+              <f:param name="onUpdateGroup" value="1"/>
+              <f:param name="remoteAudit" value="OpenUpdFact"/>
+              <f:param name="sessionId" value="#{param['sessionId']}"/>
+            </a4j:commandButton>
+             
+          </s:div>
+         </td> 
+       </tr>
+      </table> 
+     </s:div>
+         </td>
+        <td height="25px;">
+         <h:outputText value="&amp;nbsp;" escape="false"/>
+       </td>
+      </tr>
+     </table>
+   </a4j:outputPanel>
+</div-->
+
+
+	<div class="ui-layout-content">
+		<a4j:outputPanel id="outCenterBottom">
+
+			<table style="width: 100%;" border="0">
+				<tr>
+					<td width="90%">
+						<!--s:div style="margin:5px;" rendered="#{param['sessionId']!=null}"-->
+						<div style="margin: 5px;">
+
+							<c:if test="#{bindManager.evaluteForBean}">
+
+								<h:form>
+
+									<h:messages style="color:red" globalOnly="false" />
+
+									<table style="width: 100%; font-size: 12px;" border="0">
+										<c:if
+											test="#{bindStateHolder.columnFilterValues['t1_iogv_bind_type']==2}">
+											<tr style="font-weight: bold;">
+												<td width="150px" height="25px" class="table_left_header">
+												</td>
+												<td><h:outputText value="С привязкой к ОГК ИОГВ" /></td>
+												<td><h:outputText value="Без привязки" /></td>
+											</tr>
+										</c:if>
+
+										<c:forEach items="#{bindManager.auditItemsListContext}"
+											var="field">
+											<!--a4j:repeat var="field" rowKeyVar="rkv"
+                      value="#{bindManager.auditItemsListContext}"-->
+											<tr>
+												<td width="150px" height="25px" class="table_left_header">
+													<h:outputText value="#{field.itemLabel}" />
+												</td>
+												<td><h:outputText
+														value="#{bindBeanView[field.itemField]}" /></td>
+												<td><c:if
+														test="#{bindStateHolder.columnFilterValues['t1_iogv_bind_type']==2}">
+														<c:choose>
+															<c:when test="#{field.itemField == 'fio'}">
+																<h:outputText
+																	value="#{bindBeanViewUzp.surname} #{bindBeanViewUzp.name1} #{bindBeanViewUzp.name2}" />
+															</c:when>
+															<c:when test="#{field.itemField == 'position'}">
+																<h:outputText value="#{bindBeanViewUzp.position}" />
+															</c:when>
+															<c:when test="#{field.itemField == 'department'}">
+																<h:outputText value="#{bindBeanViewUzp.department}" />
+															</c:when>
+															<c:when test="#{field.itemField == 'email'}">
+																<h:outputText value="#{bindBeanViewUzp.email}" />
+															</c:when>
+															<c:when test="#{field.itemField == 'phone'}">
+																<h:outputText value="#{bindBeanViewUzp.phone}" />
+															</c:when>
+														</c:choose>
+													</c:if></td>
+											</tr>
+											<!--/a4j:repeat-->
+										</c:forEach>
+										<tr>
+											<td width="150px" height="25px" valign="top"
+												style="padding-top: 10px;" class="table_left_header"><h:outputText
+													value="Роли:" /></td>
+											<td style="padding-top: 10px;" valign="top" colspan="2">
+												<table style="width: 100%;" border="0">
+													<c:forEach items="#{bindManager.listBindArmForView}"
+														var="vrecord">
+														<!--a4j:repeat var="vrecord" value="#{bindManager.listBindArmForView}"-->
+														<tr>
+															<td height="15" style="font-weight: bold;"><h:outputText
+																	value=" #{vrecord.name}:" /></td>
+														</tr>
+														<tr>
+															<td>
+																<table style="width: 100%; margin-bottom: 10px;">
+																	<c:forEach items="#{vrecord.rolList}" var="vit">
+																		<!--ui:repeat var="vit" value="#{vrecord.rolList}"-->
+																		<tr>
+																			<td height="15" style="padding-left: 30px;"><h:outputText
+																					value=" #{vit.roleTitle}" /></td>
+																		</tr>
+																		<!--/ui:repeat-->
+																	</c:forEach>
+																</table>
+															</td>
+														</tr>
+														<!--/a4j:repeat-->
+													</c:forEach>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td width="150px" height="25px" valign="top"
+												style="padding-top: 10px;" class="table_left_header"><h:outputText
+													value="Роли через группы:" /></td>
+											<td style="padding-top: 10px;" valign="top" colspan="2">
+												<table style="width: 100%;" border="0">
+													<c:forEach items="#{bindManager.listBindGroupForView}"
+														var="grecord">
+														<tr>
+															<td height="15" style="font-weight: bold;"><h:outputText
+																	value=" #{grecord.full}:" /></td>
+														</tr>
+														<tr>
+															<td>
+																<table style="width: 100%; margin-bottom: 10px;">
+																	<c:forEach items="#{grecord.armList}" var="git">
+																		<tr>
+																			<td height="15" style="padding-left: 30px;"><h:outputText
+																					value=" #{git.name}:" /></td>
+																		</tr>
+																		<tr>
+																			<td>
+																				<table style="width: 100%; margin-bottom: 10px;">
+																					<c:forEach items="#{git.rolList}" var="g2it">
+																						<tr>
+																							<td height="15" style="padding-left: 60px;">
+																								<h:outputText value=" #{g2it.roleTitle}" />
+																							</td>
+																						</tr>
+																					</c:forEach>
+																				</table>
+																			</td>
+																		</tr>
+																	</c:forEach>
+																</table>
+															</td>
+														</tr>
+													</c:forEach>
+												</table>
+											</td>
+										</tr>
+										<!--tr>
+            <td width="150px" height="25px" class="table_left_header">
+              <h:outputText value="Создал"/>
+            </td>
+            <td>
+               <h:outputText value="#{bindBean.crtUserName}"/>
+            </td>
+          </tr>
+          <tr>
+            <td width="150px" height="25px" class="table_left_header">
+              <h:outputText value="Дата создания"/>
+            </td>
+            <td>
+               <h:outputText value="#{bindBean.created}">
+                  <s:convertDateTime pattern="dd.MM.yy HH:mm:ss"/>
+               </h:outputText>   
+            </td>
+          </tr>
+          <tr>
+            <td width="150px" height="25px" class="table_left_header">
+              <h:outputText value="Редактировал"/>
+            </td>
+            <td>
+               <h:outputText value="#{bindBean.updUserName}"/>
+            </td>
+          </tr>
+          <tr>
+            <td width="150px" height="25px" class="table_left_header">
+              <h:outputText value="Дата редактирования"/>
+            </td>
+            <td>
+               <h:outputText value="#{bindBean.modified}">
+                  <s:convertDateTime pattern="dd.MM.yy HH:mm:ss"/>
+               </h:outputText>
+            </td>
+          </tr-->
+									</table>
+								</h:form>
+							</c:if>
+						</div> <!--/s:div-->
+					</td>
+					<td width="90px" valign="top">
+						<!--rich:panel style="margin:5px 5px 0 0;">
+     <f:facet name="header">
+       Действия:
+      </f:facet>
+     <a4j:form>
+      <a4j:commandButton style="width:60px;" value="Создать"
+       reRender="outCBmpCrt" ajaxSingle="true"
+       oncomplete="#{rich:component('CBmpCrt')}.show();"
+       rendered="#{authenticator.accessPerm('002','2')}"
+       styleClass="but_class">
+          <f:param name="onCreate" value="1"/>
+      </a4j:commandButton>
+     
+     <s:div rendered="#{param['idBind']!=null}">
+       <a4j:commandButton style="margin-top:5px;width:60px;"
+         ajaxSingle="true" reRender="outCBmpUpd"
+         value="Изменить" action="#{bindManager.forView}"
+         oncomplete="#{rich:component('CBmpUpd')}.show();"
+         rendered="#{authenticator.accessPerm('002','3')}"
+         styleClass="but_class">
+         <f:param name="onUpdate" value="1"/>
+         <f:param name="idBind" value="#{param['idBind']}"/>
+       </a4j:commandButton>
+       
+       <a4j:commandButton 
+         reRender="outCBmpDel"
+         value="Удалить"  style="margin-top:5px;width:60px;"
+         action="#{bindManager.forView}"
+         oncomplete="#{rich:component('CBmpDel')}.show();"
+         rendered="#{authenticator.accessPerm('002','4')}"
+         styleClass="but_class">
+         <f:param name="onDelete" value="1"/>
+         <f:param name="idBind" value="#{param['idBind']}"/>
+       </a4j:commandButton>
+    
+     </s:div>
+    </a4j:form>
+   </rich:panel-->
+					</td>
+				</tr>
+			</table>
+
+		</a4j:outputPanel>
+
+	</div>
+
+	<div class="ui-widget-footer" style="background: #E6E6E6;">
+
+
+		<a4j:outputPanel id="outCBmpSearchForm">
+			<rich:modalPanel id="CBmpSearchForm" width="900" autosized="true"
+				rendered="#{param['onSearchForm']!=null}"
+				onbeforeshow="prepareSearchView();setHDiv_min('CBmpSearchResultsHDiv');">
+				<f:facet name="header">
+					<h:panelGroup>
+						<h:outputText value="Поиск"></h:outputText>
+					</h:panelGroup>
+				</f:facet>
+				<f:facet name="controls">
+					<h:panelGroup>
+						<h:graphicImage
+							onclick="#{rich:component('CBmpSearchForm')}.hide();"
+							value="/img/icons/close.gif" />
+					</h:panelGroup>
+				</f:facet>
+
+				<h:form id="CBformSearchForm">
+
+					<table style="width: 99%;" border="0">
+						<tr>
+							<td width="410px">
+
+								<table style="width: 99%;" border="0">
+
+									<tr>
+										<td width="60px"><h:outputText value="Фамилия" /></td>
+										<td><h:inputText id="search_fam"
+												value="#{bindManager.fioArray[0]}" size="40" /> <s:link
+												title="Очистить"
+												onclick="document.getElementById('CBformSearchForm:search_fam').value='';return false;">
+												<h:graphicImage value="/img/icons/data_clear.gif"
+													styleClass="pic_tbar"
+													style="border:0;vertical-align:middle;" />
+											</s:link> <s:link title="Востановить"
+												onclick="document.getElementById('CBformSearchForm:search_fam').value=search_fam;return false;">
+												<h:graphicImage value="/img/icons/data_recover.gif"
+													styleClass="pic_tbar"
+													style="border:0;vertical-align:middle;" />
+											</s:link></td>
+									</tr>
+									<tr>
+										<td><h:outputText value="Имя" /></td>
+										<td><h:inputText id="search_name"
+												value="#{bindManager.fioArray[1]}" size="40" /> <s:link
+												title="Очистить"
+												onclick="document.getElementById('CBformSearchForm:search_name').value='';return false;">
+												<h:graphicImage value="/img/icons/data_clear.gif"
+													styleClass="pic_tbar"
+													style="border:0;vertical-align:middle;" />
+											</s:link> <s:link title="Востановить"
+												onclick="document.getElementById('CBformSearchForm:search_name').value=search_name;return false;">
+												<h:graphicImage value="/img/icons/data_recover.gif"
+													styleClass="pic_tbar"
+													style="border:0;vertical-align:middle;" />
+											</s:link></td>
+									</tr>
+									<tr>
+										<td><h:outputText value="Отчество" /></td>
+										<td><h:inputText id="search_otch"
+												value="#{bindManager.fioArray[2]}" size="40" /> <s:link
+												title="Очистить"
+												onclick="document.getElementById('CBformSearchForm:search_otch').value='';return false;">
+												<h:graphicImage value="/img/icons/data_clear.gif"
+													styleClass="pic_tbar"
+													style="border:0;vertical-align:middle;" />
+											</s:link> <s:link title="Востановить"
+												onclick="document.getElementById('CBformSearchForm:search_otch').value=search_otch;return false;">
+												<h:graphicImage value="/img/icons/data_recover.gif"
+													styleClass="pic_tbar"
+													style="border:0;vertical-align:middle;" />
+											</s:link></td>
+									</tr>
+									<tr height="20px">
+										<td></td>
+										<td><h:selectBooleanCheckbox
+												value="#{bindManager.searchOrgExact}"
+												style="vertical-align:middle;" disabled="true" /> <h:outputText
+												value="Только организация пользователя" /></td>
+									</tr>
+								</table>
+							</td>
+							<td><a4j:commandButton style="width:50px;" value="Искать"
+									reRender="outCBmpSearchResults" ajaxSingle="false"
+									action="#{bindManager.search}"
+									oncomplete="/*setHDiv_min('CBmpSearchResultsHDiv');#{rich:component('CBmpSearchForm')}.hide();*//*#{rich:component('CBmpUpdGroup')}.show();*/"
+									onclick="if(check_search('CBformSearchForm')){return false;}"
+									styleClass="but_class">
+									<f:param name="onSearchForm" value="1" />
+									<f:param name="remoteAudit" value="OpenUpdFact" />
+									<f:param name="sessionId" value="#{param['sessionId']}" />
+								</a4j:commandButton> <a4j:commandButton value="Закрыть"
+									onclick="#{rich:component('CBmpSearchForm')}.hide();return false;"
+									styleClass="but_class" style="margin-left:10px;" /></td>
+
+						</tr>
+					</table>
+
+				</h:form>
+
+				<div style="margin: 5px;">
+					<h:outputText value="Учётные данные пользователя:"
+						style="font-style: italic" />
+				</div>
+
+				<rich:dataTable style="width:99%; background-color:#fffacd;"
+					var="it_uzp" value="#{bindBeanViewList}"
+					columnsWidth="190px, 190px, 190px, 190px, *">
+					<f:facet name="header">
+						<rich:columnGroup>
+							<rich:column>
+								<h:outputText value="ФИО" />
+							</rich:column>
+							<rich:column>
+								<h:outputText value="Организация" />
+							</rich:column>
+							<rich:column>
+								<h:outputText value="Подразделение" />
+							</rich:column>
+							<rich:column>
+								<h:outputText value="Должность" />
+							</rich:column>
+							<rich:column>
+								<h:outputText value="Действие" />
+							</rich:column>
+						</rich:columnGroup>
+					</f:facet>
+					<rich:column>
+						<h:outputText value=" #{it_uzp.fio}" />
+					</rich:column>
+					<rich:column>
+						<h:outputText value=" #{it_uzp.orgName}" />
+					</rich:column>
+					<rich:column>
+						<h:outputText value=" #{it_uzp.department}" />
+					</rich:column>
+					<rich:column>
+						<h:outputText value=" #{it_uzp.position}" />
+					</rich:column>
+					<rich:column>
+						<table width="99%" border="0">
+							<tr>
+								<td align="center">
+									<table border="0">
+										<tr>
+											<td width="20px;" align="center"><s:link
+													id="add_info_uzp_link" title="Дополнительная информация"
+													onclick="return false;">
+													<h:graphicImage value="/img/icons/info_icon.gif"
+														styleClass="pic_tbar"
+														style="border:0;vertical-align:middle;" />
+												</s:link> <rich:toolTip direction="top-right" mode="client"
+													showEvent="onclick"
+													style="background-color:white; padding:3; margin:0;"
+													layout="block" for="add_info_uzp_link">
+													<table style="">
+														<tr>
+															<td width="50px;" style="padding: 3px;"><h:outputText
+																	value="Телефон" /></td>
+															<td style="padding: 3px;"><h:outputText
+																	value="#{it_uzp.phone}" /></td>
+														</tr>
+														<tr>
+															<td width="50px;" style="padding: 3px;"><h:outputText
+																	value="Email" /></td>
+															<td style="padding: 3px;"><h:outputText
+																	value="#{it_uzp.email}" /></td>
+														</tr>
+													</table>
+
+												</rich:toolTip></td>
+											<!--td width="20px;" align="center">
+                           </td-->
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</rich:column>
+				</rich:dataTable>
+
+				<div style="margin: 5px;">
+					<h:outputText value="Найденные соответствия:"
+						style="font-style: italic" />
+				</div>
+
+
+
+				<div id="CBmpSearchResultsHDiv" style="width: 100%; overflow: auto;">
+
+					<a4j:outputPanel id="outCBmpSearchResults">
+
+						<h:form id="CBformSearchResults">
+
+							<table style="width: 99%;">
+
+								<tr>
+									<td><rich:dataTable id="CBdtSearchResults"
+											style="width:100%" rowKeyVar="rkv" var="it_iogv"
+											value="#{bindManager.applicantList}"
+											columnsWidth="190px, 190px, 190px, 190px, *"
+											rendered="#{not empty bindManager.applicantList}">
+											<!--f:facet name="header">
+                        <rich:columnGroup>
+                          <rich:column>
+                              <h:outputText value="ФИО" />
+                          </rich:column>
+                          <rich:column>
+                              <h:outputText value="Организация" />
+                          </rich:column>
+                          <rich:column>
+                              <h:outputText value="Подразделение" />
+                          </rich:column>
+                          <rich:column>
+                              <h:outputText value="Должность" />
+                          </rich:column>
+                           <rich:column>
+                              <h:outputText value="Действия" />
+                          </rich:column>
+                          </rich:columnGroup>
+                     </f:facet-->
+											<rich:column>
+												<h:outputText value=" #{it_iogv.fio}" />
+											</rich:column>
+											<rich:column>
+												<h:outputText value=" #{it_iogv.orgName}" />
+											</rich:column>
+											<rich:column>
+												<h:outputText value=" #{it_iogv.department}" />
+											</rich:column>
+											<rich:column>
+												<h:outputText value=" #{it_iogv.position}" />
+											</rich:column>
+											<rich:column>
+												<table width="99%" border="0">
+													<tr>
+														<td align="center">
+															<table border="0">
+																<tr>
+																	<td width="20px;" align="center"><s:link
+																			id="add_info_link" title="Дополнительная информация"
+																			onclick="return false;">
+																			<h:graphicImage value="/img/icons/info_icon.gif"
+																				styleClass="pic_tbar"
+																				style="border:0;vertical-align:middle;" />
+																		</s:link> <rich:toolTip direction="top-right" mode="client"
+																			showEvent="onclick"
+																			style="background-color:white; padding:3; margin:0;"
+																			layout="block" for="add_info_link">
+																			<table style="">
+																				<tr>
+																					<td width="50px;" style="padding: 3px;"><h:outputText
+																							value="Телефон" /></td>
+																					<td style="padding: 3px;"><h:outputText
+																							value="#{it_iogv.phone}" /></td>
+																				</tr>
+																				<tr>
+																					<td width="50px;" style="padding: 3px;"><h:outputText
+																							value="Email" /></td>
+																					<td style="padding: 3px;"><h:outputText
+																							value="#{it_iogv.email}" /></td>
+																				</tr>
+																			</table>
+
+																		</rich:toolTip></td>
+																	<td width="20px;" align="center"><s:link
+																			title="Связать"
+																			onclick="if (confirm('Cвязать записи:
+                                          \\n#{bindBeanViewList.get(0).fio} 
+                                          \\nи 
+                                          \\n#{it_iogv.fio} ?')){invokeBindRecords('#{it_iogv.usrCode}', '#{param['sessionId']}');} return false;">
+																			<h:graphicImage value="/img/icons/link5.bmp"
+																				styleClass="pic_tbar"
+																				style="border:0;vertical-align:middle;" />
+																		</s:link></td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table>
+											</rich:column>
+										</rich:dataTable> <h:outputText value="Соответствий не найдено"
+											rendered="#{empty bindManager.applicantList}"
+											style="color:red;" /></td>
+								</tr>
+
+
+								<!--tr>
+            <td  align="center" height="35px">
+          
+                 <a4j:commandButton value="Закрыть"
+                     onclick="#{rich:component('CBmpSearchForm')}.hide();return false;"
+                     styleClass="but_class"/>
+               </td>
+            </tr-->
+							</table>
+						</h:form>
+
+					</a4j:outputPanel>
+
+				</div>
+
+
+			</rich:modalPanel>
+
+			<script>
+//<![CDATA[
+ 
+ var search_init_flag=0;          
+
+//]]>
+</script>
+
+		</a4j:outputPanel>
+
+
+		<a4j:outputPanel id="outCBmpUnBind">
+			<rich:modalPanel id="CBmpUnBind"
+				rendered="#{param['onUnBind']!=null}" width="300" autosized="true">
+				<f:facet name="header">
+					<h:panelGroup>
+						<h:outputText value="Отмена привязки" />
+					</h:panelGroup>
+				</f:facet>
+				<f:facet name="controls">
+					<h:panelGroup>
+						<h:graphicImage onclick="#{rich:component('CBmpUnBind')}.hide();"
+							value="/img/icons/close.gif" />
+					</h:panelGroup>
+				</f:facet>
+				<h:form>
+					<!--h:inputHidden value="#{bindBean.idUser}"/-->
+
+					<!--h:outputText style="color:red;display:block;margin-bottom:7px;"
+          value="#{bindManager.dellMessage}"/-->
+
+					<h:outputText style="display:block;margin-bottom:7px;"
+						value="Отменить привязку" />
+
+
+					<h:outputText style="display:block;margin-bottom:7px;"
+						value="#{bindBean.surname} #{bindBean.name1} #{bindBean.name1}" />
+
+
+					<h:outputText style="display:block;margin-bottom:7px;" value="и" />
+
+					<h:outputText style="display:block;margin-bottom:15px;"
+						value="#{bindBean.fio} ?" />
+
+					<!--div style="white-space: nowrap;text-align:center; margin-bottom:15px;"-->
+					<table border="0" style="width: 99%; margin-bottom: 15px;">
+						<tr>
+							<td align="right" width="45%"><a4j:commandButton
+									value="Отмена"
+									onclick="#{rich:component('CBmpUnBind')}.hide();return false;"
+									styleClass="but_class" /></td>
+							<td style="padding-left: 10px;"><a4j:commandButton
+									value="Ок" action="#{bindManager.unBindRecords}"
+									reRender="outCenterCenter, outCenterCenterFooter, outCenterBottom, outCenterCenterHeader"
+									oncomplete="#{rich:component('CBmpUnBind')}.hide();"
+									styleClass="but_class" style="display:block;width:50px;">
+									<f:param name="sessionId_crack" value="#{param['sessionId']}" />
+									<f:param name="onUnBind" value="1" />
+									<f:param name="remoteAudit" value="DelFact" />
+								</a4j:commandButton></td>
+						</tr>
+					</table>
+					<!--/div-->
+				</h:form>
+			</rich:modalPanel>
+		</a4j:outputPanel>
+
+
+		<a4j:outputPanel id="outCBmpReSearchForm">
+			<rich:modalPanel id="CBmpReSearchForm" width="900" autosized="true"
+				rendered="#{param['onReSearchForm']!=null}"
+				onbeforeshow="prepareReSearchView();setHDiv_min('CBmpReSearchResultsHDiv');">
+				<f:facet name="header">
+					<h:panelGroup>
+						<h:outputText value="Пере-поиск"></h:outputText>
+					</h:panelGroup>
+				</f:facet>
+				<f:facet name="controls">
+					<h:panelGroup>
+						<h:graphicImage
+							onclick="#{rich:component('CBmpReSearchForm')}.hide();"
+							value="/img/icons/close.gif" />
+					</h:panelGroup>
+				</f:facet>
+
+				<h:form id="CBformReSearchForm">
+
+					<table style="width: 99%;" border="0">
+						<tr>
+							<td width="410px">
+
+								<table style="width: 99%;" border="0">
+
+									<tr>
+										<td width="60px"><h:outputText value="Фамилия" /></td>
+										<td><h:inputText id="search_fam"
+												value="#{bindManager.fioArray[0]}" size="40" /> <s:link
+												title="Очистить"
+												onclick="document.getElementById('CBformReSearchForm:search_fam').value='';return false;">
+												<h:graphicImage value="/img/icons/data_clear.gif"
+													styleClass="pic_tbar"
+													style="border:0;vertical-align:middle;" />
+											</s:link> <s:link title="Востановить"
+												onclick="document.getElementById('CBformReSearchForm:search_fam').value=search_fam;return false;">
+												<h:graphicImage value="/img/icons/data_recover.gif"
+													styleClass="pic_tbar"
+													style="border:0;vertical-align:middle;" />
+											</s:link></td>
+									</tr>
+									<tr>
+										<td><h:outputText value="Имя" /></td>
+										<td><h:inputText id="search_name"
+												value="#{bindManager.fioArray[1]}" size="40" /> <s:link
+												title="Очистить"
+												onclick="document.getElementById('CBformReSearchForm:search_name').value='';return false;">
+												<h:graphicImage value="/img/icons/data_clear.gif"
+													styleClass="pic_tbar"
+													style="border:0;vertical-align:middle;" />
+											</s:link> <s:link title="Востановить"
+												onclick="document.getElementById('CBformReSearchForm:search_name').value=search_name;return false;">
+												<h:graphicImage value="/img/icons/data_recover.gif"
+													styleClass="pic_tbar"
+													style="border:0;vertical-align:middle;" />
+											</s:link></td>
+									</tr>
+									<tr>
+										<td><h:outputText value="Отчество" /></td>
+										<td><h:inputText id="search_otch"
+												value="#{bindManager.fioArray[2]}" size="40" /> <s:link
+												title="Очистить"
+												onclick="document.getElementById('CBformReSearchForm:search_otch').value='';return false;">
+												<h:graphicImage value="/img/icons/data_clear.gif"
+													styleClass="pic_tbar"
+													style="border:0;vertical-align:middle;" />
+											</s:link> <s:link title="Востановить"
+												onclick="document.getElementById('CBformReSearchForm:search_otch').value=search_otch;return false;">
+												<h:graphicImage value="/img/icons/data_recover.gif"
+													styleClass="pic_tbar"
+													style="border:0;vertical-align:middle;" />
+											</s:link></td>
+									</tr>
+									<tr height="20px">
+										<td></td>
+										<td><h:selectBooleanCheckbox
+												value="#{bindManager.searchOrgExact}"
+												style="vertical-align:middle;" disabled="true" /> <h:outputText
+												value="Только организация пользователя" /></td>
+									</tr>
+								</table>
+							</td>
+							<td><a4j:commandButton style="width:50px;" value="Искать"
+									reRender="outCBmpReSearchResults" ajaxSingle="false"
+									action="#{bindManager.search}"
+									oncomplete="/*setHDiv_min('CBmpReSearchResultsHDiv');#{rich:component('CBmpReSearchForm')}.hide();*//*#{rich:component('CBmpUpdGroup')}.show();*/"
+									onclick="if(check_search('CBformReSearchForm')){return false;}"
+									styleClass="but_class">
+									<f:param name="onReSearchForm" value="1" />
+									<f:param name="remoteAudit" value="OpenUpdFact" />
+									<f:param name="sessionId" value="#{param['sessionId']}" />
+								</a4j:commandButton> <a4j:commandButton value="Закрыть"
+									onclick="#{rich:component('CBmpReSearchForm')}.hide();return false;"
+									styleClass="but_class" style="margin-left:10px;" /></td>
+
+						</tr>
+					</table>
+
+				</h:form>
+
+				<div style="margin: 5px;">
+					<h:outputText value="Учётные данные пользователя:"
+						style="font-style: italic" />
+				</div>
+
+				<rich:dataTable style="width:99%; background-color:#fffacd;"
+					var="it_uzp" value="#{bindBeanViewList}"
+					columnsWidth="190px, 190px, 190px, 190px, *">
+					<f:facet name="header">
+						<rich:columnGroup>
+							<rich:column>
+								<h:outputText value="ФИО" />
+							</rich:column>
+							<rich:column>
+								<h:outputText value="Организация" />
+							</rich:column>
+							<rich:column>
+								<h:outputText value="Подразделение" />
+							</rich:column>
+							<rich:column>
+								<h:outputText value="Должность" />
+							</rich:column>
+							<rich:column>
+								<h:outputText value="Действие" />
+							</rich:column>
+						</rich:columnGroup>
+					</f:facet>
+					<rich:column>
+
+						<h:outputText value=" #{it_uzp.fio}" />
+					</rich:column>
+					<rich:column>
+						<h:outputText value=" #{it_uzp.orgName}" />
+					</rich:column>
+					<rich:column>
+						<h:outputText value=" #{it_uzp.department}" />
+					</rich:column>
+					<rich:column>
+						<h:outputText value=" #{it_uzp.position}" />
+					</rich:column>
+					<rich:column>
+						<table width="99%" border="0">
+							<tr>
+								<td align="center">
+									<table border="0">
+										<tr>
+											<td width="20px;" align="center"><s:link
+													id="add_info_uzp_link" title="Дополнительная информация"
+													onclick="return false;">
+													<h:graphicImage value="/img/icons/info_icon.gif"
+														styleClass="pic_tbar"
+														style="border:0;vertical-align:middle;" />
+												</s:link> <rich:toolTip direction="top-right" mode="client"
+													showEvent="onclick"
+													style="background-color:white; padding:3; margin:0;"
+													layout="block" for="add_info_uzp_link">
+													<table style="">
+														<tr>
+															<td width="50px;" style="padding: 3px;"><h:outputText
+																	value="Телефон" /></td>
+															<td style="padding: 3px;"><h:outputText
+																	value="#{it_uzp.phone}" /></td>
+														</tr>
+														<tr>
+															<td width="50px;" style="padding: 3px;"><h:outputText
+																	value="Email" /></td>
+															<td style="padding: 3px;"><h:outputText
+																	value="#{it_uzp.email}" /></td>
+														</tr>
+													</table>
+
+												</rich:toolTip></td>
+											<!--td width="20px;" align="center">
+                           </td-->
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</rich:column>
+				</rich:dataTable>
+
+				<div style="margin: 5px;">
+					<h:outputText value="Найденные соответствия:"
+						style="font-style: italic" />
+				</div>
+
+
+
+				<div id="CBmpReSearchResultsHDiv"
+					style="width: 100%; overflow: auto;">
+
+					<a4j:outputPanel id="outCBmpReSearchResults">
+
+						<h:form id="CBformReSearchResults">
+
+							<table style="width: 99%;">
+
+								<tr>
+									<td><rich:dataTable id="CBdtReSearchResults"
+											style="width:100%" rowKeyVar="rkv" var="it_iogv"
+											value="#{bindManager.applicantList}"
+											columnsWidth="190px, 190px, 190px, 190px, *"
+											rendered="#{not empty bindManager.applicantList}">
+											<!--f:facet name="header">
+                        <rich:columnGroup>
+                          <rich:column>
+                              <h:outputText value="ФИО" />
+                          </rich:column>
+                          <rich:column>
+                              <h:outputText value="Организация" />
+                          </rich:column>
+                          <rich:column>
+                              <h:outputText value="Подразделение" />
+                          </rich:column>
+                          <rich:column>
+                              <h:outputText value="Должность" />
+                          </rich:column>
+                           <rich:column>
+                              <h:outputText value="Действия" />
+                          </rich:column>
+                          </rich:columnGroup>
+                     </f:facet-->
+											<rich:column>
+
+												<h:outputText value=" #{it_iogv.fio}" />
+											</rich:column>
+											<rich:column>
+												<h:outputText value=" #{it_iogv.orgName}" />
+											</rich:column>
+											<rich:column>
+												<h:outputText value=" #{it_iogv.department}" />
+											</rich:column>
+											<rich:column>
+												<h:outputText value=" #{it_iogv.position}" />
+											</rich:column>
+											<rich:column>
+												<table width="99%" border="0">
+													<tr>
+														<td align="center">
+															<table border="0">
+																<tr>
+																	<td width="20px;" align="center"><s:link
+																			id="add_info_link" title="Дополнительная информация"
+																			onclick="return false;">
+																			<h:graphicImage value="/img/icons/info_icon.gif"
+																				styleClass="pic_tbar"
+																				style="border:0;vertical-align:middle;" />
+																		</s:link> <rich:toolTip direction="top-right" mode="client"
+																			showEvent="onclick"
+																			style="background-color:white; padding:3; margin:0;"
+																			layout="block" for="add_info_link">
+																			<table style="">
+																				<tr>
+																					<td width="50px;" style="padding: 3px;"><h:outputText
+																							value="Телефон" /></td>
+																					<td style="padding: 3px;"><h:outputText
+																							value="#{it_iogv.phone}" /></td>
+																				</tr>
+																				<tr>
+																					<td width="50px;" style="padding: 3px;"><h:outputText
+																							value="Email" /></td>
+																					<td style="padding: 3px;"><h:outputText
+																							value="#{it_iogv.email}" /></td>
+																				</tr>
+																			</table>
+
+																		</rich:toolTip></td>
+																	<td width="20px;" align="center"><s:link
+																			title="Связать"
+																			onclick="if (confirm('Cвязать записи:
+                                          \\n#{bindBeanViewList.get(0).fio} 
+                                          \\nи 
+                                          \\n#{it_iogv.fio} ?')){invokeReBindRecords('#{it_iogv.usrCode}', '#{param['sessionId']}', '#{bindBeanViewList.get(0).usrCode}', '#{bindBeanViewList.get(0).iogvBindType}');} return false;">
+																			<h:graphicImage value="/img/icons/link5.bmp"
+																				styleClass="pic_tbar"
+																				style="border:0;vertical-align:middle;" />
+																		</s:link></td>
+																</tr>
+															</table>
+														</td>
+													</tr>
+												</table>
+											</rich:column>
+										</rich:dataTable> <h:outputText value="Соответствий не найдено"
+											rendered="#{empty bindManager.applicantList}"
+											style="color:red;" /></td>
+								</tr>
+
+
+								<!--tr>
+            <td  align="center" height="35px">
+          
+                 <a4j:commandButton value="Закрыть"
+                     onclick="#{rich:component('CBmpSearchForm')}.hide();return false;"
+                     styleClass="but_class"/>
+               </td>
+            </tr-->
+							</table>
+						</h:form>
+
+					</a4j:outputPanel>
+
+				</div>
+
+
+			</rich:modalPanel>
+
+			<script>
+//<![CDATA[
+ 
+    var re_search_init_flag=0;
+//]]>
+</script>
+
+		</a4j:outputPanel>
+
+
+		<a4j:outputPanel id="outCBmpUnReBind">
+			<rich:modalPanel id="CBmpUnReBind"
+				rendered="#{param['onUnReBind']!=null}" width="700" autosized="true"
+				onbeforeshow="/*setHDiv_min('CBmpReBindResultsHDiv');*/"
+				onshow="setHDiv_min_pro('CBmpReBindResultsHDiv');">
+				<f:facet name="header">
+					<h:panelGroup>
+						<h:outputText value="Отмена пере-привязки" />
+					</h:panelGroup>
+				</f:facet>
+				<f:facet name="controls">
+					<h:panelGroup>
+						<h:graphicImage
+							onclick="#{rich:component('CBmpUnReBind')}.hide();"
+							value="/img/icons/close.gif" />
+					</h:panelGroup>
+				</f:facet>
+				<h:form>
+
+					<h:outputText style="display:block;margin-bottom:5px;"
+						value="Действующая привязка:" />
+
+					<!--h:outputText style="display:block;margin-bottom:15px;"
+          value="#{bindBean.fio} [#{bindBean.usrCode}, #{bindBean.usrIogvStatus}]"/-->
+
+					<!--h:outputText style="display:block;margin-bottom:15px;"
+          value="#{bindBean.fio} [#{bindBean.usrCode}, #{bindBean.usrIogvStatus}, #{bindBean.crtDate}]"/-->
+
+
+
+					<!--h:outputText style="display:block;margin-bottom:15px;"
+          value="#{bindLastFio} [#{bindLastCode}]"/>
+        <h:outputText style="display:block;margin-bottom:7px;"
+          value="на"/>
+       <h:outputText style="display:block;margin-bottom:7px;"
+          value="#{bindPreLastFio} [#{bindPreLastCode}]  ?"/-->
+
+					<!--rich:dataTable id="CBdtBindHist_act" style="width:99%; background-color:#fffacd;" 
+                          var="it_act" columnsWidth="100px, 70px, 40px, 100px, 100px, *, 70px"
+                          value="#{reBindBeanViewList}" -->
+					<rich:dataTable id="CBdtBindHist_act"
+						style="width:99%; background-color:#fffacd;" var="it_act"
+						columnsWidth="100px, 70px, 40px, 100px, 100px, *, 70px"
+						value="#{bindManager.historyBindingList}" rows="1">
+						<f:facet name="header">
+							<rich:columnGroup>
+
+								<rich:column>
+									<h:outputText value="Дата привязки" />
+								</rich:column>
+								<rich:column>
+									<h:outputText value="Код ИОГВ" />
+								</rich:column>
+								<rich:column>
+									<h:outputText value="Статус" />
+								</rich:column>
+								<rich:column>
+									<h:outputText value="ФИО" />
+								</rich:column>
+								<rich:column>
+									<h:outputText value="Должность" />
+								</rich:column>
+								<rich:column>
+									<h:outputText value="Подразделение" />
+								</rich:column>
+								<rich:column>
+									<h:outputText value="Действия" />
+								</rich:column>
+							</rich:columnGroup>
+						</f:facet>
+
+						<rich:column>
+							<h:outputText value=" #{it_act.created}" />
+						</rich:column>
+						<rich:column>
+							<h:outputText value=" #{it_act.userItem.usrCode}" />
+						</rich:column>
+						<rich:column>
+							<h:outputText value=" #{it_act.userItem.usrIogvStatus}" />
+						</rich:column>
+						<rich:column>
+							<h:outputText value=" #{it_act.userItem.fio}" />
+						</rich:column>
+						<rich:column>
+							<h:outputText value=" #{it_act.userItem.position}" />
+						</rich:column>
+						<rich:column>
+							<h:outputText value=" #{it_act.userItem.department}" />
+						</rich:column>
+
+
+						<rich:column>
+
+						</rich:column>
+					</rich:dataTable>
+
+					<h:outputText
+						style="display:block;margin-top:10px;margin-bottom:5px;"
+						value="Предыдущие привязки:" />
+
+					<div id="CBmpReBindResultsHDiv"
+						style="width: 100%; overflow: auto;">
+
+						<rich:dataTable id="CBdtBindHist_prev" style="width:99%"
+							var="it_prev"
+							columnsWidth="100px, 70px, 40px, 100px, 100px, *, 70px"
+							value="#{bindManager.historyBindingList}" first="1">
+
+
+							<rich:column>
+								<h:outputText value=" #{it_prev.created}" />
+							</rich:column>
+							<rich:column>
+								<h:outputText value=" #{it_prev.userItem.usrCode}" />
+							</rich:column>
+							<rich:column>
+								<h:outputText value=" #{it_prev.userItem.usrIogvStatus}" />
+							</rich:column>
+							<rich:column>
+								<h:outputText value=" #{it_prev.userItem.fio}" />
+							</rich:column>
+							<rich:column>
+								<h:outputText value=" #{it_prev.userItem.position}" />
+							</rich:column>
+							<rich:column>
+								<h:outputText value=" #{it_prev.userItem.department}" />
+							</rich:column>
+
+
+							<rich:column>
+								<s:link title="Связать"
+									onclick="if (confirm('Заменить запись:
+                                          \\n#{bindManager.historyBindingList.get(0).userItem.fio} 
+                                          \\nна 
+                                          \\n#{it_prev.userItem.fio} ?')){
+                                         invokeUnReBindRecords('#{it_prev.userItem.usrCode}', '#{it_prev.bindType}', '#{param['sessionId']}', '#{bindManager.historyBindingList.get(0).userItem.usrCode}', '#{bindManager.historyBindingList.get(0).bindType}');} return false;">
+									<h:graphicImage value="/img/icons/link5.bmp"
+										styleClass="pic_tbar" style="border:0;vertical-align:middle;" />
+								</s:link>
+								<!--s:link title="Связать" 
+                              onclick="if (confirm('Заменить запись:
+                                          \\n#{reBindBeanViewList.get(0).fio} 
+                                          \\nна 
+                                          \\n#{it_prev.userItem.fio} ?')){
+                                         invokeUnReBindRecords('#{it_prev.userItem.usrCode}', '#{it_prev.bindType}', '#{param['sessionId']}', '#{reBindBeanViewList.get(0).usrCode}', '#{reBindBeanViewList.get(0).iogvBindType}');} return false;">
+                             <h:graphicImage value="/img/icons/link5.bmp" 
+                             styleClass="pic_tbar" 
+                             style="border:0;vertical-align:middle;"/>
+                            </s:link-->
+							</rich:column>
+						</rich:dataTable>
+						<h:outputText value="Предыдущих привязок не найдено"
+							rendered="#{empty bindManager.historyBindingList or bindManager.historyBindingList.size==1}"
+							style="color:red;" />
+					</div>
+
+
+					<table border="0"
+						style="width: 99%; margin-top: 15px; margin-bottom: 15px;">
+						<tr>
+							<td align="right" width="45%"><a4j:commandButton
+									value="Отмена"
+									onclick="#{rich:component('CBmpUnReBind')}.hide();return false;"
+									styleClass="but_class" /></td>
+							<td style="padding-left: 10px;">
+								<!--a4j:commandButton value="Ок"
+                    action="#{bindManager.unReBindRecords}"
+                    reRender="outCenterCenter, outCenterCenterFooter, outCenterBottom, outCenterCenterHeader"
+                    oncomplete="#{rich:component('CBmpUnReBind')}.hide();"
+                    styleClass="but_class" style="display:block;width:50px;">
+                 <f:param name="preLastCode" value="#{bindPreLastCode}"/>
+                 <f:param name="preLastBindType" value="#{bindPreLastBindType}"/>
+                 <f:param name="sessionId_crack" value="#{param['sessionId']}"/>
+                 <f:param name="onUnReBind" value="1"/>
+                 <f:param name="remoteAudit" value="DelFact"/>
+               </a4j:commandButton-->
+							</td>
+						</tr>
+					</table>
+
+				</h:form>
+			</rich:modalPanel>
+		</a4j:outputPanel>
+
+	</div>
+
+	<script>
+//<![CDATA[
+           
+var search_fam=null;
+var search_name=null;
+var search_otch=null;
+
+function prepareSearchView(){
+
+	if(search_init_flag==0){
+		search_fam=document.getElementById("CBformSearchForm:search_fam").value;
+		search_name=document.getElementById("CBformSearchForm:search_name").value;
+		search_otch=document.getElementById("CBformSearchForm:search_otch").value;
+
+		search_init_flag=1;
+		
+	}else{
+		document.getElementById("CBformSearchForm:search_fam").value=search_fam;
+		document.getElementById("CBformSearchForm:search_name").value=search_name;
+		document.getElementById("CBformSearchForm:search_otch").value=search_otch;
+	}
+	
+}
+
+function prepareReSearchView(){
+
+	if(re_search_init_flag==0){
+		search_fam=document.getElementById("CBformReSearchForm:search_fam").value;
+		search_name=document.getElementById("CBformReSearchForm:search_name").value;
+		search_otch=document.getElementById("CBformReSearchForm:search_otch").value;
+
+		re_search_init_flag=1;
+		
+	}else{
+		document.getElementById("CBformReSearchForm:search_fam").value=search_fam;
+		document.getElementById("CBformReSearchForm:search_name").value=search_name;
+		document.getElementById("CBformReSearchForm:search_otch").value=search_otch;
+	}
+	
+}
+
+function check_search(tform){
+	var msg="";
+
+	 if ((jQuery.trim(document.getElementById(tform+":search_fam").value)=="")&&
+		 (jQuery.trim(document.getElementById(tform+":search_name").value)=="")&&
+		 (jQuery.trim(document.getElementById(tform+":search_otch").value)=="")){
+		  msg+="Должно быть заполнено хотя бы одно поле !\n";
+	 }
+	
+	 if(msg!=""){
+	  alert(msg);
+	  return true;
+	 }else{
+	  return false;
+	}
+}
+
+
+function setHDiv(hdiv){
+	jQuery('#'+hdiv).height(Math.floor(jQuery(window).height()*(2/3)));
+}
+
+function setHDiv_min(hdiv){
+	jQuery('#'+hdiv).height(Math.floor(jQuery(window).height()*(2/3)-100));
+}
+
+function setHDiv_min_pro(hdiv){
+
+	if(jQuery('#'+hdiv).height()>Math.floor(jQuery(window).height()*(2/3)-100)){
+	   jQuery('#'+hdiv).height(Math.floor(jQuery(window).height()*(2/3)-100));
+	} 
+}
+
+function enableCHBox(tform){
+
+	jQuery("input[name^='"+tform+":CBdtUpd'][type=checkbox]:disabled").removeAttr('disabled');
+	
+	/*var n= jQuery("input[name^='"+tform+":CBdtUpd'][type=checkbox]:disabled").length;
+
+	alert(n);
+	jQuery("input[name^='"+tform+":CBdtUpd'][type=checkbox]:disabled").removeAttr('disabled');
+
+	n= jQuery("input[name^='"+tform+":CBdtUpd'][type=checkbox]:disabled").length;
+
+	alert(n);*/
+}
+
+function reset_radio_stiu(tform){
+	 jQuery("input[id='"+tform+":stiu:0'][type=radio]").attr('checked', true);
+}
+
+//CBformUpd:CBdtUpd:0:CBsdtUpd:0:CBsdtchbUpd
+/*
+if(document.getElementById(tform+":name1").value.length>45){
+    msg+="Превышена длина поля Фамилия!\n";
+}
+
+jQuery("#myform input[type='radio']:checked").val();
+jQuery('input:radio[name="gender"]').filter('[value="Male"]').attr('checked', true);
+jQuery('input:radio[name="gender"][value="Male"]').prop('checked', true);*/
+//]]>
+</script>
+</ui:composition>

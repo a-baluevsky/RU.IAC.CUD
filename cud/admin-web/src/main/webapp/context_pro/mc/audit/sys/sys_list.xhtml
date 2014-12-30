@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='windows-1251' ?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich">
+<body>
+	<ui:composition template="/templates/template_JQ_pro.xhtml">
+
+		<ui:define name="topUnit">
+			<ui:include src="/context_pro/incl/topUnit.xhtml" />
+		</ui:define>
+
+		<ui:define name="bottomUnit">
+			<ui:include src="/context_pro/incl/bottomUnit.xhtml" />
+		</ui:define>
+
+		<ui:define name="leftUnit">
+			<ui:include src="/context_pro/incl/leftUnit.xhtml" />
+		</ui:define>
+
+		<ui:define name="rightUnit">
+			<ui:include src="/context_pro/incl/rightUnit.xhtml" />
+		</ui:define>
+
+		<ui:define name="centerCenterUnit">
+			<h:form id="fAuditList">
+				<div class="middle-center" style="padding: 0 !important;">
+					<a4j:outputPanel id="outInvokeForSort">
+						<a4j:jsFunction name="invokeSort" reRender="outCenterCenter"
+							action="#{aSysStateHolder.sort}" ajaxSingle="true">
+							<f:param
+								name="#{param['sessionId']!=null ? 'sessionId' : 'xxx1'}" />
+							<f:param name="remoteAudit" />
+							<f:param name="itemField" />
+						</a4j:jsFunction>
+					</a4j:outputPanel>
+					<a4j:jsFunction name="invokeRemoteAuditBean"
+						reRender="outInvokeForSort, outCenterCenterHeader, outCenterCenter, outCenterCenterFooter, outCenterBottom, outCenterBottomFooter"
+						action="#{aSysManager.forView('aSysDataModel')}" ajaxSingle="true">
+						<f:param name="sessionId" />
+						<f:param name="remoteAudit" />
+						<f:param name="auditListCount" />
+					</a4j:jsFunction>
+					<a4j:jsFunction name="invokeRemoteAudit"
+						reRender="outCenterCenterHeader, outCenterCenter,outCenterCenterFooter,outCenterBottomFooter">
+						<f:param name="remoteAudit" value="1" />
+						<f:param name="actSect" value="#{param['actSect']}" />
+						<f:param name="actSectItem" value="#{param['actSectItem']}" />
+					</a4j:jsFunction>
+					<ui:include
+						src="/context_pro/mc/audit/sys/centerCenterUnitList.xhtml" />
+				</div>
+			</h:form>
+		</ui:define>
+		<ui:define name="centerBottomUnit">
+			<ui:include
+				src="/context_pro/mc/audit/sys/centerBottomUnitList.xhtml" />
+		</ui:define>
+
+	</ui:composition>
+</body>
+</html>

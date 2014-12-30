@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:r="http://richfaces.org">
+
+<h:head>
+	<title>Консоль пользователя</title>
+	<!--h:outputStylesheet library="resource:///stylesheet/" name="theme.css"  /-->
+	<link rel="stylesheet" type="text/css"
+		href="#{request.contextPath}/stylesheet/theme.css" />
+
+	<h:outputStylesheet>
+        .rf-ddm-lst777{
+         min-width:70px!important;
+        }
+        .rf-ddm-itm-lbl777{
+         color: rgb(0, 144, 255);
+        }
+        
+         td.sidetop { 
+            background-image: url('img/design/sidetop.gif'); background-repeat: repeat-x;
+            padding:0px; 
+         }
+    </h:outputStylesheet>
+</h:head>
+<h:body>
+
+	<table border="0" cellpadding="0" cellspacing="0"
+		style="width: 100%; height: 100%; background: url('img/spb2.jpg') no-repeat 20px 120px">
+		<tr>
+			<td colspan="3" height="98px" class="sidetop" align="center"
+				style="font-size: 16px;">Подсистема Аутентификации Авторизации
+				и Аудита</td>
+
+		</tr>
+		<tr>
+			<td colspan="3" height="20px" />
+		</tr>
+		<tr>
+			<td colspan="3" align="center" height="40px" valign="top"><h:outputText
+					value="Консоль пользователя"
+					style="font-weigt:bold;font-size:20px;" /></td>
+		</tr>
+		<tr>
+			<td colspan="3" align="center" valign="top"><rich:panel
+					header="Регистрация" style="width: 430px">
+
+					<h:messages id="messages" style="color:red" />
+					<br />
+
+					<c:if test="#{param['error']=='req_auth'}">
+						<h:outputText value="Необходимо авторизоваться!" style="color:red" />
+					</c:if>
+
+
+
+					<h:form>
+
+						<div style="border: 0px solid red;">
+							<div
+								style="text-align: right; width: 370px; border: 0px solid black;">
+
+								<h:form>
+									<table border="0" align="center">
+										<tr>
+											<td><h:outputText value="Войти через"
+													style="font-size: 11px;" /></td>
+											<td><h:commandButton
+													action="#{authBean.cudAuth('AUTH_LOGIN')}" value="Логин" />
+											</td>
+											<td><h:commandButton
+													action="#{authBean.cudAuth('AUTH_CERT')}"
+													value="Сертификат" /></td>
+										</tr>
+									</table>
+								</h:form>
+
+								<br /> <br />
+
+								<!-- 
+             <h:link style="border-top:0px solid silver; padding:5px;"
+             value="Запрос на регистрацию" outcome="/context/registr/reg_user_step1.xhtml"/>
+           <br/>
+             <h:link style="border-top:0px solid silver; padding:5px;"
+             value="Забыли пароль?" outcome="/context/forgot/pass_step1.xhtml"/>
+      
+         -->
+
+							</div>
+						</div>
+
+
+					</h:form>
+
+				</rich:panel></td>
+		</tr>
+		<tr>
+			<td height="70px" align="center" valign="top"></td>
+			<td colspan="2"></td>
+		</tr>
+	</table>
+</h:body>
+
+</html>

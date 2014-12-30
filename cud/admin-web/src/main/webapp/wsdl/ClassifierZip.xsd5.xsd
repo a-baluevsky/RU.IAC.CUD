@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:tns="http://ws.iac.spb.ru/ClassifierZip" xmlns:comm="http://ws.iac.spb.ru/Common" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ws.iac.spb.ru/ClassifierZip" version="1.0">
+	
+<xs:import namespace="http://ws.iac.spb.ru/Common" schemaLocation="ClassifierZip.xsd6.xsd"/>
+	
+<xs:element name="getClassifierZipListByClassifierName" type="tns:getClassifierZipListByClassifierName"/>
+	
+<xs:element name="getClassifierZipListByClassifierNameResponse" type="tns:getClassifierZipListByClassifierNameResponse"/>
+	
+<xs:complexType name="responseElement54">
+		
+<xs:sequence>
+			
+<xs:element name="MessageInfo" type="comm:MessageInfo" minOccurs="0">
+				
+<xs:annotation>
+					
+<xs:documentation>Блок служебной информации</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			
+<xs:element name="Item" type="comm:Response4" nillable="true" minOccurs="0" maxOccurs="unbounded">
+				
+<xs:annotation>
+					
+<xs:documentation>Блок с записями</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+<xs:complexType name="getClassifierZipListByClassifierName">
+		
+<xs:sequence>
+			
+<xs:element name="login" type="xs:string">
+				
+<xs:annotation>
+					
+<xs:documentation>Логин</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			
+<xs:element name="pass" type="xs:string">
+				
+<xs:annotation>
+					
+<xs:documentation>Пароль</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			
+<xs:element name="Fullname" type="xs:string">
+				
+<xs:annotation>
+					
+<xs:documentation>Полное наименование классификатора</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+<xs:complexType name="getClassifierZipListByClassifierNameResponse">
+		
+<xs:sequence>
+			
+<xs:element name="return" type="tns:responseElement54" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='windows-1251' ?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich">
+<body>
+	<ui:composition template="/templates/template_JQ_pro.xhtml">
+		<ui:param name="pageNameCenter" value="Список Пользователей" />
+		<ui:param name="pageNameBottom" value="Пользователь" />
+		<ui:define name="topUnit">
+			<ui:include src="/context_pro/incl/topUnit.xhtml" />
+		</ui:define>
+
+		<ui:define name="bottomUnit">
+			<ui:include src="/context_pro/incl/bottomUnit.xhtml" />
+		</ui:define>
+
+		<ui:define name="leftUnit">
+			<ui:include src="/context_pro/incl/leftUnit.xhtml" />
+		</ui:define>
+
+		<ui:define name="centerCenterUnit">
+
+
+			<h:form id="fAuditList">
+				<div class="middle-center" style="padding: 0 !important;">
+					<a4j:outputPanel id="outInvokeForSort">
+						<a4j:jsFunction name="invokeSort" reRender="outCenterCenter"
+							action="#{bindStateHolder.sort}" ajaxSingle="true">
+							<f:param
+								name="#{param['sessionId']!=null ? 'sessionId' : 'xxx1'}" />
+							<f:param name="remoteAudit" />
+							<f:param name="itemField" />
+						</a4j:jsFunction>
+					</a4j:outputPanel>
+					<a4j:jsFunction name="invokeRemoteAuditBean"
+						reRender="outInvokeForSort, outCenterCenterHeader, outCenterCenter, outCenterCenterFooter, 
+                 outCenterBottom, outCenterBottomFooter"
+						action="#{bindManager.forView('bindDataModel')}" ajaxSingle="true">
+						<f:param name="sessionId" />
+						<f:param name="remoteAudit" />
+						<f:param name="auditListCount" />
+					</a4j:jsFunction>
+					<a4j:jsFunction name="invokeRemoteAudit"
+						reRender="outCenterCenterHeader, outCenterCenter,outCenterCenterFooter,outCenterBottomFooter"
+						bypassUpdates="true">
+						<f:param name="remoteAudit" value="1" />
+						<f:param name="actSect" value="#{param['actSect']}" />
+						<f:param name="actSectItem" value="#{param['actSectItem']}" />
+					</a4j:jsFunction>
+					<a4j:jsFunction name="invokeClBindSelect" ajaxSingle="true"
+						reRender="outCBmpBindDataCrt"
+						action="#{clUsrManager.forViewAutocomplete()}">
+						<f:param name="signObject" />
+						<f:param name="onCreate" value="1" />
+						<f:param name="remoteAudit" value="clUsrSelectFact" />
+					</a4j:jsFunction>
+					<a4j:jsFunction name="invokeBindRecords"
+						reRender="outCenterCenterHeader, outCenterCenter, outCenterCenterFooter, outCenterBottom"
+						ajaxSingle="true" action="#{bindManager.bindRecords()}"
+						oncomplete="#{rich:component('CBmpSearchForm')}.hide();">
+						<f:param name="signObject" />
+						<f:param name="sessionId_crack" />
+						<f:param name="remoteAudit" value="bindRecords" />
+					</a4j:jsFunction>
+					<a4j:jsFunction name="invokeReBindRecords"
+						reRender="outCenterCenterHeader, outCenterCenter, outCenterCenterFooter, outCenterBottom"
+						ajaxSingle="true" action="#{bindManager.reBindRecords()}"
+						oncomplete="#{rich:component('CBmpReSearchForm')}.hide();">
+						<f:param name="signObject" />
+						<f:param name="sessionId_crack" />
+						<f:param name="currSignObject" />
+						<f:param name="currBindType" />
+						<f:param name="remoteAudit" value="bindRecords" />
+					</a4j:jsFunction>
+					<a4j:jsFunction name="invokeUnReBindRecords"
+						reRender="outCenterCenter, outCenterCenterFooter, outCenterBottom, outCenterCenterHeader"
+						ajaxSingle="true" action="#{bindManager.unReBindRecords()}"
+						oncomplete="#{rich:component('CBmpUnReBind')}.hide();">
+						<f:param name="preLastCode" />
+						<f:param name="preLastBindType" />
+						<f:param name="sessionId_crack" />
+						<!--f:param name="currSignObject"/>
+                  <f:param name="currBindType"/-->
+						<f:param name="remoteAudit" value="DelFact" />
+
+					</a4j:jsFunction>
+					<a4j:jsFunction name="invokeExtFilter"
+						reRender="outCenterCenterHeader,outCenterCenterFooter,outCenterCenter, outCenterBottom"
+						action="#{bindManager.resetBinFlag}">
+						<f:param name="typeFilter" />
+						<f:param name="remoteAudit" value="filterFieldFact" />
+					</a4j:jsFunction>
+					<a4j:jsFunction name="invokeClUsrSelect" ajaxSingle="true"
+						reRender="outCBmpUsrDataCrt"
+						action="#{clUsrManager.forViewAutocomplete()}">
+						<f:param name="signObject" />
+						<f:param name="onCreate" value="1" />
+						<f:param name="remoteAudit" value="clUsrSelectFact" />
+					</a4j:jsFunction>
+
+					<ui:include
+						src="/context_pro/services/binding/centerCenterUnitBindList.xhtml" />
+				</div>
+			</h:form>
+		</ui:define>
+		<ui:define name="centerBottomUnit">
+			<ui:include
+				src="/context_pro/services/binding/centerBottomUnitBindList.xhtml" />
+		</ui:define>
+	</ui:composition>
+</body>
+</html>

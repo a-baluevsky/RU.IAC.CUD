@@ -1,0 +1,239 @@
+<?xml version='1.0' encoding='windows-1251' ?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich" xmlns:r="http://richfaces.org">
+
+
+	<h:button value="Выбрать ИС" onclick="armSelectMPOpen();return false;" />
+	<br />
+
+
+	<h:form id="appGroupsCreateForm">
+
+		<r:outputPanel id="outGroupsPanel">
+
+			<h:panelGroup rendered="#{param['idArm']!=null}">
+
+				<rich:panel style="width:400px;">
+					<f:facet name="header">
+						<h:outputText value="Выбранная ИС" />
+					</f:facet>
+					<!--h:outputText value=" #{param['idArm']}" /-->
+					<h:outputText value=" #{param['nameArm']}" />
+				</rich:panel>
+
+				<br />
+				<h:button value="Выбрать группы"
+					onclick="groupSelectMPOpen('#{param['idArm']}');return false;" />
+
+				<r:outputPanel id="outSelectedGroupsPanel">
+
+					<h:panelGroup rendered="#{not empty userManagerBean.sumGroups }">
+
+						<rich:panel style="width:400px;">
+							<f:facet name="header">
+								<h:outputText value="Выбранные группы:" />
+							</f:facet>
+							<r:repeat value="#{userManagerBean.sumGroups}" var="item"
+								rowKeyVar="rkv">
+								<h:outputText value="#{rkv+1}) " />
+								<h:outputText value="#{item}" />
+								<br />
+							</r:repeat>
+						</rich:panel>
+
+						<br />
+						<!--div>
+  <h:outputText value="Основание " style="vertical-align:top;" /-->
+						<h:outputText value="Основание: " />
+						<br />
+						<h:inputTextarea value="#{userAccessBean.reason}" cols="63" />
+
+						<br />
+						<h:commandButton value="Отправить"
+							action="#{userAccessBean.actionGroup}" id="appGroupsCreateButton">
+							<f:param name="idArm" value="#{param['idArm']}" />
+							<f:param name="pageItem" value="app_group" />
+						</h:commandButton>
+
+					</h:panelGroup>
+
+				</r:outputPanel>
+
+
+			</h:panelGroup>
+
+		</r:outputPanel>
+
+	</h:form>
+
+	<!--h:form>
+ 
+ <h:outputText value="Основание" />
+ <h:inputTextarea value="#{userAccessBean.reason}" />
+ 
+  <br/>
+  <br/>
+  <r:outputPanel 
+        id="outSaveButton">
+  <h:commandButton value="Отправить" action="#{userAccessBean.action}">
+   <f:param name="idArm" value="#{param['idArm']}" />
+  </h:commandButton>
+ </r:outputPanel>
+ </h:form-->
+
+	<h:form>
+		<r:outputPanel id="outMPArmSelectPanel">
+
+			<r:popupPanel id="popup" modal="true"
+				onmaskclick="#{r:component('popup')}.hide();"
+				rendered="#{param['onArmSelectOpen']!=null}" autosized="true"
+				width="500">
+				<f:facet name="header">
+					<h:outputText value="Системы" />
+				</f:facet>
+				<f:facet name="controls">
+					<h:outputLink value="#"
+						onclick="#{r:component('popup')}.hide(); return false;">
+                X
+            </h:outputLink>
+				</f:facet>
+				<r:dataTable width="700" var="record"
+					value="#{userManagerBean.listArmFull}" id="arm_dt" rows="10">
+					<f:facet name="header">
+						<r:columnGroup>
+							<r:column>
+								<h:outputText value="Название ИС " />
+							</r:column>
+							<r:column>
+								<h:outputText value="Код ИС " />
+							</r:column>
+							<r:column>
+								<h:outputText value="Действия " />
+							</r:column>
+						</r:columnGroup>
+					</f:facet>
+					<r:column>
+						<h:outputText value="#{record.full}" />
+					</r:column>
+					<r:column>
+						<h:outputText value="#{record.signObject}" />
+					</r:column>
+					<r:column>
+						<h:button value=">>"
+							onclick="armSelect('#{record.idSrv}', '#{record.full}');return false;" />
+					</r:column>
+				</r:dataTable>
+
+				<r:dataScroller for="arm_dt" maxPages="5">
+					<f:param name="onArmSelectOpen" value="1" />
+				</r:dataScroller>
+
+			</r:popupPanel>
+		</r:outputPanel>
+
+		<r:outputPanel id="outMPGroupSelectPanel">
+
+			<r:popupPanel id="popup_group" modal="true"
+				onmaskclick="#{r:component('popup_group')}.hide();"
+				rendered="#{param['onGroupSelectOpen']!=null}" autosized="true"
+				width="500">
+				<f:facet name="header">
+					<h:outputText value="Группы" />
+				</f:facet>
+				<f:facet name="controls">
+					<h:outputLink value="#"
+						onclick="#{r:component('popup_group')}.hide(); return false;">
+                X
+            </h:outputLink>
+				</f:facet>
+
+				<!--r:outputPanel id="outCenterCenter">
+ 
+ <h:panelGroup rendered="#{param['idArm']!=null and userManagerBean.renderedRolesTable}"-->
+
+				<rich:dataTable width="700" var="record"
+					value="#{userManagerBean.listGroupsFromArm}" id="group_dt"
+					rows="10" noDataLabel="Группы отсутствуют">
+					<f:facet name="header">
+						<rich:columnGroup>
+							<rich:column>
+								<h:outputText value="Название " />
+							</rich:column>
+							<rich:column>
+								<h:outputText value="Код" />
+							</rich:column>
+							<rich:column>
+								<h:outputText value="Действия " />
+							</rich:column>
+						</rich:columnGroup>
+					</f:facet>
+					<rich:column>
+						<h:outputText value="#{record.full}" />
+					</rich:column>
+					<rich:column>
+						<h:outputText value="#{record.signObject}" />
+					</rich:column>
+					<rich:column>
+						<h:selectBooleanCheckbox value="#{record.checked}"
+							onclick="groupsSum('#{record.idSrv}', '#{record.full}', '#{param['idArm']}')">
+						</h:selectBooleanCheckbox>
+					</rich:column>
+				</rich:dataTable>
+
+				<rich:dataScroller for="group_dt" maxPages="5" ajaxSingle="true">
+					<f:param name="idArm" value="#{param['idArm']}" />
+					<f:param name="requestType" value="groupsScroll" />
+					<f:param name="onGroupSelectOpen" value="1" />
+				</rich:dataScroller>
+
+				<div style="text-align: center; margin: 10px;">
+					<h:button value="Закрыть"
+						onclick="#{r:component('popup_group')}.hide(); return false;" />
+				</div>
+				<!--/h:panelGroup>
+    </r:outputPanel-->
+
+			</r:popupPanel>
+		</r:outputPanel>
+
+	</h:form>
+
+	<h:form>
+		<r:jsFunction name="groupsSum" render="outSelectedGroupsPanel"
+			action="#{userManagerBean.addGroup}">
+			<f:param name="idGroup" />
+			<f:param name="nameGroup" />
+			<f:param name="idArm" />
+			<f:param name="requestType" value="groupsSum" />
+
+		</r:jsFunction>
+		<r:jsFunction name="armSelectMPOpen" render="outMPArmSelectPanel"
+			oncomplete="#{r:component('popup')}.show();">
+			<f:param name="requestType" value="armSelectView" />
+			<f:param name="onArmSelectOpen" value="1" />
+		</r:jsFunction>
+		<r:jsFunction name="groupSelectMPOpen" render="outMPGroupSelectPanel"
+			oncomplete="#{r:component('popup_group')}.show();">
+			<f:param name="idArm" />
+			<f:param name="requestType" value="groupSelectView" />
+			<f:param name="onGroupSelectOpen" value="1" />
+		</r:jsFunction>
+		<r:jsFunction name="armSelect" render="outGroupsPanel, outSaveButton"
+			oncomplete="#{r:component('popup')}.hide();"
+			action="#{userManagerBean.resetSumGroups()}">
+			<f:param name="idArm" />
+			<f:param name="nameArm" />
+			<f:param name="requestType" value="armSelect" />
+		</r:jsFunction>
+	</h:form>
+
+	<SCRIPT type="text/javascript">
+ //<![CDATA[
+   
+  //]]>
+ </SCRIPT>
+</ui:composition>

@@ -1,0 +1,81 @@
+<PicketLink xmlns="urn:picketlink:identity-federation:config:2.1">
+	<PicketLinkIDP xmlns="urn:picketlink:identity-federation:config:2.1"
+		HostedURI="/hosted.jsp" RoleGenerator="ru.spb.iac.cud.idp.core.RolesManager"
+		SupportsSignatures="true" Encrypt="true"
+		AttributeManager="ru.spb.iac.cud.idp.core.AttributesManager"
+		StrictPostBinding="true">
+
+		<IdentityURL>${idp.url::urn:eis:cud}</IdentityURL>
+		<!--IdentityURL>${idp.url::http://10.128.66.140:8080/cudidp/}</IdentityURL -->
+		<!--IdentityURL>${idp.url::http://cudvm:8080/cudidp/}</IdentityURL -->
+		<Trust>
+			<Domains>localhost,jboss.com</Domains>
+		</Trust>
+
+
+		<KeyProvider ClassName="ru.spb.iac.pl.sp.key.KeyStoreKeyManager">
+			<Auth Key="KeyStoreURL" Value="/home/jboss/jboss/certstore/cudvm.store" />
+			<!--Auth Key="KeyStoreURL" Value="/Development/cert/gost/cudvm/cudvm.store" 
+				/ -->
+			<Auth Key="KeyStorePass" Value="Access_Control" />
+			<Auth Key="SigningKeyPass" Value="Access_Control" />
+			<Auth Key="SigningKeyAlias" Value="cudvm_export" />
+			<!--ValidatingAlias Key="localhost" Value="cudvm_export" /> <ValidatingAlias 
+				Key="127.0.0.1" Value="cudvm_export" / -->
+			<!--ValidatingAlias Key="urn:eis:employee:get" Value="cudvm_export" / -->
+		</KeyProvider>
+
+	</PicketLinkIDP>
+	<Handlers xmlns="urn:picketlink:identity-federation:handler:config:2.1">
+		<!--Handler class="ru.spb.iac.cud.idp.web.handlers.GOSTKeyHandler" / -->
+
+		<!--Handler class="org.picketlink.identity.federation.web.handlers.saml2.SAML2IssuerTrustHandler" 
+			/ -->
+		<Handler class="ru.spb.iac.cud.idp.web.handlers.CUDSAML2LogOutHandler" />
+		<!--Handler class="org.picketlink.identity.federation.web.handlers.saml2.SAML2AuthenticationHandler" 
+			/ -->
+		<Handler
+			class="ru.spb.iac.cud.idp.web.handlers.CUDSAML2AuthenticationHandler">
+			<Option Key="USE_MULTI_VALUED_ROLES" Value="true" />
+		</Handler>
+		<!--Handler class="ru.spb.iac.cud.idp.web.handlers.CUDRolesGenerationHandler"> 
+			</Handler -->
+		<Handler
+			class="ru.spb.iac.cud.idp.web.handlers.GOSTSAML2SignatureAssertionGenerationHandler" />
+		<Handler class="ru.spb.iac.cud.idp.web.handlers.GOSTSAML2EncryptionHandler" />
+
+		<Handler
+			class="ru.spb.iac.cud.idp.web.handlers.GOSTSAML2SignatureGenerationHandler" />
+		<Handler
+			class="ru.spb.iac.cud.idp.web.handlers.GOSTSAML2SignatureValidationHandler" />
+
+		<Handler
+			class="org.picketlink.identity.federation.web.handlers.saml2.SAML2AttributeHandler">
+			<!--Option Key="ATTRIBUTE_KEYS" Value="username,firstName,lastName,email,userRoles" 
+				/ -->
+			<!--Option Key="ATTRIBUTE_MANAGER" Value="ru.spb.iac.cud.idp.core.AttributesManager" 
+				/ -->
+		</Handler>
+	</Handlers>
+	<!-- The configuration bellow defines a token timeout and a clock skew. 
+		Both configurations will be used during the SAML Assertion creation. This 
+		configuration is optional. It is defined only to show you how to set the 
+		token timeout and clock skew configuration. -->
+	<!-- 300000ms - 5min 7200000ms - 120min -->
+	<PicketLinkSTS xmlns="urn:picketlink:identity-federation:config:2.1"
+		TokenTimeout="7200000" ClockSkew="0" SignToken="false" EncryptToken="false">
+		<TokenProviders>
+			<TokenProvider
+				ProviderClass="org.picketlink.identity.federation.core.saml.v1.providers.SAML11AssertionTokenProvider"
+				TokenType="urn:oasis:names:tc:SAML:1.0:assertion" TokenElement="Assertion"
+				TokenElementNS="urn:oasis:names:tc:SAML:1.0:assertion" />
+			<!-- <TokenProvider ProviderClass="org.picketlink.identity.federation.core.saml.v1.providers.SAML20AssertionTokenProvider" -->
+
+			<TokenProvider
+				ProviderClass="ru.spb.iac.cud.idp.saml.CUDSAML20AssertionTokenProvider"
+				TokenType="urn:oasis:names:tc:SAML:2.0:assertion" TokenElement="Assertion"
+				TokenElementNS="urn:oasis:names:tc:SAML:2.0:assertion" />
+		</TokenProviders>
+	</PicketLinkSTS>
+
+</PicketLink>

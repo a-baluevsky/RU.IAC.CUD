@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='windows-1251' ?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:s="http://jboss.com/products/seam/taglib">
+
+<body>
+	<ui:composition template="/templates/template_JQ_proc_pro.xhtml">
+
+		<ui:define name="topUnit">
+			<ui:include src="/context_pro/incl/topUnit.xhtml" />
+		</ui:define>
+
+		<ui:define name="bottomUnit">
+			<ui:include src="/context_pro/incl/bottomUnit.xhtml" />
+		</ui:define>
+
+		<ui:define name="leftUnit">
+			<ui:include src="/context_pro/incl/leftUnit.xhtml" />
+		</ui:define>
+
+		<ui:define name="centerTopUnit">
+			<h:form id="fAuditList">
+				<div id="middle-north-id" style="padding: 0 !important;">
+					<ui:include src="/context_pro/proc/bindNoAct/centerTopUnit.xhtml" />
+				</div>
+			</h:form>
+			<rich:modalPanel id="CCProcCrt" trimOverlayedElements="false"
+				width="350" autosized="true">
+				<f:facet name="header">
+					<h:panelGroup>
+						<h:outputText value="Включение" />
+					</h:panelGroup>
+				</f:facet>
+				<f:facet name="controls">
+					<h:panelGroup>
+						<h:graphicImage onclick="#{rich:component('CCProcCrt')}.hide();"
+							value="/img/icons/close.gif" />
+					</h:panelGroup>
+				</f:facet>
+				<h:form id="CCfProcCrt">
+					<table>
+						<tr>
+							<td colspan="2" height="10px"></td>
+						</tr>
+						<tr>
+							<td width="120px" height="25px"><h:outputText
+									value="Старт процесса:" /></td>
+							<td><rich:calendar value="#{procBindNoActManager.startDate}"
+									locale="RU" datePattern="dd.MM.yy HH:mm" defaultTime="00:00"
+									todayControlMode="hidden" showApplyButton="true"
+									isDayEnabled="disablementFunction"
+									dayStyleClass="disabledClassesProv" id="acdate1" /></td>
+						</tr>
+						<tr>
+							<td width="120px" height="25px"><h:outputText
+									value="Период запуска:" /></td>
+							<td><rich:inputNumberSpinner
+									value="#{procBindNoActManager.period}" inputSize="1" id="perId"
+									minValue="1" enableManualInput="false"
+									oninputkeypress="return false;" /></td>
+						</tr>
+					</table>
+					<div
+						style="white-space: nowrap; text-align: center; margin-top: 5px;">
+						<a4j:commandButton value="Отмена"
+							onclick="#{rich:component('CCProcCrt')}.hide();return false;"
+							styleClass="but_class" />
+						<a4j:commandButton value="Запустить"
+							action="#{procBindNoActManager.procCrt}"
+							reRender="outCenterTop, outCenterTopFooter, outCenterBottom"
+							oncomplete=" #{rich:component('CCProcCrt')}.hide();"
+							onclick="if(check_procCrt_date()){return false;}"
+							styleClass="but_class">
+							<f:param name="remoteAudit" value="procCrt" />
+							<f:param name="actSect" value="#{param['actSect']}" />
+							<f:param name="actSectItem" value="#{param['actSectItem']}" />
+						</a4j:commandButton>
+					</div>
+				</h:form>
+			</rich:modalPanel>
+		</ui:define>
+
+		<ui:define name="centerCenterUnit">
+			<h:form id="fAuditListCenter">
+				<div id="middle-center-id" style="padding: 0 !important;">
+					<ui:include
+						src="/context_pro/proc/bindNoAct/centerCenterUnit.xhtml" />
+				</div>
+			</h:form>
+
+			<!--rich:modalPanel id="CCProcSetting" trimOverlayedElements="false" 
+            width="300" autosized="true">
+             <f:facet name="header">
+              <h:panelGroup>
+                  <h:outputText value="Настройки"/>
+               </h:panelGroup>
+             </f:facet>
+             <f:facet name="controls">
+               <h:panelGroup>
+                <h:graphicImage onclick="#{rich:component('CCProcSetting')}.hide();"
+                 value="/img/icons/close.gif" />
+                </h:panelGroup>
+             </f:facet>
+             <h:form id="CCfProcSetting">
+              <table>
+               <tr>
+              <td  width="250px" height="25px">
+                <h:outputText value="Актуальность данных аудита (месяцев)"/>
+               </td>
+               <td>
+                <rich:inputNumberSpinner 
+                       value="#{procBindNoActSettingsBean.paramActualData}" 
+                       inputSize="1"
+                       id="perId"
+                       minValue="1"
+                       enableManualInput="false"
+                       oninputkeypress="return false;"/>
+               </td>
+              </tr>
+              
+            </table>
+            <div style="white-space: nowrap;text-align:center;margin-top:15px;">
+             <a4j:commandButton value="Отмена" 
+                onclick="#{rich:component('CCProcSetting')}.hide();return false;"
+                styleClass="but_class"/>
+              <a4j:commandButton value="Сохранить"
+                    action="#{procBindNoActSettingsManager.save}"
+                    reRender="outCenterCenter"
+                    oncomplete=" #{rich:component('CCProcSetting')}.hide();" 
+                    onclick="/*if(check_procCrt_date()){return false;}*/"
+                    styleClass="but_class">
+               <f:param name="remoteAudit" value="procSetting"/>     
+               <f:param name="actSect" value="#{param['actSect']}"/>
+               <f:param name="actSectItem" value="#{param['actSectItem']}"/>
+             </a4j:commandButton>
+           </div>
+         </h:form>
+        </rich:modalPanel-->
+
+
+		</ui:define>
+
+
+		<ui:define name="centerBottomUnit">
+			<ui:include src="/context_pro/proc/bindNoAct/centerBottomUnit.xhtml" />
+		</ui:define>
+
+
+	</ui:composition>
+</body>
+</html>

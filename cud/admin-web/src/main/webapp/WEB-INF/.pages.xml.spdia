@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagram model-entity="SeamPagesDiagram">
+ <item ID="*" NAME="*" PATH="*" SHAPE="24,977,0,0" TYPE="page" model-entity="SeamPagesDiagramItem"/>
+ <item ID="#context_pro#*" NAME="#xcontext_pro#x*" PATH="/context_pro/*"
+  SHAPE="344,977,0,0" TYPE="page" model-entity="SeamPagesDiagramItem"/>
+ <item ID="#main.xhtml" NAME="#xmain.xhtml" PATH="/main.xhtml"
+  SHAPE="408,17,0,0" TYPE="page" model-entity="SeamPagesDiagramItem"/>
+ <item ID="#notFound.xhtml" NAME="#xnotFound.xhtml"
+  PATH="/notFound.xhtml" SHAPE="664,977,0,0" TYPE="page" model-entity="SeamPagesDiagramItem"/>
+ <item ID="#context_pro#audit#ufms#ufms_list.xhtml"
+  NAME="#xcontext_pro#xaudit#xufms#xufms_list.xhtml"
+  PATH="/context_pro/audit/ufms/ufms_list.xhtml" SHAPE="984,977,0,0"
+  TYPE="page" model-entity="SeamPagesDiagramItem"/>
+ <item ID="#context_pro#audit#ufms#ufms_search.xhtml"
+  NAME="#xcontext_pro#xaudit#xufms#xufms_search.xhtml"
+  PATH="/context_pro/audit/ufms/ufms_search.xhtml" SHAPE="1304,977,0,0"
+  TYPE="page" model-entity="SeamPagesDiagramItem"/>
+ <item ID="#context_pro#audit#ufms#reports.xhtml"
+  NAME="#xcontext_pro#xaudit#xufms#xreports.xhtml"
+  PATH="/context_pro/audit/ufms/reports.xhtml" SHAPE="1624,977,0,0"
+  TYPE="page" model-entity="SeamPagesDiagramItem"/>
+ <item ID="#context_pro#audit#zags#list.xhtml"
+  NAME="#xcontext_pro#xaudit#xzags#xlist.xhtml"
+  PATH="/context_pro/audit/zags/list.xhtml" SHAPE="24,1081,0,0"
+  TYPE="page" model-entity="SeamPagesDiagramItem"/>
+ <item ID="#context_pro#audit#zags#search.xhtml"
+  NAME="#xcontext_pro#xaudit#xzags#xsearch.xhtml"
+  PATH="/context_pro/audit/zags/search.xhtml" SHAPE="344,1081,0,0"
+  TYPE="page" model-entity="SeamPagesDiagramItem"/>
+ <item ID="#context_pro#audit#zags#reports.xhtml"
+  NAME="#xcontext_pro#xaudit#xzags#xreports.xhtml"
+  PATH="/context_pro/audit/zags/reports.xhtml" SHAPE="664,1081,0,0"
+  TYPE="page" model-entity="SeamPagesDiagramItem"/>
+ <item ID="#error_perm.xhtml" NAME="#xerror_perm.xhtml"
+  PATH="/error_perm.xhtml" SHAPE="984,1081,0,0" TYPE="page" model-entity="SeamPagesDiagramItem"/>
+ <item ID="#error.xhtml" NAME="#xerror.xhtml" PATH="/error.xhtml"
+  SHAPE="472,353,0,0" TYPE="page" model-entity="SeamPagesDiagramItem"/>
+ <item ID="#context_pro#mc#clorg#clorg_list.xhtml"
+  NAME="#xcontext_pro#xmc#xclorg#xclorg_list.xhtml"
+  PATH="/context_pro/mc/clorg/clorg_list.xhtml" SHAPE="1304,1081,0,0"
+  TYPE="page" model-entity="SeamPagesDiagramItem"/>
+ <item ID="#context_pro#mc#usr#usr_list.xhtml"
+  NAME="#xcontext_pro#xmc#xusr#xusr_list.xhtml"
+  PATH="/context_pro/mc/usr/usr_list.xhtml" SHAPE="1624,1081,0,0"
+  TYPE="page" model-entity="SeamPagesDiagramItem"/>
+ <item ID="#context_pro#mc#clusr#clusr_list.xhtml"
+  NAME="#xcontext_pro#xmc#xclusr#xclusr_list.xhtml"
+  PATH="/context_pro/mc/clusr/clusr_list.xhtml" SHAPE="24,1185,0,0"
+  TYPE="page" model-entity="SeamPagesDiagramItem"/>
+ <item ID="#context_pro#mc#res#res_list.xhtml"
+  NAME="#xcontext_pro#xmc#xres#xres_list.xhtml"
+  PATH="/context_pro/mc/res/res_list.xhtml" SHAPE="344,1185,0,0"
+  TYPE="page" model-entity="SeamPagesDiagramItem"/>
+ <item ID="#context_pro#mc#arm#arm_list.xhtml"
+  NAME="#xcontext_pro#xmc#xarm#xarm_list.xhtml"
+  PATH="/context_pro/mc/arm/arm_list.xhtml" SHAPE="664,1185,0,0"
+  TYPE="page" model-entity="SeamPagesDiagramItem"/>
+ <item ID="#context_pro#mc#armsub#list.xhtml"
+  NAME="#xcontext_pro#xmc#xarmsub#xlist.xhtml"
+  PATH="/context_pro/mc/armsub/list.xhtml" SHAPE="984,1185,0,0"
+  TYPE="page" model-entity="SeamPagesDiagramItem"/>
+ <item ID="#context_pro#mc#armgroup#list.xhtml"
+  NAME="#xcontext_pro#xmc#xarmgroup#xlist.xhtml"
+  PATH="/context_pro/mc/armgroup/list.xhtml" SHAPE="1304,1185,0,0"
+  TYPE="page" model-entity="SeamPagesDiagramItem"/>
+ <item ID="#context_pro#mc#rol#rol_list.xhtml"
+  NAME="#xcontext_pro#xmc#xrol#xrol_list.xhtml"
+  PATH="/context_pro/mc/rol/rol_list.xhtml" SHAPE="1624,1185,0,0"
+  TYPE="page" model-entity="SeamPagesDiagramItem"/>
+ <item ID="#context_pro#mc#perm#perm_list.xhtml"
+  NAME="#xcontext_pro#xmc#xperm#xperm_list.xhtml"
+  PATH="/context_pro/mc/perm/perm_list.xhtml" SHAPE="24,1289,0,0"
+  TYPE="page" model-entity="SeamPagesDiagramItem"/>
+ <item ID="#context_pro#mc#audit#func#func_list.xhtml"
+  NAME="#xcontext_pro#xmc#xaudit#xfunc#xfunc_list.xhtml"
+  PATH="/context_pro/mc/audit/func/func_list.xhtml" SHAPE="344,1289,0,0"
+  TYPE="page" model-entity="SeamPagesDiagramItem"/>
+ <item ID="#context_pro#mc#audit#sys#sys_list.xhtml"
+  NAME="#xcontext_pro#xmc#xaudit#xsys#xsys_list.xhtml"
+  PATH="/context_pro/mc/audit/sys/sys_list.xhtml" SHAPE="664,1289,0,0"
+  TYPE="page" model-entity="SeamPagesDiagramItem"/>
+ <item ID="#context_pro#mc#cpar#cpar_list.xhtml"
+  NAME="#xcontext_pro#xmc#xcpar#xcpar_list.xhtml"
+  PATH="/context_pro/mc/cpar/cpar_list.xhtml" SHAPE="984,1289,0,0"
+  TYPE="page" model-entity="SeamPagesDiagramItem"/>
+ <item ID="#context_pro#mc#ugroup#ugroup_list.xhtml"
+  NAME="#xcontext_pro#xmc#xugroup#xugroup_list.xhtml"
+  PATH="/context_pro/mc/ugroup/ugroup_list.xhtml" SHAPE="1304,1289,0,0"
+  TYPE="page" model-entity="SeamPagesDiagramItem"/>
+ <item ID="#context_pro#proc#archASys.xhtml"
+  NAME="#xcontext_pro#xproc#xarchASys.xhtml"
+  PATH="/context_pro/proc/archASys.xhtml" SHAPE="1624,1289,0,0"
+  TYPE="page" model-entity="SeamPagesDiagramItem"/>
+ <item ID="#context_pro#proc#archAFunc.xhtml"
+  NAME="#xcontext_pro#xproc#xarchAFunc.xhtml"
+  PATH="/context_pro/proc/archAFunc.xhtml" SHAPE="24,1393,0,0"
+  TYPE="page" model-entity="SeamPagesDiagramItem"/>
+ <item ID="#context_pro#proc#archToken.xhtml"
+  NAME="#xcontext_pro#xproc#xarchToken.xhtml"
+  PATH="/context_pro/proc/archToken.xhtml" SHAPE="344,1393,0,0"
+  TYPE="page" model-entity="SeamPagesDiagramItem"/>
+ <item ID="#context_pro#proc#bindUnBind.xhtml"
+  NAME="#xcontext_pro#xproc#xbindUnBind.xhtml"
+  PATH="/context_pro/proc/bindUnBind.xhtml" SHAPE="664,1393,0,0"
+  TYPE="page" model-entity="SeamPagesDiagramItem"/>
+ <item ID="#context_pro#proc#bindNoAct.xhtml"
+  NAME="#xcontext_pro#xproc#xbindNoAct.xhtml"
+  PATH="/context_pro/proc/bindNoAct.xhtml" SHAPE="984,1393,0,0"
+  TYPE="page" model-entity="SeamPagesDiagramItem"/>
+ <item ID="#context_pro#services#binding#usr_list.xhtml"
+  NAME="#xcontext_pro#xservices#xbinding#xusr_list.xhtml"
+  PATH="/context_pro/services/binding/usr_list.xhtml"
+  SHAPE="1304,1393,0,0" TYPE="page" model-entity="SeamPagesDiagramItem"/>
+ <item ID="#context_pro#services#rebinding#list.xhtml"
+  NAME="#xcontext_pro#xservices#xrebinding#xlist.xhtml"
+  PATH="/context_pro/services/rebinding/list.xhtml"
+  SHAPE="1624,1393,0,0" TYPE="page" model-entity="SeamPagesDiagramItem"/>
+ <item ID="#context_pro#app#system#list.xhtml"
+  NAME="#xcontext_pro#xapp#xsystem#xlist.xhtml"
+  PATH="/context_pro/app/system/list.xhtml" SHAPE="24,1497,0,0"
+  TYPE="page" model-entity="SeamPagesDiagramItem"/>
+ <item ID="#context_pro#app#user#list.xhtml"
+  NAME="#xcontext_pro#xapp#xuser#xlist.xhtml"
+  PATH="/context_pro/app/user/list.xhtml" SHAPE="344,1497,0,0"
+  TYPE="page" model-entity="SeamPagesDiagramItem"/>
+ <item ID="#context_pro#app#access#list.xhtml"
+  NAME="#xcontext_pro#xapp#xaccess#xlist.xhtml"
+  PATH="/context_pro/app/access/list.xhtml" SHAPE="664,1497,0,0"
+  TYPE="page" model-entity="SeamPagesDiagramItem"/>
+ <item ID="#context_pro#app#block#list.xhtml"
+  NAME="#xcontext_pro#xapp#xblock#xlist.xhtml"
+  PATH="/context_pro/app/block/list.xhtml" SHAPE="984,1497,0,0"
+  TYPE="page" model-entity="SeamPagesDiagramItem"/>
+ <item ID="#context_pro#app#system_modify#list.xhtml"
+  NAME="#xcontext_pro#xapp#xsystem_modify#xlist.xhtml"
+  PATH="/context_pro/app/system_modify/list.xhtml" SHAPE="1304,1497,0,0"
+  TYPE="page" model-entity="SeamPagesDiagramItem"/>
+ <item ID="#context_pro#app#user_modify#list.xhtml"
+  NAME="#xcontext_pro#xapp#xuser_modify#xlist.xhtml"
+  PATH="/context_pro/app/user_modify/list.xhtml" SHAPE="1624,1497,0,0"
+  TYPE="page" model-entity="SeamPagesDiagramItem"/>
+ <item ID="#context_pro#app#user_acc_modify#list.xhtml"
+  NAME="#xcontext_pro#xapp#xuser_acc_modify#xlist.xhtml"
+  PATH="/context_pro/app/user_acc_modify/list.xhtml" SHAPE="24,1601,0,0"
+  TYPE="page" model-entity="SeamPagesDiagramItem"/>
+ <item ID="#context_pro#app#user_cert_modify#list.xhtml"
+  NAME="#xcontext_pro#xapp#xuser_cert_modify#xlist.xhtml"
+  PATH="/context_pro/app/user_cert_modify/list.xhtml"
+  SHAPE="344,1601,0,0" TYPE="page" model-entity="SeamPagesDiagramItem"/>
+ <item ID="#context_pro#app#user_dep_modify#list.xhtml"
+  NAME="#xcontext_pro#xapp#xuser_dep_modify#xlist.xhtml"
+  PATH="/context_pro/app/user_dep_modify/list.xhtml"
+  SHAPE="664,1601,0,0" TYPE="page" model-entity="SeamPagesDiagramItem"/>
+ <item ID="#context_pro#app#admin_sys#list.xhtml"
+  NAME="#xcontext_pro#xapp#xadmin_sys#xlist.xhtml"
+  PATH="/context_pro/app/admin_sys/list.xhtml" SHAPE="984,1601,0,0"
+  TYPE="page" model-entity="SeamPagesDiagramItem"/>
+ <item ID="#context_pro#app#org_man#list.xhtml"
+  NAME="#xcontext_pro#xapp#xorg_man#xlist.xhtml"
+  PATH="/context_pro/app/org_man/list.xhtml" SHAPE="1304,1601,0,0"
+  TYPE="page" model-entity="SeamPagesDiagramItem"/>
+ <item ID="#context_pro#appmy#system#list.xhtml"
+  NAME="#xcontext_pro#xappmy#xsystem#xlist.xhtml"
+  PATH="/context_pro/appmy/system/list.xhtml" SHAPE="1624,1601,0,0"
+  TYPE="page" model-entity="SeamPagesDiagramItem"/>
+ <item ID="#context_pro#appmy#user#list.xhtml"
+  NAME="#xcontext_pro#xappmy#xuser#xlist.xhtml"
+  PATH="/context_pro/appmy/user/list.xhtml" SHAPE="24,1705,0,0"
+  TYPE="page" model-entity="SeamPagesDiagramItem"/>
+ <item ID="#context_pro#appmy#block#list.xhtml"
+  NAME="#xcontext_pro#xappmy#xblock#xlist.xhtml"
+  PATH="/context_pro/appmy/block/list.xhtml" SHAPE="344,1705,0,0"
+  TYPE="page" model-entity="SeamPagesDiagramItem"/>
+ <item ID="#context_pro#appmy#user_modify#list.xhtml"
+  NAME="#xcontext_pro#xappmy#xuser_modify#xlist.xhtml"
+  PATH="/context_pro/appmy/user_modify/list.xhtml" SHAPE="664,1705,0,0"
+  TYPE="page" model-entity="SeamPagesDiagramItem"/>
+ <item ID="#context_pro#appmy#user_acc_modify#list.xhtml"
+  NAME="#xcontext_pro#xappmy#xuser_acc_modify#xlist.xhtml"
+  PATH="/context_pro/appmy/user_acc_modify/list.xhtml"
+  SHAPE="984,1705,0,0" TYPE="page" model-entity="SeamPagesDiagramItem"/>
+ <item ID="#context_pro#appmy#user_cert_modify#list.xhtml"
+  NAME="#xcontext_pro#xappmy#xuser_cert_modify#xlist.xhtml"
+  PATH="/context_pro/appmy/user_cert_modify/list.xhtml"
+  SHAPE="1304,1705,0,0" TYPE="page" model-entity="SeamPagesDiagramItem"/>
+ <item ID="#context_pro#repos#repos.xhtml"
+  NAME="#xcontext_pro#xrepos#xrepos.xhtml"
+  PATH="/context_pro/repos/repos.xhtml" SHAPE="1624,1705,0,0"
+  TYPE="page" model-entity="SeamPagesDiagramItem"/>
+ <item ID="#context_pro#conf#hosts.xhtml"
+  NAME="#xcontext_pro#xconf#xhosts.xhtml"
+  PATH="/context_pro/conf/hosts.xhtml" SHAPE="24,1809,0,0" TYPE="page" model-entity="SeamPagesDiagramItem"/>
+ <item ID="#public.xhtml" NAME="#xpublic.xhtml" PATH="/public.xhtml"
+  SHAPE="24,17,0,0" TYPE="page" model-entity="SeamPagesDiagramItem">
+  <output ID="/main.xhtml" NAME="output" PATH="/main.xhtml"
+   TARGET="#xmain.xhtml" model-entity="SeamPagesDiagramItemOutput"/>
+  <output ID="/welcome.xhtml" NAME="output1" PATH="/welcome.xhtml"
+   TARGET="#xwelcome.xhtml" model-entity="SeamPagesDiagramItemOutput"/>
+ </item>
+ <item ID="org.jboss.seam.framework.EntityNotFoundException"
+  NAME="exception:org.jboss.seam.framework.EntityNotFoundException"
+  PATH="org.jboss.seam.framework.EntityNotFoundException"
+  SHAPE="24,353,0,0" TYPE="exception" model-entity="SeamPagesDiagramItem">
+  <output ID="/error.xhtml" NAME="output" PATH="/error.xhtml"
+   TARGET="#xerror.xhtml" model-entity="SeamPagesDiagramItemOutput"/>
+ </item>
+ <item ID="javax.persistence.EntityNotFoundException"
+  NAME="exception:javax.persistence.EntityNotFoundException"
+  PATH="javax.persistence.EntityNotFoundException" SHAPE="24,457,0,0"
+  TYPE="exception" model-entity="SeamPagesDiagramItem">
+  <output ID="/error.xhtml" NAME="output" PATH="/error.xhtml"
+   TARGET="#xerror.xhtml" model-entity="SeamPagesDiagramItemOutput"/>
+ </item>
+ <item ID="javax.persistence.EntityExistsException"
+  NAME="exception:javax.persistence.EntityExistsException"
+  PATH="javax.persistence.EntityExistsException" SHAPE="24,561,0,0"
+  TYPE="exception" model-entity="SeamPagesDiagramItem">
+  <output ID="/error.xhtml" NAME="output" PATH="/error.xhtml"
+   TARGET="#xerror.xhtml" model-entity="SeamPagesDiagramItemOutput"/>
+ </item>
+ <item ID="javax.persistence.OptimisticLockException"
+  NAME="exception:javax.persistence.OptimisticLockException"
+  PATH="javax.persistence.OptimisticLockException" SHAPE="24,665,0,0"
+  TYPE="exception" model-entity="SeamPagesDiagramItem">
+  <output ID="/error.xhtml" NAME="output" PATH="/error.xhtml"
+   TARGET="#xerror.xhtml" model-entity="SeamPagesDiagramItemOutput"/>
+ </item>
+ <item ID="org.jboss.seam.security.AuthorizationException"
+  NAME="exception:org.jboss.seam.security.AuthorizationException"
+  PATH="org.jboss.seam.security.AuthorizationException"
+  SHAPE="24,873,0,0" TYPE="exception" model-entity="SeamPagesDiagramItem">
+  <output ID="#{linksMap.getLink('_errorPerm_')}" NAME="output"
+   PATH="#{linksMap.getLink('_errorPerm_')}"
+   TARGET="##{linksMap.getLink('_errorPerm_')}" model-entity="SeamPagesDiagramItemOutput"/>
+ </item>
+ <item ID="org.jboss.seam.security.NotLoggedInException"
+  NAME="exception:org.jboss.seam.security.NotLoggedInException"
+  PATH="org.jboss.seam.security.NotLoggedInException" SHAPE="24,145,0,0"
+  TYPE="exception" model-entity="SeamPagesDiagramItem">
+  <output ID="/welcome.xhtml" NAME="output" PATH="/welcome.xhtml"
+   TARGET="#xwelcome.xhtml" model-entity="SeamPagesDiagramItemOutput"/>
+ </item>
+ <item ID="javax.faces.application.ViewExpiredException"
+  NAME="exception:javax.faces.application.ViewExpiredException"
+  PATH="javax.faces.application.ViewExpiredException" SHAPE="24,249,0,0"
+  TYPE="exception" model-entity="SeamPagesDiagramItem">
+  <output ID="/welcome.xhtml" NAME="output" PATH="/welcome.xhtml"
+   TARGET="#xwelcome.xhtml" model-entity="SeamPagesDiagramItemOutput"/>
+ </item>
+ <item ID="org.jboss.seam.ConcurrentRequestTimeoutException"
+  NAME="exception:org.jboss.seam.ConcurrentRequestTimeoutException"
+  PATH="org.jboss.seam.ConcurrentRequestTimeoutException"
+  SHAPE="344,1809,0,0" TYPE="exception" model-entity="SeamPagesDiagramItem"/>
+ <item NAME="exception:" SHAPE="24,769,0,0" TYPE="exception" model-entity="SeamPagesDiagramItem">
+  <output ID="/error.xhtml" NAME="output" PATH="/error.xhtml"
+   TARGET="#xerror.xhtml" model-entity="SeamPagesDiagramItemOutput"/>
+ </item>
+ <item NAME="##{linksMap.getLink('_errorPerm_')}"
+  PATH="#{linksMap.getLink('_errorPerm_')}" SHAPE="344,873,0,0"
+  TYPE="page" model-entity="SeamPagesDiagramItem"/>
+ <item NAME="#xwelcome.xhtml" PATH="/welcome.xhtml" SHAPE="408,145,0,0"
+  TYPE="page" model-entity="SeamPagesDiagramItem"/>
+ <item ID="#context_pro#mc#audit#report#list.xhtml"
+  NAME="#xcontext_pro#xmc#xaudit#xreport#xlist.xhtml"
+  PATH="/context_pro/mc/audit/report/list.xhtml" SHAPE="664,1809,0,0"
+  TYPE="page" model-entity="SeamPagesDiagramItem"/>
+ <item ID="#login_obo.xhtml" NAME="#xlogin_obo.xhtml"
+  PATH="/login_obo.xhtml" SHAPE="24,1913,0,0" TYPE="page" model-entity="SeamPagesDiagramItem">
+  <output ID="/main.xhtml" NAME="output" PATH="/main.xhtml"
+   TARGET="#xmain.xhtml" model-entity="SeamPagesDiagramItemOutput"/>
+  <output ID="/welcome.xhtml" NAME="output1" PATH="/welcome.xhtml"
+   TARGET="#xwelcome.xhtml" model-entity="SeamPagesDiagramItemOutput"/>
+ </item>
+ <item ID="#login_direct.xhtml" NAME="#xlogin_direct.xhtml"
+  PATH="/login_direct.xhtml" SHAPE="24,2041,0,0" TYPE="page" model-entity="SeamPagesDiagramItem"/>
+</diagram>

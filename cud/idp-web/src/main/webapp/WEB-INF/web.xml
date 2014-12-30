@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<display-name>CudIDPPro</display-name>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	<context-param>
+		<param-name>cert_store_url</param-name>
+		<param-value>/home/jboss/jboss/certstore/cudvm.store</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>SIGN_REQUIRED</param-name>
+		<param-value>true</param-value>
+	</context-param>
+	<!--context-param> <param-name>ENCRYPT_REQUIRED</param-name> <param-value>true</param-value> 
+		</context-param -->
+
+	<filter>
+		<filter-name>Ext Filter</filter-name>
+		<filter-class>ru.spb.iac.idp.web.filter.ExtFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>Ext Filter</filter-name>
+		<url-pattern>*</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+	</filter-mapping>
+	<listener>
+		<listener-class>org.picketlink.identity.federation.web.listeners.IDPHttpSessionListener</listener-class>
+	</listener>
+	<servlet>
+		<description></description>
+		<display-name>WebCertAction</display-name>
+		<servlet-name>WebCertAction</servlet-name>
+		<servlet-class>ru.spb.iac.cud.services.web.WebCertAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>WebCertAction</servlet-name>
+		<url-pattern>/WebCertAction</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>AccessServicesWebLogin</display-name>
+		<servlet-name>AccessServicesWebLogin</servlet-name>
+		<servlet-class>ru.spb.iac.cud.services.web.AccessServicesWebLogin</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AccessServicesWebLogin</servlet-name>
+		<url-pattern>/AccessServicesWebLogin</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>StartupServlet</display-name>
+		<servlet-name>StartupServlet</servlet-name>
+		<servlet-class>ru.spb.iac.cud.services.web.init.StartupServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>StartupServlet</servlet-name>
+		<url-pattern>/StartupServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>WebLoginAction</display-name>
+		<servlet-name>WebLoginAction</servlet-name>
+		<servlet-class>ru.spb.iac.cud.services.web.WebLoginAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>WebLoginAction</servlet-name>
+		<url-pattern>/WebLoginAction</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>AccessServicesWeb</display-name>
+		<servlet-name>AccessServicesWeb</servlet-name>
+		<servlet-class>ru.spb.iac.cud.services.web.AccessServicesWeb</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AccessServicesWeb</servlet-name>
+		<url-pattern>/AccessServicesWeb</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>LoginSignOnServlet</display-name>
+		<servlet-name>LoginSignOnServlet</servlet-name>
+		<servlet-class>ru.spb.iac.cud.services.web.LoginSignOnServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoginSignOnServlet</servlet-name>
+		<url-pattern>/login</url-pattern>
+		<url-pattern>/loginEncrypt</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>LogoutSignOnServlet</display-name>
+		<servlet-name>LogoutSignOnServlet</servlet-name>
+		<servlet-class>ru.spb.iac.cud.services.web.LogoutSignOnServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LogoutSignOnServlet</servlet-name>
+		<url-pattern>/logout</url-pattern>
+	</servlet-mapping>
+</web-app>

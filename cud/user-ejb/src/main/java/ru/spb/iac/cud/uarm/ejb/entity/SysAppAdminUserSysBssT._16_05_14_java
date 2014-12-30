@@ -1,0 +1,70 @@
+package ru.spb.iac.cud.uarm.ejb.entity;
+
+import java.io.Serializable;
+import javax.persistence.*;
+
+
+/**
+ * The persistent class for the SYS_APP_ADMIN_USER_SYS_BSS_T database table.
+ * 
+ */
+@Entity
+@Table(name="SYS_APP_ADMIN_USER_SYS_BSS_T")
+public class SysAppAdminUserSysBssT implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@SequenceGenerator(name="SYS_APP_ADMIN_USER_SYS_BSS_T_IDSRV_GENERATOR", sequenceName="SYS_APP_ADMIN_USER_SYS_SEQ", allocationSize = 1)
+	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="SYS_APP_ADMIN_USER_SYS_BSS_T_IDSRV_GENERATOR")
+	@Column(name="ID_SRV")
+	private Long idSrv;
+
+	@Column(name="CODE_SYS")
+	private String codeSys;
+
+	//bi-directional many-to-one association to AcIsBssT
+	@ManyToOne
+	@JoinColumn(name="UP_SYS")
+	private AcIsBssT acIsBssT;
+
+	//bi-directional many-to-one association to JournAppAdminUserSysBssT
+	@ManyToOne
+	@JoinColumn(name="UP_APP_ADMIN")
+	private JournAppAdminUserSysBssT journAppAdminUserSysBssT;
+
+	public SysAppAdminUserSysBssT() {
+	}
+
+	public Long getIdSrv() {
+		return this.idSrv;
+	}
+
+	public void setIdSrv(Long idSrv) {
+		this.idSrv = idSrv;
+	}
+
+	public String getCodeSys() {
+		return this.codeSys;
+	}
+
+	public void setCodeSys(String codeSys) {
+		this.codeSys = codeSys;
+	}
+
+	public AcIsBssT getAcIsBssT() {
+		return this.acIsBssT;
+	}
+
+	public void setAcIsBssT(AcIsBssT acIsBssT) {
+		this.acIsBssT = acIsBssT;
+	}
+
+	public JournAppAdminUserSysBssT getJournAppAdminUserSysBssT() {
+		return this.journAppAdminUserSysBssT;
+	}
+
+	public void setJournAppAdminUserSysBssT(JournAppAdminUserSysBssT journAppAdminUserSysBssT) {
+		this.journAppAdminUserSysBssT = journAppAdminUserSysBssT;
+	}
+
+}

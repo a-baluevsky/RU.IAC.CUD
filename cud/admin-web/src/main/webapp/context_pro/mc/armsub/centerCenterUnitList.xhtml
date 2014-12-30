@@ -1,0 +1,250 @@
+<?xml version='1.0' encoding='windows-1251' ?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:s="http://jboss.com/products/seam/taglib"
+	xmlns:c="http://java.sun.com/jstl/core">
+
+
+	<h3 class="ui-widget-header">Справочник информационных систем</h3>
+
+	<div class="ui-widget-header" style="background: #E6E6E6;">
+		<a4j:outputPanel id="outCenterCenterHeader">
+			<table>
+				<tr>
+					<td><s:div rendered="#{param['remoteAudit']!=null}">
+							<!--h:form-->
+							<table style="width: 300px" border="0">
+								<tr>
+									<td width="70px"><a4j:commandButton style="width:60px;"
+											value="Создать" reRender="outCBmpCrt" ajaxSingle="true"
+											oncomplete="#{rich:component('CBmpCrt')}.show();"
+											rendered="#{authenticator.accessPerm('urn_access_subsystems','2')}"
+											styleClass="but_class">
+											<f:param name="onCreate" value="1" />
+											<f:param name="remoteAudit" value="OpenCrtFact" />
+											<f:param
+												name="#{param['sessionId']!=null ? 'sessionId' : 'xxx1'}"
+												value="#{param['sessionId']}" />
+										</a4j:commandButton></td>
+									<td><s:div rendered="#{param['sessionId']!=null}">
+											<a4j:commandButton style="width:60px;" ajaxSingle="true"
+												reRender="outCBmpUpd" value="Изменить"
+												action="#{armSubManager.forViewUpdDel}"
+												oncomplete="#{rich:component('CBmpUpd')}.show();"
+												rendered="#{authenticator.accessPerm('urn_access_subsystems','3') and armSubBean.isAllowedSys == true }"
+												styleClass="but_class">
+												<f:param name="onUpdate" value="1" />
+												<f:param name="remoteAudit" value="OpenUpdFact" />
+												<f:param name="sessionId" value="#{param['sessionId']}" />
+											</a4j:commandButton>
+											<a4j:commandButton reRender="outCBmpDel" ajaxSingle="true"
+												value="Удалить" action="#{armSubManager.forViewDelMessage}"
+												oncomplete="#{rich:component('CBmpDel')}.show();"
+												style="width:60px;margin-left:10px;"
+												rendered="#{authenticator.accessPerm('urn_access_subsystems','4') and armSubBean.isAllowedSys == true }"
+												styleClass="but_class">
+												<f:param name="onDelete" value="1" />
+												<f:param name="remoteAudit" value="OpenDelFact" />
+												<f:param name="sessionId" value="#{param['sessionId']}" />
+											</a4j:commandButton>
+											<a4j:commandButton reRender="outCBmpCert" ajaxSingle="true"
+												value="Сертификат" action="#{armSubManager.forViewCert}"
+												oncomplete="#{rich:component('CBmpCert')}.show();"
+												style="width:90px;margin-left:10px;"
+												rendered="#{authenticator.accessPerm('urn_access_subsystems','2') and armSubBean.isAllowedSys == true }"
+												styleClass="but_class">
+												<f:param name="onCert" value="1" />
+												<f:param name="remoteAudit" value="OpenUpdFact" />
+												<f:param name="sessionId" value="#{param['sessionId']}" />
+											</a4j:commandButton>
+										</s:div></td>
+								</tr>
+							</table>
+							<!--/h:form-->
+						</s:div></td>
+					<td height="25px;"><h:outputText value="&amp;nbsp;"
+							escape="false" /></td>
+				</tr>
+			</table>
+		</a4j:outputPanel>
+	</div>
+
+	<div class="ui-layout-content">
+		<a4j:outputPanel id="outCenterCenter">
+
+			<s:div rendered="#{armSubManager.evaluteForList}">
+
+				<a4j:queue ignoreDupResponce="true" />
+
+				<rich:dataTable id="audit_dt" style="width:100%" var="it"
+					value="#{armSubDataModel}" rows="#{profile.rowsCountArmSub}"
+					reRender="dt_dscr"
+					onRowClick="invokeRemoteAuditBean(
+        '#{it.baseId}',
+        'rowSelectFact',
+        '#{param['auditListCount'] != null ? param['auditListCount'] : armSubDataModel.rowCount}');">
+
+					<rich:columns value="#{armSubManager.auditItemsListSelect}"
+						var="field" index="index" id="column#{index}"
+						styleClass="#{it.baseId==param['sessionId'] ? 'audit_record_active' : ''}"
+						style="#{it.selected=='true' ? 'background-color: yellow;' : ''} cursor:pointer;">
+						<f:facet name="header">
+
+							<h:panelGroup>
+								<h:outputText value="#{field.itemLabel}" />
+								<a4j:commandLink
+									onclick="invokeSort(
+		                 '#{param['sessionId']}',
+	                     'filterFieldFact',
+	                     '#{field.itemSortField}'); return false;">
+									<h:graphicImage
+										url="/img/icons/sort_#{armSubStateHolder.sortOrders[field.itemSortField]}.gif"
+										styleClass="img-in-link" height="14" width="14" />
+								</a4j:commandLink>
+								<br />
+
+								<c:choose>
+									<c:when test="#{field.itemField=='armName'}">
+										<h:selectOneMenu
+											value="#{armSubStateHolder.columnFilterValues[field.itemFiltField]}"
+											id="som#{index}" style="width:100px;"
+											onchange="invokeMyStart();">
+											<f:selectItem itemLabel="Все" itemValue="#-1#" />
+											<s:selectItems value="#{armManager.listArm}" var="n"
+												label="#{n.name}" itemValue="#{n.idArm}" />
+										</h:selectOneMenu>
+									</c:when>
+									<c:otherwise>
+
+										<h:inputText
+											value="#{armSubStateHolder.columnFilterValues[field.itemFiltField]}"
+											immediate="true" id="iaf#{index}"
+											onkeypress="if(event.keyCode==13){invokeMyStart();}" />
+
+									</c:otherwise>
+								</c:choose>
+
+							</h:panelGroup>
+						</f:facet>
+						<h:outputText value="#{it[field.itemField]}" />
+
+					</rich:columns>
+
+					<f:param name="#{param['sessionId']!=null ? 'sessionId' : 'xxx1'}"
+						value="#{param['sessionId']}" />
+					<f:param name="remoteAudit" value="1" />
+				</rich:dataTable>
+				<a4j:jsFunction name="invokeMyStart"
+					reRender="outCenterCenterFooter,outCenterCenter"
+					oncomplete="setCaretToEnd(event);">
+					<f:param name="#{param['sessionId']!=null ? 'sessionId' : 'xxx1'}"
+						value="#{param['sessionId']}" />
+					<f:param name="remoteAudit" value="filterFieldFact" />
+					<f:param name="idRai" value="#{param['idRai']}" />
+				</a4j:jsFunction>
+			</s:div>
+		</a4j:outputPanel>
+	</div>
+
+	<div class="ui-widget-footer" style="background: #E6E6E6;">
+		<a4j:outputPanel id="outCenterCenterFooter">
+
+			<table>
+				<tr>
+					<td><s:div rendered="#{armSubManager.evaluteForListFooter}">
+
+							<table style="width: 95%" border="0">
+								<tr>
+									<td width="40px;"><h:outputText value="Строк:" /></td>
+									<td width="50px;"><rich:inputNumberSpinner
+											value="#{profile.rowsCountArmSub}" inputSize="1" id="rowCId"
+											minValue="5" enableManualInput="false"
+											oninputkeypress="return false;" /></td>
+									<td width="40px;"><a4j:commandLink
+											reRender="outCenterCenter, outCenterCenterFooterDscr"
+											ajaxSingle="true" process="rowCId">
+											<h:graphicImage url="/img/icons/Da.gif"
+												styleClass="img-in-link" height="14" width="14" />
+											<f:param
+												name="#{param['sessionId']!=null ? 'sessionId' : 'xxx1'}"
+												value="#{param['sessionId']}" />
+											<f:param name="remoteAudit" value="rowCountFact" />
+										</a4j:commandLink></td>
+									<td><a4j:outputPanel id="outCenterCenterFooterDscr">
+											<rich:datascroller align="center" for="audit_dt" maxPages="5"
+												stepControls="hide" id="dt_dscr" immediate="true"
+												renderIfSinglePage="false" reRender="outCenterCenter"
+												ajaxSingle="true" style="padding-right:30px;">
+												<f:param name="auditListCount"
+													value="#{armSubDataModel.rowCount2}" />
+												<f:param
+													name="#{param['sessionId']!=null ? 'sessionId' : 'xxx1'}"
+													value="#{param['sessionId']}" />
+												<f:param name="remoteAudit" value="dScrollFact" />
+											</rich:datascroller>
+										</a4j:outputPanel></td>
+									<!--td width="80px;">
+              <a4j:commandLink 
+               value="Столбцы"
+               onclick="invokeSelectColumns(
+                   '1',
+                   '#{param['sessionId']}',
+                   '#{param['entryid']}',
+                   'onSelColFact',
+                   '#{param['idRai']}',
+                   '#{param['auditListCount'] != null ? param['auditListCount'] : auditDataModel.rowCount}');return false;">
+               </a4j:commandLink>
+              </td-->
+									<td><s:div rendered="#{param['sessionId']!=null}">
+											<a4j:commandButton style="width:60px;" ajaxSingle="true"
+												reRender="outCenterCenter, outCenterCenterFooter"
+												value="#{armSubBean.selected ? 'Очистить' : 'Отметить'}"
+												action="#{armSubManager.selectRecord}"
+												styleClass="but_class">
+												<f:param name="sessionId" value="#{param['sessionId']}" />
+												<f:param name="remoteAudit" value="clSelOneFact" />
+												<f:param name="auditListCount"
+													value="#{param['auditListCount'] != null ? param['auditListCount'] : armSubDataModel.rowCount}" />
+											</a4j:commandButton>
+										</s:div></td>
+								</tr>
+							</table>
+
+						</s:div></td>
+					<td height="25px;"><h:outputText value="&amp;nbsp;"
+							escape="false" /></td>
+				</tr>
+			</table>
+		</a4j:outputPanel>
+	</div>
+	<SCRIPT type="text/javascript">
+ //<![CDATA[
+    jQuery(document).ready(
+	   function () {
+		   invokeRemoteAudit();
+	   }
+	);
+    function setCaretToEnd(e) {
+
+        var id = (e.target ? e.target : e.srcElement).id;
+
+        var control = document.getElementById(id);
+      
+        if (control.createTextRange) {
+            var range = control.createTextRange();
+            range.collapse(false);
+            range.select();
+        }else if (control.setSelectionRange) {al
+            control.focus();
+            var length = control.value.length;
+            control.setSelectionRange(length, length);
+        }
+        control.selectionStart = control.selectionEnd = control.value.length;
+    } 
+  //]]>
+ </SCRIPT>
+</ui:composition>

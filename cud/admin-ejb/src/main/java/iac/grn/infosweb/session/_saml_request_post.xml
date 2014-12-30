@@ -1,0 +1,13 @@
+<samlp:AuthnRequest xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol"
+	xmlns="urn:oasis:names:tc:SAML:2.0:assertion"
+	AssertionConsumerServiceURL="http://10.128.66.140:8080/infoscud/public.seam"
+	Destination="http://10.128.66.140:8080/cudidp/" ID="ID_0c9ef4d8-c831-4f0d-9e67-a58205aa4a1c"
+	IssueInstant="2013-11-06T09:17:40.675Z" ProtocolBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
+	Version="2.0">
+	<saml:Issuer xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion">urn:eis:sales:post</saml:Issuer>
+	<samlp:NameIDPolicy AllowCreate="true"
+		Format="urn:oasis:names:tc:SAML:2.0:nameid-format:transient" />
+	<samlp:RequestedAuthnContext>
+		<saml:AuthnContextClassRef xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion">urn:oasis:names:tc:SAML:2.0:ac:classes:X509</saml:AuthnContextClassRef>
+	</samlp:RequestedAuthnContext>
+</samlp:AuthnRequest>

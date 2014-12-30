@@ -1,0 +1,31 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>ru.spb.iac</groupId>
+  <artifactId>cud</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <modules>
+  	<module>admin-web</module>
+  	<module>admin-ejb</module>
+  	<module>admin-ear</module>
+  	<module>common-ilib</module>
+  	<module>crypto-15export</module>
+  	<module>ejb-services</module>
+  	<module>authz-module</module>
+  	<module>idp-lib</module>
+  	<module>sts-lib</module>
+  	<module>idp-web</module>
+  	<module>sts-web</module>
+  	<module>sp-lib</module>
+  	<module>web-services</module>
+  	<module>schedule-services</module>
+  	<module>user-ear</module>
+  	<module>user-ejb</module>
+  	<module>user-web</module>
+  	<module>report-services</module>
+    </modules>
+    
+   
+        
+    
+</project>

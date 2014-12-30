@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<display-name>CUDUserConsole-war</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+	<servlet>
+		<servlet-name>Faces Servlet</servlet-name>
+		<servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+		<multipart-config>
+			<max-file-size>20848820</max-file-size>
+			<max-request-size>418018841</max-request-size>
+			<file-size-threshold>1048576</file-size-threshold>
+		</multipart-config>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Faces Servlet</servlet-name>
+		<url-pattern>*.jsf</url-pattern>
+		<url-pattern>*.xhtml</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Faces Servlet</servlet-name>
+		<url-pattern>/faces/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description></description>
+		<display-name>StartupServlet</display-name>
+		<servlet-name>StartupServlet</servlet-name>
+		<servlet-class>ru.spb.iac.cud.uarm.web.init.StartupServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>StartupServlet</servlet-name>
+		<url-pattern>/StartupServlet</url-pattern>
+	</servlet-mapping>
+	<listener>
+		<listener-class>ru.spb.iac.cud.uarm.session.SessionListener</listener-class>
+	</listener>
+
+   <context-param>
+        <param-name>org.richfaces.LoadScriptStrategy</param-name>
+        <param-value>ALL</param-value>
+    </context-param>
+    <context-param>
+        <param-name>org.richfaces.LoadStyleStrategy</param-name>
+        <param-value>ALL</param-value>
+    </context-param>
+    <context-param>
+        <param-name>org.richfaces.resourceOptimization.enabled</param-name>
+        <param-value>true</param-value>
+    </context-param>
+    <servlet>
+        <servlet-name>Resource Servlet</servlet-name>
+        <servlet-class>org.richfaces.webapp.ResourceServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Resource Servlet</servlet-name>
+        <url-pattern>/org.richfaces.resources/*</url-pattern>
+    </servlet-mapping>
+    
+	<context-param>
+		<param-name>facelets.SKIP_COMMENTS</param-name>
+		<param-value>true</param-value>
+	</context-param>
+	<context-param>
+		<param-name>cert_store_url</param-name>
+		<param-value>/home/jboss/jboss/certstore/cudvm.store</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>SIGN_REQUIRED</param-name>
+		<param-value>true</param-value>
+	</context-param>
+	<context-param>
+		<param-name>SAML_REQUEST_LOGIN_UARM</param-name>
+		<param-value>/home/jboss/jboss/data/saml/uarm_saml_request_post.xml</param-value>
+	</context-param>
+	<context-param>
+		<param-name>SAML_REQUEST_LOGOUT</param-name>
+		<param-value>/home/jboss/jboss/data/saml/saml_request_logout_post.xml</param-value>
+	</context-param>
+	<context-param>
+		<param-name>SAML_ASSERTION</param-name>
+		<param-value>/home/jboss/jboss/data/saml/saml_asserion.xml</param-value>
+	</context-param>
+	<context-param>
+		<param-name>STORE_PATH</param-name>
+		<param-value>/home/jboss/jboss/certstore/cudvm.store</param-value>
+	</context-param>
+	<context-param>
+		<param-name>AUDIT_SERVICE</param-name>
+		<param-value>https://acc.lan.iac.spb.ru:18443/CudServicesPro/AuditService?wsdl</param-value>
+	</context-param>
+	<context-param>
+		<param-name>STS_OBO_SERVICE</param-name>
+		<param-value>https://acc.lan.iac.spb.ru:18443/CudServicesSTS/CUDSTS?wsdl</param-value>
+	</context-param>
+	<context-param>
+		<param-name>STS_SERVICE</param-name>
+		<param-value>https://acc.lan.iac.spb.ru:18443/CudServicesSTS/CUDSTS?wsdl</param-value>
+	</context-param>
+
+</web-app>

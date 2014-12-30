@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='windows-1251' ?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich">
+	<style type="text/css">
+.rf-ac {
+	/*  width: 99%;*/ //убрал ,посмотрим border:0pxsolidyellow;
+	
+}
+
+.rf-ac-itm {
+	
+}
+
+.rf-ac-itm-cnt {
+	border: 0px solid black;
+}
+
+.rf-ac-itm-gr {
+	border: 0px solid black;
+}
+/*  .rf-ac-itm-hdr{
+         width: 100%;
+        }*/
+</style>
+	<h:form id="lU_f1" style="height:100%;">
+
+
+		<rich:accordion height="100%" switchType="client" id="acc_g">
+			<script type="text/javascript">
+        //<![CDATA[
+       //  document.getElementById('lU_f1:acc1:content').style.height=jQuery(window).height()-parseInt(233); 
+        if(ua.mozilla){
+          document.getElementById("lU_f1:acc_g").style.height=jQuery(window).height()-parseInt(67)+'px';
+        }else{ //ua.msie
+        	document.getElementById("lU_f1:acc_g").style.height=jQuery(window).height()-parseInt(94)+'px';
+       //   document.getElementById("lU_f1:acc_g").style.height=YAHOO.util.Dom.getViewportHeight()-parseInt(94)+'px';
+        }
+         /*   document.getElementById("lU_f1:acc1:content").style.height=jQuery(window).height()-parseInt(233)+'px';*/
+          
+          /* document.getElementById("lU_f1:acc_g").style.height=Richfaces.getWindowSize().height-parseInt(90)+'px';*/
+
+           //]]> 
+          </script>
+			<rich:accordionItem onenter="change_acc('acc1');"
+				header="Управление полномочиями" id="acc1">
+
+				<table style="width: 100%;">
+					<tr>
+						<td height="25"><h:link value="Организации"
+								outcome="/context_pro/mc/org/org_list.xhtml" /></td>
+					</tr>
+					<tr>
+						<td height="25"><h:link value="Пользователи"
+								outcome="/context_pro/mc/usr/usr_list.xhtml" /></td>
+					</tr>
+					<tr>
+						<td height="25"><h:link value="Роли"
+								outcome="/context/mc/rol/rol_list.xhtml" /></td>
+					</tr>
+					<tr>
+						<td height="25"><h:link value="Ресурсы"
+								outcome="/context/mc/res/res_list.xhtml" /></td>
+					</tr>
+					<tr>
+						<td height="25"><h:link value="АРМы"
+								outcome="/context/mc/arm/arm_list.xhtml" /></td>
+					</tr>
+				</table>
+			</rich:accordionItem>
+			<rich:accordionItem onenter="change_acc('acc2');" header="Аудит"
+				id="acc2">
+
+				<table style="width: 100%;">
+					<tr>
+						<td height="25"><a4j:commandLink value="Доступ к данным"
+								onclick="return false;" /></td>
+					</tr>
+					<tr>
+						<td height="25"><a4j:commandLink value="Доступ к функциям"
+								onclick="return false;" /></td>
+					</tr>
+					<tr>
+						<td height="25"><a4j:commandLink value="Доступ к системе"
+								onclick="return false;" /></td>
+					</tr>
+				</table>
+			</rich:accordionItem>
+			<rich:accordionItem onenter="change_acc('acc3');" header="Сервисы"
+				id="acc3">
+				<table style="width: 100%;">
+					<tr>
+						<td height="25"><a4j:commandLink value="Расширенный Поиск"
+								onclick="return false;" /></td>
+					</tr>
+					<tr>
+						<td height="25"><a4j:commandLink value="Новости"
+								onclick="return false;" /></td>
+					</tr>
+					<tr>
+						<td height="25"><a4j:commandLink value="Сообщения"
+								onclick="return false;" /></td>
+					</tr>
+					<tr>
+						<td height="25"><a4j:commandLink value="Заметки"
+								onclick="return false;" /></td>
+					</tr>
+				</table>
+			</rich:accordionItem>
+		</rich:accordion>
+	</h:form>
+</ui:composition>

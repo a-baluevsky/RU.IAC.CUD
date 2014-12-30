@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich">
+
+<h:head>
+	<title>user reg</title>
+</h:head>
+<h:body>
+	<h3>Запрос на регистрацию пользователя</h3>
+	<h:form>
+		<h:panelGrid columns="2">
+
+			<h:outputText value="Организация" />
+			<h:inputText value="#{userRegBean.orgName}" />
+
+			<h:outputText value="Подразделение" />
+			<h:inputText value="#{userRegBean.depName}" />
+
+			<h:outputText value="Должность" />
+			<h:inputText value="#{userRegBean.userPos}" />
+
+			<h:outputText value="Фамилия" />
+			<h:inputText value="#{userRegBean.userFam}" />
+
+			<h:outputText value="Имя" />
+			<h:inputText value="#{userRegBean.userName}" />
+
+			<h:outputText value="Отчество" />
+			<h:inputText value="#{userRegBean.userOtch}" />
+
+			<h:outputText value="Телефон" />
+			<h:inputText value="#{userRegBean.userPhone}" />
+
+			<h:outputText value="Email" />
+			<h:inputText value="#{userRegBean.userEmail}" />
+
+		</h:panelGrid>
+
+		<h:commandButton value="Отправить" action="#{userRegBean.action}" />
+	</h:form>
+
+</h:body>
+</html>

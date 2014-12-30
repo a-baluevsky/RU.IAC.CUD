@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich">
+
+<h:head>
+	<title>info user</title>
+</h:head>
+<h:body>
+	<h3>Роли пользователя</h3>
+
+	<h:form>
+		<rich:dataTable width="700" var="record"
+			value="#{userManagerBean.listArm}">
+			<f:facet name="header">
+				<rich:column>
+					<h:outputText value="Название ИС / роли" />
+				</rich:column>
+			</f:facet>
+			<rich:column>
+				<rich:collapsibleSubTableToggler for="sbtbl" />
+				<h:outputText value="#{record.full}" />
+			</rich:column>
+			<rich:collapsibleSubTable var="expense"
+				value="#{record.acRolesBssTs}" id="sbtbl" expandMode="client"
+				expanded="'#{false}">
+				<rich:column style="padding-left:30px;">
+					<h:outputText value="#{expense.full}"></h:outputText>
+				</rich:column>
+
+			</rich:collapsibleSubTable>
+
+		</rich:dataTable>
+	</h:form>
+
+	<br />
+	<h:link value="Изменить свои роли"
+		outcome="/context/registr/reg_role_user.xhtml" />
+	<br />
+	<h:link value="Назад" outcome="/context/roles_pages/role_user.xhtml" />
+
+
+</h:body>
+</html>

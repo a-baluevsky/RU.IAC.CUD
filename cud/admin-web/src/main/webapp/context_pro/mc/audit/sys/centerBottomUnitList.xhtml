@@ -1,0 +1,538 @@
+<?xml version='1.0' encoding='windows-1251' ?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:s="http://jboss.com/products/seam/taglib"
+	xmlns:c="http://java.sun.com/jstl/core">
+
+	<h3 class="ui-widget-header">Подробно</h3>
+	<div class="ui-layout-content">
+		<a4j:outputPanel id="outCenterBottom">
+
+			<table style="width: 100%;" border="0">
+				<tr>
+					<td width="90%">
+
+						<div style="margin: 5px;">
+
+							<c:if test="#{aSysManager.evaluteForBean}">
+
+								<h:form>
+
+									<h:messages style="color:red" globalOnly="false" />
+
+									<table style="width: 100%; font-size: 12px;" border="0">
+										<c:forEach items="#{aSysManager.auditItemsListContext}"
+											var="field">
+											<tr>
+												<td width="150px" height="25px" class="table_left_header">
+													<h:outputText value="#{field.itemLabel}" />
+												</td>
+												<td><c:choose>
+														<c:when test="#{field.itemField=='dateAction'}">
+															<h:outputText value="#{aFuncBean[field.itemField]}">
+																<s:convertDateTime pattern="dd.MM.yy HH:mm:ss" />
+															</h:outputText>
+														</c:when>
+														<c:otherwise>
+															<h:outputText value="#{aFuncBean[field.itemField]}" />
+														</c:otherwise>
+													</c:choose></td>
+											</tr>
+										</c:forEach>
+										<!--tr>
+            <td width="150px" height="25px" class="table_left_header">
+              <h:outputText value="Создал"/>
+            </td>
+            <td>
+               <h:outputText value="#{armBean.crtUserName}"/>
+            </td>
+          </tr>
+          <tr>
+            <td width="150px" height="25px" class="table_left_header">
+              <h:outputText value="Дата создания"/>
+            </td>
+            <td>
+               <h:outputText value="#{armBean.created}">
+                  <s:convertDateTime pattern="dd.MM.yy HH:mm:ss"/>
+               </h:outputText>   
+            </td>
+          </tr>
+          <tr>
+            <td width="150px" height="25px" class="table_left_header">
+              <h:outputText value="Редактировал"/>
+            </td>
+            <td>
+               <h:outputText value="#{armBean.updUserName}"/>
+            </td>
+          </tr>
+          <tr>
+            <td width="150px" height="25px" class="table_left_header">
+              <h:outputText value="Дата редактирования"/>
+            </td>
+            <td>
+               <h:outputText value="#{armBean.modified}">
+                  <s:convertDateTime pattern="dd.MM.yy HH:mm:ss"/>
+               </h:outputText>
+            </td>
+          </tr-->
+									</table>
+								</h:form>
+							</c:if>
+						</div>
+					</td>
+					<td width="90px" valign="top">
+						<!--rich:panel style="margin:5px 5px 0 0;">
+   <f:facet name="header">
+    Действия:
+   </f:facet>
+   <a4j:form>
+     <a4j:commandButton style="width:60px;" value="Создать"
+       reRender="outCBmpCrt" ajaxSingle="true"
+       oncomplete="#{rich:component('CBmpCrt')}.show();"
+       rendered="#{authenticator.accessPerm('004','2')}"
+       styleClass="but_class">
+          <f:param name="onCreate" value="1"/>
+      </a4j:commandButton>
+    
+     <s:div rendered="#{param['idArm']!=null}">
+     
+      <a4j:commandButton style="margin-top:5px;width:60px;"
+         ajaxSingle="true" reRender="outCBmpUpd"
+         value="Изменить" action="#{armManager.forView}"
+         oncomplete="#{rich:component('CBmpUpd')}.show();"
+         rendered="#{authenticator.accessPerm('004','3')}"
+         styleClass="but_class">
+         <f:param name="onUpdate" value="1"/>
+         <f:param name="idArm" value="#{param['idArm']}"/>
+       </a4j:commandButton>
+     
+      <a4j:commandButton 
+         reRender="outCBmpDel"
+         value="Удалить" 
+         action="#{armManager.forViewDel}"
+         oncomplete="#{rich:component('CBmpDel')}.show();"
+         style="margin-top:5px;width:60px;" 
+         rendered="#{authenticator.accessPerm('004','4')}"
+         styleClass="but_class">
+         <f:param name="onDelete" value="1"/>
+         <f:param name="idArm" value="#{param['idArm']}"/>
+       </a4j:commandButton>
+     </s:div>
+    </a4j:form>
+   </rich:panel-->
+					</td>
+				</tr>
+			</table>
+
+		</a4j:outputPanel>
+	</div>
+
+	<div class="ui-widget-footer" style="background: #E6E6E6;">
+
+		<rich:modalPanel id="CTClearDate" width="250" height="100"
+			autosized="true">
+			<f:facet name="header">
+				<h:panelGroup>
+					<h:outputText value="Архивирование журнала" />
+				</h:panelGroup>
+			</f:facet>
+			<f:facet name="controls">
+				<h:panelGroup>
+					<h:graphicImage onclick="#{rich:component('CTClearDate')}.hide();"
+						value="/img/icons/close.gif" />
+				</h:panelGroup>
+			</f:facet>
+			<h:form id="CTfClearDate">
+				<table border="0">
+					<tr>
+						<td height="15px" width="200px"><h:outputText
+								value="Период архивирования [месяцев]:" /></td>
+						<td height="15px" align="center">
+							<!--h:outputText value="#{aSysManager.archiveParamValue}"/--> <rich:inputNumberSpinner
+								value="#{aSysManager.archiveParamValue}" inputSize="1"
+								id="perId" minValue="1" enableManualInput="false"
+								oninputkeypress="return false;" />
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2"><h:outputText
+								value="Запустить операцию архивирования?" /></td>
+					</tr>
+				</table>
+				<div
+					style="white-space: nowrap; text-align: center; margin-top: 15px;">
+					<a4j:commandButton value="Отмена"
+						onclick="#{rich:component('CTClearDate')}.hide();return false;"
+						styleClass="but_class" />
+
+					<a4j:commandButton value="Запустить"
+						action="#{aSysManager.clearDate}"
+						reRender="outCenterCenterFooter,outCenterCenter,outCenterBottomFooter,outCenterBottom"
+						oncomplete=" #{rich:component('CTClearDate')}.hide();"
+						onclick="if(!confirm('Внимание!\nОперация архивирования не обратима!\nВы уверены в необходимости проведения архивирования? ')){return false;}"
+						styleClass="but_class">
+						<f:param name="remoteAudit" value="clearJournFact" />
+					</a4j:commandButton>
+
+				</div>
+			</h:form>
+		</rich:modalPanel>
+
+		<!--rich:modalPanel id="CTClearDate" trimOverlayedElements="false" 
+     width="250" height="150">
+      <f:facet name="header">
+            <h:panelGroup>
+                <h:outputText value="Очистка журнала"/>
+             </h:panelGroup>
+        </f:facet>
+        <f:facet name="controls">
+             <h:panelGroup>
+               <h:graphicImage onclick="#{rich:component('CTClearDate')}.hide();"
+                 value="/img/icons/close.gif" />
+             </h:panelGroup>
+       </f:facet>
+       <h:form id="CTfClearDate">
+         <table>
+          <tr>
+             <td colspan="3" height="25px">
+               <h:outputText value="Период очистки:"/>
+             </td>
+          </tr>
+          <tr>
+             <td width="20px"/>
+             <td width="20px" height="25px">
+               <h:outputText value="С:"/></td>
+             <td>
+             <rich:calendar value="#{aSysManager.clearDate1}"
+				  locale="RU"
+				  datePattern="dd.MM.yy HH:mm"
+				  defaultTime="00:00" 
+				  todayControlMode="hidden"
+				  id="clean_asys_date1"/>
+             </td>
+            </tr>
+             <tr>
+             <td width="20px"/>
+             <td width="20px" height="25px">
+               <h:outputText value="По:"/></td>
+             <td>
+             <rich:calendar value="#{aSysManager.clearDate2}"
+				  locale="RU"
+				  datePattern="dd.MM.yy HH:mm" 
+				  defaultTime="23:59" 
+				  todayControlMode="hidden"
+				  id="clean_asys_date2"/>
+             </td>
+            </tr>
+            </table>
+          <div style="white-space: nowrap;text-align:center;margin-top:5px;">
+             <a4j:commandButton value="Отмена" 
+                onclick="#{rich:component('CTClearDate')}.hide();return false;"
+                styleClass="but_class"/>
+             
+             <a4j:commandButton value="Очистить"
+                    action="#{aSysManager.clearDate}"
+                    reRender="outCenterCenterFooter,outCenterCenter,outCenterBottomFooter,outCenterBottom" 
+                    oncomplete=" #{rich:component('CTClearDate')}.hide();" 
+                    onclick="if(check_clean_date()){return false;}else{if(!confirm('Внимание!\nОперация очистки не обратима!\nВы уверены в необходимости проведения очистки? ')){return false;}}"
+                    styleClass="but_class">
+               <f:param name="remoteAudit" value="clearJournFact"/> 
+             </a4j:commandButton>
+             
+           </div>
+         </h:form>
+        </rich:modalPanel-->
+		<rich:modalPanel id="CBReport" trimOverlayedElements="false"
+			width="250" height="150">
+			<f:facet name="header">
+				<h:panelGroup>
+					<h:outputText value="Отчёт" />
+				</h:panelGroup>
+			</f:facet>
+			<f:facet name="controls">
+				<h:panelGroup>
+					<h:graphicImage onclick="#{rich:component('CBReport')}.hide();"
+						value="/img/icons/close.gif" />
+				</h:panelGroup>
+			</f:facet>
+			<!--h:form id="CBfReport"-->
+			<table>
+				<tr>
+					<td colspan="3" height="25px"><h:outputText
+							value="Период отчёта:" /></td>
+				</tr>
+				<tr>
+					<td width="20px" />
+					<td width="20px" height="25px"><h:outputText value="С:" /></td>
+					<td><rich:calendar locale="RU" datePattern="dd.MM.yyyy"
+							todayControlMode="hidden" id="report_date1" /></td>
+				</tr>
+				<tr>
+					<td width="20px" />
+					<td width="20px" height="25px"><h:outputText value="По:" /></td>
+					<td><rich:calendar locale="RU" datePattern="dd.MM.yyyy"
+							todayControlMode="hidden" id="report_date2" /></td>
+				</tr>
+			</table>
+			<div
+				style="white-space: nowrap; text-align: center; margin-top: 5px;">
+				<s:link onclick="#{rich:component('CBReport')}.hide();return false;"
+					styleClass="but_class" value="Отмена" />
+
+				<s:link view="/context_pro/mc/audit/sys/reportWord.xhtml"
+					action="#{aSysManager.forViewWord('')}" target="#" id="link_word"
+					onmouseup="link_option(this);"
+					onclick="if(check_report_date()){return false;}else{#{rich:component('CBReport')}.hide();}"
+					styleClass="but_class">
+					<h:outputText value=" Отчёт" escape="false" />
+					<f:param name="remoteAudit" value="protBeanWord" />
+					<f:param name="modelType" value="#{modelType}" />
+				</s:link>
+			</div>
+			<!--/h:form-->
+		</rich:modalPanel>
+		<script>
+         //<![CDATA[
+         var link_word;
+         jQuery(document).ready(
+			function () {
+                link_word= document.getElementById('link_word').href;
+              }
+	      );
+        //]]>
+     </script>
+		<!--a4j:outputPanel id="outCBmpCrt">
+     <rich:modalPanel id="CBmpCrt" rendered="#{param['onCreate']!=null}"
+                    width="400" height="170">
+      <f:facet name="header">
+            <h:panelGroup>
+                <h:outputText value="Разрешение"></h:outputText>
+             </h:panelGroup>
+      </f:facet>
+       <f:facet name="controls">
+            <h:panelGroup>
+                <h:graphicImage onclick="#{rich:component('CBmpCrt')}.hide();"
+                value="/img/icons/close.gif" />
+              </h:panelGroup>
+        </f:facet>
+        <h:form id="CBformCrt">
+         <table style="width:100%;">
+            <tr>
+            <td width="100px" height="25px">
+            <h:outputText value="Название"/></td>
+            <td><h:inputText value="#{aFuncBeanCrt.permName}"
+                 id="name" maxlength="100" size="45"/></td>
+            </tr>
+            <tr>
+            <td width="100px" height="25px">
+            <h:outputText value="Описание"/></td>
+            <td>
+            <h:inputTextarea value="#{aFuncBeanCrt.permDescr}" 
+            id="descr" cols="41" rows="3" />
+            </td>
+            </tr>
+            <tr>
+            <td width="100px" height="25px">
+            <h:outputText value="Сортировка"/></td>
+            <td>
+            <h:inputText value="#{aFuncBeanCrt.orderNum}" 
+            id="sort_num" size="1" maxlength="3"/>
+            </td>
+            </tr>
+            <tr>
+            <td colspan="2" align="center" height="35px">
+            <a4j:commandButton value="Отмена"
+                     onclick="#{rich:component('CBmpCrt')}.hide();return false;"
+                     styleClass="but_class"/>
+            <a4j:commandButton value="Сохранить"
+                    action="#{aFuncManageraFuncPerm}"
+                    reRender="outCenterCenter, outCenterCenterFooter"
+                    oncomplete=" #{rich:component('CBmpCrt')}.hide();" 
+                    onclick="if(check('CBformCrt')){return false;}"
+                    styleClass="but_class">
+                  <f:param name="onCreate" value="1"/>
+                  <f:param name="remoteAudit" value="CrtFact"/> 
+                  <f:param name="#{param['sessionId']!=null ? 'sessionId' : 'xxx1'}" value="#{param['sessionId']}"/> 
+          
+              </a4j:commandButton>
+             </td>
+            </tr>
+            </table>
+            </h:form>
+       </rich:modalPanel>
+     </a4j:outputPanel>
+     <a4j:outputPanel id="outCBmpUpd"> 
+       <rich:modalPanel id="CBmpUpd" 
+         rendered="#{param['onUpdate']!=null}"
+         width="400" height="170">
+          <f:facet name="header">
+            <h:panelGroup>
+                <h:outputText value="Разрешение"/>
+             </h:panelGroup>
+      </f:facet>
+       <f:facet name="controls">
+            <h:panelGroup>
+                <h:graphicImage onclick="#{rich:component('CBmpUpd')}.hide();"
+                value="/img/icons/close.gif"/>
+              </h:panelGroup>
+        </f:facet>
+        <h:form id="CBformUpd">
+       
+         <table style="width:100%;">
+             <tr>
+            <td width="100px" height="25px">
+            <h:outputText value="Название"/></td>
+            <td><h:inputText value="#{aFuncBean.permName}"
+               id="name" maxlength="100" size="45"/></td>
+            </tr>
+            <tr>
+            <td width="100px" height="25px">
+            <h:outputText value="Описание"/></td>
+            <td>
+            <h:inputTextarea value="#{aFuncBean.permDescr}" 
+            id="descr" cols="41" rows="3" />
+            </td>
+            </tr>
+            <tr>
+            <td width="100px" height="25px">
+            <h:outputText value="Сортировка"/></td>
+            <td>
+            <h:inputText value="#{aFuncBean.orderNum}" 
+            id="sort_num" size="1" maxlength="3"/>
+            </td>
+            </tr>
+            <tr>
+            <td colspan="2" align="center" height="35px">
+            <a4j:commandButton value="Отмена"
+                  onclick="#{rich:component('CBmpUpd')}.hide();return false;"
+                  styleClass="but_class"/>
+             <a4j:commandButton value="Сохранить"
+                    action="#{aFuncManager.updPerm}"
+                    reRender="outCenterCenter, outCenterBottom"
+                    oncomplete=" #{rich:component('CBmpUpd')}.hide();" 
+                    onclick="if(check('CBformUpd')){return false;}"
+                    styleClass="but_class">
+                     <f:param name="onUpdate" value="1"/>
+                     <f:param name="remoteAudit" value="UpdFact"/> 
+                     <f:param name="sessionId" value="#{param['sessionId']}"/>
+              </a4j:commandButton>
+             </td>
+            </tr>
+           </table>
+         </h:form>
+    </rich:modalPanel>
+  </a4j:outputPanel>
+  <a4j:outputPanel id="outCBmpDel">
+   <rich:modalPanel id="CBmpDel" 
+     rendered="#{param['onDelete']!=null}"
+     width="300" autosized="true">
+      <f:facet name="header">
+            <h:panelGroup>
+                <h:outputText value="Разрешение"/>
+             </h:panelGroup>
+      </f:facet>
+       <f:facet name="controls">
+            <h:panelGroup>
+                <h:graphicImage onclick="#{rich:component('CBmpDel')}.hide();"
+                value="/img/icons/close.gif" />
+              </h:panelGroup>
+        </f:facet>
+        <h:form>
+         <h:inputHidden value="#{aFuncBean.idPerm}"/>
+         
+        <h:outputText style="color:red;display:block;margin-bottom:7px;"
+          value="#{aFuncManager.dellMessage}"/>
+          
+         <h:outputText style="display:block;margin-bottom:7px;"
+          value="Удалить #{aFuncBean.permName}?"/>
+         
+         <div style="white-space: nowrap;text-align:center;">
+              <a4j:commandButton value="Отмена" 
+                   onclick="#{rich:component('CBmpDel')}.hide();return false;"
+                   styleClass="but_class"/>
+              <a4j:commandButton value="Удалить"
+                    action="#{aFuncManager.delPerm}"
+                    reRender="outCenterCenter, outCenterCenterFooter, outCenterBottom, outCenterCenterHeader"
+                    oncomplete=" #{rich:component('CBmpDel')}.hide();" 
+                    styleClass="but_class">
+                      <f:param name="onDelete" value="1"/>
+                      <f:param name="remoteAudit" value="DelFact"/>
+               </a4j:commandButton>
+              </div>
+           </h:form>
+        </rich:modalPanel>
+    </a4j:outputPanel-->
+	</div>
+
+	<script>
+//<![CDATA[
+
+function check(tform){
+ var msg="";
+ if (document.getElementById(tform+":name").value==""){
+	  msg+="Нет Наименования !\n";
+  }
+ if (document.getElementById(tform+":descr").value==""){
+	//  msg+="Нет Описания !\n";
+ }else{
+	 if(document.getElementById(tform+":descr").value.length>500){
+		    msg+="Превышена длина поля Описание!\n";
+	 }
+  }
+		 
+ 
+ if(msg!=""){
+  alert(msg);
+  return true;
+ }else{
+  return false;
+}
+}
+/*
+function check_clean_date(){
+	  var msg="";
+	  if (#{rich:component('clean_asys_date1')}.getSelectedDateString('dd.MM.yy')==""){
+	 	  msg+="Нет даты С:!\n";
+	  }
+	 
+	  if (#{rich:component('clean_asys_date2')}.getSelectedDateString('dd.MM.yy')==""){
+	 	  msg+="Нет даты По:!\n";
+	  }
+	  if(msg!=""){
+	   alert(msg);
+	   return true;
+	  }else{
+	   return false;
+	 }
+ }*/
+
+function check_report_date(){
+	  var msg="";
+	  if (#{rich:component('report_date1')}.getSelectedDateString('dd.MM.yy')==""){
+	 	  msg+="Нет даты С:!\n";
+	  }
+      if (#{rich:component('report_date2')}.getSelectedDateString('dd.MM.yy')==""){
+	 	  msg+="Нет даты По:!\n";
+	  }
+
+	  if(msg!=""){
+	   alert(msg);
+	   return true;
+	  }else{
+	   return false;
+	 }
+}
+	
+	 
+function link_option(slink) {
+    slink.href=link_word+"&date1="+#{rich:component('report_date1')}.getSelectedDateString('dd.MM.yyyy')+
+	      "&date2="+#{rich:component('report_date2')}.getSelectedDateString('dd.MM.yyyy');
+	}
+
+//]]>
+</script>
+</ui:composition>

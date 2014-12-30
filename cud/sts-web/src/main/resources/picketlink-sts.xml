@@ -1,0 +1,49 @@
+<PicketLinkSTS xmlns="urn:picketlink:identity-federation:config:1.0"
+	STSName="CUDSTS" TokenTimeout="1728000" EncryptToken="false" SignToken="true">
+
+	<!-- 7200s - 120min -->
+	<!-- 86400s - 24h -->
+	<!-- 864000s - 10d -->
+	<!-- 864000s - 20d -->
+	<KeyProvider ClassName="ru.spb.iac.pl.sp.key.KeyStoreKeyManager">
+		<Auth Key="KeyStoreURL" Value="/home/jboss/jboss/certstore/cudvm.store" />
+		<!--Auth Key="KeyStoreURL" Value="/Development/cert/gost/cudvm/cudvm.store" 
+			/ -->
+		<Auth Key="KeyStorePass" Value="Access_Control" />
+		<Auth Key="SigningKeyPass" Value="Access_Control" />
+		<Auth Key="SigningKeyAlias" Value="cudvm_export" />
+
+		<Auth Key="X509CERTIFICATE" Value="cudvm_export" />
+
+		<!--ValidatingAlias Key="localhost" Value="cudvm_export" / -->
+		<!--SigningAlias>cudvm_export</SigningAlias -->
+
+	</KeyProvider>
+	<!--KeyProvider ClassName="org.picketlink.identity.federation.core.impl.KeyStoreKeyManager"> 
+		<Auth Key="KeyStoreURL" Value="sts_keystore.jks"/> <Auth Key="KeyStorePass" 
+		Value="testpass"/> <Auth Key="SigningKeyAlias" Value="sts"/> <Auth Key="SigningKeyPass" 
+		Value="keypass"/> <ValidatingAlias Key="http://services.testcorp.org/provider1" 
+		Value="service1"/> </KeyProvider -->
+
+	<RequestHandler>ru.spb.iac.cud.sts.web.handlers.GOSTStandardRequestHandler</RequestHandler>
+
+	<TokenProviders>
+
+		<!-- <TokenProvider ProviderClass="org.picketlink.identity.federation.core.wstrust.plugins.saml.SAML20TokenProvider" -->
+
+		<TokenProvider
+			ProviderClass="ru.spb.iac.sts.core.plugins.saml.CUDSAML20TokenProvider"
+			TokenType="http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV2.0"
+			TokenElement="Assertion" TokenElementNS="urn:oasis:names:tc:SAML:2.0:assertion">
+			<Property Key="AttributeProvider"
+				Value="ru.spb.iac.cud.sts.core.attrib.CUDSAML20CommonTokenRoleAttributeProvider" />
+		</TokenProvider>
+	</TokenProviders>
+	<!--ServiceProviders> <ServiceProvider Endpoint="http://cudvm/CudServicesSTS/PicketLinkSTS" 
+		TokenType="http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV2.0" 
+		TruststoreAlias="cudvm_export"/> </ServiceProviders -->
+	<!--ServiceProviders> <ServiceProvider Endpoint="http://services.testcorp.org/provider1" 
+		TokenType="http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV2.0" 
+		TruststoreAlias="service1"/> </ServiceProviders -->
+
+</PicketLinkSTS>

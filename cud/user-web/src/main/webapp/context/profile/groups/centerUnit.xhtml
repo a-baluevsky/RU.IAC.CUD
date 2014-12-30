@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='windows-1251' ?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich">
+
+
+
+	<h:form>
+
+		<h:messages id="messages" style="color:red" />
+
+		<rich:dataTable style="width:100%;" var="record" value="#{userManagerBean.userGroups}">
+        <f:facet name="header">
+               <rich:columnGroup>
+               <!--rich:column colspan="2">
+                    <h:outputText value="Название ИС " />
+                </rich:column-->
+                <rich:column >
+                    <h:outputText value="Название группы" />
+                </rich:column>
+                <rich:column>
+                    <h:outputText value="Описание группы" />
+                </rich:column>
+            </rich:columnGroup>
+        </f:facet>
+        <rich:column>
+            <!--rich:collapsibleSubTableToggler for="sys_cstb" id="id_cdt_1"/-->
+            <h:outputText value="#{record.full}" />
+        </rich:column>
+        <rich:column style="padding-left:10px;">
+                <h:outputText value="#{record.description}"/>
+        </rich:column>
+            
+        <!--rich:collapsibleSubTable var="sys" 
+                                  value="#{record.armList}"
+                                  id="sys_cstb" 
+                                  expandMode="client"
+                                  expanded="#{true}"-->
+            <!--rich:column style="padding-left:30px;">
+                <rich:collapsibleSubTableToggler for="role_cstb" id="id_cdt_2">
+                <h:outputText value="#{sys.full}"></h:outputText>
+            </rich:column-->
+            
+             
+            
+             <!--rich:collapsibleSubTable var="role" 
+                                  value="#{sys.acRolesBssTs}"
+                                  id="role_cstb" 
+                                  expandMode="client"
+                                  expanded="#{true}" >
+            <rich:column style="padding-left:30px;" >
+                <h:outputText value="#{role.full}"></h:outputText>
+            </rich:column>
+            
+       </rich:collapsibleSubTable-->
+       <!--/rich:collapsibleSubTable-->
+      
+    </rich:dataTable>
+
+
+		<!--table style="width: 100%; font-size: 12px;" border="0">
+
+			<tr>
+				<td width="150px" height="25px" valign="top"
+					style="padding-top: 10px;" class="table_left_header"><h:outputText
+						value="Роли через группы:" /></td>
+				<td style="padding-top: 10px;" valign="top">
+					<table style="width: 100%;" border="0">
+						<a4j:repeat var="grecord" value="#{userManagerBean.userGroups}">
+							<tr>
+								<td height="15" style="font-weight: bold;"><h:outputText
+										value=" #{grecord.full}:" /></td>
+							</tr>
+							<tr>
+								<td>
+									<table style="width: 100%; margin-bottom: 10px;">
+										<a4j:repeat var="git" value="#{grecord.armList}">
+											<tr>
+												<td height="15" style="padding-left: 30px;"><h:outputText
+														value=" #{git.full}:" /></td>
+											</tr>
+											<tr>
+												<td>
+													<table style="width: 100%; margin-bottom: 10px;">
+														<ui:repeat var="g2it" value="#{git.acRolesBssTs}">
+															<tr>
+																<td height="15" style="padding-left: 60px;"><h:outputText
+																		value=" #{g2it.full}" /></td>
+															</tr>
+														
+														</ui:repeat>
+													</table>
+												</td>
+											</tr>
+										
+										</a4j:repeat>
+									</table>
+								</td>
+							</tr>
+						
+						</a4j:repeat>
+					</table>
+				</td>
+			</tr>
+		</table-->
+
+	</h:form>
+
+	<!--br/>
+  <h:link value="Изменить свои роли" outcome="/context/registr/reg_role_user.xhtml"/>
+  <br/>
+  <h:link value="Назад" outcome="/context/roles_pages/role_user.xhtml"/-->
+
+
+	<SCRIPT type="text/javascript">
+ //<![CDATA[
+   
+  //]]>
+ </SCRIPT>
+</ui:composition>

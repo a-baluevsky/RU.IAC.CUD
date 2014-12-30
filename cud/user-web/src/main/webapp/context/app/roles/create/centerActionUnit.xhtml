@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='windows-1251' ?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich" xmlns:r="http://richfaces.org">
+
+
+
+	<!--div style="width:60px; margin:5px; border-bottom:1px solid silver;">
+     <h3>Действия</h3>
+  </div-->
+	<rich:panel style="width:110px;">
+		<f:facet name="header">
+			<h:outputText value="Действия" />
+		</f:facet>
+
+		<h:button value="Отправить" style="margin-bottom:5px;"
+			onclick="jQuery('#appRolesCreateForm\\:appRolesCreateButton').click();return false;">
+			<f:param name="pageItem" value="app_role" />
+		</h:button>
+		<br />
+		<h:button value="Назад" outcome="/context/app/roles/list.xhtml"
+			style="margin-bottom:5px;">
+			<f:param name="pageItem" value="app_role" />
+		</h:button>
+	</rich:panel>
+</ui:composition>

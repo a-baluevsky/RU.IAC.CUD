@@ -1,0 +1,8 @@
+<jboss-web>
+	<security-domain>idp</security-domain>
+	<context-root>cudidp</context-root>
+
+	<valve>
+		<class-name>ru.spb.iac.cud.idp.valve.CUDIDPWebBrowserSSOValve</class-name>
+	</valve>
+</jboss-web>

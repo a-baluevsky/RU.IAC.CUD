@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap11="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp200409="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsp200607="http://www.w3.org/2006/07/ws-policy" xmlns:ns0="http://ws.iac.spb.ru/ClassifierZip" targetNamespace="http://ws.iac.spb.ru/ClassifierZip">
+<wsdl:types xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:schema>
+<xsd:import schemaLocation="ClassifierZip.xsd2.xsd" namespace="http://ws.iac.spb.ru/ClassifierZip"/>
+<xsd:import schemaLocation="ClassifierZip.xsd3.xsd" namespace="http://ws.iac.spb.ru/ClassifierZip"/>
+<xsd:import schemaLocation="ClassifierZip.xsd4.xsd" namespace="http://ws.iac.spb.ru/ClassifierZip"/>
+<xsd:import schemaLocation="ClassifierZip.xsd5.xsd" namespace="http://ws.iac.spb.ru/ClassifierZip"/></xsd:schema></wsdl:types>
+<wsdl:message name="getClassifierByClassifierName">
+<wsdl:part name="parameters" element="xsns:getClassifierByClassifierName" xmlns:xsns="http://ws.iac.spb.ru/ClassifierZip"/></wsdl:message>
+<wsdl:message name="getClassifierByClassifierNameResponse">
+<wsdl:part name="parameters" element="xsns:getClassifierByClassifierNameResponse" xmlns:xsns="http://ws.iac.spb.ru/ClassifierZip"/></wsdl:message>
+<wsdl:message name="getClassifierByClassifierNumber">
+<wsdl:part name="parameters" element="xsns:getClassifierByClassifierNumber" xmlns:xsns="http://ws.iac.spb.ru/ClassifierZip"/></wsdl:message>
+<wsdl:message name="getClassifierByClassifierNumberResponse">
+<wsdl:part name="parameters" element="xsns:getClassifierByClassifierNumberResponse" xmlns:xsns="http://ws.iac.spb.ru/ClassifierZip"/></wsdl:message>
+<wsdl:message name="getClassifierZipListByClassifierName">
+<wsdl:part name="parameters" element="xsns:getClassifierZipListByClassifierName" xmlns:xsns="http://ws.iac.spb.ru/ClassifierZip"/></wsdl:message>
+<wsdl:message name="getClassifierZipListByClassifierNameResponse">
+<wsdl:part name="parameters" element="xsns:getClassifierZipListByClassifierNameResponse" xmlns:xsns="http://ws.iac.spb.ru/ClassifierZip"/></wsdl:message>
+<wsdl:message name="getClassifierZipListByClassifierNumber">
+<wsdl:part name="parameters" element="xsns:getClassifierZipListByClassifierNumber" xmlns:xsns="http://ws.iac.spb.ru/ClassifierZip"/></wsdl:message>
+<wsdl:message name="getClassifierZipListByClassifierNumberResponse">
+<wsdl:part name="parameters" element="xsns:getClassifierZipListByClassifierNumberResponse" xmlns:xsns="http://ws.iac.spb.ru/ClassifierZip"/></wsdl:message>
+<wsdl:portType name="ClassifierZip">
+<wsdl:operation name="getClassifierByClassifierName">
+<wsdl:input name="getClassifierByClassifierNameRequest" message="ns0:getClassifierByClassifierName"/>
+<wsdl:output name="getClassifierByClassifierNameResponse" message="ns0:getClassifierByClassifierNameResponse"/></wsdl:operation>
+<wsdl:operation name="getClassifierByClassifierNumber">
+<wsdl:input name="getClassifierByClassifierNumberRequest" message="ns0:getClassifierByClassifierNumber"/>
+<wsdl:output name="getClassifierByClassifierNumberResponse" message="ns0:getClassifierByClassifierNumberResponse"/></wsdl:operation>
+<wsdl:operation name="getClassifierZipListByClassifierName">
+<wsdl:input name="getClassifierZipListByClassifierNameRequest" message="ns0:getClassifierZipListByClassifierName"/>
+<wsdl:output name="getClassifierZipListByClassifierNameResponse" message="ns0:getClassifierZipListByClassifierNameResponse"/></wsdl:operation>
+<wsdl:operation name="getClassifierZipListByClassifierNumber">
+<wsdl:input name="getClassifierZipListByClassifierNumberRequest" message="ns0:getClassifierZipListByClassifierNumber"/>
+<wsdl:output name="getClassifierZipListByClassifierNumberResponse" message="ns0:getClassifierZipListByClassifierNumberResponse"/></wsdl:operation></wsdl:portType>
+<wsdl:binding name="ClassifierZipPortBinding" type="ns0:ClassifierZip">
+<soap11:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+<wsdl:operation name="getClassifierByClassifierName">
+<soap11:operation soapAction="" style="document"/>
+<wsdl:input name="getClassifierByClassifierNameRequest">
+<soap11:body use="literal"/></wsdl:input>
+<wsdl:output name="getClassifierByClassifierNameResponse">
+<soap11:body use="literal"/></wsdl:output></wsdl:operation>
+<wsdl:operation name="getClassifierByClassifierNumber">
+<soap11:operation soapAction="" style="document"/>
+<wsdl:input name="getClassifierByClassifierNumberRequest">
+<soap11:body use="literal"/></wsdl:input>
+<wsdl:output name="getClassifierByClassifierNumberResponse">
+<soap11:body use="literal"/></wsdl:output></wsdl:operation>
+<wsdl:operation name="getClassifierZipListByClassifierName">
+<soap11:operation soapAction="" style="document"/>
+<wsdl:input name="getClassifierZipListByClassifierNameRequest">
+<soap11:body use="literal"/></wsdl:input>
+<wsdl:output name="getClassifierZipListByClassifierNameResponse">
+<soap11:body use="literal"/></wsdl:output></wsdl:operation>
+<wsdl:operation name="getClassifierZipListByClassifierNumber">
+<soap11:operation soapAction="" style="document"/>
+<wsdl:input name="getClassifierZipListByClassifierNumberRequest">
+<soap11:body use="literal"/></wsdl:input>
+<wsdl:output name="getClassifierZipListByClassifierNumberResponse">
+<soap11:body use="literal"/></wsdl:output></wsdl:operation></wsdl:binding>
+<wsdl:service name="ClassifierZip">
+<wsdl:port name="ClassifierZipPort" binding="ns0:ClassifierZipPortBinding">
+<soap11:address location="http://10.128.28.79:10180/ClassifierZip"/></wsdl:port></wsdl:service></wsdl:definitions>

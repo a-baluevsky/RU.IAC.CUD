@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='windows-1251' ?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich" xmlns:r="http://richfaces.org">
+
+
+
+	<rich:panel style="width:140px;">
+		<f:facet name="header">
+			<h:outputText value="Действия" />
+		</f:facet>
+		<h:button value="Добавить сертификат"
+			outcome="/context/profile/cert/create/list.xhtml">
+			<f:param name="pageItem" value="profile_cert" />
+		</h:button>
+	</rich:panel>
+
+</ui:composition>

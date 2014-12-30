@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich" xmlns:r="http://richfaces.org">
+
+<h:head>
+	<title>sys select</title>
+</h:head>
+<h:body>
+	<h3>Запрос на администрирование ИС:</h3>
+
+	<h3>Выберите роль ЦУД:</h3>
+	<h:selectOneMenu value="#{userAdminSysBean.roleCUD}">
+		<f:selectItems value="#{userManagerBean.listRolesAdminSys}" var="n"
+			itemLabel="#{n.full}" itemValue="#{n.idSrv}" />
+	</h:selectOneMenu>
+
+	<h3>Выберите ИС:</h3>
+
+
+	<br />
+
+	<h:form>
+
+		<r:outputPanel id="outRolesPanel">
+
+			<h:panelGroup rendered="#{param['idArm']!=null}">
+
+				<h:outputText value="Выбранная ИС: #{param['idArm']}" />
+
+
+			</h:panelGroup>
+
+		</r:outputPanel>
+
+	</h:form>
+
+	<h:form>
+
+		<h:outputText value="Основание" />
+		<h:inputTextarea value="#{userAdminSysBean.reason}" />
+
+		<br />
+		<br />
+		<r:outputPanel id="outSaveButton">
+			<h:commandButton value="Отправить"
+				action="#{userAdminSysBean.action}">
+				<f:param name="idArm" value="#{param['idArm']}" />
+			</h:commandButton>
+		</r:outputPanel>
+	</h:form>
+
+	<r:outputPanel id="outMPArmSelectPanel">
+
+		<r:popupPanel id="popup" modal="true"
+			onmaskclick="#{r:component('popup')}.hide();"
+			rendered="#{param['onArmSelectOpen']!=null}" autosized="true"
+			width="500">
+			<f:facet name="header">
+				<h:outputText value="Simple popup panel" />
+			</f:facet>
+			<f:facet name="controls">
+				<h:outputLink value="#"
+					onclick="#{r:component('popup')}.hide(); return false;">
+                X
+            </h:outputLink>
+			</f:facet>
+			<r:dataTable width="700" var="record"
+				value="#{userManagerBean.listArmFull}" id="arm_dt" rows="10">
+				<f:facet name="header">
+					<r:columnGroup>
+						<r:column>
+							<h:outputText value="Название ИС " />
+						</r:column>
+						<r:column>
+							<h:outputText value="Код ИС " />
+						</r:column>
+						<r:column>
+							<h:outputText value="Действия " />
+						</r:column>
+					</r:columnGroup>
+				</f:facet>
+				<r:column>
+					<h:outputText value="#{record.full}" />
+				</r:column>
+				<r:column>
+					<h:outputText value="#{record.signObject}" />
+				</r:column>
+				<r:column>
+					<h:button value=">>"
+						onclick="armSelect('#{record.idSrv}');return false;" />
+				</r:column>
+			</r:dataTable>
+
+			<r:dataScroller for="arm_dt" maxPages="5">
+				<f:param name="onArmSelectOpen" value="1" />
+			</r:dataScroller>
+
+		</r:popupPanel>
+	</r:outputPanel>
+
+	<h:form>
+
+		<r:jsFunction name="armSelectMPOpen" render="outMPArmSelectPanel"
+			oncomplete="#{r:component('popup')}.show();">
+			<f:param name="requestType" value="armSelectView" />
+			<f:param name="onArmSelectOpen" value="1" />
+		</r:jsFunction>
+		<r:jsFunction name="armSelect" render="outRolesPanel, outSaveButton"
+			oncomplete="#{r:component('popup')}.hide();">
+			<f:param name="idArm" />
+			<f:param name="requestType" value="armSelect" />
+		</r:jsFunction>
+	</h:form>
+</h:body>
+</html>

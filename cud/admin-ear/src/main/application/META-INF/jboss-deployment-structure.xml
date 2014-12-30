@@ -1,0 +1,85 @@
+<jboss-deployment-structure>
+
+	<!--jboss-deployment-structure xmlns="urn:jboss:deployment-structure:1.0" -->
+
+	<!--ear-subdeployments-isolated>false</ear-subdeployments-isolated -->
+
+	<deployment>
+
+		<exclusions>
+			<module name="org.apache.log4j" />
+		</exclusions>
+
+		<dependencies>
+			<module name="javax.faces.api" slot="1.2" export="true" />
+			<module name="org.apache.commons.logging" export="true" />
+			<module name="org.dom4j" export="true" />
+			<module name="org.apache.commons.collections" export="true" />
+			<module name="ru.spb.iac.cud" export="true" />
+			<!--module name="org.apache.log4j" export="true"/ -->
+
+			<!--1.1 -->
+			<system export="true">
+				<paths>
+					<path name="ru/CryptoPro/JCP" />
+					<path name="ru/CryptoPro/JCP/tools" />
+					<path name="ru/CryptoPro/JCP/params" />
+					<path name="ru/CryptoPro/JCP/ASN/CryptographicMessageSyntax" />
+					<path name="com/objsys/asn1j/runtime" />
+
+					<path name="ru/CryptoPro/JCPxml/dsig/internal/dom" />
+
+					<!-- //test-contur <path name="ru/CryptoPro/ssl"/> -->
+
+				</paths>
+			</system>
+			<module name="org.picketlink" export="true" />
+			<module name="ru.spb.iac.cud.sp" />
+
+			<!-- ??? -->
+			<module name="org.apache.santuario.xmlsec" export="true" />
+			<!--1.2 -->
+
+			<module name="org.jboss.xb" export="true" />
+
+			<!-- //test-contur <module name="org.apache.cxf" export="true"/> <module 
+				name="org.apache.cxf.impl" export="true"/> <module name="org.apache.ws.xmlschema" 
+				export="true"/> -->
+		</dependencies>
+	</deployment>
+	<sub-deployment name="InfoS-web.war">
+		<exclusions>
+			<module name="javax.faces.api" slot="main" />
+			<module name="org.apache.log4j" />
+
+			<module name="org.slf4j" />
+
+		</exclusions>
+		<dependencies>
+
+			<module name="javax.faces.api" slot="1.2" />
+			<!--module name="org.apache.log4j" export="true"/ -->
+
+			<module name="ch.qos.logback" export="true" />
+			<module name="org.slf4j" slot="1.6.1" export="true" />
+
+		</dependencies>
+	</sub-deployment>
+	<sub-deployment name="InfoS-ejb.jar">
+		<!--exclusions> <module name="org.apache.log4j"/> </exclusions -->
+
+		<exclusions>
+			<module name="org.slf4j" />
+		</exclusions>
+
+		<dependencies>
+			<module name="ru.spb.iac.cud" export="true" />
+			<module name="org.apache.log4j" export="true" />
+
+			<module name="ch.qos.logback" export="true" />
+			<module name="org.slf4j" slot="1.6.1" export="true" />
+
+		</dependencies>
+	</sub-deployment>
+
+</jboss-deployment-structure>

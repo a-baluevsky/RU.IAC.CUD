@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.5"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<display-name>CudServicesPro</display-name>
+
+
+	<context-param>
+		<param-name>SIGN_REQUIRED</param-name>
+		<param-value>true</param-value>
+	</context-param>
+
+	<servlet>
+		<servlet-name>AuditService</servlet-name>
+		<servlet-class>ru.spb.iac.cud.services.audit.AuditServiceImpl</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>AdminService</servlet-name>
+		<servlet-class>ru.spb.iac.cud.services.admin.AdminServiceImpl</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>UtilService</servlet-name>
+		<servlet-class>ru.spb.iac.cud.services.util.UtilServiceImpl</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ApplicationService</servlet-name>
+		<servlet-class>ru.spb.iac.cud.services.application.ApplicationServiceImpl</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ApplicationResultService</servlet-name>
+		<servlet-class>ru.spb.iac.cud.services.application.ApplicationResultServiceImpl</servlet-class>
+	</servlet>
+
+	<!--servlet> <servlet-name>TestService</servlet-name> <servlet-class>ru.spb.iac.cud.services.test.TestServiceImpl</servlet-class> 
+		</servlet -->
+	<!--servlet> <servlet-name>AccessService</servlet-name> <servlet-class>ru.spb.iac.cud.services.access.AccessServicesImpl</servlet-class> 
+		</servlet> <servlet> <servlet-name>SyncService</servlet-name> <servlet-class>ru.spb.iac.cud.services.sync.SyncServicesImpl</servlet-class> 
+		</servlet -->
+
+	<servlet>
+		<display-name>StartupServlet</display-name>
+		<servlet-name>StartupServlet</servlet-name>
+		<servlet-class>ru.spb.iac.cud.services.web.init.StartupServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AuditService</servlet-name>
+		<url-pattern>/AuditService</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AdminService</servlet-name>
+		<url-pattern>/AdminService</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UtilService</servlet-name>
+		<url-pattern>/UtilService</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ApplicationService</servlet-name>
+		<url-pattern>/ApplicationService</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ApplicationResultService</servlet-name>
+		<url-pattern>/ApplicationResultService</url-pattern>
+	</servlet-mapping>
+
+
+	<!--servlet-mapping> <servlet-name>TestService</servlet-name> <url-pattern>/TestService</url-pattern> 
+		</servlet-mapping -->
+	<!--servlet-mapping> <servlet-name>AccessService</servlet-name> <url-pattern>/AccessService</url-pattern> 
+		</servlet-mapping> <servlet-mapping> <servlet-name>SyncService</servlet-name> 
+		<url-pattern>/SyncService</url-pattern> </servlet-mapping -->
+
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+
+	<!--http-method>GET</http-method -->
+	<!--security-constraint> <web-resource-collection> <web-resource-name>CUDServicesPro</web-resource-name> 
+		<url-pattern>/*</url-pattern> <http-method>POST</http-method> </web-resource-collection> 
+		<user-data-constraint> <transport-guarantee>CONFIDENTIAL</transport-guarantee> 
+		</user-data-constraint> </security-constraint -->
+
+	<filter>
+		<display-name>PortFilter</display-name>
+		<filter-name>PortFilter</filter-name>
+		<filter-class>ru.spb.iac.cud.services.web.filter.PortFilter</filter-class>
+		<init-param>
+			<description></description>
+			<param-name>available_ports</param-name>
+			<!--param-value>8443,18443</param-value -->
+			<param-value>8080,8443,18443</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>PortFilter</filter-name>
+		<url-pattern>*</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+	</filter-mapping>
+</web-app>

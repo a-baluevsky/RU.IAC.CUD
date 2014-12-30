@@ -1,0 +1,421 @@
+<?xml version='1.0' encoding='windows-1251' ?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:s="http://jboss.com/products/seam/taglib">
+
+	<h3 class="ui-widget-header">Подробно</h3>
+	<div class="ui-layout-content">
+		<a4j:outputPanel id="outCenterBottom">
+
+			<table style="width: 100%;" border="0">
+				<tr>
+					<td width="90%"><s:div style="margin:5px;"
+							rendered="#{param['idRes']!=null}">
+							<table style="width: 70%; font-size: 13px;">
+								<tr>
+									<td width="100px" height="25px" class="table_left_header">
+										<h:outputText value="Консоль" />
+									</td>
+									<td style="padding-bottom: 5px;"><h:outputText
+											value="#{acResBean.acApplication2.name}" /></td>
+								</tr>
+								<tr>
+									<td width="100px" height="25px" class="table_left_header">
+										<h:outputText value="Название" />
+									</td>
+									<td><h:outputText value="#{acResBean.pageName}" /></td>
+								</tr>
+								<!--tr>
+            <td width="100px">
+            <h:outputText value="Описание"/></td>
+            <td><h:inputText/></td>
+            </tr-->
+								<tr>
+									<td width="100px" height="25px" class="table_left_header">
+										<h:outputText value="Код Ресурса" />
+									</td>
+									<td><h:outputText value="#{acResBean.pageCode}" /></td>
+								</tr>
+								<!--tr>
+          <td width="100px" height="25px" class="table_left_header">
+              <h:outputText value="Разделение на районы"/></td>
+          <td><h:outputText value="#{acResBean.isRaionsValue}"/></td>
+        </tr-->
+								<tr>
+									<td width="100px" height="25px" class="table_left_header">
+										<h:outputText value="Видимость" />
+									</td>
+									<td><h:outputText value="#{acResBean.visibleValue}" /></td>
+								</tr>
+								<tr>
+									<td width="100px" height="25px" class="table_left_header">
+										<h:outputText value="Сортировка" />
+									</td>
+									<td><h:outputText value="#{acResBean.orderNum}" /></td>
+								</tr>
+							</table>
+						</s:div></td>
+					<td width="90px" valign="top">
+						<!--rich:panel style="margin:5px 5px 0 0;">
+   <f:facet name="header">
+    Действия:
+   </f:facet>
+   <a4j:form>
+    <a4j:commandButton style="width:60px;" value="Создать"
+       reRender="outCBmpCrt" 
+       oncomplete="#{rich:component('CBmpCrt')}.show();"
+       rendered="#{authenticator.accessPerm('003','2')}"
+       styleClass="but_class">
+     <f:param name="onCreate" value="1"/>
+    </a4j:commandButton>
+    
+    <s:div rendered="#{param['idRes']!=null}">
+       <a4j:commandButton 
+         reRender="outCBmpUpd"
+         value="Изменить" style="margin-top:5px;width:60px;"
+         action="#{resManager.forView}"
+         oncomplete="#{rich:component('CBmpUpd')}.show();"
+         rendered="#{authenticator.accessPerm('003','3')}"
+         styleClass="but_class">
+         <f:param name="onUpdate" value="1"/>
+         <f:param name="idRes" value="#{param['idRes']}"/>
+       </a4j:commandButton>
+  
+       <a4j:commandButton 
+         reRender="outCBmpDel"
+         value="Удалить" style="margin-top:5px;width:60px;"
+         action="#{resManager.forViewDel}"
+         oncomplete="#{rich:component('CBmpDel')}.show();"
+         rendered="#{authenticator.accessPerm('003','4')}"
+         styleClass="but_class">
+         <f:param name="onDelete" value="1"/>
+         <f:param name="idRes" value="#{param['idRes']}"/>
+       </a4j:commandButton>
+  
+      </s:div>
+    </a4j:form>
+   </rich:panel-->
+					</td>
+				</tr>
+			</table>
+			<a4j:outputPanel id="outCBmpCrt">
+				<rich:modalPanel id="CBmpCrt" rendered="#{param['onCreate']!=null}"
+					width="600" autosized="true"
+					onshow="setHDiv('CBmpCrtHDiv','CBmpCrtCDiv');">
+					<f:facet name="header">
+						<h:panelGroup>
+							<h:outputText value="Рубрика"></h:outputText>
+						</h:panelGroup>
+					</f:facet>
+					<f:facet name="controls">
+						<h:panelGroup>
+							<h:graphicImage onclick="#{rich:component('CBmpCrt')}.hide();"
+								value="/img/icons/close.gif" />
+						</h:panelGroup>
+					</f:facet>
+					<div id="CBmpCrtHDiv" style="width: 100%; overflow: auto;">
+						<div id="CBmpCrtHDivIn" style="width: 90%;">
+							<h:form id="CBformCrt">
+								<table style="width: 100%;">
+									<tr>
+										<td width="100px"><h:outputText value="Корневой узел" /></td>
+										<td style="padding-bottom: 5px;">
+											<!--h:inputText value="#{acResBeanCrt.acApplication}"/--> <rich:tree
+												id="CBmpCrtHTree" style="width:300px" switchType="ajax"
+												oncomplete="setHDiv('CBmpCrtHDiv','CBmpCrtCDiv');">
+												<rich:recursiveTreeNodesAdaptor roots="#{children_map}"
+													var="item" nodes="#{treeManager.getChild(item)}" id="dit02">
+													<rich:treeNode>
+														<a4j:commandLink reRender="cbCrt, sn">
+															<h:outputText value="#{item.pageName}"
+																style="#{item.visible == 0 ? 'color:silver;' : ''}" />
+															<f:param name="onCreate" value="1" />
+															<f:param name="idRootNode" value="#{item.idRes}" />
+															<!--f:param name="idRes" value="#{item.idRes}"/-->
+															<f:param name="nameRes" value="#{item.pageName}" />
+															<f:param name="appCode" value="#{item.acApplication}" />
+														</a4j:commandLink>
+														<f:param name="onCreate" value="1" />
+													</rich:treeNode>
+												</rich:recursiveTreeNodesAdaptor>
+											</rich:tree>
+										</td>
+									</tr>
+									<tr>
+										<td width="100px"><h:outputText
+												value="Выбран Корневой узел" /></td>
+										<td style="padding-bottom: 5px;"><h:outputText
+												value="#{param['nameRes']}" id="sn" style="color:red;" /></td>
+									</tr>
+									<a4j:region>
+										<tr>
+											<td width="100px" height="25px"><h:outputText
+													value="Название" /></td>
+											<td><h:inputText value="#{acResBeanCrt.pageName}"
+													id="name" maxlength="100" size="55" /></td>
+										</tr>
+										<!--tr>
+            <td width="100px">
+            <h:outputText value="Описание"/></td>
+            <td><h:inputText/></td>
+            </tr-->
+
+										<tr>
+											<td width="100px" height="25px"><h:outputText
+													value="Код Ресурса" /></td>
+											<td><h:inputText value="#{acResBeanCrt.pageCode}"
+													id="code" maxlength="100" size="55" /></td>
+										</tr>
+										<!--tr>
+            <td width="100px">
+            <h:outputText value="Разделение на районы"/></td>
+            <td> <h:selectBooleanCheckbox value="#{acResBeanCrt.isRaionsBoolean}"/></td>
+            </tr-->
+										<tr>
+											<td width="100px"><h:outputText value="Видимость" /></td>
+											<td><h:selectBooleanCheckbox
+													value="#{acResBeanCrt.visibleBoolean}" /></td>
+										</tr>
+										<tr>
+											<td width="100px"><h:outputText value="Сортировка" /></td>
+											<td><h:inputText value="#{acResBeanCrt.orderNum}"
+													id="sort" size="1" maxlength="3" /></td>
+										</tr>
+										<tr>
+											<td colspan="2" align="center" height="35px"><a4j:commandButton
+													value="Отмена"
+													onclick="#{rich:component('CBmpCrt')}.hide();return false;"
+													styleClass="but_class" /> <a4j:commandButton id="cbCrt"
+													value="Сохранить" action="#{resManager.addRes}"
+													reRender="outCenterCenter"
+													oncomplete="#{rich:component('wait')}.hide();#{rich:component('CBmpCrt')}.hide();"
+													onclick="if(check('CBformCrt')){return false;}else{#{rich:component('wait')}.show();}"
+													styleClass="but_class">
+													<f:param name="onCreate" value="1" />
+													<f:param name="idRootNode" value="#{param['idRootNode']}" />
+													<f:param name="appCode" value="#{param['appCode']}" />
+													<f:param name="remoteRes" value="1" />
+												</a4j:commandButton></td>
+										</tr>
+									</a4j:region>
+								</table>
+							</h:form>
+						</div>
+					</div>
+				</rich:modalPanel>
+			</a4j:outputPanel>
+			<a4j:outputPanel id="outCBmpUpd">
+				<rich:modalPanel id="CBmpUpd" rendered="#{param['onUpdate']!=null}"
+					width="600" autosized="true"
+					onshow="setHDiv('CBmpUpdHDiv','CBmpUpdCDiv');">
+					<f:facet name="header">
+						<h:panelGroup>
+							<h:outputText value="Рубрика"></h:outputText>
+						</h:panelGroup>
+					</f:facet>
+					<f:facet name="controls">
+						<h:panelGroup>
+							<h:graphicImage onclick="#{rich:component('CBmpUpd')}.hide();"
+								value="/img/icons/close.gif" />
+						</h:panelGroup>
+					</f:facet>
+					<div id="CBmpUpdHDiv" style="width: 100%; overflow: auto;">
+						<div id="CBmpUpdHDivIn" style="width: 90%;">
+
+							<h:form id="CBformUpd">
+								<!--h:inputHidden value="#{acResBean.idRes}"/-->
+								<table style="width: 100%;">
+									<tr>
+										<td width="100px"><h:outputText value="Корневой узел" /></td>
+										<td style="padding-bottom: 5px;">
+											<!--h:inputText value="#{acResBeanCrt.acApplication}"/--> <rich:tree
+												id="CBmpUpdHTree" style="width:300px" switchType="ajax"
+												oncomplete="setHDiv('CBmpUpdHDiv','CBmpUpdCDiv');">
+												<rich:recursiveTreeNodesAdaptor roots="#{children_map}"
+													var="item" nodes="#{treeManager.getChild(item)}" id="dit02">
+													<rich:treeNode>
+														<a4j:commandLink reRender="cbUpd, sn">
+															<h:outputText value="#{item.pageName}"
+																style="#{item.visible == 0 ? 'color:silver;' : ''}" />
+															<f:param name="onUpdate" value="1" />
+															<f:param name="idRootNode" value="#{item.idRes}" />
+															<f:param name="nameRes" value="#{item.pageName}" />
+															<f:param name="appCode" value="#{item.acApplication}" />
+
+															<f:param name="idRes" value="#{param['idRes']}" />
+														</a4j:commandLink>
+														<f:param name="onUpdate" value="1" />
+
+														<f:param name="idRes" value="#{param['idRes']}" />
+													</rich:treeNode>
+												</rich:recursiveTreeNodesAdaptor>
+											</rich:tree>
+										</td>
+									</tr>
+									<tr>
+										<td width="100px"><h:outputText
+												value="Выбран Корневой узел" /></td>
+										<td style="padding-bottom: 5px;"><h:outputText
+												value="#{param['nameRes'] != null ? param['nameRes'] : acResBean.idParent.pageName}"
+												id="sn" style="color:red;" /></td>
+									</tr>
+									<a4j:region>
+										<tr>
+											<td width="100px" height="25px"><h:outputText
+													value="Название" /></td>
+											<td><h:inputText value="#{acResBean.pageName}" id="name"
+													maxlength="100" size="55" /></td>
+										</tr>
+										<!--tr>
+            <td width="100px">
+            <h:outputText value="Описание"/></td>
+            <td><h:inputText/></td>
+            </tr-->
+										<tr>
+											<td width="100px" height="25px"><h:outputText
+													value="Код Ресурса" /></td>
+											<td><h:inputText value="#{acResBean.pageCode}" id="code"
+													maxlength="100" size="55" /></td>
+										</tr>
+										<!--tr>
+            <td width="100px">
+            <h:outputText value="Разделение на районы"/></td>
+            <td> <h:selectBooleanCheckbox value="#{acResBean.isRaionsBoolean}"/> 
+             </td>
+            </tr-->
+										<tr>
+											<td width="100px"><h:outputText value="Видимость" /></td>
+											<td><h:selectBooleanCheckbox
+													value="#{acResBean.visibleBoolean}" /></td>
+										</tr>
+										<tr>
+											<td width="100px"><h:outputText value="Сортировка" /></td>
+											<td><h:inputText value="#{acResBean.orderNum}" id="sort"
+													size="1" maxlength="3" /></td>
+										</tr>
+										<tr>
+											<td colspan="2" align="center" height="35px"><a4j:commandButton
+													value="Отмена"
+													onclick="#{rich:component('CBmpUpd')}.hide();return false;"
+													styleClass="but_class" /> <a4j:commandButton
+													value="Сохранить" id="cbUpd" action="#{resManager.editRes}"
+													reRender="outCenterCenterHeader, outCenterCenter, outCenterBottom"
+													oncomplete="#{rich:component('wait')}.hide(); #{rich:component('CBmpUpd')}.hide();"
+													onclick="if(check('CBformUpd')){return false;}else{#{rich:component('wait')}.show();}"
+													styleClass="but_class">
+													<f:param name="onUpdate" value="1" />
+													<!--f:param name="idRes" value="#{acResBean.idRes}"/-->
+													<f:param name="idRes" value="#{param['idRes']}" />
+													<f:param name="idRootNode"
+														value="#{param['idRootNode'] != null ? param['idRootNode'] : acResBean.idParent.idRes}" />
+													<f:param name="appCode"
+														value="#{param['appCode'] != null ? param['appCode'] : acResBean.acApplication}" />
+													<f:param name="remoteRes" value="1" />
+												</a4j:commandButton></td>
+										</tr>
+									</a4j:region>
+								</table>
+							</h:form>
+						</div>
+					</div>
+				</rich:modalPanel>
+			</a4j:outputPanel>
+			<a4j:outputPanel id="outCBmpDel">
+				<rich:modalPanel id="CBmpDel" rendered="#{param['onDelete']!=null}"
+					width="300" autosized="true">
+					<f:facet name="header">
+						<h:panelGroup>
+							<h:outputText value="Рубрика" />
+						</h:panelGroup>
+					</f:facet>
+					<f:facet name="controls">
+						<h:panelGroup>
+							<h:graphicImage onclick="#{rich:component('CBmpDel')}.hide();"
+								value="/img/icons/close.gif" />
+						</h:panelGroup>
+					</f:facet>
+					<h:form>
+						<h:inputHidden value="#{acResBean.idRes}" />
+
+						<h:outputText style="color:red;display:block;margin-bottom:7px;"
+							value="#{resManager.dellMessage}" />
+
+						<h:outputText style="display:block;margin-bottom:7px;"
+							value="Удалить #{acResBean.pageName}?" />
+
+						<div style="white-space: nowrap; text-align: center;">
+							<a4j:commandButton value="Отмена"
+								onclick="#{rich:component('CBmpDel')}.hide();return false;"
+								styleClass="but_class" />
+							<a4j:commandButton value="Удалить!" action="#{resManager.delRes}"
+								reRender="outCenterCenterHeader, outCenterCenter, outCenterBottom"
+								oncomplete="#{rich:component('CBmpDel')}.hide();">
+								<f:param name="onDelete" value="1" />
+								<f:param name="remoteRes" value="1" />
+							</a4j:commandButton>
+						</div>
+					</h:form>
+				</rich:modalPanel>
+			</a4j:outputPanel>
+		</a4j:outputPanel>
+	</div>
+	<script>
+//<![CDATA[
+
+function check(tform){
+ var msg="";
+ //alert(jQuery("#CBformCrt\\:sn").text());
+ if (jQuery("#"+tform+"\\:sn").text()==""){
+	  msg+="Не выбран корневой узел !\n";
+ }
+ if (document.getElementById(tform+":name").value==""){
+	  msg+="Нет Наименования !\n";
+ }
+ if (document.getElementById(tform+":sort").value!=""){
+
+	 if ( !(/^\d+/g.test(document.getElementById(tform+":sort").value)) ) {
+		 msg+="Не верен номер сортировки !\n";
+	 }
+	 
+ }
+ /*
+ if (document.getElementById(tform+":code").value==""){
+	  msg+="Нет Кода !\n";
+ }*/
+
+ if(msg!=""){
+  alert(msg);
+  return true;
+ }else{
+  return false;
+}
+}
+
+function setHDiv(hdiv,mptop){
+		//alert(jQuery('#CBformCrt\\:CBmpCrtHTree').height());
+	//	alert(jQuery('#'+hdiv).height()+',\n'+jQuery('#'+hdiv+'In').height()+',\n'+Math.floor(jQuery(window).height()*(2/3)));
+		
+	if(jQuery('#'+hdiv+'In').height()>Math.floor(jQuery(window).height()*(2/3))){
+	  jQuery('#'+hdiv).height(Math.floor(jQuery(window).height()*(2/3)));
+	  setMPTop(mptop);
+	}else{
+	  jQuery('#'+hdiv).height('');
+	}
+ }
+function setMPTop(mptop){
+	jQuery('#'+mptop).css('top',Math.floor(jQuery(window).height()*(1/6)));
+}
+
+function isRaionsDisable(t){
+	if(!t.checked){
+	  alert('Снятие разделения на районы недопустимо!');
+	  t.checked = true;
+	}
+}
+//]]>
+</script>
+</ui:composition>

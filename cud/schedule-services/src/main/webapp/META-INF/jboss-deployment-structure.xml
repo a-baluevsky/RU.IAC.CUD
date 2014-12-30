@@ -1,0 +1,23 @@
+<jboss-deployment-structure>
+
+	<deployment>
+
+		<exclusions>
+			<module name="org.slf4j" />
+		</exclusions>
+
+		<dependencies>
+
+			<module name="ru.spb.iac.cud" />
+
+
+			<module name="ch.qos.logback" />
+			<module name="org.slf4j" slot="1.6.1" />
+
+           <!-- !!! -->
+           <module name="deployment.InfoS-ear.ear" />
+        
+		</dependencies>
+	</deployment>
+</jboss-deployment-structure>
+

@@ -1,0 +1,855 @@
+<?xml version='1.0' encoding='windows-1251' ?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:s="http://jboss.com/products/seam/taglib"
+	xmlns:c="http://java.sun.com/jstl/core">
+
+	<h3 class="ui-widget-header">Подробно</h3>
+
+	<!--div class="ui-widget-header" style="background:#E6E6E6;">
+  <a4j:outputPanel id="outCenterBottomHeader">
+   <table>
+      <tr>
+       <td>
+        <s:div rendered="#{param['remoteAudit']!=null}">
+        <table style="width:500px" border="0">
+         <tr>
+         <td>
+           <s:div rendered="#{param['sessionId']!=null}">
+            
+            <h:outputText value="Искать соответсвия по : "/>
+            
+            <a4j:commandButton style="width:50px;" 
+                value="ФИО"
+                reRender="outCBmpCrt" ajaxSingle="true"
+                action="#{appSystemManager.forViewCrt}"
+                oncomplete="#{rich:component('CBmpCrt')}.show();"
+                rendered="#{authenticator.accessPerm('002','2')}"
+                styleClass="but_class">
+            <f:param name="onCreate" value="1"/>
+            <f:param name="remoteAudit" value="OpenCrtFact"/>
+            <f:param name="#{param['sessionId']!=null ? 'sessionId' : 'xxx1'}" value="#{param['sessionId']}"/>
+          </a4j:commandButton>
+            
+            <a4j:commandButton style="width:50px;margin-left:10px;"
+                ajaxSingle="true" reRender="outCBmpUpd"
+                value="ФИ" action="#{appSystemManager.forViewUpdDel}"
+                oncomplete="#{rich:component('CBmpUpd')}.show();"
+                rendered="#{authenticator.accessPerm('002','3') and 
+                (currentUser.idUser!=param['sessionId'] or currentUser.idUser==linksMap.superUserCode)
+                and (appSystemBeanView.idUser!=linksMap.superUserCode or currentUser.idUser==linksMap.superUserCode) and 
+                (appSystemBeanView.isSysAdmin!=1 or currentUser.idUser==linksMap.superUserCode)}"
+                styleClass="but_class">
+              <f:param name="onUpdate" value="1"/>
+              <f:param name="remoteAudit" value="OpenUpdFact"/>
+              <f:param name="sessionId" value="#{param['sessionId']}"/>
+            </a4j:commandButton>
+            
+            <a4j:commandButton style="width:50px;margin-left:10px;"
+                ajaxSingle="true" reRender="outCBmpUpdRole"
+                value="ФО" action="#{appSystemManager.forViewUpdDel}"
+                oncomplete="#{rich:component('CBmpUpdRole')}.show();"
+                rendered="#{authenticator.accessPerm('002','3') and 
+                (currentUser.idUser!=param['sessionId'] or currentUser.idUser==linksMap.superUserCode)
+                and (appSystemBeanView.idUser!=linksMap.superUserCode or currentUser.idUser==linksMap.superUserCode) and 
+                (appSystemBeanView.isSysAdmin!=1 or currentUser.idUser==linksMap.superUserCode)}"
+                styleClass="but_class">
+              <f:param name="onUpdateRole" value="1"/>
+              <f:param name="remoteAudit" value="OpenUpdFact"/>
+              <f:param name="sessionId" value="#{param['sessionId']}"/>
+            </a4j:commandButton>
+            
+             <a4j:commandButton style="width:50px;margin-left:10px;"
+                ajaxSingle="true" reRender="outCBmpUpdGroup"
+                value="Ф" action="#{appSystemManager.forViewUpdDel}"
+                oncomplete="#{rich:component('CBmpUpdGroup')}.show();"
+                rendered="#{authenticator.accessPerm('002','3') and 
+                (currentUser.idUser!=param['sessionId'] or currentUser.idUser==linksMap.superUserCode)
+                and (appSystemBeanView.idUser!=linksMap.superUserCode or currentUser.idUser==linksMap.superUserCode) and 
+                (appSystemBeanView.isSysAdmin!=1 or currentUser.idUser==linksMap.superUserCode)}"
+                styleClass="but_class">
+              <f:param name="onUpdateGroup" value="1"/>
+              <f:param name="remoteAudit" value="OpenUpdFact"/>
+              <f:param name="sessionId" value="#{param['sessionId']}"/>
+            </a4j:commandButton>
+             
+          </s:div>
+         </td> 
+       </tr>
+      </table> 
+     </s:div>
+         </td>
+        <td height="25px;">
+         <h:outputText value="&amp;nbsp;" escape="false"/>
+       </td>
+      </tr>
+     </table>
+   </a4j:outputPanel>
+</div-->
+
+
+	<div class="ui-layout-content">
+		<a4j:outputPanel id="outCenterBottom">
+
+			<table style="width: 100%;" border="0">
+				<tr>
+					<td width="90%">
+						<!--s:div style="margin:5px;" rendered="#{param['sessionId']!=null}"-->
+						<div style="margin: 5px;">
+
+							<c:if test="#{appMyUserManager.evaluteForBean}">
+								<h:form>
+
+									<h:messages style="color:red" globalOnly="false" />
+
+									<table style="width: 100%; font-size: 12px;" border="0">
+										<c:forEach items="#{appMyUserManager.headerItemsListContext}"
+											var="header">
+
+											<tr style="">
+												<td height="25px" style="font-style: italic" colspan="2">
+													<h:outputText value="#{header.itemLabel}" />
+												</td>
+											</tr>
+											<c:forEach items="#{header.items}" var="field">
+
+												<tr style="">
+													<td width="170px" height="25px" class="table_left_header"
+														style="padding-left: 10px;"><h:outputText
+															value="#{field.itemLabel}" /></td>
+													<td>
+                                          <c:if test="#{field.itemField!='rolesApp'}">
+													<h:outputText
+															value="#{contextBeanView[field.itemField]}" />
+												    </c:if>	
+												    <c:if test="#{field.itemField=='rolesApp'}">
+												    
+												    <table style="width: 100%;" border="0">
+													<!--c:forEach items="#{usrManager.listUsrArmForView}" var="vrecord"-->
+													<a4j:repeat var="vrecord"
+														value="#{appUserManager.listUsrArmForView}">
+														<tr>
+															<td height="15" style="font-weight: bold;"><h:outputText
+																	value=" #{vrecord.name}:" /></td>
+														</tr>
+														<tr>
+															<td>
+																<table style="width: 100%; margin-bottom: 10px;">
+																	<!--c:forEach items="#{vrecord.rolList}" var="vit"-->
+																	<ui:repeat var="vit" value="#{vrecord.rolList}">
+																		<tr>
+																			<td height="15" style="padding-left: 30px;"><h:outputText
+																					value=" #{vit.roleTitle}" /></td>
+																		</tr>
+																	</ui:repeat>
+																	<!--/c:forEach-->
+																</table>
+															</td>
+														</tr>
+													</a4j:repeat>
+													<!--/c:forEach-->
+												</table>
+												    
+												    </c:if>
+
+
+
+</td>
+												</tr>
+
+											</c:forEach>
+
+										</c:forEach>
+
+									</table>
+								</h:form>
+							</c:if>
+						</div> <!--/s:div-->
+					</td>
+					<td width="90px" valign="top"></td>
+				</tr>
+			</table>
+
+		</a4j:outputPanel>
+
+	</div>
+
+	<div class="ui-widget-footer" style="background: #E6E6E6;">
+
+		<!--script>
+//<![CDATA[
+           
+  var fio;
+       
+//]]>
+</script-->
+
+		<!--a4j:outputPanel id="outCBmpCrt">
+     <rich:modalPanel id="CBmpCrt" rendered="#{param['onCreate']!=null}"
+                    width="400" height="180">
+      <f:facet name="header">
+            <h:panelGroup>
+                <h:outputText value="Создание ИС"></h:outputText>
+             </h:panelGroup>
+      </f:facet>
+       <f:facet name="controls">
+            <h:panelGroup>
+                <h:graphicImage onclick="#{rich:component('CBmpCrt')}.hide();"
+                value="/img/icons/close.gif" />
+              </h:panelGroup>
+        </f:facet>
+        <h:form id="CBformCrt">
+         <table style="width:100%;">
+            <tr>
+            <td width="100px" height="25px">
+            <h:outputText value="Название"/></td>
+            <td><h:inputText value="#{armBeanCrt.name}"
+                 id="name" maxlength="100" size="45"/></td>
+            </tr>
+            <tr>
+            <td width="100px" height="25px">
+            <h:outputText value="Код"/></td>
+            <td>
+           <h:inputText value="#{armBeanCrt.code}"
+               id="code" maxlength="240" size="45"/>
+            </td>
+            </tr>
+            <tr>
+            <td width="100px" height="25px">
+            <h:outputText value="Описание"/></td>
+            <td>
+            <h:inputTextarea value="#{armBeanCrt.description}" 
+            id="descr" cols="41" rows="3" />
+            </td>
+            </tr>
+            <tr>
+            <td colspan="2" align="center" height="35px">
+            <a4j:commandButton value="Отмена"
+                     onclick="#{rich:component('CBmpCrt')}.hide();return false;"
+                     styleClass="but_class"/>
+            <a4j:commandButton value="Сохранить"
+                    action="#{appUserManager.createArm}"
+                    reRender="outCenterCenterHeader, outCenterCenter, outCenterBottom"
+                    oncomplete="#{armManager.armCodeExist ? 'alert(\'Такой код ИС уже существует!\')' : 'hideMPCrt();' }" 
+                    onclick="if(check('CBformCrt')){return false;}"
+                    styleClass="but_class">
+                  <f:param name="onCreate" value="1"/>
+                  <f:param name="remoteAudit" value="UpdFact"/> 
+                  <f:param name="sessionId" value="#{param['sessionId']}"/> 
+               </a4j:commandButton>
+              </td>
+            </tr>
+            </table>
+            </h:form>
+       </rich:modalPanel>
+     </a4j:outputPanel-->
+		<a4j:outputPanel id="outCBmpCrt">
+			<rich:modalPanel id="CBmpCrt" rendered="#{param['onCreate']!=null}"
+				width="600" autosized="true"
+				onbeforeshow="/*setHDiv('CBmpCrtHDiv');*/
+    set_user_param(
+    '#{contextBeanView.surnameUser}', 
+    '#{contextBeanView.nameUser}',
+    '#{contextBeanView.patronymicUser}',
+    '#{contextBeanView.positionUser}',
+    '#{contextBeanView.emailUser}',
+    '#{contextBeanView.phoneUser}',
+    '#{contextBeanView.certificateUser}',
+    '#{contextBeanView.nameDepartament}',
+    '#{contextBeanView.nameOrg}',
+    '#{contextBeanView.fioIogvUser}',
+    '#{contextBeanView.passwordTechUser}'
+    );
+    document.getElementById('CBformCrt:statesinput').value=name_org_var;
+    document.getElementById('CBformCrt:cert').value=certificate_user_var;
+    document.getElementById('CBformCrt:pass').value=password_tech_user_var;    
+	reset_radio_stiu('CBformCrt', '#{clOrgBean.signObject != null}', '#{clUsrBean.signObject != null}');">
+				<f:facet name="header">
+					<h:panelGroup>
+						<h:outputText value="Создание пользователя"></h:outputText>
+					</h:panelGroup>
+				</f:facet>
+				<f:facet name="controls">
+					<h:panelGroup>
+						<h:graphicImage onclick="#{rich:component('CBmpCrt')}.hide();"
+							value="/img/icons/close.gif" />
+					</h:panelGroup>
+				</f:facet>
+				<h:form id="CBformCrt">
+
+					<table style="width: 90%;">
+						<tr>
+							<td width="100px" height="20px"><h:outputText
+									value="Организация" /></td>
+							<td><a4j:status startText="Выполняется загрузка...."
+									startStyle="color:green;font: bold 8pt arial"
+									id="statusCompOrg" forceId="true" /> <a4j:region>
+									<h:panelGrid columns="3" border="0" cellpadding="0"
+										cellspacing="0">
+										<h:inputText maxlength="50" size="55" style="margin:0px;"
+											id="statesinput" value="#{clOrgBean.full}" />
+										<h:graphicImage value="/img/error.gif"
+											onclick="document.getElementById('CBformCrt:statesinput').value='';"
+											alt="" />
+										<h:graphicImage value="/img/icons/arrow.png"
+											onclick="#{rich:component('suggestion')}.callSuggestion(true)"
+											alt="" />
+									</h:panelGrid>
+									<rich:suggestionbox height="400" width="500"
+										status="statusCompOrg" usingSuggestObjects="true"
+										for="statesinput"
+										suggestionAction="#{clOrgManager.autocomplete}" var="cap"
+										fetchValue="#{cap.full}" id="suggestion" minChars="1"
+										ajaxSingle="true"
+										onselect="invokeClOrgSelect(#{rich:component('suggestion')}.getSelectedItems().pluck('signObject'));"
+										nothingLabel="Нет данных">
+										<f:param name="onCreate" value="1" />
+										<f:param name="remoteAudit" value="clOrgSuggestFact" />
+										<h:column>
+											<h:outputText value="#{cap.full}" />
+										</h:column>
+									</rich:suggestionbox>
+								</a4j:region></td>
+						</tr>
+						<tr>
+							<td colspan="2"><a4j:outputPanel id="outCBmpOrgHiddenCrt">
+
+									<h:inputHidden id="clorgso" value="#{clOrgBean.signObject}" />
+
+									<h:panelGroup
+										rendered="#{param['signObject']!=null or clOrgBean.signObject != null}">
+										<table style="width: 99%;">
+											<tr>
+												<td width="100px" height="20px" valign="top"><h:outputText
+														value="Выбрана организация" /></td>
+												<td><h:outputText value="#{clOrgBean.full}" /></td>
+											</tr>
+										</table>
+									</h:panelGroup>
+								</a4j:outputPanel></td>
+						</tr>
+
+						<tr>
+							<td width="100px" height="20px" valign="top"><h:outputText
+									value="Пользователь" /></td>
+							<td><a4j:outputPanel id="outCBmpUsrTypeInputSelect">
+									<h:selectOneRadio id="stiu" layout="lineDirection" value="1"
+										onchange="/*invokeTypeUserInput(this.value);*/"
+										onclick="invokeTypeUserInput(this.value);" disabled="true">
+										<f:selectItem itemLabel="из справочника" itemValue="1" />
+										<f:selectItem itemLabel="ручной ввод" itemValue="2" />
+									</h:selectOneRadio>
+								</a4j:outputPanel></td>
+						</tr>
+						<tr>
+							<td colspan="2"><a4j:outputPanel id="outCBmpUsrFIOSectCrt">
+
+									<h:panelGroup
+										rendered="#{(param['remoteAudit']!='CrtFact' and param['typeUserInput']!='2') or 
+                                   (param['remoteAudit']=='CrtFact' and param['CBformCrt:cluso']!=null)}">
+										<table style="width: 99%;">
+											<tr>
+												<td width="100px" height="20px" valign="top"><h:outputText
+														value="ФИО" /></td>
+												<td><a4j:outputPanel id="outCBmpUsrCrt">
+
+														<h:panelGroup
+															rendered="#{
+               (param['signObject']!=null 
+               and (param['remoteAudit']=='clOrgSelectFact' 
+               or param['remoteAudit']=='clUsrSuggestFact'
+               or param['remoteAudit']=='clUsrTUIFact')) or
+               (clOrgBean.signObject != null)}">
+
+															<a4j:status startText="Выполняется загрузка...."
+																startStyle="color:green;font: bold 8pt arial"
+																id="statusCompUsr" forceId="true" />
+															<a4j:region>
+																<h:panelGrid columns="3" border="0" cellpadding="0"
+																	cellspacing="0">
+																	<h:inputText maxlength="50" size="55"
+																		style="margin:0px;" id="statesinput_usr" />
+																	<h:graphicImage value="/img/error.gif"
+																		onclick="document.getElementById('CBformCrt:statesinput_usr').value='';"
+																		alt="" />
+																	<h:graphicImage value="/img/icons/arrow.png"
+																		onclick="#{rich:component('suggestion_usr')}.callSuggestion(true)"
+																		alt="" />
+
+																</h:panelGrid>
+																<rich:suggestionbox height="400" width="500"
+																	status="statusCompUsr" usingSuggestObjects="true"
+																	for="statesinput_usr"
+																	suggestionAction="#{clUsrManager.autocomplete}"
+																	var="cap" fetchValue="#{cap.fio}" id="suggestion_usr"
+																	minChars="1" ajaxSingle="true"
+																	onselect="invokeClUsrSelect(#{rich:component('suggestion_usr')}.getSelectedItems().pluck('signObject'));"
+																	nothingLabel="Нет данных">
+																	<f:param name="onCreate" value="1" />
+																	<f:param name="remoteAudit" value="clUsrSuggestFact" />
+																	<f:param name="signObject"
+																		value="#{param['signObject']!=null ? param['signObject'] : clOrgBean.signObject}" />
+																	<h:column>
+																		<h:outputText value="#{cap.fio}" />
+																	</h:column>
+																</rich:suggestionbox>
+															</a4j:region>
+														</h:panelGroup>
+
+
+														<h:panelGroup
+															rendered="#{!((param['signObject']!=null 
+               and (param['remoteAudit']=='clOrgSelectFact' 
+               or param['remoteAudit']=='clUsrSuggestFact'
+               or param['remoteAudit']=='clUsrTUIFact'))or
+               (clOrgBean.signObject != null))}">
+															<h:outputText value="Не выбрана организация"
+																style="font-style:italic; color:silver;" />
+														</h:panelGroup>
+													</a4j:outputPanel></td>
+											</tr>
+											<tr>
+												<td colspan="2"><a4j:outputPanel id="outCBmpUsrDataCrt">
+
+														<h:inputHidden id="cluso" value="#{clUsrBean.signObject}" />
+
+														<h:panelGroup
+															rendered="#{param['remoteAudit']=='clUsrSelectFact' or clUsrBean.signObject!=null}">
+															<table style="width: 99%;">
+																<tr>
+																	<td width="100px" height="20px" valign="top"><h:outputText
+																			value="Выбран пользователь" /></td>
+																	<td><h:panelGrid columns="2" border="0"
+																			cellpadding="0" cellspacing="0">
+																			<h:outputText value="ФИО: " />
+																			<h:outputText value="#{clUsrBean.fio}" />
+																			<h:outputText value="Подразделение: " />
+																			<h:outputText value="#{clUsrBean.department}" />
+																			<h:outputText value="Должность: " />
+																			<h:outputText value="#{clUsrBean.position}" />
+																			<h:outputText value="Телефон:" />
+																			<h:outputText value="#{clUsrBean.phone}" />
+																			<h:outputText value="E-mail:" />
+																			<h:outputText value="#{clUsrBean.email}" />
+																		</h:panelGrid></td>
+																</tr>
+															</table>
+														</h:panelGroup>
+													</a4j:outputPanel></td>
+											</tr>
+										</table>
+									</h:panelGroup>
+									<h:panelGroup
+										rendered="#{(param['remoteAudit']!='UpdFact' and param['typeUserInput']=='2') or (param['remoteAudit']=='UpdFact' and param['CBformCrt:cluso']==null)}">
+										<table style="width: 90%;">
+											<tr>
+												<td width="100px" height="20px"><h:outputText
+														value="Подразделение" /></td>
+												<td><h:inputText value="#{usrBeanCrt.department}"
+														id="depart" maxlength="255" size="55" /></td>
+											</tr>
+											<tr>
+												<td width="100px" height="20px"><h:outputText
+														value="Должность" /></td>
+												<td><h:inputText value="#{usrBeanCrt.position}"
+														id="doljn" maxlength="255" size="55" /></td>
+											</tr>
+											<tr>
+												<td width="100px" height="20px"><h:outputText
+														value="Фамилия" /></td>
+												<td><h:inputText value="#{usrBeanCrt.surname}"
+														id="name1" maxlength="45" size="55" /></td>
+											</tr>
+											<tr>
+												<td width="100px" height="20px"><h:outputText
+														value="Имя" /></td>
+												<td><h:inputText value="#{usrBeanCrt.name1}" id="name2"
+														maxlength="30" size="55" /></td>
+											</tr>
+											<tr>
+												<td width="100px" height="20px"><h:outputText
+														value="Отчество" /></td>
+												<td><h:inputText value="#{usrBeanCrt.name2}" id="name3"
+														maxlength="45" size="55" /></td>
+											</tr>
+											<tr>
+												<td width="100px" height="20px"><h:outputText
+														value="Телефон" /></td>
+												<td><h:inputText value="#{usrBeanCrt.phone}" id="tel"
+														maxlength="50" size="55" /></td>
+											</tr>
+											<tr>
+												<td width="100px" height="20px"><h:outputText
+														value="E-mail" /></td>
+												<td><h:inputText value="#{usrBeanCrt.email}" id="email"
+														maxlength="50" size="55" /></td>
+											</tr>
+										</table>
+									</h:panelGroup>
+
+								</a4j:outputPanel></td>
+						</tr>
+					</table>
+					<table style="width: 90%;">
+						<tr>
+							<td width="100px" height="20px"><h:outputText value="Логин" /></td>
+							<td><h:inputText value="#{usrBeanCrt.login}" id="login"
+									maxlength="50" size="55" /></td>
+						</tr>
+						<tr>
+							<td width="100px" height="20px"><h:outputText value="Пароль" /></td>
+							<td><h:inputText value="#{usrBeanCrt.password}" id="pass"
+									maxlength="30" size="55" /></td>
+						</tr>
+						<tr>
+							<td width="100px" height="20px"><h:outputText
+									value="Номер сертификата" /></td>
+							<td><h:inputText value="#{usrBeanCrt.certificate}" id="cert"
+									maxlength="50" size="55" /></td>
+						</tr>
+						<tr>
+							<td width="100px" height="25px"><h:outputText
+									value="Дата начала" /></td>
+							<td><rich:calendar value="#{usrBeanCrt.start}" locale="RU"
+									datePattern="dd.MM.yy" todayControlMode="hidden" id="sdate" />
+							</td>
+						</tr>
+						<tr>
+							<td width="100px" height="25px"><h:outputText
+									value="Дата окончания" /></td>
+							<td><rich:calendar value="#{usrBeanCrt.finish}" locale="RU"
+									datePattern="dd.MM.yy" todayControlMode="hidden" id="fdate" />
+							</td>
+						</tr>
+						<tr>
+							<td width="100px" height="20px"><h:outputText value="Статус" /></td>
+							<td><h:selectOneMenu value="#{usrBeanCrt.status}"
+									style="width:100px;">
+									<f:selectItem itemLabel="Активен" itemValue="1" />
+									<f:selectItem itemLabel="Заблокирован" itemValue="2" />
+								</h:selectOneMenu></td>
+						</tr>
+						<tr>
+							<td colspan="2" align="center" height="35px"><a4j:commandButton
+									value="Отмена"
+									onclick="#{rich:component('CBmpCrt')}.hide();return false;"
+									styleClass="but_class" /> <a4j:commandButton value="Сохранить"
+									action="#{appMyUserManager.createArm}"
+									reRender="outCenterCenterHeader, outCenterCenter, outCenterBottom"
+									oncomplete="#{usrManager.addLoginExist ? 'alert(\'Такой логин уже существует!\')' : 'hideMPCrt();' }"
+									onclick="if(check_crt('CBformCrt')){return false;}"
+									styleClass="but_class">
+									<f:param name="onCreate" value="1" />
+									<f:param name="remoteAudit" value="UpdFact" />
+									<f:param
+										name="#{param['sessionId']!=null ? 'sessionId' : 'xxx1'}"
+										value="#{param['sessionId']}" />
+								</a4j:commandButton></td>
+						</tr>
+					</table>
+
+				</h:form>
+			</rich:modalPanel>
+		</a4j:outputPanel>
+
+
+		<a4j:outputPanel id="outCBmpUpd">
+			<rich:modalPanel id="CBmpUpd" rendered="#{param['onUpdate']!=null}"
+				width="400" autosized="true"
+				onbeforeshow="/*setHDiv('CBmpUpdHDiv');*/">
+				<f:facet name="header">
+					<h:panelGroup>
+						<h:outputText value="Отклонение" />
+					</h:panelGroup>
+				</f:facet>
+				<f:facet name="controls">
+					<h:panelGroup>
+						<h:graphicImage onclick="#{rich:component('CBmpUpd')}.hide();"
+							value="/img/icons/close.gif" />
+					</h:panelGroup>
+				</f:facet>
+				<!--div id="CBmpUpdHDiv" style="width:100%;height:500px;overflow:auto;"-->
+				<h:form id="CBformUpd">
+					<table style="width: 99%">
+						<tr height="25px">
+							<td colspan="2"><h:outputText value="Отклонить заявку ?" />
+							</td>
+						</tr>
+						<tr height="15px">
+							<td width="80px"><h:outputText value="Номер" /></td>
+							<td><h:outputText value="#{appMyUserBean.baseId}" /></td>
+						</tr>
+						<tr height="15px">
+							<td><h:outputText value="Дата" /></td>
+							<td><h:outputText value="#{appMyUserBean.created}" /></td>
+						</tr>
+						<tr>
+							<td><h:outputText value="Причина :" /></td>
+							<td><h:inputTextarea
+									value="#{appMyUserManager.rejectReason}" id="reject_reason"
+									cols="41" rows="3" /></td>
+						</tr>
+						<tr height="35px">
+							<td colspan="2" align="center"><a4j:commandButton
+									value="Отмена"
+									onclick="#{rich:component('CBmpUpd')}.hide();return false;"
+									styleClass="but_class" /> <a4j:commandButton value="Отклонить"
+									action="#{appMyUserManager.reject}"
+									reRender="outCenterCenterHeader, outCenterCenter, outCenterBottom"
+									oncomplete="#{rich:component('CBmpUpd')}.hide();"
+									onclick="if(check_reject('CBformUpd')){return false;}"
+									styleClass="but_class">
+									<f:param name="onUpdate" value="1" />
+									<f:param name="remoteAudit" value="UpdFact" />
+									<f:param name="sessionId" value="#{param['sessionId']}" />
+								</a4j:commandButton></td>
+						</tr>
+					</table>
+
+				</h:form>
+				<!--/div-->
+			</rich:modalPanel>
+		</a4j:outputPanel>
+
+		<a4j:outputPanel id="outCBmpComment">
+			<rich:modalPanel id="CBmpComment"
+				rendered="#{param['onComment']!=null}" width="400" autosized="true"
+				onbeforeshow="/*setHDiv('CBmpUpdHDiv');*/">
+				<f:facet name="header">
+					<h:panelGroup>
+						<h:outputText value="Комментарий" />
+					</h:panelGroup>
+				</f:facet>
+				<f:facet name="controls">
+					<h:panelGroup>
+						<h:graphicImage onclick="#{rich:component('CBmpComment')}.hide();"
+							value="/img/icons/close.gif" />
+					</h:panelGroup>
+				</f:facet>
+				<!--div id="CBmpUpdHDiv" style="width:100%;height:500px;overflow:auto;"-->
+				<h:form id="CBformComment">
+					<table style="width: 99%">
+						<tr height="15px">
+							<td width="80px"><h:outputText value="Комментарий" /></td>
+							<td><h:inputTextarea value="#{appMyUserManager.commentText}"
+									id="comment" cols="41" rows="3" /></td>
+						</tr>
+						<tr height="35px">
+							<td colspan="2" align="center"><a4j:commandButton
+									value="Отмена"
+									onclick="#{rich:component('CBmpComment')}.hide();return false;"
+									styleClass="but_class" /> <a4j:commandButton value="Сохранить"
+									action="#{appMyUserManager.comment}" reRender="outCenterBottom"
+									oncomplete="#{rich:component('CBmpComment')}.hide();"
+									onclick="if(check_comment('CBformComment')){return false;}"
+									styleClass="but_class">
+									<f:param name="onComment" value="1" />
+									<f:param name="remoteAudit" value="CommentFact" />
+									<f:param name="sessionId" value="#{param['sessionId']}" />
+								</a4j:commandButton></td>
+						</tr>
+					</table>
+
+				</h:form>
+				<!--/div-->
+			</rich:modalPanel>
+		</a4j:outputPanel>
+	</div>
+
+	<script>
+//<![CDATA[
+  
+ 
+  
+var fio_user_var;   
+var surname_user_var;   
+var name_user_var; 
+var patronymic_user_var; 
+var position_user_var; 
+var email_user_var; 
+var phone_user_var; 
+var certificate_user_var; 
+var name_departament_var; 
+var name_org_var;
+var fio_iogv_user_var;  
+var password_tech_user_var;  
+
+function check(tform){
+ var msg="";
+ if (jQuery.trim(document.getElementById(tform+":name").value)==""){
+	  msg+="Нет Наименования !\n";
+ }
+ if (jQuery.trim(document.getElementById(tform+":code").value)==""){
+	  msg+="Нет Кода !\n";
+ }else{
+	 if( jQuery.trim(document.getElementById(tform+":code").value).search(new RegExp(/[А-яёЁ]/g)) !=-1){
+		 msg+="В Коде недопустима кириллица !\n";
+     }
+ }
+ if (jQuery.trim(document.getElementById(tform+":descr").value)==""){
+	 // msg+="Нет Описания !\n";
+ }else{
+	 if(jQuery.trim(document.getElementById(tform+":descr").value).length>500){
+		    msg+="Превышена длина поля Описание!\n";
+	 }
+  }
+		 
+ 
+ if(msg!=""){
+  alert(msg);
+  return true;
+ }else{
+  return false;
+}
+}
+
+function check_reject(tform){
+	 var msg="";
+
+	 if (jQuery.trim(document.getElementById(tform+":reject_reason").value)==""){
+		  msg+="Не заполнено поле Причина !\n";
+	 }else{
+		 if(jQuery.trim(document.getElementById(tform+":reject_reason").value).length>1000){
+			    msg+="Превышена длина поля Причина!\n";
+		 }
+	  }
+	 if(msg!=""){
+	  alert(msg);
+	  return true;
+	 }else{
+	  return false;
+	}
+}
+
+function check_comment(tform){
+	 var msg="";
+
+	 if (jQuery.trim(document.getElementById(tform+":comment").value)==""){
+		 // msg+="Не заполнено поле Причина !\n";
+	 }else{
+		 if(jQuery.trim(document.getElementById(tform+":comment").value).length>1000){
+			    msg+="Превышена длина поля Комментарий!\n";
+		 }
+	  }
+	 if(msg!=""){
+	  alert(msg);
+	  return true;
+	 }else{
+	  return false;
+	}
+}
+
+function setHDiv(hdiv){
+	jQuery('#'+hdiv).height(Math.floor(jQuery(window).height()*(2/3)));
+}
+
+function setHDiv_min(hdiv){
+	jQuery('#'+hdiv).height(Math.floor(jQuery(window).height()*(2/3)-100));
+}
+
+function setMPTop(){
+	alert(Math.floor(jQuery(window).height()*(1/6)));
+	jQuery('#CBmpUpdRoleCDiv').css('top',Math.floor(jQuery(window).height()*(1/6)))
+}
+
+function hideMPCrt(){
+	#{rich:component('CBmpCrt')}.hide();
+}
+
+function reset_radio_stiu(tform, flag_cl_org, flag_cl_user){
+
+	 jQuery("input[id='"+tform+":stiu:0'][type=radio]").attr('checked', true);
+
+     if(flag_cl_user=='true'){ // в заявке есть код иогв пользователя
+         
+    	 enable_radio_stiu(tform);
+		 document.getElementById('CBformCrt:statesinput_usr').value=fio_iogv_user_var;
+		 
+     }else if(flag_cl_org=='true'){ // в заявке есть код иогв организации
+
+		 enable_radio_stiu(tform);
+		 document.getElementById('CBformCrt:statesinput_usr').value=fio_user_var;
+		 
+     }
+     
+}
+function enable_radio_stiu(tform){
+  jQuery("input[id='"+tform+":stiu:0'][type=radio]").removeAttr('disabled');
+  jQuery("input[id='"+tform+":stiu:1'][type=radio]").removeAttr('disabled');
+
+}
+
+function set_user_param(surnameUser, nameUser, patronymicUser, positionUser,
+		               emailUser, phoneUser , certificateUser, nameDepartament, 
+		               nameOrg, fioIogvUser, passwordTechUser ){
+
+	fio_user_var=surnameUser+' '+nameUser+' '+patronymicUser;   
+	surname_user_var=surnameUser;   
+	name_user_var=nameUser; 
+	patronymic_user_var=patronymicUser; 
+	position_user_var=positionUser; 
+	email_user_var=emailUser; 
+	phone_user_var=phoneUser; 
+	certificate_user_var=certificateUser; 
+	name_departament_var=nameDepartament; 
+	name_org_var=nameOrg;
+	fio_iogv_user_var=fioIogvUser;
+	password_tech_user_var=passwordTechUser; 
+}
+
+function check_crt(tform){
+	 var msg="";
+	 if (document.getElementById(tform+":clorgso").value==""){
+		  msg+="Не выбрана Организация !\n";
+	  }
+	 if(document.getElementById(tform+":cluso")!=null){
+	   if (document.getElementById(tform+":cluso").value==""){
+		  msg+="Не выбран Пользователь !\n";
+	   }
+    }else{
+   	 if (jQuery.trim(document.getElementById(tform+":name1").value)==""){
+   		  msg+="Нет Фамилии !\n";
+   	 }
+   	 if (jQuery.trim(document.getElementById(tform+":name2").value)==""){
+   		  msg+="Нет Имени !\n";
+   	 }
+   	 if (jQuery.trim(document.getElementById(tform+":name3").value)==""){
+   		  msg+="Нет Отчества !\n";
+   	 }
+    }
+	/* if (document.getElementById(tform+":cert").value==""){
+		  msg+="Нет Номера сертификата !\n";
+	 }*/  
+	 
+	 if (jQuery.trim(document.getElementById(tform+":login").value)==""){
+		  msg+="Нет Логина !\n";
+	 }else{
+		 if( jQuery.trim(document.getElementById(tform+":login").value).search(new RegExp(/[А-яёЁ]/g)) !=-1){
+			 msg+="В Логине недопустима кириллица !\n";
+	     }
+	 }
+	 if (jQuery.trim(document.getElementById(tform+":pass").value)==""){
+		  msg+="Нет Пароля !\n";
+	 }else{
+		 if(jQuery.trim(document.getElementById(tform+":pass").value).search(new RegExp(/[А-яёЁ]/g)) !=-1){
+			 msg+="В Пароле недопустима кириллица !\n";
+	     }
+	 }
+	
+	 if(msg!=""){
+	  alert(msg);
+	  return true;
+	 }else{
+	  return false;
+	}
+}
+
+
+
+//]]>
+</script>
+</ui:composition>

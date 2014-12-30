@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='windows-1251' ?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:s="http://jboss.com/products/seam/taglib"
+	xmlns:c="http://java.sun.com/jstl/core">
+
+	<h3 class="ui-widget-header">Новости</h3>
+
+	<div class="ui-layout-content">
+
+		<a4j:outputPanel id="outCenterCenter">
+
+			<table style="width: 95%; font-weight: 13px; margin-top: 10px;"
+				border="0">
+				<a4j:repeat var="it" value="#{newsManager.docNewsFullList}"
+					rowKeyVar="rkv" rows="#{profile.rowsCountDocs}" id="doc_dt">
+					<tr>
+						<td style="padding-left: 10px;">
+							<table style="width: 100%; font-weight: 13px;" border="0">
+								<tr>
+									<td height="99%"><h:outputText
+											value="#{it.publicationDate}" style="font-weight:bold;">
+											<s:convertDateTime pattern="dd.MM.yy HH:mm" />
+										</h:outputText><br /> <h:outputText value="#{it.textShort}" /></td>
+								</tr>
+								<tr>
+									<td height="1%" align="right"
+										style="border-bottom: 1px solid silver;"><a4j:commandLink
+											onclick="news_view(#{it.idNew});return false;">
+											<h:outputText value="Подробно" />
+										</a4j:commandLink></td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</a4j:repeat>
+			</table>
+		</a4j:outputPanel>
+
+
+		<a4j:outputPanel id="news_out">
+			<rich:modalPanel id="news_mp" rendered="#{param['idNews']!=null}"
+				width="400" autosized="true">
+				<f:facet name="header">
+					<h:panelGroup>
+						<h:outputText value="Новость" />
+					</h:panelGroup>
+				</f:facet>
+				<f:facet name="controls">
+					<h:panelGroup>
+						<h:graphicImage onclick="#{rich:component('news_mp')}.hide();"
+							value="/img/icons/close.gif" />
+					</h:panelGroup>
+				</f:facet>
+				<table style="width: 100%;">
+					<tr>
+						<td><h:outputText value="#{docNewsBean.text}" /></td>
+					</tr>
+					<tr>
+						<td align="center" height="35px"><a4j:commandButton
+								value="Отмена"
+								onclick="#{rich:component('news_mp')}.hide();return false;"
+								styleClass="but_class" /></td>
+					</tr>
+				</table>
+			</rich:modalPanel>
+		</a4j:outputPanel>
+	</div>
+
+	<div class="ui-widget-footer" style="background: #E6E6E6;">
+
+		<a4j:outputPanel id="outCenterCenterFooter">
+
+			<table>
+				<tr>
+					<td>
+						<table style="width: 95%" border="0">
+							<tr>
+								<td width="40px;"><h:outputText value="Строк:" /></td>
+								<td width="50px;"><rich:inputNumberSpinner
+										value="#{profile.rowsCountDocs}" inputSize="1" id="rowCId"
+										minValue="5" enableManualInput="false"
+										oninputkeypress="return false;" /></td>
+								<td width="20px;"><a4j:commandLink
+										reRender="outCenterCenter,outCenterCenterFooter"
+										ajaxSingle="true" process="rowCId">
+										<h:graphicImage url="/img/icons/Da.gif"
+											styleClass="img-in-link" height="14" width="14" />
+									</a4j:commandLink></td>
+								<td><rich:datascroller align="center" for="doc_dt"
+										maxPages="5" stepControls="hide" id="doc_dt_dscr"
+										immediate="true" renderIfSinglePage="false"
+										reRender="outCenterCenter" ajaxSingle="true">
+									</rich:datascroller></td>
+							</tr>
+						</table>
+
+					</td>
+					<td height="25px;"><h:outputText value="&amp;nbsp;"
+							escape="false" /></td>
+				</tr>
+			</table>
+		</a4j:outputPanel>
+	</div>
+	<SCRIPT type="text/javascript">
+ //<![CDATA[
+   //]]>
+ </SCRIPT>
+</ui:composition>

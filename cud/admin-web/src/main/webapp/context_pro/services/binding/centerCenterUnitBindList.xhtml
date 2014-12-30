@@ -1,0 +1,472 @@
+<?xml version='1.0' encoding='windows-1251' ?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:s="http://jboss.com/products/seam/taglib"
+	xmlns:c="http://java.sun.com/jstl/core">
+
+
+	<h3 class="ui-widget-header">Привязка УЗП к ОГК ИОГВ</h3>
+
+	<div class="ui-widget-header"
+		style="background: #E6E6E6; height: 60px;">
+		<a4j:outputPanel id="outCenterCenterHeader">
+			<table>
+				<tr>
+					<td><s:div rendered="#{param['remoteAudit']!=null}">
+
+							<table style="width: 800px" border="0">
+								<tr height="30px">
+									<td><h:outputText value="Категория записей: " /> <h:selectOneMenu
+											value="#{bindStateHolder.columnFilterValues['t1_iogv_bind_type']}"
+											id="view_mode_sl" style="width:170px;"
+											onchange="invokeExtFilter('rezim');">
+											<f:selectItem itemLabel="Не привязанные" itemValue="-2" />
+											<f:selectItem itemLabel="Не активные" itemValue="-3" />
+											<f:selectItem itemLabel="Активные" itemValue="-4" />
+											<!--f:selectItem itemLabel="Привязанные администратором" itemValue="2"/>
+                   <f:selectItem itemLabel="Пере-привязанные администратором" itemValue="3+4"/-->
+										</h:selectOneMenu> <c:if
+											test="#{bindStateHolder.columnFilterValues['t1_iogv_bind_type']==null
+                       or bindStateHolder.columnFilterValues['t1_iogv_bind_type']=='-2'
+                      or bindStateHolder.columnFilterValues['t1_iogv_bind_type']=='-3'}">
+
+											<h:outputText value="   Группа: " />
+											<h:selectOneMenu
+												value="#{bindStateHolder.columnFilterValues['t1_bin_flag']}"
+												id="select_mode_sl" style="width:170px;"
+												onchange="invokeExtFilter('select');">
+												<f:selectItem itemLabel="Все" itemValue="#-1#" />
+												<f:selectItem itemLabel="Соответствия установлены"
+													itemValue="1" />
+												<f:selectItem itemLabel="Соответствия не установлены"
+													itemValue="0" />
+
+												<!--f:selectItem itemLabel="Привязанные администратором" itemValue="2"/>
+                   <f:selectItem itemLabel="Пере-привязанные администратором" itemValue="3+4"/-->
+											</h:selectOneMenu>
+										</c:if></td>
+								</tr>
+
+
+								<tr height="30px" style="border-top: 1px solid silver">
+
+									<td><s:span
+											rendered="#{ param['onRunBinding']!=null 
+                            or param['onRunResult']!=null
+                           or bindStateHolder.columnFilterValues['t1_iogv_bind_type']==null  
+                           or bindStateHolder.columnFilterValues['t1_iogv_bind_type']=='-2'
+                           or bindStateHolder.columnFilterValues['t1_iogv_bind_type']=='-3'}">
+											<a4j:commandButton style="width:110px; margin-right:10px;"
+												value="Запустить ППС" reRender="outCBmpRunBinding"
+												ajaxSingle="true"
+												oncomplete="#{rich:component('CBmpRunBinding')}.show();"
+												styleClass="but_class">
+												<f:param name="remoteAudit" value="OpenUpdFact" />
+												<f:param name="onRunBinding" value="1" />
+												<f:param name="typeBinding"
+													value="#{bindStateHolder.columnFilterValues['t1_iogv_bind_type']=='-3' ? 'bindingNoAct' : 'bindingUnBind'}" />
+											</a4j:commandButton>
+
+											<a4j:commandButton style="width:110px; margin-right:10px;"
+												value="Результат ППС"
+												action="#{bindManager.prepareRunResultMessage}"
+												reRender="outCBmpRunResult" ajaxSingle="true"
+												oncomplete="#{rich:component('CBmpRunResult')}.show();"
+												styleClass="but_class">
+												<f:param name="remoteAudit" value="OpenUpdFact" />
+												<f:param name="onRunResult" value="1" />
+												<f:param name="typeBinding"
+													value="#{bindStateHolder.columnFilterValues['t1_iogv_bind_type']=='-3' ? 'bindingNoAct' : 'bindingUnBind'}" />
+											</a4j:commandButton>
+										</s:span> <s:span rendered="#{param['sessionId']!=null}">
+
+											<s:span
+												rendered="#{bindBeanView.usrCode == '' or param['onSearchForm']!=null}">
+												<a4j:commandButton style="width:80px;"
+													value="Привязать
+                    #{(not empty currentUser.allowedSys or currentUser.isAccOrgManagerValue) and !currentUser.isAllowedReestr('002', '3') ? '[З]' : ''}"
+													rendered="#{authenticator.accessPerm('urn_services_binding_OGK','3') and 
+                   (!currentUser.isAccOrgManagerValue or bindBeanView.orgCode==currentUser.upSign or param['remoteAudit']=='OpenUpdFact' )}"
+													reRender="outCBmpSearchForm" ajaxSingle="true"
+													action="#{bindManager.beforeSearch}"
+													oncomplete="#{rich:component('CBmpSearchForm')}.show();"
+													styleClass="but_class">
+													<f:param name="searchFio" value="#{bindBeanView.fio}" />
+													<f:param name="remoteAudit" value="OpenUpdFact" />
+													<f:param name="onSearchForm" value="1" />
+													<f:param name="sessionId" value="#{param['sessionId']}" />
+												</a4j:commandButton>
+											</s:span>
+
+											<s:span
+												rendered="#{(bindBeanView.usrCode != '' and bindBeanView.usrIogvStatus=='H') or param['onReSearchForm']!=null}">
+												<a4j:commandButton style="width:130px;"
+													value="Искать соответсвия
+                    #{(not empty currentUser.allowedSys or currentUser.isAccOrgManagerValue) and !currentUser.isAllowedReestr('002', '3') ? '[З]' : ''}"
+													rendered="#{authenticator.accessPerm('urn_services_binding_OGK','3') and 
+                   (!currentUser.isAccOrgManagerValue or bindBeanView.orgCode==currentUser.upSign or param['remoteAudit']=='OpenUpdFact' )}"
+													reRender="outCBmpReSearchForm" ajaxSingle="true"
+													action="#{bindManager.beforeSearch}"
+													oncomplete="#{rich:component('CBmpReSearchForm')}.show();"
+													styleClass="but_class">
+													<f:param name="searchFio" value="#{bindBeanView.fio}" />
+													<f:param name="remoteAudit" value="OpenUpdFact" />
+													<f:param name="onReSearchForm" value="1" />
+													<f:param name="sessionId" value="#{param['sessionId']}" />
+												</a4j:commandButton>
+											</s:span>
+
+											<s:span
+												rendered="#{(bindBeanView.usrCode != '' and bindBeanView.usrIogvStatus=='A') or param['onCreate']!=null}">
+
+												<a4j:commandButton style="width:130px;"
+													value="Изменить привязку
+                    #{(not empty currentUser.allowedSys or currentUser.isAccOrgManagerValue) and !currentUser.isAllowedReestr('002', '3') ? '[З]' : ''}"
+													rendered="#{authenticator.accessPerm('urn_services_binding_OGK','3') and 
+                   (!currentUser.isAccOrgManagerValue or bindBeanView.orgCode==currentUser.upSign or param['remoteAudit']=='OpenUpdFact' )}"
+													reRender="outCBmpCrt" ajaxSingle="true"
+													action="#{bindManager.forViewCrt}"
+													oncomplete="#{rich:component('CBmpCrt')}.show();"
+													styleClass="but_class">
+													<f:param name="remoteAudit" value="OpenUpdFact" />
+													<f:param name="onCreate" value="1" />
+													<f:param name="sessionId" value="#{param['sessionId']}" />
+												</a4j:commandButton>
+											</s:span>
+											<s:span
+												rendered="#{bindBeanView.usrCode != '' or param['onUnBind']!=null}">
+												<a4j:commandButton style="width:80px; margin-left:10px;"
+													value="Отвязать
+                    #{(not empty currentUser.allowedSys or currentUser.isAccOrgManagerValue) and !currentUser.isAllowedReestr('002', '3') ? '[З]' : ''}"
+													rendered="#{authenticator.accessPerm('urn_services_binding_OGK','3') and 
+                   (!currentUser.isAccOrgManagerValue or bindBeanView.orgCode==currentUser.upSign or param['remoteAudit']=='OpenDelFact' )}"
+													reRender="outCBmpUnBind" ajaxSingle="true"
+													action="#{bindManager.forViewUnBindMessage}"
+													oncomplete="#{rich:component('CBmpUnBind')}.show();"
+													styleClass="but_class">
+													<f:param name="remoteAudit" value="OpenDelFact" />
+													<f:param name="onUnBind" value="1" />
+													<f:param name="sessionId" value="#{param['sessionId']}" />
+												</a4j:commandButton>
+											</s:span>
+
+											<s:span>
+
+												<!--s:span rendered="#{bindBeanView.usrCode != '' or param['onUnReBind']!=null}"-->
+												<a4j:commandButton style="width:80px; margin-left:10px;"
+													value="История
+                    #{(not empty currentUser.allowedSys or currentUser.isAccOrgManagerValue) and !currentUser.isAllowedReestr('002', '3') ? '[З]' : ''}"
+													rendered="#{authenticator.accessPerm('urn_services_binding_OGK','3') and 
+                   (!currentUser.isAccOrgManagerValue or bindBeanView.orgCode==currentUser.upSign or param['remoteAudit']=='OpenDelFact' )}"
+													reRender="outCBmpUnReBind" ajaxSingle="true"
+													action="#{bindManager.forViewUnReBindMessage}"
+													oncomplete="#{rich:component('CBmpUnReBind')}.show();"
+													styleClass="but_class">
+													<f:param name="remoteAudit" value="OpenDelFact" />
+													<f:param name="onUnReBind" value="1" />
+													<f:param name="sessionId" value="#{param['sessionId']}" />
+													<f:param
+														name="#{bindBeanView.usrCode != '' ? 'usrCodeFlag' : 'xxx'}"
+														value="1" />
+												</a4j:commandButton>
+											</s:span>
+
+										</s:span></td>
+								</tr>
+
+							</table>
+						</s:div></td>
+					<td height="25px;"><h:outputText value="&amp;nbsp;"
+							escape="false" /></td>
+				</tr>
+			</table>
+
+
+		</a4j:outputPanel>
+	</div>
+
+	<div class="ui-layout-content">
+
+
+		<a4j:outputPanel id="outCenterCenter">
+
+			<s:div rendered="#{bindManager.evaluteForList}">
+
+				<a4j:queue ignoreDupResponce="true" />
+
+
+				<rich:dataTable id="audit_dt" style="width:100%" var="it"
+					value="#{bindDataModel}" rows="#{profile.rowsCountBind}"
+					reRender="dt_dscr"
+					onRowClick="invokeRemoteAuditBean(
+        '#{it.baseId}',
+        'rowSelectFact',
+        '#{param['auditListCount'] != null ? param['auditListCount'] : bindDataModel.rowCount}');">
+
+					<!--rich:subTable  var="row1" value="#{'Исходные данные'}" >
+   <rich:column colspan="5">
+   <h:selectBooleanCheckbox value="#{row.checked}" />
+    <h:outputText value="#{row1}" />
+   </rich:column>
+ </rich:subTable-->
+
+					<rich:columns value="#{bindManager.auditItemsListSelect}"
+						var="field" index="index" id="column#{index}"
+						styleClass="#{it.baseId==param['sessionId'] ? 'audit_record_active' : ''}"
+						style="#{it.selected=='true' ? 'background-color: yellow;' : ''} #{it.status==2 ? 'color: #9c0606;' : ''} cursor:pointer;">
+						<f:facet name="header">
+
+							<h:panelGroup>
+								<h:outputText value="#{field.itemLabel}" />
+								<a4j:commandLink
+									onclick="invokeSort(
+		                 '#{param['sessionId']}',
+	                     'filterFieldFact',
+	                     '#{field.itemSortField}'); return false;">
+									<h:graphicImage
+										url="/img/icons/sort_#{bindStateHolder.sortOrders[field.itemSortField]}.gif"
+										styleClass="img-in-link" height="14" width="14" />
+								</a4j:commandLink>
+								<!--a4j:commandLink action="#{bindStateHolder.sort(field.itemSortField)}"
+	                reRender="outCenterCenter" ajaxSingle="true">
+	            <h:graphicImage url="/img/icons/sort_#{bindStateHolder.sortOrders[field.itemSortField]}.gif" styleClass="img-in-link" height="14" width="14"/>
+                <f:param name="remoteAudit" value="filterFieldFact"/>
+                <f:param name="#{param['sessionId']!=null ? 'sessionId' : 'xxx1'}" value="#{param['sessionId']}"/>
+            </a4j:commandLink-->
+								<br />
+								<c:choose>
+									<c:when test="#{field.itemField=='statusValue'}">
+										<h:selectOneMenu
+											value="#{bindStateHolder.columnFilterValues[field.itemSortField]}"
+											id="som#{index}" style="width:100px;"
+											onchange="invokeMyStart();">
+											<f:selectItem itemLabel="Все" itemValue="#-1#" />
+											<f:selectItem itemLabel="Активен" itemValue="1" />
+											<f:selectItem itemLabel="Заблокирован" itemValue="2" />
+										</h:selectOneMenu>
+									</c:when>
+									<c:otherwise>
+
+										<h:inputText
+											value="#{bindStateHolder.columnFilterValues[field.itemSortField]}"
+											immediate="true" id="iaf#{index}"
+											onkeypress="if(event.keyCode==13){invokeMyStart();}">
+											<!--a4j:support 
+		            event="onkeyup"  onsubmit="if (event.keyCode != 13) { return false;}" 
+		            ignoreDupResponses="true"
+			        requestDelay="100" reRender="outCenterCenterFooter,outCenterCenter">
+			        <f:param name="#{param['sessionId']!=null ? 'sessionId' : 'xxx1'}" value="#{param['sessionId']}"/>
+                    <f:param name="#{param['entryid']!=null ? 'entryid' : 'xxx2'}" value="#{param['entryid']}"/>
+                    <f:param name="remoteAudit" value="filterFieldFact"/>
+                    <f:param name="idRai" value="#{param['idRai']}"/>
+                 </a4j:support-->
+										</h:inputText>
+									</c:otherwise>
+								</c:choose>
+								<!--h:inputText value="#{bindStateHolder.columnFilterValues[field.itemSortField]}" 
+		         immediate="true" id="iaf#{index}">
+		         <a4j:support 
+		            oncomplete="setCaretToEnd (event);"
+		            event="onkeyup"  onsubmit="if (event.keyCode != 13) { return false;}" 
+		            ignoreDupResponses="true"
+			        requestDelay="100" reRender="outCenterCenterFooter,outCenterCenter">
+			        <f:param name="#{param['sessionId']!=null ? 'sessionId' : 'xxx1'}" value="#{param['sessionId']}"/>
+                    <f:param name="#{param['entryid']!=null ? 'entryid' : 'xxx2'}" value="#{param['entryid']}"/>
+                    <f:param name="remoteAudit" value="filterFieldFact"/>
+                    <f:param name="idRai" value="#{param['idRai']}"/>
+                 </a4j:support>
+		        </h:inputText-->
+
+								<!--h:inputText value="#{bindStateHolder.columnFilterValues[field.itemSortField]}" 
+		         id="iaf#{index}" immediate="true">
+		         <a4j:support 
+		            id="iafIas#{index}"
+		            event="onkeyup"  onsubmit="if (event.keyCode != 13) { return false;}" 
+		            ignoreDupResponses="true" focus="iaf#{index}" 
+			        requestDelay="100" reRender="outCenterCenterFooter,outCenterCenter">
+			        <f:param name="#{param['sessionId']!=null ? 'sessionId' : 'xxx1'}" value="#{param['sessionId']}"/>
+                    <f:param name="#{param['entryid']!=null ? 'entryid' : 'xxx2'}" value="#{param['entryid']}"/>
+                    <f:param name="remoteAudit" value="filterFieldFact"/>
+                    <f:param name="idRai" value="#{param['idRai']}"/>
+                 </a4j:support>
+		        </h:inputText-->
+
+							</h:panelGroup>
+						</f:facet>
+
+						<h:outputText value="#{it[field.itemField]}" />
+
+					</rich:columns>
+
+					<c:if
+						test="#{ bindStateHolder.columnFilterValues['t1_iogv_bind_type']==null
+                or bindStateHolder.columnFilterValues['t1_iogv_bind_type']=='-2'
+                or bindStateHolder.columnFilterValues['t1_iogv_bind_type']=='-3'}">
+
+						<rich:subTable var="row2" value="#{it.bindingList}">
+							<rich:column style="font-style:italic; color:green;">
+								<table style="width: 100%;">
+									<tr>
+										<td width="20px;"><s:link title="Связать"
+												onclick="if (confirm(' #{(not empty currentUser.allowedSys or currentUser.isAccOrgManagerValue) and !currentUser.isAllowedReestr('002', '3') ? 'Отправить заявку на связывание записей' : 'Cвязать записи'}
+                      :
+                      \\n#{it.fio} 
+                      \\nи 
+                      \\n#{row2.fio} ?')){invokeBindRecords('#{row2.usrCode}', '#{it.idUser}');} return false;">
+												<h:graphicImage value="/img/icons/link5.bmp"
+													styleClass="pic_tbar"
+													style="border:0;vertical-align:middle;" />
+											</s:link></td>
+										<td><h:outputText value="#{row2.fio}" /></td>
+									</tr>
+								</table>
+							</rich:column>
+							<rich:column style="font-style:italic; color:green;">
+								<h:outputText value="#{row2.position}" />
+							</rich:column>
+							<rich:column style="font-style:italic; color:green;">
+								<h:outputText value="#{row2.department}" />
+							</rich:column>
+							<rich:column style="font-style:italic; color:green;">
+								<h:outputText value="#{row2.orgName}" />
+							</rich:column>
+							<rich:column>
+								<h:outputText value="" />
+							</rich:column>
+						</rich:subTable>
+					</c:if>
+
+					<f:param name="#{param['sessionId']!=null ? 'sessionId' : 'xxx1'}"
+						value="#{param['sessionId']}" />
+					<f:param name="remoteAudit" value="1" />
+				</rich:dataTable>
+				<a4j:jsFunction name="invokeMyStart"
+					reRender="outCenterCenterFooter,outCenterCenter"
+					oncomplete="setCaretToEnd(event);">
+					<f:param name="#{param['sessionId']!=null ? 'sessionId' : 'xxx1'}"
+						value="#{param['sessionId']}" />
+					<f:param name="remoteAudit" value="filterFieldFact" />
+				</a4j:jsFunction>
+				<!--SCRIPT type="text/javascript">
+ //<![CDATA[
+      function mytest() {
+  	   alert("mytest");
+  	   A4J.AJAX.Submit('fAuditList',
+  		  	 event,
+  		  	 {'ignoreDupResponses':true,'implicitEventsQueue':'fAuditList:audit_dt:j_id458','similarityGroupingId':'fAuditList:audit_dt:j_id458','parameters':{'xxx1':'','xxx2':'','idRai':'','remoteAudit':'filterFieldFact','fAuditList:audit_dt:j_id458':'fAuditList:audit_dt:j_id458'} ,'requestDelay':100} 
+	  	 ) ;
+    }
+  //]]>
+ </SCRIPT-->
+			</s:div>
+		</a4j:outputPanel>
+	</div>
+
+	<div class="ui-widget-footer" style="background: #E6E6E6;">
+		<a4j:outputPanel id="outCenterCenterFooter">
+
+			<table>
+				<tr>
+					<td><s:div rendered="#{bindManager.evaluteForListFooter}">
+							<table style="width: 95%" border="0">
+								<tr>
+									<td width="40px;"><h:outputText value="Строк:" /></td>
+									<td width="50px;"><rich:inputNumberSpinner
+											value="#{profile.rowsCountBind}" inputSize="1" id="rowCId"
+											minValue="5" enableManualInput="false"
+											oninputkeypress="return false;" /></td>
+									<td width="40px;"><a4j:commandLink
+											reRender="outCenterCenter,outCenterCenterFooterDscr"
+											ajaxSingle="true" process="rowCId">
+											<h:graphicImage url="/img/icons/Da.gif"
+												styleClass="img-in-link" height="14" width="14" />
+											<f:param
+												name="#{param['sessionId']!=null ? 'sessionId' : 'xxx1'}"
+												value="#{param['sessionId']}" />
+											<f:param name="remoteAudit" value="rowCountFact" />
+										</a4j:commandLink></td>
+									<td><a4j:outputPanel id="outCenterCenterFooterDscr">
+											<rich:datascroller align="center" for="audit_dt" maxPages="5"
+												stepControls="hide" id="dt_dscr" immediate="true"
+												renderIfSinglePage="false" reRender="outCenterCenter"
+												ajaxSingle="true" style="padding-right:30px;">
+												<f:param name="auditListCount"
+													value="#{bindDataModel.rowCount2}" />
+												<f:param
+													name="#{param['sessionId']!=null ? 'sessionId' : 'xxx1'}"
+													value="#{param['sessionId']}" />
+												<f:param name="remoteAudit" value="dScrollFact" />
+											</rich:datascroller>
+										</a4j:outputPanel></td>
+									<!--td width="80px;">
+              <a4j:commandLink 
+               value="Столбцы"
+               onclick="invokeSelectColumns(
+                   '1',
+                   '#{param['sessionId']}',
+                   '#{param['entryid']}',
+                   'onSelColFact',
+                   '#{param['idRai']}',
+                   '#{param['auditListCount'] != null ? param['auditListCount'] : auditDataModel.rowCount}');return false;">
+               </a4j:commandLink>
+              </td-->
+									<td><s:div rendered="#{param['sessionId']!=null}">
+											<a4j:commandButton style="width:60px;" ajaxSingle="true"
+												reRender="outCenterCenter, outCenterCenterFooter"
+												value="#{bindBeanView.selected ? 'Очистить' : 'Отметить'}"
+												action="#{bindManager.selectRecord}" styleClass="but_class">
+												<f:param name="sessionId" value="#{param['sessionId']}" />
+												<f:param name="remoteAudit" value="clSelOneFact" />
+												<f:param name="auditListCount"
+													value="#{param['auditListCount'] != null ? param['auditListCount'] : bindDataModel.rowCount}" />
+											</a4j:commandButton>
+										</s:div></td>
+								</tr>
+							</table>
+
+						</s:div></td>
+					<td height="25px;"><h:outputText value="&amp;nbsp;"
+							escape="false" /></td>
+				</tr>
+			</table>
+		</a4j:outputPanel>
+	</div>
+
+	<SCRIPT type="text/javascript">
+ //<![CDATA[
+    jQuery(document).ready(
+	   function () {
+		  invokeRemoteAudit();
+	   }
+	);
+    /*  oncomplete=setFocus('iaf#{index}');
+    function setFocus(id){
+    	document.getElementById("fAuditList:audit_dt:iaf0").focus();
+     }*/
+
+    
+    function setCaretToEnd(e) {
+
+        var id = (e.target ? e.target : e.srcElement).id;
+
+        var control = document.getElementById(id);
+      
+        if (control.createTextRange) {
+            var range = control.createTextRange();
+            range.collapse(false);
+            range.select();
+        }else if (control.setSelectionRange) {al
+            control.focus();
+            var length = control.value.length;
+            control.setSelectionRange(length, length);
+        }
+        control.selectionStart = control.selectionEnd = control.value.length;
+    } 
+
+  //]]>
+ </SCRIPT>
+</ui:composition>

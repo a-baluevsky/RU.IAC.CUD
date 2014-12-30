@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<jboss-web>
+	<!--security-domain>picketlink-sts</security-domain -->
+	<context-root>CudServicesSTS</context-root>
+	<valve>
+		<class-name>org.apache.catalina.valves.RequestDumperValve</class-name>
+	</valve>
+</jboss-web>

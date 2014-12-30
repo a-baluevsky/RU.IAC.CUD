@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='windows-1251' ?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:s="http://jboss.com/products/seam/taglib">
+
+
+	<h3 class="ui-widget-header">Рубрикатор</h3>
+
+	<div class="ui-widget-header" style="background: #E6E6E6;">
+		<a4j:outputPanel id="outCenterCenterHeader">
+			<table>
+				<tr>
+					<td>
+						<!--s:div rendered="#{param['remoteAudit']!=null}"--> <h:form>
+							<table style="width: 300px" border="0">
+								<tr>
+									<td width="70px"><a4j:commandButton style="width:60px;"
+											value="Создать" reRender="outCBmpCrt" ajaxSingle="true"
+											oncomplete="#{rich:component('CBmpCrt')}.show();"
+											rendered="#{authenticator.accessPerm('003','2')}"
+											styleClass="but_class">
+											<f:param name="onCreate" value="1" />
+										</a4j:commandButton></td>
+									<td><s:div rendered="#{param['idRes']!=null}">
+											<a4j:commandButton reRender="outCBmpUpd" ajaxSingle="true"
+												value="Изменить" style="width:60px;"
+												action="#{resManager.forView}"
+												oncomplete="#{rich:component('CBmpUpd')}.show();"
+												rendered="#{authenticator.accessPerm('003','3')}"
+												styleClass="but_class">
+												<f:param name="onUpdate" value="1" />
+												<f:param name="idRes" value="#{param['idRes']}" />
+											</a4j:commandButton>
+
+											<a4j:commandButton reRender="outCBmpDel" ajaxSingle="true"
+												value="Удалить" style="width:60px;margin-left:10px;"
+												action="#{resManager.forViewDel}"
+												oncomplete="#{rich:component('CBmpDel')}.show();"
+												rendered="#{authenticator.accessPerm('003','4')}"
+												styleClass="but_class">
+												<f:param name="onDelete" value="1" />
+												<f:param name="idRes" value="#{param['idRes']}" />
+											</a4j:commandButton>
+										</s:div></td>
+								</tr>
+							</table>
+						</h:form> <!--/s:div-->
+					</td>
+					<td height="25px;"><h:outputText value="&amp;nbsp;"
+							escape="false" /></td>
+				</tr>
+			</table>
+		</a4j:outputPanel>
+	</div>
+
+	<div class="ui-layout-content">
+		<a4j:outputPanel id="outCenterCenter">
+			<s:div rendered="#{param['remoteRes']!=null}">
+				<h:form>
+
+					<rich:tree style="width:300px" switchType="ajax"
+						eventsQueue="equene">
+						<rich:recursiveTreeNodesAdaptor roots="#{children_map}" var="item"
+							nodes="#{treeManager.getChild(item)}" id="dit02">
+							<rich:treeNode id="id_t03" rendered="#{item.idParent2==1}"
+								nodeClass="tree-root-node-class"
+								highlightedClass="tree-root-highlighted-class"
+								selectedClass="tree-root-selected-class"
+								icon="/img/icons/workplace.png"
+								iconLeaf="/img/icons/workplace.png">
+								<h:outputText value="#{item.pageName}" />
+								<f:param name="remoteRes" value="1" />
+							</rich:treeNode>
+							<rich:treeNode id="id_t04" rendered="#{item.idParent2!=1}">
+								<a4j:commandLink action="#{resManager.forView}"
+									reRender="outCenterBottom, outCenterCenterHeader">
+									<h:outputText value="#{item.pageName}"
+										style="#{item.visible == 0 ? 'color:silver;' : ''}" />
+									<f:param name="idRes" value="#{item.idRes}" />
+									<f:param name="remoteRes" value="1" />
+								</a4j:commandLink>
+								<f:param name="remoteRes" value="1" />
+							</rich:treeNode>
+
+						</rich:recursiveTreeNodesAdaptor>
+
+					</rich:tree>
+				</h:form>
+			</s:div>
+			<!--a4j:log popup="false" level="ALL" style="width: 800px; height: 300px;"></a4j:log-->
+		</a4j:outputPanel>
+	</div>
+	<a4j:form>
+		<a4j:jsFunction name="invokeRemoteRes" reRender="outCenterCenter">
+			<f:param name="remoteRes" value="1" />
+		</a4j:jsFunction>
+	</a4j:form>
+	<SCRIPT type="text/javascript">
+ //<![CDATA[
+    jQuery(document).ready(
+	   function () {
+		   invokeRemoteRes();
+	   }
+	);
+  //]]>
+ </SCRIPT>
+</ui:composition>

@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='windows-1251' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" 
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich">
+<!--f:view-->
+<head>
+<title>Подсистема Управления Привилегиями</title>
+
+<link rel="stylesheet" type="text/css"
+	href="#{request.contextPath}/jscss/jquery/jquery.ui.all.css" />
+<link rel="stylesheet" type="text/css"
+	href="#{request.contextPath}/stylesheet/theme.css" />
+
+<script type="text/javascript"
+	src="#{request.contextPath}/jscss/jquery/1.8.7/jquery-complex-min.js" />
+
+<!--script type="text/javascript" src="#{request.contextPath}/jscss/jquery/1.8.7/jquery-latest.js"/>
+	<script type="text/javascript" src="#{request.contextPath}/jscss/jquery/1.8.7/jquery-ui-latest.js"/>
+	<script type="text/javascript" src="#{request.contextPath}/jscss/jquery/1.8.7/jquery.layout-latest.js"/>
+	<script type="text/javascript" src="#{request.contextPath}/jscss/jquery/1.8.7/jquery.layout.resizePaneAccordions-1.0.js"/-->
+
+<script type="text/javascript"
+	src="#{request.contextPath}/jscss/news_pro.js" />
+
+<style>
+</style>
+<script type="text/javascript">
+	//<![CDATA[
+
+	 
+
+	  //]]>
+</script>
+
+</head>
+<body>
+	<!--div class="ui-layout-center"-->
+	<ui:insert name="centerUnit">
+                centerCenterUnit
+        </ui:insert>
+	<!--/div-->
+	<div class="ui-layout-north">
+		<ui:insert name="topUnit">
+                topUnit
+        </ui:insert>
+	</div>
+	<div class="ui-layout-south">
+		<ui:insert name="bottomUnit">
+                bottomUnit
+        </ui:insert>
+	</div>
+	<!--div class="ui-layout-east">
+        <ui:insert name="rightUnit">
+                rightUnit
+        </ui:insert>
+
+</div-->
+	<div class="ui-layout-west">
+		<ui:insert name="leftUnit">
+                leftUnit
+   </ui:insert>
+
+	</div>
+</body>
+<a4j:status onstart="#{rich:component('wait')}.show()"
+	onstop="#{rich:component('wait')}.hide()" />
+<rich:modalPanel id="wait" autosized="true" width="170" height="80"
+	moveable="false" resizeable="false">
+	<f:facet name="header">
+		<h:outputText value="Сообщение" />
+	</f:facet>
+
+	<h:outputText value="Выполняется запрос..." />
+	<br />
+	<h:outputText value="Пожалуйста, подождите..." />
+</rich:modalPanel>
+
+</html>

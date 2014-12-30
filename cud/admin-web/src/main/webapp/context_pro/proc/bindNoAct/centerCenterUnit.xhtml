@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='windows-1251' ?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:s="http://jboss.com/products/seam/taglib"
+	xmlns:c="http://java.sun.com/jstl/core">
+
+	<style>
+</style>
+	<script type="text/javascript">
+      //<![CDATA[
+      //]]> 
+     </script>
+
+	<h3 class="ui-widget-header">Параметры процесса</h3>
+
+	<div class="ui-layout-content">
+
+		<!--a4j:outputPanel id="outCenterCenter">
+ 
+    <div style="margin:5px;">
+        <table>
+         
+            <tr>
+             <td width="250px" height="25px" class="table_left_header">
+                 <h:outputText value="Актуальность данных аудита (месяцев)"/>
+              </td>
+             <td>
+                 <h:outputText value="#{procBindNoActSettingsBean.paramActualData}"/>
+             </td>
+            </tr>
+           </table>
+      </div>
+  </a4j:outputPanel-->
+
+	</div>
+
+	<div class="ui-widget-footer" style="background: #E6E6E6;">
+		<!--a4j:outputPanel id="outCenterCenterFooter">
+    
+    <table style="width:95%">
+      <tr>
+       <td>
+        
+         <table style="width:100%" border="0">
+          <tr>
+                    <td width="75px;">
+             <a4j:commandButton style="width:70px;"
+                value="Настройки" 
+                onclick="#{rich:component('CCProcSetting')}.show();return false; " 
+                styleClass="but_class"/>
+              </td>
+            <td>
+           </td>
+          </tr>
+         </table>
+        
+       </td>
+        <td height="25px;">
+         <h:outputText value="&amp;nbsp;" escape="false"/>
+       </td>
+      </tr>
+     </table>
+     
+     </a4j:outputPanel-->
+	</div>
+	<script>
+//<![CDATA[
+function check_procCrt_date(){
+ var msg="";
+ if (#{rich:component('acdate1')}.getSelectedDateString('dd.MM.yy HH:mm')==""){
+	  msg+="Нет стартовой даты!\n";
+ }
+ if(msg!=""){
+  alert(msg);
+  return true;
+ }else{
+  return false;
+}
+}
+//]]>
+</script>
+</ui:composition>

@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='windows-1251' ?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:s="http://jboss.com/products/seam/taglib">
+
+	<h3 class="ui-widget-header">Новости и события</h3>
+	<div class="ui-layout-content">
+		<h:form>
+			<a4j:jsFunction name="news_view" action="#{newsManager.forView}"
+				reRender="news_out" ajaxSingle="true"
+				oncomplete="#{rich:component('news_mp')}.show();">
+				<f:param name="idNews" />
+			</a4j:jsFunction>
+		</h:form>
+		<table style="width: 95%; height: 99%; font-weight: 13px;" border="0">
+			<a4j:repeat var="it" value="#{newsManager.docNewsList}"
+				rowKeyVar="rkv">
+				<tr>
+					<td style="padding-left: 10px;" height="20%" valign="middle">
+						<table style="width: 100%; font-weight: 13px;" border="0">
+							<tr>
+								<td height="99%"><h:outputText
+										value="#{it.publicationDate}" style="font-weight:bold;">
+										<s:convertDateTime pattern="dd.MM.yy HH:mm" />
+									</h:outputText><br /> <h:outputText value="#{it.textShort}" /></td>
+							</tr>
+							<tr>
+								<td height="1%" align="right"
+									style="border-bottom: 1px solid silver;"><a4j:commandLink
+										onclick="news_view(#{it.idNew});return false;">
+										<h:outputText value="Подробно" />
+									</a4j:commandLink></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</a4j:repeat>
+			<a4j:repeat var="i2t" value="#{newsManager.docNewsPlaceHolderList}"
+				rowKeyVar="r2kv">
+				<tr>
+					<td height="20%"><h:outputText value="" /></td>
+				</tr>
+			</a4j:repeat>
+		</table>
+
+
+		<a4j:outputPanel id="news_out">
+			<rich:modalPanel id="news_mp" rendered="#{param['idNews']!=null}"
+				width="400" autosized="true">
+				<f:facet name="header">
+					<h:panelGroup>
+						<h:outputText value="Новость" />
+					</h:panelGroup>
+				</f:facet>
+				<f:facet name="controls">
+					<h:panelGroup>
+						<h:graphicImage onclick="#{rich:component('news_mp')}.hide();"
+							value="/img/icons/close.gif" />
+					</h:panelGroup>
+				</f:facet>
+				<table style="width: 100%;">
+					<tr>
+						<td><h:outputText value="#{docNewsBean.text}" /></td>
+					</tr>
+					<tr>
+						<td align="center" height="35px"><a4j:commandButton
+								value="Отмена"
+								onclick="#{rich:component('news_mp')}.hide();return false;"
+								styleClass="but_class" /></td>
+					</tr>
+				</table>
+			</rich:modalPanel>
+		</a4j:outputPanel>
+
+	</div>
+
+	<div class="ui-widget-footer" style="background: #E6E6E6;">
+		<s:link value="Архив" view="/faces/news.xhtml" />
+	</div>
+</ui:composition>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<m:message xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:m="http://jboss.com/products/seam/mail"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core" charset="windows-1251">
+
+	<m:from name="Пользователь" address="bubnov@iac.spb.ru" />
+	<m:to name="FIO">#{supportMail.etoMail}</m:to>
+	<m:subject>Оповещение!</m:subject>
+
+	<m:body>
+
+		<b><h:outputText value="Обращение пользователя" /></b>
+		<table width="100%" cellpadding="0" cellspacing="0">
+			<tr valign="top">
+				<td width="10%"><h:outputText value="ФИО:" /></td>
+				<td width="*"><h:outputText value="#{supportMail.helpFio}" /></td>
+			</tr>
+
+			<!--tr valign="top"> <td>
+          <h:outputText value="Организация:"/>
+         </td> <td>
+          <h:outputText value="#{mailBean.org}" />
+       </td></tr-->
+			<tr valign="top">
+				<td><h:outputText value="Должность:" /></td>
+				<td><h:outputText value="#{supportMail.helpPost}" /></td>
+			</tr>
+			<tr valign="top">
+				<td><h:outputText value="Телефон:" /></td>
+				<td><h:outputText value="#{supportMail.helpTel}" /></td>
+			</tr>
+			<tr valign="top">
+				<td><h:outputText value="Email:" /></td>
+				<td><h:outputText value="#{supportMail.helpMail}" /></td>
+			</tr>
+			<tr valign="top">
+				<td><h:outputText value="Вопрос:" /></td>
+				<td><h:outputText value="#{supportMail.helpText}" /></td>
+			</tr>
+		</table>
+	</m:body>
+
+</m:message>
+
+<!--f:facet name="alternative">
+          12345
+       </f:facet-->

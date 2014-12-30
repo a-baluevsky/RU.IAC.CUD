@@ -1,0 +1,239 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich" xmlns:r="http://richfaces.org">
+
+<h:head>
+	<title>role user</title>
+	<link rel="stylesheet" type="text/css"
+		href="#{request.contextPath}/stylesheet/theme.css" />
+
+	<h:outputStylesheet>
+        .cols {
+        vertical-align: top;
+        }
+        .rf-pm-itm-sel{
+         background-color: rgb(220, 226, 233);
+        }
+        .top_div{
+         /* background-color: rgb(212, 207, 199);*/
+          background-color: rgb(224, 220, 214);
+          border:1px solid silver;
+         border-bottom:0px;
+        }
+        html{
+         background-color: rgb(220, 226, 233) !important;
+        }
+        body{
+         margin:10px;
+       }
+       .middle_div{
+         border:1px solid silver;
+         background-color: white;
+        }
+         .rf-ddm-lst{
+         min-width:70px!important;
+        }
+        .rf-ddm-itm-lbl{
+         color: rgb(0, 144, 255);
+        }
+    </h:outputStylesheet>
+</h:head>
+<h:body>
+	<!--div class="top_div">
+		<r:toolbar itemSeparator="disc"
+			style="background:transparent !important;/*background:#f2f2f2 !important*/border:0px solid red;"
+			height="40">
+			<r:toolbarGroup>
+				<h:graphicImage value="/img/icons/create_folder.gif"
+					styleClass="pic_tbar" alt="create_doc" />
+				<h:outputText style="width:300px;font-size:12px;"
+					value="Кабинет пользователя" />
+			</r:toolbarGroup>
+			<r:toolbarGroup location="left">
+				<h:link outcome="/context/profile/info/list.xhtml">
+					<h:graphicImage value="/img/icons/fav.gif" styleClass="pic_tbar"
+						style="border:0;vertical-align:middle;" />
+					<h:outputText value="На главную" />
+					<f:param name="pageItem" value="profile_account" />
+				</h:link>
+			</r:toolbarGroup-->
+
+			<!--r:toolbarGroup location="right">
+        
+          <r:dropDownMenu submitMode="none"  
+                             itemClass="logout_mi" 
+                             selectItemClass="logout_mis">
+                <f:facet name="label">
+                    <h:panelGroup>
+                        <h:graphicImage value="/img/icons/save_as.gif" styleClass="pic_tbar" alt="save"  style="border:0;vertical-align:middle;"/>
+                        <h:outputText value="Служба Поддержки" style="color:#0090FF"/>
+                    </h:panelGroup>
+                </f:facet>
+                <r:menuItem >
+                  <f:facet name="icon">
+                     <h:graphicImage value="/img/icons/group-by.gif" style="border:0;vertical-align:middle;" styleClass="pic"/> 
+                  </f:facet>   
+                  <h:link onclick="#{r:component('help_mp')}.show(); return false;">
+                     <h:outputText value="Написать сообщение" style="color:#0090FF"/>
+                   </h:link>
+                </r:menuItem>
+              </r:dropDownMenu>
+         </r:toolbarGroup-->
+			<!--r:toolbarGroup location="right">
+				<h:graphicImage id="help_org" value="/img/icons/personal.gif"
+					styleClass="pic_tbar" alt="account" />
+				<h:outputText value="#{sessionScope['AUTH_USER_ITEM'].fio}" />
+			</r:toolbarGroup>
+			<r:toolbarGroup location="right">
+				<h:link action="#{authBean.logout()}" view="/welcome.xhtml" />
+				<h:form>
+					<h:commandLink action="#{authBean.logout}">
+						<h:graphicImage url="/img/icons/logout.gif"
+							style="border:0;vertical-align:middle;" />
+						<h:outputText value="Выйти" />
+					</h:commandLink>
+				</h:form>
+			</r:toolbarGroup>
+		</r:toolbar>
+	</div-->
+
+	<div class="middle_div">
+
+		<table style="width: 100%" border="0">
+			<tr>
+				<td width="110px" valign="top"><h:form id="form">
+						<h:panelGrid columns="2" columnClasses="cols,cols" width="100"
+							style="margin:10px;">
+							<rich:panelMenu style="width:200px" itemMode="client"
+								groupMode="client" groupExpandedLeftIcon="triangleUp"
+								groupCollapsedLeftIcon="triangleDown"
+								topGroupExpandedRightIcon="chevronUp"
+								topGroupCollapsedRightIcon="chevronDown" itemLeftIcon="disc"
+								expandSingle="false" activeItem="#{param['pageItem']}">
+								<rich:panelMenuGroup label="Профиль" expanded="true">
+									<rich:panelMenuItem name="profile_account" mode="client"
+										style="#{param['pageItem']=='profile_account' ? ' background-color: rgb(220, 226, 233);' : ''}">
+										<h:link value="Учётные данные"
+											outcome="/context/profile/info/list.xhtml">
+											<f:param name="pageItem" value="profile_account" />
+										</h:link>
+									</rich:panelMenuItem>
+									<rich:panelMenuItem name="profile_cert" mode="client"
+										style="#{param['pageItem']=='profile_cert' ? ' background-color: rgb(220, 226, 233);' : ''}">
+										<h:link value="Сертификаты"
+											outcome="/context/profile/cert/list.xhtml">
+											<f:param name="pageItem" value="profile_cert" />
+										</h:link>
+									</rich:panelMenuItem>
+									<rich:panelMenuItem name="profile_role" mode="client"
+										style="#{param['pageItem']=='profile_role' ? ' background-color: rgb(220, 226, 233);' : ''}">
+										<h:link value="Роли"
+											outcome="/context/profile/roles/list.xhtml">
+											<f:param name="pageItem" value="profile_role" />
+										</h:link>
+									</rich:panelMenuItem>
+									<rich:panelMenuItem name="profile_group" mode="client"
+										style="#{param['pageItem']=='profile_group' ? ' background-color: rgb(220, 226, 233);' : ''}">
+										<h:link value="Группы"
+											outcome="/context/profile/groups/list.xhtml">
+											<f:param name="pageItem" value="profile_group" />
+										</h:link>
+									</rich:panelMenuItem>
+								</rich:panelMenuGroup>
+								<!--  
+                <r:panelMenuGroup label="Заявки" expanded="true">
+                    <r:panelMenuItem name="app_role"
+                          style="#{param['pageItem']=='app_role' ? ' background-color: rgb(220, 226, 233);' : ''}">
+                     <h:link value="Роли" outcome="/context/app/roles/list.xhtml">
+                      <f:param name="pageItem" value="app_role" />
+                     </h:link>
+                   </r:panelMenuItem>  
+                    <r:panelMenuItem name="app_role"
+                          style="#{param['pageItem']=='app_group' ? ' background-color: rgb(220, 226, 233);' : ''}">
+                     <h:link value="Группы" outcome="/context/app/groups/list.xhtml">
+                      <f:param name="pageItem" value="app_group" />
+                     </h:link>
+                   </r:panelMenuItem>    
+                    <r:panelMenuItem name="app_admin" 
+                          style="#{param['pageItem']=='app_admin' ? ' background-color: rgb(220, 226, 233);' : ''}">
+                      <h:link value="Администрирование ИС" outcome="/context/app/admin/list.xhtml">
+                       <f:param name="pageItem" value="app_admin" />
+                      </h:link> 
+                   </r:panelMenuItem>
+                   <r:panelMenuItem name="app_org_man" 
+                          style="#{param['pageItem']=='app_org_man' ? ' background-color: rgb(220, 226, 233);' : ''}">
+                      <h:link value="Управление РП оргганизации" outcome="/context/app/org_man/list.xhtml">
+                       <f:param name="pageItem" value="app_org_man" />
+                      </h:link> 
+                   </r:panelMenuItem>        
+                  </r:panelMenuGroup>
+                  
+                    -->
+
+							</rich:panelMenu>
+						</h:panelGrid>
+					</h:form> <!--br/>
+  <h:link value="Просмотреть свои сведения" outcome="/context/info/info_user.xhtml"/>
+  <br/>
+  <h:link value="Просмотреть свои роли" outcome="/context/info/info_roles_user.xhtml"/>
+  <br/>
+  <h:link value="Заявки на роли" outcome="/context/registr/reg_role_user.xhtml"/>
+  <br/>
+  <h:link value="Заявки на администрирование ИС" outcome="/context/registr/reg_admin_user.xhtml"/-->
+
+				</td>
+				<td valign="top">
+					<div style="margin: 10px;">
+						<!--div
+							style="margin-bottom: 10px; padding: 10px 5px; border: 1px solid silver;">
+							<ui:insert name="centerHeaderUnit">
+                centerHeaderUnit
+     </ui:insert>
+						</div-->
+						<div>
+							<table width="100%" border="0">
+								<tr>
+									<td valign="top"><ui:insert name="centerUnit">
+                centerUnit
+      </ui:insert></td>
+									<td width="100px" valign="top"><!--ui:insert
+											name="centerActionUnit">
+                centerActionUnit
+      </ui:insert--></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</td>
+			</tr>
+		</table>
+
+
+
+	</div>
+	<!--div class="bottom_div" align="center">
+		<h:outputText value="СПб ГУП 'СПб ИАЦ', " />
+		<h:outputText value="&amp;nbsp;&amp;nbsp;&amp;nbsp;" escape="false" />
+		<span id="yearId"></span>
+		<h:outputText
+			value="&amp;nbsp;год,&amp;nbsp;&amp;nbsp;&amp;nbsp;версия 1.0.0"
+			escape="false" />
+	</div-->
+</h:body>
+
+<script>
+//<![CDATA[
+
+jQuery(document).ready(
+	  function () {
+         jQuery("#yearId").text(new Date().getFullYear());
+      }
+);
+//]]>
+</script>
+
+</html>

@@ -1,0 +1,384 @@
+<?xml version='1.0' encoding='windows-1251' ?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:s="http://jboss.com/products/seam/taglib"
+	xmlns:c="http://java.sun.com/jstl/core">
+
+	<h3 class="ui-widget-header">Подробно</h3>
+	<div class="ui-layout-content">
+		<a4j:outputPanel id="outCenterBottom">
+
+			<table style="width: 100%;" border="0">
+				<tr>
+					<td width="90%">
+						<!--s:div style="margin:5px;" rendered="#{param['sessionId']!=null}"-->
+						<div style="margin: 5px;">
+
+							<c:if test="#{orgManager.evaluteForBean}">
+
+								<h:form>
+
+									<h:messages style="color:red" globalOnly="false" />
+
+									<table style="width: 100%; font-size: 12px;" border="0">
+										<c:forEach items="#{orgManager.auditItemsListContext}"
+											var="field">
+											<!--a4j:repeat var="field" rowKeyVar="rkv"
+                      value="#{usrManager.auditItemsListContext}"-->
+											<tr>
+												<td width="150px" height="25px" class="table_left_header">
+													<h:outputText value="#{field.itemLabel}" />
+												</td>
+												<td><h:outputText value="#{orgBean[field.itemField]}" />
+												</td>
+											</tr>
+											<!--/a4j:repeat-->
+										</c:forEach>
+										<tr>
+											<td width="150px" height="25px" class="table_left_header">
+												<h:outputText value="Создал" />
+											</td>
+											<td><h:outputText value="#{orgBean.crtUserName}" /></td>
+										</tr>
+										<tr>
+											<td width="150px" height="25px" class="table_left_header">
+												<h:outputText value="Дата создания" />
+											</td>
+											<td><h:outputText value="#{orgBean.created}">
+													<s:convertDateTime pattern="dd.MM.yy HH:mm:ss" />
+												</h:outputText></td>
+										</tr>
+										<tr>
+											<td width="150px" height="25px" class="table_left_header">
+												<h:outputText value="Редактировал" />
+											</td>
+											<td><h:outputText value="#{orgBean.updUserName}" /></td>
+										</tr>
+										<tr>
+											<td width="150px" height="25px" class="table_left_header">
+												<h:outputText value="Дата редактирования" />
+											</td>
+											<td><h:outputText value="#{orgBean.modified}">
+													<s:convertDateTime pattern="dd.MM.yy HH:mm:ss" />
+												</h:outputText></td>
+										</tr>
+									</table>
+								</h:form>
+							</c:if>
+						</div> <!--/s:div-->
+					</td>
+					<td width="90px" valign="top">
+						<!--rich:panel style="margin:5px 5px 0 0;">
+     <f:facet name="header">
+       Действия:
+      </f:facet>
+     <a4j:form>
+      <a4j:commandButton style="width:60px;" value="Создать"
+       reRender="outCBmpCrt" ajaxSingle="true"
+       oncomplete="#{rich:component('CBmpCrt')}.show();"
+       rendered="#{authenticator.accessPerm('002','2')}"
+       styleClass="but_class">
+          <f:param name="onCreate" value="1"/>
+      </a4j:commandButton>
+     
+     <s:div rendered="#{param['idUsr']!=null}">
+       <a4j:commandButton style="margin-top:5px;width:60px;"
+         ajaxSingle="true" reRender="outCBmpUpd"
+         value="Изменить" action="#{usrManager.forView}"
+         oncomplete="#{rich:component('CBmpUpd')}.show();"
+         rendered="#{authenticator.accessPerm('002','3')}"
+         styleClass="but_class">
+         <f:param name="onUpdate" value="1"/>
+         <f:param name="idUsr" value="#{param['idUsr']}"/>
+       </a4j:commandButton>
+       
+       <a4j:commandButton 
+         reRender="outCBmpDel"
+         value="Удалить"  style="margin-top:5px;width:60px;"
+         action="#{usrManager.forView}"
+         oncomplete="#{rich:component('CBmpDel')}.show();"
+         rendered="#{authenticator.accessPerm('002','4')}"
+         styleClass="but_class">
+         <f:param name="onDelete" value="1"/>
+         <f:param name="idUsr" value="#{param['idUsr']}"/>
+       </a4j:commandButton>
+    
+     </s:div>
+    </a4j:form>
+   </rich:panel-->
+					</td>
+				</tr>
+			</table>
+
+		</a4j:outputPanel>
+
+	</div>
+
+	<div class="ui-widget-footer" style="background: #E6E6E6;">
+		<a4j:outputPanel id="outCBmpCrt">
+			<rich:modalPanel id="CBmpCrt" rendered="#{param['onCreate']!=null}"
+				width="450" autosized="true">
+				<f:facet name="header">
+					<h:panelGroup>
+						<h:outputText value="Организация"></h:outputText>
+					</h:panelGroup>
+				</f:facet>
+				<f:facet name="controls">
+					<h:panelGroup>
+						<h:graphicImage onclick="#{rich:component('CBmpCrt')}.hide();"
+							value="/img/icons/close.gif" />
+					</h:panelGroup>
+				</f:facet>
+				<h:form id="CBformCrt">
+					<table style="width: 100%;">
+						<tr>
+							<td width="100px" height="25px"><h:outputText
+									value="Полное наименование" /></td>
+							<td><h:inputTextarea value="#{orgBeanCrt.fullName}"
+									id="fname" cols="51" rows="3" /></td>
+						</tr>
+						<tr>
+							<td width="100px" height="25px"><h:outputText
+									value="Краткое наименование" /></td>
+							<td><h:inputText value="#{orgBeanCrt.shortName}" id="sname"
+									maxlength="250" size="55" /></td>
+						</tr>
+						<tr>
+							<td width="100px" height="25px"><h:outputText
+									value="ФИО руководителя" /></td>
+							<td><h:inputText value="#{orgBeanCrt.contactEmployeeFio}"
+									id="fio" maxlength="250" size="55" /></td>
+						</tr>
+						<tr>
+							<td width="100px" height="25px"><h:outputText
+									value="Должность" /></td>
+							<td><h:inputText
+									value="#{orgBeanCrt.contactEmployeePosition}" id="posit"
+									maxlength="250" size="55" /></td>
+						</tr>
+						<tr>
+							<td width="100px" height="25px"><h:outputText
+									value="Телефон" /></td>
+							<td><h:inputText value="#{orgBeanCrt.contactEmployeePhone}"
+									id="tel" maxlength="100" size="55" /></td>
+						</tr>
+						<tr>
+							<td width="100px" height="25px"><h:outputText
+									value="Тип организации" /></td>
+							<td><h:selectOneMenu value="#{orgBeanCrt.acLegalEntityType}"
+									id="typeorg" style="width:230px;">
+									<f:selectItem itemLabel="-------" itemValue="-1" />
+									<s:selectItems value="#{orgManager.listLET}" var="n"
+										label="#{n.name}" itemValue="#{n.id}" />
+								</h:selectOneMenu></td>
+						</tr>
+						<tr>
+							<td width="100px" height="25px"><h:outputText
+									value="Вид организации" /></td>
+							<td><h:selectOneMenu value="#{orgBeanCrt.isExternal}"
+									id="modeorg" style="width:230px;">
+									<f:selectItem itemLabel="-------" itemValue="-1" />
+									<f:selectItem itemLabel="Оператор системы" itemValue="0" />
+									<f:selectItem itemLabel="Внешняя организация" itemValue="1" />
+								</h:selectOneMenu></td>
+						</tr>
+						<tr>
+							<td colspan="2" align="center" height="35px"><a4j:commandButton
+									value="Отмена"
+									onclick="#{rich:component('CBmpCrt')}.hide();return false;"
+									styleClass="but_class" /> <a4j:commandButton id="cbCrt"
+									value="Сохранить" action="#{orgManager.addOrg}"
+									reRender="outCenterCenter, outCenterCenterFooter"
+									oncomplete="#{rich:component('CBmpCrt')}.hide();"
+									onclick="if(check('CBformCrt')){return false;}"
+									styleClass="but_class">
+									<f:param name="onCreate" value="1" />
+									<f:param name="remoteAudit" value="CrtFact" />
+									<f:param
+										name="#{param['sessionId']!=null ? 'sessionId' : 'xxx1'}"
+										value="#{param['sessionId']}" />
+								</a4j:commandButton></td>
+						</tr>
+					</table>
+				</h:form>
+			</rich:modalPanel>
+		</a4j:outputPanel>
+
+		<a4j:outputPanel id="outCBmpUpd">
+			<rich:modalPanel id="CBmpUpd" rendered="#{param['onUpdate']!=null}"
+				width="450" autosized="true">
+				<f:facet name="header">
+					<h:panelGroup>
+						<h:outputText value="Организация"></h:outputText>
+					</h:panelGroup>
+				</f:facet>
+				<f:facet name="controls">
+					<h:panelGroup>
+						<h:graphicImage onclick="#{rich:component('CBmpUpd')}.hide();"
+							value="/img/icons/close.gif" />
+					</h:panelGroup>
+				</f:facet>
+				<h:form id="CBformUpd">
+					<!--h:inputHidden value="#{orgBean.idOrg}"/-->
+					<table style="width: 100%;">
+						<tr>
+							<td width="100px" height="25px"><h:outputText
+									value="Полное наименование" /></td>
+							<td><h:inputTextarea value="#{orgBean.fullName}" id="fname"
+									cols="51" rows="3" /></td>
+						</tr>
+						<tr>
+							<td width="100px" height="25px"><h:outputText
+									value="Краткое наименование" /></td>
+							<td><h:inputText value="#{orgBean.shortName}" id="sname"
+									maxlength="250" size="55" /></td>
+						</tr>
+						<tr>
+							<td width="100px" height="25px"><h:outputText
+									value="ФИО руководителя" /></td>
+							<td><h:inputText value="#{orgBean.contactEmployeeFio}"
+									id="fio" maxlength="250" size="55" /></td>
+						</tr>
+						<tr>
+							<td width="100px" height="25px"><h:outputText
+									value="Должность" /></td>
+							<td><h:inputText value="#{orgBean.contactEmployeePosition}"
+									id="posit" maxlength="250" size="55" /></td>
+						</tr>
+						<tr>
+							<td width="100px" height="25px"><h:outputText
+									value="Телефон" /></td>
+							<td><h:inputText value="#{orgBean.contactEmployeePhone}"
+									id="tel" maxlength="100" size="55" /></td>
+						</tr>
+						<tr>
+							<td width="100px" height="25px"><h:outputText
+									value="Тип организации" /></td>
+							<td><h:selectOneMenu value="#{orgBean.acLegalEntityType}"
+									id="typeorg" style="width:230px;">
+									<f:selectItem itemLabel="-------" itemValue="-1" />
+									<s:selectItems value="#{orgManager.listLET}" var="n"
+										label="#{n.name}" itemValue="#{n.id}" />
+								</h:selectOneMenu></td>
+						</tr>
+						<tr>
+							<td width="100px" height="25px"><h:outputText
+									value="Вид организации" /></td>
+							<td><h:selectOneMenu value="#{orgBean.isExternal}"
+									id="modeorg" style="width:230px;">
+									<f:selectItem itemLabel="-------" itemValue="-1" />
+									<f:selectItem itemLabel="Оператор системы" itemValue="0" />
+									<f:selectItem itemLabel="Внешняя организация" itemValue="1" />
+								</h:selectOneMenu></td>
+						</tr>
+						<tr>
+							<td colspan="2" align="center" height="35px"><a4j:commandButton
+									value="Отмена"
+									onclick="#{rich:component('CBmpUpd')}.hide();return false;"
+									styleClass="but_class" /> <a4j:commandButton value="Сохранить"
+									action="#{orgManager.updOrg}"
+									reRender="outCenterCenter, outCenterBottom"
+									oncomplete="#{rich:component('CBmpUpd')}.hide();"
+									onclick="if(check('CBformUpd')){return false;}"
+									styleClass="but_class">
+									<f:param name="onUpdate" value="1" />
+									<f:param name="remoteAudit" value="UpdFact" />
+									<f:param name="sessionId" value="#{param['sessionId']}" />
+									<f:param name="saveEditFlag" value="1" />
+								</a4j:commandButton></td>
+						</tr>
+					</table>
+				</h:form>
+			</rich:modalPanel>
+		</a4j:outputPanel>
+
+		<a4j:outputPanel id="outCBmpDel">
+			<rich:modalPanel id="CBmpDel" rendered="#{param['onDelete']!=null}"
+				width="300" autosized="true">
+				<f:facet name="header">
+					<h:panelGroup>
+						<h:outputText value="Организация" />
+					</h:panelGroup>
+				</f:facet>
+				<f:facet name="controls">
+					<h:panelGroup>
+						<h:graphicImage onclick="#{rich:component('CBmpDel')}.hide();"
+							value="/img/icons/close.gif" />
+					</h:panelGroup>
+				</f:facet>
+				<h:form>
+					<h:inputHidden value="#{orgBean.idOrg}" />
+
+					<h:outputText style="color:red;display:block;margin-bottom:7px;"
+						value="#{orgManager.dellMessage}" />
+
+					<h:outputText style="display:block;margin-bottom:7px;"
+						value="Удалить #{orgBean.fullName}?" />
+
+					<div style="white-space: nowrap; text-align: center;">
+						<a4j:commandButton value="Отмена"
+							onclick="#{rich:component('CBmpDel')}.hide();return false;"
+							styleClass="but_class" />
+						<a4j:commandButton value="Удалить" action="#{orgManager.delOrg}"
+							reRender="outCenterCenter, outCenterCenterFooter, outCenterBottom, outCenterCenterHeader"
+							oncomplete="#{rich:component('CBmpDel')}.hide();"
+							styleClass="but_class">
+							<f:param name="onDelete" value="1" />
+							<f:param name="remoteAudit" value="DelFact" />
+						</a4j:commandButton>
+					</div>
+				</h:form>
+			</rich:modalPanel>
+		</a4j:outputPanel>
+	</div>
+
+	<script>
+//<![CDATA[
+function check(tform){
+ var msg="";
+ if (document.getElementById(tform+":fname").value==""){
+	  msg+="Нет Полного наименования !\n";
+  }else{
+	 if(document.getElementById(tform+":fname").value.length>255){
+		    msg+="Превышена длина поля Полное наименование!\n";
+	 } 
+   }
+ if (document.getElementById(tform+":sname").value==""){
+	  msg+="Нет Краткого наименования !\n";
+ }
+ if (document.getElementById(tform+":fio").value==""){
+	  msg+="Нет ФИО !\n";
+ }
+ if (document.getElementById(tform+":posit").value==""){
+	  msg+="Нет Должности !\n";
+ }
+ if (document.getElementById(tform+":tel").value==""){
+	  msg+="Нет Телефона !\n";
+  }
+ if (document.getElementById(tform+":typeorg").value=="-1"){
+     msg+="Не выбран Тип организации!\n";
+ }
+ if (document.getElementById(tform+":modeorg").value=="-1"){
+     msg+="Не выбран Вид организации!\n";
+ }
+ if(msg!=""){
+  alert(msg);
+  return true;
+ }else{
+  return false;
+}
+}
+/*
+function setHDiv(){
+	jQuery('#CBmpCrtHDiv').height(Math.floor(jQuery(window).height()/2));
+}
+<rich:modalPanel id="CBmpCrt" rendered="#{param['onCreate']!=null}"
+    width="450" minHeight="100" autosized="true" onbeforeshow="setHDiv();">
+  <div id="CBmpCrtHDiv" style="width:100%;height:200px;overflow:auto;">  */ 
+//]]>
+</script>
+</ui:composition>

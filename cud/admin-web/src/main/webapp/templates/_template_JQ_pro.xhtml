@@ -1,0 +1,280 @@
+<?xml version='1.0' encoding='windows-1251' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" 
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich">
+<!--f:view-->
+<head>
+<title>Подсистема Управления Привилегиями!</title>
+
+<link rel="stylesheet" type="text/css"
+	href="#{request.contextPath}/jscss/jquery/jquery.ui.all.css" />
+<link rel="stylesheet" type="text/css"
+	href="#{request.contextPath}/stylesheet/theme.css" />
+
+<script type="text/javascript"
+	src="#{request.contextPath}/jscss/jquery/1.8.7/jquery-latest.js" />
+<script type="text/javascript"
+	src="#{request.contextPath}/jscss/jquery/1.8.7/jquery-ui-latest.js" />
+<script type="text/javascript"
+	src="#{request.contextPath}/jscss/jquery/1.8.7/jquery.layout-latest.js" />
+<script type="text/javascript"
+	src="#{request.contextPath}/jscss/jquery/1.8.7/jquery.layout.resizePaneAccordions-1.0.js" />
+
+
+<!--link rel="stylesheet" type="text/css" href="/infos/jscss/YUI.css"/-->
+<style>
+</style>
+<SCRIPT type="text/javascript">
+	//<![CDATA[
+/*
+var acc_id='acc1'; 
+    var ua = jQuery.browser;      
+  jQuery(window).resize(function() {
+	  change_acc_height();
+	//  document.getElementById("lU_f1:acc_g").style.height=YAHOO.util.Dom.getViewportHeight()-parseInt(135)+'px';
+ });
+  function change_acc(pacc){
+	  acc_id=pacc;
+	  change_acc_height();
+	 }
+  function change_acc_height(){
+	  if(ua.mozilla){
+		   document.getElementById('lU_f1:'+acc_id+':content').style.height=jQuery(window).height()-parseInt(177);
+	  }else{//ua.msie
+	       document.getElementById('lU_f1:'+acc_id+':content').style.height=jQuery(window).height()-parseInt(187);
+	  }
+	 }*/
+	 jQuery.noConflict();
+
+	 
+	var outerLayout, middleLayout;
+	 jQuery(document).ready(
+			 function () {
+	outerLayout = jQuery('body').layout(/*{ applyDefaultStyles: true}*/
+		layoutSettings_Outer)
+	
+	middleLayout = jQuery('div.ui-layout-center').layout({ 
+		defaults: {
+			applyDefaultStyles: true
+		 }
+	 ,center:{
+		 paneSelector:	".middle-center" 
+	 }
+	 ,south:{
+		 paneSelector:	".middle-south"
+	   , size: 270
+	  /* , showOverflowOnHover: true*/	 
+		 }
+ 	});
+	 
+	jQuery("#accordion1").accordion({ fillSpace:	true,
+		                              active: '#{navigManager.activeSection}',
+		                              icons: false,
+		                              event: ''  });
+	jQuery("#yearId").text(new Date().getFullYear());
+	});
+var layoutSettings_Outer = {
+		defaults: {
+			applyDefaultStyles: true
+		   ,   fxName:               "slide"
+		   ,  fxSpeed:               "slow"
+		    ,  initClosed:            false
+		   }
+		,  north: {
+			showOverflowOnHover: true
+		   , resizable:		false
+		   ,  spacing_open:	0
+		   ,  size:			40
+		   ,  fxName:                "none"
+		   ,  spacing_closed:        8
+		   ,  togglerLength_closed:  "100%"
+		   }
+		,  south: {
+			resizable:		false
+			,  spacing_open:	0
+			,  size:			25
+		    ,  fxName:                "none"
+		   ,  spacing_closed:        8
+		   ,  togglerLength_closed:  "100%"
+		   }
+		,  west: {
+		/*	onopen_start: function () { change_acc_height();}*/
+		    spacing_open:	4
+		,	onresize:		jQuery.layout.callbacks.resizePaneAccordions
+			}
+
+	/*	applyDefaultStyles: true
+		, name: "outerLayout" // NO FUNCTIONAL USE, but could be used by custom code to 'identify' a layout
+		// options.defaults apply to ALL PANES - but overridden by pane-specific settings
+
+		//	enable showOverflow on west-pane so CSS popups will overlap north pane
+		,	west__showOverflowOnHover: true
+
+		//	reference only - these options are NOT required because 'true' is the default
+		,	closable:				true	// pane can open & close
+		,	resizable:				true	// when open, pane can be resized 
+		,	slidable:				true	// when closed, pane can 'slide' open over other panes - closes on mouse-out
+
+		//	some resizing/toggling settings
+		,   north__resizable:		false
+		,   north__spacing_open:	0
+		,   north__size:			50
+		,	north__slidable:		false	// OVERRIDE the pane-default of 'slidable=true'
+		,	north__togglerLength_closed: '100%'	// toggle-button is full-width of resizer-bar
+		,	north__spacing_closed:	20		// big resizer-bar when open (zero height)
+
+
+		,	south__resizable:		false	// OVERRIDE the pane-default of 'resizable=true'
+		,	south__spacing_open:	0		// no resizer-bar when open (zero height)
+		,	south__spacing_closed:	20		// big resizer-bar when open (zero height)
+		//	some pane-size settings
+		,	west__minSize:			100
+		,	east__size:				300
+		,	east__minSize:			200
+		,	east__maxSize:			Math.floor(screen.availWidth / 2) // 1/2 screen width
+		,	center__minWidth:		100
+		
+		*/
+		/*	,	defaults: {
+			size:					"auto"
+		,	minSize:				50
+		//,	paneClass:				"pane" 		 default = 'ui-layout-pane'
+		//,	resizerClass:			"resizer"	 default = 'ui-layout-resizer'
+		//,	togglerClass:			"toggler"	 default = 'ui-layout-toggler'
+		//,	buttonClass:			"button"	 default = 'ui-layout-button'
+		//,	contentSelector:		".content"	 inner div to auto-size so only it scrolls, not the entire pane!
+		//,	contentIgnoreSelector:	"span"		 'paneSelector' for content to 'ignore' when measuring room for content
+		,	togglerLength_open:		35			// WIDTH of toggler on north/south edges - HEIGHT on east/west edges
+		,	togglerLength_closed:	35			// "100%" OR -1 = full height
+		,	hideTogglerOnSlide:		true		// hide the toggler when pane is 'slid open'
+		,	togglerTip_open:		"Close This Pane"
+		,	togglerTip_closed:		"Open This Pane"
+		,	resizerTip:				"Resize This Pane"
+		//	effect defaults - overridden on some panes
+		,	fxName:					"slide"		// none, slide, drop, scale
+		,	fxSpeed_open:			750
+		,	fxSpeed_close:			1500
+		,	fxSettings_open:		{ easing: "easeInQuint" }
+		,	fxSettings_close:		{ easing: "easeOutQuint" }
+
+		}
+	,	north: {
+			spacing_open:			1			// cosmetic spacing
+		,	togglerLength_open:		0			// HIDE the toggler button
+		,	togglerLength_closed:	-1			// "100%" OR -1 = full width of pane
+		,	resizable: 				false
+		,	slidable:				false
+		//	override default effect
+		,	fxName:					"none"
+		}
+	,	south: {
+			maxSize:				200
+		,	spacing_closed:			0			// HIDE resizer & toggler when 'closed'
+		,	slidable:				false		// REFERENCE - cannot slide if spacing_closed = 0
+		,	initClosed:				true
+		//	CALLBACK TESTING...
+	//	,	onhide_start:			function () { return confirm("START South pane hide \n\n onhide_start callback \n\n Allow pane to hide?"); }
+	//	,	onhide_end:				function () { alert("END South pane hide \n\n onhide_end callback"); }
+	//	,	onshow_start:			function () { return confirm("START South pane show \n\n onshow_start callback \n\n Allow pane to show?"); }
+	//	,	onshow_end:				function () { alert("END South pane show \n\n onshow_end callback"); }
+	//	,	onopen_start:			function () { return confirm("START South pane open \n\n onopen_start callback \n\n Allow pane to open?"); }
+	//	,	onopen_end:				function () { alert("END South pane open \n\n onopen_end callback"); }
+	//	,	onclose_start:			function () { return confirm("START South pane close \n\n onclose_start callback \n\n Allow pane to close?"); }
+	//	,	onclose_end:			function () { alert("END South pane close \n\n onclose_end callback"); }
+		//,	onresize_start:			function () { return confirm("START South pane resize \n\n onresize_start callback \n\n Allow pane to be resized?)"); }
+	//	,	onresize_end:			function () { alert("END South pane resize \n\n onresize_end callback \n\n NOTE: onresize_start event was skipped."); }
+		}
+	,	west: {
+			size:					250
+		,	spacing_closed:			21			// wider space when closed
+		,	togglerLength_closed:	21			// make toggler 'square' - 21x21
+		,	togglerAlign_closed:	"top"		// align to top of resizer
+		,	togglerLength_open:		0			// NONE - using custom togglers INSIDE west-pane
+		,	togglerTip_open:		"Close West Pane"
+		,	togglerTip_closed:		"Open West Pane"
+		,	resizerTip_open:		"Resize West Pane"
+		,	slideTrigger_open:		"click" 	// default
+		,	initClosed:				true
+		//	add 'bounce' option to default 'slide' effect
+		,	fxSettings_open:		{ easing: "easeOutBounce" }
+		}
+	,	east: {
+			size:					250
+		,	spacing_closed:			21			// wider space when closed
+		,	togglerLength_closed:	21			// make toggler 'square' - 21x21
+		,	togglerAlign_closed:	"top"		// align to top of resizer
+		,	togglerLength_open:		0 			// NONE - using custom togglers INSIDE east-pane
+		,	togglerTip_open:		"Close East Pane"
+		,	togglerTip_closed:		"Open East Pane"
+		,	resizerTip_open:		"Resize East Pane"
+		,	slideTrigger_open:		"mouseover"
+		,	initClosed:				true
+		//	override default effect, speed, and settings
+		,	fxName:					"drop"
+		,	fxSpeed:				"normal"
+		,	fxSettings:				{ easing: "" } // nullify default easing
+		}
+	,	center: {
+		//	paneSelector:			"#mainContent" 			// sample: use an ID to select pane instead of a class
+		,	onresize:				"innerLayout.resizeAll"	// resize INNER LAYOUT when center pane resizes
+		,	minWidth:				200
+		,	minHeight:				200
+		}*/
+	};
+
+
+	  //]]>
+</SCRIPT>
+</head>
+<body>
+	<div class="ui-layout-center">
+
+		<div class="middle-center" style="padding: 0 !important;">
+			<ui:insert name="centerCenterUnit">
+                centerCenterUnit
+        </ui:insert>
+		</div>
+
+		<div class="middle-south">
+			<ui:insert name="centerBottomUnit">
+                ===
+       </ui:insert>
+		</div>
+
+	</div>
+	<div class="ui-layout-north">
+		<ui:insert name="topUnit">
+                topUnit
+        </ui:insert>
+	</div>
+
+	<div class="ui-layout-south">
+		<ui:insert name="bottomUnit">
+                bottomUnit
+        </ui:insert>
+	</div>
+
+	<div class="ui-layout-west">
+		<ui:insert name="leftUnit">
+                leftUnit
+       </ui:insert>
+	</div>
+</body>
+<a4j:status onstart="#{rich:component('wait')}.show()"
+	onstop="#{rich:component('wait')}.hide()" />
+<rich:modalPanel id="wait" autosized="true" width="170" height="80"
+	moveable="false" resizeable="false">
+	<f:facet name="header">
+		<h:outputText value="Сообщение" />
+	</f:facet>
+	<h:outputText value="Выполняется запрос..." />
+	<br />
+	<h:outputText value="Пожалуйста, подождите..." />
+</rich:modalPanel>
+<!--/f:view-->
+</html>

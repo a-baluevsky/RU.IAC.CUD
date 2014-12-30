@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:comm="http://ws.iac.spb.ru/Common" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://ws.iac.spb.ru/Common">
+	
+<xs:complexType name="Response1">
+		
+<xs:sequence>
+			
+<xs:element name="RegNumber" type="xs:int">
+				
+<xs:annotation>
+					
+<xs:documentation>Регистрационный номер классификатора</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			
+<xs:element name="Fullname" type="xs:string">
+				
+<xs:annotation>
+					
+<xs:documentation>Полное наименование классификатора</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			
+<xs:element name="CurrentVersionNumber" type="xs:int">
+				
+<xs:annotation>
+					
+<xs:documentation>Номер актуальной версии (изменения)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			
+<xs:element name="CurDate" type="xs:dateTime" minOccurs="0">
+				
+<xs:annotation>
+					
+<xs:documentation>Дата актуализации</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+<xs:complexType name="Response2">
+		
+<xs:sequence>
+			
+<xs:element name="ID" type="xs:int">
+				
+<xs:annotation>
+					
+<xs:documentation>ID записи</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			
+<xs:element name="Facet" type="xs:string" minOccurs="0">
+				
+<xs:annotation>
+					
+<xs:documentation>Фасет (только для фасетных классификаторов)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			
+<xs:element name="Code" type="xs:string">
+				
+<xs:annotation>
+					
+<xs:documentation>Код обьекта</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			
+<xs:element name="Fullname" type="xs:string">
+				
+<xs:annotation>
+					
+<xs:documentation>Полное наименование</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			
+<xs:element name="ActualDate" type="xs:dateTime" minOccurs="0">
+				
+<xs:annotation>
+					
+<xs:documentation>Дата актуализации</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			
+<xs:element name="DeactualDate" type="xs:dateTime" minOccurs="0">
+				
+<xs:annotation>
+					
+<xs:documentation>Дата деактуализации</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			
+<xs:element name="Status" type="xs:string" minOccurs="0">
+				
+<xs:annotation>
+					
+<xs:documentation>Статус</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			
+<xs:element name="ActualDoc" type="xs:int" minOccurs="0">
+				
+<xs:annotation>
+					
+<xs:documentation>Документ актуализации (номер изменения)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			
+<xs:element name="DeactualDoc" type="xs:int" minOccurs="0">
+				
+<xs:annotation>
+					
+<xs:documentation>Документ деактуализации</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+<xs:complexType name="Response4">
+		
+<xs:sequence>
+			
+<xs:element name="ActualDoc" type="xs:int">
+				
+<xs:annotation>
+					
+<xs:documentation>Номер изменения</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			
+<xs:element name="ZipDate" type="xs:dateTime">
+				
+<xs:annotation>
+					
+<xs:documentation>Дата загрузки</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+<xs:complexType name="MessageInfo">
+		
+<xs:sequence>
+			
+<xs:element name="FaultCode" type="xs:int"/>
+			
+<xs:element name="FaultMessage" type="xs:string"/>
+                        
+<xs:element name="StartPosition" type="xs:int" minOccurs="0"/>
+			
+<xs:element name="Diapason" type="xs:int" minOccurs="0"/>
+			
+<xs:element name="ItemsInMessage" type="xs:int" minOccurs="0"/>
+			
+<xs:element name="ItemsInResponse" type="xs:int" minOccurs="0"/>
+			
+<xs:element name="ItemStructure" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

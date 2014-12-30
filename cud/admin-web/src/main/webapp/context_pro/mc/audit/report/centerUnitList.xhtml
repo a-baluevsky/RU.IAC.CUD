@@ -1,0 +1,213 @@
+<?xml version='1.0' encoding='windows-1251' ?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:s="http://jboss.com/products/seam/taglib"
+	xmlns:c="http://java.sun.com/jstl/core">
+
+
+	<h3 class="ui-widget-header">Отчёты</h3>
+
+	<div class="ui-widget-header" style="background: #E6E6E6;">
+		<a4j:outputPanel id="outCenterCenterHeader">
+			<table>
+				<tr>
+					<td>
+						<!--a4j:commandButton style="width:100px;"
+            value="Архивирование" 
+            onclick="#{rich:component('CTClearDate')}.show();return false; " 
+            styleClass="but_class"/-->
+
+					</td>
+					<td height="25px;"><h:outputText value="&amp;nbsp;"
+							escape="false" /></td>
+				</tr>
+			</table>
+		</a4j:outputPanel>
+	</div>
+
+	<div class="ui-layout-content">
+		<a4j:outputPanel id="outCenterCenter">
+
+			<h:form>
+
+				<table style="width: 99%; margin: 10px;" border="0">
+
+					<a4j:repeat value="#{reportsManager.reportsList}" var="it"
+						rowKeyVar="rkv">
+
+						<tr>
+							<td width="10px;" style="padding-bottom: 5px; padding-top: 10px;"
+								valign="top"><h:outputText value="#{rkv+1}. " /></td>
+							<td colspan="2" style="padding-bottom: 5px; padding-top: 10px;"
+								valign="top"><h:outputText value="#{it.reportName}" /></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td width="150px;"><a4j:commandButton
+									style="width:90px;margin-left:10px;" value="Выгрузить"
+									reRender="outMPReport"
+									oncomplete="#{rich:component('CBReport')}.show();"
+									styleClass="but_class" rendered="#{it.dateRequired==1}">
+									<f:param name="sessionId" value="#{param['sessionId']}" />
+									<f:param name="remoteAudit" value="reportCreateOpenFact" />
+									<f:param name="reportId" value="#{it.idSrv}" />
+									<f:param name="onCreate" value="1" />
+								</a4j:commandButton> <a4j:commandButton style="width:90px;" ajaxSingle="true"
+									value="Сформировать" action="#{reportsManager.create_report()}"
+									styleClass="but_class"
+									oncomplete="if(#{reportsManager.runReportFlag == 0}){alert('Формирование отчёта уже выполняется!')}
+                               else if (#{reportsManager.runReportFlag == -1}){alert('Произошла ошибка!')}
+                               else{alert('Формирование отчёта запущено!')}"
+									rendered="#{param['remoteAudit']=='reportCreateFact' or it.dateRequired==0}">
+									<f:param name="sessionId" value="#{param['sessionId']}" />
+									<f:param name="remoteAudit" value="reportCreateFact" />
+									<f:param name="reportId" value="#{it.idSrv}" />
+								</a4j:commandButton></td>
+							<td>
+								<!--s:link action="#{reportsManager.download_report('xls')}"
+                target="#" id="link_pdf" style="color:#BC2D31;white-space: nowrap;">
+              <h:outputText value="Скачать" />          
+	          <h:graphicImage url="/img/icons/icon_download.gif" styleClass="img-in-link"/> 
+	          
+	             <f:param name="sessionId" value="#{param['sessionId']}"/>
+                  <f:param name="remoteAudit" value="reportDownloadFact"/>
+                  <f:param name="reportCode" value="#{it.reportCode}"/>
+	       </s:link-->
+
+							</td>
+						</tr>
+
+					</a4j:repeat>
+
+				</table>
+
+			</h:form>
+
+		</a4j:outputPanel>
+	</div>
+
+	<a4j:outputPanel id="outMPReport">
+
+		<rich:modalPanel id="CBReport" trimOverlayedElements="false"
+			width="250" height="150" rendered="#{param['onCreate']!=null}">
+			<f:facet name="header">
+				<h:panelGroup>
+					<h:outputText value="Отчёт" />
+				</h:panelGroup>
+			</f:facet>
+			<f:facet name="controls">
+				<h:panelGroup>
+					<h:graphicImage onclick="#{rich:component('CBReport')}.hide();"
+						value="/img/icons/close.gif" />
+				</h:panelGroup>
+			</f:facet>
+			<h:form id="CBfReport">
+				<table>
+					<tr>
+						<td colspan="3" height="25px"><h:outputText
+								value="Период отчёта:" /></td>
+					</tr>
+					<tr>
+						<td width="20px" />
+						<td width="20px" height="25px"><h:outputText value="С:" /></td>
+						<td><rich:calendar locale="RU" datePattern="dd.MM.yyyy"
+								todayControlMode="hidden" id="report_date1"
+								value="#{reportsManager.reportDate1}" /></td>
+					</tr>
+					<tr>
+						<td width="20px" />
+						<td width="20px" height="25px"><h:outputText value="По:" /></td>
+						<td><rich:calendar locale="RU" datePattern="dd.MM.yyyy"
+								todayControlMode="hidden" id="report_date2"
+								value="#{reportsManager.reportDate2}" /></td>
+					</tr>
+				</table>
+				<div
+					style="white-space: nowrap; text-align: center; margin-top: 5px;">
+					<s:button
+						onclick="#{rich:component('CBReport')}.hide();return false;"
+						value="Отмена" />
+
+					<!--s:link view="/context_pro/mc/audit/sys/reportWord.xhtml"
+                action="#{aSysManager.forViewWord('')}"
+                target="#" id="link_word" onmouseup="link_option(this);"
+                onclick="if(check_report_date()){return false;}else{#{rich:component('CBReport')}.hide();}"
+                styleClass="but_class" >
+              <h:outputText value=" Отчёт" escape="false"/> 
+              <f:param name="remoteAudit" value="protBeanWord"/>
+              <f:param name="modelType" value="#{modelType}"/>
+           </s:link-->
+					<!--a4j:commandButton style="width:90px;"
+                   value="Сформировать" 
+                   action="#{reportsManager.create_report()}"
+                   styleClass="but_class" 
+                   oncomplete="if(#{reportsManager.runReportFlag == 0}){alert('Формирование отчёта уже выполняется!')}
+                               else if (#{reportsManager.runReportFlag == -1}){alert('Произошла ошибка!')}
+                               else{alert('Формирование отчёта запущено!')};
+                               #{rich:component('CBReport')}.hide();">
+                    <f:param name="sessionId" value="#{param['sessionId']}"/>
+                    <f:param name="remoteAudit" value="reportCreateFact"/>
+                    <f:param name="reportId" value="#{param['reportId']}"/>
+                    <f:param name="onCreate" value="1"/>
+          </a4j:commandButton-->
+
+					<a4j:commandButton value="Выгрузить"
+						action="#{reportsManager.server_report('xls')}"
+						onclick="if(check_report_date()){return false;}"
+						oncomplete="window.open('#{reportsManager.reportUrl}', '_blank');
+                       #{rich:component('CBReport')}.hide();">
+						<f:param name="sessionId" value="#{param['sessionId']}" />
+						<f:param name="remoteAudit" value="reportCreateFact" />
+						<f:param name="reportId" value="#{param['reportId']}" />
+						<f:param name="onCreate" value="1" />
+					</a4j:commandButton>
+
+
+
+					<!--s:link action="#{reportsManager.server_report('xls')}"
+              target="#" >
+               <h:outputText value="Скачать" />   
+                    <f:param name="sessionId" value="#{param['sessionId']}"/>
+                    <f:param name="remoteAudit" value="reportCreateFact"/>
+                    <f:param name="reportId" value="#{param['reportId']}"/>
+                    <f:param name="onCreate" value="1"/>
+           </s:link-->
+
+
+				</div>
+			</h:form>
+		</rich:modalPanel>
+
+	</a4j:outputPanel>
+
+	<SCRIPT type="text/javascript">
+ //<![CDATA[
+    jQuery(document).ready(
+	   function () {
+		   invokeRemoteAudit();
+	   }
+	);
+    function check_report_date(){
+  	  var msg="";
+  	  if (#{rich:component('report_date1')}.getSelectedDateString('dd.MM.yy')==""){
+  	 	  msg+="Нет даты С:!\n";
+  	  }
+      if (#{rich:component('report_date2')}.getSelectedDateString('dd.MM.yy')==""){
+  	 	  msg+="Нет даты По:!\n";
+  	  }
+
+  	  if(msg!=""){
+  	   alert(msg);
+  	   return true;
+  	  }else{
+  	   return false;
+  	 }
+  }
+    
+  //]]>
+ </SCRIPT>
+</ui:composition>

@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+
+	<context-param>
+		<param-name>SIGN_REQUIRED</param-name>
+		<param-value>TRUE</param-value>
+	</context-param>
+
+	<servlet>
+		<servlet-name>CUDSTS</servlet-name>
+		<servlet-class>ru.spb.iac.cud.sts.core.CUDSTService</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CUDSTS</servlet-name>
+		<url-pattern>/CUDSTS</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description></description>
+		<display-name>StartupServlet</display-name>
+		<servlet-name>StartupServlet</servlet-name>
+		<servlet-class>ru.spb.iac.cud.services.web.init.StartupServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>StartupServlet</servlet-name>
+		<url-pattern>/StartupServlet</url-pattern>
+	</servlet-mapping>
+
+
+	<!--http-method>GET</http-method -->
+	<!--security-constraint> <web-resource-collection> <web-resource-name>CUDSTS</web-resource-name> 
+		<url-pattern>/*</url-pattern> <http-method>POST</http-method> </web-resource-collection> 
+		<user-data-constraint> <transport-guarantee>CONFIDENTIAL</transport-guarantee> 
+		</user-data-constraint> </security-constraint -->
+
+	<!--filter>
+		<display-name>PortFilter</display-name>
+		<filter-name>PortFilter</filter-name>
+		<filter-class>ru.spb.iac.cud.sts.web.filter.PortFilter</filter-class>
+		<init-param>
+			<description></description>
+			<param-name>available_ports</param-name>
+			<param-value>8080,8443,18443</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>PortFilter</filter-name>
+		<url-pattern>*</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+	</filter-mapping-->
+
+</web-app>

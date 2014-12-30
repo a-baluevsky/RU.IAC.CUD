@@ -1,0 +1,417 @@
+<?xml version='1.0' encoding='windows-1251' ?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:s="http://jboss.com/products/seam/taglib"
+	xmlns:c="http://java.sun.com/jstl/core">
+
+	<h3 class="ui-widget-header">Подробно</h3>
+
+	<!--div class="ui-widget-header" style="background:#E6E6E6;">
+  <a4j:outputPanel id="outCenterBottomHeader">
+   <table>
+      <tr>
+       <td>
+        <s:div rendered="#{param['remoteAudit']!=null}">
+        <table style="width:500px" border="0">
+         <tr>
+         <td>
+           <s:div rendered="#{param['sessionId']!=null}">
+            
+            <h:outputText value="Искать соответсвия по : "/>
+            
+            <a4j:commandButton style="width:50px;" 
+                value="ФИО"
+                reRender="outCBmpCrt" ajaxSingle="true"
+                action="#{appUserModifyManager.forViewCrt}"
+                oncomplete="#{rich:component('CBmpCrt')}.show();"
+                rendered="#{authenticator.accessPerm('002','2')}"
+                styleClass="but_class">
+            <f:param name="onCreate" value="1"/>
+            <f:param name="remoteAudit" value="OpenCrtFact"/>
+            <f:param name="#{param['sessionId']!=null ? 'sessionId' : 'xxx1'}" value="#{param['sessionId']}"/>
+          </a4j:commandButton>
+            
+            <a4j:commandButton style="width:50px;margin-left:10px;"
+                ajaxSingle="true" reRender="outCBmpUpd"
+                value="ФИ" action="#{appUserModifyManager.forViewUpdDel}"
+                oncomplete="#{rich:component('CBmpUpd')}.show();"
+                rendered="#{authenticator.accessPerm('002','3') and 
+                (currentUser.idUser!=param['sessionId'] or currentUser.idUser==linksMap.superUserCode)
+                and (appUserModifyUserModifyew.idUser!=linksMap.superUserCode or currentUser.idUser==linksMap.superUserCode) and 
+                (appUserModifyBeanView.isSysAdmin!=1 or currentUser.idUser==linksMap.superUserCode)}"
+                styleClass="but_class">
+              <f:param name="onUpdate" value="1"/>
+              <f:param name="remoteAudit" value="OpenUpdFact"/>
+              <f:param name="sessionId" value="#{param['sessionId']}"/>
+            </a4j:commandButton>
+            
+            <a4j:commandButton style="width:50px;margin-left:10px;"
+                ajaxSingle="true" reRender="outCBmpUpdRole"
+                value="ФО" action="#{appUserModifyManager.forViewUpdDel}"
+                oncomplete="#{rich:component('CBmpUpdRole')}.show();"
+                rendered="#{authenticator.accessPerm('002','3') and 
+                (currentUser.idUser!=param['sessionId'] or currentUser.idUser==linksMap.superUserCode)
+                and (appUserModifyBeanView.idUser!=linksMap.superUserCode or currentUser.idUser==linksMap.superUserCode) and 
+                (appUserModifyBeanView.isSysAdmin!=1 or currentUser.idUser==linksMap.superUserCode)}"
+                styleClass="but_class">
+              <f:param name="onUpdateRole" value="1"/>
+              <f:param name="remoteAudit" value="OpenUpdFact"/>
+              <f:param name="sessionId" value="#{param['sessionId']}"/>
+            </a4j:commandButton>
+            
+             <a4j:commandButton style="width:50px;margin-left:10px;"
+                ajaxSingle="true" reRender="outCBmpUpdGroup"
+                value="Ф" action="#{appUserModifyManager.forViewUpdDel}"
+                oncomplete="#{rich:component('CBmpUpdGroup')}.show();"
+                rendered="#{authenticator.accessPerm('002','3') and 
+                (currentUser.idUser!=param['sessionId'] or currentUser.idUser==linksMap.superUserCode)
+                and (appUserModifyBeanView.idUser!=linksMap.superUserCode or currentUser.idUser==linksMap.superUserCode) and 
+                (appUserModifyBeanView.isSysAdmin!=1 or currentUser.idUser==linksMap.superUserCode)}"
+                styleClass="but_class">
+              <f:param name="onUpdateGroup" value="1"/>
+              <f:param name="remoteAudit" value="OpenUpdFact"/>
+              <f:param name="sessionId" value="#{param['sessionId']}"/>
+            </a4j:commandButton>
+             
+          </s:div>
+         </td> 
+       </tr>
+      </table> 
+     </s:div>
+         </td>
+        <td height="25px;">
+         <h:outputText value="&amp;nbsp;" escape="false"/>
+       </td>
+      </tr>
+     </table>
+   </a4j:outputPanel>
+</div-->
+
+
+	<div class="ui-layout-content">
+		<a4j:outputPanel id="outCenterBottom">
+
+			<table style="width: 100%;" border="0">
+				<tr>
+					<td width="90%">
+						<!--s:div style="margin:5px;" rendered="#{param['sessionId']!=null}"-->
+						<div style="margin: 5px;">
+
+							<c:if test="#{appUserCertModifyManager.evaluteForBean}">
+								<h:form>
+
+									<h:messages style="color:red" globalOnly="false" />
+
+									<table style="width: 100%; font-size: 12px;" border="0">
+										<c:forEach
+											items="#{appUserCertModifyManager.headerItemsListContext}"
+											var="header">
+
+											<tr style="">
+												<td height="25px" style="font-style: italic" colspan="2">
+													<h:outputText value="#{header.itemLabel}" />
+												</td>
+											</tr>
+											<c:forEach items="#{header.items}" var="field">
+
+												<tr style="">
+													<td width="170px" height="25px" class="table_left_header"
+														style="padding-left: 10px;"><h:outputText
+															value="#{field.itemLabel}" /></td>
+													<td><h:outputText
+															value="#{contextBeanView[field.itemField]}" /></td>
+												</tr>
+
+											</c:forEach>
+
+										</c:forEach>
+
+									</table>
+								</h:form>
+							</c:if>
+						</div> <!--/s:div-->
+					</td>
+					<td width="90px" valign="top"></td>
+				</tr>
+			</table>
+
+		</a4j:outputPanel>
+
+	</div>
+
+	<div class="ui-widget-footer" style="background: #E6E6E6;">
+
+		<a4j:outputPanel id="outCBmpCrt">
+			<rich:modalPanel id="CBmpCrt" rendered="#{param['onCreate']!=null}"
+				width="600" autosized="true">
+				<f:facet name="header">
+					<h:panelGroup>
+						<h:outputText value="Изменение пользователя"></h:outputText>
+					</h:panelGroup>
+				</f:facet>
+				<f:facet name="controls">
+					<h:panelGroup>
+						<h:graphicImage onclick="#{rich:component('CBmpCrt')}.hide();"
+							value="/img/icons/close.gif" />
+					</h:panelGroup>
+				</f:facet>
+				<h:form id="CBformCrt">
+
+					<c:if test="#{app_cert_num_exist=='1'}">
+						<div
+							style="color: red; padding: 10px; text-align: center; width: 90%;">
+							<h:outputText value="Сертификат уже используется!" />
+							<br />
+							<h:outputText value="Привязка невозможна!" />
+						</div>
+					</c:if>
+
+					<table style="width: 100%;">
+
+						<tr>
+							<td width="100px" height="25px" class="table_left_header"
+								style="padding-left: 10px;"><h:outputText value="Режим" />
+							</td>
+							<td><h:outputText value="#{contextBeanView.modeExecValue}" />
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2" height="3px"></td>
+						</tr>
+						<c:forEach
+							items="#{appUserCertModifyManager.getHeaderItemsListContextCREATE('h1').get(0).items}"
+							var="field_crt">
+							<tr style="">
+								<td width="170px" height="25px" class="table_left_header"
+									style="padding-left: 10px;"><h:outputText
+										value="#{field_crt.itemLabel}" /></td>
+								<td><h:outputText
+										value="#{contextBeanView[field_crt.itemField]}" /></td>
+							</tr>
+						</c:forEach>
+
+
+						<tr>
+							<td colspan="2" align="center" height="35px"><a4j:commandButton
+									value="Отмена"
+									onclick="#{rich:component('CBmpCrt')}.hide();return false;"
+									styleClass="but_class" /> <c:if
+									test="#{app_cert_num_exist!='1'}">
+
+									<a4j:commandButton value="Сохранить"
+										action="#{appUserCertModifyManager.createArm}"
+										reRender="outCenterCenterHeader, outCenterCenter, outCenterBottom"
+										oncomplete="#{rich:component('CBmpCrt')}.hide();" onclick=""
+										styleClass="but_class">
+										<f:param name="onCreate" value="1" />
+										<f:param name="remoteAudit" value="UpdFact" />
+										<f:param name="sessionId" value="#{param['sessionId']}" />
+									</a4j:commandButton>
+
+								</c:if></td>
+						</tr>
+					</table>
+				</h:form>
+			</rich:modalPanel>
+		</a4j:outputPanel>
+
+		<a4j:outputPanel id="outCBmpUpd">
+			<rich:modalPanel id="CBmpUpd" rendered="#{param['onUpdate']!=null}"
+				width="400" autosized="true"
+				onbeforeshow="/*setHDiv('CBmpUpdHDiv');*/">
+				<f:facet name="header">
+					<h:panelGroup>
+						<h:outputText value="Отклонение" />
+					</h:panelGroup>
+				</f:facet>
+				<f:facet name="controls">
+					<h:panelGroup>
+						<h:graphicImage onclick="#{rich:component('CBmpUpd')}.hide();"
+							value="/img/icons/close.gif" />
+					</h:panelGroup>
+				</f:facet>
+				<!--div id="CBmpUpdHDiv" style="width:100%;height:500px;overflow:auto;"-->
+				<h:form id="CBformUpd">
+					<table style="width: 99%">
+						<tr height="25px">
+							<td colspan="2"><h:outputText value="Отклонить заявку ?" />
+							</td>
+						</tr>
+						<tr height="15px">
+							<td width="80px"><h:outputText value="Номер" /></td>
+							<td><h:outputText value="#{appUserCertModifyBean.baseId}" />
+							</td>
+						</tr>
+						<tr height="15px">
+							<td><h:outputText value="Дата" /></td>
+							<td><h:outputText value="#{appUserCertModifyBean.created}" />
+							</td>
+						</tr>
+						<tr>
+							<td><h:outputText value="Причина :" /></td>
+							<td><h:inputTextarea
+									value="#{appUserCertModifyManager.rejectReason}"
+									id="reject_reason" cols="41" rows="3" /></td>
+						</tr>
+						<tr height="35px">
+							<td colspan="2" align="center"><a4j:commandButton
+									value="Отмена"
+									onclick="#{rich:component('CBmpUpd')}.hide();return false;"
+									styleClass="but_class" /> <a4j:commandButton value="Отклонить"
+									action="#{appUserCertModifyManager.reject}"
+									reRender="outCenterCenterHeader, outCenterCenter, outCenterBottom"
+									oncomplete="#{rich:component('CBmpUpd')}.hide();"
+									onclick="if(check_reject('CBformUpd')){return false;}"
+									styleClass="but_class">
+									<f:param name="onUpdate" value="1" />
+									<f:param name="remoteAudit" value="UpdFact" />
+									<f:param name="sessionId" value="#{param['sessionId']}" />
+								</a4j:commandButton></td>
+						</tr>
+					</table>
+
+				</h:form>
+				<!--/div-->
+			</rich:modalPanel>
+		</a4j:outputPanel>
+
+		<a4j:outputPanel id="outCBmpComment">
+			<rich:modalPanel id="CBmpComment"
+				rendered="#{param['onComment']!=null}" width="400" autosized="true"
+				onbeforeshow="/*setHDiv('CBmpUpdHDiv');*/">
+				<f:facet name="header">
+					<h:panelGroup>
+						<h:outputText value="Комментарий" />
+					</h:panelGroup>
+				</f:facet>
+				<f:facet name="controls">
+					<h:panelGroup>
+						<h:graphicImage onclick="#{rich:component('CBmpComment')}.hide();"
+							value="/img/icons/close.gif" />
+					</h:panelGroup>
+				</f:facet>
+				<!--div id="CBmpUpdHDiv" style="width:100%;height:500px;overflow:auto;"-->
+				<h:form id="CBformComment">
+					<table style="width: 99%">
+						<tr height="15px">
+							<td width="80px"><h:outputText value="Комментарий-" /></td>
+							<td><h:inputTextarea
+									value="#{appUserCertModifyManager.commentText}" id="comment"
+									cols="41" rows="3" /></td>
+						</tr>
+						<tr height="35px">
+							<td colspan="2" align="center"><a4j:commandButton
+									value="Отмена"
+									onclick="#{rich:component('CBmpComment')}.hide();return false;"
+									styleClass="but_class" /> <a4j:commandButton value="Сохранить"
+									action="#{appUserCertModifyManager.comment}"
+									reRender="outCenterBottom"
+									oncomplete="#{rich:component('CBmpComment')}.hide();"
+									onclick="if(check_comment('CBformComment')){return false;}"
+									styleClass="but_class">
+									<f:param name="onComment" value="1" />
+									<f:param name="remoteAudit" value="CommentFact" />
+									<f:param name="sessionId" value="#{param['sessionId']}" />
+								</a4j:commandButton></td>
+						</tr>
+					</table>
+
+				</h:form>
+				<!--/div-->
+			</rich:modalPanel>
+		</a4j:outputPanel>
+	</div>
+
+	<script>
+//<![CDATA[
+
+function check(tform){
+ var msg="";
+ if (jQuery.trim(document.getElementById(tform+":name").value)==""){
+	  msg+="Нет Наименования !\n";
+ }
+ if (jQuery.trim(document.getElementById(tform+":code").value)==""){
+	  msg+="Нет Кода !\n";
+ }else{
+	 if( jQuery.trim(document.getElementById(tform+":code").value).search(new RegExp(/[А-яёЁ]/g)) !=-1){
+		 msg+="В Коде недопустима кириллица !\n";
+     }
+ }
+ if (jQuery.trim(document.getElementById(tform+":descr").value)==""){
+	 // msg+="Нет Описания !\n";
+ }else{
+	 if(jQuery.trim(document.getElementById(tform+":descr").value).length>500){
+		    msg+="Превышена длина поля Описание!\n";
+	 }
+  }
+		 
+ 
+ if(msg!=""){
+  alert(msg);
+  return true;
+ }else{
+  return false;
+}
+}
+
+function check_reject(tform){
+	 var msg="";
+
+	 if (jQuery.trim(document.getElementById(tform+":reject_reason").value)==""){
+		  msg+="Не заполнено поле Причина !\n";
+	 }else{
+		 if(jQuery.trim(document.getElementById(tform+":reject_reason").value).length>1000){
+			    msg+="Превышена длина поля Причина!\n";
+		 }
+	  }
+	 if(msg!=""){
+	  alert(msg);
+	  return true;
+	 }else{
+	  return false;
+	}
+}
+
+function check_comment(tform){
+	 var msg="";
+
+	 if (jQuery.trim(document.getElementById(tform+":comment").value)==""){
+		 // msg+="Не заполнено поле Причина !\n";
+	 }else{
+		 if(jQuery.trim(document.getElementById(tform+":comment").value).length>1000){
+			    msg+="Превышена длина поля Комментарий!\n";
+		 }
+	  }
+	 if(msg!=""){
+	  alert(msg);
+	  return true;
+	 }else{
+	  return false;
+	}
+}
+
+function setHDiv(hdiv){
+	jQuery('#'+hdiv).height(Math.floor(jQuery(window).height()*(2/3)));
+}
+
+function setHDiv_min(hdiv){
+	jQuery('#'+hdiv).height(Math.floor(jQuery(window).height()*(2/3)-100));
+}
+
+function setMPTop(){
+	alert(Math.floor(jQuery(window).height()*(1/6)));
+	jQuery('#CBmpUpdRoleCDiv').css('top',Math.floor(jQuery(window).height()*(1/6)))
+}
+
+function hideMPCrt(){
+	#{rich:component('CBmpCrt')}.hide();
+}
+
+
+//]]>
+</script>
+</ui:composition>
