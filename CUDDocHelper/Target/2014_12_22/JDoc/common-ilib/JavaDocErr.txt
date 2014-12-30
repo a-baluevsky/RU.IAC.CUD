@@ -1,0 +1,5 @@
+javadoc: warning - No source files for package iac
+javadoc: warning - No source files for package ru
+javadoc: warning - No source files for package iac
+javadoc: warning - No source files for package ru
+javadoc: error - No public or protected classes found to document.

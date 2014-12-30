@@ -1,0 +1,470 @@
+Loading source files for package iac.grn.infosweb.filter...
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\filter\PortFilter.java]]
+[parsing completed 30ms]
+Loading source files for package iac.grn.infosweb.servlet.support...
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\servlet\support\SupportServlet.java]]
+[parsing completed 20ms]
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\servlet\support\FileUploadServlet.java]]
+[parsing completed 0ms]
+Loading source files for package iac.cud.authmodule.session...
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\authz-module\src\main\java\iac\cud\authmodule\session\AutzManager.java]]
+[parsing completed 0ms]
+Constructing Javadoc information...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\filter\PortFilter.java:8: error: package javax.servlet does not exist
+import javax.servlet.Filter;
+                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\filter\PortFilter.java:9: error: package javax.servlet does not exist
+import javax.servlet.FilterChain;
+                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\filter\PortFilter.java:10: error: package javax.servlet does not exist
+import javax.servlet.FilterConfig;
+                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\filter\PortFilter.java:11: error: package javax.servlet does not exist
+import javax.servlet.ServletException;
+                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\filter\PortFilter.java:12: error: package javax.servlet does not exist
+import javax.servlet.ServletRequest;
+                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\filter\PortFilter.java:13: error: package javax.servlet does not exist
+import javax.servlet.ServletResponse;
+                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\filter\PortFilter.java:14: error: package javax.servlet.http does not exist
+import javax.servlet.http.HttpServletRequest;
+                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\filter\PortFilter.java:15: error: package javax.servlet.http does not exist
+import javax.servlet.http.HttpServletResponse;
+                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\filter\PortFilter.java:17: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\filter\PortFilter.java:18: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\filter\PortFilter.java:20: error: cannot find symbol
+ public class PortFilter implements Filter {
+                                    ^
+  symbol: class Filter
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\filter\PortFilter.java:22: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(PortFilter.class);
+	                     ^
+  symbol:   class Logger
+  location: class PortFilter
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\filter\PortFilter.java:43: error: cannot find symbol
+	public void doFilter(ServletRequest request, ServletResponse response,
+	                     ^
+  symbol:   class ServletRequest
+  location: class PortFilter
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\filter\PortFilter.java:43: error: cannot find symbol
+	public void doFilter(ServletRequest request, ServletResponse response,
+	                                             ^
+  symbol:   class ServletResponse
+  location: class PortFilter
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\filter\PortFilter.java:44: error: cannot find symbol
+			FilterChain chain) throws IOException, ServletException {
+			^
+  symbol:   class FilterChain
+  location: class PortFilter
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\filter\PortFilter.java:44: error: cannot find symbol
+			FilterChain chain) throws IOException, ServletException {
+			                                       ^
+  symbol:   class ServletException
+  location: class PortFilter
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\filter\PortFilter.java:78: error: cannot find symbol
+	public void init(FilterConfig fConfig) throws ServletException {
+	                 ^
+  symbol:   class FilterConfig
+  location: class PortFilter
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\filter\PortFilter.java:78: error: cannot find symbol
+	public void init(FilterConfig fConfig) throws ServletException {
+	                                              ^
+  symbol:   class ServletException
+  location: class PortFilter
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\servlet\support\SupportServlet.java:3: error: package iac.grn.infosweb.session.support does not exist
+import iac.grn.infosweb.session.support.SupportManager;
+                                       ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\servlet\support\SupportServlet.java:8: error: package javax.servlet does not exist
+import javax.servlet.ServletConfig;
+                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\servlet\support\SupportServlet.java:9: error: package javax.servlet does not exist
+import javax.servlet.ServletException;
+                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\servlet\support\SupportServlet.java:10: error: package javax.servlet.http does not exist
+import javax.servlet.http.HttpServlet;
+                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\servlet\support\SupportServlet.java:11: error: package javax.servlet.http does not exist
+import javax.servlet.http.HttpServletRequest;
+                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\servlet\support\SupportServlet.java:12: error: package javax.servlet.http does not exist
+import javax.servlet.http.HttpServletResponse;
+                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\servlet\support\SupportServlet.java:14: error: package org.jboss.seam does not exist
+import org.jboss.seam.Component;
+                     ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\servlet\support\SupportServlet.java:15: error: package org.jboss.seam does not exist
+import org.jboss.seam.ScopeType;
+                     ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\servlet\support\SupportServlet.java:16: error: package org.jboss.seam.servlet does not exist
+import org.jboss.seam.servlet.ContextualHttpServletRequest;
+                             ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\servlet\support\SupportServlet.java:17: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\servlet\support\SupportServlet.java:18: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\servlet\support\SupportServlet.java:20: error: cannot find symbol
+ public class SupportServlet extends HttpServlet {
+                                     ^
+  symbol: class HttpServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\servlet\support\SupportServlet.java:22: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(SupportServlet.class);
+	                     ^
+  symbol:   class Logger
+  location: class SupportServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\servlet\support\SupportServlet.java:33: error: cannot find symbol
+	public void init(ServletConfig config) throws ServletException {
+	                 ^
+  symbol:   class ServletConfig
+  location: class SupportServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\servlet\support\SupportServlet.java:33: error: cannot find symbol
+	public void init(ServletConfig config) throws ServletException {
+	                                              ^
+  symbol:   class ServletException
+  location: class SupportServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\servlet\support\SupportServlet.java:37: error: cannot find symbol
+	protected void service(HttpServletRequest request,
+	                       ^
+  symbol:   class HttpServletRequest
+  location: class SupportServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\servlet\support\SupportServlet.java:38: error: cannot find symbol
+			HttpServletResponse response) throws ServletException, IOException {
+			^
+  symbol:   class HttpServletResponse
+  location: class SupportServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\servlet\support\SupportServlet.java:38: error: cannot find symbol
+			HttpServletResponse response) throws ServletException, IOException {
+			                                     ^
+  symbol:   class ServletException
+  location: class SupportServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\servlet\support\SupportServlet.java:84: error: cannot find symbol
+	private void doWork(HttpServletRequest request, HttpServletResponse response) {
+	                    ^
+  symbol:   class HttpServletRequest
+  location: class SupportServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\servlet\support\SupportServlet.java:84: error: cannot find symbol
+	private void doWork(HttpServletRequest request, HttpServletResponse response) {
+	                                                ^
+  symbol:   class HttpServletResponse
+  location: class SupportServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\servlet\support\FileUploadServlet.java:3: error: package iac.grn.infosweb.context.mc.arm does not exist
+import iac.grn.infosweb.context.mc.arm.ArmManager;
+                                      ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\servlet\support\FileUploadServlet.java:4: error: package iac.grn.infosweb.context.mc.armgroup does not exist
+import iac.grn.infosweb.context.mc.armgroup.ArmGroupManager;
+                                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\servlet\support\FileUploadServlet.java:5: error: package iac.grn.infosweb.context.mc.armsub does not exist
+import iac.grn.infosweb.context.mc.armsub.ArmSubManager;
+                                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\servlet\support\FileUploadServlet.java:6: error: package iac.grn.infosweb.context.mc.usr does not exist
+import iac.grn.infosweb.context.mc.usr.UsrManager;
+                                      ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\servlet\support\FileUploadServlet.java:11: error: package javax.servlet does not exist
+import javax.servlet.ServletConfig;
+                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\servlet\support\FileUploadServlet.java:12: error: package javax.servlet does not exist
+import javax.servlet.ServletException;
+                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\servlet\support\FileUploadServlet.java:13: error: package javax.servlet.http does not exist
+import javax.servlet.http.HttpServlet;
+                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\servlet\support\FileUploadServlet.java:14: error: package javax.servlet.http does not exist
+import javax.servlet.http.HttpServletRequest;
+                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\servlet\support\FileUploadServlet.java:15: error: package javax.servlet.http does not exist
+import javax.servlet.http.HttpServletResponse;
+                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\servlet\support\FileUploadServlet.java:17: error: package org.jboss.seam does not exist
+import org.jboss.seam.Component;
+                     ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\servlet\support\FileUploadServlet.java:18: error: package org.jboss.seam does not exist
+import org.jboss.seam.ScopeType;
+                     ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\servlet\support\FileUploadServlet.java:19: error: package org.jboss.seam.servlet does not exist
+import org.jboss.seam.servlet.ContextualHttpServletRequest;
+                             ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\servlet\support\FileUploadServlet.java:20: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\servlet\support\FileUploadServlet.java:21: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\servlet\support\FileUploadServlet.java:22: error: package org.apache.commons.fileupload does not exist
+import org.apache.commons.fileupload.FileItem;
+                                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\servlet\support\FileUploadServlet.java:23: error: package org.apache.commons.fileupload does not exist
+import org.apache.commons.fileupload.FileItemFactory;
+                                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\servlet\support\FileUploadServlet.java:24: error: package org.apache.commons.fileupload.disk does not exist
+import org.apache.commons.fileupload.disk.DiskFileItemFactory;
+                                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\servlet\support\FileUploadServlet.java:25: error: package org.apache.commons.fileupload.servlet does not exist
+import org.apache.commons.fileupload.servlet.ServletFileUpload;
+                                            ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\servlet\support\FileUploadServlet.java:27: error: cannot find symbol
+ public class FileUploadServlet extends HttpServlet {
+                                        ^
+  symbol: class HttpServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\servlet\support\FileUploadServlet.java:29: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory
+	                     ^
+  symbol:   class Logger
+  location: class FileUploadServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\servlet\support\FileUploadServlet.java:38: error: cannot find symbol
+	public void init(ServletConfig config) throws ServletException {
+	                 ^
+  symbol:   class ServletConfig
+  location: class FileUploadServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\servlet\support\FileUploadServlet.java:38: error: cannot find symbol
+	public void init(ServletConfig config) throws ServletException {
+	                                              ^
+  symbol:   class ServletException
+  location: class FileUploadServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\servlet\support\FileUploadServlet.java:42: error: cannot find symbol
+	protected void service(HttpServletRequest request,
+	                       ^
+  symbol:   class HttpServletRequest
+  location: class FileUploadServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\servlet\support\FileUploadServlet.java:43: error: cannot find symbol
+			HttpServletResponse response) throws ServletException, IOException {
+			^
+  symbol:   class HttpServletResponse
+  location: class FileUploadServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\servlet\support\FileUploadServlet.java:43: error: cannot find symbol
+			HttpServletResponse response) throws ServletException, IOException {
+			                                     ^
+  symbol:   class ServletException
+  location: class FileUploadServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\servlet\support\FileUploadServlet.java:104: error: cannot find symbol
+	private void saveToBD(FileItem item, final HttpServletRequest f_request,
+	                      ^
+  symbol:   class FileItem
+  location: class FileUploadServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\servlet\support\FileUploadServlet.java:104: error: cannot find symbol
+	private void saveToBD(FileItem item, final HttpServletRequest f_request,
+	                                           ^
+  symbol:   class HttpServletRequest
+  location: class FileUploadServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\servlet\support\FileUploadServlet.java:106: error: cannot find symbol
+			final HttpServletResponse response) throws Exception {
+			      ^
+  symbol:   class HttpServletResponse
+  location: class FileUploadServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\servlet\support\FileUploadServlet.java:126: error: cannot find symbol
+			HttpServletResponse response) {
+			^
+  symbol:   class HttpServletResponse
+  location: class FileUploadServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\authz-module\src\main\java\iac\cud\authmodule\session\AutzManager.java:3: error: package iac.cud.authmodule.dataitem does not exist
+import iac.cud.authmodule.dataitem.AuthItem;
+                                  ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\authz-module\src\main\java\iac\cud\authmodule\session\AutzManager.java:4: error: package iac.cud.authmodule.dataitem does not exist
+import iac.cud.authmodule.dataitem.PageItem;
+                                  ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\authz-module\src\main\java\iac\cud\authmodule\session\AutzManager.java:9: error: package javax.ejb does not exist
+import javax.ejb.Stateless;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\authz-module\src\main\java\iac\cud\authmodule\session\AutzManager.java:10: error: package javax.ejb does not exist
+import javax.ejb.TransactionAttribute;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\authz-module\src\main\java\iac\cud\authmodule\session\AutzManager.java:11: error: package javax.ejb does not exist
+import javax.ejb.TransactionAttributeType;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\authz-module\src\main\java\iac\cud\authmodule\session\AutzManager.java:12: error: package javax.persistence does not exist
+import javax.persistence.EntityManager;
+                        ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\authz-module\src\main\java\iac\cud\authmodule\session\AutzManager.java:13: error: package javax.persistence does not exist
+import javax.persistence.PersistenceContext;
+                        ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\authz-module\src\main\java\iac\cud\authmodule\session\AutzManager.java:15: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\authz-module\src\main\java\iac\cud\authmodule\session\AutzManager.java:16: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\authz-module\src\main\java\iac\cud\authmodule\session\AutzManager.java:25: error: cannot find symbol
+ public class AutzManager implements AutzManagerLocal, AutzManagerRemote {
+                                     ^
+  symbol: class AutzManagerLocal
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\authz-module\src\main\java\iac\cud\authmodule\session\AutzManager.java:25: error: cannot find symbol
+ public class AutzManager implements AutzManagerLocal, AutzManagerRemote {
+                                                       ^
+  symbol: class AutzManagerRemote
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\authz-module\src\main\java\iac\cud\authmodule\session\AutzManager.java:23: error: cannot find symbol
+@Stateless
+ ^
+  symbol: class Stateless
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\authz-module\src\main\java\iac\cud\authmodule\session\AutzManager.java:24: error: cannot find symbol
+@TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+ ^
+  symbol: class TransactionAttribute
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\authz-module\src\main\java\iac\cud\authmodule\session\AutzManager.java:28: error: cannot find symbol
+	EntityManager em;
+	^
+  symbol:   class EntityManager
+  location: class AutzManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\authz-module\src\main\java\iac\cud\authmodule\session\AutzManager.java:30: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(AutzManager.class);
+	                     ^
+  symbol:   class Logger
+  location: class AutzManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\authz-module\src\main\java\iac\cud\authmodule\session\AutzManager.java:47: error: cannot find symbol
+	public AuthItem getAccessComplete(Long appCode, List<String> roles)
+	       ^
+  symbol:   class AuthItem
+  location: class AutzManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\authz-module\src\main\java\iac\cud\authmodule\session\AutzManager.java:64: error: cannot find symbol
+	private AuthItem createResourceTreeItem(Long appCode, List<String> roles,
+	        ^
+  symbol:   class AuthItem
+  location: class AutzManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\authz-module\src\main\java\iac\cud\authmodule\session\AutzManager.java:164: error: cannot find symbol
+	public PageItem getAccessPage(Long appCode, List<String> roles,
+	       ^
+  symbol:   class PageItem
+  location: class AutzManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\authz-module\src\main\java\iac\cud\authmodule\session\AutzManager.java:27: error: cannot find symbol
+	@PersistenceContext(unitName = "CUDAuthModule")
+	 ^
+  symbol:   class PersistenceContext
+  location: class AutzManager
+[search path for source files: C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java,C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\authz-module\src\main\java]
+[search path for class files: C:\Program Files\Java\jdk1.7.0_07\jre\lib\resources.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\rt.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\sunrsasign.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\jsse.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\jce.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\charsets.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\jfr.jar,C:\Program Files\Java\jdk1.7.0_07\jre\classes,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\access-bridge.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\ASN1P.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\asn1rt.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\commons-logging.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\cpSSL.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\dnsns.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\forms_rt.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\jaccess.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCP.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCPinst.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCPRequest.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCPRevCheck.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCPRevTools.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCPxml.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCryptoP.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\localedata.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\sunec.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\sunjce_provider.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\sunmscapi.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\sunpkcs11.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\XMLDSigRI.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\xmlsec-1.5.1.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\zipfs.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/io/IOException.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/ArrayList.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/Arrays.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/List.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Object.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/String.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/io/PrintWriter.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/Iterator.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Long.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Exception.class)]]
+Standard Doclet version 1.7.0_07
+Building tree for all the packages and classes...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\authz-module\iac\grn\infosweb\filter\PortFilter.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\filter\PortFilter.java:22: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(PortFilter.class);
+	                                     ^
+  symbol:   variable LoggerFactory
+  location: class PortFilter
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\filter\PortFilter.java:36: warning - Tag @see: reference not found: Filter#destroy()
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\filter\PortFilter.java:43: warning - Tag @see: reference not found: Filter#doFilter(ServletRequest, ServletResponse, FilterChain)
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\filter\PortFilter.java:78: warning - Tag @see: reference not found: Filter#init(FilterConfig)
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/io/Serializable.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Class.class)]]
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\authz-module\iac\grn\infosweb\servlet\support\FileUploadServlet.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\servlet\support\FileUploadServlet.java:29: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory
+	                                     ^
+  symbol:   variable LoggerFactory
+  location: class FileUploadServlet
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\authz-module\iac\grn\infosweb\servlet\support\SupportServlet.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\iac\grn\infosweb\servlet\support\SupportServlet.java:22: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(SupportServlet.class);
+	                                     ^
+  symbol:   variable LoggerFactory
+  location: class SupportServlet
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\authz-module\iac\cud\authmodule\session\AutzManager.html...
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class PersistenceContext not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class PersistenceContext not found.
+javadoc: warning - Class PersistenceContext not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\authz-module\src\main\java\iac\cud\authmodule\session\AutzManager.java:30: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(AutzManager.class);
+	                                     ^
+  symbol:   variable LoggerFactory
+  location: class AutzManager
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\authz-module\src\main\java\iac\cud\authmodule\session\AutzManager.java:47: warning - @param argument "login" is not a parameter name.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\authz-module\src\main\java\iac\cud\authmodule\session\AutzManager.java:47: warning - @param argument "password" is not a parameter name.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\authz-module\src\main\java\iac\cud\authmodule\session\AutzManager.java:164: warning - @param argument "idUser" is not a parameter name.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\authz-module\overview-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\authz-module\iac\cud\authmodule\session\package-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\authz-module\iac\cud\authmodule\session\package-summary.html...
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\authz-module\iac\cud\authmodule\session\package-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\authz-module\iac\grn\infosweb\filter\package-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\authz-module\iac\grn\infosweb\filter\package-summary.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\authz-module\iac\grn\infosweb\filter\package-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\authz-module\iac\grn\infosweb\servlet\support\package-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\authz-module\iac\grn\infosweb\servlet\support\package-summary.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\authz-module\iac\grn\infosweb\servlet\support\package-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\authz-module\constant-values.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\authz-module\src-html\iac\grn\infosweb\filter\PortFilter.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\authz-module\src-html\iac\grn\infosweb\servlet\support\SupportServlet.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\authz-module\src-html\iac\grn\infosweb\servlet\support\FileUploadServlet.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\authz-module\src-html\iac\cud\authmodule\session\AutzManager.html...
+Building index for all the packages and classes...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\authz-module\overview-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\authz-module\index-all.html...
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class PersistenceContext not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\authz-module\deprecated-list.html...
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class PersistenceContext not found.
+Building index for all classes...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\authz-module\allclasses-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\authz-module\allclasses-noframe.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\authz-module\index.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\authz-module\overview-summary.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\authz-module\help-doc.html...
+[done in 1432 ms]
+4 errors
+149 warnings

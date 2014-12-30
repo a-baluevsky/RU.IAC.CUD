@@ -1,0 +1,734 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ru">
+<head>
+<title>Source code</title>
+<link rel="stylesheet" type="text/css" href="../../../../../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<div class="sourceContainer">
+<pre><span class="sourceLineNo">001</span>package iac.grn.infosweb.context.mc.audit.sys;<a name="line.1"></a>
+<span class="sourceLineNo">002</span><a name="line.2"></a>
+<span class="sourceLineNo">003</span> <a name="line.3"></a>
+<span class="sourceLineNo">004</span>import org.jboss.seam.ScopeType;<a name="line.4"></a>
+<span class="sourceLineNo">005</span>import org.jboss.seam.annotations.In;<a name="line.5"></a>
+<span class="sourceLineNo">006</span>import org.jboss.seam.annotations.Logger;<a name="line.6"></a>
+<span class="sourceLineNo">007</span>import org.jboss.seam.annotations.Name;<a name="line.7"></a>
+<span class="sourceLineNo">008</span>import org.jboss.seam.contexts.Contexts;<a name="line.8"></a>
+<span class="sourceLineNo">009</span>import org.jboss.seam.faces.FacesMessages;<a name="line.9"></a>
+<span class="sourceLineNo">010</span>import org.jboss.seam.log.Log;<a name="line.10"></a>
+<span class="sourceLineNo">011</span><a name="line.11"></a>
+<span class="sourceLineNo">012</span>import iac.cud.infosweb.dataitems.BaseItem;<a name="line.12"></a>
+<span class="sourceLineNo">013</span>import iac.cud.infosweb.dataitems.BaseParamItem;<a name="line.13"></a>
+<span class="sourceLineNo">014</span>import iac.cud.infosweb.entity.ServicesLogKnlT;<a name="line.14"></a>
+<span class="sourceLineNo">015</span>import iac.cud.infosweb.local.service.ServiceReestrAction;<a name="line.15"></a>
+<span class="sourceLineNo">016</span>import iac.cud.infosweb.local.service.ServiceReestrPro;<a name="line.16"></a>
+<span class="sourceLineNo">017</span>import iac.cud.infosweb.remote.frontage.IRemoteFrontageLocal;<a name="line.17"></a>
+<span class="sourceLineNo">018</span>import iac.grn.infosweb.session.audit.actions.ActionsMap;<a name="line.18"></a>
+<span class="sourceLineNo">019</span>import iac.grn.infosweb.session.audit.actions.ResourcesMap;<a name="line.19"></a>
+<span class="sourceLineNo">020</span>import iac.grn.infosweb.session.audit.export.AuditExportData;<a name="line.20"></a>
+<span class="sourceLineNo">021</span>import java.io.BufferedWriter;<a name="line.21"></a>
+<span class="sourceLineNo">022</span>import java.text.DateFormat;<a name="line.22"></a>
+<span class="sourceLineNo">023</span>import java.text.SimpleDateFormat;<a name="line.23"></a>
+<span class="sourceLineNo">024</span>import java.util.*;<a name="line.24"></a>
+<span class="sourceLineNo">025</span><a name="line.25"></a>
+<span class="sourceLineNo">026</span>import org.jboss.seam.Component;<a name="line.26"></a>
+<span class="sourceLineNo">027</span><a name="line.27"></a>
+<span class="sourceLineNo">028</span>import javax.faces.context.FacesContext;<a name="line.28"></a>
+<span class="sourceLineNo">029</span>import javax.naming.Context;<a name="line.29"></a>
+<span class="sourceLineNo">030</span>import javax.naming.InitialContext;<a name="line.30"></a>
+<span class="sourceLineNo">031</span>import javax.persistence.EntityManager;<a name="line.31"></a>
+<span class="sourceLineNo">032</span>import iac.grn.serviceitems.BaseTableItem;<a name="line.32"></a>
+<span class="sourceLineNo">033</span><a name="line.33"></a>
+<span class="sourceLineNo">034</span>import javax.servlet.http.HttpServletResponse;<a name="line.34"></a>
+<span class="sourceLineNo">035</span><a name="line.35"></a>
+<span class="sourceLineNo">036</span>/**<a name="line.36"></a>
+<span class="sourceLineNo">037</span> * ”правл€ющий Ѕин<a name="line.37"></a>
+<span class="sourceLineNo">038</span> * @author bubnov<a name="line.38"></a>
+<span class="sourceLineNo">039</span> *<a name="line.39"></a>
+<span class="sourceLineNo">040</span> */<a name="line.40"></a>
+<span class="sourceLineNo">041</span>@Name("aSysManager")<a name="line.41"></a>
+<span class="sourceLineNo">042</span> public class ASysManager {<a name="line.42"></a>
+<span class="sourceLineNo">043</span>        <a name="line.43"></a>
+<span class="sourceLineNo">044</span>         @Logger private Log log;<a name="line.44"></a>
+<span class="sourceLineNo">045</span>        <a name="line.45"></a>
+<span class="sourceLineNo">046</span>         @In <a name="line.46"></a>
+<span class="sourceLineNo">047</span>         EntityManager entityManager;<a name="line.47"></a>
+<span class="sourceLineNo">048</span>         <a name="line.48"></a>
+<span class="sourceLineNo">049</span>        /**<a name="line.49"></a>
+<span class="sourceLineNo">050</span>     * Ёкспортируема€ сущности <a name="line.50"></a>
+<span class="sourceLineNo">051</span>     * дл€ отображени€<a name="line.51"></a>
+<span class="sourceLineNo">052</span>     */<a name="line.52"></a>
+<span class="sourceLineNo">053</span>        //private BaseItem usrBean;             !!! ѕроверить !!!<a name="line.53"></a>
+<span class="sourceLineNo">054</span>        <a name="line.54"></a>
+<span class="sourceLineNo">055</span>        private String dellMessage;<a name="line.55"></a>
+<span class="sourceLineNo">056</span>         <a name="line.56"></a>
+<span class="sourceLineNo">057</span>        private List&lt;BaseItem&gt; auditList; <a name="line.57"></a>
+<span class="sourceLineNo">058</span>        <a name="line.58"></a>
+<span class="sourceLineNo">059</span>        private List&lt;BaseItem&gt; auditReportList;<a name="line.59"></a>
+<span class="sourceLineNo">060</span>        <a name="line.60"></a>
+<span class="sourceLineNo">061</span>        private Long auditCount;<a name="line.61"></a>
+<span class="sourceLineNo">062</span>        <a name="line.62"></a>
+<span class="sourceLineNo">063</span>        private List &lt;BaseTableItem&gt; auditItemsListSelect;<a name="line.63"></a>
+<span class="sourceLineNo">064</span>        <a name="line.64"></a>
+<span class="sourceLineNo">065</span>        private List &lt;BaseTableItem&gt; auditItemsListContext;<a name="line.65"></a>
+<span class="sourceLineNo">066</span>        <a name="line.66"></a>
+<span class="sourceLineNo">067</span>        private int connectError=0;<a name="line.67"></a>
+<span class="sourceLineNo">068</span>        private Boolean evaluteForList;<a name="line.68"></a>
+<span class="sourceLineNo">069</span>        private Boolean evaluteForListFooter;  <a name="line.69"></a>
+<span class="sourceLineNo">070</span>        private Boolean evaluteForBean;<a name="line.70"></a>
+<span class="sourceLineNo">071</span>        <a name="line.71"></a>
+<span class="sourceLineNo">072</span>        private Date clearDate1;<a name="line.72"></a>
+<span class="sourceLineNo">073</span>        private Date clearDate2;<a name="line.73"></a>
+<span class="sourceLineNo">074</span>        <a name="line.74"></a>
+<span class="sourceLineNo">075</span>        private Date reportDate1;<a name="line.75"></a>
+<span class="sourceLineNo">076</span>                <a name="line.76"></a>
+<span class="sourceLineNo">077</span>        private Date reportDate2;<a name="line.77"></a>
+<span class="sourceLineNo">078</span>        <a name="line.78"></a>
+<span class="sourceLineNo">079</span>        private static String jndiBinding = "java:global/InfoS-ear/InfoS-ejb/IRemoteFrontage!iac.cud.infosweb.remote.frontage.IRemoteFrontageLocal";<a name="line.79"></a>
+<span class="sourceLineNo">080</span>        <a name="line.80"></a>
+<span class="sourceLineNo">081</span>        private static String param_code="to_archive_audit_sys";<a name="line.81"></a>
+<span class="sourceLineNo">082</span>         <a name="line.82"></a>
+<span class="sourceLineNo">083</span>                <a name="line.83"></a>
+<span class="sourceLineNo">084</span>        private Long archiveParamValue=null;<a name="line.84"></a>
+<span class="sourceLineNo">085</span>        <a name="line.85"></a>
+<span class="sourceLineNo">086</span>         <a name="line.86"></a>
+<span class="sourceLineNo">087</span>        public List&lt;BaseItem&gt; getAuditList(int firstRow, int numberOfRows){<a name="line.87"></a>
+<span class="sourceLineNo">088</span>          String remoteAuditSys = FacesContext.getCurrentInstance().getExternalContext()<a name="line.88"></a>
+<span class="sourceLineNo">089</span>                     .getRequestParameterMap()<a name="line.89"></a>
+<span class="sourceLineNo">090</span>                     .get("remoteAudit");<a name="line.90"></a>
+<span class="sourceLineNo">091</span>           log.info("auditManager:getAuditList:remoteAudit:"+remoteAuditSys);<a name="line.91"></a>
+<span class="sourceLineNo">092</span>          <a name="line.92"></a>
+<span class="sourceLineNo">093</span>          <a name="line.93"></a>
+<span class="sourceLineNo">094</span>          log.info("getAuditList:firstRow:"+firstRow);<a name="line.94"></a>
+<span class="sourceLineNo">095</span>          log.info("getAuditList:numberOfRows:"+numberOfRows);<a name="line.95"></a>
+<span class="sourceLineNo">096</span>          <a name="line.96"></a>
+<span class="sourceLineNo">097</span>          List&lt;BaseItem&gt; aFuncListCached = (List&lt;BaseItem&gt;)<a name="line.97"></a>
+<span class="sourceLineNo">098</span>                          Component.getInstance("aFuncListCached",ScopeType.SESSION);<a name="line.98"></a>
+<span class="sourceLineNo">099</span>          if(auditList==null){<a name="line.99"></a>
+<span class="sourceLineNo">100</span>                  log.info("getAuditList:01");<a name="line.100"></a>
+<span class="sourceLineNo">101</span>                        if(("rowSelectFact".equals(remoteAuditSys)||<a name="line.101"></a>
+<span class="sourceLineNo">102</span>                            "selRecAllFact".equals(remoteAuditSys)||<a name="line.102"></a>
+<span class="sourceLineNo">103</span>                            "clRecAllFact".equals(remoteAuditSys)||<a name="line.103"></a>
+<span class="sourceLineNo">104</span>                            "clSelOneFact".equals(remoteAuditSys)||<a name="line.104"></a>
+<span class="sourceLineNo">105</span>                            "onSelColSaveFact".equals(remoteAuditSys))&amp;&amp;<a name="line.105"></a>
+<span class="sourceLineNo">106</span>                            aFuncListCached!=null){<a name="line.106"></a>
+<span class="sourceLineNo">107</span>                                this.auditList=aFuncListCached;<a name="line.107"></a>
+<span class="sourceLineNo">108</span>                        }else{<a name="line.108"></a>
+<span class="sourceLineNo">109</span>                                log.info("getAuditList:03");<a name="line.109"></a>
+<span class="sourceLineNo">110</span>                        invokeLocal("list", firstRow, numberOfRows, null);<a name="line.110"></a>
+<span class="sourceLineNo">111</span>                            Contexts.getSessionContext().set("aFuncListCached", this.auditList);<a name="line.111"></a>
+<span class="sourceLineNo">112</span>                            log.info("getAuditList:03:"+this.auditList.size());<a name="line.112"></a>
+<span class="sourceLineNo">113</span>                        }<a name="line.113"></a>
+<span class="sourceLineNo">114</span>                        <a name="line.114"></a>
+<span class="sourceLineNo">115</span>                        List&lt;String&gt;  selRecSys = (ArrayList&lt;String&gt;)<a name="line.115"></a>
+<span class="sourceLineNo">116</span>                                          Component.getInstance("selRecaFunc",ScopeType.SESSION);<a name="line.116"></a>
+<span class="sourceLineNo">117</span>                        if(this.auditList!=null &amp;&amp; selRecSys!=null) {<a name="line.117"></a>
+<span class="sourceLineNo">118</span>                                 for(BaseItem it:this.auditList){<a name="line.118"></a>
+<span class="sourceLineNo">119</span>                                   if(selRecSys.contains(it.getBaseId().toString())){<a name="line.119"></a>
+<span class="sourceLineNo">120</span>                                         <a name="line.120"></a>
+<span class="sourceLineNo">121</span>                                         it.setSelected(true);<a name="line.121"></a>
+<span class="sourceLineNo">122</span>                                   }else{<a name="line.122"></a>
+<span class="sourceLineNo">123</span>                                          it.setSelected(false);<a name="line.123"></a>
+<span class="sourceLineNo">124</span>                                   }<a name="line.124"></a>
+<span class="sourceLineNo">125</span>                                 }<a name="line.125"></a>
+<span class="sourceLineNo">126</span>                    }<a name="line.126"></a>
+<span class="sourceLineNo">127</span>                }<a name="line.127"></a>
+<span class="sourceLineNo">128</span>                return this.auditList;<a name="line.128"></a>
+<span class="sourceLineNo">129</span>        }<a name="line.129"></a>
+<span class="sourceLineNo">130</span>        public void setAuditList(List&lt;BaseItem&gt; auditList){<a name="line.130"></a>
+<span class="sourceLineNo">131</span>                this.auditList=auditList;<a name="line.131"></a>
+<span class="sourceLineNo">132</span>        }<a name="line.132"></a>
+<span class="sourceLineNo">133</span>        <a name="line.133"></a>
+<span class="sourceLineNo">134</span>        public List&lt;BaseItem&gt; getAuditReportList(){<a name="line.134"></a>
+<span class="sourceLineNo">135</span>                  String date1 = FacesContext.getCurrentInstance().getExternalContext()<a name="line.135"></a>
+<span class="sourceLineNo">136</span>                                .getRequestParameterMap()<a name="line.136"></a>
+<span class="sourceLineNo">137</span>                                .get("date1");<a name="line.137"></a>
+<span class="sourceLineNo">138</span>                  String date2 = FacesContext.getCurrentInstance().getExternalContext()<a name="line.138"></a>
+<span class="sourceLineNo">139</span>                                .getRequestParameterMap()<a name="line.139"></a>
+<span class="sourceLineNo">140</span>                                .get("date2");<a name="line.140"></a>
+<span class="sourceLineNo">141</span>                 <a name="line.141"></a>
+<span class="sourceLineNo">142</span>                  <a name="line.142"></a>
+<span class="sourceLineNo">143</span>                  DateFormat df = new SimpleDateFormat ("dd.MM.yy");<a name="line.143"></a>
+<span class="sourceLineNo">144</span>                 <a name="line.144"></a>
+<span class="sourceLineNo">145</span>                  <a name="line.145"></a>
+<span class="sourceLineNo">146</span>                  try{<a name="line.146"></a>
+<span class="sourceLineNo">147</span>                    this.reportDate1 = df.parse(date1);<a name="line.147"></a>
+<span class="sourceLineNo">148</span>                    this.reportDate2 = df.parse(date2);<a name="line.148"></a>
+<span class="sourceLineNo">149</span>                  }catch(Exception e){<a name="line.149"></a>
+<span class="sourceLineNo">150</span>                          log.error("aFuncManager:getAuditReportList:parseError:"+e);<a name="line.150"></a>
+<span class="sourceLineNo">151</span>                  }<a name="line.151"></a>
+<span class="sourceLineNo">152</span>                  <a name="line.152"></a>
+<span class="sourceLineNo">153</span>                  if(this.reportDate1!=null &amp;&amp; this.reportDate2!=null){<a name="line.153"></a>
+<span class="sourceLineNo">154</span>                  <a name="line.154"></a>
+<span class="sourceLineNo">155</span>                    if(auditReportList==null){<a name="line.155"></a>
+<span class="sourceLineNo">156</span>                          invokeLocal("listReport", 0, 0, null);<a name="line.156"></a>
+<span class="sourceLineNo">157</span>                    }<a name="line.157"></a>
+<span class="sourceLineNo">158</span>                  <a name="line.158"></a>
+<span class="sourceLineNo">159</span>                  }<a name="line.159"></a>
+<span class="sourceLineNo">160</span>                  return this.auditReportList;<a name="line.160"></a>
+<span class="sourceLineNo">161</span>        }<a name="line.161"></a>
+<span class="sourceLineNo">162</span>        <a name="line.162"></a>
+<span class="sourceLineNo">163</span>    public void invokeLocal(String type, int firstRow, int numberOfRows,<a name="line.163"></a>
+<span class="sourceLineNo">164</span>                   String sessionId) {<a name="line.164"></a>
+<span class="sourceLineNo">165</span>                try{<a name="line.165"></a>
+<span class="sourceLineNo">166</span>                         String orderQuery=null;<a name="line.166"></a>
+<span class="sourceLineNo">167</span>                         DateFormat df = new SimpleDateFormat ("dd.MM.yy HH:mm:ss");<a name="line.167"></a>
+<span class="sourceLineNo">168</span>                         <a name="line.168"></a>
+<span class="sourceLineNo">169</span>                         log.info("ASysManager:invokeLocal");<a name="line.169"></a>
+<span class="sourceLineNo">170</span>                         <a name="line.170"></a>
+<span class="sourceLineNo">171</span>                         ASysStateHolder aSysStateHolder = (ASysStateHolder)<a name="line.171"></a>
+<span class="sourceLineNo">172</span>                                          Component.getInstance("aSysStateHolder",ScopeType.SESSION);<a name="line.172"></a>
+<span class="sourceLineNo">173</span>                         Map&lt;String, String&gt; filterMap = aSysStateHolder.getColumnFilterValues();<a name="line.173"></a>
+<span class="sourceLineNo">174</span>                         String st=null;<a name="line.174"></a>
+<span class="sourceLineNo">175</span>                         <a name="line.175"></a>
+<span class="sourceLineNo">176</span>                         if("list".equals(type)){<a name="line.176"></a>
+<span class="sourceLineNo">177</span>                                 log.info("ASys:invokeLocal:list:01");<a name="line.177"></a>
+<span class="sourceLineNo">178</span>                                 <a name="line.178"></a>
+<span class="sourceLineNo">179</span>                                 Set&lt;Map.Entry&lt;String, String&gt;&gt; set = aSysStateHolder.getSortOrders().entrySet();<a name="line.179"></a>
+<span class="sourceLineNo">180</span>                 for (Map.Entry&lt;String, String&gt; me : set) {<a name="line.180"></a>
+<span class="sourceLineNo">181</span>                       log.info("me.getKey+:"+me.getKey());<a name="line.181"></a>
+<span class="sourceLineNo">182</span>                       log.info("me.getValue:"+me.getValue());<a name="line.182"></a>
+<span class="sourceLineNo">183</span>                       <a name="line.183"></a>
+<span class="sourceLineNo">184</span>                       if(orderQuery==null){<a name="line.184"></a>
+<span class="sourceLineNo">185</span>                         orderQuery="order by "+me.getKey()+" "+me.getValue();<a name="line.185"></a>
+<span class="sourceLineNo">186</span>                       }else{<a name="line.186"></a>
+<span class="sourceLineNo">187</span>                         orderQuery=orderQuery+", "+me.getKey()+" "+me.getValue();  <a name="line.187"></a>
+<span class="sourceLineNo">188</span>                       }<a name="line.188"></a>
+<span class="sourceLineNo">189</span>                     }<a name="line.189"></a>
+<span class="sourceLineNo">190</span>                 log.info("ASys:invokeLocal:list:orderQuery:"+orderQuery);<a name="line.190"></a>
+<span class="sourceLineNo">191</span>                 <a name="line.191"></a>
+<span class="sourceLineNo">192</span>                 if(filterMap!=null){<a name="line.192"></a>
+<span class="sourceLineNo">193</span>                         Set&lt;Map.Entry&lt;String, String&gt;&gt; setFilterASys = filterMap.entrySet();<a name="line.193"></a>
+<span class="sourceLineNo">194</span>                      for (Map.Entry&lt;String, String&gt; me : setFilterASys) {<a name="line.194"></a>
+<span class="sourceLineNo">195</span>                        <a name="line.195"></a>
+<span class="sourceLineNo">196</span>                                          if(me.getKey().equals("crt_date")){  <a name="line.196"></a>
+<span class="sourceLineNo">197</span>                                 st=(st!=null?st+" and " :"")+" lower(to_char("+me.getKey()+",'DD.MM.YY HH24:MI:SS')) like lower('"+me.getValue()+"%') ";<a name="line.197"></a>
+<span class="sourceLineNo">198</span>                          }else{<a name="line.198"></a>
+<span class="sourceLineNo">199</span>                                        //делаем фильтр на начало<a name="line.199"></a>
+<span class="sourceLineNo">200</span>                                  st=(st!=null?st+" and " :"")+" lower("+me.getKey()+") like lower('"+me.getValue()+"%') ";<a name="line.200"></a>
+<span class="sourceLineNo">201</span>                          }<a name="line.201"></a>
+<span class="sourceLineNo">202</span>                      }<a name="line.202"></a>
+<span class="sourceLineNo">203</span>                   }<a name="line.203"></a>
+<span class="sourceLineNo">204</span>                 log.info("ASys:invokeLocal:list:filterQuery:"+st);<a name="line.204"></a>
+<span class="sourceLineNo">205</span>                 <a name="line.205"></a>
+<span class="sourceLineNo">206</span>                                <a name="line.206"></a>
+<span class="sourceLineNo">207</span>                                 <a name="line.207"></a>
+<span class="sourceLineNo">208</span>                 List&lt;Object[]&gt; lo = entityManager.createNativeQuery(<a name="line.208"></a>
+<span class="sourceLineNo">209</span>                                 "select t1.sys_id, t1.crt_date, t1.serv_name, t1.input_param, t1.RESULT_VALUE, "+ <a name="line.209"></a>
+<span class="sourceLineNo">210</span>                         "t1.IP_ADDRESS, t1.fio "+<a name="line.210"></a>
+<span class="sourceLineNo">211</span>                         "from( "+<a name="line.211"></a>
+<span class="sourceLineNo">212</span>                         "select SL.ID_SRV sys_id , "+<a name="line.212"></a>
+<span class="sourceLineNo">213</span>                         "SL.CREATED crt_date, "+ <a name="line.213"></a>
+<span class="sourceLineNo">214</span>                          "SERV.FULL_ serv_name, SL.INPUT_PARAM input_param, SL.RESULT_VALUE RESULT_VALUE, SL.IP_ADDRESS, "+<a name="line.214"></a>
+<span class="sourceLineNo">215</span>                         "decode(AU_FULL.UP_SIGN_USER, null, AU_FULL.SURNAME||' '||AU_FULL.NAME_ ||' '|| AU_FULL.PATRONYMIC,  CL_USR_FULL.FIO) fio "+<a name="line.215"></a>
+<span class="sourceLineNo">216</span>                         "from SERVICES_LOG_KNL_T sl,  "+<a name="line.216"></a>
+<span class="sourceLineNo">217</span>                         "SERVICES_BSS_T serv, "+<a name="line.217"></a>
+<span class="sourceLineNo">218</span>                         "AC_USERS_KNL_T AU_FULL, "+<a name="line.218"></a>
+<span class="sourceLineNo">219</span>                         "ISP_BSS_T cl_usr_full, "+<a name="line.219"></a>
+<span class="sourceLineNo">220</span>                         "(select max(CL_usr.ID_SRV) CL_USR_ID,  CL_USR.SIGN_OBJECT  CL_USR_CODE "+ <a name="line.220"></a>
+<span class="sourceLineNo">221</span>                         "from ISP_BSS_T cl_usr, "+ <a name="line.221"></a>
+<span class="sourceLineNo">222</span>                         "AC_USERS_KNL_T au "+ <a name="line.222"></a>
+<span class="sourceLineNo">223</span>                         "where AU.UP_SIGN_USER  = CL_usr.SIGN_OBJECT "+ <a name="line.223"></a>
+<span class="sourceLineNo">224</span>                         "group by CL_usr.SIGN_OBJECT) t2 "+<a name="line.224"></a>
+<span class="sourceLineNo">225</span>                         "where SERV.ID_SRV=SL.UP_SERVICES "+<a name="line.225"></a>
+<span class="sourceLineNo">226</span>                         "and AU_FULL.UP_SIGN_USER=t2.CL_USR_CODE(+) "+ <a name="line.226"></a>
+<span class="sourceLineNo">227</span>                         "and AU_FULL.ID_SRV (+)=SL.UP_USERS "+<a name="line.227"></a>
+<span class="sourceLineNo">228</span>                         "and CL_USR_FULL.ID_SRV(+)=t2.CL_USR_ID "+<a name="line.228"></a>
+<span class="sourceLineNo">229</span>                         ") t1"+<a name="line.229"></a>
+<span class="sourceLineNo">230</span>                         (st!=null ? " where "+st :" ")+<a name="line.230"></a>
+<span class="sourceLineNo">231</span>                         (orderQuery!=null ? orderQuery+", sys_id desc " : " order by sys_id desc "))<a name="line.231"></a>
+<span class="sourceLineNo">232</span>                          .setFirstResult(firstRow)<a name="line.232"></a>
+<span class="sourceLineNo">233</span>                          .setMaxResults(numberOfRows)<a name="line.233"></a>
+<span class="sourceLineNo">234</span>                                  .getResultList();<a name="line.234"></a>
+<span class="sourceLineNo">235</span>                 auditList = new ArrayList&lt;BaseItem&gt;();<a name="line.235"></a>
+<span class="sourceLineNo">236</span>                 <a name="line.236"></a>
+<span class="sourceLineNo">237</span>                 for(Object[] objectArray :lo){<a name="line.237"></a>
+<span class="sourceLineNo">238</span>                         <a name="line.238"></a>
+<span class="sourceLineNo">239</span>                         try{ <a name="line.239"></a>
+<span class="sourceLineNo">240</span>                                 <a name="line.240"></a>
+<span class="sourceLineNo">241</span>                          ServicesLogKnlT sl = new ServicesLogKnlT();<a name="line.241"></a>
+<span class="sourceLineNo">242</span>                      <a name="line.242"></a>
+<span class="sourceLineNo">243</span>                      sl.setIdSrv(new Long(objectArray[0].toString()));<a name="line.243"></a>
+<span class="sourceLineNo">244</span>                      sl.setCreatedValue(df.format((Date)objectArray[1]));<a name="line.244"></a>
+<span class="sourceLineNo">245</span>                      sl.setServName(objectArray[2]!=null?objectArray[2].toString():"");<a name="line.245"></a>
+<span class="sourceLineNo">246</span>                      sl.setInputParam(objectArray[3]!=null?objectArray[3].toString():"");<a name="line.246"></a>
+<span class="sourceLineNo">247</span>                      sl.setResultValue(objectArray[4]!=null?objectArray[4].toString():"");<a name="line.247"></a>
+<span class="sourceLineNo">248</span>                      sl.setIpAddress(objectArray[5]!=null?objectArray[5].toString():"");<a name="line.248"></a>
+<span class="sourceLineNo">249</span>                      sl.setUserFio(objectArray[6]!=null?objectArray[6].toString():"");<a name="line.249"></a>
+<span class="sourceLineNo">250</span>                      <a name="line.250"></a>
+<span class="sourceLineNo">251</span>                       auditList.add(sl);<a name="line.251"></a>
+<span class="sourceLineNo">252</span>                      <a name="line.252"></a>
+<span class="sourceLineNo">253</span>                   }catch(Exception e1){<a name="line.253"></a>
+<span class="sourceLineNo">254</span>                           log.error("ASys:invokeLocal:for:error:"+e1);<a name="line.254"></a>
+<span class="sourceLineNo">255</span>                   }<a name="line.255"></a>
+<span class="sourceLineNo">256</span>                 }<a name="line.256"></a>
+<span class="sourceLineNo">257</span>                                 <a name="line.257"></a>
+<span class="sourceLineNo">258</span>             log.info("ASys:invokeLocal:list:02");<a name="line.258"></a>
+<span class="sourceLineNo">259</span>  <a name="line.259"></a>
+<span class="sourceLineNo">260</span>                         } else if("count".equals(type)){<a name="line.260"></a>
+<span class="sourceLineNo">261</span>                                 log.info("ASysList:count:01");<a name="line.261"></a>
+<span class="sourceLineNo">262</span>                                 <a name="line.262"></a>
+<span class="sourceLineNo">263</span>                                 if(filterMap!=null){<a name="line.263"></a>
+<span class="sourceLineNo">264</span>                         Set&lt;Map.Entry&lt;String, String&gt;&gt; setFilterASys = filterMap.entrySet();<a name="line.264"></a>
+<span class="sourceLineNo">265</span>                      for (Map.Entry&lt;String, String&gt; me : setFilterASys) {<a name="line.265"></a>
+<span class="sourceLineNo">266</span>                      <a name="line.266"></a>
+<span class="sourceLineNo">267</span>                           <a name="line.267"></a>
+<span class="sourceLineNo">268</span>                     if(me.getKey().equals("crt_date")){  <a name="line.268"></a>
+<span class="sourceLineNo">269</span>                                 st=(st!=null?st+" and " :"")+" lower(to_char("+me.getKey()+",'DD.MM.YY HH24:MI:SS')) like lower('"+me.getValue()+"%') ";<a name="line.269"></a>
+<span class="sourceLineNo">270</span>                          }else{<a name="line.270"></a>
+<span class="sourceLineNo">271</span>                                        //делаем фильтр на начало<a name="line.271"></a>
+<span class="sourceLineNo">272</span>                                  st=(st!=null?st+" and " :"")+" lower("+me.getKey()+") like lower('"+me.getValue()+"%') ";<a name="line.272"></a>
+<span class="sourceLineNo">273</span>                          }  <a name="line.273"></a>
+<span class="sourceLineNo">274</span>                      }<a name="line.274"></a>
+<span class="sourceLineNo">275</span>                   }<a name="line.275"></a>
+<span class="sourceLineNo">276</span>                 log.info("ASys:invokeLocal:count:filterQuery:"+st);<a name="line.276"></a>
+<span class="sourceLineNo">277</span>                                 <a name="line.277"></a>
+<span class="sourceLineNo">278</span>                                <a name="line.278"></a>
+<span class="sourceLineNo">279</span>                                 <a name="line.279"></a>
+<span class="sourceLineNo">280</span>                                 auditCount = ((java.math.BigDecimal)entityManager.createNativeQuery(<a name="line.280"></a>
+<span class="sourceLineNo">281</span>                                                "select count(*) "+ <a name="line.281"></a>
+<span class="sourceLineNo">282</span>                                                 "from( "+<a name="line.282"></a>
+<span class="sourceLineNo">283</span>                                                 "select SL.ID_SRV sys_id , "+<a name="line.283"></a>
+<span class="sourceLineNo">284</span>                                                 "SL.CREATED crt_date, "+ <a name="line.284"></a>
+<span class="sourceLineNo">285</span>                                               //"to_char(SL.CREATED , 'DD.MM.YY HH24:MI:SS') crt_value, "+ <a name="line.285"></a>
+<span class="sourceLineNo">286</span>                                                 "SERV.FULL_ serv_name, SL.INPUT_PARAM input_param, SL.RESULT_VALUE RESULT_VALUE, SL.IP_ADDRESS, "+<a name="line.286"></a>
+<span class="sourceLineNo">287</span>                                                 "decode(AU_FULL.UP_SIGN_USER, null, AU_FULL.SURNAME||' '||AU_FULL.NAME_ ||' '|| AU_FULL.PATRONYMIC,  CL_USR_FULL.FIO) fio "+<a name="line.287"></a>
+<span class="sourceLineNo">288</span>                                                 "from SERVICES_LOG_KNL_T sl,  "+<a name="line.288"></a>
+<span class="sourceLineNo">289</span>                                                 "SERVICES_BSS_T serv, "+<a name="line.289"></a>
+<span class="sourceLineNo">290</span>                                                 "AC_USERS_KNL_T AU_FULL, "+<a name="line.290"></a>
+<span class="sourceLineNo">291</span>                                                 "ISP_BSS_T cl_usr_full, "+<a name="line.291"></a>
+<span class="sourceLineNo">292</span>                                                 "(select max(CL_usr.ID_SRV) CL_USR_ID,  CL_USR.SIGN_OBJECT  CL_USR_CODE "+ <a name="line.292"></a>
+<span class="sourceLineNo">293</span>                                                 "from ISP_BSS_T cl_usr, "+ <a name="line.293"></a>
+<span class="sourceLineNo">294</span>                                                 "AC_USERS_KNL_T au "+ <a name="line.294"></a>
+<span class="sourceLineNo">295</span>                                                 "where AU.UP_SIGN_USER  = CL_usr.SIGN_OBJECT "+ <a name="line.295"></a>
+<span class="sourceLineNo">296</span>                                                 "group by CL_usr.SIGN_OBJECT) t2 "+<a name="line.296"></a>
+<span class="sourceLineNo">297</span>                                                 "where SERV.ID_SRV=SL.UP_SERVICES "+<a name="line.297"></a>
+<span class="sourceLineNo">298</span>                                                 "and AU_FULL.UP_SIGN_USER=t2.CL_USR_CODE(+) "+ <a name="line.298"></a>
+<span class="sourceLineNo">299</span>                                                 "and AU_FULL.ID_SRV (+)=SL.UP_USERS "+<a name="line.299"></a>
+<span class="sourceLineNo">300</span>                                                 "and CL_USR_FULL.ID_SRV(+)=t2.CL_USR_ID "+<a name="line.300"></a>
+<span class="sourceLineNo">301</span>                                                 ") t1"+    <a name="line.301"></a>
+<span class="sourceLineNo">302</span>                       (st!=null ? " where "+st :" "))<a name="line.302"></a>
+<span class="sourceLineNo">303</span>                   .getSingleResult()).longValue();<a name="line.303"></a>
+<span class="sourceLineNo">304</span>                 <a name="line.304"></a>
+<span class="sourceLineNo">305</span>               log.info("ASys:invokeLocal:count:02:"+auditCount);<a name="line.305"></a>
+<span class="sourceLineNo">306</span>                 } <a name="line.306"></a>
+<span class="sourceLineNo">307</span>                         else if(type.equals("listReport")){<a name="line.307"></a>
+<span class="sourceLineNo">308</span>                                 log.info("invokeLocal:listReport:01");<a name="line.308"></a>
+<span class="sourceLineNo">309</span>                 <a name="line.309"></a>
+<span class="sourceLineNo">310</span>                                 auditReportList = entityManager.createQuery(<a name="line.310"></a>
+<span class="sourceLineNo">311</span>                                                 "select o from ServicesLogKnlT o  " +<a name="line.311"></a>
+<span class="sourceLineNo">312</span>                                                 "where o.dateAction &gt;= :date1 " +<a name="line.312"></a>
+<span class="sourceLineNo">313</span>                                                 "and o.dateAction &lt;= :date2 " +<a name="line.313"></a>
+<span class="sourceLineNo">314</span>                                                 "order by o.idSrv desc ")<a name="line.314"></a>
+<span class="sourceLineNo">315</span>                                                 .setParameter("date1", this.reportDate1)<a name="line.315"></a>
+<span class="sourceLineNo">316</span>                         .setParameter("date2", this.reportDate2)<a name="line.316"></a>
+<span class="sourceLineNo">317</span>                             .getResultList();<a name="line.317"></a>
+<span class="sourceLineNo">318</span>                                         <a name="line.318"></a>
+<span class="sourceLineNo">319</span>                     log.info("ASys:invokeLocal:listReport:02:size:"+auditReportList.size());<a name="line.319"></a>
+<span class="sourceLineNo">320</span>                         }<a name="line.320"></a>
+<span class="sourceLineNo">321</span>                }catch(Exception e){<a name="line.321"></a>
+<span class="sourceLineNo">322</span>                          log.error("ASys:invokeLocal:error:"+e);<a name="line.322"></a>
+<span class="sourceLineNo">323</span>                          evaluteForList=false;<a name="line.323"></a>
+<span class="sourceLineNo">324</span>                          FacesMessages.instance().add("ќшибка!");<a name="line.324"></a>
+<span class="sourceLineNo">325</span>                }<a name="line.325"></a>
+<span class="sourceLineNo">326</span>        }<a name="line.326"></a>
+<span class="sourceLineNo">327</span><a name="line.327"></a>
+<span class="sourceLineNo">328</span><a name="line.328"></a>
+<span class="sourceLineNo">329</span>  <a name="line.329"></a>
+<span class="sourceLineNo">330</span>   private  ServicesLogKnlT searchBean(String sessionId){<a name="line.330"></a>
+<span class="sourceLineNo">331</span>        <a name="line.331"></a>
+<span class="sourceLineNo">332</span>      if(sessionId!=null){<a name="line.332"></a>
+<span class="sourceLineNo">333</span>         List&lt;ServicesLogKnlT&gt; aFuncListCached = (List&lt;ServicesLogKnlT&gt;)<a name="line.333"></a>
+<span class="sourceLineNo">334</span>                                  Component.getInstance("aFuncListCached",ScopeType.SESSION);<a name="line.334"></a>
+<span class="sourceLineNo">335</span>         <a name="line.335"></a>
+<span class="sourceLineNo">336</span>                if(aFuncListCached!=null){<a name="line.336"></a>
+<span class="sourceLineNo">337</span>                        for(ServicesLogKnlT it : aFuncListCached){<a name="line.337"></a>
+<span class="sourceLineNo">338</span>                                 <a name="line.338"></a>
+<span class="sourceLineNo">339</span>                         <a name="line.339"></a>
+<span class="sourceLineNo">340</span>                          if(it.getBaseId().toString().equals(sessionId)){<a name="line.340"></a>
+<span class="sourceLineNo">341</span>                                         log.info("searchBean_Achtung!!!");<a name="line.341"></a>
+<span class="sourceLineNo">342</span>                                         return it;<a name="line.342"></a>
+<span class="sourceLineNo">343</span>                          }<a name="line.343"></a>
+<span class="sourceLineNo">344</span>                        }<a name="line.344"></a>
+<span class="sourceLineNo">345</span>                 }<a name="line.345"></a>
+<span class="sourceLineNo">346</span>           }<a name="line.346"></a>
+<span class="sourceLineNo">347</span>           return null;<a name="line.347"></a>
+<span class="sourceLineNo">348</span>    }<a name="line.348"></a>
+<span class="sourceLineNo">349</span>   <a name="line.349"></a>
+<span class="sourceLineNo">350</span>   public void forView(String modelType) {<a name="line.350"></a>
+<span class="sourceLineNo">351</span>           String  aSysId = FacesContext.getCurrentInstance().getExternalContext()<a name="line.351"></a>
+<span class="sourceLineNo">352</span>                        .getRequestParameterMap()<a name="line.352"></a>
+<span class="sourceLineNo">353</span>                        .get("sessionId");<a name="line.353"></a>
+<span class="sourceLineNo">354</span>          log.info("forView:aSysId:"+aSysId);<a name="line.354"></a>
+<span class="sourceLineNo">355</span>          log.info("forView:modelType:"+modelType);<a name="line.355"></a>
+<span class="sourceLineNo">356</span>          if(aSysId!=null ){<a name="line.356"></a>
+<span class="sourceLineNo">357</span>                  <a name="line.357"></a>
+<span class="sourceLineNo">358</span>                   <a name="line.358"></a>
+<span class="sourceLineNo">359</span>                        if(modelType==null){<a name="line.359"></a>
+<span class="sourceLineNo">360</span>                        return ;<a name="line.360"></a>
+<span class="sourceLineNo">361</span>                    }<a name="line.361"></a>
+<span class="sourceLineNo">362</span>                        <a name="line.362"></a>
+<span class="sourceLineNo">363</span>                        ServicesLogKnlT ar = searchBean(aSysId);<a name="line.363"></a>
+<span class="sourceLineNo">364</span>                 Contexts.getEventContext().set("aFuncBean", ar);<a name="line.364"></a>
+<span class="sourceLineNo">365</span>          }<a name="line.365"></a>
+<span class="sourceLineNo">366</span>   }<a name="line.366"></a>
+<span class="sourceLineNo">367</span>   <a name="line.367"></a>
+<span class="sourceLineNo">368</span>  <a name="line.368"></a>
+<span class="sourceLineNo">369</span>   <a name="line.369"></a>
+<span class="sourceLineNo">370</span>  <a name="line.370"></a>
+<span class="sourceLineNo">371</span>  <a name="line.371"></a>
+<span class="sourceLineNo">372</span>    public void forViewWord(String fileNameSys){<a name="line.372"></a>
+<span class="sourceLineNo">373</span>                log.info("JournManager:forViewWord:01");<a name="line.373"></a>
+<span class="sourceLineNo">374</span>                try{<a name="line.374"></a>
+<span class="sourceLineNo">375</span>                 <a name="line.375"></a>
+<span class="sourceLineNo">376</span>                        if(fileNameSys==null || fileNameSys.equals("")){<a name="line.376"></a>
+<span class="sourceLineNo">377</span>                                fileNameSys="invoke_services";<a name="line.377"></a>
+<span class="sourceLineNo">378</span>                        }<a name="line.378"></a>
+<span class="sourceLineNo">379</span>                        <a name="line.379"></a>
+<span class="sourceLineNo">380</span>                  HttpServletResponse response = (HttpServletResponse)<a name="line.380"></a>
+<span class="sourceLineNo">381</span>                                  FacesContext.getCurrentInstance().getExternalContext().getResponse();<a name="line.381"></a>
+<span class="sourceLineNo">382</span>                  response.setHeader("Content-disposition", "attachment; filename="+fileNameSys+".doc");<a name="line.382"></a>
+<span class="sourceLineNo">383</span>              response.setContentType("application/msword");<a name="line.383"></a>
+<span class="sourceLineNo">384</span><a name="line.384"></a>
+<span class="sourceLineNo">385</span>                }catch(Exception e){<a name="line.385"></a>
+<span class="sourceLineNo">386</span>                        log.error("auditReportsManager:forViewWord:error:"+e);<a name="line.386"></a>
+<span class="sourceLineNo">387</span>                }<a name="line.387"></a>
+<span class="sourceLineNo">388</span>                log.info("auditReportsManager:forViewWord:02");<a name="line.388"></a>
+<span class="sourceLineNo">389</span>        }<a name="line.389"></a>
+<span class="sourceLineNo">390</span>   <a name="line.390"></a>
+<span class="sourceLineNo">391</span>    <a name="line.391"></a>
+<span class="sourceLineNo">392</span>    public Long getAuditCount(){<a name="line.392"></a>
+<span class="sourceLineNo">393</span>           log.info("getAuditCount");<a name="line.393"></a>
+<span class="sourceLineNo">394</span>         <a name="line.394"></a>
+<span class="sourceLineNo">395</span>           invokeLocal("count",0,0,null);<a name="line.395"></a>
+<span class="sourceLineNo">396</span>          <a name="line.396"></a>
+<span class="sourceLineNo">397</span>           return auditCount;<a name="line.397"></a>
+<span class="sourceLineNo">398</span>          <a name="line.398"></a>
+<span class="sourceLineNo">399</span>   }<a name="line.399"></a>
+<span class="sourceLineNo">400</span>    <a name="line.400"></a>
+<span class="sourceLineNo">401</span>   public int getConnectError(){<a name="line.401"></a>
+<span class="sourceLineNo">402</span>           return connectError;<a name="line.402"></a>
+<span class="sourceLineNo">403</span>   }<a name="line.403"></a>
+<span class="sourceLineNo">404</span>  <a name="line.404"></a>
+<span class="sourceLineNo">405</span>   <a name="line.405"></a>
+<span class="sourceLineNo">406</span>   public List &lt;BaseTableItem&gt; getAuditItemsListSelect() {<a name="line.406"></a>
+<span class="sourceLineNo">407</span>                 log.info("getAuditItemsListSelect:01");<a name="line.407"></a>
+<span class="sourceLineNo">408</span>        <a name="line.408"></a>
+<span class="sourceLineNo">409</span>            ASysContext acSys= new ASysContext();<a name="line.409"></a>
+<span class="sourceLineNo">410</span>                   if( auditItemsListSelect==null){<a name="line.410"></a>
+<span class="sourceLineNo">411</span>                           log.info("getAuditItemsListSelect:02");<a name="line.411"></a>
+<span class="sourceLineNo">412</span>                           auditItemsListSelect = new ArrayList&lt;BaseTableItem&gt;();<a name="line.412"></a>
+<span class="sourceLineNo">413</span>                           <a name="line.413"></a>
+<span class="sourceLineNo">414</span>                        <a name="line.414"></a>
+<span class="sourceLineNo">415</span>                           auditItemsListSelect.add(acSys.getAuditItemsMap().get("createdValue"));<a name="line.415"></a>
+<span class="sourceLineNo">416</span>                           auditItemsListSelect.add(acSys.getAuditItemsMap().get("servName"));<a name="line.416"></a>
+<span class="sourceLineNo">417</span>                           auditItemsListSelect.add(acSys.getAuditItemsMap().get("userFio"));<a name="line.417"></a>
+<span class="sourceLineNo">418</span>                           auditItemsListSelect.add(acSys.getAuditItemsMap().get("ipAddress"));<a name="line.418"></a>
+<span class="sourceLineNo">419</span>                   }<a name="line.419"></a>
+<span class="sourceLineNo">420</span>               return this.auditItemsListSelect;<a name="line.420"></a>
+<span class="sourceLineNo">421</span>   }<a name="line.421"></a>
+<span class="sourceLineNo">422</span>   <a name="line.422"></a>
+<span class="sourceLineNo">423</span>   public void setAuditItemsListSelect(List &lt;BaseTableItem&gt; auditItemsListSelect) {<a name="line.423"></a>
+<span class="sourceLineNo">424</span>                    this.auditItemsListSelect=auditItemsListSelect;<a name="line.424"></a>
+<span class="sourceLineNo">425</span>   }<a name="line.425"></a>
+<span class="sourceLineNo">426</span>   <a name="line.426"></a>
+<span class="sourceLineNo">427</span>   public List &lt;BaseTableItem&gt; getAuditItemsListContext() {<a name="line.427"></a>
+<span class="sourceLineNo">428</span>           log.info("orgManager:getAuditItemsListContext");<a name="line.428"></a>
+<span class="sourceLineNo">429</span>           if(auditItemsListContext==null){<a name="line.429"></a>
+<span class="sourceLineNo">430</span>                   ASysContext acSys= new ASysContext();<a name="line.430"></a>
+<span class="sourceLineNo">431</span>                   auditItemsListContext = new ArrayList&lt;BaseTableItem&gt;();<a name="line.431"></a>
+<span class="sourceLineNo">432</span>                   <a name="line.432"></a>
+<span class="sourceLineNo">433</span>                   <a name="line.433"></a>
+<span class="sourceLineNo">434</span>                   auditItemsListContext=acSys.getAuditItemsCollection();<a name="line.434"></a>
+<span class="sourceLineNo">435</span>           }<a name="line.435"></a>
+<span class="sourceLineNo">436</span>           return this.auditItemsListContext;<a name="line.436"></a>
+<span class="sourceLineNo">437</span>   }<a name="line.437"></a>
+<span class="sourceLineNo">438</span>      <a name="line.438"></a>
+<span class="sourceLineNo">439</span>    <a name="line.439"></a>
+<span class="sourceLineNo">440</span>   public void selectRecord(){<a name="line.440"></a>
+<span class="sourceLineNo">441</span>            String  sessionId = FacesContext.getCurrentInstance().getExternalContext()<a name="line.441"></a>
+<span class="sourceLineNo">442</span>                        .getRequestParameterMap()<a name="line.442"></a>
+<span class="sourceLineNo">443</span>                        .get("sessionId");<a name="line.443"></a>
+<span class="sourceLineNo">444</span>            log.info("selectRecord:sessionId="+sessionId);<a name="line.444"></a>
+<span class="sourceLineNo">445</span>            <a name="line.445"></a>
+<span class="sourceLineNo">446</span>           //  forVi/ew(/); //!!!<a name="line.446"></a>
+<span class="sourceLineNo">447</span>            List&lt;String&gt;  selRecSys = (ArrayList&lt;String&gt;)<a name="line.447"></a>
+<span class="sourceLineNo">448</span>                                  Component.getInstance("selRecaFunc",ScopeType.SESSION);<a name="line.448"></a>
+<span class="sourceLineNo">449</span>            <a name="line.449"></a>
+<span class="sourceLineNo">450</span>            if(selRecSys==null){<a name="line.450"></a>
+<span class="sourceLineNo">451</span>               selRecSys = new ArrayList&lt;String&gt;();<a name="line.451"></a>
+<span class="sourceLineNo">452</span>               log.info("selectRecord:01");<a name="line.452"></a>
+<span class="sourceLineNo">453</span>            }<a name="line.453"></a>
+<span class="sourceLineNo">454</span>            <a name="line.454"></a>
+<span class="sourceLineNo">455</span>            <a name="line.455"></a>
+<span class="sourceLineNo">456</span>            ServicesLogKnlT aa = new ServicesLogKnlT();<a name="line.456"></a>
+<span class="sourceLineNo">457</span>           <a name="line.457"></a>
+<span class="sourceLineNo">458</span>            <a name="line.458"></a>
+<span class="sourceLineNo">459</span>            if(aa!=null){<a name="line.459"></a>
+<span class="sourceLineNo">460</span>             if(selRecSys.contains(sessionId)){<a name="line.460"></a>
+<span class="sourceLineNo">461</span>                selRecSys.remove(sessionId);<a name="line.461"></a>
+<span class="sourceLineNo">462</span>                aa.setSelected(false);<a name="line.462"></a>
+<span class="sourceLineNo">463</span>                log.info("selectRecord:02");<a name="line.463"></a>
+<span class="sourceLineNo">464</span>             }else{<a name="line.464"></a>
+<span class="sourceLineNo">465</span>                selRecSys.add(sessionId);<a name="line.465"></a>
+<span class="sourceLineNo">466</span>                aa.setSelected(true);<a name="line.466"></a>
+<span class="sourceLineNo">467</span>                log.info("selectRecord:03");<a name="line.467"></a>
+<span class="sourceLineNo">468</span>             }<a name="line.468"></a>
+<span class="sourceLineNo">469</span>            Contexts.getSessionContext().set("selRecaFunc", selRecSys); <a name="line.469"></a>
+<span class="sourceLineNo">470</span>            <a name="line.470"></a>
+<span class="sourceLineNo">471</span>            Contexts.getEventContext().set("aFuncBean", aa);<a name="line.471"></a>
+<span class="sourceLineNo">472</span>           }<a name="line.472"></a>
+<span class="sourceLineNo">473</span>        }<a name="line.473"></a>
+<span class="sourceLineNo">474</span>   <a name="line.474"></a>
+<span class="sourceLineNo">475</span>   public void clearDate(){<a name="line.475"></a>
+<span class="sourceLineNo">476</span>           <a name="line.476"></a>
+<span class="sourceLineNo">477</span>           log.info("aSysManager:clearDate:archiveParamValue:"+this.archiveParamValue);<a name="line.477"></a>
+<span class="sourceLineNo">478</span>           <a name="line.478"></a>
+<span class="sourceLineNo">479</span>           BufferedWriter bw=null;<a name="line.479"></a>
+<span class="sourceLineNo">480</span>         <a name="line.480"></a>
+<span class="sourceLineNo">481</span>           try{<a name="line.481"></a>
+<span class="sourceLineNo">482</span><a name="line.482"></a>
+<span class="sourceLineNo">483</span>                   Context ctx = new InitialContext(); <a name="line.483"></a>
+<span class="sourceLineNo">484</span>                 <a name="line.484"></a>
+<span class="sourceLineNo">485</span>               BaseParamItem bpi = new BaseParamItem(ServiceReestrPro.ArchiveAuditSys.name());<a name="line.485"></a>
+<span class="sourceLineNo">486</span>              <a name="line.486"></a>
+<span class="sourceLineNo">487</span>               bpi.put("gactiontype", ServiceReestrAction.TASK_RUN.name());<a name="line.487"></a>
+<span class="sourceLineNo">488</span>               <a name="line.488"></a>
+<span class="sourceLineNo">489</span>               bpi.put("archiveParamValue", this.archiveParamValue);<a name="line.489"></a>
+<span class="sourceLineNo">490</span>               <a name="line.490"></a>
+<span class="sourceLineNo">491</span>               IRemoteFrontageLocal obj = (IRemoteFrontageLocal)ctx.lookup(jndiBinding);<a name="line.491"></a>
+<span class="sourceLineNo">492</span>                           <a name="line.492"></a>
+<span class="sourceLineNo">493</span>          <a name="line.493"></a>
+<span class="sourceLineNo">494</span><a name="line.494"></a>
+<span class="sourceLineNo">495</span>          <a name="line.495"></a>
+<span class="sourceLineNo">496</span>           <a name="line.496"></a>
+<span class="sourceLineNo">497</span>               obj.run(bpi);<a name="line.497"></a>
+<span class="sourceLineNo">498</span>               <a name="line.498"></a>
+<span class="sourceLineNo">499</span>           audit(ResourcesMap.AUDIT_SYS, ActionsMap.START);<a name="line.499"></a>
+<span class="sourceLineNo">500</span>           <a name="line.500"></a>
+<span class="sourceLineNo">501</span>                <a name="line.501"></a>
+<span class="sourceLineNo">502</span><a name="line.502"></a>
+<span class="sourceLineNo">503</span>                   <a name="line.503"></a>
+<span class="sourceLineNo">504</span>           }catch (Exception eSys) {<a name="line.504"></a>
+<span class="sourceLineNo">505</span>                 log.error("aSysManager:clearDate:ERROR:"+eSys);<a name="line.505"></a>
+<span class="sourceLineNo">506</span>           }finally{<a name="line.506"></a>
+<span class="sourceLineNo">507</span>                   try{<a name="line.507"></a>
+<span class="sourceLineNo">508</span>                    if(bw!=null){<a name="line.508"></a>
+<span class="sourceLineNo">509</span>                            bw.close  ();<a name="line.509"></a>
+<span class="sourceLineNo">510</span>                        }<a name="line.510"></a>
+<span class="sourceLineNo">511</span>                   }catch (Exception erSys) {<a name="line.511"></a>
+<span class="sourceLineNo">512</span>                                 log.error("aSysManager:clearDate:ERROR:"+erSys);<a name="line.512"></a>
+<span class="sourceLineNo">513</span>                   }<a name="line.513"></a>
+<span class="sourceLineNo">514</span>           }<a name="line.514"></a>
+<span class="sourceLineNo">515</span>   }<a name="line.515"></a>
+<span class="sourceLineNo">516</span>   <a name="line.516"></a>
+<span class="sourceLineNo">517</span>   public String getDellMessage() {<a name="line.517"></a>
+<span class="sourceLineNo">518</span>           return dellMessage;<a name="line.518"></a>
+<span class="sourceLineNo">519</span>   }<a name="line.519"></a>
+<span class="sourceLineNo">520</span>   public void setDellMessage(String dellMessage) {<a name="line.520"></a>
+<span class="sourceLineNo">521</span>           this.dellMessage = dellMessage;<a name="line.521"></a>
+<span class="sourceLineNo">522</span>   } <a name="line.522"></a>
+<span class="sourceLineNo">523</span>   <a name="line.523"></a>
+<span class="sourceLineNo">524</span>   public Date getClearDate1(){<a name="line.524"></a>
+<span class="sourceLineNo">525</span>           return this.clearDate1;<a name="line.525"></a>
+<span class="sourceLineNo">526</span>   }<a name="line.526"></a>
+<span class="sourceLineNo">527</span>   public void setClearDate1(Date clearDate1){<a name="line.527"></a>
+<span class="sourceLineNo">528</span>           this.clearDate1=clearDate1;<a name="line.528"></a>
+<span class="sourceLineNo">529</span>   }<a name="line.529"></a>
+<span class="sourceLineNo">530</span>  <a name="line.530"></a>
+<span class="sourceLineNo">531</span>   public Date getClearDate2(){<a name="line.531"></a>
+<span class="sourceLineNo">532</span>           return this.clearDate2;<a name="line.532"></a>
+<span class="sourceLineNo">533</span>   }<a name="line.533"></a>
+<span class="sourceLineNo">534</span>   public void setClearDate2(Date clearDate2){<a name="line.534"></a>
+<span class="sourceLineNo">535</span>           this.clearDate2=clearDate2;<a name="line.535"></a>
+<span class="sourceLineNo">536</span>   }<a name="line.536"></a>
+<span class="sourceLineNo">537</span><a name="line.537"></a>
+<span class="sourceLineNo">538</span>  /*<a name="line.538"></a>
+<span class="sourceLineNo">539</span> //  было использовано только дл€ отображени€ параметра<a name="line.539"></a>
+<span class="sourceLineNo">540</span> // &lt;!--h:outputText value="#{aSysManager.archiveParamValue}"/--&gt;<a name="line.540"></a>
+<span class="sourceLineNo">541</span> //  заменено на ввод значени€ Long archiveParamValue<a name="line.541"></a>
+<span class="sourceLineNo">542</span>  <a name="line.542"></a>
+<span class="sourceLineNo">543</span>   publ/ic Strin/g getArchivePar/amValue(/) {<a name="line.543"></a>
+<span class="sourceLineNo">544</span>   pub/lic void setArchive/ParamValue(String archiv/eParamValue) {<a name="line.544"></a>
+<span class="sourceLineNo">545</span>*/<a name="line.545"></a>
+<span class="sourceLineNo">546</span>   <a name="line.546"></a>
+<span class="sourceLineNo">547</span>   public Long getArchiveParamValue() {<a name="line.547"></a>
+<span class="sourceLineNo">548</span>           <a name="line.548"></a>
+<span class="sourceLineNo">549</span>           log.info("aSysManager:getArchiveParamValue:01");<a name="line.549"></a>
+<span class="sourceLineNo">550</span>           <a name="line.550"></a>
+<span class="sourceLineNo">551</span>           if(this.archiveParamValue==null){<a name="line.551"></a>
+<span class="sourceLineNo">552</span>                   <a name="line.552"></a>
+<span class="sourceLineNo">553</span>                   //!!!<a name="line.553"></a>
+<span class="sourceLineNo">554</span>                   this.archiveParamValue=6L;<a name="line.554"></a>
+<span class="sourceLineNo">555</span>                   <a name="line.555"></a>
+<span class="sourceLineNo">556</span>                   try{<a name="line.556"></a>
+<span class="sourceLineNo">557</span>                           List&lt;String&gt; los = entityManager.createNativeQuery(<a name="line.557"></a>
+<span class="sourceLineNo">558</span>                                      "select ST.VALUE_PARAM "+<a name="line.558"></a>
+<span class="sourceLineNo">559</span>                              "from SETTINGS_KNL_T st "+<a name="line.559"></a>
+<span class="sourceLineNo">560</span>                              "where ST.SIGN_OBJECT=? ")<a name="line.560"></a>
+<span class="sourceLineNo">561</span>                              .setParameter(1, param_code)<a name="line.561"></a>
+<span class="sourceLineNo">562</span>                              .getResultList();<a name="line.562"></a>
+<span class="sourceLineNo">563</span>                          <a name="line.563"></a>
+<span class="sourceLineNo">564</span>                       if(los!=null&amp;&amp;!los.isEmpty()){<a name="line.564"></a>
+<span class="sourceLineNo">565</span>                           this.archiveParamValue= Long.parseLong(los.get(0));<a name="line.565"></a>
+<span class="sourceLineNo">566</span>                       }<a name="line.566"></a>
+<span class="sourceLineNo">567</span>                     <a name="line.567"></a>
+<span class="sourceLineNo">568</span>                       log.info("aSysManager:getArchiveParamValue:archiveParamValue:"+this.archiveParamValue);<a name="line.568"></a>
+<span class="sourceLineNo">569</span>                          <a name="line.569"></a>
+<span class="sourceLineNo">570</span>                   }catch(Exception e){<a name="line.570"></a>
+<span class="sourceLineNo">571</span>                           log.error("aSysManager:getArchiveParamValue:ERROR:"+e);<a name="line.571"></a>
+<span class="sourceLineNo">572</span>                   }<a name="line.572"></a>
+<span class="sourceLineNo">573</span>           }<a name="line.573"></a>
+<span class="sourceLineNo">574</span>           return this.archiveParamValue;<a name="line.574"></a>
+<span class="sourceLineNo">575</span>   }<a name="line.575"></a>
+<span class="sourceLineNo">576</span>   public void setArchiveParamValue(Long archiveParamValue) {<a name="line.576"></a>
+<span class="sourceLineNo">577</span>                this.archiveParamValue = archiveParamValue;<a name="line.577"></a>
+<span class="sourceLineNo">578</span>   }<a name="line.578"></a>
+<span class="sourceLineNo">579</span>   <a name="line.579"></a>
+<span class="sourceLineNo">580</span>   public void audit(ResourcesMap resourcesMap, ActionsMap actionsMap){<a name="line.580"></a>
+<span class="sourceLineNo">581</span>           try{<a name="line.581"></a>
+<span class="sourceLineNo">582</span>                   AuditExportData auditExportDataSys = (AuditExportData)Component.getInstance("auditExportData",ScopeType.SESSION);<a name="line.582"></a>
+<span class="sourceLineNo">583</span>                   auditExportDataSys.addFunc(resourcesMap.getCode()+":"+actionsMap.getCode());<a name="line.583"></a>
+<span class="sourceLineNo">584</span>                   <a name="line.584"></a>
+<span class="sourceLineNo">585</span>           }catch(Exception e){<a name="line.585"></a>
+<span class="sourceLineNo">586</span>                   log.error("GroupManager:audit:error:"+e);<a name="line.586"></a>
+<span class="sourceLineNo">587</span>           }<a name="line.587"></a>
+<span class="sourceLineNo">588</span>  }<a name="line.588"></a>
+<span class="sourceLineNo">589</span>   <a name="line.589"></a>
+<span class="sourceLineNo">590</span>   public Boolean getEvaluteForList() {<a name="line.590"></a>
+<span class="sourceLineNo">591</span>        <a name="line.591"></a>
+<span class="sourceLineNo">592</span>        log.info("armManager:evaluteForList:01");<a name="line.592"></a>
+<span class="sourceLineNo">593</span>        if(evaluteForList==null){<a name="line.593"></a>
+<span class="sourceLineNo">594</span>                evaluteForList=false;<a name="line.594"></a>
+<span class="sourceLineNo">595</span>        String remoteAuditSys = FacesContext.getCurrentInstance().getExternalContext()<a name="line.595"></a>
+<span class="sourceLineNo">596</span>                     .getRequestParameterMap()<a name="line.596"></a>
+<span class="sourceLineNo">597</span>                     .get("remoteAudit");<a name="line.597"></a>
+<span class="sourceLineNo">598</span>           log.info("aFuncManager:evaluteForList:remoteAudit:"+remoteAuditSys);<a name="line.598"></a>
+<span class="sourceLineNo">599</span>        <a name="line.599"></a>
+<span class="sourceLineNo">600</span>        if(remoteAuditSys!=null&amp;&amp;<a name="line.600"></a>
+<span class="sourceLineNo">601</span>         <a name="line.601"></a>
+<span class="sourceLineNo">602</span>           !"OpenCrtFact".equals(remoteAuditSys)&amp;&amp;      <a name="line.602"></a>
+<span class="sourceLineNo">603</span>           !"OpenUpdFact".equals(remoteAuditSys)&amp;&amp;<a name="line.603"></a>
+<span class="sourceLineNo">604</span>           !"OpenDelFact".equals(remoteAuditSys)&amp;&amp;<a name="line.604"></a>
+<span class="sourceLineNo">605</span>               !"onSelColFact".equals(remoteAuditSys)&amp;&amp;<a name="line.605"></a>
+<span class="sourceLineNo">606</span>               !"refreshPdFact".equals(remoteAuditSys)){<a name="line.606"></a>
+<span class="sourceLineNo">607</span>                log.info("aFuncManager:evaluteForList!!!");<a name="line.607"></a>
+<span class="sourceLineNo">608</span>                    evaluteForList=true;<a name="line.608"></a>
+<span class="sourceLineNo">609</span>        }<a name="line.609"></a>
+<span class="sourceLineNo">610</span>         }<a name="line.610"></a>
+<span class="sourceLineNo">611</span>       return evaluteForList;<a name="line.611"></a>
+<span class="sourceLineNo">612</span>   }<a name="line.612"></a>
+<span class="sourceLineNo">613</span>   public Boolean getEvaluteForListFooter() {<a name="line.613"></a>
+<span class="sourceLineNo">614</span>                <a name="line.614"></a>
+<span class="sourceLineNo">615</span>          <a name="line.615"></a>
+<span class="sourceLineNo">616</span>                if(evaluteForListFooter==null){<a name="line.616"></a>
+<span class="sourceLineNo">617</span>                        evaluteForListFooter=false;<a name="line.617"></a>
+<span class="sourceLineNo">618</span>                String remoteAuditSys = FacesContext.getCurrentInstance().getExternalContext()<a name="line.618"></a>
+<span class="sourceLineNo">619</span>                             .getRequestParameterMap()<a name="line.619"></a>
+<span class="sourceLineNo">620</span>                             .get("remoteAudit");<a name="line.620"></a>
+<span class="sourceLineNo">621</span>                   log.info("aFuncManager:evaluteForListFooter:remoteAudit:"+remoteAuditSys);<a name="line.621"></a>
+<span class="sourceLineNo">622</span>             <a name="line.622"></a>
+<span class="sourceLineNo">623</span>                if(getEvaluteForList()&amp;&amp;<a name="line.623"></a>
+<span class="sourceLineNo">624</span>                        <a name="line.624"></a>
+<span class="sourceLineNo">625</span>                   !"protBeanWord".equals(remoteAuditSys)&amp;&amp;     <a name="line.625"></a>
+<span class="sourceLineNo">626</span>                        <a name="line.626"></a>
+<span class="sourceLineNo">627</span>                       !"selRecAllFact".equals(remoteAuditSys)&amp;&amp;<a name="line.627"></a>
+<span class="sourceLineNo">628</span>                       !"clRecAllFact".equals(remoteAuditSys)&amp;&amp;<a name="line.628"></a>
+<span class="sourceLineNo">629</span>                      // !remoteAudit equals "clSelOneFact"<a name="line.629"></a>
+<span class="sourceLineNo">630</span>                       !"onSelColSaveFact".equals(remoteAuditSys)){<a name="line.630"></a>
+<span class="sourceLineNo">631</span>                          log.info("aFuncManager:evaluteForListFooter!!!");<a name="line.631"></a>
+<span class="sourceLineNo">632</span>                              evaluteForListFooter=true;<a name="line.632"></a>
+<span class="sourceLineNo">633</span>                }<a name="line.633"></a>
+<span class="sourceLineNo">634</span>                 }<a name="line.634"></a>
+<span class="sourceLineNo">635</span>               return evaluteForListFooter;<a name="line.635"></a>
+<span class="sourceLineNo">636</span>           }<a name="line.636"></a>
+<span class="sourceLineNo">637</span>   <a name="line.637"></a>
+<span class="sourceLineNo">638</span>   public Boolean getEvaluteForBean() {<a name="line.638"></a>
+<span class="sourceLineNo">639</span>                <a name="line.639"></a>
+<span class="sourceLineNo">640</span>                  <a name="line.640"></a>
+<span class="sourceLineNo">641</span>                        if(evaluteForBean==null){<a name="line.641"></a>
+<span class="sourceLineNo">642</span>                                evaluteForBean=false;<a name="line.642"></a>
+<span class="sourceLineNo">643</span>                        String remoteAuditSys = FacesContext.getCurrentInstance().getExternalContext()<a name="line.643"></a>
+<span class="sourceLineNo">644</span>                                     .getRequestParameterMap()<a name="line.644"></a>
+<span class="sourceLineNo">645</span>                                     .get("remoteAudit");<a name="line.645"></a>
+<span class="sourceLineNo">646</span>                            log.info("aFuncManager:evaluteForBean:remoteAudit:"+remoteAuditSys);<a name="line.646"></a>
+<span class="sourceLineNo">647</span>                                String sessionId = FacesContext.getCurrentInstance().getExternalContext()<a name="line.647"></a>
+<span class="sourceLineNo">648</span>                                     .getRequestParameterMap()<a name="line.648"></a>
+<span class="sourceLineNo">649</span>                                     .get("sessionId");<a name="line.649"></a>
+<span class="sourceLineNo">650</span>                            log.info("aFuncManager:evaluteForBean:sessionId:"+sessionId);<a name="line.650"></a>
+<span class="sourceLineNo">651</span>                        if(sessionId!=null &amp;&amp; remoteAuditSys!=null &amp;&amp;<a name="line.651"></a>
+<span class="sourceLineNo">652</span>                           ("rowSelectFact".equals(remoteAuditSys)||    <a name="line.652"></a>
+<span class="sourceLineNo">653</span>                            "UpdFact".equals(remoteAuditSys))){<a name="line.653"></a>
+<span class="sourceLineNo">654</span>                              log.info("aFuncManager:evaluteForBean!!!");<a name="line.654"></a>
+<span class="sourceLineNo">655</span>                                      evaluteForBean=true;<a name="line.655"></a>
+<span class="sourceLineNo">656</span>                        }<a name="line.656"></a>
+<span class="sourceLineNo">657</span>                         }<a name="line.657"></a>
+<span class="sourceLineNo">658</span>                     return evaluteForBean;<a name="line.658"></a>
+<span class="sourceLineNo">659</span>                   }<a name="line.659"></a>
+<span class="sourceLineNo">660</span><a name="line.660"></a>
+<span class="sourceLineNo">661</span>}<a name="line.661"></a>
+<span class="sourceLineNo">662</span><a name="line.662"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</div>
+</body>
+</html>

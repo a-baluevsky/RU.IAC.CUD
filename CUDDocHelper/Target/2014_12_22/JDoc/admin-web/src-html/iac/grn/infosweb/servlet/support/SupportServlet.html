@@ -1,0 +1,163 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ru">
+<head>
+<title>Source code</title>
+<link rel="stylesheet" type="text/css" href="../../../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<div class="sourceContainer">
+<pre><span class="sourceLineNo">001</span>package iac.grn.infosweb.servlet.support;<a name="line.1"></a>
+<span class="sourceLineNo">002</span><a name="line.2"></a>
+<span class="sourceLineNo">003</span>import iac.grn.infosweb.session.support.SupportManager;<a name="line.3"></a>
+<span class="sourceLineNo">004</span><a name="line.4"></a>
+<span class="sourceLineNo">005</span>import java.io.IOException;<a name="line.5"></a>
+<span class="sourceLineNo">006</span>import java.io.PrintWriter;<a name="line.6"></a>
+<span class="sourceLineNo">007</span><a name="line.7"></a>
+<span class="sourceLineNo">008</span>import javax.servlet.ServletConfig;<a name="line.8"></a>
+<span class="sourceLineNo">009</span>import javax.servlet.ServletException;<a name="line.9"></a>
+<span class="sourceLineNo">010</span>import javax.servlet.http.HttpServlet;<a name="line.10"></a>
+<span class="sourceLineNo">011</span>import javax.servlet.http.HttpServletRequest;<a name="line.11"></a>
+<span class="sourceLineNo">012</span>import javax.servlet.http.HttpServletResponse;<a name="line.12"></a>
+<span class="sourceLineNo">013</span><a name="line.13"></a>
+<span class="sourceLineNo">014</span>import org.jboss.seam.Component;<a name="line.14"></a>
+<span class="sourceLineNo">015</span>import org.jboss.seam.ScopeType;<a name="line.15"></a>
+<span class="sourceLineNo">016</span>import org.jboss.seam.servlet.ContextualHttpServletRequest;<a name="line.16"></a>
+<span class="sourceLineNo">017</span>import org.slf4j.Logger;<a name="line.17"></a>
+<span class="sourceLineNo">018</span>import org.slf4j.LoggerFactory;<a name="line.18"></a>
+<span class="sourceLineNo">019</span><a name="line.19"></a>
+<span class="sourceLineNo">020</span> public class SupportServlet extends HttpServlet {<a name="line.20"></a>
+<span class="sourceLineNo">021</span><a name="line.21"></a>
+<span class="sourceLineNo">022</span>        private static final Logger LOGGER = LoggerFactory.getLogger(SupportServlet.class);<a name="line.22"></a>
+<span class="sourceLineNo">023</span><a name="line.23"></a>
+<span class="sourceLineNo">024</span>        private static final long serialVersionUID = 1L;<a name="line.24"></a>
+<span class="sourceLineNo">025</span><a name="line.25"></a>
+<span class="sourceLineNo">026</span>        private String helpFio = null, helpPost = null, helpMail = null,<a name="line.26"></a>
+<span class="sourceLineNo">027</span>                        helpText = null, helpTel = null;<a name="line.27"></a>
+<span class="sourceLineNo">028</span><a name="line.28"></a>
+<span class="sourceLineNo">029</span>        public SupportServlet() {<a name="line.29"></a>
+<span class="sourceLineNo">030</span>                super();<a name="line.30"></a>
+<span class="sourceLineNo">031</span>        }<a name="line.31"></a>
+<span class="sourceLineNo">032</span><a name="line.32"></a>
+<span class="sourceLineNo">033</span>        public void init(ServletConfig config) throws ServletException {<a name="line.33"></a>
+<span class="sourceLineNo">034</span>                LOGGER.debug("SupportServlet:init:01");<a name="line.34"></a>
+<span class="sourceLineNo">035</span>        }<a name="line.35"></a>
+<span class="sourceLineNo">036</span><a name="line.36"></a>
+<span class="sourceLineNo">037</span>        protected void service(HttpServletRequest request,<a name="line.37"></a>
+<span class="sourceLineNo">038</span>                        HttpServletResponse response) throws ServletException, IOException {<a name="line.38"></a>
+<span class="sourceLineNo">039</span>                LOGGER.debug("SupportServlet:service:01");<a name="line.39"></a>
+<span class="sourceLineNo">040</span><a name="line.40"></a>
+<span class="sourceLineNo">041</span>                final HttpServletRequest f_request = request;<a name="line.41"></a>
+<span class="sourceLineNo">042</span>                final HttpServletResponse f_response = response;<a name="line.42"></a>
+<span class="sourceLineNo">043</span><a name="line.43"></a>
+<span class="sourceLineNo">044</span>                try {<a name="line.44"></a>
+<span class="sourceLineNo">045</span>                        response.setContentType("text/html;charset=UTF-8");<a name="line.45"></a>
+<span class="sourceLineNo">046</span>                        PrintWriter out = response.getWriter();<a name="line.46"></a>
+<span class="sourceLineNo">047</span>                        out.println("&lt;html&gt;");<a name="line.47"></a>
+<span class="sourceLineNo">048</span>                        out.println("&lt;head&gt;");<a name="line.48"></a>
+<span class="sourceLineNo">049</span>                        out.println("&lt;title&gt;SupportServlet&lt;/title&gt;");<a name="line.49"></a>
+<span class="sourceLineNo">050</span>                        out.println("&lt;/head&gt;");<a name="line.50"></a>
+<span class="sourceLineNo">051</span>                        out.println("&lt;body&gt;");<a name="line.51"></a>
+<span class="sourceLineNo">052</span>                        out.println("&lt;h1&gt;SupportServlet&lt;/h1&gt;");<a name="line.52"></a>
+<span class="sourceLineNo">053</span>                        out.println("&lt;/body&gt;");<a name="line.53"></a>
+<span class="sourceLineNo">054</span>                        out.println("&lt;script&gt;");<a name="line.54"></a>
+<span class="sourceLineNo">055</span>                        out.println("window.close();");<a name="line.55"></a>
+<span class="sourceLineNo">056</span>                        out.println("&lt;/script&gt;");<a name="line.56"></a>
+<span class="sourceLineNo">057</span>                        out.println("&lt;/html&gt;");<a name="line.57"></a>
+<span class="sourceLineNo">058</span><a name="line.58"></a>
+<span class="sourceLineNo">059</span>                        helpFio = request.getParameter("help_fio");<a name="line.59"></a>
+<span class="sourceLineNo">060</span>                        helpPost = request.getParameter("help_post");<a name="line.60"></a>
+<span class="sourceLineNo">061</span>                        helpMail = request.getParameter("help_mail");<a name="line.61"></a>
+<span class="sourceLineNo">062</span>                        helpText = request.getParameter("help_text");<a name="line.62"></a>
+<span class="sourceLineNo">063</span>                        helpTel = request.getParameter("help_tel");<a name="line.63"></a>
+<span class="sourceLineNo">064</span><a name="line.64"></a>
+<span class="sourceLineNo">065</span>                        LOGGER.debug("SupportServlet:service:help_fio:" + helpFio);<a name="line.65"></a>
+<span class="sourceLineNo">066</span>                        LOGGER.debug("SupportServlet:service:help_post:" + helpPost);<a name="line.66"></a>
+<span class="sourceLineNo">067</span>                        LOGGER.debug("SupportServlet:service:help_mail:" + helpMail);<a name="line.67"></a>
+<span class="sourceLineNo">068</span>                        LOGGER.debug("SupportServlet:service:help_text:" + helpText);<a name="line.68"></a>
+<span class="sourceLineNo">069</span>                        LOGGER.debug("SupportServlet:service:help_texl:" + helpTel);<a name="line.69"></a>
+<span class="sourceLineNo">070</span><a name="line.70"></a>
+<span class="sourceLineNo">071</span>                        new ContextualHttpServletRequest(request) {<a name="line.71"></a>
+<span class="sourceLineNo">072</span>                                @Override<a name="line.72"></a>
+<span class="sourceLineNo">073</span>                                public void process() throws Exception {<a name="line.73"></a>
+<span class="sourceLineNo">074</span>                                        doWork(f_request, f_response);<a name="line.74"></a>
+<span class="sourceLineNo">075</span>                                }<a name="line.75"></a>
+<span class="sourceLineNo">076</span>                        }.run();<a name="line.76"></a>
+<span class="sourceLineNo">077</span><a name="line.77"></a>
+<span class="sourceLineNo">078</span>                } catch (Exception e) {<a name="line.78"></a>
+<span class="sourceLineNo">079</span>                        LOGGER.error("SupportServlet:service:ERROR:", e);<a name="line.79"></a>
+<span class="sourceLineNo">080</span>                }<a name="line.80"></a>
+<span class="sourceLineNo">081</span>                LOGGER.debug("SupportServlet:service:02");<a name="line.81"></a>
+<span class="sourceLineNo">082</span>        }<a name="line.82"></a>
+<span class="sourceLineNo">083</span><a name="line.83"></a>
+<span class="sourceLineNo">084</span>        private void doWork(HttpServletRequest request, HttpServletResponse response) {<a name="line.84"></a>
+<span class="sourceLineNo">085</span>                SupportManager sm = (SupportManager) Component.getInstance(<a name="line.85"></a>
+<span class="sourceLineNo">086</span>                                "supportManager", ScopeType.EVENT);<a name="line.86"></a>
+<span class="sourceLineNo">087</span>                sm.sendMail(helpFio, helpPost, helpMail, helpText, helpTel);<a name="line.87"></a>
+<span class="sourceLineNo">088</span><a name="line.88"></a>
+<span class="sourceLineNo">089</span>        }<a name="line.89"></a>
+<span class="sourceLineNo">090</span>        <a name="line.90"></a>
+<span class="sourceLineNo">091</span>}<a name="line.91"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+javadoc: warning - No source files for package iac
+javadoc: warning - No source files for package ru
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-ejb\src\main\java\mypackage\MyPhaseListener.java:3: error: package javax.faces.event does not exist
+import javax.faces.event.PhaseEvent;
+                        ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-ejb\src\main\java\mypackage\MyPhaseListener.java:4: error: package javax.faces.event does not exist
+import javax.faces.event.PhaseId;
+                        ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-ejb\src\main\java\mypackage\MyPhaseListener.java:5: error: package javax.faces.event does not exist
+import javax.faces.event.PhaseListener;
+                        ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-ejb\src\main\java\mypackage\MyPhaseListener.java:8: error: package org.apache.log4j does not exist
+import org.apache.log4j.Logger;
+                       ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-ejb\src\main\java\mypackage\MyPhaseListener.java:9: error: package org.jboss.seam.annotations does not exist
+import org.jboss.seam.annotations.Name;
+                                 ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-ejb\src\main\java\mypackage\MyPhaseListener.java:19: error: cannot find symbol
+ public class MyPhaseListener implements PhaseListener {
+                                         ^
+  symbol: class PhaseListener
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-ejb\src\main\java\mypackage\MyPhaseListener.java:18: error: cannot find symbol
+@Name("myPhaseListener")
+ ^
+  symbol: class Name
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-ejb\src\main\java\mypackage\MyPhaseListener.java:22: error: cannot find symbol
+	private Logger log = Logger.getLogger(MyPhaseListener.class);
+	        ^
+  symbol:   class Logger
+  location: class MyPhaseListener
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-ejb\src\main\java\mypackage\MyPhaseListener.java:27: error: cannot find symbol
+    public PhaseId getPhaseId() {
+           ^
+  symbol:   class PhaseId
+  location: class MyPhaseListener
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-ejb\src\main\java\mypackage\MyPhaseListener.java:35: error: cannot find symbol
+    public void beforePhase(PhaseEvent event) {
+                            ^
+  symbol:   class PhaseEvent
+  location: class MyPhaseListener
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-ejb\src\main\java\mypackage\MyPhaseListener.java:47: error: cannot find symbol
+    public void afterPhase(PhaseEvent event) {
+                           ^
+  symbol:   class PhaseEvent
+  location: class MyPhaseListener
+javadoc: warning - No source files for package iac
+javadoc: warning - No source files for package ru
+javadoc: warning - Class Name not found.
+javadoc: warning - Class Name not found.
+javadoc: warning - Class Name not found.
+javadoc: warning - Class Name not found.
+javadoc: warning - Class Name not found.
+javadoc: warning - Class Name not found.
+javadoc: warning - Class Name not found.
+javadoc: warning - Class Name not found.
+javadoc: warning - Class Name not found.
+javadoc: warning - Class Name not found.
+javadoc: warning - Class Name not found.
+javadoc: warning - Class Name not found.
+javadoc: warning - Class Name not found.
+javadoc: warning - Class Name not found.
+javadoc: warning - Class Name not found.
+javadoc: warning - Class Name not found.
+javadoc: warning - Class Name not found.
+javadoc: warning - Class Name not found.
+javadoc: warning - Class Name not found.
+javadoc: warning - Class Name not found.
+javadoc: warning - Class Name not found.
+javadoc: warning - Class Name not found.
+javadoc: warning - Class Name not found.
+javadoc: warning - Class Name not found.
+javadoc: warning - Class Name not found.
+javadoc: warning - Class Name not found.

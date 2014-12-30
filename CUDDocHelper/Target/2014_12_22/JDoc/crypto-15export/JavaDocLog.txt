@@ -1,0 +1,106 @@
+Loading source files for package ru.spb.iac.cud.infosweb.web.init...
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java]]
+[parsing completed 30ms]
+Loading source files for package ru.spb.iac.crypto.export...
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\crypto-15export\src\main\java\ru\spb\iac\crypto\export\Crypto15Init.java]]
+[parsing completed 30ms]
+Constructing Javadoc information...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:3: error: package javax.servlet does not exist
+import javax.servlet.ServletConfig;
+                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:4: error: package javax.servlet does not exist
+import javax.servlet.ServletContext;
+                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:5: error: package javax.servlet does not exist
+import javax.servlet.ServletException;
+                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:6: error: package javax.servlet.http does not exist
+import javax.servlet.http.HttpServlet;
+                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:8: error: package mypackage does not exist
+import mypackage.Configuration;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:10: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:11: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:18: error: cannot find symbol
+ public class StartupServlet extends HttpServlet {
+                                     ^
+  symbol: class HttpServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:20: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(StartupServlet.class);
+	                     ^
+  symbol:   class Logger
+  location: class StartupServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:35: error: cannot find symbol
+	public void init(ServletConfig config) throws ServletException {
+	                 ^
+  symbol:   class ServletConfig
+  location: class StartupServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:35: error: cannot find symbol
+	public void init(ServletConfig config) throws ServletException {
+	                                              ^
+  symbol:   class ServletException
+  location: class StartupServlet
+[search path for source files: C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java,C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\crypto-15export\src\main\java]
+[search path for class files: C:\Program Files\Java\jdk1.7.0_07\jre\lib\resources.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\rt.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\sunrsasign.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\jsse.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\jce.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\charsets.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\jfr.jar,C:\Program Files\Java\jdk1.7.0_07\jre\classes,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\access-bridge.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\ASN1P.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\asn1rt.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\commons-logging.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\cpSSL.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\dnsns.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\forms_rt.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\jaccess.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCP.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCPinst.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCPRequest.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCPRevCheck.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCPRevTools.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCPxml.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCryptoP.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\localedata.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\sunec.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\sunjce_provider.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\sunmscapi.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\sunpkcs11.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\XMLDSigRI.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\xmlsec-1.5.1.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\zipfs.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/io/InputStream.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/ArrayList.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/List.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/parsers/DocumentBuilder.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/parsers/DocumentBuilderFactory.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\commons-logging.jar(org/apache/commons/logging/Log.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\commons-logging.jar(org/apache/commons/logging/LogFactory.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\xmlsec-1.5.1.jar(org/apache/xml/security/algorithms/JCEMapper.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\xmlsec-1.5.1.jar(org/apache/xml/security/algorithms/SignatureAlgorithm.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\xmlsec-1.5.1.jar(org/apache/xml/security/c14n/Canonicalizer.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\xmlsec-1.5.1.jar(org/apache/xml/security/keys/keyresolver/KeyResolver.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\xmlsec-1.5.1.jar(org/apache/xml/security/transforms/Transform.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\xmlsec-1.5.1.jar(org/apache/xml/security/utils/ElementProxy.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\xmlsec-1.5.1.jar(org/apache/xml/security/utils/I18n.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\xmlsec-1.5.1.jar(org/apache/xml/security/utils/XMLUtils.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\xmlsec-1.5.1.jar(org/apache/xml/security/utils/resolver/ResourceResolver.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/org/w3c/dom/Attr.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/org/w3c/dom/Document.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/org/w3c/dom/Element.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/org/w3c/dom/Node.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Object.class)]]
+Standard Doclet version 1.7.0_07
+Building tree for all the packages and classes...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\crypto-15export\ru\spb\iac\cud\infosweb\web\init\StartupServlet.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:20: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(StartupServlet.class);
+	                                     ^
+  symbol:   variable LoggerFactory
+  location: class StartupServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:27: warning - Tag @see: reference not found: HttpServlet#HttpServlet()
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:35: warning - Tag @see: reference not found: Servlet#init(ServletConfig)
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Class.class)]]
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\crypto-15export\ru\spb\iac\crypto\export\Crypto15Init.html...
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/io/Serializable.class)]]
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\crypto-15export\overview-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\crypto-15export\ru\spb\iac\crypto\export\package-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\crypto-15export\ru\spb\iac\crypto\export\package-summary.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\crypto-15export\ru\spb\iac\crypto\export\package-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\crypto-15export\ru\spb\iac\cud\infosweb\web\init\package-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\crypto-15export\ru\spb\iac\cud\infosweb\web\init\package-summary.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\crypto-15export\ru\spb\iac\cud\infosweb\web\init\package-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\crypto-15export\constant-values.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\crypto-15export\src-html\ru\spb\iac\cud\infosweb\web\init\StartupServlet.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\crypto-15export\src-html\ru\spb\iac\crypto\export\Crypto15Init.html...
+Building index for all the packages and classes...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\crypto-15export\overview-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\crypto-15export\index-all.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\crypto-15export\deprecated-list.html...
+Building index for all classes...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\crypto-15export\allclasses-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\crypto-15export\allclasses-noframe.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\crypto-15export\index.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\crypto-15export\overview-summary.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\crypto-15export\help-doc.html...
+[done in 1402 ms]
+1 error
+13 warnings

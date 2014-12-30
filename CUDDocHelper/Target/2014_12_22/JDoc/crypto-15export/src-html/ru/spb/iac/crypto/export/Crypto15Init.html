@@ -1,0 +1,395 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ru">
+<head>
+<title>Source code</title>
+<link rel="stylesheet" type="text/css" href="../../../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<div class="sourceContainer">
+<pre><span class="sourceLineNo">001</span>package ru.spb.iac.crypto.export;<a name="line.1"></a>
+<span class="sourceLineNo">002</span><a name="line.2"></a>
+<span class="sourceLineNo">003</span>import java.io.InputStream;<a name="line.3"></a>
+<span class="sourceLineNo">004</span>import java.util.ArrayList;<a name="line.4"></a>
+<span class="sourceLineNo">005</span>import java.util.List;<a name="line.5"></a>
+<span class="sourceLineNo">006</span><a name="line.6"></a>
+<span class="sourceLineNo">007</span>import javax.xml.parsers.DocumentBuilder;<a name="line.7"></a>
+<span class="sourceLineNo">008</span>import javax.xml.parsers.DocumentBuilderFactory;<a name="line.8"></a>
+<span class="sourceLineNo">009</span><a name="line.9"></a>
+<span class="sourceLineNo">010</span>import org.apache.commons.logging.Log;<a name="line.10"></a>
+<span class="sourceLineNo">011</span>import org.apache.commons.logging.LogFactory;<a name="line.11"></a>
+<span class="sourceLineNo">012</span>import org.apache.xml.security.algorithms.JCEMapper;<a name="line.12"></a>
+<span class="sourceLineNo">013</span>import org.apache.xml.security.algorithms.SignatureAlgorithm;<a name="line.13"></a>
+<span class="sourceLineNo">014</span>import org.apache.xml.security.c14n.Canonicalizer;<a name="line.14"></a>
+<span class="sourceLineNo">015</span>import org.apache.xml.security.keys.keyresolver.KeyResolver;<a name="line.15"></a>
+<span class="sourceLineNo">016</span>import org.apache.xml.security.transforms.Transform;<a name="line.16"></a>
+<span class="sourceLineNo">017</span>import org.apache.xml.security.utils.ElementProxy;<a name="line.17"></a>
+<span class="sourceLineNo">018</span>import org.apache.xml.security.utils.I18n;<a name="line.18"></a>
+<span class="sourceLineNo">019</span>import org.apache.xml.security.utils.XMLUtils;<a name="line.19"></a>
+<span class="sourceLineNo">020</span>import org.apache.xml.security.utils.resolver.ResourceResolver;<a name="line.20"></a>
+<span class="sourceLineNo">021</span>import org.w3c.dom.Attr;<a name="line.21"></a>
+<span class="sourceLineNo">022</span>import org.w3c.dom.Document;<a name="line.22"></a>
+<span class="sourceLineNo">023</span>import org.w3c.dom.Element;<a name="line.23"></a>
+<span class="sourceLineNo">024</span>import org.w3c.dom.Node;<a name="line.24"></a>
+<span class="sourceLineNo">025</span><a name="line.25"></a>
+<span class="sourceLineNo">026</span> public class Crypto15Init {<a name="line.26"></a>
+<span class="sourceLineNo">027</span><a name="line.27"></a>
+<span class="sourceLineNo">028</span>        private static Log log = LogFactory.getLog(Crypto15Init.class);<a name="line.28"></a>
+<span class="sourceLineNo">029</span><a name="line.29"></a>
+<span class="sourceLineNo">030</span>        public static void init() {<a name="line.30"></a>
+<span class="sourceLineNo">031</span>                try {<a name="line.31"></a>
+<span class="sourceLineNo">032</span><a name="line.32"></a>
+<span class="sourceLineNo">033</span>                         <a name="line.33"></a>
+<span class="sourceLineNo">034</span><a name="line.34"></a>
+<span class="sourceLineNo">035</span>                        System.setProperty("org.apache.xml.security.resource.config",<a name="line.35"></a>
+<span class="sourceLineNo">036</span>                                        "resource/jcp.xml");<a name="line.36"></a>
+<span class="sourceLineNo">037</span><a name="line.37"></a>
+<span class="sourceLineNo">038</span>                        if(!org.apache.xml.security.Init.isInitialized()){<a name="line.38"></a>
+<span class="sourceLineNo">039</span>                          org.apache.xml.security.Init.init();<a name="line.39"></a>
+<span class="sourceLineNo">040</span>                        }<a name="line.40"></a>
+<span class="sourceLineNo">041</span>                         <a name="line.41"></a>
+<span class="sourceLineNo">042</span><a name="line.42"></a>
+<span class="sourceLineNo">043</span>                } catch (Exception e) {<a name="line.43"></a>
+<span class="sourceLineNo">044</span>                        log.error("Crypto15Init:init:error:", e);<a name="line.44"></a>
+<span class="sourceLineNo">045</span>                }<a name="line.45"></a>
+<span class="sourceLineNo">046</span>        }<a name="line.46"></a>
+<span class="sourceLineNo">047</span><a name="line.47"></a>
+<span class="sourceLineNo">048</span>        public static void fileInit() {<a name="line.48"></a>
+<span class="sourceLineNo">049</span><a name="line.49"></a>
+<span class="sourceLineNo">050</span>                 <a name="line.50"></a>
+<span class="sourceLineNo">051</span>                try {<a name="line.51"></a>
+<span class="sourceLineNo">052</span>                        InputStream is = Crypto15Init.class.getResourceAsStream("/jcp.xml");<a name="line.52"></a>
+<span class="sourceLineNo">053</span><a name="line.53"></a>
+<span class="sourceLineNo">054</span>                        if (is == null) {<a name="line.54"></a>
+<span class="sourceLineNo">055</span>                                 <a name="line.55"></a>
+<span class="sourceLineNo">056</span>                                return;<a name="line.56"></a>
+<span class="sourceLineNo">057</span>                        }<a name="line.57"></a>
+<span class="sourceLineNo">058</span><a name="line.58"></a>
+<span class="sourceLineNo">059</span>                         <a name="line.59"></a>
+<span class="sourceLineNo">060</span><a name="line.60"></a>
+<span class="sourceLineNo">061</span>                        DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();<a name="line.61"></a>
+<span class="sourceLineNo">062</span>                        dbf.setFeature(<a name="line.62"></a>
+<span class="sourceLineNo">063</span>                                        "http://javax.xml.XMLConstants/feature/secure-processing",<a name="line.63"></a>
+<span class="sourceLineNo">064</span>                                        Boolean.TRUE.booleanValue());<a name="line.64"></a>
+<span class="sourceLineNo">065</span><a name="line.65"></a>
+<span class="sourceLineNo">066</span>                        dbf.setNamespaceAware(true);<a name="line.66"></a>
+<span class="sourceLineNo">067</span>                        dbf.setValidating(false);<a name="line.67"></a>
+<span class="sourceLineNo">068</span><a name="line.68"></a>
+<span class="sourceLineNo">069</span>                        DocumentBuilder db = dbf.newDocumentBuilder();<a name="line.69"></a>
+<span class="sourceLineNo">070</span>                        Document doc = db.parse(is);<a name="line.70"></a>
+<span class="sourceLineNo">071</span>                        Node config = doc.getFirstChild();<a name="line.71"></a>
+<span class="sourceLineNo">072</span>                        while ((config != null)<a name="line.72"></a>
+<span class="sourceLineNo">073</span>                                        &amp;&amp; (!"Configuration".equals(config.getLocalName()))) {<a name="line.73"></a>
+<span class="sourceLineNo">074</span>                                config = config.getNextSibling();<a name="line.74"></a>
+<span class="sourceLineNo">075</span>                        }<a name="line.75"></a>
+<span class="sourceLineNo">076</span><a name="line.76"></a>
+<span class="sourceLineNo">077</span>                        if (config == null) {<a name="line.77"></a>
+<span class="sourceLineNo">078</span>                                log.error("Error in reading configuration file - Configuration element not found");<a name="line.78"></a>
+<span class="sourceLineNo">079</span>                                return;<a name="line.79"></a>
+<span class="sourceLineNo">080</span>                        }<a name="line.80"></a>
+<span class="sourceLineNo">081</span>                        for (Node el = config.getFirstChild(); el != null; el = el<a name="line.81"></a>
+<span class="sourceLineNo">082</span>                                        .getNextSibling()) {<a name="line.82"></a>
+<span class="sourceLineNo">083</span>                                if ((el == null) || (1 != el.getNodeType())) {<a name="line.83"></a>
+<span class="sourceLineNo">084</span>                                        continue;<a name="line.84"></a>
+<span class="sourceLineNo">085</span>                                }<a name="line.85"></a>
+<span class="sourceLineNo">086</span>                                String tag = el.getLocalName();<a name="line.86"></a>
+<span class="sourceLineNo">087</span>                                if ("ResourceBundles".equals(tag)) {<a name="line.87"></a>
+<span class="sourceLineNo">088</span>                                        Element resource = (Element) el;<a name="line.88"></a>
+<span class="sourceLineNo">089</span><a name="line.89"></a>
+<span class="sourceLineNo">090</span>                                        Attr langAttr = resource<a name="line.90"></a>
+<span class="sourceLineNo">091</span>                                                        .getAttributeNode("defaultLanguageCode");<a name="line.91"></a>
+<span class="sourceLineNo">092</span>                                        Attr countryAttr = resource<a name="line.92"></a>
+<span class="sourceLineNo">093</span>                                                        .getAttributeNode("defaultCountryCode");<a name="line.93"></a>
+<span class="sourceLineNo">094</span>                                        String languageCode = langAttr == null ? null : langAttr<a name="line.94"></a>
+<span class="sourceLineNo">095</span>                                                        .getNodeValue();<a name="line.95"></a>
+<span class="sourceLineNo">096</span><a name="line.96"></a>
+<span class="sourceLineNo">097</span>                                        String countryCode = countryAttr == null ? null<a name="line.97"></a>
+<span class="sourceLineNo">098</span>                                                        : countryAttr.getNodeValue();<a name="line.98"></a>
+<span class="sourceLineNo">099</span><a name="line.99"></a>
+<span class="sourceLineNo">100</span>                                        I18n.init(languageCode, countryCode);<a name="line.100"></a>
+<span class="sourceLineNo">101</span>                                }<a name="line.101"></a>
+<span class="sourceLineNo">102</span><a name="line.102"></a>
+<span class="sourceLineNo">103</span>                                if ("CanonicalizationMethods".equals(tag)) {<a name="line.103"></a>
+<span class="sourceLineNo">104</span>                                        Element[] list = XMLUtils.selectNodes(el.getFirstChild(),<a name="line.104"></a>
+<span class="sourceLineNo">105</span>                                                        "http://www.xmlsecurity.org/NS/#configuration",<a name="line.105"></a>
+<span class="sourceLineNo">106</span>                                                        "CanonicalizationMethod");<a name="line.106"></a>
+<span class="sourceLineNo">107</span><a name="line.107"></a>
+<span class="sourceLineNo">108</span>                                        for (int i = 0; i &lt; list.length; i++) {<a name="line.108"></a>
+<span class="sourceLineNo">109</span>                                                String URI = list[i].getAttributeNS(null, "URI");<a name="line.109"></a>
+<span class="sourceLineNo">110</span>                                                String JAVACLASS = list[i].getAttributeNS(null,<a name="line.110"></a>
+<span class="sourceLineNo">111</span>                                                                "JAVACLASS");<a name="line.111"></a>
+<span class="sourceLineNo">112</span>                                                try {<a name="line.112"></a>
+<span class="sourceLineNo">113</span>                                                        Canonicalizer.register(URI, JAVACLASS);<a name="line.113"></a>
+<span class="sourceLineNo">114</span>                                                        if (log.isDebugEnabled()) {<a name="line.114"></a>
+<span class="sourceLineNo">115</span>                                                                log.debug("Canonicalizer.register(" + URI<a name="line.115"></a>
+<span class="sourceLineNo">116</span>                                                                                + ", " + JAVACLASS + ")");<a name="line.116"></a>
+<span class="sourceLineNo">117</span>                                                        }<a name="line.117"></a>
+<span class="sourceLineNo">118</span>                                                } catch (ClassNotFoundException e) {<a name="line.118"></a>
+<span class="sourceLineNo">119</span>                                                        Object[] exArgs = { URI, JAVACLASS };<a name="line.119"></a>
+<span class="sourceLineNo">120</span>                                                        log.error(I18n.translate(<a name="line.120"></a>
+<span class="sourceLineNo">121</span>                                                                        "algorithm.classDoesNotExist", exArgs));<a name="line.121"></a>
+<span class="sourceLineNo">122</span>                                                } catch (Exception e1) {<a name="line.122"></a>
+<span class="sourceLineNo">123</span>                                                        // здесь будут ощибки, что алгоритм уже<a name="line.123"></a>
+<span class="sourceLineNo">124</span>                                                        // зарегистрирован<a name="line.124"></a>
+<span class="sourceLineNo">125</span>                                                        // это нормально, поэтому чтобы не увеличивать лог<a name="line.125"></a>
+<span class="sourceLineNo">126</span>                                                        // закомментируем<a name="line.126"></a>
+<span class="sourceLineNo">127</span>                                                         <a name="line.127"></a>
+<span class="sourceLineNo">128</span>                                                }<a name="line.128"></a>
+<span class="sourceLineNo">129</span>                                        }<a name="line.129"></a>
+<span class="sourceLineNo">130</span>                                }<a name="line.130"></a>
+<span class="sourceLineNo">131</span><a name="line.131"></a>
+<span class="sourceLineNo">132</span>                                if ("TransformAlgorithms".equals(tag)) {<a name="line.132"></a>
+<span class="sourceLineNo">133</span>                                        Element[] tranElem = XMLUtils.selectNodes(<a name="line.133"></a>
+<span class="sourceLineNo">134</span>                                                        el.getFirstChild(),<a name="line.134"></a>
+<span class="sourceLineNo">135</span>                                                        "http://www.xmlsecurity.org/NS/#configuration",<a name="line.135"></a>
+<span class="sourceLineNo">136</span>                                                        "TransformAlgorithm");<a name="line.136"></a>
+<span class="sourceLineNo">137</span><a name="line.137"></a>
+<span class="sourceLineNo">138</span>                                        for (int i = 0; i &lt; tranElem.length; i++) {<a name="line.138"></a>
+<span class="sourceLineNo">139</span>                                                String URI = tranElem[i].getAttributeNS(null, "URI");<a name="line.139"></a>
+<span class="sourceLineNo">140</span>                                                String JAVACLASS = tranElem[i].getAttributeNS(null,<a name="line.140"></a>
+<span class="sourceLineNo">141</span>                                                                "JAVACLASS");<a name="line.141"></a>
+<span class="sourceLineNo">142</span>                                                try {<a name="line.142"></a>
+<span class="sourceLineNo">143</span>                                                        Transform.register(URI, JAVACLASS);<a name="line.143"></a>
+<span class="sourceLineNo">144</span>                                                        if (log.isDebugEnabled()) {<a name="line.144"></a>
+<span class="sourceLineNo">145</span>                                                                log.debug("Transform.register(" + URI + ", "<a name="line.145"></a>
+<span class="sourceLineNo">146</span>                                                                                + JAVACLASS + ")");<a name="line.146"></a>
+<span class="sourceLineNo">147</span>                                                        }<a name="line.147"></a>
+<span class="sourceLineNo">148</span>                                                } catch (ClassNotFoundException e) {<a name="line.148"></a>
+<span class="sourceLineNo">149</span>                                                        Object[] exArgs = { URI, JAVACLASS };<a name="line.149"></a>
+<span class="sourceLineNo">150</span><a name="line.150"></a>
+<span class="sourceLineNo">151</span>                                                        log.error(I18n.translate(<a name="line.151"></a>
+<span class="sourceLineNo">152</span>                                                                        "algorithm.classDoesNotExist", exArgs));<a name="line.152"></a>
+<span class="sourceLineNo">153</span>                                                } catch (NoClassDefFoundError ex) {<a name="line.153"></a>
+<span class="sourceLineNo">154</span>                                                        log.warn("Not able to found dependencies for algorithm, I'll keep working.");<a name="line.154"></a>
+<span class="sourceLineNo">155</span>                                                } catch (Exception e1) {<a name="line.155"></a>
+<span class="sourceLineNo">156</span>                                                        // здесь будут ощибки, что алгоритм уже<a name="line.156"></a>
+<span class="sourceLineNo">157</span>                                                        // зарегистрирован<a name="line.157"></a>
+<span class="sourceLineNo">158</span>                                                        // это нормально, поэтому чтобы не увеличивать лог<a name="line.158"></a>
+<span class="sourceLineNo">159</span>                                                        // закомментируем<a name="line.159"></a>
+<span class="sourceLineNo">160</span>                                                         <a name="line.160"></a>
+<span class="sourceLineNo">161</span>                                                }<a name="line.161"></a>
+<span class="sourceLineNo">162</span>                                        }<a name="line.162"></a>
+<span class="sourceLineNo">163</span>                                }<a name="line.163"></a>
+<span class="sourceLineNo">164</span><a name="line.164"></a>
+<span class="sourceLineNo">165</span>                                 <a name="line.165"></a>
+<span class="sourceLineNo">166</span>                                if ("JCEAlgorithmMappings".equals(tag)) {<a name="line.166"></a>
+<span class="sourceLineNo">167</span><a name="line.167"></a>
+<span class="sourceLineNo">168</span>                                         <a name="line.168"></a>
+<span class="sourceLineNo">169</span><a name="line.169"></a>
+<span class="sourceLineNo">170</span>                                        Node algorithmsNode = ((Element) el).getElementsByTagName(<a name="line.170"></a>
+<span class="sourceLineNo">171</span>                                                        "Algorithms").item(0);<a name="line.171"></a>
+<span class="sourceLineNo">172</span>                                        if (algorithmsNode != null) {<a name="line.172"></a>
+<span class="sourceLineNo">173</span><a name="line.173"></a>
+<span class="sourceLineNo">174</span>                                                 <a name="line.174"></a>
+<span class="sourceLineNo">175</span><a name="line.175"></a>
+<span class="sourceLineNo">176</span>                                                Element[] algorithms = XMLUtils.selectNodes(<a name="line.176"></a>
+<span class="sourceLineNo">177</span>                                                                algorithmsNode.getFirstChild(),<a name="line.177"></a>
+<span class="sourceLineNo">178</span>                                                                "http://www.xmlsecurity.org/NS/#configuration",<a name="line.178"></a>
+<span class="sourceLineNo">179</span>                                                                "Algorithm");<a name="line.179"></a>
+<span class="sourceLineNo">180</span><a name="line.180"></a>
+<span class="sourceLineNo">181</span>                                                for (int i = 0; i &lt; algorithms.length; i++) {<a name="line.181"></a>
+<span class="sourceLineNo">182</span><a name="line.182"></a>
+<span class="sourceLineNo">183</span>                                                        Element element = algorithms[i];<a name="line.183"></a>
+<span class="sourceLineNo">184</span>                                                        String id = element.getAttribute("URI");<a name="line.184"></a>
+<span class="sourceLineNo">185</span><a name="line.185"></a>
+<span class="sourceLineNo">186</span>                                                         <a name="line.186"></a>
+<span class="sourceLineNo">187</span>                                                         <a name="line.187"></a>
+<span class="sourceLineNo">188</span><a name="line.188"></a>
+<span class="sourceLineNo">189</span>                                                        JCEMapper.register(id, new JCEMapper.Algorithm(<a name="line.189"></a>
+<span class="sourceLineNo">190</span>                                                                        element));<a name="line.190"></a>
+<span class="sourceLineNo">191</span><a name="line.191"></a>
+<span class="sourceLineNo">192</span>                                                         <a name="line.192"></a>
+<span class="sourceLineNo">193</span><a name="line.193"></a>
+<span class="sourceLineNo">194</span>                                                }<a name="line.194"></a>
+<span class="sourceLineNo">195</span>                                        }<a name="line.195"></a>
+<span class="sourceLineNo">196</span>                                }<a name="line.196"></a>
+<span class="sourceLineNo">197</span><a name="line.197"></a>
+<span class="sourceLineNo">198</span>                                if ("SignatureAlgorithms".equals(tag)) {<a name="line.198"></a>
+<span class="sourceLineNo">199</span>                                        Element[] sigElems = XMLUtils.selectNodes(<a name="line.199"></a>
+<span class="sourceLineNo">200</span>                                                        el.getFirstChild(),<a name="line.200"></a>
+<span class="sourceLineNo">201</span>                                                        "http://www.xmlsecurity.org/NS/#configuration",<a name="line.201"></a>
+<span class="sourceLineNo">202</span>                                                        "SignatureAlgorithm");<a name="line.202"></a>
+<span class="sourceLineNo">203</span><a name="line.203"></a>
+<span class="sourceLineNo">204</span>                                        for (int i = 0; i &lt; sigElems.length; i++) {<a name="line.204"></a>
+<span class="sourceLineNo">205</span>                                                String URI = sigElems[i].getAttributeNS(null, "URI");<a name="line.205"></a>
+<span class="sourceLineNo">206</span>                                                String JAVACLASS = sigElems[i].getAttributeNS(null,<a name="line.206"></a>
+<span class="sourceLineNo">207</span>                                                                "JAVACLASS");<a name="line.207"></a>
+<span class="sourceLineNo">208</span>                                                try {<a name="line.208"></a>
+<span class="sourceLineNo">209</span>                                                        SignatureAlgorithm.register(URI, JAVACLASS);<a name="line.209"></a>
+<span class="sourceLineNo">210</span>                                                        if (log.isDebugEnabled()) {<a name="line.210"></a>
+<span class="sourceLineNo">211</span>                                                                log.debug("SignatureAlgorithm.register(" + URI<a name="line.211"></a>
+<span class="sourceLineNo">212</span>                                                                                + ", " + JAVACLASS + ")");<a name="line.212"></a>
+<span class="sourceLineNo">213</span>                                                        }<a name="line.213"></a>
+<span class="sourceLineNo">214</span>                                                } catch (ClassNotFoundException e) {<a name="line.214"></a>
+<span class="sourceLineNo">215</span>                                                        Object[] exArgs = { URI, JAVACLASS };<a name="line.215"></a>
+<span class="sourceLineNo">216</span><a name="line.216"></a>
+<span class="sourceLineNo">217</span>                                                        log.error(I18n.translate(<a name="line.217"></a>
+<span class="sourceLineNo">218</span>                                                                        "algorithm.classDoesNotExist", exArgs));<a name="line.218"></a>
+<span class="sourceLineNo">219</span>                                                } catch (Exception e1) {<a name="line.219"></a>
+<span class="sourceLineNo">220</span>                                                        // здесь будут ощибки, что алгоритм уже<a name="line.220"></a>
+<span class="sourceLineNo">221</span>                                                        // зарегистрирован<a name="line.221"></a>
+<span class="sourceLineNo">222</span>                                                        // это нормально, поэтому чтобы не увеличивать лог<a name="line.222"></a>
+<span class="sourceLineNo">223</span>                                                        // закомментируем<a name="line.223"></a>
+<span class="sourceLineNo">224</span>                                                         <a name="line.224"></a>
+<span class="sourceLineNo">225</span>                                                }<a name="line.225"></a>
+<span class="sourceLineNo">226</span>                                        }<a name="line.226"></a>
+<span class="sourceLineNo">227</span>                                }<a name="line.227"></a>
+<span class="sourceLineNo">228</span><a name="line.228"></a>
+<span class="sourceLineNo">229</span>                                if ("ResourceResolvers".equals(tag)) {<a name="line.229"></a>
+<span class="sourceLineNo">230</span>                                        Element[] resolverElem = XMLUtils.selectNodes(<a name="line.230"></a>
+<span class="sourceLineNo">231</span>                                                        el.getFirstChild(),<a name="line.231"></a>
+<span class="sourceLineNo">232</span>                                                        "http://www.xmlsecurity.org/NS/#configuration",<a name="line.232"></a>
+<span class="sourceLineNo">233</span>                                                        "Resolver");<a name="line.233"></a>
+<span class="sourceLineNo">234</span><a name="line.234"></a>
+<span class="sourceLineNo">235</span>                                        for (int i = 0; i &lt; resolverElem.length; i++) {<a name="line.235"></a>
+<span class="sourceLineNo">236</span>                                                String JAVACLASS = resolverElem[i].getAttributeNS(null,<a name="line.236"></a>
+<span class="sourceLineNo">237</span>                                                                "JAVACLASS");<a name="line.237"></a>
+<span class="sourceLineNo">238</span><a name="line.238"></a>
+<span class="sourceLineNo">239</span>                                                String Description = resolverElem[i].getAttributeNS(<a name="line.239"></a>
+<span class="sourceLineNo">240</span>                                                                null, "DESCRIPTION");<a name="line.240"></a>
+<span class="sourceLineNo">241</span><a name="line.241"></a>
+<span class="sourceLineNo">242</span>                                                if ((Description != null) &amp;&amp; (Description.length() &gt; 0)) {<a name="line.242"></a>
+<span class="sourceLineNo">243</span>                                                        if (log.isDebugEnabled()) {<a name="line.243"></a>
+<span class="sourceLineNo">244</span>                                                                log.debug("Register Resolver: " + JAVACLASS<a name="line.244"></a>
+<span class="sourceLineNo">245</span>                                                                                + ": " + Description);<a name="line.245"></a>
+<span class="sourceLineNo">246</span>                                                        }<a name="line.246"></a>
+<span class="sourceLineNo">247</span><a name="line.247"></a>
+<span class="sourceLineNo">248</span>                                                } else if (log.isDebugEnabled()) {<a name="line.248"></a>
+<span class="sourceLineNo">249</span>                                                        log.debug("Register Resolver: " + JAVACLASS<a name="line.249"></a>
+<span class="sourceLineNo">250</span>                                                                        + ": For unknown purposes");<a name="line.250"></a>
+<span class="sourceLineNo">251</span>                                                }<a name="line.251"></a>
+<span class="sourceLineNo">252</span><a name="line.252"></a>
+<span class="sourceLineNo">253</span>                                                try {<a name="line.253"></a>
+<span class="sourceLineNo">254</span>                                                        ResourceResolver.register(JAVACLASS);<a name="line.254"></a>
+<span class="sourceLineNo">255</span>                                                } catch (Exception e) {<a name="line.255"></a>
+<span class="sourceLineNo">256</span>                                                        log.warn(<a name="line.256"></a>
+<span class="sourceLineNo">257</span>                                                                        "Cannot register:"<a name="line.257"></a>
+<span class="sourceLineNo">258</span>                                                                                        + JAVACLASS<a name="line.258"></a>
+<span class="sourceLineNo">259</span>                                                                                        + " perhaps some needed jars are not installed",<a name="line.259"></a>
+<span class="sourceLineNo">260</span>                                                                        e);<a name="line.260"></a>
+<span class="sourceLineNo">261</span>                                                }<a name="line.261"></a>
+<span class="sourceLineNo">262</span><a name="line.262"></a>
+<span class="sourceLineNo">263</span>                                        }<a name="line.263"></a>
+<span class="sourceLineNo">264</span><a name="line.264"></a>
+<span class="sourceLineNo">265</span>                                }<a name="line.265"></a>
+<span class="sourceLineNo">266</span><a name="line.266"></a>
+<span class="sourceLineNo">267</span>                                if ("KeyResolver".equals(tag)) {<a name="line.267"></a>
+<span class="sourceLineNo">268</span>                                        Element[] resolverElem = XMLUtils.selectNodes(<a name="line.268"></a>
+<span class="sourceLineNo">269</span>                                                        el.getFirstChild(),<a name="line.269"></a>
+<span class="sourceLineNo">270</span>                                                        "http://www.xmlsecurity.org/NS/#configuration",<a name="line.270"></a>
+<span class="sourceLineNo">271</span>                                                        "Resolver");<a name="line.271"></a>
+<span class="sourceLineNo">272</span><a name="line.272"></a>
+<span class="sourceLineNo">273</span>                                        List classNames = new ArrayList(resolverElem.length);<a name="line.273"></a>
+<span class="sourceLineNo">274</span>                                        for (int i = 0; i &lt; resolverElem.length; i++) {<a name="line.274"></a>
+<span class="sourceLineNo">275</span>                                                String JAVACLASS = resolverElem[i].getAttributeNS(null,<a name="line.275"></a>
+<span class="sourceLineNo">276</span>                                                                "JAVACLASS");<a name="line.276"></a>
+<span class="sourceLineNo">277</span><a name="line.277"></a>
+<span class="sourceLineNo">278</span>                                                String Description = resolverElem[i].getAttributeNS(<a name="line.278"></a>
+<span class="sourceLineNo">279</span>                                                                null, "DESCRIPTION");<a name="line.279"></a>
+<span class="sourceLineNo">280</span><a name="line.280"></a>
+<span class="sourceLineNo">281</span>                                                if ((Description != null) &amp;&amp; (Description.length() &gt; 0)) {<a name="line.281"></a>
+<span class="sourceLineNo">282</span>                                                        if (log.isDebugEnabled()) {<a name="line.282"></a>
+<span class="sourceLineNo">283</span>                                                                log.debug("Register Resolver: " + JAVACLASS<a name="line.283"></a>
+<span class="sourceLineNo">284</span>                                                                                + ": " + Description);<a name="line.284"></a>
+<span class="sourceLineNo">285</span>                                                        }<a name="line.285"></a>
+<span class="sourceLineNo">286</span><a name="line.286"></a>
+<span class="sourceLineNo">287</span>                                                } else if (log.isDebugEnabled()) {<a name="line.287"></a>
+<span class="sourceLineNo">288</span>                                                        log.debug("Register Resolver: " + JAVACLASS<a name="line.288"></a>
+<span class="sourceLineNo">289</span>                                                                        + ": For unknown purposes");<a name="line.289"></a>
+<span class="sourceLineNo">290</span>                                                }<a name="line.290"></a>
+<span class="sourceLineNo">291</span><a name="line.291"></a>
+<span class="sourceLineNo">292</span>                                                classNames.add(JAVACLASS);<a name="line.292"></a>
+<span class="sourceLineNo">293</span>                                        }<a name="line.293"></a>
+<span class="sourceLineNo">294</span>                                        KeyResolver.registerClassNames(classNames);<a name="line.294"></a>
+<span class="sourceLineNo">295</span>                                }<a name="line.295"></a>
+<span class="sourceLineNo">296</span><a name="line.296"></a>
+<span class="sourceLineNo">297</span>                                if ("PrefixMappings".equals(tag)) {<a name="line.297"></a>
+<span class="sourceLineNo">298</span>                                        if (log.isDebugEnabled()) {<a name="line.298"></a>
+<span class="sourceLineNo">299</span>                                                log.debug("Now I try to bind prefixes:");<a name="line.299"></a>
+<span class="sourceLineNo">300</span>                                        }<a name="line.300"></a>
+<span class="sourceLineNo">301</span><a name="line.301"></a>
+<span class="sourceLineNo">302</span>                                        Element[] nl = XMLUtils.selectNodes(el.getFirstChild(),<a name="line.302"></a>
+<span class="sourceLineNo">303</span>                                                        "http://www.xmlsecurity.org/NS/#configuration",<a name="line.303"></a>
+<span class="sourceLineNo">304</span>                                                        "PrefixMapping");<a name="line.304"></a>
+<span class="sourceLineNo">305</span><a name="line.305"></a>
+<span class="sourceLineNo">306</span>                                        for (int i = 0; i &lt; nl.length; i++) {<a name="line.306"></a>
+<span class="sourceLineNo">307</span>                                                String namespace = nl[i].getAttributeNS(null,<a name="line.307"></a>
+<span class="sourceLineNo">308</span>                                                                "namespace");<a name="line.308"></a>
+<span class="sourceLineNo">309</span>                                                String prefix = nl[i].getAttributeNS(null, "prefix");<a name="line.309"></a>
+<span class="sourceLineNo">310</span>                                                if (log.isDebugEnabled()) {<a name="line.310"></a>
+<span class="sourceLineNo">311</span>                                                        log.debug("Now I try to bind " + prefix + " to "<a name="line.311"></a>
+<span class="sourceLineNo">312</span>                                                                        + namespace);<a name="line.312"></a>
+<span class="sourceLineNo">313</span>                                                }<a name="line.313"></a>
+<span class="sourceLineNo">314</span>                                                ElementProxy.setDefaultPrefix(namespace, prefix);<a name="line.314"></a>
+<span class="sourceLineNo">315</span>                                        }<a name="line.315"></a>
+<span class="sourceLineNo">316</span>                                }<a name="line.316"></a>
+<span class="sourceLineNo">317</span>                        }<a name="line.317"></a>
+<span class="sourceLineNo">318</span>                } catch (Exception e) {<a name="line.318"></a>
+<span class="sourceLineNo">319</span>                        log.error("Crypto15Init:fileInit:error: ", e);<a name="line.319"></a>
+<span class="sourceLineNo">320</span>                }<a name="line.320"></a>
+<span class="sourceLineNo">321</span>        }<a name="line.321"></a>
+<span class="sourceLineNo">322</span><a name="line.322"></a>
+<span class="sourceLineNo">323</span>}<a name="line.323"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</div>
+</body>
+</html>

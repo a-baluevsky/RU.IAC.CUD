@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ru">
+<head>
+<title>Source code</title>
+<link rel="stylesheet" type="text/css" href="../../../../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<div class="sourceContainer">
+<pre><span class="sourceLineNo">001</span>package iac.grn.infosweb.context.mc.rol;<a name="line.1"></a>
+<span class="sourceLineNo">002</span><a name="line.2"></a>
+<span class="sourceLineNo">003</span>import iac.grn.serviceitems.BaseTableItem;<a name="line.3"></a>
+<span class="sourceLineNo">004</span><a name="line.4"></a>
+<span class="sourceLineNo">005</span>import java.util.ArrayList;<a name="line.5"></a>
+<span class="sourceLineNo">006</span>import java.util.Collections;<a name="line.6"></a>
+<span class="sourceLineNo">007</span>import java.util.Comparator;<a name="line.7"></a>
+<span class="sourceLineNo">008</span>import java.util.HashMap; import java.util.Map;<a name="line.8"></a>
+<span class="sourceLineNo">009</span>import java.util.List;<a name="line.9"></a>
+<span class="sourceLineNo">010</span><a name="line.10"></a>
+<span class="sourceLineNo">011</span> public class RolContext {<a name="line.11"></a>
+<span class="sourceLineNo">012</span><a name="line.12"></a>
+<span class="sourceLineNo">013</span>    private Map&lt;String, BaseTableItem&gt; auditItemsMap=new HashMap&lt;String, BaseTableItem&gt;();<a name="line.13"></a>
+<span class="sourceLineNo">014</span>        <a name="line.14"></a>
+<span class="sourceLineNo">015</span>        public Map &lt;String, BaseTableItem&gt; getAuditItemsMap() {<a name="line.15"></a>
+<span class="sourceLineNo">016</span>        return this.auditItemsMap;<a name="line.16"></a>
+<span class="sourceLineNo">017</span>    }<a name="line.17"></a>
+<span class="sourceLineNo">018</span>                <a name="line.18"></a>
+<span class="sourceLineNo">019</span>        public List &lt;BaseTableItem&gt; getAuditItemsCollection() {<a name="line.19"></a>
+<span class="sourceLineNo">020</span>                <a name="line.20"></a>
+<span class="sourceLineNo">021</span>                List&lt;BaseTableItem&gt; btiList = new ArrayList&lt;BaseTableItem&gt;(this.auditItemsMap.values());<a name="line.21"></a>
+<span class="sourceLineNo">022</span>                Collections.sort(btiList, new Comparator&lt;BaseTableItem&gt;() {<a name="line.22"></a>
+<span class="sourceLineNo">023</span><a name="line.23"></a>
+<span class="sourceLineNo">024</span>                public int compare(BaseTableItem o1, BaseTableItem o2) {<a name="line.24"></a>
+<span class="sourceLineNo">025</span>                        <a name="line.25"></a>
+<span class="sourceLineNo">026</span>                        int sort1=o1.getItemSort();<a name="line.26"></a>
+<span class="sourceLineNo">027</span>                        int sort2=o2.getItemSort();<a name="line.27"></a>
+<span class="sourceLineNo">028</span>                        <a name="line.28"></a>
+<span class="sourceLineNo">029</span>                        if(sort1 &gt; sort2){<a name="line.29"></a>
+<span class="sourceLineNo">030</span>                        return 1;<a name="line.30"></a>
+<span class="sourceLineNo">031</span>                    }else if(sort1 &lt; sort2){<a name="line.31"></a>
+<span class="sourceLineNo">032</span>                        return -1; <a name="line.32"></a>
+<span class="sourceLineNo">033</span>                    }else{<a name="line.33"></a>
+<span class="sourceLineNo">034</span>                        return 0;<a name="line.34"></a>
+<span class="sourceLineNo">035</span>                    }    <a name="line.35"></a>
+<span class="sourceLineNo">036</span>                 }<a name="line.36"></a>
+<span class="sourceLineNo">037</span>            });<a name="line.37"></a>
+<span class="sourceLineNo">038</span><a name="line.38"></a>
+<span class="sourceLineNo">039</span>        return btiList;<a name="line.39"></a>
+<span class="sourceLineNo">040</span>    }<a name="line.40"></a>
+<span class="sourceLineNo">041</span>        <a name="line.41"></a>
+<span class="sourceLineNo">042</span>        public RolContext(){<a name="line.42"></a>
+<span class="sourceLineNo">043</span>                auditItemsMap.put("roleTitle",new BaseTableItem("Название", "...", "roleTitle", 1));<a name="line.43"></a>
+<span class="sourceLineNo">044</span>                auditItemsMap.put("sign",new BaseTableItem("Код", "...", "sign", 2));<a name="line.44"></a>
+<span class="sourceLineNo">045</span>                auditItemsMap.put("roleDescription",new BaseTableItem("Описание", "...", "roleDescription", 3));<a name="line.45"></a>
+<span class="sourceLineNo">046</span>                auditItemsMap.put("armName",new BaseTableItem("ИС","...", "armName", "acApplication2.name", "acApplication" , 4));<a name="line.46"></a>
+<span class="sourceLineNo">047</span>        }<a name="line.47"></a>
+<span class="sourceLineNo">048</span>}<a name="line.48"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</div>
+</body>
+</html>

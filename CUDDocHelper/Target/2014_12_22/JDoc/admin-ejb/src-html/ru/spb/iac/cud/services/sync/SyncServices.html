@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ru">
+<head>
+<title>Source code</title>
+<link rel="stylesheet" type="text/css" href="../../../../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<div class="sourceContainer">
+<pre><span class="sourceLineNo">001</span>package ru.spb.iac.cud.services.sync;<a name="line.1"></a>
+<span class="sourceLineNo">002</span><a name="line.2"></a>
+<span class="sourceLineNo">003</span>import java.util.List;<a name="line.3"></a>
+<span class="sourceLineNo">004</span><a name="line.4"></a>
+<span class="sourceLineNo">005</span>import javax.jws.WebMethod;<a name="line.5"></a>
+<span class="sourceLineNo">006</span>import javax.jws.WebParam;<a name="line.6"></a>
+<span class="sourceLineNo">007</span>import javax.jws.WebResult;<a name="line.7"></a>
+<span class="sourceLineNo">008</span>import javax.jws.WebService;<a name="line.8"></a>
+<span class="sourceLineNo">009</span>import ru.spb.iac.cud.exceptions.GeneralFailure;<a name="line.9"></a>
+<span class="sourceLineNo">010</span>import ru.spb.iac.cud.items.Function;<a name="line.10"></a>
+<span class="sourceLineNo">011</span>import ru.spb.iac.cud.items.Role;<a name="line.11"></a>
+<span class="sourceLineNo">012</span><a name="line.12"></a>
+<span class="sourceLineNo">013</span>@WebService(targetNamespace = SyncServices.NS)<a name="line.13"></a>
+<span class="sourceLineNo">014</span>public interface SyncServices {<a name="line.14"></a>
+<span class="sourceLineNo">015</span>        <a name="line.15"></a>
+<span class="sourceLineNo">016</span>         public static final String NS = "http://sync.services.cud.iac/";<a name="line.16"></a>
+<span class="sourceLineNo">017</span>         <a name="line.17"></a>
+<span class="sourceLineNo">018</span>         @WebMethod<a name="line.18"></a>
+<span class="sourceLineNo">019</span>         @WebResult(targetNamespace = NS)<a name="line.19"></a>
+<span class="sourceLineNo">020</span>         public void sync_roles(<a name="line.20"></a>
+<span class="sourceLineNo">021</span>                         @WebParam(name = "idIS", targetNamespace = NS) String idIS, <a name="line.21"></a>
+<span class="sourceLineNo">022</span>                         @WebParam(name = "roles", targetNamespace = NS) List&lt;Role&gt; roles) throws GeneralFailure;<a name="line.22"></a>
+<span class="sourceLineNo">023</span>    <a name="line.23"></a>
+<span class="sourceLineNo">024</span>         @WebMethod<a name="line.24"></a>
+<span class="sourceLineNo">025</span>         @WebResult(targetNamespace = NS)<a name="line.25"></a>
+<span class="sourceLineNo">026</span>         public void sync_functions(<a name="line.26"></a>
+<span class="sourceLineNo">027</span>                         @WebParam(name = "idIS", targetNamespace = NS) String idIS, <a name="line.27"></a>
+<span class="sourceLineNo">028</span>                         @WebParam(name = "functions", targetNamespace = NS) List&lt;Function&gt; functions) throws GeneralFailure;<a name="line.28"></a>
+<span class="sourceLineNo">029</span>        <a name="line.29"></a>
+<span class="sourceLineNo">030</span>        <a name="line.30"></a>
+<span class="sourceLineNo">031</span>         <a name="line.31"></a>
+<span class="sourceLineNo">032</span>}<a name="line.32"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</div>
+</body>
+</html>
