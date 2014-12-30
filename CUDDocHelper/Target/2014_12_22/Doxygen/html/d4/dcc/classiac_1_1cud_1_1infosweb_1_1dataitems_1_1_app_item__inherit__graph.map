@@ -1,0 +1,14 @@
+<map id="iac.cud.infosweb.dataitems.AppItem" name="iac.cud.infosweb.dataitems.AppItem">
+<area shape="rect" id="node4" href="$d9/d33/classiac_1_1cud_1_1infosweb_1_1dataitems_1_1_app_access_item.html" title="iac.cud.infosweb.dataitems.\lAppAccessItem" alt="" coords="604,5,787,47"/>
+<area shape="rect" id="node5" href="$d5/d08/classiac_1_1cud_1_1infosweb_1_1dataitems_1_1_app_admin_sys_item.html" title="iac.cud.infosweb.dataitems.\lAppAdminSysItem" alt="" coords="604,71,787,112"/>
+<area shape="rect" id="node6" href="$d5/d4f/classiac_1_1cud_1_1infosweb_1_1dataitems_1_1_app_block_item.html" title="iac.cud.infosweb.dataitems.\lAppBlockItem" alt="" coords="604,136,787,177"/>
+<area shape="rect" id="node7" href="$dd/d97/classiac_1_1cud_1_1infosweb_1_1dataitems_1_1_app_org_man_item.html" title="iac.cud.infosweb.dataitems.\lAppOrgManItem" alt="" coords="604,201,787,243"/>
+<area shape="rect" id="node8" href="$d8/d34/classiac_1_1cud_1_1infosweb_1_1dataitems_1_1_app_system_item.html" title="iac.cud.infosweb.dataitems.\lAppSystemItem" alt="" coords="604,267,787,308"/>
+<area shape="rect" id="node9" href="$de/d36/classiac_1_1cud_1_1infosweb_1_1dataitems_1_1_app_system_modify_item.html" title="iac.cud.infosweb.dataitems.\lAppSystemModifyItem" alt="" coords="604,332,787,373"/>
+<area shape="rect" id="node10" href="$de/db8/classiac_1_1cud_1_1infosweb_1_1dataitems_1_1_app_user_acc_modify_item.html" title="iac.cud.infosweb.dataitems.\lAppUserAccModifyItem" alt="" coords="604,397,787,439"/>
+<area shape="rect" id="node11" href="$dd/d3b/classiac_1_1cud_1_1infosweb_1_1dataitems_1_1_app_user_cert_modify_item.html" title="iac.cud.infosweb.dataitems.\lAppUserCertModifyItem" alt="" coords="604,463,787,504"/>
+<area shape="rect" id="node12" href="$da/d3e/classiac_1_1cud_1_1infosweb_1_1dataitems_1_1_app_user_dep_modify_item.html" title="iac.cud.infosweb.dataitems.\lAppUserDepModifyItem" alt="" coords="604,528,787,569"/>
+<area shape="rect" id="node13" href="$df/dd3/classiac_1_1cud_1_1infosweb_1_1dataitems_1_1_app_user_item.html" title="iac.cud.infosweb.dataitems.\lAppUserItem" alt="" coords="604,593,787,635"/>
+<area shape="rect" id="node14" href="$db/d02/classiac_1_1cud_1_1infosweb_1_1dataitems_1_1_app_user_modify_item.html" title="iac.cud.infosweb.dataitems.\lAppUserModifyItem" alt="" coords="604,659,787,700"/>
+<area shape="rect" id="node2" href="$da/dfd/classiac_1_1cud_1_1infosweb_1_1dataitems_1_1_base_item.html" title="iac.cud.infosweb.dataitems.\lBaseItem" alt="" coords="143,332,325,373"/>
+</map>

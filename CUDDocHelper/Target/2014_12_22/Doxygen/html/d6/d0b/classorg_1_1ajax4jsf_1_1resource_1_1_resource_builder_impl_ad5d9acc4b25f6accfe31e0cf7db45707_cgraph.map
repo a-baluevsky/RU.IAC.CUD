@@ -1,0 +1,11 @@
+<map id="org.ajax4jsf.resource.ResourceBuilderImpl.createResource" name="org.ajax4jsf.resource.ResourceBuilderImpl.createResource">
+<area shape="rect" id="node2" href="$d6/d0b/classorg_1_1ajax4jsf_1_1resource_1_1_resource_builder_impl.html#aa7bf029e1cfd536345b194a86b9f123a" title="org.ajax4jsf.resource.Resource\lBuilderImpl.getResource" alt="" coords="270,5,471,47"/>
+<area shape="rect" id="node3" href="$d6/d0b/classorg_1_1ajax4jsf_1_1resource_1_1_resource_builder_impl.html#aa3f2bc7804a744aa4e2ff6bf5a1981ec" title="org.ajax4jsf.resource.Resource\lBuilderImpl.buildKey" alt="" coords="535,64,736,105"/>
+<area shape="rect" id="node4" href="$d6/d0b/classorg_1_1ajax4jsf_1_1resource_1_1_resource_builder_impl.html#a4cbd0154bd32249b3d782187bbd29763" title="org.ajax4jsf.resource.Resource\lBuilderImpl.createDynamicResource" alt="" coords="255,188,487,229"/>
+<area shape="rect" id="node8" href="$d6/d0b/classorg_1_1ajax4jsf_1_1resource_1_1_resource_builder_impl.html#a0dbd1943474331595a9a965a7ec058f5" title="org.ajax4jsf.resource.Resource\lBuilderImpl.createJarResource" alt="" coords="270,123,471,164"/>
+<area shape="rect" id="node10" href="$d6/d0b/classorg_1_1ajax4jsf_1_1resource_1_1_resource_builder_impl.html#a73413daae8e21082dbd9dd0b921349ae" title="org.ajax4jsf.resource.Resource\lBuilderImpl.createStaticResource" alt="" coords="263,253,478,295"/>
+<area shape="rect" id="node5" href="$d6/d0b/classorg_1_1ajax4jsf_1_1resource_1_1_resource_builder_impl.html#ac1924dc46a8b7e89eb776db104bd6d3e" title="org.ajax4jsf.resource.Resource\lBuilderImpl.addResource" alt="" coords="535,247,736,288"/>
+<area shape="rect" id="node6" href="$d6/d0b/classorg_1_1ajax4jsf_1_1resource_1_1_resource_builder_impl.html#a1944ff728949cece74f299c54d034bfb" title="org.ajax4jsf.resource.Resource\lBuilderImpl.setRenderer" alt="" coords="784,247,985,288"/>
+<area shape="rect" id="node7" href="$d6/d0b/classorg_1_1ajax4jsf_1_1resource_1_1_resource_builder_impl.html#a9cdbc117ae8007fc61dc5a1effd0f9e5" title="org.ajax4jsf.resource.Resource\lBuilderImpl.getRendererByExtension" alt="" coords="1033,247,1268,288"/>
+<area shape="rect" id="node9" href="$d6/d0b/classorg_1_1ajax4jsf_1_1resource_1_1_resource_builder_impl.html#aadfd35172065e1798e4d4671be982d75" title="org.ajax4jsf.resource.Resource\lBuilderImpl.getStartTime" alt="" coords="535,181,736,223"/>
+</map>

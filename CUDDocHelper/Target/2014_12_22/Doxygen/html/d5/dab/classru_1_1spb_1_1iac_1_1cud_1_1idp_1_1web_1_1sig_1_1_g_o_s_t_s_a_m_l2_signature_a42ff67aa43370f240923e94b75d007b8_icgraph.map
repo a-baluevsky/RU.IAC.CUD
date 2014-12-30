@@ -1,0 +1,6 @@
+<map id="ru.spb.iac.cud.idp.web.sig.GOSTSAML2Signature.configureIdAttribute" name="ru.spb.iac.cud.idp.web.sig.GOSTSAML2Signature.configureIdAttribute">
+<area shape="rect" id="node2" href="$d5/dab/classru_1_1spb_1_1iac_1_1cud_1_1idp_1_1web_1_1sig_1_1_g_o_s_t_s_a_m_l2_signature.html#a4de3a3d3c17d2925bb608e4431cb9a04" title="ru.spb.iac.cud.idp.web.sig.\lGOSTSAML2Signature.sign" alt="" coords="333,5,517,47"/>
+<area shape="rect" id="node3" href="$d5/dab/classru_1_1spb_1_1iac_1_1cud_1_1idp_1_1web_1_1sig_1_1_g_o_s_t_s_a_m_l2_signature.html#a51912d5765ed2fa4d4fd88fdad79997e" title="ru.spb.iac.cud.idp.web.sig.\lGOSTSAML2Signature.validate" alt="" coords="324,71,527,112"/>
+<area shape="rect" id="node4" href="$d4/d32/classru_1_1spb_1_1iac_1_1cud_1_1sts_1_1core_1_1auth_1_1util_1_1_g_o_s_t_assertion_util.html#a9691b15373c504cb804c824205702184" title="ru.spb.iac.cud.sts.core.auth.util.\lGOSTAssertionUtil.isSignatureValid" alt="" coords="575,71,805,112"/>
+<area shape="rect" id="node5" href="$d9/d0b/classru_1_1spb_1_1iac_1_1cud_1_1sts_1_1core_1_1auth_1_1_c_u_d_s_a_m_l2_s_t_s_login_module.html#a57e71faf9a9adbd18bd9f6a6ccb80eda" title="ru.spb.iac.cud.sts.core.auth.\lCUDSAML2STSLoginModule.localValidation" alt="" coords="853,71,1132,112"/>
+</map>

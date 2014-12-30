@@ -1,0 +1,4 @@
+<map id="ru.spb.iac.cud.idp.web.handlers.CUDSAML2AuthenticationHandler.createRequestedAuthnContext" name="ru.spb.iac.cud.idp.web.handlers.CUDSAML2AuthenticationHandler.createRequestedAuthnContext">
+<area shape="rect" id="node2" href="$db/dc5/classru_1_1spb_1_1iac_1_1cud_1_1idp_1_1web_1_1handlers_1_1_c_u_d_s_a_m_l2_authentication_handler_1_1_s_p_authentication_handler.html#a137c6b9c00158e3d3fdc78b4f12e52a9" title="ru.spb.iac.cud.idp.web.handlers.\lCUDSAML2AuthenticationHandler.SPAuthentication\lHandler.generateSAMLRequest" alt="" coords="312,5,636,61"/>
+<area shape="rect" id="node3" href="$d5/d37/classru_1_1spb_1_1iac_1_1cud_1_1idp_1_1web_1_1handlers_1_1_c_u_d_s_a_m_l2_authentication_handler.html#a4c7f5c5875c0f30ee6fbc5aff682b54f" title="ru.spb.iac.cud.idp.web.handlers.\lCUDSAML2AuthenticationHandler.generate\lSAMLRequest" alt="" coords="684,5,957,61"/>
+</map>

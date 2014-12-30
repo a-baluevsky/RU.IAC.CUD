@@ -1,0 +1,28 @@
+var enumiac_1_1grn_1_1infosweb_1_1session_1_1audit_1_1actions_1_1_actions_map =
+[
+    [ "ActionsMap", "d4/d19/enumiac_1_1grn_1_1infosweb_1_1session_1_1audit_1_1actions_1_1_actions_map.html#aa0a48c89e4126c4c7d014f3cce03d1e6", null ],
+    [ "getCode", "d4/d19/enumiac_1_1grn_1_1infosweb_1_1session_1_1audit_1_1actions_1_1_actions_map.html#a42af3dcaf05667fbd328f73ab041e1ab", null ],
+    [ "setCode", "d4/d19/enumiac_1_1grn_1_1infosweb_1_1session_1_1audit_1_1actions_1_1_actions_map.html#a729c482469bc6b1c53ed1a90163a8806", null ],
+    [ "ADD_CERT", "d4/d19/enumiac_1_1grn_1_1infosweb_1_1session_1_1audit_1_1actions_1_1_actions_map.html#a8d0f69e285a42430dc5fc5a4e2e54d41", null ],
+    [ "code", "d4/d19/enumiac_1_1grn_1_1infosweb_1_1session_1_1audit_1_1actions_1_1_actions_map.html#a6804999dee5aa199a2f5a70e451378d6", null ],
+    [ "CREATE", "d4/d19/enumiac_1_1grn_1_1infosweb_1_1session_1_1audit_1_1actions_1_1_actions_map.html#a76998a292aa12284dfde5518f25b4174", null ],
+    [ "DELETE", "d4/d19/enumiac_1_1grn_1_1infosweb_1_1session_1_1audit_1_1actions_1_1_actions_map.html#a0816ddbb07921c94990d8f90e67a991d", null ],
+    [ "EXECUTE", "d4/d19/enumiac_1_1grn_1_1infosweb_1_1session_1_1audit_1_1actions_1_1_actions_map.html#a60976368d28aeafd4aa37dfed6e69808", null ],
+    [ "LOAD", "d4/d19/enumiac_1_1grn_1_1infosweb_1_1session_1_1audit_1_1actions_1_1_actions_map.html#a81e9ccde8ef16eb6a5097a7d92a21587", null ],
+    [ "LOGIN_ADM", "d4/d19/enumiac_1_1grn_1_1infosweb_1_1session_1_1audit_1_1actions_1_1_actions_map.html#a0475234b77ef1e7522b8e24446aa0260", null ],
+    [ "LOGOUT_ADM", "d4/d19/enumiac_1_1grn_1_1infosweb_1_1session_1_1audit_1_1actions_1_1_actions_map.html#a13719f99ccefba6172c6fae59fa2ba7d", null ],
+    [ "PAUSE", "d4/d19/enumiac_1_1grn_1_1infosweb_1_1session_1_1audit_1_1actions_1_1_actions_map.html#a967ec97ee7c5524d00600353ef689c7e", null ],
+    [ "REJECT", "d4/d19/enumiac_1_1grn_1_1infosweb_1_1session_1_1audit_1_1actions_1_1_actions_map.html#aa293398b0cfeb0174abac4d7fb1b640c", null ],
+    [ "REMOVE_CERT", "d4/d19/enumiac_1_1grn_1_1infosweb_1_1session_1_1audit_1_1actions_1_1_actions_map.html#a4896309fa64b69a2254e5533942e3e80", null ],
+    [ "SET_PARAM", "d4/d19/enumiac_1_1grn_1_1infosweb_1_1session_1_1audit_1_1actions_1_1_actions_map.html#adb388c55e195d586b3d7f357c77a4c8b", null ],
+    [ "START", "d4/d19/enumiac_1_1grn_1_1infosweb_1_1session_1_1audit_1_1actions_1_1_actions_map.html#a5e81624bcf5558250c0fd4bf4feb1f22", null ],
+    [ "STOP", "d4/d19/enumiac_1_1grn_1_1infosweb_1_1session_1_1audit_1_1actions_1_1_actions_map.html#a8bc90eee557b7f3ddac1a5121d8c4c4a", null ],
+    [ "TRANSFER", "d4/d19/enumiac_1_1grn_1_1infosweb_1_1session_1_1audit_1_1actions_1_1_actions_map.html#a5a87e9a3170da756072974ebf5872bbc", null ],
+    [ "UPDATE", "d4/d19/enumiac_1_1grn_1_1infosweb_1_1session_1_1audit_1_1actions_1_1_actions_map.html#aefd78e24e5afdec16fb0874099296cd5", null ],
+    [ "UPDATE_AC_ORG", "d4/d19/enumiac_1_1grn_1_1infosweb_1_1session_1_1audit_1_1actions_1_1_actions_map.html#aec87a3873ffc638525259c700fe61dab", null ],
+    [ "UPDATE_ADMIN_SYS", "d4/d19/enumiac_1_1grn_1_1infosweb_1_1session_1_1audit_1_1actions_1_1_actions_map.html#a5151094a06879446e1f9f738d6c49d9c", null ],
+    [ "UPDATE_GROUP", "d4/d19/enumiac_1_1grn_1_1infosweb_1_1session_1_1audit_1_1actions_1_1_actions_map.html#af2856a7a4300fd2e88f5eb166cff0274", null ],
+    [ "UPDATE_IS", "d4/d19/enumiac_1_1grn_1_1infosweb_1_1session_1_1audit_1_1actions_1_1_actions_map.html#a3921f3945f99d97b6f26e19657c90786", null ],
+    [ "UPDATE_ROLE", "d4/d19/enumiac_1_1grn_1_1infosweb_1_1session_1_1audit_1_1actions_1_1_actions_map.html#af12d9122a8d588a58737e6dd4a88a7ea", null ],
+    [ "UPDATE_USER", "d4/d19/enumiac_1_1grn_1_1infosweb_1_1session_1_1audit_1_1actions_1_1_actions_map.html#ad5b47d8b5c0b8f49a0144a26b9536898", null ]
+];

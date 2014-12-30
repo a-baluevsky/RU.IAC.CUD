@@ -1,0 +1,6 @@
+<map id="iac.cud.infosweb.ws.TokenInstall.get_assertion" name="iac.cud.infosweb.ws.TokenInstall.get_assertion">
+<area shape="rect" id="node2" href="$d4/dae/classiac_1_1cud_1_1infosweb_1_1ws_1_1_token_install.html#a2174b39726c8921926db3e1020c17cd6" title="iac.cud.infosweb.ws.Token\lInstall.valid" alt="" coords="231,5,408,47"/>
+<area shape="rect" id="node3" href="$d4/dae/classiac_1_1cud_1_1infosweb_1_1ws_1_1_token_install.html#af0e208c5890019db635cd736aa3e66a2" title="iac.cud.infosweb.ws.Token\lInstall.setup" alt="" coords="231,71,408,112"/>
+<area shape="rect" id="node5" href="$d4/dae/classiac_1_1cud_1_1infosweb_1_1ws_1_1_token_install.html#a17803e889cca2f28a87da9eae257b03d" title="iac.cud.infosweb.ws.Token\lInstall.load" alt="" coords="231,136,408,177"/>
+<area shape="rect" id="node4" href="$d4/da6/classiac_1_1cud_1_1infosweb_1_1ws_1_1_s_t_s_service_client.html#a4497e70e08d5a053b1f7202bb7109727" title="iac.cud.infosweb.ws.STSService\lClient.sign_verify_soap_transform_2sign" alt="" coords="456,71,709,112"/>
+</map>

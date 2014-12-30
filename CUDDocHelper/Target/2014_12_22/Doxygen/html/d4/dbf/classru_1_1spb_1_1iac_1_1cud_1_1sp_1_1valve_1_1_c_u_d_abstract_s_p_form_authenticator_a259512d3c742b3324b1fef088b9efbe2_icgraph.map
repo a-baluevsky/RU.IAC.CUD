@@ -1,0 +1,6 @@
+<map id="ru.spb.iac.cud.sp.valve.CUDAbstractSPFormAuthenticator.isHttpPostBinding" name="ru.spb.iac.cud.sp.valve.CUDAbstractSPFormAuthenticator.isHttpPostBinding">
+<area shape="rect" id="node2" href="$d4/dbf/classru_1_1spb_1_1iac_1_1cud_1_1sp_1_1valve_1_1_c_u_d_abstract_s_p_form_authenticator.html#a372054872fa7dc51abb05809a8dcbcaf" title="ru.spb.iac.cud.sp.valve.\lCUDAbstractSPFormAuthenticator.send\lRequestToIDP" alt="" coords="291,39,545,95"/>
+<area shape="rect" id="node3" href="$d4/dbf/classru_1_1spb_1_1iac_1_1cud_1_1sp_1_1valve_1_1_c_u_d_abstract_s_p_form_authenticator.html#a382272d76183071cb3af46df88e5d627" title="ru.spb.iac.cud.sp.valve.\lCUDAbstractSPFormAuthenticator.handle\lSAMLResponse" alt="" coords="911,5,1176,61"/>
+<area shape="rect" id="node5" href="$d4/dbf/classru_1_1spb_1_1iac_1_1cud_1_1sp_1_1valve_1_1_c_u_d_abstract_s_p_form_authenticator.html#a6fc909badd1d3b0d0777e978d43b7036" title="ru.spb.iac.cud.sp.valve.\lCUDAbstractSPFormAuthenticator.general\lUserRequest" alt="" coords="593,71,863,127"/>
+<area shape="rect" id="node4" href="$d4/dbf/classru_1_1spb_1_1iac_1_1cud_1_1sp_1_1valve_1_1_c_u_d_abstract_s_p_form_authenticator.html#a49072c69f509c9ba6b0e3937ca8ea493" title="ru.spb.iac.cud.sp.valve.\lCUDAbstractSPFormAuthenticator.authenticate" alt="" coords="1224,46,1523,87"/>
+</map>

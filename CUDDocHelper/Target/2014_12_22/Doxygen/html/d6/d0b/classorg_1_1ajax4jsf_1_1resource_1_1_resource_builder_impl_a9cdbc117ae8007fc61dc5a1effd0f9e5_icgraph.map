@@ -1,0 +1,9 @@
+<map id="org.ajax4jsf.resource.ResourceBuilderImpl.getRendererByExtension" name="org.ajax4jsf.resource.ResourceBuilderImpl.getRendererByExtension">
+<area shape="rect" id="node2" href="$d6/d0b/classorg_1_1ajax4jsf_1_1resource_1_1_resource_builder_impl.html#a1944ff728949cece74f299c54d034bfb" title="org.ajax4jsf.resource.Resource\lBuilderImpl.setRenderer" alt="" coords="288,119,489,160"/>
+<area shape="rect" id="node3" href="$d6/d0b/classorg_1_1ajax4jsf_1_1resource_1_1_resource_builder_impl.html#ac1924dc46a8b7e89eb776db104bd6d3e" title="org.ajax4jsf.resource.Resource\lBuilderImpl.addResource" alt="" coords="537,119,739,160"/>
+<area shape="rect" id="node4" href="$d6/d0b/classorg_1_1ajax4jsf_1_1resource_1_1_resource_builder_impl.html#a73413daae8e21082dbd9dd0b921349ae" title="org.ajax4jsf.resource.Resource\lBuilderImpl.createStaticResource" alt="" coords="795,5,1010,47"/>
+<area shape="rect" id="node6" href="$d6/d0b/classorg_1_1ajax4jsf_1_1resource_1_1_resource_builder_impl.html#a0dbd1943474331595a9a965a7ec058f5" title="org.ajax4jsf.resource.Resource\lBuilderImpl.createJarResource" alt="" coords="802,201,1003,243"/>
+<area shape="rect" id="node7" href="$d6/d0b/classorg_1_1ajax4jsf_1_1resource_1_1_resource_builder_impl.html#a4cbd0154bd32249b3d782187bbd29763" title="org.ajax4jsf.resource.Resource\lBuilderImpl.createDynamicResource" alt="" coords="787,71,1019,112"/>
+<area shape="rect" id="node8" href="$d6/d0b/classorg_1_1ajax4jsf_1_1resource_1_1_resource_builder_impl.html#ae6b5ab3ef85c697454bc3cfa3d899e0c" title="org.ajax4jsf.resource.Resource\lBuilderImpl.createUserResource" alt="" coords="799,136,1007,177"/>
+<area shape="rect" id="node5" href="$d6/d0b/classorg_1_1ajax4jsf_1_1resource_1_1_resource_builder_impl.html#ad5d9acc4b25f6accfe31e0cf7db45707" title="org.ajax4jsf.resource.Resource\lBuilderImpl.createResource" alt="" coords="1067,71,1268,112"/>
+</map>
