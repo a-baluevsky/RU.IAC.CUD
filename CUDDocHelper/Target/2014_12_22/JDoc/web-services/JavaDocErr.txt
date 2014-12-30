@@ -1,0 +1,4 @@
+javadoc: error - Illegal package name: "sts-config.properties"
+javadoc: warning - No source files for package handlers.xml
+javadoc: warning - No source files for package handlers_anonym.xml
+javadoc: warning - No source files for package ru

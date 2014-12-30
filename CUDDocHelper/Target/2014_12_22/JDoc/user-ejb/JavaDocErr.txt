@@ -1,0 +1,4 @@
+javadoc: warning - No source files for package ru
+javadoc: warning - No source files for package test
+javadoc: warning - No source files for package ru
+javadoc: warning - No source files for package test

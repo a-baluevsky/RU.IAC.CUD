@@ -1,0 +1,13 @@
+mypackage
+ru.spb.iac.cud.infosweb.web.init
+ru.spb.iac.cud.services.audit
+ru.spb.iac.cud.uarm.ejb.audit
+ru.spb.iac.cud.uarm.ejb.context.auth
+ru.spb.iac.cud.uarm.ejb.context.forgot
+ru.spb.iac.cud.uarm.ejb.context.reg
+ru.spb.iac.cud.uarm.ejb.context.user
+ru.spb.iac.cud.uarm.ejb.entity
+ru.spb.iac.cud.uarm.session
+ru.spb.iac.cud.uarm.util
+ru.spb.iac.cud.uarm.ws
+test.ejb

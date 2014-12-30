@@ -1,0 +1,9 @@
+mypackage
+ru.spb.iac.cud.infosweb.web.init
+ru.spb.iac.cud.uarm.web.auth
+ru.spb.iac.cud.uarm.web.context.auth
+ru.spb.iac.cud.uarm.web.context.forgot
+ru.spb.iac.cud.uarm.web.context.reg
+ru.spb.iac.cud.uarm.web.context.user
+ru.spb.iac.cud.uarm.web.init
+test.jsf

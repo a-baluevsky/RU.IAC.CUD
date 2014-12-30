@@ -1,0 +1,12 @@
+ru.spb.iac.cud.context
+ru.spb.iac.cud.context.application
+ru.spb.iac.cud.context.eis
+ru.spb.iac.cud.infosweb.web.init
+ru.spb.iac.cud.services.admin
+ru.spb.iac.cud.services.application
+ru.spb.iac.cud.services.audit
+ru.spb.iac.cud.services.handlers
+ru.spb.iac.cud.services.util
+ru.spb.iac.cud.services.web.filter
+ru.spb.iac.cud.services.web.init
+ru.spb.iac.cud.sign

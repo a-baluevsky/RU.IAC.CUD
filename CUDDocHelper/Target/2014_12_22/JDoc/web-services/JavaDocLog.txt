@@ -1,0 +1,1912 @@
+Loading source files for package ru.spb.iac.cud.infosweb.web.init...
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java]]
+[parsing completed 30ms]
+Loading source files for package ru.spb.iac.cud.context.application...
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\application\ContextApplicationResultManager.java]]
+[parsing completed 20ms]
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\application\ContextApplicationManager.java]]
+[parsing completed 10ms]
+Loading source files for package ru.spb.iac.cud.context...
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\ContextSyncManager.java]]
+[parsing completed 0ms]
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\ContextAccessManager.java]]
+[parsing completed 0ms]
+Loading source files for package ru.spb.iac.cud.context.eis...
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\eis\ContextUtilManager.java]]
+[parsing completed 0ms]
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\eis\ContextAdminManager.java]]
+[parsing completed 0ms]
+Loading source files for package ru.spb.iac.cud.services.admin...
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\admin\package-info.java]]
+[parsing completed 0ms]
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\admin\AdminServiceImpl.java]]
+[parsing completed 10ms]
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\admin\AdminService.java]]
+[parsing completed 0ms]
+Loading source files for package ru.spb.iac.cud.services.application...
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\package-info.java]]
+[parsing completed 0ms]
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationServiceImpl.java]]
+[parsing completed 0ms]
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationService.java]]
+[parsing completed 0ms]
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationResultServiceImpl.java]]
+[parsing completed 0ms]
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationResultService.java]]
+[parsing completed 0ms]
+Loading source files for package ru.spb.iac.cud.services.audit...
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\audit\package-info.java]]
+[parsing completed 0ms]
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\audit\ObjectFactory.java]]
+[parsing completed 0ms]
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\audit\AuditServiceImpl.java]]
+[parsing completed 10ms]
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\audit\AuditService.java]]
+[parsing completed 10ms]
+Loading source files for package ru.spb.iac.cud.services.handlers...
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\handlers\SignValidateSOAPHandler.java]]
+[parsing completed 20ms]
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\handlers\SecurityActions.java]]
+[parsing completed 0ms]
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\handlers\CUDSAML2Handler.java]]
+[parsing completed 10ms]
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\handlers\AppSOAPHandler.java]]
+[parsing completed 0ms]
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\handlers\AnonymSOAPHandler.java]]
+[parsing completed 0ms]
+Loading source files for package ru.spb.iac.cud.services.util...
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\util\UtilServiceImpl.java]]
+[parsing completed 20ms]
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\util\UtilService.java]]
+[parsing completed 0ms]
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\util\package-info.java]]
+[parsing completed 0ms]
+Loading source files for package ru.spb.iac.cud.services.web.filter...
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\web\filter\PortFilter.java]]
+[parsing completed 0ms]
+Loading source files for package ru.spb.iac.cud.services.web.init...
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\web\init\StartupServlet.java]]
+[parsing completed 0ms]
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\web\init\Configuration.java]]
+[parsing completed 0ms]
+Loading source files for package ru.spb.iac.cud.sign...
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\sign\GOSTSignatureUtil.java]]
+[parsing completed 10ms]
+Constructing Javadoc information...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:3: error: package javax.servlet does not exist
+import javax.servlet.ServletConfig;
+                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:4: error: package javax.servlet does not exist
+import javax.servlet.ServletContext;
+                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:5: error: package javax.servlet does not exist
+import javax.servlet.ServletException;
+                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:6: error: package javax.servlet.http does not exist
+import javax.servlet.http.HttpServlet;
+                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:8: error: package mypackage does not exist
+import mypackage.Configuration;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:10: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:11: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:18: error: cannot find symbol
+ public class StartupServlet extends HttpServlet {
+                                     ^
+  symbol: class HttpServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:20: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(StartupServlet.class);
+	                     ^
+  symbol:   class Logger
+  location: class StartupServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:35: error: cannot find symbol
+	public void init(ServletConfig config) throws ServletException {
+	                 ^
+  symbol:   class ServletConfig
+  location: class StartupServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:35: error: cannot find symbol
+	public void init(ServletConfig config) throws ServletException {
+	                                              ^
+  symbol:   class ServletException
+  location: class StartupServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\application\ContextApplicationResultManager.java:7: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\application\ContextApplicationResultManager.java:8: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\application\ContextApplicationResultManager.java:10: error: package ru.spb.iac.cud.core.app does not exist
+import ru.spb.iac.cud.core.app.ApplicationResultManagerLocal;
+                              ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\application\ContextApplicationResultManager.java:11: error: package ru.spb.iac.cud.exceptions does not exist
+import ru.spb.iac.cud.exceptions.GeneralFailure;
+                                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\application\ContextApplicationResultManager.java:12: error: package ru.spb.iac.cud.items.app does not exist
+import ru.spb.iac.cud.items.app.AppResult;
+                               ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\application\ContextApplicationResultManager.java:13: error: package ru.spb.iac.cud.items.app does not exist
+import ru.spb.iac.cud.items.app.AppResultRequest;
+                               ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\application\ContextApplicationResultManager.java:18: error: cannot find symbol
+	ApplicationResultManagerLocal aml = null;
+	^
+  symbol:   class ApplicationResultManagerLocal
+  location: class ContextApplicationResultManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\application\ContextApplicationResultManager.java:21: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory
+	                     ^
+  symbol:   class Logger
+  location: class ContextApplicationResultManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\application\ContextApplicationResultManager.java:43: error: cannot find symbol
+	public List<AppResult> result(List<AppResultRequest> request_list,
+	                                   ^
+  symbol:   class AppResultRequest
+  location: class ContextApplicationResultManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\application\ContextApplicationResultManager.java:43: error: cannot find symbol
+	public List<AppResult> result(List<AppResultRequest> request_list,
+	            ^
+  symbol:   class AppResult
+  location: class ContextApplicationResultManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\application\ContextApplicationResultManager.java:44: error: cannot find symbol
+			Long idUserAuth, String IPAddress) throws GeneralFailure {
+			                                          ^
+  symbol:   class GeneralFailure
+  location: class ContextApplicationResultManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\application\ContextApplicationManager.java:7: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\application\ContextApplicationManager.java:8: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\application\ContextApplicationManager.java:10: error: package ru.spb.iac.cud.core.app does not exist
+import ru.spb.iac.cud.core.app.ApplicationManagerLocal;
+                              ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\application\ContextApplicationManager.java:11: error: package ru.spb.iac.cud.exceptions does not exist
+import ru.spb.iac.cud.exceptions.GeneralFailure;
+                                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\application\ContextApplicationManager.java:12: error: package ru.spb.iac.cud.items.app does not exist
+import ru.spb.iac.cud.items.app.AppAttribute;
+                               ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\application\ContextApplicationManager.java:13: error: package ru.spb.iac.cud.items.app does not exist
+import ru.spb.iac.cud.items.app.AppAccept;
+                               ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\application\ContextApplicationManager.java:18: error: cannot find symbol
+	ApplicationManagerLocal aml = null;
+	^
+  symbol:   class ApplicationManagerLocal
+  location: class ContextApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\application\ContextApplicationManager.java:20: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(ContextApplicationManager.class);
+	                     ^
+  symbol:   class Logger
+  location: class ContextApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\application\ContextApplicationManager.java:42: error: cannot find symbol
+	public AppAccept system_registration(List<AppAttribute> attributes,
+	                                          ^
+  symbol:   class AppAttribute
+  location: class ContextApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\application\ContextApplicationManager.java:42: error: cannot find symbol
+	public AppAccept system_registration(List<AppAttribute> attributes,
+	       ^
+  symbol:   class AppAccept
+  location: class ContextApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\application\ContextApplicationManager.java:43: error: cannot find symbol
+			Long idUserAuth, String IPAddress) throws GeneralFailure {
+			                                          ^
+  symbol:   class GeneralFailure
+  location: class ContextApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\application\ContextApplicationManager.java:50: error: cannot find symbol
+	public AppAccept user_registration(List<AppAttribute> attributes,
+	                                        ^
+  symbol:   class AppAttribute
+  location: class ContextApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\application\ContextApplicationManager.java:50: error: cannot find symbol
+	public AppAccept user_registration(List<AppAttribute> attributes,
+	       ^
+  symbol:   class AppAccept
+  location: class ContextApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\application\ContextApplicationManager.java:51: error: cannot find symbol
+			Long idUserAuth, String IPAddress) throws GeneralFailure {
+			                                          ^
+  symbol:   class GeneralFailure
+  location: class ContextApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\application\ContextApplicationManager.java:58: error: cannot find symbol
+	public AppAccept access_roles(String modeExec, String loginUser,
+	       ^
+  symbol:   class AppAccept
+  location: class ContextApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\application\ContextApplicationManager.java:60: error: cannot find symbol
+			String IPAddress) throws GeneralFailure {
+			                         ^
+  symbol:   class GeneralFailure
+  location: class ContextApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\application\ContextApplicationManager.java:67: error: cannot find symbol
+	public AppAccept access_groups(String modeExec, String loginUser,
+	       ^
+  symbol:   class AppAccept
+  location: class ContextApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\application\ContextApplicationManager.java:69: error: cannot find symbol
+			String IPAddress) throws GeneralFailure {
+			                         ^
+  symbol:   class GeneralFailure
+  location: class ContextApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\application\ContextApplicationManager.java:77: error: cannot find symbol
+	public AppAccept block(String modeExec, String loginUser,
+	       ^
+  symbol:   class AppAccept
+  location: class ContextApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\application\ContextApplicationManager.java:79: error: cannot find symbol
+			throws GeneralFailure {
+			       ^
+  symbol:   class GeneralFailure
+  location: class ContextApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\application\ContextApplicationManager.java:88: error: cannot find symbol
+			List<AppAttribute> attributes, Long idUserAuth, String IPAddress)
+			     ^
+  symbol:   class AppAttribute
+  location: class ContextApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\application\ContextApplicationManager.java:87: error: cannot find symbol
+	public AppAccept system_modification(String codeSystem,
+	       ^
+  symbol:   class AppAccept
+  location: class ContextApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\application\ContextApplicationManager.java:89: error: cannot find symbol
+			throws GeneralFailure {
+			       ^
+  symbol:   class GeneralFailure
+  location: class ContextApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\application\ContextApplicationManager.java:96: error: cannot find symbol
+			List<AppAttribute> attributes, Long idUserAuth, String IPAddress)
+			     ^
+  symbol:   class AppAttribute
+  location: class ContextApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\application\ContextApplicationManager.java:95: error: cannot find symbol
+	public AppAccept user_modification(String loginUser,
+	       ^
+  symbol:   class AppAccept
+  location: class ContextApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\application\ContextApplicationManager.java:97: error: cannot find symbol
+			throws GeneralFailure {
+			       ^
+  symbol:   class GeneralFailure
+  location: class ContextApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\application\ContextApplicationManager.java:103: error: cannot find symbol
+	public AppAccept user_identity_modification(String loginUser, String login,
+	       ^
+  symbol:   class AppAccept
+  location: class ContextApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\application\ContextApplicationManager.java:105: error: cannot find symbol
+			throws GeneralFailure {
+			       ^
+  symbol:   class GeneralFailure
+  location: class ContextApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\application\ContextApplicationManager.java:111: error: cannot find symbol
+	public AppAccept user_cert_modification(String modeExec, String loginUser,
+	       ^
+  symbol:   class AppAccept
+  location: class ContextApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\application\ContextApplicationManager.java:113: error: cannot find symbol
+			throws GeneralFailure {
+			       ^
+  symbol:   class GeneralFailure
+  location: class ContextApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\application\ContextApplicationManager.java:120: error: cannot find symbol
+			List<AppAttribute> attributes, Long idUserAuth, String IPAddress)
+			     ^
+  symbol:   class AppAttribute
+  location: class ContextApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\application\ContextApplicationManager.java:119: error: cannot find symbol
+	public AppAccept user_dep_modification(String loginUser,
+	       ^
+  symbol:   class AppAccept
+  location: class ContextApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\application\ContextApplicationManager.java:121: error: cannot find symbol
+			throws GeneralFailure {
+			       ^
+  symbol:   class GeneralFailure
+  location: class ContextApplicationManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\ContextSyncManager.java:7: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\ContextSyncManager.java:8: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\ContextSyncManager.java:10: error: package ru.spb.iac.cud.core does not exist
+import ru.spb.iac.cud.core.SyncManagerLocal;
+                          ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\ContextSyncManager.java:11: error: package ru.spb.iac.cud.exceptions does not exist
+import ru.spb.iac.cud.exceptions.GeneralFailure;
+                                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\ContextSyncManager.java:12: error: package ru.spb.iac.cud.items does not exist
+import ru.spb.iac.cud.items.Function;
+                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\ContextSyncManager.java:13: error: package ru.spb.iac.cud.items does not exist
+import ru.spb.iac.cud.items.Group;
+                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\ContextSyncManager.java:14: error: package ru.spb.iac.cud.items does not exist
+import ru.spb.iac.cud.items.Resource;
+                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\ContextSyncManager.java:15: error: package ru.spb.iac.cud.items does not exist
+import ru.spb.iac.cud.items.Role;
+                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\ContextSyncManager.java:20: error: cannot find symbol
+	SyncManagerLocal aml = null;
+	^
+  symbol:   class SyncManagerLocal
+  location: class ContextSyncManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\ContextSyncManager.java:21: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(ContextSyncManager.class);
+	                     ^
+  symbol:   class Logger
+  location: class ContextSyncManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\ContextSyncManager.java:44: error: cannot find symbol
+	public void sync_roles(String idIS, List<Role> roles, String modeExec,
+	                                         ^
+  symbol:   class Role
+  location: class ContextSyncManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\ContextSyncManager.java:45: error: cannot find symbol
+			Long idUserAuth, String IPAddress) throws GeneralFailure {
+			                                          ^
+  symbol:   class GeneralFailure
+  location: class ContextSyncManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\ContextSyncManager.java:51: error: cannot find symbol
+	public void sync_functions(String idIS, List<Function> functions,
+	                                             ^
+  symbol:   class Function
+  location: class ContextSyncManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\ContextSyncManager.java:53: error: cannot find symbol
+			throws GeneralFailure {
+			       ^
+  symbol:   class GeneralFailure
+  location: class ContextSyncManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\ContextSyncManager.java:59: error: cannot find symbol
+	public List<Role> is_roles(String idIS, Long idUserAuth, String IPAddress)
+	            ^
+  symbol:   class Role
+  location: class ContextSyncManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\ContextSyncManager.java:60: error: cannot find symbol
+			throws GeneralFailure {
+			       ^
+  symbol:   class GeneralFailure
+  location: class ContextSyncManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\ContextSyncManager.java:67: error: cannot find symbol
+	public List<Function> is_functions(String idIS, Long idUserAuth,
+	            ^
+  symbol:   class Function
+  location: class ContextSyncManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\ContextSyncManager.java:68: error: cannot find symbol
+			String IPAddress) throws GeneralFailure {
+			                         ^
+  symbol:   class GeneralFailure
+  location: class ContextSyncManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\ContextSyncManager.java:75: error: cannot find symbol
+	public void sync_groups(String idIS, List<Group> groups, String modeExec,
+	                                          ^
+  symbol:   class Group
+  location: class ContextSyncManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\ContextSyncManager.java:76: error: cannot find symbol
+			Long idUserAuth, String IPAddress) throws GeneralFailure {
+			                                          ^
+  symbol:   class GeneralFailure
+  location: class ContextSyncManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\ContextSyncManager.java:84: error: cannot find symbol
+			String IPAddress) throws GeneralFailure {
+			                         ^
+  symbol:   class GeneralFailure
+  location: class ContextSyncManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\ContextSyncManager.java:91: error: cannot find symbol
+	public void sync_resources(String idIS, List<Resource> resources,
+	                                             ^
+  symbol:   class Resource
+  location: class ContextSyncManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\ContextSyncManager.java:93: error: cannot find symbol
+			throws GeneralFailure {
+			       ^
+  symbol:   class GeneralFailure
+  location: class ContextSyncManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\ContextSyncManager.java:101: error: cannot find symbol
+			String IPAddress) throws GeneralFailure {
+			                         ^
+  symbol:   class GeneralFailure
+  location: class ContextSyncManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\ContextAccessManager.java:8: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\ContextAccessManager.java:9: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\ContextAccessManager.java:11: error: package ru.spb.iac.cud.core does not exist
+import ru.spb.iac.cud.core.AccessManagerLocal;
+                          ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\ContextAccessManager.java:12: error: package ru.spb.iac.cud.exceptions does not exist
+import ru.spb.iac.cud.exceptions.GeneralFailure;
+                                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\ContextAccessManager.java:13: error: package ru.spb.iac.cud.exceptions does not exist
+import ru.spb.iac.cud.exceptions.InvalidCredentials;
+                                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\ContextAccessManager.java:14: error: package ru.spb.iac.cud.items does not exist
+import ru.spb.iac.cud.items.AuditFunction;
+                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\ContextAccessManager.java:19: error: cannot find symbol
+	AccessManagerLocal aml = null;
+	^
+  symbol:   class AccessManagerLocal
+  location: class ContextAccessManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\ContextAccessManager.java:21: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(ContextAccessManager.class);
+	                     ^
+  symbol:   class Logger
+  location: class ContextAccessManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\ContextAccessManager.java:44: error: cannot find symbol
+			List<AuditFunction> userFunctions, Long idUserAuth, String IPAddress)
+			     ^
+  symbol:   class AuditFunction
+  location: class ContextAccessManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\ContextAccessManager.java:45: error: cannot find symbol
+			throws GeneralFailure {
+			       ^
+  symbol:   class GeneralFailure
+  location: class ContextAccessManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\ContextAccessManager.java:52: error: cannot find symbol
+			String new_password, String IPAddress) throws GeneralFailure,
+			                                              ^
+  symbol:   class GeneralFailure
+  location: class ContextAccessManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\ContextAccessManager.java:53: error: cannot find symbol
+			InvalidCredentials {
+			^
+  symbol:   class InvalidCredentials
+  location: class ContextAccessManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\eis\ContextUtilManager.java:9: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\eis\ContextUtilManager.java:10: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\eis\ContextUtilManager.java:12: error: package ru.spb.iac.cud.core does not exist
+import ru.spb.iac.cud.core.UtilManagerLocal;
+                          ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\eis\ContextUtilManager.java:13: error: package ru.spb.iac.cud.exceptions does not exist
+import ru.spb.iac.cud.exceptions.GeneralFailure;
+                                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\eis\ContextUtilManager.java:14: error: package ru.spb.iac.cud.items does not exist
+import ru.spb.iac.cud.items.GroupsData;
+                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\eis\ContextUtilManager.java:15: error: package ru.spb.iac.cud.items does not exist
+import ru.spb.iac.cud.items.Resource;
+                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\eis\ContextUtilManager.java:16: error: package ru.spb.iac.cud.items does not exist
+import ru.spb.iac.cud.items.ResourcesData;
+                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\eis\ContextUtilManager.java:17: error: package ru.spb.iac.cud.items does not exist
+import ru.spb.iac.cud.items.Role;
+                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\eis\ContextUtilManager.java:18: error: package ru.spb.iac.cud.items does not exist
+import ru.spb.iac.cud.items.UsersData;
+                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\eis\ContextUtilManager.java:22: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(ContextUtilManager.class);
+	                     ^
+  symbol:   class Logger
+  location: class ContextUtilManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\eis\ContextUtilManager.java:25: error: cannot find symbol
+	UtilManagerLocal aml = null;
+	^
+  symbol:   class UtilManagerLocal
+  location: class ContextUtilManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\eis\ContextUtilManager.java:48: error: cannot find symbol
+	public UsersData users_data(String idIS, List<String> uidsUsers,
+	       ^
+  symbol:   class UsersData
+  location: class ContextUtilManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\eis\ContextUtilManager.java:51: error: cannot find symbol
+			Long idUserAuth, String IPAddress) throws GeneralFailure {
+			                                          ^
+  symbol:   class GeneralFailure
+  location: class ContextUtilManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\eis\ContextUtilManager.java:58: error: cannot find symbol
+	public GroupsData groups_data(String idIS, List<String> groupsCodes,
+	       ^
+  symbol:   class GroupsData
+  location: class ContextUtilManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\eis\ContextUtilManager.java:61: error: cannot find symbol
+			String IPAddress) throws GeneralFailure {
+			                         ^
+  symbol:   class GeneralFailure
+  location: class ContextUtilManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\eis\ContextUtilManager.java:68: error: cannot find symbol
+	public ResourcesData resources_data(String idIS,
+	       ^
+  symbol:   class ResourcesData
+  location: class ContextUtilManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\eis\ContextUtilManager.java:72: error: cannot find symbol
+			throws GeneralFailure {
+			       ^
+  symbol:   class GeneralFailure
+  location: class ContextUtilManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\eis\ContextUtilManager.java:79: error: cannot find symbol
+	public List<Resource> resources_data_subsys(String idIS, String category,
+	            ^
+  symbol:   class Resource
+  location: class ContextUtilManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\eis\ContextUtilManager.java:80: error: cannot find symbol
+			Long idUserAuth, String IPAddress) throws GeneralFailure {
+			                                          ^
+  symbol:   class GeneralFailure
+  location: class ContextUtilManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\eis\ContextUtilManager.java:85: error: cannot find symbol
+	public List<Role> roles_data(String idIS, 
+	            ^
+  symbol:   class Role
+  location: class ContextUtilManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\eis\ContextUtilManager.java:88: error: cannot find symbol
+			throws GeneralFailure {
+			       ^
+  symbol:   class GeneralFailure
+  location: class ContextUtilManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\eis\ContextAdminManager.java:7: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\eis\ContextAdminManager.java:8: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\eis\ContextAdminManager.java:10: error: package ru.spb.iac.cud.core.eis does not exist
+import ru.spb.iac.cud.core.eis.AdminManagerLocal;
+                              ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\eis\ContextAdminManager.java:11: error: package ru.spb.iac.cud.exceptions does not exist
+import ru.spb.iac.cud.exceptions.GeneralFailure;
+                                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\eis\ContextAdminManager.java:15: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(ContextAdminManager.class);
+	                     ^
+  symbol:   class Logger
+  location: class ContextAdminManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\eis\ContextAdminManager.java:18: error: cannot find symbol
+	AdminManagerLocal aml = null;
+	^
+  symbol:   class AdminManagerLocal
+  location: class ContextAdminManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\eis\ContextAdminManager.java:43: error: cannot find symbol
+			String IPAddress) throws GeneralFailure {
+			                         ^
+  symbol:   class GeneralFailure
+  location: class ContextAdminManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\eis\ContextAdminManager.java:52: error: cannot find symbol
+			String IPAddress) throws GeneralFailure {
+			                         ^
+  symbol:   class GeneralFailure
+  location: class ContextAdminManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\eis\ContextAdminManager.java:60: error: cannot find symbol
+			String IPAddress) throws GeneralFailure {
+			                         ^
+  symbol:   class GeneralFailure
+  location: class ContextAdminManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\admin\AdminServiceImpl.java:9: error: package javax.servlet.http does not exist
+import javax.servlet.http.HttpServletRequest;
+                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\admin\AdminServiceImpl.java:15: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\admin\AdminServiceImpl.java:16: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\admin\AdminServiceImpl.java:19: error: package ru.spb.iac.cud.exceptions does not exist
+import ru.spb.iac.cud.exceptions.GeneralFailure;
+                                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\admin\AdminServiceImpl.java:20: error: package ru.spb.iac.cud.items does not exist
+import ru.spb.iac.cud.items.Function;
+                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\admin\AdminServiceImpl.java:21: error: package ru.spb.iac.cud.items does not exist
+import ru.spb.iac.cud.items.Group;
+                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\admin\AdminServiceImpl.java:22: error: package ru.spb.iac.cud.items does not exist
+import ru.spb.iac.cud.items.Resource;
+                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\admin\AdminServiceImpl.java:23: error: package ru.spb.iac.cud.items does not exist
+import ru.spb.iac.cud.items.Role;
+                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\admin\AdminService.java:8: error: package ru.spb.iac.cud.exceptions does not exist
+import ru.spb.iac.cud.exceptions.GeneralFailure;
+                                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\admin\AdminService.java:9: error: package ru.spb.iac.cud.items does not exist
+import ru.spb.iac.cud.items.Function;
+                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\admin\AdminService.java:10: error: package ru.spb.iac.cud.items does not exist
+import ru.spb.iac.cud.items.Group;
+                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\admin\AdminService.java:11: error: package ru.spb.iac.cud.items does not exist
+import ru.spb.iac.cud.items.Resource;
+                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\admin\AdminService.java:12: error: package ru.spb.iac.cud.items does not exist
+import ru.spb.iac.cud.items.Role;
+                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\admin\AdminServiceImpl.java:32: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(AdminServiceImpl.class);
+	                     ^
+  symbol:   class Logger
+  location: class AdminServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\admin\AdminServiceImpl.java:39: error: cannot find symbol
+			@WebParam(name = "roles", targetNamespace = NS) List<Role> roles,
+			                                                     ^
+  symbol:   class Role
+  location: class AdminServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\admin\AdminServiceImpl.java:41: error: cannot find symbol
+			throws GeneralFailure {
+			       ^
+  symbol:   class GeneralFailure
+  location: class AdminServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\admin\AdminServiceImpl.java:52: error: cannot find symbol
+			throws GeneralFailure {
+			       ^
+  symbol:   class GeneralFailure
+  location: class AdminServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\admin\AdminServiceImpl.java:61: error: cannot find symbol
+			throws GeneralFailure {
+			       ^
+  symbol:   class GeneralFailure
+  location: class AdminServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\admin\AdminServiceImpl.java:71: error: cannot find symbol
+			@WebParam(name = "functions", targetNamespace = NS) List<Function> functions,
+			                                                         ^
+  symbol:   class Function
+  location: class AdminServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\admin\AdminServiceImpl.java:73: error: cannot find symbol
+			throws GeneralFailure {
+			       ^
+  symbol:   class GeneralFailure
+  location: class AdminServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\admin\AdminServiceImpl.java:81: error: cannot find symbol
+			@WebParam(name = "groups", targetNamespace = NS) List<Group> groups,
+			                                                      ^
+  symbol:   class Group
+  location: class AdminServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\admin\AdminServiceImpl.java:83: error: cannot find symbol
+			throws GeneralFailure {
+			       ^
+  symbol:   class GeneralFailure
+  location: class AdminServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\admin\AdminServiceImpl.java:94: error: cannot find symbol
+			throws GeneralFailure {
+			       ^
+  symbol:   class GeneralFailure
+  location: class AdminServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\admin\AdminServiceImpl.java:105: error: cannot find symbol
+			throws GeneralFailure {
+			       ^
+  symbol:   class GeneralFailure
+  location: class AdminServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\admin\AdminServiceImpl.java:114: error: cannot find symbol
+			@WebParam(name = "resources", targetNamespace = NS) List<Resource> resources,
+			                                                         ^
+  symbol:   class Resource
+  location: class AdminServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\admin\AdminServiceImpl.java:116: error: cannot find symbol
+			throws GeneralFailure {
+			       ^
+  symbol:   class GeneralFailure
+  location: class AdminServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\admin\AdminServiceImpl.java:128: error: cannot find symbol
+			throws GeneralFailure {
+			       ^
+  symbol:   class GeneralFailure
+  location: class AdminServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\admin\AdminServiceImpl.java:158: error: cannot find symbol
+	private Long getIDUser() throws GeneralFailure {
+	                                ^
+  symbol:   class GeneralFailure
+  location: class AdminServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\admin\AdminService.java:21: error: cannot find symbol
+			@WebParam(name = "roles", targetNamespace = NS) List<Role> roles,
+			                                                     ^
+  symbol:   class Role
+  location: interface AdminService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\admin\AdminService.java:23: error: cannot find symbol
+			throws GeneralFailure;
+			       ^
+  symbol:   class GeneralFailure
+  location: interface AdminService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\admin\AdminService.java:30: error: cannot find symbol
+			throws GeneralFailure;
+			       ^
+  symbol:   class GeneralFailure
+  location: interface AdminService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\admin\AdminService.java:35: error: cannot find symbol
+			throws GeneralFailure;
+			       ^
+  symbol:   class GeneralFailure
+  location: interface AdminService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\admin\AdminService.java:39: error: cannot find symbol
+			@WebParam(name = "functions", targetNamespace = NS) List<Function> functions,
+			                                                         ^
+  symbol:   class Function
+  location: interface AdminService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\admin\AdminService.java:41: error: cannot find symbol
+			throws GeneralFailure;
+			       ^
+  symbol:   class GeneralFailure
+  location: interface AdminService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\admin\AdminService.java:45: error: cannot find symbol
+			@WebParam(name = "groups", targetNamespace = NS) List<Group> groups,
+			                                                      ^
+  symbol:   class Group
+  location: interface AdminService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\admin\AdminService.java:47: error: cannot find symbol
+			throws GeneralFailure;
+			       ^
+  symbol:   class GeneralFailure
+  location: interface AdminService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\admin\AdminService.java:54: error: cannot find symbol
+			throws GeneralFailure;
+			       ^
+  symbol:   class GeneralFailure
+  location: interface AdminService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\admin\AdminService.java:61: error: cannot find symbol
+			throws GeneralFailure;
+			       ^
+  symbol:   class GeneralFailure
+  location: interface AdminService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\admin\AdminService.java:65: error: cannot find symbol
+			@WebParam(name = "resources", targetNamespace = NS) List<Resource> resources,
+			                                                         ^
+  symbol:   class Resource
+  location: interface AdminService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\admin\AdminService.java:67: error: cannot find symbol
+			throws GeneralFailure;
+			       ^
+  symbol:   class GeneralFailure
+  location: interface AdminService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\admin\AdminService.java:74: error: cannot find symbol
+			throws GeneralFailure;
+			       ^
+  symbol:   class GeneralFailure
+  location: interface AdminService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationServiceImpl.java:11: error: package javax.servlet.http does not exist
+import javax.servlet.http.HttpServletRequest;
+                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationServiceImpl.java:16: error: package ru.spb.iac.cud.exceptions does not exist
+import ru.spb.iac.cud.exceptions.GeneralFailure;
+                                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationServiceImpl.java:17: error: package ru.spb.iac.cud.items.app does not exist
+import ru.spb.iac.cud.items.app.AppAttribute;
+                               ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationServiceImpl.java:18: error: package ru.spb.iac.cud.items.app does not exist
+import ru.spb.iac.cud.items.app.AppAccept;
+                               ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationServiceImpl.java:22: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationServiceImpl.java:24: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationService.java:9: error: package ru.spb.iac.cud.exceptions does not exist
+import ru.spb.iac.cud.exceptions.GeneralFailure;
+                                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationService.java:10: error: package ru.spb.iac.cud.items.app does not exist
+import ru.spb.iac.cud.items.app.AppAttribute;
+                               ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationService.java:11: error: package ru.spb.iac.cud.items.app does not exist
+import ru.spb.iac.cud.items.app.AppAccept;
+                               ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationServiceImpl.java:33: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(ApplicationServiceImpl.class);
+	                     ^
+  symbol:   class Logger
+  location: class ApplicationServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationServiceImpl.java:41: error: cannot find symbol
+			@WebParam(name = "attributes", targetNamespace = NS) List<AppAttribute> attributes)
+			                                                          ^
+  symbol:   class AppAttribute
+  location: class ApplicationServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationServiceImpl.java:40: error: cannot find symbol
+	public AppAccept system_registration(
+	       ^
+  symbol:   class AppAccept
+  location: class ApplicationServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationServiceImpl.java:42: error: cannot find symbol
+			throws GeneralFailure {
+			       ^
+  symbol:   class GeneralFailure
+  location: class ApplicationServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationServiceImpl.java:52: error: cannot find symbol
+			@WebParam(name = "attributes", targetNamespace = NS) List<AppAttribute> attributes)
+			                                                          ^
+  symbol:   class AppAttribute
+  location: class ApplicationServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationServiceImpl.java:51: error: cannot find symbol
+	public AppAccept user_registration(
+	       ^
+  symbol:   class AppAccept
+  location: class ApplicationServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationServiceImpl.java:53: error: cannot find symbol
+			throws GeneralFailure {
+			       ^
+  symbol:   class GeneralFailure
+  location: class ApplicationServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationServiceImpl.java:63: error: cannot find symbol
+	public AppAccept access_roles(
+	       ^
+  symbol:   class AppAccept
+  location: class ApplicationServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationServiceImpl.java:67: error: cannot find symbol
+			throws GeneralFailure {
+			       ^
+  symbol:   class GeneralFailure
+  location: class ApplicationServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationServiceImpl.java:83: error: cannot find symbol
+	public AppAccept access_groups(
+	       ^
+  symbol:   class AppAccept
+  location: class ApplicationServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationServiceImpl.java:87: error: cannot find symbol
+			throws GeneralFailure {
+			       ^
+  symbol:   class GeneralFailure
+  location: class ApplicationServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationServiceImpl.java:103: error: cannot find symbol
+	public AppAccept block(
+	       ^
+  symbol:   class AppAccept
+  location: class ApplicationServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationServiceImpl.java:108: error: cannot find symbol
+			throws GeneralFailure {
+			       ^
+  symbol:   class GeneralFailure
+  location: class ApplicationServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationServiceImpl.java:123: error: cannot find symbol
+			@WebParam(name = "attributes", targetNamespace = NS) List<AppAttribute> attributes)
+			                                                          ^
+  symbol:   class AppAttribute
+  location: class ApplicationServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationServiceImpl.java:122: error: cannot find symbol
+	public AppAccept system_modification(
+	       ^
+  symbol:   class AppAccept
+  location: class ApplicationServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationServiceImpl.java:124: error: cannot find symbol
+			throws GeneralFailure {
+			       ^
+  symbol:   class GeneralFailure
+  location: class ApplicationServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationServiceImpl.java:136: error: cannot find symbol
+			@WebParam(name = "attributes", targetNamespace = NS) List<AppAttribute> attributes)
+			                                                          ^
+  symbol:   class AppAttribute
+  location: class ApplicationServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationServiceImpl.java:134: error: cannot find symbol
+	public AppAccept user_modification(
+	       ^
+  symbol:   class AppAccept
+  location: class ApplicationServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationServiceImpl.java:137: error: cannot find symbol
+			throws GeneralFailure {
+			       ^
+  symbol:   class GeneralFailure
+  location: class ApplicationServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationServiceImpl.java:148: error: cannot find symbol
+	public AppAccept user_identity_modification(
+	       ^
+  symbol:   class AppAccept
+  location: class ApplicationServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationServiceImpl.java:152: error: cannot find symbol
+			throws GeneralFailure {
+			       ^
+  symbol:   class GeneralFailure
+  location: class ApplicationServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationServiceImpl.java:160: error: cannot find symbol
+	public AppAccept user_cert_modification(
+	       ^
+  symbol:   class AppAccept
+  location: class ApplicationServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationServiceImpl.java:164: error: cannot find symbol
+			throws GeneralFailure {
+			       ^
+  symbol:   class GeneralFailure
+  location: class ApplicationServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationServiceImpl.java:180: error: cannot find symbol
+	private Long getIDUser() throws GeneralFailure {
+	                                ^
+  symbol:   class GeneralFailure
+  location: class ApplicationServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationService.java:21: error: cannot find symbol
+			@WebParam(name = "attributes", targetNamespace = NS) List<AppAttribute> attributes)
+			                                                          ^
+  symbol:   class AppAttribute
+  location: interface ApplicationService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationService.java:20: error: cannot find symbol
+	public AppAccept system_registration(
+	       ^
+  symbol:   class AppAccept
+  location: interface ApplicationService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationService.java:22: error: cannot find symbol
+			throws GeneralFailure;
+			       ^
+  symbol:   class GeneralFailure
+  location: interface ApplicationService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationService.java:27: error: cannot find symbol
+			@WebParam(name = "attributes", targetNamespace = NS) List<AppAttribute> attributes)
+			                                                          ^
+  symbol:   class AppAttribute
+  location: interface ApplicationService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationService.java:26: error: cannot find symbol
+	public AppAccept user_registration(
+	       ^
+  symbol:   class AppAccept
+  location: interface ApplicationService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationService.java:28: error: cannot find symbol
+			throws GeneralFailure;
+			       ^
+  symbol:   class GeneralFailure
+  location: interface ApplicationService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationService.java:32: error: cannot find symbol
+	public AppAccept access_roles(
+	       ^
+  symbol:   class AppAccept
+  location: interface ApplicationService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationService.java:36: error: cannot find symbol
+			throws GeneralFailure;
+			       ^
+  symbol:   class GeneralFailure
+  location: interface ApplicationService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationService.java:40: error: cannot find symbol
+	public AppAccept access_groups(
+	       ^
+  symbol:   class AppAccept
+  location: interface ApplicationService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationService.java:44: error: cannot find symbol
+			throws GeneralFailure;
+			       ^
+  symbol:   class GeneralFailure
+  location: interface ApplicationService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationService.java:48: error: cannot find symbol
+	public AppAccept block(
+	       ^
+  symbol:   class AppAccept
+  location: interface ApplicationService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationService.java:52: error: cannot find symbol
+			throws GeneralFailure;
+			       ^
+  symbol:   class GeneralFailure
+  location: interface ApplicationService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationService.java:57: error: cannot find symbol
+			@WebParam(name = "attributes", targetNamespace = NS) List<AppAttribute> attributes)
+			                                                          ^
+  symbol:   class AppAttribute
+  location: interface ApplicationService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationService.java:56: error: cannot find symbol
+	public AppAccept system_modification(
+	       ^
+  symbol:   class AppAccept
+  location: interface ApplicationService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationService.java:58: error: cannot find symbol
+			throws GeneralFailure;
+			       ^
+  symbol:   class GeneralFailure
+  location: interface ApplicationService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationService.java:64: error: cannot find symbol
+			@WebParam(name = "attributes", targetNamespace = NS) List<AppAttribute> attributes)
+			                                                          ^
+  symbol:   class AppAttribute
+  location: interface ApplicationService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationService.java:62: error: cannot find symbol
+	public AppAccept user_modification(
+	       ^
+  symbol:   class AppAccept
+  location: interface ApplicationService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationService.java:65: error: cannot find symbol
+			throws GeneralFailure;
+			       ^
+  symbol:   class GeneralFailure
+  location: interface ApplicationService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationService.java:69: error: cannot find symbol
+	public AppAccept user_identity_modification(
+	       ^
+  symbol:   class AppAccept
+  location: interface ApplicationService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationService.java:73: error: cannot find symbol
+			throws GeneralFailure;
+			       ^
+  symbol:   class GeneralFailure
+  location: interface ApplicationService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationService.java:77: error: cannot find symbol
+	public AppAccept user_cert_modification(
+	       ^
+  symbol:   class AppAccept
+  location: interface ApplicationService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationService.java:81: error: cannot find symbol
+			throws GeneralFailure;
+			       ^
+  symbol:   class GeneralFailure
+  location: interface ApplicationService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationResultServiceImpl.java:11: error: package javax.servlet.http does not exist
+import javax.servlet.http.HttpServletRequest;
+                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationResultServiceImpl.java:16: error: package ru.spb.iac.cud.exceptions does not exist
+import ru.spb.iac.cud.exceptions.GeneralFailure;
+                                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationResultServiceImpl.java:17: error: package ru.spb.iac.cud.items.app does not exist
+import ru.spb.iac.cud.items.app.AppResult;
+                               ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationResultServiceImpl.java:18: error: package ru.spb.iac.cud.items.app does not exist
+import ru.spb.iac.cud.items.app.AppResultRequest;
+                               ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationResultServiceImpl.java:22: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationResultServiceImpl.java:23: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationResultService.java:9: error: package ru.spb.iac.cud.exceptions does not exist
+import ru.spb.iac.cud.exceptions.GeneralFailure;
+                                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationResultService.java:10: error: package ru.spb.iac.cud.items.app does not exist
+import ru.spb.iac.cud.items.app.AppResult;
+                               ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationResultService.java:11: error: package ru.spb.iac.cud.items.app does not exist
+import ru.spb.iac.cud.items.app.AppResultRequest;
+                               ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationResultServiceImpl.java:32: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(ApplicationResultServiceImpl.class);
+	                     ^
+  symbol:   class Logger
+  location: class ApplicationResultServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationResultServiceImpl.java:40: error: cannot find symbol
+			@WebParam(name = "appResultRequestList", targetNamespace = NS) List<AppResultRequest> appResultRequestList)
+			                                                                    ^
+  symbol:   class AppResultRequest
+  location: class ApplicationResultServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationResultServiceImpl.java:39: error: cannot find symbol
+	public List<AppResult> result(
+	            ^
+  symbol:   class AppResult
+  location: class ApplicationResultServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationResultServiceImpl.java:41: error: cannot find symbol
+			throws GeneralFailure {
+			       ^
+  symbol:   class GeneralFailure
+  location: class ApplicationResultServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationResultServiceImpl.java:48: error: cannot find symbol
+	private Long getIDUser() throws GeneralFailure {
+	                                ^
+  symbol:   class GeneralFailure
+  location: class ApplicationResultServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationResultService.java:21: error: cannot find symbol
+			@WebParam(name = "appResultRequestList", targetNamespace = NS) List<AppResultRequest> appResultRequestList)
+			                                                                    ^
+  symbol:   class AppResultRequest
+  location: interface ApplicationResultService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationResultService.java:20: error: cannot find symbol
+	public List<AppResult> result(
+	            ^
+  symbol:   class AppResult
+  location: interface ApplicationResultService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationResultService.java:22: error: cannot find symbol
+			throws GeneralFailure;
+			       ^
+  symbol:   class GeneralFailure
+  location: interface ApplicationResultService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\audit\ObjectFactory.java:7: error: package ru.spb.iac.cud.items.wrapper does not exist
+import ru.spb.iac.cud.items.wrapper.Audit;
+                                   ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\audit\ObjectFactory.java:8: error: package ru.spb.iac.cud.items.wrapper does not exist
+import ru.spb.iac.cud.items.wrapper.SyncFunctions;
+                                   ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\audit\ObjectFactory.java:21: error: cannot find symbol
+	public JAXBElement<Audit> createSayHello(Audit value) {
+	                                         ^
+  symbol:   class Audit
+  location: class ObjectFactory
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\audit\ObjectFactory.java:21: error: cannot find symbol
+	public JAXBElement<Audit> createSayHello(Audit value) {
+	                   ^
+  symbol:   class Audit
+  location: class ObjectFactory
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\audit\ObjectFactory.java:26: error: cannot find symbol
+	public JAXBElement<SyncFunctions> createSyncFunctions(SyncFunctions value) {
+	                                                      ^
+  symbol:   class SyncFunctions
+  location: class ObjectFactory
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\audit\ObjectFactory.java:26: error: cannot find symbol
+	public JAXBElement<SyncFunctions> createSyncFunctions(SyncFunctions value) {
+	                   ^
+  symbol:   class SyncFunctions
+  location: class ObjectFactory
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\audit\AuditServiceImpl.java:10: error: package javax.servlet.http does not exist
+import javax.servlet.http.HttpServletRequest;
+                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\audit\AuditServiceImpl.java:16: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\audit\AuditServiceImpl.java:17: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\audit\AuditServiceImpl.java:19: error: package ru.spb.iac.cud.exceptions does not exist
+import ru.spb.iac.cud.exceptions.GeneralFailure;
+                                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\audit\AuditServiceImpl.java:20: error: package ru.spb.iac.cud.items does not exist
+import ru.spb.iac.cud.items.AuditFunction;
+                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\audit\AuditService.java:8: error: package ru.spb.iac.cud.exceptions does not exist
+import ru.spb.iac.cud.exceptions.GeneralFailure;
+                                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\audit\AuditService.java:9: error: package ru.spb.iac.cud.items does not exist
+import ru.spb.iac.cud.items.AuditFunction;
+                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\audit\AuditServiceImpl.java:30: error: cannot find symbol
+     private static final Logger LOGGER = LoggerFactory.getLogger(AuditServiceImpl.class);
+                          ^
+  symbol:   class Logger
+  location: class AuditServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\audit\AuditServiceImpl.java:39: error: cannot find symbol
+			    @WebParam(name = "userFunctions", targetNamespace = NS) List<AuditFunction> userFunctions) throws GeneralFailure{
+			                                                                 ^
+  symbol:   class AuditFunction
+  location: class AuditServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\audit\AuditServiceImpl.java:39: error: cannot find symbol
+			    @WebParam(name = "userFunctions", targetNamespace = NS) List<AuditFunction> userFunctions) throws GeneralFailure{
+			                                                                                                      ^
+  symbol:   class GeneralFailure
+  location: class AuditServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\audit\AuditServiceImpl.java:66: error: cannot find symbol
+     private Long getIDUser() throws GeneralFailure{
+                                     ^
+  symbol:   class GeneralFailure
+  location: class AuditServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\audit\AuditService.java:19: error: cannot find symbol
+			@WebParam(name = "userFunctions", targetNamespace = NS) List<AuditFunction> userFunctions)
+			                                                             ^
+  symbol:   class AuditFunction
+  location: interface AuditService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\audit\AuditService.java:20: error: cannot find symbol
+			throws GeneralFailure;
+			       ^
+  symbol:   class GeneralFailure
+  location: interface AuditService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\handlers\SignValidateSOAPHandler.java:16: error: package javax.servlet.http does not exist
+import javax.servlet.http.HttpServletRequest;
+                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\handlers\SignValidateSOAPHandler.java:17: error: package javax.servlet.http does not exist
+import javax.servlet.http.HttpSession;
+                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\handlers\SignValidateSOAPHandler.java:41: error: package org.picketlink.common.util does not exist
+import org.picketlink.common.util.Base64;
+                                 ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\handlers\SignValidateSOAPHandler.java:42: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\handlers\SignValidateSOAPHandler.java:43: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\handlers\SignValidateSOAPHandler.java:48: error: package ru.spb.iac.cud.exceptions does not exist
+import ru.spb.iac.cud.exceptions.GeneralFailure;
+                                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\handlers\SignValidateSOAPHandler.java:53: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(SignValidateSOAPHandler.class);
+	                     ^
+  symbol:   class Logger
+  location: class SignValidateSOAPHandler
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\handlers\SecurityActions.java:11: error: package org.jboss.security does not exist
+import org.jboss.security.SecurityConstants;
+                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\handlers\SecurityActions.java:12: error: package org.jboss.security does not exist
+import org.jboss.security.SecurityContext;
+                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\handlers\SecurityActions.java:13: error: package org.jboss.security does not exist
+import org.jboss.security.SecurityContextAssociation;
+                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\handlers\SecurityActions.java:14: error: package org.jboss.security does not exist
+import org.jboss.security.SecurityContextFactory;
+                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\handlers\SecurityActions.java:15: error: package org.jboss.security does not exist
+import org.jboss.security.SimplePrincipal;
+                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\handlers\SecurityActions.java:16: error: package org.picketlink.identity.federation.bindings.jboss.subject does not exist
+import org.picketlink.identity.federation.bindings.jboss.subject.PicketLinkGroup;
+                                                                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\handlers\SecurityActions.java:20: error: cannot find symbol
+    static SecurityContext createSecurityContext(final Principal p, final Object cred, final Subject subject) {
+           ^
+  symbol:   class SecurityContext
+  location: class SecurityActions
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\handlers\SecurityActions.java:46: error: cannot find symbol
+    static void setSecurityContext(final SecurityContext sc) {
+                                         ^
+  symbol:   class SecurityContext
+  location: class SecurityActions
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\handlers\SecurityActions.java:61: error: cannot find symbol
+    static SecurityContext getSecurityContext() {
+           ^
+  symbol:   class SecurityContext
+  location: class SecurityActions
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\handlers\CUDSAML2Handler.java:3: error: package org.picketlink.trust.jbossws.handler does not exist
+import org.picketlink.trust.jbossws.handler.AbstractSAML2Handler;
+                                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\handlers\CUDSAML2Handler.java:16: error: package org.jboss.security does not exist
+import org.jboss.security.SecurityContext;
+                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\handlers\CUDSAML2Handler.java:17: error: package org.picketlink.common.constants does not exist
+import org.picketlink.common.constants.JBossSAMLURIConstants;
+                                      ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\handlers\CUDSAML2Handler.java:18: error: package org.picketlink.common.util does not exist
+import org.picketlink.common.util.StringUtil;
+                                 ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\handlers\CUDSAML2Handler.java:19: error: package org.picketlink.identity.federation.bindings.jboss.subject does not exist
+import org.picketlink.identity.federation.bindings.jboss.subject.PicketLinkPrincipal;
+                                                                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\handlers\CUDSAML2Handler.java:20: error: package org.picketlink.identity.federation.core.saml.v2.util does not exist
+import org.picketlink.identity.federation.core.saml.v2.util.AssertionUtil;
+                                                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\handlers\CUDSAML2Handler.java:21: error: package org.picketlink.identity.federation.core.wstrust does not exist
+import org.picketlink.identity.federation.core.wstrust.SamlCredential;
+                                                      ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\handlers\CUDSAML2Handler.java:22: error: package org.picketlink.identity.federation.core.wstrust.plugins.saml does not exist
+import org.picketlink.identity.federation.core.wstrust.plugins.saml.SAMLUtil;
+                                                                   ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\handlers\CUDSAML2Handler.java:23: error: package org.picketlink.identity.federation.saml.v2.assertion does not exist
+import org.picketlink.identity.federation.saml.v2.assertion.AssertionType;
+                                                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\handlers\CUDSAML2Handler.java:24: error: package org.picketlink.trust.jbossws does not exist
+import org.picketlink.trust.jbossws.SAML2Constants;
+                                   ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\handlers\CUDSAML2Handler.java:25: error: package org.picketlink.trust.jbossws does not exist
+import org.picketlink.trust.jbossws.Util;
+                                   ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\handlers\CUDSAML2Handler.java:29: error: cannot find symbol
+ public class CUDSAML2Handler extends AbstractSAML2Handler {
+                                      ^
+  symbol: class AbstractSAML2Handler
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\handlers\CUDSAML2Handler.java:105: error: cannot find symbol
+	protected void createSecurityContext(SamlCredential credential,
+	                                     ^
+  symbol:   class SamlCredential
+  location: class CUDSAML2Handler
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\handlers\AppSOAPHandler.java:8: error: package javax.servlet.http does not exist
+import javax.servlet.http.HttpServletRequest;
+                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\handlers\AppSOAPHandler.java:9: error: package javax.servlet.http does not exist
+import javax.servlet.http.HttpSession;
+                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\handlers\AppSOAPHandler.java:19: error: package org.picketlink.common.util does not exist
+import org.picketlink.common.util.Base64;
+                                 ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\handlers\AppSOAPHandler.java:20: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\handlers\AppSOAPHandler.java:21: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\handlers\AppSOAPHandler.java:25: error: package ru.spb.iac.cud.exceptions does not exist
+import ru.spb.iac.cud.exceptions.GeneralFailure;
+                                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\handlers\AppSOAPHandler.java:26: error: package ru.spb.iac.cud.exceptions does not exist
+import ru.spb.iac.cud.exceptions.TokenExpired;
+                                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\handlers\AppSOAPHandler.java:31: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(AppSOAPHandler.class);
+	                     ^
+  symbol:   class Logger
+  location: class AppSOAPHandler
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\handlers\AnonymSOAPHandler.java:8: error: package javax.servlet.http does not exist
+import javax.servlet.http.HttpServletRequest;
+                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\handlers\AnonymSOAPHandler.java:9: error: package javax.servlet.http does not exist
+import javax.servlet.http.HttpSession;
+                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\handlers\AnonymSOAPHandler.java:18: error: package org.picketlink.common.util does not exist
+import org.picketlink.common.util.Base64;
+                                 ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\handlers\AnonymSOAPHandler.java:19: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\handlers\AnonymSOAPHandler.java:20: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\handlers\AnonymSOAPHandler.java:24: error: package ru.spb.iac.cud.exceptions does not exist
+import ru.spb.iac.cud.exceptions.GeneralFailure;
+                                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\handlers\AnonymSOAPHandler.java:25: error: package ru.spb.iac.cud.exceptions does not exist
+import ru.spb.iac.cud.exceptions.TokenExpired;
+                                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\handlers\AnonymSOAPHandler.java:30: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(AnonymSOAPHandler.class);
+	                     ^
+  symbol:   class Logger
+  location: class AnonymSOAPHandler
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\util\UtilServiceImpl.java:10: error: package javax.servlet.http does not exist
+import javax.servlet.http.HttpServletRequest;
+                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\util\UtilServiceImpl.java:16: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\util\UtilServiceImpl.java:17: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\util\UtilServiceImpl.java:21: error: package ru.spb.iac.cud.exceptions does not exist
+import ru.spb.iac.cud.exceptions.GeneralFailure;
+                                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\util\UtilServiceImpl.java:22: error: package ru.spb.iac.cud.items does not exist
+import ru.spb.iac.cud.items.Function;
+                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\util\UtilServiceImpl.java:23: error: package ru.spb.iac.cud.items does not exist
+import ru.spb.iac.cud.items.GroupsData;
+                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\util\UtilServiceImpl.java:24: error: package ru.spb.iac.cud.items does not exist
+import ru.spb.iac.cud.items.Resource;
+                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\util\UtilServiceImpl.java:25: error: package ru.spb.iac.cud.items does not exist
+import ru.spb.iac.cud.items.Role;
+                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\util\UtilServiceImpl.java:26: error: package ru.spb.iac.cud.items does not exist
+import ru.spb.iac.cud.items.UsersData;
+                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\util\UtilService.java:8: error: package ru.spb.iac.cud.exceptions does not exist
+import ru.spb.iac.cud.exceptions.GeneralFailure;
+                                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\util\UtilService.java:9: error: package ru.spb.iac.cud.items does not exist
+import ru.spb.iac.cud.items.Function;
+                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\util\UtilService.java:10: error: package ru.spb.iac.cud.items does not exist
+import ru.spb.iac.cud.items.GroupsData;
+                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\util\UtilService.java:11: error: package ru.spb.iac.cud.items does not exist
+import ru.spb.iac.cud.items.Resource;
+                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\util\UtilService.java:12: error: package ru.spb.iac.cud.items does not exist
+import ru.spb.iac.cud.items.Role;
+                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\util\UtilService.java:13: error: package ru.spb.iac.cud.items does not exist
+import ru.spb.iac.cud.items.UsersData;
+                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\util\UtilServiceImpl.java:35: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(UtilServiceImpl.class);
+	                     ^
+  symbol:   class Logger
+  location: class UtilServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\util\UtilServiceImpl.java:42: error: cannot find symbol
+	public UsersData users_data(
+	       ^
+  symbol:   class UsersData
+  location: class UtilServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\util\UtilServiceImpl.java:50: error: cannot find symbol
+			throws GeneralFailure {
+			       ^
+  symbol:   class GeneralFailure
+  location: class UtilServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\util\UtilServiceImpl.java:63: error: cannot find symbol
+	public List<Role> sys_roles() throws GeneralFailure {
+	            ^
+  symbol:   class Role
+  location: class UtilServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\util\UtilServiceImpl.java:63: error: cannot find symbol
+	public List<Role> sys_roles() throws GeneralFailure {
+	                                     ^
+  symbol:   class GeneralFailure
+  location: class UtilServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\util\UtilServiceImpl.java:72: error: cannot find symbol
+	public List<Function> sys_functions() throws GeneralFailure {
+	            ^
+  symbol:   class Function
+  location: class UtilServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\util\UtilServiceImpl.java:72: error: cannot find symbol
+	public List<Function> sys_functions() throws GeneralFailure {
+	                                             ^
+  symbol:   class GeneralFailure
+  location: class UtilServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\util\UtilServiceImpl.java:83: error: cannot find symbol
+	public GroupsData groups_data(
+	       ^
+  symbol:   class GroupsData
+  location: class UtilServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\util\UtilServiceImpl.java:90: error: cannot find symbol
+			throws GeneralFailure {
+			       ^
+  symbol:   class GeneralFailure
+  location: class UtilServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\util\UtilServiceImpl.java:102: error: cannot find symbol
+	public List<Resource> resources_data(
+	            ^
+  symbol:   class Resource
+  location: class UtilServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\util\UtilServiceImpl.java:105: error: cannot find symbol
+			throws GeneralFailure {
+			       ^
+  symbol:   class GeneralFailure
+  location: class UtilServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\util\UtilServiceImpl.java:116: error: cannot find symbol
+	public List<Role> roles_data(
+	            ^
+  symbol:   class Role
+  location: class UtilServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\util\UtilServiceImpl.java:117: error: cannot find symbol
+			@WebParam(name = "category", targetNamespace = NS) String category) throws GeneralFailure{
+			                                                                           ^
+  symbol:   class GeneralFailure
+  location: class UtilServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\util\UtilServiceImpl.java:146: error: cannot find symbol
+	private Long getIDUser() throws GeneralFailure {
+	                                ^
+  symbol:   class GeneralFailure
+  location: class UtilServiceImpl
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\util\UtilService.java:22: error: cannot find symbol
+	public UsersData users_data(
+	       ^
+  symbol:   class UsersData
+  location: interface UtilService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\util\UtilService.java:30: error: cannot find symbol
+			throws GeneralFailure;
+			       ^
+  symbol:   class GeneralFailure
+  location: interface UtilService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\util\UtilService.java:33: error: cannot find symbol
+	public List<Role> sys_roles() throws GeneralFailure;
+	            ^
+  symbol:   class Role
+  location: interface UtilService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\util\UtilService.java:33: error: cannot find symbol
+	public List<Role> sys_roles() throws GeneralFailure;
+	                                     ^
+  symbol:   class GeneralFailure
+  location: interface UtilService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\util\UtilService.java:36: error: cannot find symbol
+	public List<Function> sys_functions() throws GeneralFailure;
+	            ^
+  symbol:   class Function
+  location: interface UtilService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\util\UtilService.java:36: error: cannot find symbol
+	public List<Function> sys_functions() throws GeneralFailure;
+	                                             ^
+  symbol:   class GeneralFailure
+  location: interface UtilService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\util\UtilService.java:40: error: cannot find symbol
+	public GroupsData groups_data(
+	       ^
+  symbol:   class GroupsData
+  location: interface UtilService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\util\UtilService.java:47: error: cannot find symbol
+			throws GeneralFailure;
+			       ^
+  symbol:   class GeneralFailure
+  location: interface UtilService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\util\UtilService.java:51: error: cannot find symbol
+	public List<Resource> resources_data(
+	            ^
+  symbol:   class Resource
+  location: interface UtilService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\util\UtilService.java:53: error: cannot find symbol
+			throws GeneralFailure;
+			       ^
+  symbol:   class GeneralFailure
+  location: interface UtilService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\util\UtilService.java:56: error: cannot find symbol
+	public List<Role> roles_data(
+	            ^
+  symbol:   class Role
+  location: interface UtilService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\util\UtilService.java:57: error: cannot find symbol
+			@WebParam(name = "category", targetNamespace = NS) String category) throws GeneralFailure;
+			                                                                           ^
+  symbol:   class GeneralFailure
+  location: interface UtilService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\web\filter\PortFilter.java:8: error: package javax.servlet does not exist
+import javax.servlet.Filter;
+                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\web\filter\PortFilter.java:9: error: package javax.servlet does not exist
+import javax.servlet.FilterChain;
+                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\web\filter\PortFilter.java:10: error: package javax.servlet does not exist
+import javax.servlet.FilterConfig;
+                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\web\filter\PortFilter.java:11: error: package javax.servlet does not exist
+import javax.servlet.ServletException;
+                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\web\filter\PortFilter.java:12: error: package javax.servlet does not exist
+import javax.servlet.ServletRequest;
+                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\web\filter\PortFilter.java:13: error: package javax.servlet does not exist
+import javax.servlet.ServletResponse;
+                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\web\filter\PortFilter.java:14: error: package javax.servlet.http does not exist
+import javax.servlet.http.HttpServletRequest;
+                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\web\filter\PortFilter.java:15: error: package javax.servlet.http does not exist
+import javax.servlet.http.HttpServletResponse;
+                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\web\filter\PortFilter.java:17: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\web\filter\PortFilter.java:18: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\web\filter\PortFilter.java:20: error: cannot find symbol
+ public class PortFilter implements Filter {
+                                    ^
+  symbol: class Filter
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\web\filter\PortFilter.java:22: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(PortFilter.class);
+	                     ^
+  symbol:   class Logger
+  location: class PortFilter
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\web\filter\PortFilter.java:34: error: cannot find symbol
+	public void doFilter(ServletRequest request, ServletResponse response,
+	                     ^
+  symbol:   class ServletRequest
+  location: class PortFilter
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\web\filter\PortFilter.java:34: error: cannot find symbol
+	public void doFilter(ServletRequest request, ServletResponse response,
+	                                             ^
+  symbol:   class ServletResponse
+  location: class PortFilter
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\web\filter\PortFilter.java:35: error: cannot find symbol
+			FilterChain chain) throws IOException, ServletException {
+			^
+  symbol:   class FilterChain
+  location: class PortFilter
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\web\filter\PortFilter.java:35: error: cannot find symbol
+			FilterChain chain) throws IOException, ServletException {
+			                                       ^
+  symbol:   class ServletException
+  location: class PortFilter
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\web\filter\PortFilter.java:67: error: cannot find symbol
+	public void init(FilterConfig fConfig) throws ServletException {
+	                 ^
+  symbol:   class FilterConfig
+  location: class PortFilter
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\web\filter\PortFilter.java:67: error: cannot find symbol
+	public void init(FilterConfig fConfig) throws ServletException {
+	                                              ^
+  symbol:   class ServletException
+  location: class PortFilter
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\web\init\StartupServlet.java:3: error: package javax.servlet does not exist
+import javax.servlet.ServletConfig;
+                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\web\init\StartupServlet.java:4: error: package javax.servlet does not exist
+import javax.servlet.ServletContext;
+                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\web\init\StartupServlet.java:5: error: package javax.servlet does not exist
+import javax.servlet.ServletException;
+                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\web\init\StartupServlet.java:6: error: package javax.servlet.http does not exist
+import javax.servlet.http.HttpServlet;
+                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\web\init\StartupServlet.java:8: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\web\init\StartupServlet.java:9: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\web\init\StartupServlet.java:11: error: cannot find symbol
+ public class StartupServlet extends HttpServlet {
+                                     ^
+  symbol: class HttpServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\web\init\StartupServlet.java:15: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(StartupServlet.class);
+	                     ^
+  symbol:   class Logger
+  location: class StartupServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\web\init\StartupServlet.java:21: error: cannot find symbol
+	public void init(ServletConfig config) throws ServletException {
+	                 ^
+  symbol:   class ServletConfig
+  location: class StartupServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\web\init\StartupServlet.java:21: error: cannot find symbol
+	public void init(ServletConfig config) throws ServletException {
+	                                              ^
+  symbol:   class ServletException
+  location: class StartupServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\sign\GOSTSignatureUtil.java:3: error: package org.picketlink.common does not exist
+import org.picketlink.common.PicketLinkLogger;
+                            ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\sign\GOSTSignatureUtil.java:4: error: package org.picketlink.common does not exist
+import org.picketlink.common.PicketLinkLoggerFactory;
+                            ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\sign\GOSTSignatureUtil.java:5: error: package org.picketlink.common.constants does not exist
+import org.picketlink.common.constants.JBossSAMLConstants;
+                                      ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\sign\GOSTSignatureUtil.java:6: error: package org.picketlink.identity.federation.core.constants does not exist
+import org.picketlink.identity.federation.core.constants.PicketLinkFederationConstants;
+                                                        ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\sign\GOSTSignatureUtil.java:7: error: package org.picketlink.identity.xmlsec.w3.xmldsig does not exist
+import org.picketlink.identity.xmlsec.w3.xmldsig.SignatureType;
+                                                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\sign\GOSTSignatureUtil.java:20: error: cannot find symbol
+	private static final PicketLinkLogger LOGGER = PicketLinkLoggerFactory
+	                     ^
+  symbol:   class PicketLinkLogger
+  location: class GOSTSignatureUtil
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\sign\GOSTSignatureUtil.java:23: error: cannot find symbol
+	public static void marshall(SignatureType signature, OutputStream os)
+	                            ^
+  symbol:   class SignatureType
+  location: class GOSTSignatureUtil
+[search path for source files: C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java,C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java]
+[search path for class files: C:\Program Files\Java\jdk1.7.0_07\jre\lib\resources.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\rt.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\sunrsasign.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\jsse.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\jce.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\charsets.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\jfr.jar,C:\Program Files\Java\jdk1.7.0_07\jre\classes,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\access-bridge.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\ASN1P.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\asn1rt.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\commons-logging.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\cpSSL.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\dnsns.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\forms_rt.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\jaccess.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCP.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCPinst.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCPRequest.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCPRevCheck.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCPRevTools.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCPxml.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCryptoP.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\localedata.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\sunec.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\sunjce_provider.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\sunmscapi.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\sunpkcs11.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\XMLDSigRI.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\xmlsec-1.5.1.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\zipfs.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/List.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/naming/Context.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/naming/InitialContext.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Object.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Long.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/String.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/Map.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Integer.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/jws/HandlerChain.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/jws/WebMethod.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/jws/WebParam.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/jws/WebService.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/ws/BindingType.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/ws/WebServiceContext.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/ws/handler/MessageContext.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/ws/soap/SOAPBinding.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/annotation/Resource.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/jws/WebResult.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/bind/JAXBElement.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/bind/annotation/XmlElementDecl.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/namespace/QName.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/io/ByteArrayInputStream.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/security/KeyStore.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/security/PrivateKey.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/security/Provider.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/security/PublicKey.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/security/cert/Certificate.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/security/cert/CertificateFactory.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/security/cert/X509Certificate.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/ArrayList.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/Collections.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/Set.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/crypto/XMLStructure.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/crypto/dsig/CanonicalizationMethod.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/crypto/dsig/Reference.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/crypto/dsig/SignedInfo.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/crypto/dsig/Transform.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/crypto/dsig/XMLSignature.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/crypto/dsig/XMLSignatureFactory.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/crypto/dsig/dom/DOMSignContext.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/crypto/dsig/dom/DOMValidateContext.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/crypto/dsig/keyinfo/KeyInfo.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/crypto/dsig/keyinfo/KeyInfoFactory.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/crypto/dsig/keyinfo/KeyValue.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/crypto/dsig/spec/C14NMethodParameterSpec.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/soap/SOAPBody.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/soap/SOAPHeader.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/soap/SOAPMessage.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/ws/ProtocolException.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/ws/handler/soap/SOAPHandler.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/ws/handler/soap/SOAPMessageContext.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\xmlsec-1.5.1.jar(org/apache/xml/security/transforms/Transforms.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/org/w3c/dom/Element.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/org/w3c/dom/Node.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/org/w3c/dom/NodeList.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/ws/handler/Handler.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/security/AccessController.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/security/Principal.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/security/PrivilegedAction.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/security/acl/Group.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/security/auth/Subject.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Class.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/ClassLoader.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/org/w3c/dom/Document.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/Date.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/io/IOException.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/Arrays.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/org/xml/sax/SAXException.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/bind/JAXBException.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/io/OutputStream.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/security/GeneralSecurityException.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/security/Signature.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/annotation/Retention.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/annotation/RetentionPolicy.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/annotation/Target.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/annotation/ElementType.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/jws/WebParam$Mode.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/annotation/Annotation.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/annotation/Resource$AuthenticationType.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/bind/annotation/XmlSchema.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/bind/annotation/XmlNsForm.class)]]
+Standard Doclet version 1.7.0_07
+Building tree for all the packages and classes...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\infosweb\web\init\StartupServlet.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:20: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(StartupServlet.class);
+	                                     ^
+  symbol:   variable LoggerFactory
+  location: class StartupServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:27: warning - Tag @see: reference not found: HttpServlet#HttpServlet()
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:35: warning - Tag @see: reference not found: Servlet#init(ServletConfig)
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\context\application\ContextApplicationManager.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\application\ContextApplicationManager.java:20: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(ContextApplicationManager.class);
+	                                     ^
+  symbol:   variable LoggerFactory
+  location: class ContextApplicationManager
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/io/Serializable.class)]]
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\context\application\ContextApplicationResultManager.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\application\ContextApplicationResultManager.java:21: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory
+	                                     ^
+  symbol:   variable LoggerFactory
+  location: class ContextApplicationResultManager
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\context\ContextAccessManager.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\ContextAccessManager.java:21: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(ContextAccessManager.class);
+	                                     ^
+  symbol:   variable LoggerFactory
+  location: class ContextAccessManager
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\context\ContextSyncManager.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\ContextSyncManager.java:21: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(ContextSyncManager.class);
+	                                     ^
+  symbol:   variable LoggerFactory
+  location: class ContextSyncManager
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\context\eis\ContextAdminManager.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\eis\ContextAdminManager.java:15: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(ContextAdminManager.class);
+	                                     ^
+  symbol:   variable LoggerFactory
+  location: class ContextAdminManager
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\context\eis\ContextUtilManager.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\context\eis\ContextUtilManager.java:22: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(ContextUtilManager.class);
+	                                     ^
+  symbol:   variable LoggerFactory
+  location: class ContextUtilManager
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\services\admin\AdminService.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\services\admin\AdminServiceImpl.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\admin\AdminServiceImpl.java:32: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(AdminServiceImpl.class);
+	                                     ^
+  symbol:   variable LoggerFactory
+  location: class AdminServiceImpl
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/annotation/Documented.class)]]
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\services\application\ApplicationResultService.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\services\application\ApplicationResultServiceImpl.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationResultServiceImpl.java:32: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(ApplicationResultServiceImpl.class);
+	                                     ^
+  symbol:   variable LoggerFactory
+  location: class ApplicationResultServiceImpl
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\services\application\ApplicationService.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\services\application\ApplicationServiceImpl.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\application\ApplicationServiceImpl.java:33: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(ApplicationServiceImpl.class);
+	                                     ^
+  symbol:   variable LoggerFactory
+  location: class ApplicationServiceImpl
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\services\audit\AuditService.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\services\audit\AuditServiceImpl.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\audit\AuditServiceImpl.java:30: error: cannot find symbol
+     private static final Logger LOGGER = LoggerFactory.getLogger(AuditServiceImpl.class);
+                                          ^
+  symbol:   variable LoggerFactory
+  location: class AuditServiceImpl
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\services\audit\ObjectFactory.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\services\handlers\AnonymSOAPHandler.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\handlers\AnonymSOAPHandler.java:30: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(AnonymSOAPHandler.class);
+	                                     ^
+  symbol:   variable LoggerFactory
+  location: class AnonymSOAPHandler
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\services\handlers\AppSOAPHandler.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\handlers\AppSOAPHandler.java:31: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(AppSOAPHandler.class);
+	                                     ^
+  symbol:   variable LoggerFactory
+  location: class AppSOAPHandler
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\services\handlers\CUDSAML2Handler.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\services\handlers\SecurityActions.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\handlers\SecurityActions.java:109: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\handlers\SecurityActions.java:157: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\handlers\SecurityActions.java:80: warning - Tag @link: reference not found: SecurityContextAssociation
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\handlers\SecurityActions.java:80: warning - Tag @link: reference not found: SecurityContextAssociation
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\services\handlers\SignValidateSOAPHandler.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\handlers\SignValidateSOAPHandler.java:53: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(SignValidateSOAPHandler.class);
+	                                     ^
+  symbol:   variable LoggerFactory
+  location: class SignValidateSOAPHandler
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\services\util\UtilService.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\services\util\UtilServiceImpl.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\util\UtilServiceImpl.java:35: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(UtilServiceImpl.class);
+	                                     ^
+  symbol:   variable LoggerFactory
+  location: class UtilServiceImpl
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\services\web\filter\PortFilter.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\web\filter\PortFilter.java:22: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(PortFilter.class);
+	                                     ^
+  symbol:   variable LoggerFactory
+  location: class PortFilter
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\services\web\init\Configuration.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\services\web\init\StartupServlet.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\web\init\StartupServlet.java:15: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(StartupServlet.class);
+	                                     ^
+  symbol:   variable LoggerFactory
+  location: class StartupServlet
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\sign\GOSTSignatureUtil.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\sign\GOSTSignatureUtil.java:20: error: cannot find symbol
+	private static final PicketLinkLogger LOGGER = PicketLinkLoggerFactory
+	                                               ^
+  symbol:   variable PicketLinkLoggerFactory
+  location: class GOSTSignatureUtil
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\overview-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\context\package-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\context\package-summary.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\context\package-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\context\application\package-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\context\application\package-summary.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\context\application\package-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\context\eis\package-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\context\eis\package-summary.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\context\eis\package-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\infosweb\web\init\package-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\infosweb\web\init\package-summary.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\infosweb\web\init\package-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\services\admin\package-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\services\admin\package-summary.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\services\admin\package-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\services\application\package-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\services\application\package-summary.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\services\application\package-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\services\audit\package-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\services\audit\package-summary.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\services\audit\package-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\services\handlers\package-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\services\handlers\package-summary.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\services\handlers\package-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\services\util\package-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\services\util\package-summary.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\services\util\package-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\services\web\filter\package-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\services\web\filter\package-summary.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\services\web\filter\package-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\services\web\init\package-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\services\web\init\package-summary.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\services\web\init\package-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\sign\package-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\sign\package-summary.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\ru\spb\iac\cud\sign\package-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\constant-values.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\src-html\ru\spb\iac\cud\infosweb\web\init\StartupServlet.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\src-html\ru\spb\iac\cud\context\application\ContextApplicationResultManager.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\src-html\ru\spb\iac\cud\context\application\ContextApplicationManager.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\src-html\ru\spb\iac\cud\context\ContextSyncManager.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\src-html\ru\spb\iac\cud\context\ContextAccessManager.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\src-html\ru\spb\iac\cud\context\eis\ContextUtilManager.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\src-html\ru\spb\iac\cud\context\eis\ContextAdminManager.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\src-html\ru\spb\iac\cud\services\admin\AdminServiceImpl.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\src-html\ru\spb\iac\cud\services\admin\AdminService.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\src-html\ru\spb\iac\cud\services\application\ApplicationServiceImpl.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\src-html\ru\spb\iac\cud\services\application\ApplicationService.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\src-html\ru\spb\iac\cud\services\application\ApplicationResultServiceImpl.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\src-html\ru\spb\iac\cud\services\application\ApplicationResultService.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\src-html\ru\spb\iac\cud\services\audit\ObjectFactory.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\src-html\ru\spb\iac\cud\services\audit\AuditServiceImpl.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\src-html\ru\spb\iac\cud\services\audit\AuditService.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\src-html\ru\spb\iac\cud\services\handlers\SignValidateSOAPHandler.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\src-html\ru\spb\iac\cud\services\handlers\SecurityActions.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\src-html\ru\spb\iac\cud\services\handlers\CUDSAML2Handler.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\src-html\ru\spb\iac\cud\services\handlers\AppSOAPHandler.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\src-html\ru\spb\iac\cud\services\handlers\AnonymSOAPHandler.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\src-html\ru\spb\iac\cud\services\util\UtilServiceImpl.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\src-html\ru\spb\iac\cud\services\util\UtilService.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\src-html\ru\spb\iac\cud\services\web\filter\PortFilter.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\src-html\ru\spb\iac\cud\services\web\init\StartupServlet.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\src-html\ru\spb\iac\cud\services\web\init\Configuration.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\src-html\ru\spb\iac\cud\sign\GOSTSignatureUtil.html...
+Building index for all the packages and classes...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\overview-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\index-all.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\web-services\src\main\java\ru\spb\iac\cud\services\handlers\SecurityActions.java:80: warning - Tag @link: reference not found: SecurityContextAssociation
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\deprecated-list.html...
+Building index for all classes...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\allclasses-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\allclasses-noframe.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\index.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\overview-summary.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\web-services\help-doc.html...
+[done in 3224 ms]
+18 errors
+381 warnings
