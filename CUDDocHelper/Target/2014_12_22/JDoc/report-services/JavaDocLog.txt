@@ -1,0 +1,417 @@
+Loading source files for package ru.spb.iac.cud.infosweb.web.init...
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java]]
+[parsing completed 0ms]
+Loading source files for package ru.spb.iac.cud.reports...
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\TaskProcessor.java]]
+[parsing completed 0ms]
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\ReportsManager.java]]
+[parsing completed 20ms]
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\CUDQueryAppFull.java]]
+[parsing completed 0ms]
+Constructing Javadoc information...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:3: error: package javax.servlet does not exist
+import javax.servlet.ServletConfig;
+                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:4: error: package javax.servlet does not exist
+import javax.servlet.ServletContext;
+                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:5: error: package javax.servlet does not exist
+import javax.servlet.ServletException;
+                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:6: error: package javax.servlet.http does not exist
+import javax.servlet.http.HttpServlet;
+                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:8: error: package mypackage does not exist
+import mypackage.Configuration;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:10: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:11: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:18: error: cannot find symbol
+ public class StartupServlet extends HttpServlet {
+                                     ^
+  symbol: class HttpServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:20: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(StartupServlet.class);
+	                     ^
+  symbol:   class Logger
+  location: class StartupServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:35: error: cannot find symbol
+	public void init(ServletConfig config) throws ServletException {
+	                 ^
+  symbol:   class ServletConfig
+  location: class StartupServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:35: error: cannot find symbol
+	public void init(ServletConfig config) throws ServletException {
+	                                              ^
+  symbol:   class ServletException
+  location: class StartupServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\ReportsManager.java:3: error: package iac.cud.infosweb.dataitems does not exist
+import iac.cud.infosweb.dataitems.BaseParamItem;
+                                 ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\ReportsManager.java:4: error: package iac.cud.infosweb.dataitems does not exist
+import iac.cud.infosweb.dataitems.ReportDownloadItem;
+                                 ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\ReportsManager.java:15: error: package javax.ejb does not exist
+import javax.ejb.Stateless;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\ReportsManager.java:16: error: package javax.ejb does not exist
+import javax.ejb.TransactionAttribute;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\ReportsManager.java:17: error: package javax.ejb does not exist
+import javax.ejb.TransactionAttributeType;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\ReportsManager.java:18: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\ReportsManager.java:19: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\ReportsManager.java:21: error: package net.sf.jasperreports.engine does not exist
+import net.sf.jasperreports.engine.JRParameter;
+                                  ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\ReportsManager.java:28: error: cannot find symbol
+ public class ReportsManager implements ReportsManagerLocal,
+                                        ^
+  symbol: class ReportsManagerLocal
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\ReportsManager.java:29: error: cannot find symbol
+		ReportsManagerRemote {
+		^
+  symbol: class ReportsManagerRemote
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\ReportsManager.java:26: error: cannot find symbol
+@Stateless
+ ^
+  symbol: class Stateless
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\ReportsManager.java:27: error: cannot find symbol
+@TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+ ^
+  symbol: class TransactionAttribute
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\ReportsManager.java:35: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(ReportsManager.class);
+	                     ^
+  symbol:   class Logger
+  location: class ReportsManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\ReportsManager.java:40: error: cannot find symbol
+	public int create_report(BaseParamItem paramMap) throws Exception {
+	                         ^
+  symbol:   class BaseParamItem
+  location: class ReportsManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\ReportsManager.java:136: error: cannot find symbol
+	public ReportDownloadItem download_report(String reportCode,
+	       ^
+  symbol:   class ReportDownloadItem
+  location: class ReportsManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\CUDQueryAppFull.java:3: error: package iac.cud.infosweb.dataitems does not exist
+import iac.cud.infosweb.dataitems.ReportDownloadItem;
+                                 ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\CUDQueryAppFull.java:14: error: package net.sf.jasperreports.engine does not exist
+import net.sf.jasperreports.engine.JRException;
+                                  ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\CUDQueryAppFull.java:15: error: package net.sf.jasperreports.engine does not exist
+import net.sf.jasperreports.engine.JasperCompileManager;
+                                  ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\CUDQueryAppFull.java:16: error: package net.sf.jasperreports.engine does not exist
+import net.sf.jasperreports.engine.JasperExportManager;
+                                  ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\CUDQueryAppFull.java:17: error: package net.sf.jasperreports.engine does not exist
+import net.sf.jasperreports.engine.JasperFillManager;
+                                  ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\CUDQueryAppFull.java:18: error: package net.sf.jasperreports.engine does not exist
+import net.sf.jasperreports.engine.JasperPrint;
+                                  ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\CUDQueryAppFull.java:19: error: package net.sf.jasperreports.engine does not exist
+import net.sf.jasperreports.engine.JasperPrintManager;
+                                  ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\CUDQueryAppFull.java:20: error: package net.sf.jasperreports.engine.export does not exist
+import net.sf.jasperreports.engine.export.JRCsvExporter;
+                                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\CUDQueryAppFull.java:21: error: package net.sf.jasperreports.engine.export does not exist
+import net.sf.jasperreports.engine.export.JRRtfExporter;
+                                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\CUDQueryAppFull.java:22: error: package net.sf.jasperreports.engine.export does not exist
+import net.sf.jasperreports.engine.export.JRXlsExporter;
+                                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\CUDQueryAppFull.java:23: error: package net.sf.jasperreports.engine.export.oasis does not exist
+import net.sf.jasperreports.engine.export.oasis.JROdsExporter;
+                                               ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\CUDQueryAppFull.java:24: error: package net.sf.jasperreports.engine.export.oasis does not exist
+import net.sf.jasperreports.engine.export.oasis.JROdtExporter;
+                                               ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\CUDQueryAppFull.java:25: error: package net.sf.jasperreports.engine.export.ooxml does not exist
+import net.sf.jasperreports.engine.export.ooxml.JRDocxExporter;
+                                               ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\CUDQueryAppFull.java:26: error: package net.sf.jasperreports.engine.export.ooxml does not exist
+import net.sf.jasperreports.engine.export.ooxml.JRPptxExporter;
+                                               ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\CUDQueryAppFull.java:27: error: package net.sf.jasperreports.engine.export.ooxml does not exist
+import net.sf.jasperreports.engine.export.ooxml.JRXlsxExporter;
+                                               ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\CUDQueryAppFull.java:28: error: package net.sf.jasperreports.engine.util does not exist
+import net.sf.jasperreports.engine.util.JRLoader;
+                                       ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\CUDQueryAppFull.java:29: error: package net.sf.jasperreports.export does not exist
+import net.sf.jasperreports.export.SimpleExporterInput;
+                                  ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\CUDQueryAppFull.java:30: error: package net.sf.jasperreports.export does not exist
+import net.sf.jasperreports.export.SimpleHtmlExporterOutput;
+                                  ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\CUDQueryAppFull.java:31: error: package net.sf.jasperreports.export does not exist
+import net.sf.jasperreports.export.SimpleOdsReportConfiguration;
+                                  ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\CUDQueryAppFull.java:32: error: package net.sf.jasperreports.export does not exist
+import net.sf.jasperreports.export.SimpleOutputStreamExporterOutput;
+                                  ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\CUDQueryAppFull.java:33: error: package net.sf.jasperreports.export does not exist
+import net.sf.jasperreports.export.SimpleWriterExporterOutput;
+                                  ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\CUDQueryAppFull.java:34: error: package net.sf.jasperreports.export does not exist
+import net.sf.jasperreports.export.SimpleXlsReportConfiguration;
+                                  ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\CUDQueryAppFull.java:35: error: package net.sf.jasperreports.export does not exist
+import net.sf.jasperreports.export.SimpleXlsxReportConfiguration;
+                                  ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\CUDQueryAppFull.java:37: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\CUDQueryAppFull.java:38: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\CUDQueryAppFull.java:40: error: package ru.spb.iac.cud.core.util does not exist
+import ru.spb.iac.cud.core.util.Configuration;
+                               ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\CUDQueryAppFull.java:59: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(CUDQueryAppFull.class);
+	                     ^
+  symbol:   class Logger
+  location: class CUDQueryAppFull
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\CUDQueryAppFull.java:113: error: cannot find symbol
+	public ReportDownloadItem download_report(String reportType)
+	       ^
+  symbol:   class ReportDownloadItem
+  location: class CUDQueryAppFull
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\CUDQueryAppFull.java:176: error: cannot find symbol
+	protected Connection getDemoHsqldbConnection() throws JRException {
+	                                                      ^
+  symbol:   class JRException
+  location: class CUDQueryAppFull
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\CUDQueryAppFull.java:201: error: cannot find symbol
+	public void test() throws JRException {
+	                          ^
+  symbol:   class JRException
+  location: class CUDQueryAppFull
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\CUDQueryAppFull.java:223: error: cannot find symbol
+	public void compile() throws JRException {
+	                             ^
+  symbol:   class JRException
+  location: class CUDQueryAppFull
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\CUDQueryAppFull.java:229: error: cannot find symbol
+	public void fill() throws JRException {
+	                          ^
+  symbol:   class JRException
+  location: class CUDQueryAppFull
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\CUDQueryAppFull.java:236: error: cannot find symbol
+	public void fillIgnorePagination() throws JRException {
+	                                          ^
+  symbol:   class JRException
+  location: class CUDQueryAppFull
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\CUDQueryAppFull.java:243: error: cannot find symbol
+	private void fill(boolean ignorePagination) throws JRException {
+	                                                   ^
+  symbol:   class JRException
+  location: class CUDQueryAppFull
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\CUDQueryAppFull.java:254: error: cannot find symbol
+	public void print() throws JRException {
+	                           ^
+  symbol:   class JRException
+  location: class CUDQueryAppFull
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\CUDQueryAppFull.java:263: error: cannot find symbol
+	public void pdf() throws JRException {
+	                         ^
+  symbol:   class JRException
+  location: class CUDQueryAppFull
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\CUDQueryAppFull.java:272: error: cannot find symbol
+	public void rtf() throws JRException {
+	                         ^
+  symbol:   class JRException
+  location: class CUDQueryAppFull
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\CUDQueryAppFull.java:294: error: cannot find symbol
+	public void xml() throws JRException {
+	                         ^
+  symbol:   class JRException
+  location: class CUDQueryAppFull
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\CUDQueryAppFull.java:303: error: cannot find symbol
+	public void xmlEmbed() throws JRException {
+	                              ^
+  symbol:   class JRException
+  location: class CUDQueryAppFull
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\CUDQueryAppFull.java:312: error: cannot find symbol
+	public void html() throws JRException {
+	                          ^
+  symbol:   class JRException
+  location: class CUDQueryAppFull
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\CUDQueryAppFull.java:321: error: cannot find symbol
+	public void xls() throws JRException {
+	                         ^
+  symbol:   class JRException
+  location: class CUDQueryAppFull
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\CUDQueryAppFull.java:353: error: cannot find symbol
+	public void jxl() throws JRException {
+	                         ^
+  symbol:   class JRException
+  location: class CUDQueryAppFull
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\CUDQueryAppFull.java:379: error: cannot find symbol
+	public void csv() throws JRException {
+	                         ^
+  symbol:   class JRException
+  location: class CUDQueryAppFull
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\CUDQueryAppFull.java:401: error: cannot find symbol
+	public void odt() throws JRException {
+	                         ^
+  symbol:   class JRException
+  location: class CUDQueryAppFull
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\CUDQueryAppFull.java:424: error: cannot find symbol
+	public void ods() throws JRException {
+	                         ^
+  symbol:   class JRException
+  location: class CUDQueryAppFull
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\CUDQueryAppFull.java:450: error: cannot find symbol
+	public void docx() throws JRException {
+	                          ^
+  symbol:   class JRException
+  location: class CUDQueryAppFull
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\CUDQueryAppFull.java:473: error: cannot find symbol
+	public void xlsx() throws JRException {
+	                          ^
+  symbol:   class JRException
+  location: class CUDQueryAppFull
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\CUDQueryAppFull.java:499: error: cannot find symbol
+	public void pptx() throws JRException {
+	                          ^
+  symbol:   class JRException
+  location: class CUDQueryAppFull
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\CUDQueryAppFull.java:523: error: cannot find symbol
+	public void xhtml() throws JRException {
+	                           ^
+  symbol:   class JRException
+  location: class CUDQueryAppFull
+[search path for source files: C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java,C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java]
+[search path for class files: C:\Program Files\Java\jdk1.7.0_07\jre\lib\resources.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\rt.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\sunrsasign.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\jsse.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\jce.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\charsets.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\jfr.jar,C:\Program Files\Java\jdk1.7.0_07\jre\classes,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\access-bridge.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\ASN1P.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\asn1rt.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\commons-logging.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\cpSSL.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\dnsns.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\forms_rt.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\jaccess.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCP.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCPinst.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCPRequest.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCPRevCheck.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCPRevTools.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCPxml.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCryptoP.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\localedata.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\sunec.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\sunjce_provider.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\sunmscapi.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\sunpkcs11.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\XMLDSigRI.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\xmlsec-1.5.1.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\zipfs.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/concurrent/ConcurrentHashMap.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Object.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/String.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/text/DateFormat.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/text/SimpleDateFormat.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/Calendar.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/Date.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/HashMap.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/Map.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/concurrent/Executors.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/concurrent/ScheduledExecutorService.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/concurrent/TimeUnit.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Exception.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/io/ByteArrayOutputStream.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/io/File.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/io/FileInputStream.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/io/InputStream.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/sql/Connection.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/sql/DriverManager.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/sql/SQLException.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/SuppressWarnings.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/annotation/Annotation.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/annotation/Target.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/annotation/ElementType.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/annotation/Retention.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/annotation/RetentionPolicy.class)]]
+Standard Doclet version 1.7.0_07
+Building tree for all the packages and classes...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\report-services\ru\spb\iac\cud\infosweb\web\init\StartupServlet.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:20: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(StartupServlet.class);
+	                                     ^
+  symbol:   variable LoggerFactory
+  location: class StartupServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:27: warning - Tag @see: reference not found: HttpServlet#HttpServlet()
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:35: warning - Tag @see: reference not found: Servlet#init(ServletConfig)
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Class.class)]]
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\report-services\ru\spb\iac\cud\reports\CUDQueryAppFull.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\CUDQueryAppFull.java:59: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(CUDQueryAppFull.class);
+	                                     ^
+  symbol:   variable LoggerFactory
+  location: class CUDQueryAppFull
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/io/Serializable.class)]]
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\report-services\ru\spb\iac\cud\reports\ReportsManager.html...
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\report-services\src\main\java\ru\spb\iac\cud\reports\ReportsManager.java:35: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(ReportsManager.class);
+	                                     ^
+  symbol:   variable LoggerFactory
+  location: class ReportsManager
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\report-services\ru\spb\iac\cud\reports\TaskProcessor.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\report-services\overview-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\report-services\ru\spb\iac\cud\infosweb\web\init\package-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\report-services\ru\spb\iac\cud\infosweb\web\init\package-summary.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\report-services\ru\spb\iac\cud\infosweb\web\init\package-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\report-services\ru\spb\iac\cud\reports\package-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\report-services\ru\spb\iac\cud\reports\package-summary.html...
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\report-services\ru\spb\iac\cud\reports\package-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\report-services\constant-values.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\report-services\src-html\ru\spb\iac\cud\infosweb\web\init\StartupServlet.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\report-services\src-html\ru\spb\iac\cud\reports\TaskProcessor.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\report-services\src-html\ru\spb\iac\cud\reports\ReportsManager.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\report-services\src-html\ru\spb\iac\cud\reports\CUDQueryAppFull.html...
+Building index for all the packages and classes...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\report-services\overview-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\report-services\index-all.html...
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\report-services\deprecated-list.html...
+javadoc: warning - Class Stateless not found.
+javadoc: warning - Class TransactionAttribute not found.
+Building index for all classes...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\report-services\allclasses-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\report-services\allclasses-noframe.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\report-services\index.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\report-services\overview-summary.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\report-services\help-doc.html...
+[done in 1532 ms]
+3 errors
+117 warnings

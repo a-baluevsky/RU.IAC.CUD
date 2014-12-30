@@ -1,0 +1,420 @@
+Loading source files for package ru.spb.iac.cud.infosweb.web.init...
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java]]
+[parsing completed 30ms]
+Loading source files for package ru.spb.iac.cud.exs.config...
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\config\Configuration.java]]
+[parsing completed 0ms]
+Loading source files for package ru.spb.iac.cud.exs.init...
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\init\StartupServlet.java]]
+[parsing completed 20ms]
+Loading source files for package ru.spb.iac.cud.exs.shedule...
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchUCCertTask.java]]
+[parsing completed 0ms]
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchTokenArchiveTask.java]]
+[parsing completed 0ms]
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchCRLTask.java]]
+[parsing completed 0ms]
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchCRLRepeatTask.java]]
+[parsing completed 10ms]
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchBindingUnBindTask.java]]
+[parsing completed 0ms]
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchBindingNoActTask.java]]
+[parsing completed 0ms]
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchAuditSysArchiveTask.java]]
+[parsing completed 10ms]
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchAuditFuncArchiveTask.java]]
+[parsing completed 0ms]
+Constructing Javadoc information...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:3: error: package javax.servlet does not exist
+import javax.servlet.ServletConfig;
+                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:4: error: package javax.servlet does not exist
+import javax.servlet.ServletContext;
+                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:5: error: package javax.servlet does not exist
+import javax.servlet.ServletException;
+                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:6: error: package javax.servlet.http does not exist
+import javax.servlet.http.HttpServlet;
+                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:8: error: package mypackage does not exist
+import mypackage.Configuration;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:10: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:11: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:18: error: cannot find symbol
+ public class StartupServlet extends HttpServlet {
+                                     ^
+  symbol: class HttpServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:20: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(StartupServlet.class);
+	                     ^
+  symbol:   class Logger
+  location: class StartupServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:35: error: cannot find symbol
+	public void init(ServletConfig config) throws ServletException {
+	                 ^
+  symbol:   class ServletConfig
+  location: class StartupServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:35: error: cannot find symbol
+	public void init(ServletConfig config) throws ServletException {
+	                                              ^
+  symbol:   class ServletException
+  location: class StartupServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\init\StartupServlet.java:5: error: package javax.servlet does not exist
+import javax.servlet.ServletConfig;
+                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\init\StartupServlet.java:6: error: package javax.servlet does not exist
+import javax.servlet.ServletContext;
+                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\init\StartupServlet.java:7: error: package javax.servlet does not exist
+import javax.servlet.ServletException;
+                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\init\StartupServlet.java:8: error: package javax.servlet.http does not exist
+import javax.servlet.http.HttpServlet;
+                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\init\StartupServlet.java:9: error: package javax.servlet.http does not exist
+import javax.servlet.http.HttpServletRequest;
+                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\init\StartupServlet.java:10: error: package javax.servlet.http does not exist
+import javax.servlet.http.HttpServletResponse;
+                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\init\StartupServlet.java:12: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\init\StartupServlet.java:13: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\init\StartupServlet.java:26: error: cannot find symbol
+ public class StartupServlet extends HttpServlet {
+                                     ^
+  symbol: class HttpServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\init\StartupServlet.java:30: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(StartupServlet.class);
+	                     ^
+  symbol:   class Logger
+  location: class StartupServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\init\StartupServlet.java:36: error: cannot find symbol
+	public void init(ServletConfig config) throws ServletException {
+	                 ^
+  symbol:   class ServletConfig
+  location: class StartupServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\init\StartupServlet.java:36: error: cannot find symbol
+	public void init(ServletConfig config) throws ServletException {
+	                                              ^
+  symbol:   class ServletException
+  location: class StartupServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\init\StartupServlet.java:61: error: cannot find symbol
+	protected void service(HttpServletRequest request,
+	                       ^
+  symbol:   class HttpServletRequest
+  location: class StartupServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\init\StartupServlet.java:62: error: cannot find symbol
+			HttpServletResponse response) throws ServletException, IOException {
+			^
+  symbol:   class HttpServletResponse
+  location: class StartupServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\init\StartupServlet.java:62: error: cannot find symbol
+			HttpServletResponse response) throws ServletException, IOException {
+			                                     ^
+  symbol:   class ServletException
+  location: class StartupServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchUCCertTask.java:3: error: package iac.cud.infosweb.dataitems does not exist
+import iac.cud.infosweb.dataitems.BaseParamItem;
+                                 ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchUCCertTask.java:4: error: package iac.cud.infosweb.local.service does not exist
+import iac.cud.infosweb.local.service.ServiceReestrAction;
+                                     ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchUCCertTask.java:5: error: package iac.cud.infosweb.local.service does not exist
+import iac.cud.infosweb.local.service.ServiceReestrPro;
+                                     ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchUCCertTask.java:6: error: package iac.cud.infosweb.remote.frontage does not exist
+import iac.cud.infosweb.remote.frontage.IRemoteFrontageLocal;
+                                       ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchUCCertTask.java:16: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchUCCertTask.java:17: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchUCCertTask.java:21: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory
+	                     ^
+  symbol:   class Logger
+  location: class LaunchUCCertTask
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchTokenArchiveTask.java:3: error: package iac.cud.infosweb.dataitems does not exist
+import iac.cud.infosweb.dataitems.BaseParamItem;
+                                 ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchTokenArchiveTask.java:4: error: package iac.cud.infosweb.local.service does not exist
+import iac.cud.infosweb.local.service.ServiceReestrAction;
+                                     ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchTokenArchiveTask.java:5: error: package iac.cud.infosweb.local.service does not exist
+import iac.cud.infosweb.local.service.ServiceReestrPro;
+                                     ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchTokenArchiveTask.java:6: error: package iac.cud.infosweb.remote.frontage does not exist
+import iac.cud.infosweb.remote.frontage.IRemoteFrontageLocal;
+                                       ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchTokenArchiveTask.java:18: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchTokenArchiveTask.java:19: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchTokenArchiveTask.java:23: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory
+	                     ^
+  symbol:   class Logger
+  location: class LaunchTokenArchiveTask
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchCRLTask.java:8: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchCRLTask.java:9: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchCRLTask.java:13: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(LaunchCRLTask.class);
+	                     ^
+  symbol:   class Logger
+  location: class LaunchCRLTask
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchCRLRepeatTask.java:23: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchCRLRepeatTask.java:24: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchCRLRepeatTask.java:30: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory
+	                     ^
+  symbol:   class Logger
+  location: class LaunchCRLRepeatTask
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchBindingUnBindTask.java:3: error: package iac.cud.infosweb.dataitems does not exist
+import iac.cud.infosweb.dataitems.BaseParamItem;
+                                 ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchBindingUnBindTask.java:4: error: package iac.cud.infosweb.local.service does not exist
+import iac.cud.infosweb.local.service.ServiceReestrAction;
+                                     ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchBindingUnBindTask.java:5: error: package iac.cud.infosweb.local.service does not exist
+import iac.cud.infosweb.local.service.ServiceReestrPro;
+                                     ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchBindingUnBindTask.java:6: error: package iac.cud.infosweb.remote.frontage does not exist
+import iac.cud.infosweb.remote.frontage.IRemoteFrontageLocal;
+                                       ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchBindingUnBindTask.java:20: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchBindingUnBindTask.java:21: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchBindingUnBindTask.java:25: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory
+	                     ^
+  symbol:   class Logger
+  location: class LaunchBindingUnBindTask
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchBindingNoActTask.java:3: error: package iac.cud.infosweb.dataitems does not exist
+import iac.cud.infosweb.dataitems.BaseParamItem;
+                                 ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchBindingNoActTask.java:4: error: package iac.cud.infosweb.local.service does not exist
+import iac.cud.infosweb.local.service.ServiceReestrAction;
+                                     ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchBindingNoActTask.java:5: error: package iac.cud.infosweb.local.service does not exist
+import iac.cud.infosweb.local.service.ServiceReestrPro;
+                                     ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchBindingNoActTask.java:6: error: package iac.cud.infosweb.remote.frontage does not exist
+import iac.cud.infosweb.remote.frontage.IRemoteFrontageLocal;
+                                       ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchBindingNoActTask.java:20: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchBindingNoActTask.java:21: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchBindingNoActTask.java:25: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory
+	                     ^
+  symbol:   class Logger
+  location: class LaunchBindingNoActTask
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchAuditSysArchiveTask.java:3: error: package iac.cud.infosweb.dataitems does not exist
+import iac.cud.infosweb.dataitems.BaseParamItem;
+                                 ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchAuditSysArchiveTask.java:4: error: package iac.cud.infosweb.local.service does not exist
+import iac.cud.infosweb.local.service.ServiceReestrAction;
+                                     ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchAuditSysArchiveTask.java:5: error: package iac.cud.infosweb.local.service does not exist
+import iac.cud.infosweb.local.service.ServiceReestrPro;
+                                     ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchAuditSysArchiveTask.java:6: error: package iac.cud.infosweb.remote.frontage does not exist
+import iac.cud.infosweb.remote.frontage.IRemoteFrontageLocal;
+                                       ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchAuditSysArchiveTask.java:18: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchAuditSysArchiveTask.java:19: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchAuditSysArchiveTask.java:23: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory
+	                     ^
+  symbol:   class Logger
+  location: class LaunchAuditSysArchiveTask
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchAuditFuncArchiveTask.java:3: error: package iac.cud.infosweb.dataitems does not exist
+import iac.cud.infosweb.dataitems.BaseParamItem;
+                                 ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchAuditFuncArchiveTask.java:4: error: package iac.cud.infosweb.local.service does not exist
+import iac.cud.infosweb.local.service.ServiceReestrAction;
+                                     ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchAuditFuncArchiveTask.java:5: error: package iac.cud.infosweb.local.service does not exist
+import iac.cud.infosweb.local.service.ServiceReestrPro;
+                                     ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchAuditFuncArchiveTask.java:6: error: package iac.cud.infosweb.remote.frontage does not exist
+import iac.cud.infosweb.remote.frontage.IRemoteFrontageLocal;
+                                       ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchAuditFuncArchiveTask.java:18: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchAuditFuncArchiveTask.java:19: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchAuditFuncArchiveTask.java:23: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory
+	                     ^
+  symbol:   class Logger
+  location: class LaunchAuditFuncArchiveTask
+[search path for source files: C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java,C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java]
+[search path for class files: C:\Program Files\Java\jdk1.7.0_07\jre\lib\resources.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\rt.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\sunrsasign.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\jsse.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\jce.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\charsets.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\jfr.jar,C:\Program Files\Java\jdk1.7.0_07\jre\classes,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\access-bridge.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\ASN1P.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\asn1rt.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\commons-logging.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\cpSSL.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\dnsns.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\forms_rt.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\jaccess.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCP.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCPinst.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCPRequest.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCPRevCheck.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCPRevTools.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCPxml.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCryptoP.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\localedata.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\sunec.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\sunjce_provider.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\sunmscapi.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\sunpkcs11.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\XMLDSigRI.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\xmlsec-1.5.1.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\zipfs.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Object.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/String.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/io/IOException.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/Calendar.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/concurrent/Executors.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/concurrent/ScheduledExecutorService.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/concurrent/TimeUnit.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/naming/Context.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/naming/InitialContext.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Long.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/io/File.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/io/FileInputStream.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/Properties.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/io/BufferedInputStream.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/io/FileNotFoundException.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/io/FileOutputStream.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/io/InputStream.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/io/OutputStream.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/math/BigInteger.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/net/HttpURLConnection.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/net/URL.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/security/DigestInputStream.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/security/MessageDigest.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/zip/CRC32.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/zip/CheckedInputStream.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/text/DateFormat.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/text/SimpleDateFormat.class)]]
+Standard Doclet version 1.7.0_07
+Building tree for all the packages and classes...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\schedule-services\ru\spb\iac\cud\infosweb\web\init\StartupServlet.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:20: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(StartupServlet.class);
+	                                     ^
+  symbol:   variable LoggerFactory
+  location: class StartupServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:27: warning - Tag @see: reference not found: HttpServlet#HttpServlet()
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:35: warning - Tag @see: reference not found: Servlet#init(ServletConfig)
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Class.class)]]
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\schedule-services\ru\spb\iac\cud\exs\config\Configuration.html...
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/io/Serializable.class)]]
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\schedule-services\ru\spb\iac\cud\exs\init\StartupServlet.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\init\StartupServlet.java:30: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(StartupServlet.class);
+	                                     ^
+  symbol:   variable LoggerFactory
+  location: class StartupServlet
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\schedule-services\ru\spb\iac\cud\exs\shedule\LaunchAuditFuncArchiveTask.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchAuditFuncArchiveTask.java:23: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory
+	                                     ^
+  symbol:   variable LoggerFactory
+  location: class LaunchAuditFuncArchiveTask
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/System.class)]]
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\schedule-services\ru\spb\iac\cud\exs\shedule\LaunchAuditSysArchiveTask.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchAuditSysArchiveTask.java:23: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory
+	                                     ^
+  symbol:   variable LoggerFactory
+  location: class LaunchAuditSysArchiveTask
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\schedule-services\ru\spb\iac\cud\exs\shedule\LaunchBindingNoActTask.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchBindingNoActTask.java:25: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory
+	                                     ^
+  symbol:   variable LoggerFactory
+  location: class LaunchBindingNoActTask
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\schedule-services\ru\spb\iac\cud\exs\shedule\LaunchBindingUnBindTask.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchBindingUnBindTask.java:25: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory
+	                                     ^
+  symbol:   variable LoggerFactory
+  location: class LaunchBindingUnBindTask
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\schedule-services\ru\spb\iac\cud\exs\shedule\LaunchCRLRepeatTask.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchCRLRepeatTask.java:30: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory
+	                                     ^
+  symbol:   variable LoggerFactory
+  location: class LaunchCRLRepeatTask
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\schedule-services\ru\spb\iac\cud\exs\shedule\LaunchCRLTask.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchCRLTask.java:13: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(LaunchCRLTask.class);
+	                                     ^
+  symbol:   variable LoggerFactory
+  location: class LaunchCRLTask
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\schedule-services\ru\spb\iac\cud\exs\shedule\LaunchTokenArchiveTask.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchTokenArchiveTask.java:23: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory
+	                                     ^
+  symbol:   variable LoggerFactory
+  location: class LaunchTokenArchiveTask
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\schedule-services\ru\spb\iac\cud\exs\shedule\LaunchUCCertTask.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\schedule-services\src\main\java\ru\spb\iac\cud\exs\shedule\LaunchUCCertTask.java:21: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory
+	                                     ^
+  symbol:   variable LoggerFactory
+  location: class LaunchUCCertTask
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\schedule-services\overview-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\schedule-services\ru\spb\iac\cud\exs\config\package-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\schedule-services\ru\spb\iac\cud\exs\config\package-summary.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\schedule-services\ru\spb\iac\cud\exs\config\package-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\schedule-services\ru\spb\iac\cud\exs\init\package-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\schedule-services\ru\spb\iac\cud\exs\init\package-summary.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\schedule-services\ru\spb\iac\cud\exs\init\package-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\schedule-services\ru\spb\iac\cud\exs\shedule\package-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\schedule-services\ru\spb\iac\cud\exs\shedule\package-summary.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\schedule-services\ru\spb\iac\cud\exs\shedule\package-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\schedule-services\ru\spb\iac\cud\infosweb\web\init\package-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\schedule-services\ru\spb\iac\cud\infosweb\web\init\package-summary.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\schedule-services\ru\spb\iac\cud\infosweb\web\init\package-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\schedule-services\constant-values.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\schedule-services\src-html\ru\spb\iac\cud\infosweb\web\init\StartupServlet.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\schedule-services\src-html\ru\spb\iac\cud\exs\config\Configuration.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\schedule-services\src-html\ru\spb\iac\cud\exs\init\StartupServlet.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\schedule-services\src-html\ru\spb\iac\cud\exs\shedule\LaunchUCCertTask.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\schedule-services\src-html\ru\spb\iac\cud\exs\shedule\LaunchTokenArchiveTask.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\schedule-services\src-html\ru\spb\iac\cud\exs\shedule\LaunchCRLTask.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\schedule-services\src-html\ru\spb\iac\cud\exs\shedule\LaunchCRLRepeatTask.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\schedule-services\src-html\ru\spb\iac\cud\exs\shedule\LaunchBindingUnBindTask.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\schedule-services\src-html\ru\spb\iac\cud\exs\shedule\LaunchBindingNoActTask.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\schedule-services\src-html\ru\spb\iac\cud\exs\shedule\LaunchAuditSysArchiveTask.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\schedule-services\src-html\ru\spb\iac\cud\exs\shedule\LaunchAuditFuncArchiveTask.html...
+Building index for all the packages and classes...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\schedule-services\overview-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\schedule-services\index-all.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\schedule-services\deprecated-list.html...
+Building index for all classes...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\schedule-services\allclasses-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\schedule-services\allclasses-noframe.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\schedule-services\index.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\schedule-services\overview-summary.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\schedule-services\help-doc.html...
+[done in 1813 ms]
+10 errors
+76 warnings

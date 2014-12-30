@@ -1,0 +1,441 @@
+Loading source files for package ru.spb.iac.cud.infosweb.web.init...
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java]]
+[parsing completed 30ms]
+Loading source files for package ru.spb.iac.cud.sp.util...
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\util\CUDHTTPRedirectUtil.java]]
+[parsing completed 20ms]
+Loading source files for package ru.spb.iac.cud.sp.valve...
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\SecurityActions.java]]
+[parsing completed 10ms]
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDServiceProviderAuthenticator.java]]
+[parsing completed 0ms]
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java]]
+[parsing completed 20ms]
+Constructing Javadoc information...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:3: error: package javax.servlet does not exist
+import javax.servlet.ServletConfig;
+                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:4: error: package javax.servlet does not exist
+import javax.servlet.ServletContext;
+                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:5: error: package javax.servlet does not exist
+import javax.servlet.ServletException;
+                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:6: error: package javax.servlet.http does not exist
+import javax.servlet.http.HttpServlet;
+                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:8: error: package mypackage does not exist
+import mypackage.Configuration;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:10: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:11: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:18: error: cannot find symbol
+ public class StartupServlet extends HttpServlet {
+                                     ^
+  symbol: class HttpServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:20: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(StartupServlet.class);
+	                     ^
+  symbol:   class Logger
+  location: class StartupServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:35: error: cannot find symbol
+	public void init(ServletConfig config) throws ServletException {
+	                 ^
+  symbol:   class ServletConfig
+  location: class StartupServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:35: error: cannot find symbol
+	public void init(ServletConfig config) throws ServletException {
+	                                              ^
+  symbol:   class ServletException
+  location: class StartupServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\util\CUDHTTPRedirectUtil.java:3: error: package javax.servlet.http does not exist
+import javax.servlet.http.HttpServletResponse;
+                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\util\CUDHTTPRedirectUtil.java:20: error: cannot find symbol
+			HttpServletResponse response) throws IOException {
+			^
+  symbol:   class HttpServletResponse
+  location: class CUDHTTPRedirectUtil
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\util\CUDHTTPRedirectUtil.java:30: error: cannot find symbol
+			HttpServletResponse response) throws IOException {
+			^
+  symbol:   class HttpServletResponse
+  location: class CUDHTTPRedirectUtil
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\util\CUDHTTPRedirectUtil.java:37: error: cannot find symbol
+	private static void common(String destination, HttpServletResponse response) {
+	                                               ^
+  symbol:   class HttpServletResponse
+  location: class CUDHTTPRedirectUtil
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\util\CUDHTTPRedirectUtil.java:43: error: cannot find symbol
+	private static void sendRedirect(HttpServletResponse response,
+	                                 ^
+  symbol:   class HttpServletResponse
+  location: class CUDHTTPRedirectUtil
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDServiceProviderAuthenticator.java:3: error: package org.apache.catalina does not exist
+import org.apache.catalina.LifecycleException;
+                          ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:3: error: package org.apache.catalina does not exist
+import org.apache.catalina.Context;
+                          ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:4: error: package org.apache.catalina does not exist
+import org.apache.catalina.LifecycleException;
+                          ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:5: error: package org.apache.catalina does not exist
+import org.apache.catalina.Session;
+                          ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:6: error: package org.apache.catalina.authenticator does not exist
+import org.apache.catalina.authenticator.Constants;
+                                        ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:7: error: package org.apache.catalina.connector does not exist
+import org.apache.catalina.connector.Request;
+                                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:8: error: package org.apache.catalina.connector does not exist
+import org.apache.catalina.connector.Response;
+                                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:9: error: package org.apache.catalina.deploy does not exist
+import org.apache.catalina.deploy.LoginConfig;
+                                 ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:10: error: package org.jboss.security.audit does not exist
+import org.jboss.security.audit.AuditLevel;
+                               ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:11: error: package org.picketlink.common does not exist
+import org.picketlink.common.ErrorCodes;
+                            ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:12: error: package org.picketlink.common.constants does not exist
+import org.picketlink.common.constants.GeneralConstants;
+                                      ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:13: error: package org.picketlink.common.exceptions does not exist
+import org.picketlink.common.exceptions.ConfigurationException;
+                                       ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:14: error: package org.picketlink.common.exceptions does not exist
+import org.picketlink.common.exceptions.ParsingException;
+                                       ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:15: error: package org.picketlink.common.exceptions does not exist
+import org.picketlink.common.exceptions.ProcessingException;
+                                       ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:16: error: package org.picketlink.common.exceptions does not exist
+import org.picketlink.common.exceptions.TrustKeyProcessingException;
+                                       ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:17: error: package org.picketlink.common.exceptions.fed does not exist
+import org.picketlink.common.exceptions.fed.AssertionExpiredException;
+                                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:18: error: package org.picketlink.common.util does not exist
+import org.picketlink.common.util.DocumentUtil;
+                                 ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:19: error: package org.picketlink.common.util does not exist
+import org.picketlink.common.util.StringUtil;
+                                 ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:20: error: package org.picketlink.config.federation does not exist
+import org.picketlink.config.federation.AuthPropertyType;
+                                       ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:21: error: package org.picketlink.config.federation does not exist
+import org.picketlink.config.federation.KeyProviderType;
+                                       ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:22: error: package org.picketlink.identity.federation.bindings.tomcat.sp does not exist
+import org.picketlink.identity.federation.bindings.tomcat.sp.BaseFormAuthenticator;
+                                                            ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:23: error: package org.picketlink.identity.federation.bindings.tomcat.sp does not exist
+import org.picketlink.identity.federation.bindings.tomcat.sp.SPUtil;
+                                                            ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:24: error: package org.picketlink.identity.federation.bindings.tomcat.sp.holder does not exist
+import org.picketlink.identity.federation.bindings.tomcat.sp.holder.ServiceProviderSAMLContext;
+                                                                   ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:25: error: package org.picketlink.identity.federation.core.audit does not exist
+import org.picketlink.identity.federation.core.audit.PicketLinkAuditEvent;
+                                                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:26: error: package org.picketlink.identity.federation.core.audit does not exist
+import org.picketlink.identity.federation.core.audit.PicketLinkAuditEventType;
+                                                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:27: error: package org.picketlink.identity.federation.core.interfaces does not exist
+import org.picketlink.identity.federation.core.interfaces.TrustKeyManager;
+                                                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:28: error: package org.picketlink.identity.federation.core.saml.v2.holders does not exist
+import org.picketlink.identity.federation.core.saml.v2.holders.DestinationInfoHolder;
+                                                              ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:29: error: package org.picketlink.identity.federation.core.saml.v2.interfaces does not exist
+import org.picketlink.identity.federation.core.saml.v2.interfaces.SAML2Handler;
+                                                                 ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:30: error: package org.picketlink.identity.federation.core.saml.v2.interfaces does not exist
+import org.picketlink.identity.federation.core.saml.v2.interfaces.SAML2HandlerResponse;
+                                                                 ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:31: error: package org.picketlink.identity.federation.core.util does not exist
+import org.picketlink.identity.federation.core.util.CoreConfigUtil;
+                                                   ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:32: error: package org.picketlink.identity.federation.web.core does not exist
+import org.picketlink.identity.federation.web.core.HTTPContext;
+                                                  ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:33: error: package org.picketlink.identity.federation.web.process does not exist
+import org.picketlink.identity.federation.web.process.ServiceProviderBaseProcessor;
+                                                     ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:34: error: package org.picketlink.identity.federation.web.process does not exist
+import org.picketlink.identity.federation.web.process.ServiceProviderSAMLRequestProcessor;
+                                                     ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:35: error: package org.picketlink.identity.federation.web.process does not exist
+import org.picketlink.identity.federation.web.process.ServiceProviderSAMLResponseProcessor;
+                                                     ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:36: error: package org.picketlink.identity.federation.web.util does not exist
+import org.picketlink.identity.federation.web.util.PostBindingUtil;
+                                                  ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:37: error: package org.picketlink.identity.federation.web.util does not exist
+import org.picketlink.identity.federation.web.util.RedirectBindingUtil;
+                                                  ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:38: error: package org.picketlink.identity.federation.web.util.RedirectBindingUtil does not exist
+import org.picketlink.identity.federation.web.util.RedirectBindingUtil.RedirectBindingUtilDestHolder;
+                                                                      ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:39: error: package org.picketlink.identity.federation.web.util does not exist
+import org.picketlink.identity.federation.web.util.ServerDetector;
+                                                  ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:44: error: package javax.servlet does not exist
+import javax.servlet.ServletException;
+                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:45: error: package javax.servlet.http does not exist
+import javax.servlet.http.HttpServletResponse;
+                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:54: error: package org.picketlink.common.util does not exist
+import static org.picketlink.common.util.StringUtil.*;
+                                        ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:57: error: cannot find symbol
+		BaseFormAuthenticator {
+		^
+  symbol: class BaseFormAuthenticator
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDServiceProviderAuthenticator.java:8: error: cannot find symbol
+   public void start() throws LifecycleException {
+                              ^
+  symbol:   class LifecycleException
+  location: class CUDServiceProviderAuthenticator
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:75: error: cannot find symbol
+	protected void startPicketLink() throws LifecycleException {
+	                                        ^
+  symbol:   class LifecycleException
+  location: class CUDAbstractSPFormAuthenticator
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:101: error: cannot find symbol
+			String relayState, Response response, boolean willSendRequest,
+			                   ^
+  symbol:   class Response
+  location: class CUDAbstractSPFormAuthenticator
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:103: error: cannot find symbol
+			throws ProcessingException, ConfigurationException, IOException {
+			       ^
+  symbol:   class ProcessingException
+  location: class CUDAbstractSPFormAuthenticator
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:103: error: cannot find symbol
+			throws ProcessingException, ConfigurationException, IOException {
+			                            ^
+  symbol:   class ConfigurationException
+  location: class CUDAbstractSPFormAuthenticator
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:130: error: cannot find symbol
+			Document samlDocument, String relayState, Response response,
+			                                          ^
+  symbol:   class Response
+  location: class CUDAbstractSPFormAuthenticator
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:132: error: cannot find symbol
+			throws IOException, ProcessingException, ConfigurationException {
+			                    ^
+  symbol:   class ProcessingException
+  location: class CUDAbstractSPFormAuthenticator
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:132: error: cannot find symbol
+			throws IOException, ProcessingException, ConfigurationException {
+			                                         ^
+  symbol:   class ConfigurationException
+  location: class CUDAbstractSPFormAuthenticator
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:173: error: cannot find symbol
+			Document samlDocument, String relayState, Response response,
+			                                          ^
+  symbol:   class Response
+  location: class CUDAbstractSPFormAuthenticator
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:174: error: cannot find symbol
+			boolean willSendRequest) throws ProcessingException, IOException,
+			                                ^
+  symbol:   class ProcessingException
+  location: class CUDAbstractSPFormAuthenticator
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:175: error: cannot find symbol
+			ConfigurationException {
+			^
+  symbol:   class ConfigurationException
+  location: class CUDAbstractSPFormAuthenticator
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:194: error: cannot find symbol
+	protected void initKeyProvider(Context context) throws LifecycleException {
+	                               ^
+  symbol:   class Context
+  location: class CUDAbstractSPFormAuthenticator
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:194: error: cannot find symbol
+	protected void initKeyProvider(Context context) throws LifecycleException {
+	                                                       ^
+  symbol:   class LifecycleException
+  location: class CUDAbstractSPFormAuthenticator
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:266: error: cannot find symbol
+	public boolean authenticate(Request request, HttpServletResponse response,
+	                            ^
+  symbol:   class Request
+  location: class CUDAbstractSPFormAuthenticator
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:266: error: cannot find symbol
+	public boolean authenticate(Request request, HttpServletResponse response,
+	                                             ^
+  symbol:   class HttpServletResponse
+  location: class CUDAbstractSPFormAuthenticator
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:267: error: cannot find symbol
+			LoginConfig config) throws IOException {
+			^
+  symbol:   class LoginConfig
+  location: class CUDAbstractSPFormAuthenticator
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:285: error: cannot find symbol
+	public boolean authenticate(Request request, Response response,
+	                            ^
+  symbol:   class Request
+  location: class CUDAbstractSPFormAuthenticator
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:285: error: cannot find symbol
+	public boolean authenticate(Request request, Response response,
+	                                             ^
+  symbol:   class Response
+  location: class CUDAbstractSPFormAuthenticator
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:286: error: cannot find symbol
+			LoginConfig loginConfig) throws IOException {
+			^
+  symbol:   class LoginConfig
+  location: class CUDAbstractSPFormAuthenticator
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:393: error: cannot find symbol
+	private boolean isGlobalLogout(Request request) {
+	                               ^
+  symbol:   class Request
+  location: class CUDAbstractSPFormAuthenticator
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:406: error: cannot find symbol
+	private boolean isLocalLogout(Request request) {
+	                              ^
+  symbol:   class Request
+  location: class CUDAbstractSPFormAuthenticator
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:420: error: cannot find symbol
+	private boolean handleSAMLRequest(Request request, Response response,
+	                                  ^
+  symbol:   class Request
+  location: class CUDAbstractSPFormAuthenticator
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:420: error: cannot find symbol
+	private boolean handleSAMLRequest(Request request, Response response,
+	                                                   ^
+  symbol:   class Response
+  location: class CUDAbstractSPFormAuthenticator
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:421: error: cannot find symbol
+			LoginConfig loginConfig) throws IOException {
+			^
+  symbol:   class LoginConfig
+  location: class CUDAbstractSPFormAuthenticator
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:470: error: cannot find symbol
+	private boolean handleSAMLResponse(Request request, Response response,
+	                                   ^
+  symbol:   class Request
+  location: class CUDAbstractSPFormAuthenticator
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:470: error: cannot find symbol
+	private boolean handleSAMLResponse(Request request, Response response,
+	                                                    ^
+  symbol:   class Response
+  location: class CUDAbstractSPFormAuthenticator
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:471: error: cannot find symbol
+			LoginConfig loginConfig) throws IOException {
+			^
+  symbol:   class LoginConfig
+  location: class CUDAbstractSPFormAuthenticator
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:647: error: cannot find symbol
+	private boolean generalUserRequest(Request request, Response response,
+	                                   ^
+  symbol:   class Request
+  location: class CUDAbstractSPFormAuthenticator
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:647: error: cannot find symbol
+	private boolean generalUserRequest(Request request, Response response,
+	                                                    ^
+  symbol:   class Response
+  location: class CUDAbstractSPFormAuthenticator
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:648: error: cannot find symbol
+			LoginConfig loginConfig) throws IOException {
+			^
+  symbol:   class LoginConfig
+  location: class CUDAbstractSPFormAuthenticator
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:729: error: cannot find symbol
+	protected Context getContext() {
+	          ^
+  symbol:   class Context
+  location: class CUDAbstractSPFormAuthenticator
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:741: error: cannot find symbol
+	protected Principal getGenericPrincipal(Request request, String username,
+	                                        ^
+  symbol:   class Request
+  location: class CUDAbstractSPFormAuthenticator
+[search path for source files: C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java,C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java]
+[search path for class files: C:\Program Files\Java\jdk1.7.0_07\jre\lib\resources.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\rt.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\sunrsasign.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\jsse.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\jce.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\charsets.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\jfr.jar,C:\Program Files\Java\jdk1.7.0_07\jre\classes,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\access-bridge.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\ASN1P.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\asn1rt.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\commons-logging.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\cpSSL.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\dnsns.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\forms_rt.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\jaccess.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCP.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCPinst.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCPRequest.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCPRevCheck.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCPRevTools.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCPxml.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCryptoP.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\localedata.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\sunec.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\sunjce_provider.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\sunmscapi.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\sunpkcs11.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\XMLDSigRI.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\xmlsec-1.5.1.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\zipfs.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/io/IOException.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Object.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/String.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/reflect/Method.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/security/AccessController.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/security/PrivilegedAction.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Class.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/ClassLoader.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/org/w3c/dom/Document.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/io/UnsupportedEncodingException.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/net/URL.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/security/Principal.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/Arrays.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/List.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/Set.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Override.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/annotation/Annotation.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/annotation/Target.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/annotation/ElementType.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/annotation/Retention.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/annotation/RetentionPolicy.class)]]
+Standard Doclet version 1.7.0_07
+Building tree for all the packages and classes...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sp-lib\ru\spb\iac\cud\infosweb\web\init\StartupServlet.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:20: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(StartupServlet.class);
+	                                     ^
+  symbol:   variable LoggerFactory
+  location: class StartupServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:27: warning - Tag @see: reference not found: HttpServlet#HttpServlet()
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:35: warning - Tag @see: reference not found: Servlet#init(ServletConfig)
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sp-lib\ru\spb\iac\cud\sp\util\CUDHTTPRedirectUtil.html...
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/io/Serializable.class)]]
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sp-lib\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:266: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:393: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:406: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:420: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:470: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:647: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:725: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.java:739: warning - @return tag has no arguments.
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sp-lib\ru\spb\iac\cud\sp\valve\CUDServiceProviderAuthenticator.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sp-lib\ru\spb\iac\cud\sp\valve\SecurityActions.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\SecurityActions.java:76: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sp-lib\src\main\java\ru\spb\iac\cud\sp\valve\SecurityActions.java:100: warning - @return tag has no arguments.
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sp-lib\overview-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sp-lib\ru\spb\iac\cud\infosweb\web\init\package-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sp-lib\ru\spb\iac\cud\infosweb\web\init\package-summary.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sp-lib\ru\spb\iac\cud\infosweb\web\init\package-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sp-lib\ru\spb\iac\cud\sp\util\package-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sp-lib\ru\spb\iac\cud\sp\util\package-summary.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sp-lib\ru\spb\iac\cud\sp\util\package-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sp-lib\ru\spb\iac\cud\sp\valve\package-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sp-lib\ru\spb\iac\cud\sp\valve\package-summary.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sp-lib\ru\spb\iac\cud\sp\valve\package-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sp-lib\constant-values.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sp-lib\src-html\ru\spb\iac\cud\infosweb\web\init\StartupServlet.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sp-lib\src-html\ru\spb\iac\cud\sp\util\CUDHTTPRedirectUtil.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sp-lib\src-html\ru\spb\iac\cud\sp\valve\SecurityActions.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sp-lib\src-html\ru\spb\iac\cud\sp\valve\CUDServiceProviderAuthenticator.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sp-lib\src-html\ru\spb\iac\cud\sp\valve\CUDAbstractSPFormAuthenticator.html...
+Building index for all the packages and classes...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sp-lib\overview-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sp-lib\index-all.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sp-lib\deprecated-list.html...
+Building index for all classes...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sp-lib\allclasses-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sp-lib\allclasses-noframe.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sp-lib\index.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sp-lib\overview-summary.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sp-lib\help-doc.html...
+[done in 1732 ms]
+1 error
+102 warnings

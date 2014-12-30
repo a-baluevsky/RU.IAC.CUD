@@ -1,0 +1,1823 @@
+Loading source files for package ru.spb.iac.cud.infosweb.web.init...
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java]]
+[parsing completed 30ms]
+Loading source files for package ru.spb.iac.cud.context...
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\context\ContextIDPUtilManager.java]]
+[parsing completed 20ms]
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\context\ContextIDPAccessManager.java]]
+[parsing completed 0ms]
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\context\ContextAccessSTSManager.java]]
+[parsing completed 0ms]
+Loading source files for package ru.spb.iac.cud.idp.web.sig...
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java]]
+[parsing completed 10ms]
+Loading source files for package ru.spb.iac.cud.idp.web.util...
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\SecurityActions.java]]
+[parsing completed 10ms]
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLSignatureUtil.java]]
+[parsing completed 20ms]
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLEncryptionUtil.java]]
+[parsing completed 10ms]
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTSignatureUtil.java]]
+[parsing completed 10ms]
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTRedirectBindingSignatureUtil.java]]
+[parsing completed 0ms]
+Loading source files for package ru.spb.iac.cud.services.web.init...
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\services\web\init\StartupServlet.java]]
+[parsing completed 0ms]
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\services\web\init\Configuration.java]]
+[parsing completed 0ms]
+Loading source files for package ru.spb.iac.cud.sts.core.attrib...
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\attrib\CUDSAML20CommonTokenRoleAttributeProvider.java]]
+[parsing completed 0ms]
+Loading source files for package ru.spb.iac.cud.sts.core...
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\SecurityActions.java]]
+[parsing completed 0ms]
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\CUDSTService.java]]
+[parsing completed 10ms]
+Loading source files for package ru.spb.iac.cud.sts.core.handlers...
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\handlers\ServerSOAPHandler.java]]
+[parsing completed 10ms]
+Loading source files for package ru.spb.iac.cud.sts.util...
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\util\CUDWSTrustUtil.java]]
+[parsing completed 0ms]
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\util\CUDLifetime.java]]
+[parsing completed 0ms]
+Loading source files for package ru.spb.iac.cud.sts.web.filter...
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\filter\PortFilter.java]]
+[parsing completed 0ms]
+Loading source files for package ru.spb.iac.cud.sts.web.handlers...
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\handlers\GOSTStandardRequestHandler.java]]
+[parsing completed 0ms]
+Loading source files for package ru.spb.iac.cud.util...
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\util\CudPrincipal.java]]
+[parsing completed 0ms]
+Loading source files for package ru.spb.iac.pl.sp.key...
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\pl\sp\key\KeyStoreKeyManager.java]]
+[parsing completed 10ms]
+Loading source files for package ru.spb.iac.sts.core.plugins.saml...
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\SecurityActions.java]]
+[parsing completed 0ms]
+[parsing started RegularFileObject[C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.java]]
+[parsing completed 10ms]
+Constructing Javadoc information...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:3: error: package javax.servlet does not exist
+import javax.servlet.ServletConfig;
+                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:4: error: package javax.servlet does not exist
+import javax.servlet.ServletContext;
+                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:5: error: package javax.servlet does not exist
+import javax.servlet.ServletException;
+                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:6: error: package javax.servlet.http does not exist
+import javax.servlet.http.HttpServlet;
+                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:8: error: package mypackage does not exist
+import mypackage.Configuration;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:10: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:11: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:18: error: cannot find symbol
+ public class StartupServlet extends HttpServlet {
+                                     ^
+  symbol: class HttpServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:20: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(StartupServlet.class);
+	                     ^
+  symbol:   class Logger
+  location: class StartupServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:35: error: cannot find symbol
+	public void init(ServletConfig config) throws ServletException {
+	                 ^
+  symbol:   class ServletConfig
+  location: class StartupServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:35: error: cannot find symbol
+	public void init(ServletConfig config) throws ServletException {
+	                                              ^
+  symbol:   class ServletException
+  location: class StartupServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\context\ContextIDPUtilManager.java:7: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\context\ContextIDPUtilManager.java:8: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\context\ContextIDPUtilManager.java:10: error: package ru.spb.iac.cud.idp.core.util does not exist
+import ru.spb.iac.cud.idp.core.util.IDPUtilManagerLocal;
+                                   ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\context\ContextIDPUtilManager.java:15: error: cannot find symbol
+	IDPUtilManagerLocal iml = null;
+	^
+  symbol:   class IDPUtilManagerLocal
+  location: class ContextIDPUtilManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\context\ContextIDPUtilManager.java:17: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory
+	                     ^
+  symbol:   class Logger
+  location: class ContextIDPUtilManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\context\ContextIDPAccessManager.java:8: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\context\ContextIDPAccessManager.java:9: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\context\ContextIDPAccessManager.java:11: error: package ru.spb.iac.cud.idp.core.access does not exist
+import ru.spb.iac.cud.idp.core.access.IDPAccessManagerLocal;
+                                     ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\context\ContextIDPAccessManager.java:16: error: cannot find symbol
+	IDPAccessManagerLocal iml = null;
+	^
+  symbol:   class IDPAccessManagerLocal
+  location: class ContextIDPAccessManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\context\ContextIDPAccessManager.java:18: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory
+	                     ^
+  symbol:   class Logger
+  location: class ContextIDPAccessManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\context\ContextAccessSTSManager.java:5: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\context\ContextAccessSTSManager.java:6: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\context\ContextAccessSTSManager.java:8: error: package ru.spb.iac.cud.core does not exist
+import ru.spb.iac.cud.core.AccessManagerLocal;
+                          ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\context\ContextAccessSTSManager.java:9: error: package ru.spb.iac.cud.exceptions does not exist
+import ru.spb.iac.cud.exceptions.GeneralFailure;
+                                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\context\ContextAccessSTSManager.java:10: error: package ru.spb.iac.cud.exceptions does not exist
+import ru.spb.iac.cud.exceptions.InvalidCredentials;
+                                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\context\ContextAccessSTSManager.java:11: error: package ru.spb.iac.cud.exceptions does not exist
+import ru.spb.iac.cud.exceptions.RevokedCertificate;
+                                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\context\ContextAccessSTSManager.java:12: error: package ru.spb.iac.cud.items does not exist
+import ru.spb.iac.cud.items.AuthMode;
+                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\context\ContextAccessSTSManager.java:17: error: cannot find symbol
+	AccessManagerLocal aml = null;
+	^
+  symbol:   class AccessManagerLocal
+  location: class ContextAccessSTSManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\context\ContextAccessSTSManager.java:19: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory
+	                     ^
+  symbol:   class Logger
+  location: class ContextAccessSTSManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\context\ContextAccessSTSManager.java:45: error: cannot find symbol
+			String codeSys) throws GeneralFailure, InvalidCredentials,
+			                       ^
+  symbol:   class GeneralFailure
+  location: class ContextAccessSTSManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\context\ContextAccessSTSManager.java:45: error: cannot find symbol
+			String codeSys) throws GeneralFailure, InvalidCredentials,
+			                                       ^
+  symbol:   class InvalidCredentials
+  location: class ContextAccessSTSManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\context\ContextAccessSTSManager.java:46: error: cannot find symbol
+			RevokedCertificate {
+			^
+  symbol:   class RevokedCertificate
+  location: class ContextAccessSTSManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\context\ContextAccessSTSManager.java:53: error: cannot find symbol
+			AuthMode authMode, String IPAddress, String codeSys)
+			^
+  symbol:   class AuthMode
+  location: class ContextAccessSTSManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\context\ContextAccessSTSManager.java:54: error: cannot find symbol
+			throws GeneralFailure, InvalidCredentials {
+			       ^
+  symbol:   class GeneralFailure
+  location: class ContextAccessSTSManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\context\ContextAccessSTSManager.java:54: error: cannot find symbol
+			throws GeneralFailure, InvalidCredentials {
+			                       ^
+  symbol:   class InvalidCredentials
+  location: class ContextAccessSTSManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\context\ContextAccessSTSManager.java:60: error: cannot find symbol
+	public Long authenticate_login_obo(String login, AuthMode authMode,
+	                                                 ^
+  symbol:   class AuthMode
+  location: class ContextAccessSTSManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\context\ContextAccessSTSManager.java:61: error: cannot find symbol
+			String IPAddress, String codeSys) throws GeneralFailure {
+			                                         ^
+  symbol:   class GeneralFailure
+  location: class ContextAccessSTSManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\context\ContextAccessSTSManager.java:71: error: cannot find symbol
+	public String authenticate_uid_obo(String uid, AuthMode authMode,
+	                                               ^
+  symbol:   class AuthMode
+  location: class ContextAccessSTSManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\context\ContextAccessSTSManager.java:72: error: cannot find symbol
+			String IPAddress, String codeSys) throws GeneralFailure {
+			                                         ^
+  symbol:   class GeneralFailure
+  location: class ContextAccessSTSManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:18: error: package org.picketlink.common does not exist
+import org.picketlink.common.PicketLinkLogger;
+                            ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:19: error: package org.picketlink.common does not exist
+import org.picketlink.common.PicketLinkLoggerFactory;
+                            ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:20: error: package org.picketlink.common.constants does not exist
+import org.picketlink.common.constants.JBossSAMLConstants;
+                                      ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:21: error: package org.picketlink.common.constants does not exist
+import org.picketlink.common.constants.JBossSAMLURIConstants;
+                                      ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:22: error: package org.picketlink.common.exceptions does not exist
+import org.picketlink.common.exceptions.ProcessingException;
+                                       ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:23: error: package org.picketlink.identity.federation.api.saml.v2.request does not exist
+import org.picketlink.identity.federation.api.saml.v2.request.SAML2Request;
+                                                             ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:24: error: package org.picketlink.identity.federation.api.saml.v2.response does not exist
+import org.picketlink.identity.federation.api.saml.v2.response.SAML2Response;
+                                                              ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:25: error: package org.picketlink.identity.federation.api.saml.v2.sig does not exist
+import org.picketlink.identity.federation.api.saml.v2.sig.SAML2Signature;
+                                                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:26: error: package org.picketlink.identity.federation.core.util does not exist
+import org.picketlink.identity.federation.core.util.SignatureUtilTransferObject;
+                                                   ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:27: error: package org.picketlink.identity.federation.saml.v2.protocol does not exist
+import org.picketlink.identity.federation.saml.v2.protocol.RequestAbstractType;
+                                                          ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:28: error: package org.picketlink.identity.federation.saml.v2.protocol does not exist
+import org.picketlink.identity.federation.saml.v2.protocol.ResponseType;
+                                                          ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:37: error: cannot find symbol
+ public class GOSTSAML2Signature extends SAML2Signature {
+                                         ^
+  symbol: class SAML2Signature
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:39: error: cannot find symbol
+	private static final PicketLinkLogger LOGGER = PicketLinkLoggerFactory
+	                     ^
+  symbol:   class PicketLinkLogger
+  location: class GOSTSAML2Signature
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:119: error: cannot find symbol
+	public Document sign(RequestAbstractType request, KeyPair keypair)
+	                     ^
+  symbol:   class RequestAbstractType
+  location: class GOSTSAML2Signature
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:150: error: cannot find symbol
+	public Document sign(ResponseType response, KeyPair keypair)
+	                     ^
+  symbol:   class ResponseType
+  location: class GOSTSAML2Signature
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:225: error: cannot find symbol
+	public Document sign(ResponseType response, String idValueOfAssertion,
+	                     ^
+  symbol:   class ResponseType
+  location: class GOSTSAML2Signature
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:274: error: cannot find symbol
+			throws ProcessingException {
+			       ^
+  symbol:   class ProcessingException
+  location: class GOSTSAML2Signature
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:294: error: cannot find symbol
+			throws ProcessingException {
+			       ^
+  symbol:   class ProcessingException
+  location: class GOSTSAML2Signature
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLSignatureUtil.java:44: error: package org.picketlink.common does not exist
+import org.picketlink.common.PicketLinkLogger;
+                            ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLSignatureUtil.java:45: error: package org.picketlink.common does not exist
+import org.picketlink.common.PicketLinkLoggerFactory;
+                            ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLSignatureUtil.java:46: error: package org.picketlink.common.constants does not exist
+import org.picketlink.common.constants.JBossSAMLURIConstants;
+                                      ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLSignatureUtil.java:47: error: package org.picketlink.common.constants does not exist
+import org.picketlink.common.constants.WSTrustConstants;
+                                      ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLSignatureUtil.java:48: error: package org.picketlink.common.exceptions does not exist
+import org.picketlink.common.exceptions.ProcessingException;
+                                       ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLSignatureUtil.java:49: error: package org.picketlink.common.util does not exist
+import org.picketlink.common.util.DocumentUtil;
+                                 ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLSignatureUtil.java:50: error: package org.picketlink.common.util does not exist
+import org.picketlink.common.util.StringUtil;
+                                 ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLSignatureUtil.java:51: error: package org.picketlink.common.util does not exist
+import org.picketlink.common.util.SystemPropertiesUtil;
+                                 ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLSignatureUtil.java:52: error: package org.picketlink.common.util does not exist
+import org.picketlink.common.util.TransformerUtil;
+                                 ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLSignatureUtil.java:53: error: package org.picketlink.identity.federation.core.util does not exist
+import org.picketlink.identity.federation.core.util.ProvidersUtil;
+                                                   ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLSignatureUtil.java:54: error: package org.picketlink.identity.federation.core.util does not exist
+import org.picketlink.identity.federation.core.util.SignatureUtilTransferObject;
+                                                   ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLSignatureUtil.java:55: error: package org.picketlink.identity.xmlsec.w3.xmldsig does not exist
+import org.picketlink.identity.xmlsec.w3.xmldsig.SignatureType;
+                                                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLSignatureUtil.java:74: error: cannot find symbol
+	private static final PicketLinkLogger LOGGER = PicketLinkLoggerFactory
+	                     ^
+  symbol:   class PicketLinkLogger
+  location: class GOSTXMLSignatureUtil
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLSignatureUtil.java:485: error: cannot find symbol
+	public static Document sign(SignatureUtilTransferObject dto)
+	                            ^
+  symbol:   class SignatureUtilTransferObject
+  location: class GOSTXMLSignatureUtil
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLSignatureUtil.java:569: error: cannot find symbol
+	public static void marshall(SignatureType signature, OutputStream os)
+	                            ^
+  symbol:   class SignatureType
+  location: class GOSTXMLSignatureUtil
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLSignatureUtil.java:599: error: cannot find symbol
+			String certificateString) throws ProcessingException {
+			                                 ^
+  symbol:   class ProcessingException
+  location: class GOSTXMLSignatureUtil
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLEncryptionUtil.java:15: error: package org.picketlink.common does not exist
+import org.picketlink.common.PicketLinkLogger;
+                            ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLEncryptionUtil.java:16: error: package org.picketlink.common does not exist
+import org.picketlink.common.PicketLinkLoggerFactory;
+                            ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLEncryptionUtil.java:17: error: package org.picketlink.common.exceptions does not exist
+import org.picketlink.common.exceptions.ConfigurationException;
+                                       ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLEncryptionUtil.java:18: error: package org.picketlink.common.exceptions does not exist
+import org.picketlink.common.exceptions.ProcessingException;
+                                       ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLEncryptionUtil.java:19: error: package org.picketlink.common.util does not exist
+import org.picketlink.common.util.DocumentUtil;
+                                 ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLEncryptionUtil.java:20: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLEncryptionUtil.java:21: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLEncryptionUtil.java:28: error: package ru.spb.iac.crypto.export does not exist
+import ru.spb.iac.crypto.export.Crypto15Init;
+                               ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLEncryptionUtil.java:41: error: cannot find symbol
+	private static final PicketLinkLogger LOGGER = PicketLinkLoggerFactory
+	                     ^
+  symbol:   class PicketLinkLogger
+  location: class GOSTXMLEncryptionUtil
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLEncryptionUtil.java:44: error: cannot find symbol
+	private static final Logger LOGGERSLF4J = LoggerFactory
+	                     ^
+  symbol:   class Logger
+  location: class GOSTXMLEncryptionUtil
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLEncryptionUtil.java:154: error: cannot find symbol
+			int keySize) throws ProcessingException {
+			                    ^
+  symbol:   class ProcessingException
+  location: class GOSTXMLEncryptionUtil
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLEncryptionUtil.java:188: error: cannot find symbol
+			throws ProcessingException {
+			       ^
+  symbol:   class ProcessingException
+  location: class GOSTXMLEncryptionUtil
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLEncryptionUtil.java:333: error: cannot find symbol
+			throws ProcessingException {
+			       ^
+  symbol:   class ProcessingException
+  location: class GOSTXMLEncryptionUtil
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLEncryptionUtil.java:407: error: cannot find symbol
+			throws ProcessingException, ConfigurationException {
+			       ^
+  symbol:   class ProcessingException
+  location: class GOSTXMLEncryptionUtil
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLEncryptionUtil.java:407: error: cannot find symbol
+			throws ProcessingException, ConfigurationException {
+			                            ^
+  symbol:   class ConfigurationException
+  location: class GOSTXMLEncryptionUtil
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLEncryptionUtil.java:496: error: cannot find symbol
+			throws ProcessingException {
+			       ^
+  symbol:   class ProcessingException
+  location: class GOSTXMLEncryptionUtil
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTSignatureUtil.java:12: error: package org.picketlink.common does not exist
+import org.picketlink.common.PicketLinkLogger;
+                            ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTSignatureUtil.java:13: error: package org.picketlink.common does not exist
+import org.picketlink.common.PicketLinkLoggerFactory;
+                            ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTSignatureUtil.java:14: error: package org.picketlink.common.constants does not exist
+import org.picketlink.common.constants.JBossSAMLConstants;
+                                      ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTSignatureUtil.java:15: error: package org.picketlink.identity.federation.core.constants does not exist
+import org.picketlink.identity.federation.core.constants.PicketLinkFederationConstants;
+                                                        ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTSignatureUtil.java:16: error: package org.picketlink.identity.xmlsec.w3.xmldsig does not exist
+import org.picketlink.identity.xmlsec.w3.xmldsig.SignatureType;
+                                                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTSignatureUtil.java:28: error: cannot find symbol
+	private static final PicketLinkLogger LOGGER = PicketLinkLoggerFactory
+	                     ^
+  symbol:   class PicketLinkLogger
+  location: class GOSTSignatureUtil
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTSignatureUtil.java:39: error: cannot find symbol
+	public static void marshall(SignatureType signature, OutputStream os)
+	                            ^
+  symbol:   class SignatureType
+  location: class GOSTSignatureUtil
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTRedirectBindingSignatureUtil.java:3: error: package org.picketlink.common does not exist
+import org.picketlink.common.PicketLinkLogger;
+                            ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTRedirectBindingSignatureUtil.java:4: error: package org.picketlink.common does not exist
+import org.picketlink.common.PicketLinkLoggerFactory;
+                            ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTRedirectBindingSignatureUtil.java:5: error: package org.picketlink.common.constants does not exist
+import org.picketlink.common.constants.GeneralConstants;
+                                      ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTRedirectBindingSignatureUtil.java:6: error: package org.picketlink.common.exceptions does not exist
+import org.picketlink.common.exceptions.ConfigurationException;
+                                       ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTRedirectBindingSignatureUtil.java:7: error: package org.picketlink.common.exceptions does not exist
+import org.picketlink.common.exceptions.ParsingException;
+                                       ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTRedirectBindingSignatureUtil.java:8: error: package org.picketlink.common.exceptions does not exist
+import org.picketlink.common.exceptions.ProcessingException;
+                                       ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTRedirectBindingSignatureUtil.java:9: error: package org.picketlink.common.util does not exist
+import org.picketlink.common.util.DocumentUtil;
+                                 ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTRedirectBindingSignatureUtil.java:10: error: package org.picketlink.identity.federation.api.saml.v2.request does not exist
+import org.picketlink.identity.federation.api.saml.v2.request.SAML2Request;
+                                                             ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTRedirectBindingSignatureUtil.java:11: error: package org.picketlink.identity.federation.api.saml.v2.response does not exist
+import org.picketlink.identity.federation.api.saml.v2.response.SAML2Response;
+                                                              ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTRedirectBindingSignatureUtil.java:12: error: package org.picketlink.identity.federation.saml.v2.protocol does not exist
+import org.picketlink.identity.federation.saml.v2.protocol.AuthnRequestType;
+                                                          ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTRedirectBindingSignatureUtil.java:13: error: package org.picketlink.identity.federation.saml.v2.protocol does not exist
+import org.picketlink.identity.federation.saml.v2.protocol.ResponseType;
+                                                          ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTRedirectBindingSignatureUtil.java:14: error: package org.picketlink.identity.federation.web.util does not exist
+import org.picketlink.identity.federation.web.util.RedirectBindingUtil;
+                                                  ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTRedirectBindingSignatureUtil.java:26: error: package org.picketlink.common.util does not exist
+import static org.picketlink.common.util.StringUtil.isNotNull;
+                                        ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTRedirectBindingSignatureUtil.java:26: error: static import only from classes and interfaces
+import static org.picketlink.common.util.StringUtil.isNotNull;
+^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTRedirectBindingSignatureUtil.java:37: error: cannot find symbol
+	private static final PicketLinkLogger LOGGER = PicketLinkLoggerFactory
+	                     ^
+  symbol:   class PicketLinkLogger
+  location: class GOSTRedirectBindingSignatureUtil
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTRedirectBindingSignatureUtil.java:53: error: cannot find symbol
+			AuthnRequestType authRequest, String relayState,
+			^
+  symbol:   class AuthnRequestType
+  location: class GOSTRedirectBindingSignatureUtil
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTRedirectBindingSignatureUtil.java:93: error: cannot find symbol
+			ResponseType responseType, String relayState, PrivateKey signingKey)
+			^
+  symbol:   class ResponseType
+  location: class GOSTRedirectBindingSignatureUtil
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTRedirectBindingSignatureUtil.java:168: error: cannot find symbol
+	public static AuthnRequestType getRequestFromSignedURL(String signedURL)
+	              ^
+  symbol:   class AuthnRequestType
+  location: class GOSTRedirectBindingSignatureUtil
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTRedirectBindingSignatureUtil.java:169: error: cannot find symbol
+			throws ConfigurationException, ProcessingException,
+			       ^
+  symbol:   class ConfigurationException
+  location: class GOSTRedirectBindingSignatureUtil
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTRedirectBindingSignatureUtil.java:169: error: cannot find symbol
+			throws ConfigurationException, ProcessingException,
+			                               ^
+  symbol:   class ProcessingException
+  location: class GOSTRedirectBindingSignatureUtil
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTRedirectBindingSignatureUtil.java:170: error: cannot find symbol
+			ParsingException, IOException {
+			^
+  symbol:   class ParsingException
+  location: class GOSTRedirectBindingSignatureUtil
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\services\web\init\StartupServlet.java:3: error: package javax.servlet does not exist
+import javax.servlet.ServletConfig;
+                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\services\web\init\StartupServlet.java:4: error: package javax.servlet does not exist
+import javax.servlet.ServletContext;
+                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\services\web\init\StartupServlet.java:5: error: package javax.servlet does not exist
+import javax.servlet.ServletException;
+                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\services\web\init\StartupServlet.java:6: error: package javax.servlet.http does not exist
+import javax.servlet.http.HttpServlet;
+                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\services\web\init\StartupServlet.java:8: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\services\web\init\StartupServlet.java:9: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\services\web\init\StartupServlet.java:18: error: cannot find symbol
+ public class StartupServlet extends HttpServlet {
+                                     ^
+  symbol: class HttpServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\services\web\init\StartupServlet.java:20: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(StartupServlet.class);
+	                     ^
+  symbol:   class Logger
+  location: class StartupServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\services\web\init\StartupServlet.java:35: error: cannot find symbol
+	public void init(ServletConfig config) throws ServletException {
+	                 ^
+  symbol:   class ServletConfig
+  location: class StartupServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\services\web\init\StartupServlet.java:35: error: cannot find symbol
+	public void init(ServletConfig config) throws ServletException {
+	                                              ^
+  symbol:   class ServletException
+  location: class StartupServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\attrib\CUDSAML20CommonTokenRoleAttributeProvider.java:12: error: package org.picketlink.common does not exist
+import org.picketlink.common.PicketLinkLogger;
+                            ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\attrib\CUDSAML20CommonTokenRoleAttributeProvider.java:13: error: package org.picketlink.common does not exist
+import org.picketlink.common.PicketLinkLoggerFactory;
+                            ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\attrib\CUDSAML20CommonTokenRoleAttributeProvider.java:14: error: package org.picketlink.common.util does not exist
+import org.picketlink.common.util.Base64;
+                                 ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\attrib\CUDSAML20CommonTokenRoleAttributeProvider.java:15: error: package org.picketlink.identity.federation.core.wstrust.plugins.saml does not exist
+import org.picketlink.identity.federation.core.wstrust.plugins.saml.SAML20TokenAttributeProvider;
+                                                                   ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\attrib\CUDSAML20CommonTokenRoleAttributeProvider.java:16: error: package org.picketlink.identity.federation.saml.v2.assertion does not exist
+import org.picketlink.identity.federation.saml.v2.assertion.AttributeStatementType;
+                                                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\attrib\CUDSAML20CommonTokenRoleAttributeProvider.java:17: error: package org.picketlink.identity.federation.saml.v2.assertion.AttributeStatementType does not exist
+import org.picketlink.identity.federation.saml.v2.assertion.AttributeStatementType.ASTChoiceType;
+                                                                                  ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\attrib\CUDSAML20CommonTokenRoleAttributeProvider.java:18: error: package org.picketlink.identity.federation.saml.v2.assertion does not exist
+import org.picketlink.identity.federation.saml.v2.assertion.AttributeType;
+                                                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\attrib\CUDSAML20CommonTokenRoleAttributeProvider.java:19: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\attrib\CUDSAML20CommonTokenRoleAttributeProvider.java:20: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\attrib\CUDSAML20CommonTokenRoleAttributeProvider.java:26: error: cannot find symbol
+		SAML20TokenAttributeProvider {
+		^
+  symbol: class SAML20TokenAttributeProvider
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\attrib\CUDSAML20CommonTokenRoleAttributeProvider.java:28: error: cannot find symbol
+	private static final PicketLinkLogger LOGGER = PicketLinkLoggerFactory
+	                     ^
+  symbol:   class PicketLinkLogger
+  location: class CUDSAML20CommonTokenRoleAttributeProvider
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\attrib\CUDSAML20CommonTokenRoleAttributeProvider.java:31: error: cannot find symbol
+	private static final Logger LOGGERSLF4J = LoggerFactory
+	                     ^
+  symbol:   class Logger
+  location: class CUDSAML20CommonTokenRoleAttributeProvider
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\attrib\CUDSAML20CommonTokenRoleAttributeProvider.java:64: error: cannot find symbol
+	public AttributeStatementType getAttributeStatement() {
+	       ^
+  symbol:   class AttributeStatementType
+  location: class CUDSAML20CommonTokenRoleAttributeProvider
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\attrib\CUDSAML20CommonTokenRoleAttributeProvider.java:69: error: cannot find symbol
+	public AttributeStatementType getAttributeStatement(String systemCode,
+	       ^
+  symbol:   class AttributeStatementType
+  location: class CUDSAML20CommonTokenRoleAttributeProvider
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\CUDSTService.java:3: error: package org.picketlink.common does not exist
+import org.picketlink.common.ErrorCodes;
+                            ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\CUDSTService.java:4: error: package org.picketlink.common does not exist
+import org.picketlink.common.PicketLinkLogger;
+                            ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\CUDSTService.java:5: error: package org.picketlink.common does not exist
+import org.picketlink.common.PicketLinkLoggerFactory;
+                            ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\CUDSTService.java:6: error: package org.picketlink.common.constants does not exist
+import org.picketlink.common.constants.WSTrustConstants;
+                                      ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\CUDSTService.java:7: error: package org.picketlink.common.constants.WSTrustConstants does not exist
+import org.picketlink.common.constants.WSTrustConstants.WSSE;
+                                                       ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\CUDSTService.java:8: error: package org.picketlink.common.exceptions does not exist
+import org.picketlink.common.exceptions.ConfigurationException;
+                                       ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\CUDSTService.java:9: error: package org.picketlink.common.exceptions.fed does not exist
+import org.picketlink.common.exceptions.fed.WSTrustException;
+                                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\CUDSTService.java:10: error: package org.picketlink.common.util does not exist
+import org.picketlink.common.util.DocumentUtil;
+                                 ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\CUDSTService.java:11: error: package org.picketlink.config.federation does not exist
+import org.picketlink.config.federation.STSType;
+                                       ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\CUDSTService.java:12: error: package org.picketlink.config.federation.parsers does not exist
+import org.picketlink.config.federation.parsers.STSConfigParser;
+                                               ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\CUDSTService.java:13: error: package org.picketlink.identity.federation.core.parsers.wst does not exist
+import org.picketlink.identity.federation.core.parsers.wst.WSTrustParser;
+                                                          ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\CUDSTService.java:14: error: package org.picketlink.identity.federation.core.util does not exist
+import org.picketlink.identity.federation.core.util.SOAPUtil;
+                                                   ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\CUDSTService.java:15: error: package org.picketlink.identity.federation.core.wstrust does not exist
+import org.picketlink.identity.federation.core.wstrust.PicketLinkSTSConfiguration;
+                                                      ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\CUDSTService.java:16: error: package org.picketlink.identity.federation.core.wstrust does not exist
+import org.picketlink.identity.federation.core.wstrust.STSConfiguration;
+                                                      ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\CUDSTService.java:17: error: package org.picketlink.identity.federation.core.wstrust does not exist
+import org.picketlink.identity.federation.core.wstrust.WSTrustRequestHandler;
+                                                      ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\CUDSTService.java:18: error: package org.picketlink.identity.federation.core.wstrust.wrappers does not exist
+import org.picketlink.identity.federation.core.wstrust.wrappers.BaseRequestSecurityToken;
+                                                               ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\CUDSTService.java:19: error: package org.picketlink.identity.federation.core.wstrust.wrappers does not exist
+import org.picketlink.identity.federation.core.wstrust.wrappers.RequestSecurityToken;
+                                                               ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\CUDSTService.java:20: error: package org.picketlink.identity.federation.core.wstrust.wrappers does not exist
+import org.picketlink.identity.federation.core.wstrust.wrappers.RequestSecurityTokenCollection;
+                                                               ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\CUDSTService.java:21: error: package org.picketlink.identity.federation.core.wstrust.wrappers does not exist
+import org.picketlink.identity.federation.core.wstrust.wrappers.RequestSecurityTokenResponse;
+                                                               ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\CUDSTService.java:22: error: package org.picketlink.identity.federation.core.wstrust.wrappers does not exist
+import org.picketlink.identity.federation.core.wstrust.wrappers.RequestSecurityTokenResponseCollection;
+                                                               ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\CUDSTService.java:23: error: package org.picketlink.identity.federation.core.wstrust.writers does not exist
+import org.picketlink.identity.federation.core.wstrust.writers.WSTrustResponseWriter;
+                                                              ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\CUDSTService.java:24: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\CUDSTService.java:25: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\CUDSTService.java:35: error: package javax.servlet.http does not exist
+import javax.servlet.http.HttpServletRequest;
+                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\CUDSTService.java:36: error: package javax.servlet.http does not exist
+import javax.servlet.http.HttpSession;
+                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\CUDSTService.java:61: error: cannot find symbol
+	private static final PicketLinkLogger LOGGER = PicketLinkLoggerFactory
+	                     ^
+  symbol:   class PicketLinkLogger
+  location: class CUDSTService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\CUDSTService.java:64: error: cannot find symbol
+	private static final Logger LOGGERSLF4J = LoggerFactory
+	                     ^
+  symbol:   class Logger
+  location: class CUDSTService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\CUDSTService.java:83: error: cannot find symbol
+	protected STSConfiguration config;
+	          ^
+  symbol:   class STSConfiguration
+  location: class CUDSTService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\CUDSTService.java:239: error: cannot find symbol
+	protected Source handleTokenRequest(RequestSecurityToken request) {
+	                                    ^
+  symbol:   class RequestSecurityToken
+  location: class CUDSTService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\CUDSTService.java:306: error: cannot find symbol
+			RequestSecurityTokenCollection requestCollection) {
+			^
+  symbol:   class RequestSecurityTokenCollection
+  location: class CUDSTService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\CUDSTService.java:320: error: cannot find symbol
+	protected Source marshallResponse(RequestSecurityTokenResponse response) {
+	                                  ^
+  symbol:   class RequestSecurityTokenResponse
+  location: class CUDSTService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\CUDSTService.java:344: error: cannot find symbol
+	protected STSConfiguration getConfiguration() throws ConfigurationException {
+	          ^
+  symbol:   class STSConfiguration
+  location: class CUDSTService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\CUDSTService.java:344: error: cannot find symbol
+	protected STSConfiguration getConfiguration() throws ConfigurationException {
+	                                                     ^
+  symbol:   class ConfigurationException
+  location: class CUDSTService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\handlers\ServerSOAPHandler.java:19: error: package javax.servlet.http does not exist
+import javax.servlet.http.HttpServletRequest;
+                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\handlers\ServerSOAPHandler.java:20: error: package javax.servlet.http does not exist
+import javax.servlet.http.HttpSession;
+                         ^
+[search path for source files: C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java,C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java]
+[search path for class files: C:\Program Files\Java\jdk1.7.0_07\jre\lib\resources.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\rt.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\sunrsasign.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\jsse.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\jce.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\charsets.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\jfr.jar,C:\Program Files\Java\jdk1.7.0_07\jre\classes,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\access-bridge.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\ASN1P.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\asn1rt.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\commons-logging.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\cpSSL.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\dnsns.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\forms_rt.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\jaccess.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCP.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCPinst.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCPRequest.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCPRevCheck.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCPRevTools.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCPxml.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCryptoP.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\localedata.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\sunec.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\sunjce_provider.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\sunmscapi.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\sunpkcs11.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\XMLDSigRI.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\xmlsec-1.5.1.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\zipfs.jar,C:\Program Files\Java\jdk1.7.0_07\jre\lib]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/security/cert/X509Certificate.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/naming/Context.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/naming/InitialContext.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Object.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/String.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Exception.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/List.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/Map.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Long.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/io/IOException.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/security/GeneralSecurityException.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/security/KeyPair.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/security/PublicKey.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/crypto/MarshalException.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/crypto/dsig/DigestMethod.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/crypto/dsig/SignatureMethod.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/crypto/dsig/XMLSignatureException.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/parsers/ParserConfigurationException.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/transform/TransformerException.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/transform/TransformerFactoryConfigurationError.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/xpath/XPathException.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/org/w3c/dom/Document.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/org/w3c/dom/Element.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/org/w3c/dom/Node.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/org/w3c/dom/NodeList.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/org/xml/sax/SAXException.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/net/URL.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/security/AccessController.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/security/PrivilegedAction.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Class.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/ClassLoader.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/io/ByteArrayInputStream.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/io/OutputStream.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/security/Key.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/security/KeyException.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/security/PrivateKey.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/security/Provider.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/security/cert/CertificateFactory.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/ArrayList.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/Collections.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/bind/JAXBException.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/crypto/dsig/CanonicalizationMethod.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/crypto/dsig/Reference.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/crypto/dsig/SignedInfo.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/crypto/dsig/Transform.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xmlC:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\handlers\ServerSOAPHandler.java:46: error: package org.jboss.xb.binding does not exist
+import org.jboss.xb.binding.SimpleTypeBindings;
+                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\handlers\ServerSOAPHandler.java:47: error: package org.picketlink.common.constants does not exist
+import org.picketlink.common.constants.WSTrustConstants;
+                                      ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\handlers\ServerSOAPHandler.java:48: error: package org.picketlink.common.util does not exist
+import org.picketlink.common.util.Base64;
+                                 ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\handlers\ServerSOAPHandler.java:49: error: package org.picketlink.identity.federation.core.saml.v2.util does not exist
+import org.picketlink.identity.federation.core.saml.v2.util.DocumentUtil;
+                                                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\handlers\ServerSOAPHandler.java:50: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\handlers\ServerSOAPHandler.java:51: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\handlers\ServerSOAPHandler.java:59: error: package ru.spb.iac.cud.exceptions does not exist
+import ru.spb.iac.cud.exceptions.GeneralFailure;
+                                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\handlers\ServerSOAPHandler.java:61: error: package ru.spb.iac.cud.items does not exist
+import ru.spb.iac.cud.items.AuthMode;
+                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\handlers\ServerSOAPHandler.java:73: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory
+	                     ^
+  symbol:   class Logger
+  location: class ServerSOAPHandler
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\handlers\ServerSOAPHandler.java:953: error: cannot find symbol
+	private String getIPAddress(HttpServletRequest request) {
+	                            ^
+  symbol:   class HttpServletRequest
+  location: class ServerSOAPHandler
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\util\CUDWSTrustUtil.java:3: error: package org.picketlink.identity.federation.core.wstrust does not exist
+import org.picketlink.identity.federation.core.wstrust.WSTrustUtil;
+                                                      ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\util\CUDWSTrustUtil.java:4: error: package org.picketlink.identity.federation.core.wstrust.wrappers does not exist
+import org.picketlink.identity.federation.core.wstrust.wrappers.Lifetime;
+                                                               ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\util\CUDWSTrustUtil.java:7: error: cannot find symbol
+ public class CUDWSTrustUtil extends WSTrustUtil {
+                                     ^
+  symbol: class WSTrustUtil
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\util\CUDWSTrustUtil.java:20: error: cannot find symbol
+	public static Lifetime createDefaultLifetime(long tokenTimeout) {
+	              ^
+  symbol:   class Lifetime
+  location: class CUDWSTrustUtil
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\util\CUDLifetime.java:3: error: package org.picketlink.common does not exist
+import org.picketlink.common.PicketLinkLogger;
+                            ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\util\CUDLifetime.java:4: error: package org.picketlink.common does not exist
+import org.picketlink.common.PicketLinkLoggerFactory;
+                            ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\util\CUDLifetime.java:5: error: package org.picketlink.identity.federation.core.saml.v2.util does not exist
+import org.picketlink.identity.federation.core.saml.v2.util.XMLTimeUtil;
+                                                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\util\CUDLifetime.java:6: error: package org.picketlink.identity.federation.core.wstrust.wrappers does not exist
+import org.picketlink.identity.federation.core.wstrust.wrappers.Lifetime;
+                                                               ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\util\CUDLifetime.java:7: error: package org.picketlink.identity.federation.ws.trust does not exist
+import org.picketlink.identity.federation.ws.trust.LifetimeType;
+                                                  ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\util\CUDLifetime.java:8: error: package org.picketlink.identity.federation.ws.wss.utility does not exist
+import org.picketlink.identity.federation.ws.wss.utility.AttributedDateTime;
+                                                        ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\util\CUDLifetime.java:16: error: cannot find symbol
+ public class CUDLifetime extends Lifetime {
+                                  ^
+  symbol: class Lifetime
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\util\CUDLifetime.java:18: error: cannot find symbol
+	private static final PicketLinkLogger LOGGER = PicketLinkLoggerFactory
+	                     ^
+  symbol:   class PicketLinkLogger
+  location: class CUDLifetime
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\util\CUDLifetime.java:21: error: cannot find symbol
+	private final LifetimeType delegate;
+	              ^
+  symbol:   class LifetimeType
+  location: class CUDLifetime
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\util\CUDLifetime.java:79: error: cannot find symbol
+	public CUDLifetime(LifetimeType lifetime) {
+	                   ^
+  symbol:   class LifetimeType
+  location: class CUDLifetime
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\util\CUDLifetime.java:220: error: cannot find symbol
+	public LifetimeType getDelegate() {
+	       ^
+  symbol:   class LifetimeType
+  location: class CUDLifetime
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\filter\PortFilter.java:8: error: package javax.servlet does not exist
+import javax.servlet.Filter;
+                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\filter\PortFilter.java:9: error: package javax.servlet does not exist
+import javax.servlet.FilterChain;
+                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\filter\PortFilter.java:10: error: package javax.servlet does not exist
+import javax.servlet.FilterConfig;
+                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\filter\PortFilter.java:11: error: package javax.servlet does not exist
+import javax.servlet.ServletException;
+                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\filter\PortFilter.java:12: error: package javax.servlet does not exist
+import javax.servlet.ServletRequest;
+                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\filter\PortFilter.java:13: error: package javax.servlet does not exist
+import javax.servlet.ServletResponse;
+                    ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\filter\PortFilter.java:14: error: package javax.servlet.http does not exist
+import javax.servlet.http.HttpServletRequest;
+                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\filter\PortFilter.java:15: error: package javax.servlet.http does not exist
+import javax.servlet.http.HttpServletResponse;
+                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\filter\PortFilter.java:17: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\filter\PortFilter.java:18: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\filter\PortFilter.java:20: error: cannot find symbol
+ public class PortFilter implements Filter {
+                                    ^
+  symbol: class Filter
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\filter\PortFilter.java:22: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(PortFilter.class);
+	                     ^
+  symbol:   class Logger
+  location: class PortFilter
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\filter\PortFilter.java:43: error: cannot find symbol
+	public void doFilter(ServletRequest request, ServletResponse response,
+	                     ^
+  symbol:   class ServletRequest
+  location: class PortFilter
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\filter\PortFilter.java:43: error: cannot find symbol
+	public void doFilter(ServletRequest request, ServletResponse response,
+	                                             ^
+  symbol:   class ServletResponse
+  location: class PortFilter
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\filter\PortFilter.java:44: error: cannot find symbol
+			FilterChain chain) throws IOException, ServletException {
+			^
+  symbol:   class FilterChain
+  location: class PortFilter
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\filter\PortFilter.java:44: error: cannot find symbol
+			FilterChain chain) throws IOException, ServletException {
+			                                       ^
+  symbol:   class ServletException
+  location: class PortFilter
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\filter\PortFilter.java:73: error: cannot find symbol
+	public void init(FilterConfig fConfig) throws ServletException {
+	                 ^
+  symbol:   class FilterConfig
+  location: class PortFilter
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\filter\PortFilter.java:73: error: cannot find symbol
+	public void init(FilterConfig fConfig) throws ServletException {
+	                                              ^
+  symbol:   class ServletException
+  location: class PortFilter
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\handlers\GOSTStandardRequestHandler.java:15: error: package org.picketlink.common does not exist
+import org.picketlink.common.PicketLinkLogger;
+                            ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\handlers\GOSTStandardRequestHandler.java:16: error: package org.picketlink.common does not exist
+import org.picketlink.common.PicketLinkLoggerFactory;
+                            ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\handlers\GOSTStandardRequestHandler.java:17: error: package org.picketlink.common.constants does not exist
+import org.picketlink.common.constants.WSTrustConstants;
+                                      ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\handlers\GOSTStandardRequestHandler.java:18: error: package org.picketlink.common.exceptions does not exist
+import org.picketlink.common.exceptions.ParsingException;
+                                       ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\handlers\GOSTStandardRequestHandler.java:19: error: package org.picketlink.common.exceptions does not exist
+import org.picketlink.common.exceptions.ProcessingException;
+                                       ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\handlers\GOSTStandardRequestHandler.java:20: error: package org.picketlink.common.exceptions.fed does not exist
+import org.picketlink.common.exceptions.fed.WSTrustException;
+                                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\handlers\GOSTStandardRequestHandler.java:21: error: package org.picketlink.common.util does not exist
+import org.picketlink.common.util.Base64;
+                                 ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\handlers\GOSTStandardRequestHandler.java:22: error: package org.picketlink.common.util does not exist
+import org.picketlink.common.util.DocumentUtil;
+                                 ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\handlers\GOSTStandardRequestHandler.java:23: error: package org.picketlink.identity.federation.core.saml.v1 does not exist
+import org.picketlink.identity.federation.core.saml.v1.SAML11Constants;
+                                                      ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\handlers\GOSTStandardRequestHandler.java:24: error: package org.picketlink.identity.federation.core.saml.v2.util does not exist
+import org.picketlink.identity.federation.core.saml.v2.util.SignatureUtil;
+                                                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\handlers\GOSTStandardRequestHandler.java:25: error: package org.picketlink.identity.federation.core.sts does not exist
+import org.picketlink.identity.federation.core.sts.PicketLinkCoreSTS;
+                                                  ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\handlers\GOSTStandardRequestHandler.java:26: error: package org.picketlink.identity.federation.core.wstrust does not exist
+import org.picketlink.identity.federation.core.wstrust.ClaimsProcessor;
+                                                      ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\handlers\GOSTStandardRequestHandler.java:27: error: package org.picketlink.identity.federation.core.wstrust does not exist
+import org.picketlink.identity.federation.core.wstrust.STSConfiguration;
+                                                      ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\handlers\GOSTStandardRequestHandler.java:28: error: package org.picketlink.identity.federation.core.wstrust does not exist
+import org.picketlink.identity.federation.core.wstrust.SecurityToken;
+                                                      ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\handlers\GOSTStandardRequestHandler.java:29: error: package org.picketlink.identity.federation.core.wstrust does not exist
+import org.picketlink.identity.federation.core.wstrust.WSTrustRequestContext;
+                                                      ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\handlers\GOSTStandardRequestHandler.java:30: error: package org.picketlink.identity.federation.core.wstrust does not exist
+import org.picketlink.identity.federation.core.wstrust.WSTrustRequestHandler;
+                                                      ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\handlers\GOSTStandardRequestHandler.java:31: error: package org.picketlink.identity.federation.core.wstrust does not exist
+import org.picketlink.identity.federation.core.wstrust.WSTrustUtil;
+                                                      ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\handlers\GOSTStandardRequestHandler.java:32: error: package org.picketlink.identity.federation.core.wstrust.wrappers does not exist
+import org.picketlink.identity.federation.core.wstrust.wrappers.RequestSecurityToken;
+                                                               ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\handlers\GOSTStandardRequestHandler.java:33: error: package org.picketlink.identity.federation.core.wstrust.wrappers does not exist
+import org.picketlink.identity.federation.core.wstrust.wrappers.RequestSecurityTokenResponse;
+                                                               ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\handlers\GOSTStandardRequestHandler.java:34: error: package org.picketlink.identity.federation.ws.policy does not exist
+import org.picketlink.identity.federation.ws.policy.AppliesTo;
+                                                   ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\handlers\GOSTStandardRequestHandler.java:35: error: package org.picketlink.identity.federation.ws.trust does not exist
+import org.picketlink.identity.federation.ws.trust.BinarySecretType;
+                                                  ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\handlers\GOSTStandardRequestHandler.java:36: error: package org.picketlink.identity.federation.ws.trust does not exist
+import org.picketlink.identity.federation.ws.trust.ClaimsType;
+                                                  ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\handlers\GOSTStandardRequestHandler.java:37: error: package org.picketlink.identity.federation.ws.trust does not exist
+import org.picketlink.identity.federation.ws.trust.ComputedKeyType;
+                                                  ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\handlers\GOSTStandardRequestHandler.java:38: error: package org.picketlink.identity.federation.ws.trust does not exist
+import org.picketlink.identity.federation.ws.trust.EntropyType;
+                                                  ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\handlers\GOSTStandardRequestHandler.java:39: error: package org.picketlink.identity.federation.ws.trust does not exist
+import org.picketlink.identity.federation.ws.trust.RequestedProofTokenType;
+                                                  ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\handlers\GOSTStandardRequestHandler.java:40: error: package org.picketlink.identity.federation.ws.trust does not exist
+import org.picketlink.identity.federation.ws.trust.RequestedSecurityTokenType;
+                                                  ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\handlers\GOSTStandardRequestHandler.java:41: error: package org.picketlink.identity.federation.ws.trust does not exist
+import org.picketlink.identity.federation.ws.trust.RequestedTokenCancelledType;
+                                                  ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\handlers\GOSTStandardRequestHandler.java:42: error: package org.picketlink.identity.federation.ws.trust does not exist
+import org.picketlink.identity.federation.ws.trust.StatusType;
+                                                  ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\handlers\GOSTStandardRequestHandler.java:43: error: package org.picketlink.identity.federation.ws.trust does not exist
+import org.picketlink.identity.federation.ws.trust.UseKeyType;
+                                                  ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\handlers\GOSTStandardRequestHandler.java:44: error: package org.picketlink.identity.xmlsec.w3.xmldsig does not exist
+import org.picketlink.identity.xmlsec.w3.xmldsig.KeyInfoType;
+                                                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\handlers\GOSTStandardRequestHandler.java:45: error: package org.picketlink.identity.xmlsec.w3.xmldsig does not exist
+import org.picketlink.identity.xmlsec.w3.xmldsig.KeyValueType;
+                                                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\handlers\GOSTStandardRequestHandler.java:46: error: package org.picketlink.identity.xmlsec.w3.xmldsig does not exist
+import org.picketlink.identity.xmlsec.w3.xmldsig.X509DataType;
+                                                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\handlers\GOSTStandardRequestHandler.java:47: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\handlers\GOSTStandardRequestHandler.java:48: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\handlers\GOSTStandardRequestHandler.java:70: error: cannot find symbol
+ public class GOSTStandardRequestHandler implements WSTrustRequestHandler {
+                                                    ^
+  symbol: class WSTrustRequestHandler
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\handlers\GOSTStandardRequestHandler.java:72: error: cannot find symbol
+	private static final PicketLinkLogger LOGGER = PicketLinkLoggerFactory
+	                     ^
+  symbol:   class PicketLinkLogger
+  location: class GOSTStandardRequestHandler
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\handlers\GOSTStandardRequestHandler.java:75: error: cannot find symbol
+	private static final Logger LOGGERSLF4J = LoggerFactory
+	                     ^
+  symbol:   class Logger
+  location: class GOSTStandardRequestHandler
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\handlers\GOSTStandardRequestHandler.java:80: error: cannot find symbol
+	private STSConfiguration configuration;
+	        ^
+  symbol:   class STSConfiguration
+  location: class GOSTStandardRequestHandler
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\handlers\GOSTStandardRequestHandler.java:90: error: cannot find symbol
+	public void initialize(STSConfiguration configuration) {
+	                       ^
+  symbol:   class STSConfiguration
+  location: class GOSTStandardRequestHandler
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\handlers\GOSTStandardRequestHandler.java:99: error: cannot find symbol
+	public RequestSecurityTokenResponse issue(RequestSecurityToken request,
+	                                          ^
+  symbol:   class RequestSecurityToken
+  location: class GOSTStandardRequestHandler
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\handlers\GOSTStandardRequestHandler.java:99: error: cannot find symbol
+	public RequestSecurityTokenResponse issue(RequestSecurityToken request,
+	       ^
+  symbol:   class RequestSecurityTokenResponse
+  location: class GOSTStandardRequestHandler
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\handlers\GOSTStandardRequestHandler.java:100: error: cannot find symbol
+			Principal callerPrincipal) throws WSTrustException {
+			                                  ^
+  symbol:   class WSTrustException
+  location: class GOSTStandardRequestHandler
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\handlers\GOSTStandardRequestHandler.java:434: error: cannot find symbol
+	public RequestSecurityTokenResponse renew(RequestSecurityToken request,
+	                                          ^
+  symbol:   class RequestSecurityToken
+  location: class GOSTStandardRequestHandler
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\handlers\GOSTStandardRequestHandler.java:434: error: cannot find symbol
+	public RequestSecurityTokenResponse renew(RequestSecurityToken request,
+	       ^
+  symbol:   class RequestSecurityTokenResponse
+  location: class GOSTStandardRequestHandler
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\handlers\GOSTStandardRequestHandler.java:435: error: cannot find symbol
+			Principal callerPrincipal) throws WSTrustException {
+			                                  ^
+  symbol:   class WSTrustException
+  location: class GOSTStandardRequestHandler
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\handlers\GOSTStandardRequestHandler.java:579: error: cannot find symbol
+	public RequestSecurityTokenResponse validate(RequestSecurityToken request,
+	                                             ^
+  symbol:   class RequestSecurityToken
+  location: class GOSTStandardRequestHandler
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\handlers\GOSTStandardRequestHandler.java:579: error: cannot find symbol
+	public RequestSecurityTokenResponse validate(RequestSecurityToken request,
+	       ^
+  symbol:   class RequestSecurityTokenResponse
+  location: class GOSTStandardRequestHandler
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\handlers\GOSTStandardRequestHandler.java:580: error: cannot find symbol
+			Principal callerPrincipal) throws WSTrustException {
+			                                  ^
+  symbol:   class WSTrustException
+  location: class GOSTStandardRequestHandler
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\handlers\GOSTStandardRequestHandler.java:694: error: cannot find symbol
+	public RequestSecurityTokenResponse cancel(RequestSecurityToken request,
+	                                           ^
+  symbol:   class RequestSecurityToken
+  location: class GOSTStandardRequestHandler
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\handlers\GOSTStandardRequestHandler.java:694: error: cannot find symbol
+	public RequestSecurityTokenResponse cancel(RequestSecurityToken request,
+	       ^
+  symbol:   class RequestSecurityTokenResponse
+  location: class GOSTStandardRequestHandler
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\handlers\GOSTStandardRequestHandler.java:695: error: cannot find symbol
+			Principal callerPrincipal) throws WSTrustException {
+			                                  ^
+  symbol:   class WSTrustException
+  location: class GOSTStandardRequestHandler
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\handlers\GOSTStandardRequestHandler.java:753: error: cannot find symbol
+			RequestSecurityToken request) throws WSTrustException {
+			^
+  symbol:   class RequestSecurityToken
+  location: class GOSTStandardRequestHandler
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\handlers\GOSTStandardRequestHandler.java:753: error: cannot find symbol
+			RequestSecurityToken request) throws WSTrustException {
+			                                     ^
+  symbol:   class WSTrustException
+  location: class GOSTStandardRequestHandler
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\pl\sp\key\KeyStoreKeyManager.java:22: error: package org.picketlink.common does not exist
+import org.picketlink.common.PicketLinkLogger;
+                            ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\pl\sp\key\KeyStoreKeyManager.java:23: error: package org.picketlink.common does not exist
+import org.picketlink.common.PicketLinkLoggerFactory;
+                            ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\pl\sp\key\KeyStoreKeyManager.java:24: error: package org.picketlink.common.exceptions does not exist
+import org.picketlink.common.exceptions.TrustKeyConfigurationException;
+                                       ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\pl\sp\key\KeyStoreKeyManager.java:25: error: package org.picketlink.common.exceptions does not exist
+import org.picketlink.common.exceptions.TrustKeyProcessingException;
+                                       ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\pl\sp\key\KeyStoreKeyManager.java:26: error: package org.picketlink.config.federation does not exist
+import org.picketlink.config.federation.AuthPropertyType;
+                                       ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\pl\sp\key\KeyStoreKeyManager.java:27: error: package org.picketlink.config.federation does not exist
+import org.picketlink.config.federation.KeyValueType;
+                                       ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\pl\sp\key\KeyStoreKeyManager.java:28: error: package org.picketlink.identity.federation.core.interfaces does not exist
+import org.picketlink.identity.federation.core.interfaces.TrustKeyManager;
+                                                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\pl\sp\key\KeyStoreKeyManager.java:29: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\pl\sp\key\KeyStoreKeyManager.java:30: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\pl\sp\key\KeyStoreKeyManager.java:34: error: cannot find symbol
+ public class KeyStoreKeyManager implements TrustKeyManager {
+                                            ^
+  symbol: class TrustKeyManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\pl\sp\key\KeyStoreKeyManager.java:35: error: cannot find symbol
+	private static final PicketLinkLogger LOGGER = PicketLinkLoggerFactory
+	                     ^
+  symbol:   class PicketLinkLogger
+  location: class KeyStoreKeyManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\pl\sp\key\KeyStoreKeyManager.java:38: error: cannot find symbol
+	private static final Logger LOGGERSLF4J = LoggerFactory
+	                     ^
+  symbol:   class Logger
+  location: class KeyStoreKeyManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\pl\sp\key\KeyStoreKeyManager.java:61: error: cannot find symbol
+	public PrivateKey getSigningKey() throws TrustKeyConfigurationException,
+	                                         ^
+  symbol:   class TrustKeyConfigurationException
+  location: class KeyStoreKeyManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\pl\sp\key\KeyStoreKeyManager.java:62: error: cannot find symbol
+			TrustKeyProcessingException {
+			^
+  symbol:   class TrustKeyProcessingException
+  location: class KeyStoreKeyManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\pl\sp\key\KeyStoreKeyManager.java:92: error: cannot find symbol
+	public KeyPair getSigningKeyPair() throws TrustKeyConfigurationException,
+	                                          ^
+  symbol:   class TrustKeyConfigurationException
+  location: class KeyStoreKeyManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\pl\sp\key\KeyStoreKeyManager.java:93: error: cannot find symbol
+			TrustKeyProcessingException {
+			^
+  symbol:   class TrustKeyProcessingException
+  location: class KeyStoreKeyManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\pl\sp\key\KeyStoreKeyManager.java:131: error: cannot find symbol
+			throws TrustKeyConfigurationException, TrustKeyProcessingException {
+			       ^
+  symbol:   class TrustKeyConfigurationException
+  location: class KeyStoreKeyManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\pl\sp\key\KeyStoreKeyManager.java:131: error: cannot find symbol
+			throws TrustKeyConfigurationException, TrustKeyProcessingException {
+			                                       ^
+  symbol:   class TrustKeyProcessingException
+  location: class KeyStoreKeyManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\pl\sp\key\KeyStoreKeyManager.java:141: error: cannot find symbol
+			throws TrustKeyConfigurationException, TrustKeyProcessingException {
+			       ^
+  symbol:   class TrustKeyConfigurationException
+  location: class KeyStoreKeyManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\pl\sp\key\KeyStoreKeyManager.java:141: error: cannot find symbol
+			throws TrustKeyConfigurationException, TrustKeyProcessingException {
+			                                       ^
+  symbol:   class TrustKeyProcessingException
+  location: class KeyStoreKeyManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\pl\sp\key\KeyStoreKeyManager.java:149: error: cannot find symbol
+			throws TrustKeyConfigurationException, TrustKeyProcessingException {
+			       ^
+  symbol:   class TrustKeyConfigurationException
+  location: class KeyStoreKeyManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\pl\sp\key\KeyStoreKeyManager.java:149: error: cannot find symbol
+			throws TrustKeyConfigurationException, TrustKeyProcessingException {
+			                                       ^
+  symbol:   class TrustKeyProcessingException
+  location: class KeyStoreKeyManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\pl\sp\key\KeyStoreKeyManager.java:194: error: cannot find symbol
+	public void setAuthProperties(List<AuthPropertyType> authList)
+	                                   ^
+  symbol:   class AuthPropertyType
+  location: class KeyStoreKeyManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\pl\sp\key\KeyStoreKeyManager.java:195: error: cannot find symbol
+			throws TrustKeyConfigurationException, TrustKeyProcessingException {
+			       ^
+  symbol:   class TrustKeyConfigurationException
+  location: class KeyStoreKeyManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\pl\sp\key\KeyStoreKeyManager.java:195: error: cannot find symbol
+			throws TrustKeyConfigurationException, TrustKeyProcessingException {
+			                                       ^
+  symbol:   class TrustKeyProcessingException
+  location: class KeyStoreKeyManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\pl\sp\key\KeyStoreKeyManager.java:212: error: cannot find symbol
+	public void setValidatingAlias(List<KeyValueType> aliases)
+	                                    ^
+  symbol:   class KeyValueType
+  location: class KeyStoreKeyManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\pl\sp\key\KeyStoreKeyManager.java:213: error: cannot find symbol
+			throws TrustKeyConfigurationException, TrustKeyProcessingException {
+			       ^
+  symbol:   class TrustKeyConfigurationException
+  location: class KeyStoreKeyManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\pl\sp\key\KeyStoreKeyManager.java:213: error: cannot find symbol
+			throws TrustKeyConfigurationException, TrustKeyProcessingException {
+			                                       ^
+  symbol:   class TrustKeyProcessingException
+  location: class KeyStoreKeyManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\pl\sp\key\KeyStoreKeyManager.java:222: error: cannot find symbol
+			throws TrustKeyConfigurationException, TrustKeyProcessingException {
+			       ^
+  symbol:   class TrustKeyConfigurationException
+  location: class KeyStoreKeyManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\pl\sp\key\KeyStoreKeyManager.java:222: error: cannot find symbol
+			throws TrustKeyConfigurationException, TrustKeyProcessingException {
+			                                       ^
+  symbol:   class TrustKeyProcessingException
+  location: class KeyStoreKeyManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.java:11: error: package org.picketlink.common does not exist
+import org.picketlink.common.PicketLinkLogger;
+                            ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.java:12: error: package org.picketlink.common does not exist
+import org.picketlink.common.PicketLinkLoggerFactory;
+                            ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.java:13: error: package org.picketlink.common.constants does not exist
+import org.picketlink.common.constants.JBossSAMLConstants;
+                                      ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.java:14: error: package org.picketlink.common.constants does not exist
+import org.picketlink.common.constants.JBossSAMLURIConstants;
+                                      ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.java:15: error: package org.picketlink.common.constants does not exist
+import org.picketlink.common.constants.WSTrustConstants;
+                                      ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.java:16: error: package org.picketlink.common.exceptions does not exist
+import org.picketlink.common.exceptions.ProcessingException;
+                                       ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.java:17: error: package org.picketlink.common.util does not exist
+import org.picketlink.common.util.DocumentUtil;
+                                 ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.java:18: error: package org.picketlink.identity.federation.core.interfaces does not exist
+import org.picketlink.identity.federation.core.interfaces.ProtocolContext;
+                                                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.java:19: error: package org.picketlink.identity.federation.core.interfaces does not exist
+import org.picketlink.identity.federation.core.interfaces.SecurityTokenProvider;
+                                                         ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.java:20: error: package org.picketlink.identity.federation.core.saml.v2.common does not exist
+import org.picketlink.identity.federation.core.saml.v2.common.IDGenerator;
+                                                             ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.java:21: error: package org.picketlink.identity.federation.core.saml.v2.factories does not exist
+import org.picketlink.identity.federation.core.saml.v2.factories.SAMLAssertionFactory;
+                                                                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.java:22: error: package org.picketlink.identity.federation.core.saml.v2.util does not exist
+import org.picketlink.identity.federation.core.saml.v2.util.AssertionUtil;
+                                                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.java:23: error: package org.picketlink.identity.federation.core.saml.v2.util does not exist
+import org.picketlink.identity.federation.core.saml.v2.util.StatementUtil;
+                                                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.java:24: error: package org.picketlink.identity.federation.core.sts does not exist
+import org.picketlink.identity.federation.core.sts.AbstractSecurityTokenProvider;
+                                                  ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.java:25: error: package org.picketlink.identity.federation.core.wstrust does not exist
+import org.picketlink.identity.federation.core.wstrust.SecurityToken;
+                                                      ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.java:26: error: package org.picketlink.identity.federation.core.wstrust does not exist
+import org.picketlink.identity.federation.core.wstrust.StandardSecurityToken;
+                                                      ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.java:27: error: package org.picketlink.identity.federation.core.wstrust does not exist
+import org.picketlink.identity.federation.core.wstrust.WSTrustRequestContext;
+                                                      ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.java:28: error: package org.picketlink.identity.federation.core.wstrust does not exist
+import org.picketlink.identity.federation.core.wstrust.WSTrustUtil;
+                                                      ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.java:29: error: package org.picketlink.identity.federation.core.wstrust.plugins.saml does not exist
+import org.picketlink.identity.federation.core.wstrust.plugins.saml.SAML20TokenAttributeProvider;
+                                                                   ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.java:30: error: package org.picketlink.identity.federation.core.wstrust.plugins.saml does not exist
+import org.picketlink.identity.federation.core.wstrust.plugins.saml.SAMLUtil;
+                                                                   ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.java:31: error: package org.picketlink.identity.federation.core.wstrust.wrappers does not exist
+import org.picketlink.identity.federation.core.wstrust.wrappers.Lifetime;
+                                                               ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.java:32: error: package org.picketlink.identity.federation.saml.v2.assertion does not exist
+import org.picketlink.identity.federation.saml.v2.assertion.AssertionType;
+                                                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.java:33: error: package org.picketlink.identity.federation.saml.v2.assertion does not exist
+import org.picketlink.identity.federation.saml.v2.assertion.AttributeStatementType;
+                                                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.java:34: error: package org.picketlink.identity.federation.saml.v2.assertion does not exist
+import org.picketlink.identity.federation.saml.v2.assertion.AttributeType;
+                                                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.java:35: error: package org.picketlink.identity.federation.saml.v2.assertion does not exist
+import org.picketlink.identity.federation.saml.v2.assertion.AudienceRestrictionType;
+                                                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.java:36: error: package org.picketlink.identity.federation.saml.v2.assertion does not exist
+import org.picketlink.identity.federation.saml.v2.assertion.ConditionsType;
+                                                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.java:37: error: package org.picketlink.identity.federation.saml.v2.assertion does not exist
+import org.picketlink.identity.federation.saml.v2.assertion.KeyInfoConfirmationDataType;
+                                                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.java:38: error: package org.picketlink.identity.federation.saml.v2.assertion does not exist
+import org.picketlink.identity.federation.saml.v2.assertion.NameIDType;
+                                                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.java:39: error: package org.picketlink.identity.federation.saml.v2.assertion does not exist
+import org.picketlink.identity.federation.saml.v2.assertion.StatementAbstractType;
+                                                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.java:40: error: package org.picketlink.identity.federation.saml.v2.assertion does not exist
+import org.picketlink.identity.federation.saml.v2.assertion.SubjectConfirmationDataType;
+                                                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.java:41: error: package org.picketlink.identity.federation.saml.v2.assertion does not exist
+import org.picketlink.identity.federation.saml.v2.assertion.SubjectConfirmationType;
+                                                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.java:42: error: package org.picketlink.identity.federation.saml.v2.assertion does not exist
+import org.picketlink.identity.federation.saml.v2.assertion.SubjectType;
+                                                           ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.java:43: error: package org.picketlink.identity.federation.ws.policy does not exist
+import org.picketlink.identity.federation.ws.policy.AppliesTo;
+                                                   ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.java:44: error: package org.picketlink.identity.federation.ws.trust does not exist
+import org.picketlink.identity.federation.ws.trust.RequestedReferenceType;
+                                                  ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.java:45: error: package org.picketlink.identity.federation.ws.trust does not exist
+import org.picketlink.identity.federation.ws.trust.StatusType;
+                                                  ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.java:46: error: package org.picketlink.identity.federation.ws.wss.secext does not exist
+import org.picketlink.identity.federation.ws.wss.secext.KeyIdentifierType;
+                                                       ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.java:47: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.java:48: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.java:54: error: cannot find symbol
+ public class CUDSAML20TokenProvider extends AbstractSecurityTokenProvider
+                                             ^
+  symbol: class AbstractSecurityTokenProvider
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.java:55: error: cannot find symbol
+		implements SecurityTokenProvider {
+		           ^
+  symbol: class SecurityTokenProvider
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.java:57: error: cannot find symbol
+	private static final PicketLinkLogger LOGGER = PicketLinkLoggerFactory
+	                     ^
+  symbol:   class PicketLinkLogger
+  location: class CUDSAML20TokenProvider
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.java:60: error: cannot find symbol
+	private static final Logger LOGGERSLF4J = LoggerFactory
+	                     ^
+  symbol:   class Logger
+  location: class CUDSAML20TokenProvider
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.java:63: error: cannot find symbol
+	private SAML20TokenAttributeProvider attributeProvider;
+	        ^
+  symbol:   class SAML20TokenAttributeProvider
+  location: class CUDSAML20TokenProvider
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.java:114: error: cannot find symbol
+	public void cancelToken(ProtocolContext protoContext)
+	                        ^
+  symbol:   class ProtocolContext
+  location: class CUDSAML20TokenProvider
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.java:115: error: cannot find symbol
+			throws ProcessingException {
+			       ^
+  symbol:   class ProcessingException
+  location: class CUDSAML20TokenProvider
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.java:147: error: cannot find symbol
+	public void issueToken(ProtocolContext protoContext)
+	                       ^
+  symbol:   class ProtocolContext
+  location: class CUDSAML20TokenProvider
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.java:148: error: cannot find symbol
+			throws ProcessingException {
+			       ^
+  symbol:   class ProcessingException
+  location: class CUDSAML20TokenProvider
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.java:378: error: cannot find symbol
+	public void renewToken(ProtocolContext protoContext)
+	                       ^
+  symbol:   class ProtocolContext
+  location: class CUDSAML20TokenProvider
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.java:379: error: cannot find symbol
+			throws ProcessingException {
+			       ^
+  symbol:   class ProcessingException
+  location: class CUDSAML20TokenProvider
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.java:591: error: cannot find symbol
+	public void validateToken(ProtocolContext protoContext)
+	                          ^
+  symbol:   class ProtocolContext
+  location: class CUDSAML20TokenProvider
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.java:592: error: cannot find symbol
+			throws ProcessingException {
+			       ^
+  symbol:   class ProcessingException
+  location: class CUDSAML20TokenProvider
+/crypto/dsig/XMLSignature.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/crypto/dsig/XMLSignatureFactory.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/crypto/dsig/dom/DOMSignContext.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/crypto/dsig/dom/DOMValidateContext.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/crypto/dsig/keyinfo/KeyInfo.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/crypto/dsig/keyinfo/KeyInfoFactory.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/crypto/dsig/keyinfo/KeyValue.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/crypto/dsig/keyinfo/X509Data.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/crypto/dsig/spec/C14NMethodParameterSpec.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/crypto/dsig/spec/TransformParameterSpec.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/namespace/QName.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/transform/Transformer.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/transform/TransformerFactory.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/transform/stream/StreamResult.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/org/w3c/dom/Attr.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/org/w3c/dom/NamedNodeMap.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/HashMap.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\jre\lib\jce.jar(javax/crypto/SecretKey.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\xmlsec-1.5.1.jar(org/apache/xml/security/encryption/EncryptedData.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\xmlsec-1.5.1.jar(org/apache/xml/security/encryption/EncryptedKey.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\xmlsec-1.5.1.jar(org/apache/xml/security/encryption/XMLCipher.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\xmlsec-1.5.1.jar(org/apache/xml/security/encryption/XMLEncryptionException.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\JCPxml.jar(ru/CryptoPro/JCPxml/xmldsig/JCPXMLDSigInit.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/security/Signature.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/io/StringWriter.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/io/UnsupportedEncodingException.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/net/URLEncoder.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/StringBuilder.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/security/KeyStore.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/Date.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/Iterator.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/Map$Entry.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/annotation/Resource.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/jws/HandlerChain.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/soap/SOAPException.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/soap/SOAPHeader.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/soap/SOAPMessage.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/transform/Source.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/transform/dom/DOMResult.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/transform/dom/DOMSource.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/ws/Provider.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/ws/Service.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/ws/ServiceMode.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/ws/WebServiceContext.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/ws/WebServiceException.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/ws/WebServiceProvider.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/ws/handler/MessageContext.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/io/File.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/io/InputStream.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/net/URI.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/ThreadLocal.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/security/Principal.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/math/BigInteger.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/GregorianCalendar.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/Set.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/crypto/XMLStructure.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/soap/SOAPBody.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/soap/SOAPElement.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/soap/SOAPPart.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/ws/ProtocolException.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/ws/handler/soap/SOAPHandler.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/ws/handler/soap/SOAPMessageContext.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\jre\lib\ext\xmlsec-1.5.1.jar(org/apache/xml/security/transforms/Transforms.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/ws/handler/Handler.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/datatype/DatatypeConfigurationException.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/datatype/DatatypeFactory.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/datatype/XMLGregorianCalendar.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/util/Arrays.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/security/cert/Certificate.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\jre\lib\jce.jar(javax/crypto/spec/SecretKeySpec.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/io/FileInputStream.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/security/KeyStoreException.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/security/NoSuchAlgorithmException.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/security/UnrecoverableKeyException.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/SuppressWarnings.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/annotation/Annotation.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/annotation/Target.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/annotation/ElementType.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/annotation/Retention.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/annotation/RetentionPolicy.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/annotation/Resource$AuthenticationType.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/javax/xml/ws/Service$Mode.class)]]
+Standard Doclet version 1.7.0_07
+Building tree for all the packages and classes...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLSignatureUtil.java:73: warning - @author tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLSignatureUtil.java:73: warning - @author tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLEncryptionUtil.java:39: warning - @author tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTSignatureUtil.java:26: warning - @author tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTRedirectBindingSignatureUtil.java:35: warning - @author tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\handlers\GOSTStandardRequestHandler.java:70: warning - @author tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\handlers\GOSTStandardRequestHandler.java:70: warning - @author tag has no arguments.
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\cud\infosweb\web\init\StartupServlet.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:20: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(StartupServlet.class);
+	                                     ^
+  symbol:   variable LoggerFactory
+  location: class StartupServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:27: warning - Tag @see: reference not found: HttpServlet#HttpServlet()
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\admin-web\src\main\java\ru\spb\iac\cud\infosweb\web\init\StartupServlet.java:35: warning - Tag @see: reference not found: Servlet#init(ServletConfig)
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\cud\context\ContextAccessSTSManager.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\context\ContextAccessSTSManager.java:19: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory
+	                                     ^
+  symbol:   variable LoggerFactory
+  location: class ContextAccessSTSManager
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/io/Serializable.class)]]
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\cud\context\ContextIDPAccessManager.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\context\ContextIDPAccessManager.java:18: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory
+	                                     ^
+  symbol:   variable LoggerFactory
+  location: class ContextIDPAccessManager
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\cud\context\ContextIDPUtilManager.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\context\ContextIDPUtilManager.java:17: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory
+	                                     ^
+  symbol:   variable LoggerFactory
+  location: class ContextIDPUtilManager
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:119: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:150: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:181: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:225: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:293: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:313: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:39: error: cannot find symbol
+	private static final PicketLinkLogger LOGGER = PicketLinkLoggerFactory
+	                                               ^
+  symbol:   variable PicketLinkLoggerFactory
+  location: class GOSTSAML2Signature
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:119: warning - @param argument "digestMethod" is not a parameter name.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:119: warning - @param argument "signatureMethod" is not a parameter name.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:150: warning - @param argument "digestMethod" is not a parameter name.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:150: warning - @param argument "signatureMethod" is not a parameter name.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:181: warning - @param argument "response" is not a parameter name.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:181: warning - @param argument "digestMethod" is not a parameter name.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.java:181: warning - @param argument "signatureMethod" is not a parameter name.
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Throwable.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/Error.class)]]
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\cud\idp\web\util\GOSTRedirectBindingSignatureUtil.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTRedirectBindingSignatureUtil.java:52: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTRedirectBindingSignatureUtil.java:92: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTRedirectBindingSignatureUtil.java:168: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTRedirectBindingSignatureUtil.java:186: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTRedirectBindingSignatureUtil.java:206: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTRedirectBindingSignatureUtil.java:37: error: cannot find symbol
+	private static final PicketLinkLogger LOGGER = PicketLinkLoggerFactory
+	                                               ^
+  symbol:   variable PicketLinkLoggerFactory
+  location: class GOSTRedirectBindingSignatureUtil
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\cud\idp\web\util\GOSTSignatureUtil.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTSignatureUtil.java:51: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTSignatureUtil.java:70: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTSignatureUtil.java:96: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTSignatureUtil.java:125: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTSignatureUtil.java:28: error: cannot find symbol
+	private static final PicketLinkLogger LOGGER = PicketLinkLoggerFactory
+	                                               ^
+  symbol:   variable PicketLinkLoggerFactory
+  location: class GOSTSignatureUtil
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\cud\idp\web\util\GOSTXMLEncryptionUtil.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLEncryptionUtil.java:108: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLEncryptionUtil.java:122: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLEncryptionUtil.java:152: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLEncryptionUtil.java:185: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLEncryptionUtil.java:582: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLEncryptionUtil.java:41: error: cannot find symbol
+	private static final PicketLinkLogger LOGGER = PicketLinkLoggerFactory
+	                                               ^
+  symbol:   variable PicketLinkLoggerFactory
+  location: class GOSTXMLEncryptionUtil
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLEncryptionUtil.java:44: error: cannot find symbol
+	private static final Logger LOGGERSLF4J = LoggerFactory
+	                                          ^
+  symbol:   variable LoggerFactory
+  location: class GOSTXMLEncryptionUtil
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLEncryptionUtil.java:185: warning - @return tag cannot be used in method with void return type.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLEncryptionUtil.java:582: warning - @param argument "secretKey" is not a parameter name.
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\cud\idp\web\util\GOSTXMLEncryptionUtil.EncryptionAlgorithm.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\cud\idp\web\util\GOSTXMLSignatureUtil.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLSignatureUtil.java:149: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLSignatureUtil.java:203: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLSignatureUtil.java:278: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLSignatureUtil.java:431: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLSignatureUtil.java:454: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLSignatureUtil.java:485: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLSignatureUtil.java:519: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLSignatureUtil.java:598: warning - @return tag has no arguments.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLSignatureUtil.java:74: error: cannot find symbol
+	private static final PicketLinkLogger LOGGER = PicketLinkLoggerFactory
+	                                               ^
+  symbol:   variable PicketLinkLoggerFactory
+  location: class GOSTXMLSignatureUtil
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLSignatureUtil.java:203: warning - @param argument "publicKey" is not a parameter name.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLSignatureUtil.java:278: warning - @param argument "publicKey" is not a parameter name.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLSignatureUtil.java:405: warning - @param argument "destDocElement" is not a parameter name.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLSignatureUtil.java:431: warning - @param argument "signingKey" is not a parameter name.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLSignatureUtil.java:431: warning - @param argument "publicKey" is not a parameter name.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLSignatureUtil.java:454: warning - @param argument "signingKey" is not a parameter name.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLSignatureUtil.java:454: warning - @param argument "publicKey" is not a parameter name.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLSignatureUtil.java:485: warning - @param argument "doc" is not a parameter name.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLSignatureUtil.java:485: warning - @param argument "signingKey" is not a parameter name.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLSignatureUtil.java:485: warning - @param argument "publicKey" is not a parameter name.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLSignatureUtil.java:485: warning - @param argument "digestMethod" is not a parameter name.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLSignatureUtil.java:485: warning - @param argument "signatureMethod" is not a parameter name.
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\idp\web\util\GOSTXMLSignatureUtil.java:485: warning - @param argument "referenceURI" is not a parameter name.
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\cud\idp\web\util\SecurityActions.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\cud\services\web\init\Configuration.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\cud\services\web\init\StartupServlet.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\services\web\init\StartupServlet.java:20: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(StartupServlet.class);
+	                                     ^
+  symbol:   variable LoggerFactory
+  location: class StartupServlet
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\services\web\init\StartupServlet.java:27: warning - Tag @see: reference not found: HttpServlet#HttpServlet()
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\services\web\init\StartupServlet.java:35: warning - Tag @see: reference not found: Servlet#init(ServletConfig)
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\cud\sts\core\attrib\CUDSAML20CommonTokenRoleAttributeProvider.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\attrib\CUDSAML20CommonTokenRoleAttributeProvider.java:28: error: cannot find symbol
+	private static final PicketLinkLogger LOGGER = PicketLinkLoggerFactory
+	                                               ^
+  symbol:   variable PicketLinkLoggerFactory
+  location: class CUDSAML20CommonTokenRoleAttributeProvider
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\attrib\CUDSAML20CommonTokenRoleAttributeProvider.java:31: error: cannot find symbol
+	private static final Logger LOGGERSLF4J = LoggerFactory
+	                                          ^
+  symbol:   variable LoggerFactory
+  location: class CUDSAML20CommonTokenRoleAttributeProvider
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\cud\sts\core\CUDSTService.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\CUDSTService.java:61: error: cannot find symbol
+	private static final PicketLinkLogger LOGGER = PicketLinkLoggerFactory
+	                                               ^
+  symbol:   variable PicketLinkLoggerFactory
+  location: class CUDSTService
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\CUDSTService.java:64: error: cannot find symbol
+	private static final Logger LOGGERSLF4J = LoggerFactory
+	                                          ^
+  symbol:   variable LoggerFactory
+  location: class CUDSTService
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/annotation/Documented.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/annotation/Inherited.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/AutoCloseable.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/lang/System.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/security/PrivilegedExceptionAction.class)]]
+[loading ZipFileIndexFileObject[C:\Program Files\Java\jdk1.7.0_07\lib\ct.sym(META-INF/sym/rt.jar/java/security/PrivilegedActionException.class)]]
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\cud\sts\core\CUDSTService.BinaryToken.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\cud\sts\core\SecurityActions.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\cud\sts\core\handlers\ServerSOAPHandler.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\core\handlers\ServerSOAPHandler.java:73: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory
+	                                     ^
+  symbol:   variable LoggerFactory
+  location: class ServerSOAPHandler
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\cud\sts\util\CUDLifetime.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\util\CUDLifetime.java:18: error: cannot find symbol
+	private static final PicketLinkLogger LOGGER = PicketLinkLoggerFactory
+	                                               ^
+  symbol:   variable PicketLinkLoggerFactory
+  location: class CUDLifetime
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\cud\sts\util\CUDWSTrustUtil.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\cud\sts\web\filter\PortFilter.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\filter\PortFilter.java:22: error: cannot find symbol
+	private static final Logger LOGGER = LoggerFactory.getLogger(PortFilter.class);
+	                                     ^
+  symbol:   variable LoggerFactory
+  location: class PortFilter
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\filter\PortFilter.java:36: warning - Tag @see: reference not found: Filter#destroy()
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\filter\PortFilter.java:43: warning - Tag @see: reference not found: Filter#doFilter(ServletRequest, ServletResponse, FilterChain)
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\filter\PortFilter.java:73: warning - Tag @see: reference not found: Filter#init(FilterConfig)
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\cud\sts\web\handlers\GOSTStandardRequestHandler.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\handlers\GOSTStandardRequestHandler.java:72: error: cannot find symbol
+	private static final PicketLinkLogger LOGGER = PicketLinkLoggerFactory
+	                                               ^
+  symbol:   variable PicketLinkLoggerFactory
+  location: class GOSTStandardRequestHandler
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\cud\sts\web\handlers\GOSTStandardRequestHandler.java:75: error: cannot find symbol
+	private static final Logger LOGGERSLF4J = LoggerFactory
+	                                          ^
+  symbol:   variable LoggerFactory
+  location: class GOSTStandardRequestHandler
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\cud\util\CudPrincipal.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\pl\sp\key\KeyStoreKeyManager.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\pl\sp\key\KeyStoreKeyManager.java:35: error: cannot find symbol
+	private static final PicketLinkLogger LOGGER = PicketLinkLoggerFactory
+	                                               ^
+  symbol:   variable PicketLinkLoggerFactory
+  location: class KeyStoreKeyManager
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\pl\sp\key\KeyStoreKeyManager.java:38: error: cannot find symbol
+	private static final Logger LOGGERSLF4J = LoggerFactory
+	                                          ^
+  symbol:   variable LoggerFactory
+  location: class KeyStoreKeyManager
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.html...
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.java:675: warning - Tag @see:illegal character: "123" in "{@code SecurityTokenProvider#supports(String)}"
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.java:675: warning - Tag @see:illegal character: "64" in "{@code SecurityTokenProvider#supports(String)}"
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.java:57: error: cannot find symbol
+	private static final PicketLinkLogger LOGGER = PicketLinkLoggerFactory
+	                                               ^
+  symbol:   variable PicketLinkLoggerFactory
+  location: class CUDSAML20TokenProvider
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.java:60: error: cannot find symbol
+	private static final Logger LOGGERSLF4J = LoggerFactory
+	                                          ^
+  symbol:   variable LoggerFactory
+  location: class CUDSAML20TokenProvider
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.java:675: warning - Tag @see: reference not found: {@code SecurityTokenProvider#supports(String)}
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.java:682: warning - Tag @see: reference not found: org.picketlink.identity.federation.core.interfaces.SecurityTokenProvider#tokenType()
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.java:689: warning - Tag @see: reference not found: org.picketlink.identity.federation.core.interfaces.SecurityTokenProvider#getSupportedQName()
+C:\jboss-as-7.1.3.Final-fighting-mvn\git\ru.spb.iac.cud\sts-web\src\main\java\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.java:696: warning - Tag @see: reference not found: org.picketlink.identity.federation.core.interfaces.SecurityTokenProvider#family()
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\sts\core\plugins\saml\SecurityActions.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\overview-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\cud\context\package-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\cud\context\package-summary.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\cud\context\package-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\cud\idp\web\sig\package-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\cud\idp\web\sig\package-summary.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\cud\idp\web\sig\package-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\cud\idp\web\util\package-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\cud\idp\web\util\package-summary.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\cud\idp\web\util\package-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\cud\infosweb\web\init\package-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\cud\infosweb\web\init\package-summary.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\cud\infosweb\web\init\package-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\cud\services\web\init\package-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\cud\services\web\init\package-summary.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\cud\services\web\init\package-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\cud\sts\core\package-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\cud\sts\core\package-summary.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\cud\sts\core\package-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\cud\sts\core\attrib\package-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\cud\sts\core\attrib\package-summary.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\cud\sts\core\attrib\package-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\cud\sts\core\handlers\package-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\cud\sts\core\handlers\package-summary.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\cud\sts\core\handlers\package-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\cud\sts\util\package-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\cud\sts\util\package-summary.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\cud\sts\util\package-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\cud\sts\web\filter\package-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\cud\sts\web\filter\package-summary.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\cud\sts\web\filter\package-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\cud\sts\web\handlers\package-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\cud\sts\web\handlers\package-summary.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\cud\sts\web\handlers\package-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\cud\util\package-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\cud\util\package-summary.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\cud\util\package-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\pl\sp\key\package-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\pl\sp\key\package-summary.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\pl\sp\key\package-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\sts\core\plugins\saml\package-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\sts\core\plugins\saml\package-summary.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\ru\spb\iac\sts\core\plugins\saml\package-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\constant-values.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\src-html\ru\spb\iac\cud\infosweb\web\init\StartupServlet.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\src-html\ru\spb\iac\cud\context\ContextIDPUtilManager.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\src-html\ru\spb\iac\cud\context\ContextIDPAccessManager.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\src-html\ru\spb\iac\cud\context\ContextAccessSTSManager.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\src-html\ru\spb\iac\cud\idp\web\sig\GOSTSAML2Signature.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\src-html\ru\spb\iac\cud\idp\web\util\SecurityActions.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\src-html\ru\spb\iac\cud\idp\web\util\GOSTXMLSignatureUtil.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\src-html\ru\spb\iac\cud\idp\web\util\GOSTXMLEncryptionUtil.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\src-html\ru\spb\iac\cud\idp\web\util\GOSTXMLEncryptionUtil.EncryptionAlgorithm.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\src-html\ru\spb\iac\cud\idp\web\util\GOSTSignatureUtil.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\src-html\ru\spb\iac\cud\idp\web\util\GOSTRedirectBindingSignatureUtil.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\src-html\ru\spb\iac\cud\services\web\init\StartupServlet.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\src-html\ru\spb\iac\cud\services\web\init\Configuration.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\src-html\ru\spb\iac\cud\sts\core\attrib\CUDSAML20CommonTokenRoleAttributeProvider.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\src-html\ru\spb\iac\cud\sts\core\SecurityActions.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\src-html\ru\spb\iac\cud\sts\core\CUDSTService.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\src-html\ru\spb\iac\cud\sts\core\CUDSTService.BinaryToken.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\src-html\ru\spb\iac\cud\sts\core\handlers\ServerSOAPHandler.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\src-html\ru\spb\iac\cud\sts\util\CUDWSTrustUtil.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\src-html\ru\spb\iac\cud\sts\util\CUDLifetime.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\src-html\ru\spb\iac\cud\sts\web\filter\PortFilter.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\src-html\ru\spb\iac\cud\sts\web\handlers\GOSTStandardRequestHandler.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\src-html\ru\spb\iac\cud\util\CudPrincipal.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\src-html\ru\spb\iac\pl\sp\key\KeyStoreKeyManager.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\src-html\ru\spb\iac\sts\core\plugins\saml\SecurityActions.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\src-html\ru\spb\iac\sts\core\plugins\saml\CUDSAML20TokenProvider.html...
+Building index for all the packages and classes...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\overview-tree.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\index-all.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\deprecated-list.html...
+Building index for all classes...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\allclasses-frame.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\allclasses-noframe.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\index.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\overview-summary.html...
+Generating C:\jboss-as-7.1.3.Final-fighting-mvn\doc\ProjectDocs\sts-web\help-doc.html...
+[done in 3025 ms]
+24 errors
+424 warnings

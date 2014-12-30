@@ -1,0 +1,186 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ru">
+<head>
+<title>Source code</title>
+<link rel="stylesheet" type="text/css" href="../../../../../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<div class="sourceContainer">
+<pre><span class="sourceLineNo">001</span>package ru.spb.iac.cud.sts.core.auth;<a name="line.1"></a>
+<span class="sourceLineNo">002</span><a name="line.2"></a>
+<span class="sourceLineNo">003</span>import java.security.KeyStore;<a name="line.3"></a>
+<span class="sourceLineNo">004</span>import java.security.PublicKey;<a name="line.4"></a>
+<span class="sourceLineNo">005</span>import java.security.cert.Certificate;<a name="line.5"></a>
+<span class="sourceLineNo">006</span><a name="line.6"></a>
+<span class="sourceLineNo">007</span>import javax.naming.Context;<a name="line.7"></a>
+<span class="sourceLineNo">008</span>import javax.naming.InitialContext;<a name="line.8"></a>
+<span class="sourceLineNo">009</span>import javax.naming.NamingException;<a name="line.9"></a>
+<span class="sourceLineNo">010</span>import javax.security.auth.login.LoginException;<a name="line.10"></a>
+<span class="sourceLineNo">011</span><a name="line.11"></a>
+<span class="sourceLineNo">012</span>import org.jboss.security.JBossJSSESecurityDomain;<a name="line.12"></a>
+<span class="sourceLineNo">013</span>import org.picketlink.identity.federation.bindings.jboss.auth.AS7AuthCacheInvalidationFactory;<a name="line.13"></a>
+<span class="sourceLineNo">014</span>import org.picketlink.identity.federation.core.factories.JBossAuthCacheInvalidationFactory;<a name="line.14"></a>
+<span class="sourceLineNo">015</span>import org.picketlink.identity.federation.core.saml.v2.util.AssertionUtil;<a name="line.15"></a>
+<span class="sourceLineNo">016</span>import org.picketlink.identity.federation.core.wstrust.plugins.saml.SAMLUtil;<a name="line.16"></a>
+<span class="sourceLineNo">017</span>import org.picketlink.identity.federation.saml.v2.assertion.AssertionType;<a name="line.17"></a>
+<span class="sourceLineNo">018</span>import org.slf4j.Logger;<a name="line.18"></a>
+<span class="sourceLineNo">019</span>import org.slf4j.LoggerFactory;<a name="line.19"></a>
+<span class="sourceLineNo">020</span>import org.w3c.dom.Element;<a name="line.20"></a>
+<span class="sourceLineNo">021</span><a name="line.21"></a>
+<span class="sourceLineNo">022</span>import ru.spb.iac.cud.sts.core.auth.util.GOSTAssertionUtil;<a name="line.22"></a>
+<span class="sourceLineNo">023</span><a name="line.23"></a>
+<span class="sourceLineNo">024</span>/**<a name="line.24"></a>
+<span class="sourceLineNo">025</span> * &lt;p&gt;<a name="line.25"></a>
+<span class="sourceLineNo">026</span> * This {@code LoginModule} implements the local validation of SAML assertions<a name="line.26"></a>
+<span class="sourceLineNo">027</span> * on AS7. The specified {@code localValidationSecurityDomain} property must<a name="line.27"></a>
+<span class="sourceLineNo">028</span> * correspond to a AS7 JSSE domain that configures a truststore and a<a name="line.28"></a>
+<span class="sourceLineNo">029</span> * server-alias that identifies the certificate used to validate the assertions.<a name="line.29"></a>
+<span class="sourceLineNo">030</span> * &lt;/p&gt;<a name="line.30"></a>
+<span class="sourceLineNo">031</span> * <a name="line.31"></a>
+<span class="sourceLineNo">032</span> * @author &lt;a href="mailto:sguilhen@redhat.com"&gt;Stefan Guilhen&lt;/a&gt;<a name="line.32"></a>
+<span class="sourceLineNo">033</span> */<a name="line.33"></a>
+<span class="sourceLineNo">034</span><a name="line.34"></a>
+<span class="sourceLineNo">035</span> public class CUDSAML2STSLoginModule extends CUDSAML2STSCommonLoginModule {<a name="line.35"></a>
+<span class="sourceLineNo">036</span><a name="line.36"></a>
+<span class="sourceLineNo">037</span>        private static final Logger LOGGERSLF4J = LoggerFactory<a name="line.37"></a>
+<span class="sourceLineNo">038</span>                        .getLogger(CUDSAML2STSLoginModule.class);<a name="line.38"></a>
+<span class="sourceLineNo">039</span><a name="line.39"></a>
+<span class="sourceLineNo">040</span>        protected boolean localValidation(Element assertionElement)<a name="line.40"></a>
+<span class="sourceLineNo">041</span>                        throws Exception {<a name="line.41"></a>
+<span class="sourceLineNo">042</span>                // For unit tests<a name="line.42"></a>
+<span class="sourceLineNo">043</span>                if (localTestingOnly) {<a name="line.43"></a>
+<span class="sourceLineNo">044</span>                        return true;<a name="line.44"></a>
+<span class="sourceLineNo">045</span>                }<a name="line.45"></a>
+<span class="sourceLineNo">046</span><a name="line.46"></a>
+<span class="sourceLineNo">047</span>                try {<a name="line.47"></a>
+<span class="sourceLineNo">048</span>                        LOGGERSLF4J.debug("localValidation:01:"<a name="line.48"></a>
+<span class="sourceLineNo">049</span>                                        + localValidationSecurityDomain);<a name="line.49"></a>
+<span class="sourceLineNo">050</span><a name="line.50"></a>
+<span class="sourceLineNo">051</span>                        Context ctx = new InitialContext();<a name="line.51"></a>
+<span class="sourceLineNo">052</span>                        String jsseLookupString = super.localValidationSecurityDomain<a name="line.52"></a>
+<span class="sourceLineNo">053</span>                                        + "/jsse";<a name="line.53"></a>
+<span class="sourceLineNo">054</span><a name="line.54"></a>
+<span class="sourceLineNo">055</span>                        JBossJSSESecurityDomain sd = (JBossJSSESecurityDomain) ctx<a name="line.55"></a>
+<span class="sourceLineNo">056</span>                                        .lookup(jsseLookupString);<a name="line.56"></a>
+<span class="sourceLineNo">057</span><a name="line.57"></a>
+<span class="sourceLineNo">058</span>                        LOGGERSLF4J.debug("localValidation:02:" + sd);<a name="line.58"></a>
+<span class="sourceLineNo">059</span><a name="line.59"></a>
+<span class="sourceLineNo">060</span>                        String securityDomain = sd.getSecurityDomain();<a name="line.60"></a>
+<span class="sourceLineNo">061</span><a name="line.61"></a>
+<span class="sourceLineNo">062</span>                        LOGGERSLF4J.debug("localValidation:03:" + securityDomain);<a name="line.62"></a>
+<span class="sourceLineNo">063</span><a name="line.63"></a>
+<span class="sourceLineNo">064</span>                        KeyStore ts = sd.getTrustStore();<a name="line.64"></a>
+<span class="sourceLineNo">065</span><a name="line.65"></a>
+<span class="sourceLineNo">066</span>                        LOGGERSLF4J.debug("localValidation:04:" + ts);<a name="line.66"></a>
+<span class="sourceLineNo">067</span><a name="line.67"></a>
+<span class="sourceLineNo">068</span>                        if (ts == null) {<a name="line.68"></a>
+<span class="sourceLineNo">069</span>                                throw logger<a name="line.69"></a>
+<span class="sourceLineNo">070</span>                                                .authNullKeyStoreFromSecurityDomainError(securityDomain);<a name="line.70"></a>
+<span class="sourceLineNo">071</span>                        }<a name="line.71"></a>
+<span class="sourceLineNo">072</span><a name="line.72"></a>
+<span class="sourceLineNo">073</span>                        String alias = sd.getServerAlias();<a name="line.73"></a>
+<span class="sourceLineNo">074</span><a name="line.74"></a>
+<span class="sourceLineNo">075</span>                        LOGGERSLF4J.debug("localValidation:05:" + alias);<a name="line.75"></a>
+<span class="sourceLineNo">076</span><a name="line.76"></a>
+<span class="sourceLineNo">077</span>                        if (alias == null) {<a name="line.77"></a>
+<span class="sourceLineNo">078</span>                                throw logger<a name="line.78"></a>
+<span class="sourceLineNo">079</span>                                                .authNullKeyStoreAliasFromSecurityDomainError(securityDomain);<a name="line.79"></a>
+<span class="sourceLineNo">080</span>                        }<a name="line.80"></a>
+<span class="sourceLineNo">081</span><a name="line.81"></a>
+<span class="sourceLineNo">082</span>                        Certificate cert = ts.getCertificate(alias);<a name="line.82"></a>
+<span class="sourceLineNo">083</span>                        if (cert == null) {<a name="line.83"></a>
+<span class="sourceLineNo">084</span>                                throw logger.authNoCertificateFoundForAliasError(alias,<a name="line.84"></a>
+<span class="sourceLineNo">085</span>                                                securityDomain);<a name="line.85"></a>
+<span class="sourceLineNo">086</span>                        }<a name="line.86"></a>
+<span class="sourceLineNo">087</span><a name="line.87"></a>
+<span class="sourceLineNo">088</span>                        PublicKey publicKey = cert.getPublicKey();<a name="line.88"></a>
+<span class="sourceLineNo">089</span>                        // boolean sigValid =<a name="line.89"></a>
+<span class="sourceLineNo">090</span>                        // AssertionUtil.isSignatureValid(assertionElement, publicKey);<a name="line.90"></a>
+<span class="sourceLineNo">091</span>                        boolean sigValid = GOSTAssertionUtil.isSignatureValid(<a name="line.91"></a>
+<span class="sourceLineNo">092</span>                                        assertionElement, publicKey);<a name="line.92"></a>
+<span class="sourceLineNo">093</span><a name="line.93"></a>
+<span class="sourceLineNo">094</span>                        if (!sigValid) {<a name="line.94"></a>
+<span class="sourceLineNo">095</span>                                throw logger.authSAMLInvalidSignatureError();<a name="line.95"></a>
+<span class="sourceLineNo">096</span>                        }<a name="line.96"></a>
+<span class="sourceLineNo">097</span><a name="line.97"></a>
+<span class="sourceLineNo">098</span>                        AssertionType assertion = SAMLUtil.fromElement(assertionElement);<a name="line.98"></a>
+<span class="sourceLineNo">099</span>                        if (AssertionUtil.hasExpired(assertion)) {<a name="line.99"></a>
+<span class="sourceLineNo">100</span>                                throw logger.authSAMLAssertionExpiredError();<a name="line.100"></a>
+<span class="sourceLineNo">101</span>                        }<a name="line.101"></a>
+<span class="sourceLineNo">102</span>                } catch (NamingException e) {<a name="line.102"></a>
+<span class="sourceLineNo">103</span>                        throw new LoginException(e.toString());<a name="line.103"></a>
+<span class="sourceLineNo">104</span>                }<a name="line.104"></a>
+<span class="sourceLineNo">105</span>                return true;<a name="line.105"></a>
+<span class="sourceLineNo">106</span>        }<a name="line.106"></a>
+<span class="sourceLineNo">107</span><a name="line.107"></a>
+<span class="sourceLineNo">108</span>        @Override<a name="line.108"></a>
+<span class="sourceLineNo">109</span>        protected JBossAuthCacheInvalidationFactory.TimeCacheExpiry getCacheExpiry()<a name="line.109"></a>
+<span class="sourceLineNo">110</span>                        throws Exception {<a name="line.110"></a>
+<span class="sourceLineNo">111</span>                return AS7AuthCacheInvalidationFactory.getCacheExpiry();<a name="line.111"></a>
+<span class="sourceLineNo">112</span>        }<a name="line.112"></a>
+<span class="sourceLineNo">113</span><a name="line.113"></a>
+<span class="sourceLineNo">114</span>}<a name="line.114"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</div>
+</body>
+</html>
