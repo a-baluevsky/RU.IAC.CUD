@@ -1,0 +1,5 @@
+<map id="ru.spb.iac.cud.idp.web.handlers.GOSTSAML2SignatureGenerationHandler.sign" name="ru.spb.iac.cud.idp.web.handlers.GOSTSAML2SignatureGenerationHandler.sign">
+<area shape="rect" id="node2" href="$d3/d0d/classru_1_1spb_1_1iac_1_1cud_1_1idp_1_1web_1_1handlers_1_1_g_o_s_t_s_a_m_l2_signature_generation_handler.html#a6a2c697765dfe548162d30f611b5274e" title="ru.spb.iac.cud.idp.web.handlers.\lGOSTSAML2SignatureGenerationHandler.generate\lSAMLRequest" alt="" coords="344,5,661,61"/>
+<area shape="rect" id="node3" href="$d3/d0d/classru_1_1spb_1_1iac_1_1cud_1_1idp_1_1web_1_1handlers_1_1_g_o_s_t_s_a_m_l2_signature_generation_handler.html#a9c93adc80dedb3bcf627479545217f2a" title="ru.spb.iac.cud.idp.web.handlers.\lGOSTSAML2SignatureGenerationHandler.handle\lRequestType" alt="" coords="350,85,655,141"/>
+<area shape="rect" id="node4" href="$d3/d0d/classru_1_1spb_1_1iac_1_1cud_1_1idp_1_1web_1_1handlers_1_1_g_o_s_t_s_a_m_l2_signature_generation_handler.html#ac9991a9167be903981d354afd2d41111" title="ru.spb.iac.cud.idp.web.handlers.\lGOSTSAML2SignatureGenerationHandler.handle\lStatusResponseType" alt="" coords="350,165,655,221"/>
+</map>
