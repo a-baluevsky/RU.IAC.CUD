@@ -1,0 +1,7 @@
+<map id="ru.spb.iac.cud.sts.web.handlers.GOSTStandardRequestHandler.postProcess" name="ru.spb.iac.cud.sts.web.handlers.GOSTStandardRequestHandler.postProcess">
+<area shape="rect" id="node2" href="$d4/db3/classru_1_1spb_1_1iac_1_1cud_1_1idp_1_1web_1_1util_1_1_g_o_s_t_x_m_l_signature_util.html#a837ea94adec0f8510239a1e44ce21faa" title="ru.spb.iac.cud.idp.web.util.\lGOSTXMLSignatureUtil.setCanonicalization\lMethodType" alt="" coords="344,5,619,61"/>
+<area shape="rect" id="node3" href="$d4/db3/classru_1_1spb_1_1iac_1_1cud_1_1idp_1_1web_1_1util_1_1_g_o_s_t_x_m_l_signature_util.html#a26cc4673540b31507fc8d15321b39d88" title="ru.spb.iac.cud.idp.web.util.\lGOSTXMLSignatureUtil.sign" alt="" coords="389,86,574,127"/>
+<area shape="rect" id="node4" href="$d9/db7/classru_1_1spb_1_1iac_1_1cud_1_1sts_1_1web_1_1handlers_1_1_g_o_s_t_standard_request_handler.html#af517f74d33c87296923c6df4995edf26" title="ru.spb.iac.cud.sts.web.handlers.\lGOSTStandardRequestHandler.setupIDAttribute" alt="" coords="332,151,631,193"/>
+<area shape="rect" id="node5" href="$d6/d31/classru_1_1spb_1_1iac_1_1cud_1_1idp_1_1web_1_1util_1_1_g_o_s_t_x_m_l_encryption_util.html#ae998d0d7f031adae9813a5939b5ce97f" title="ru.spb.iac.cud.idp.web.util.\lGOSTXMLEncryptionUtil.encryptElement" alt="" coords="352,217,611,258"/>
+<area shape="rect" id="node6" href="$d6/d31/classru_1_1spb_1_1iac_1_1cud_1_1idp_1_1web_1_1util_1_1_g_o_s_t_x_m_l_encryption_util.html#a2a1e4ea71d3a101c3976d1ea95867fd2" title="ru.spb.iac.cud.idp.web.util.\lGOSTXMLEncryptionUtil.encryptKey" alt="" coords="679,217,913,258"/>
+</map>

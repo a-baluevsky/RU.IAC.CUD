@@ -1,0 +1,10 @@
+<map id="ru.spb.iac.cud.uarm.ws.AuditServiceClient.audit" name="ru.spb.iac.cud.uarm.ws.AuditServiceClient.audit">
+<area shape="rect" id="node2" href="$de/d39/classmypackage_1_1_configuration.html#aff33315de8c39980bfa1e14694af3c60" title="mypackage.Configuration.get\lStorePath" alt="" coords="247,39,437,80"/>
+<area shape="rect" id="node3" href="$d0/d2c/classru_1_1spb_1_1iac_1_1cud_1_1uarm_1_1ws_1_1_token_install.html#a8d2dff4097a24944ded746bad0431e7b" title="ru.spb.iac.cud.uarm.ws.Token\lInstall.get_assertion" alt="" coords="244,104,440,145"/>
+<area shape="rect" id="node8" href="$d8/df1/classru_1_1spb_1_1iac_1_1cud_1_1uarm_1_1ws_1_1_audit_service_client.html#a0e48bdd34e6f9f52850fb7c11f565f9b" title="ru.spb.iac.cud.uarm.ws.Audit\lServiceClient.getPort" alt="" coords="247,173,437,215"/>
+<area shape="rect" id="node4" href="$d0/d2c/classru_1_1spb_1_1iac_1_1cud_1_1uarm_1_1ws_1_1_token_install.html#a7b4fe8ed9909b853eeea3ad24378edc9" title="ru.spb.iac.cud.uarm.ws.Token\lInstall.valid" alt="" coords="497,5,693,47"/>
+<area shape="rect" id="node5" href="$d0/d2c/classru_1_1spb_1_1iac_1_1cud_1_1uarm_1_1ws_1_1_token_install.html#ad1b2d1c9e44991961f88ea4c9525fbad" title="ru.spb.iac.cud.uarm.ws.Token\lInstall.setup" alt="" coords="497,71,693,112"/>
+<area shape="rect" id="node7" href="$d0/d2c/classru_1_1spb_1_1iac_1_1cud_1_1uarm_1_1ws_1_1_token_install.html#a64fca790023b9c00d9003424dcf872df" title="ru.spb.iac.cud.uarm.ws.Token\lInstall.load" alt="" coords="497,136,693,177"/>
+<area shape="rect" id="node6" href="$dc/d7d/classru_1_1spb_1_1iac_1_1cud_1_1uarm_1_1ws_1_1_s_t_s_service_client.html#a683ac8bb1d5da039881b75f9081a2d56" title="ru.spb.iac.cud.uarm.ws.STSService\lClient.sign_verify_soap_transform_2sign" alt="" coords="751,71,1004,112"/>
+<area shape="rect" id="node9" href="$d8/df1/classru_1_1spb_1_1iac_1_1cud_1_1uarm_1_1ws_1_1_audit_service_client.html#af20ed835a64c3bef8a338da80ddfb3b0" title="ru.spb.iac.cud.uarm.ws.Audit\lServiceClient.get_saml_assertion\l_from_xml_simple" alt="" coords="488,202,703,258"/>
+</map>

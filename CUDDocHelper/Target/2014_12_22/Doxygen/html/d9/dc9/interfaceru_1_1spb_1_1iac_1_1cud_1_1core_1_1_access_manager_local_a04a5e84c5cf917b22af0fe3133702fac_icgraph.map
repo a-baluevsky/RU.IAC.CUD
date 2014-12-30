@@ -1,0 +1,4 @@
+<map id="ru.spb.iac.cud.core.AccessManagerLocal.authenticate_login" name="ru.spb.iac.cud.core.AccessManagerLocal.authenticate_login">
+<area shape="rect" id="node2" href="$da/d2f/classru_1_1spb_1_1iac_1_1cud_1_1context_1_1_context_access_web_manager.html#a19037b69925c72636f3c6598f66d098d" title="ru.spb.iac.cud.context.Context\lAccessWebManager.authenticate_login" alt="" coords="265,5,517,47"/>
+<area shape="rect" id="node3" href="$d8/ddc/classru_1_1spb_1_1iac_1_1cud_1_1context_1_1_context_access_s_t_s_manager.html#afbf204c7b0d9d942306285e86c00861a" title="ru.spb.iac.cud.context.Context\lAccessSTSManager.authenticate_login" alt="" coords="266,71,517,112"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="ru.spb.iac.cud.idp.valve.LocalWebUtil.getToken" name="ru.spb.iac.cud.idp.valve.LocalWebUtil.getToken">
+<area shape="rect" id="node2" href="$da/d91/classru_1_1spb_1_1iac_1_1cud_1_1idp_1_1valve_1_1_local_web_util.html#a81228c805c128d3f7fbf79edb832477f" title="ru.spb.iac.cud.idp.valve.\lLocalWebUtil.getTokenValue" alt="" coords="213,5,403,47"/>
+<area shape="rect" id="node3" href="$d0/dce/classru_1_1spb_1_1iac_1_1cud_1_1idp_1_1valve_1_1_c_u_d_abstract_i_d_p_valve.html#addeb4f4565ea0798d212b369013761d4" title="ru.spb.iac.cud.idp.valve.\lCUDAbstractIDPValve.handleLogout" alt="" coords="451,5,681,47"/>
+<area shape="rect" id="node4" href="$d0/dce/classru_1_1spb_1_1iac_1_1cud_1_1idp_1_1valve_1_1_c_u_d_abstract_i_d_p_valve.html#a8c999a46d907fa056863ae1d38febeca" title="ru.spb.iac.cud.idp.valve.\lCUDAbstractIDPValve.invoke" alt="" coords="729,5,920,47"/>
+</map>

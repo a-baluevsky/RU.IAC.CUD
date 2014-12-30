@@ -1,0 +1,8 @@
+<map id="ru.spb.iac.cud.services.web.AccessServicesWeb.service" name="ru.spb.iac.cud.services.web.AccessServicesWeb.service">
+<area shape="rect" id="node2" href="$d9/da9/classru_1_1spb_1_1iac_1_1cud_1_1services_1_1web_1_1_access_services_web.html#a292df43b8808faa4b844224f37a56255" title="ru.spb.iac.cud.services.web.\lAccessServicesWeb.getSN" alt="" coords="266,5,453,47"/>
+<area shape="rect" id="node3" href="$d9/da9/classru_1_1spb_1_1iac_1_1cud_1_1services_1_1web_1_1_access_services_web.html#aaa2ebbb1200a1d1b66fa4f608228e2b8" title="ru.spb.iac.cud.services.web.\lAccessServicesWeb.getIPAddress" alt="" coords="247,71,471,112"/>
+<area shape="rect" id="node4" href="$d9/da9/classru_1_1spb_1_1iac_1_1cud_1_1services_1_1web_1_1_access_services_web.html#a0960dca6d68491c24b144e144c417003" title="ru.spb.iac.cud.services.web.\lAccessServicesWeb.getCodeSystem" alt="" coords="240,136,479,177"/>
+<area shape="rect" id="node6" href="$d9/da9/classru_1_1spb_1_1iac_1_1cud_1_1services_1_1web_1_1_access_services_web.html#a9dc950f011d844bd36936fe36aefda00" title="ru.spb.iac.cud.services.web.\lAccessServicesWeb.failure" alt="" coords="266,203,453,244"/>
+<area shape="rect" id="node5" href="$d9/da9/classru_1_1spb_1_1iac_1_1cud_1_1services_1_1web_1_1_access_services_web.html#ac8752e770fe27b2cdfb88ea49b8b1d1c" title="ru.spb.iac.cud.services.web.\lAccessServicesWeb.getSAMLDocument\lHolder" alt="" coords="527,126,785,182"/>
+<area shape="rect" id="node7" href="$d9/da9/classru_1_1spb_1_1iac_1_1cud_1_1services_1_1web_1_1_access_services_web.html#afb0b1dc38acd587e5dc93b81cc9e31d1" title="ru.spb.iac.cud.services.web.\lAccessServicesWeb.common" alt="" coords="558,207,754,248"/>
+</map>

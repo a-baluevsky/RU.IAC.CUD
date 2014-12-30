@@ -1,0 +1,4 @@
+<map id="ru.spb.iac.cud.sts.web.handlers.GOSTStandardRequestHandler.renew" name="ru.spb.iac.cud.sts.web.handlers.GOSTStandardRequestHandler.renew">
+<area shape="rect" id="node2" href="$d9/db7/classru_1_1spb_1_1iac_1_1cud_1_1sts_1_1web_1_1handlers_1_1_g_o_s_t_standard_request_handler.html#af517f74d33c87296923c6df4995edf26" title="ru.spb.iac.cud.sts.web.handlers.\lGOSTStandardRequestHandler.setupIDAttribute" alt="" coords="301,5,599,47"/>
+<area shape="rect" id="node3" href="$d4/db3/classru_1_1spb_1_1iac_1_1cud_1_1idp_1_1web_1_1util_1_1_g_o_s_t_x_m_l_signature_util.html#af332e3b609e5f0d4e00e194795d00d9d" title="ru.spb.iac.cud.idp.web.util.\lGOSTXMLSignatureUtil.propagateIDAttributeSetup" alt="" coords="293,71,607,112"/>
+</map>
