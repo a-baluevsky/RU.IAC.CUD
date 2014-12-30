@@ -1,0 +1,20 @@
+<map id="git/acc/ru.spb.iac.cud" name="git/acc/ru.spb.iac.cud">
+<area shape="rect" id="node2" href="dir_f599ee53740441b3a4d8c8504b694a5a.html" title="admin&#45;ejb" alt="" coords="1711,63,1790,111"/>
+<area shape="rect" id="node3" href="dir_4e19b3de1e35105c7cd23324dd53f3cf.html" title="admin&#45;web" alt="" coords="1603,63,1687,111"/>
+<area shape="rect" id="node4" href="dir_7a0dfff0063a3c5cc1b7b1a7008e42b9.html" title="authz&#45;module" alt="" coords="1479,63,1579,111"/>
+<area shape="rect" id="node5" href="dir_110bdd485b8bd3d63516ddbc256e26f5.html" title="common&#45;ilib" alt="" coords="1363,63,1455,111"/>
+<area shape="rect" id="node6" href="dir_37e8dd5176f17a3dbc16834bcab87fa9.html" title="crypto&#45;15export" alt="" coords="1227,63,1339,111"/>
+<area shape="rect" id="node7" href="dir_c1fbc943dbaa6a9bcbfc0e1a94a621dc.html" title="ejb&#45;services" alt="" coords="1112,63,1203,111"/>
+<area shape="rect" id="node8" href="dir_a0cb53ee882963d5812b0481054d3826.html" title="idp&#45;lib" alt="" coords="1016,63,1088,111"/>
+<area shape="rect" id="node9" href="dir_fa8ff3e01de779aad876d28bceee59c3.html" title="idp&#45;web" alt="" coords="920,63,992,111"/>
+<area shape="rect" id="node10" href="dir_8b6606545d12e7d22bee145e1d5e4b44.html" title="report&#45;services" alt="" coords="789,63,896,111"/>
+<area shape="rect" id="node11" href="dir_206df1b2e3242b51a9a48f7976b404f2.html" title="schedule&#45;services" alt="" coords="640,63,765,111"/>
+<area shape="rect" id="node12" href="dir_4f3f4f85fdc34ee1eab90fab472ce6f6.html" title="sp&#45;lib" alt="" coords="544,63,616,111"/>
+<area shape="rect" id="node13" href="dir_e7dfcc01444892a73f3ecbe824314ec7.html" title="sts&#45;lib" alt="" coords="448,63,520,111"/>
+<area shape="rect" id="node14" href="dir_ae5b8cc4daaaf7eeabbeae149509b94f.html" title="sts&#45;web" alt="" coords="352,63,424,111"/>
+<area shape="rect" id="node15" href="dir_a0ff27ef28ceb95a1d74b78f00710a7d.html" title="user&#45;ejb" alt="" coords="256,63,328,111"/>
+<area shape="rect" id="node16" href="dir_4a1454512970ea368e6f979f5ecd327f.html" title="user&#45;web" alt="" coords="157,63,232,111"/>
+<area shape="rect" id="node17" href="dir_0e7487e7f725a98042f4bb6b7c02fe92.html" title="web&#45;services" alt="" coords="37,63,133,111"/>
+<area shape="rect" id="clust2" href="dir_052ce5837aaa9900adb3a816e480c0d2.html" alt="" coords="27,52,1929,121"/>
+<area shape="rect" id="clust1" href="dir_864dd8e1fbe64106b015ff3e43ce6238.html" title="acc" alt="" coords="16,16,1940,132"/>
+</map>
