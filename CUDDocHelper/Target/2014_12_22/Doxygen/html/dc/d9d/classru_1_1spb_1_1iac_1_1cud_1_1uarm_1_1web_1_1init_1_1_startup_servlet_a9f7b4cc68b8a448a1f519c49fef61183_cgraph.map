@@ -1,0 +1,10 @@
+<map id="ru.spb.iac.cud.uarm.web.init.StartupServlet.init" name="ru.spb.iac.cud.uarm.web.init.StartupServlet.init">
+<area shape="rect" id="node2" href="$de/d39/classmypackage_1_1_configuration.html#a9602e580000851aaa176c466369d1889" title="mypackage.Configuration.set\lSignRequired" alt="" coords="243,5,433,47"/>
+<area shape="rect" id="node3" href="$de/d39/classmypackage_1_1_configuration.html#a18ff8a4f2e178e3156b70929ceca611d" title="mypackage.Configuration.set\lSamlRequestLoginUarm" alt="" coords="243,71,433,112"/>
+<area shape="rect" id="node4" href="$de/d39/classmypackage_1_1_configuration.html#a630d40ea91cbe470ac42788542ca752a" title="mypackage.Configuration.set\lSamlRequestLogout" alt="" coords="243,136,433,177"/>
+<area shape="rect" id="node5" href="$de/d39/classmypackage_1_1_configuration.html#ab31ffdccf7afe17bf6aa067a16896796" title="mypackage.Configuration.set\lSamlAssertion" alt="" coords="243,201,433,243"/>
+<area shape="rect" id="node6" href="$de/d39/classmypackage_1_1_configuration.html#acd889c44c65ec98685d52669afa32a44" title="mypackage.Configuration.set\lStorePath" alt="" coords="243,267,433,308"/>
+<area shape="rect" id="node7" href="$de/d39/classmypackage_1_1_configuration.html#a1b4c36cae05f03599c28149bbab53f06" title="mypackage.Configuration.set\lAuditService" alt="" coords="243,332,433,373"/>
+<area shape="rect" id="node8" href="$de/d39/classmypackage_1_1_configuration.html#a6b36119a7606e4924c39677dda93a5c1" title="mypackage.Configuration.set\lStsOboService" alt="" coords="243,397,433,439"/>
+<area shape="rect" id="node9" href="$de/d39/classmypackage_1_1_configuration.html#af1c60f201365cbd801ec8e45034b6539" title="mypackage.Configuration.set\lStsService" alt="" coords="243,463,433,504"/>
+</map>

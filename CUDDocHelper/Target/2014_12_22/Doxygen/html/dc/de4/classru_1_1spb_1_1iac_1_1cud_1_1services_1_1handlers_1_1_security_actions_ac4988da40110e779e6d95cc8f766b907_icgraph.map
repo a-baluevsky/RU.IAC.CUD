@@ -1,0 +1,4 @@
+<map id="ru.spb.iac.cud.services.handlers.SecurityActions.setSecurityContext" name="ru.spb.iac.cud.services.handlers.SecurityActions.setSecurityContext">
+<area shape="rect" id="node2" href="$db/d96/classru_1_1spb_1_1iac_1_1cud_1_1services_1_1handlers_1_1_c_u_d_s_a_m_l2_handler.html#a25665af871a0abf6a7e35a2a734792ce" title="ru.spb.iac.cud.services.handlers.\lCUDSAML2Handler.createSecurityContext" alt="" coords="283,5,552,47"/>
+<area shape="rect" id="node3" href="$db/d96/classru_1_1spb_1_1iac_1_1cud_1_1services_1_1handlers_1_1_c_u_d_s_a_m_l2_handler.html#a0ee280b63f9a7ebdd85c7a1f872fa7c3" title="ru.spb.iac.cud.services.handlers.\lCUDSAML2Handler.handleInbound" alt="" coords="600,5,823,47"/>
+</map>

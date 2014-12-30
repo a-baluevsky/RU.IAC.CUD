@@ -1,0 +1,6 @@
+<map id="ru.spb.iac.cud.services.web.init.StartupServlet.init" name="ru.spb.iac.cud.services.web.init.StartupServlet.init">
+<area shape="rect" id="node2" href="$da/d3a/classru_1_1spb_1_1iac_1_1cud_1_1context_1_1_context_i_d_p_util_manager.html#a588b6582fc3ac3f4b98ca5a3eb3be34b" title="ru.spb.iac.cud.context.Context\lIDPUtilManager.initContext" alt="" coords="263,5,463,47"/>
+<area shape="rect" id="node3" href="$d8/ddc/classru_1_1spb_1_1iac_1_1cud_1_1context_1_1_context_access_s_t_s_manager.html#a7d5b44ab46a1b972f91348e5714d9f2c" title="ru.spb.iac.cud.context.Context\lAccessSTSManager.initContext" alt="" coords="260,71,467,112"/>
+<area shape="rect" id="node4" href="$db/d01/classru_1_1spb_1_1iac_1_1cud_1_1context_1_1_context_i_d_p_access_manager.html#ac9e1343f8fd77159c7fc3f87e91e130d" title="ru.spb.iac.cud.context.Context\lIDPAccessManager.initContext" alt="" coords="262,136,465,177"/>
+<area shape="rect" id="node5" href="$df/da1/classru_1_1spb_1_1iac_1_1cud_1_1services_1_1web_1_1init_1_1_configuration.html#a94a56d5c8ce45a25ac0a1c3437e22568" title="ru.spb.iac.cud.services.web.init.\lConfiguration.setSignRequired" alt="" coords="260,201,467,243"/>
+</map>

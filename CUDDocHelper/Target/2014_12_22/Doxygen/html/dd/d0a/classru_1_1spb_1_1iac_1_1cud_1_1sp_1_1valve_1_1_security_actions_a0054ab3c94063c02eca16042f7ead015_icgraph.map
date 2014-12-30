@@ -1,0 +1,5 @@
+<map id="ru.spb.iac.cud.sp.valve.SecurityActions.loadClass" name="ru.spb.iac.cud.sp.valve.SecurityActions.loadClass">
+<area shape="rect" id="node2" href="$d4/dbf/classru_1_1spb_1_1iac_1_1cud_1_1sp_1_1valve_1_1_c_u_d_abstract_s_p_form_authenticator.html#a886ae40ca3eb0c42725c1eef68da5902" title="ru.spb.iac.cud.sp.valve.\lCUDAbstractSPFormAuthenticator.init\lKeyProvider" alt="" coords="228,5,472,61"/>
+<area shape="rect" id="node3" href="$d4/dbf/classru_1_1spb_1_1iac_1_1cud_1_1sp_1_1valve_1_1_c_u_d_abstract_s_p_form_authenticator.html#ad7980973747e2c5f0686e434f3b4d3df" title="ru.spb.iac.cud.sp.valve.\lCUDAbstractSPFormAuthenticator.start\lPicketLink" alt="" coords="520,5,773,61"/>
+<area shape="rect" id="node4" href="$d9/d53/classru_1_1spb_1_1iac_1_1cud_1_1sp_1_1valve_1_1_c_u_d_service_provider_authenticator.html#a2a72b80d4c88d29ad56031bff96a361e" title="ru.spb.iac.cud.sp.valve.\lCUDServiceProviderAuthenticator.start" alt="" coords="821,13,1065,54"/>
+</map>
